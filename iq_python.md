@@ -266,7 +266,7 @@ So just stuff the modules into a folder and there you have it, the folder name a
 Importing a module or its contents from this package requires the package name as prefix to the module
 name joined by a dot.
 
-Note: You can technically import the package as well, but alas, it doesn't import the modules within the
+NOTE: You can technically import the package as well, but alas, it doesn't import the modules within the
 package to the local namespace, thus, it is practically useless.
 
 ----
@@ -552,7 +552,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is the difference between Python Arrays and lists?**
+**What is the difference between python arrays and lists?**
 
 *Arrays* in python can only contain __elements of same data types__ i.e., data type of array should be homogeneous.
 It is a thin wrapper around C language arrays and consumes far less memory than lists.
@@ -1166,31 +1166,34 @@ tellArguments(arg1 = "argument 1", arg2 = "argument 2", arg3 = "argument 3")
 **What are negative indexes and why are they used?**
 
 Negative indexes are the indexes from the end of the list or tuple or string.
-Arr[-1] means the last element of array Arr[]
+
+arr[-1] means the last element of array arr[]
+
+```python
 arr = [1, 2, 3, 4, 5, 6]
-#get the last element
-print(arr[-1]) #output 6
+# get the last element
+print(arr[-1]) # output 6
 #get the second last element
-print(arr[-2]) #output 5
-Python OOPS Interview Questions
+print(arr[-2]) # output 5
+```
 
 ----
 
 **How do you create a class in Python?**
 
-To create a class in python, we use the keyword “class” as shown in the example below:
+To create a class in python, we use the keyword 'class' as shown in the example below:
 
 ```python
 class InterviewbitEmployee:
+
    def __init__(self, emp_name):
        self.emp_name = emp_name
+
 # To instantiate or create an object from the class created above, we do the following:
-
 emp_1=InterviewbitEmployee("Mr. Employee")
-# To access the name attribute, we just call the attribute using the dot operator as shown below:
 
-print(emp_1.emp_name)
-# Prints Mr. Employee
+# To access the name attribute, we just call the attribute using the dot operator as shown below:
+print(emp_1.emp_name) # output: Mr. Employee
 ```
 
 To create methods inside the class, we include the methods under the scope of the class as shown below:
@@ -1200,8 +1203,8 @@ class InterviewbitEmployee:
    def __init__(self, emp_name):
        self.emp_name = emp_name
        
-   def introduce(self):
-       print("Hello I am " + self.emp_name)
+   def introduce(self): # method under the scope of the class: self is needed
+       print(f"Hello I am {self.emp_name}")
 ```
 
 The self parameter in the init and introduce functions represent the reference to the current class
@@ -1209,30 +1212,25 @@ instance which is used for accessing attributes and methods of that class. The s
 be the first parameter of any method defined inside the class. The method of the class
 InterviewbitEmployee can be accessed as shown below:
 
+```python
 emp_1.introduce()
+```
+
 The overall program would look like this:
 
 ```python
 class InterviewbitEmployee:
+
    def __init__(self, emp_name):
        self.emp_name = emp_name
        
    def introduce(self):
        print("Hello I am " + self.emp_name)
-```
 
-```python
 # create an object of InterviewbitEmployee class
 # <!-- emp_1 = InterviewbitEmployee("Mr Employee")
-# print(emp_1.emp_name)    #print employee name
-# emp_1.introduce()        #introduce the employee
-# logo
-# Practice Problems
-# Solve these problems to ace this concept
-# Classes and Objects
-# Medium
-# 14.19 Mins
-# Solve -->
+print(emp_1.emp_name) # print employee name
+# emp_1.introduce() # introduce the employee
 ```
 
 ----
@@ -1246,25 +1244,35 @@ members are called parent class or superclass.
 
 Python supports different kinds of inheritance, they are:
 
-Single Inheritance: Child class derives members of one parent class.
+__Single Inheritance:__
+
+Child class derives members of one parent class.
 
 ```python
 # Parent class
 class ParentClass:
+    
     def par_func(self):
          print("I am parent class function")
 
 # Child class
 class ChildClass(ParentClass):
+    
     def child_func(self):
          print("I am child class function")
 
 # Driver code
 obj1 = ChildClass()
-obj1.par_func()
-obj1.child_func()
-# Multi-level Inheritance: The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.
+print(obj1.par_func())
+print(obj1.child_func())
+```
 
+__Multi-level Inheritance:__
+
+The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features
+of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.
+
+```python
 # Parent class
 class A:
    def __init__(self, a_name):
@@ -1293,9 +1301,13 @@ class C(B):
 obj1 = C('child', 'intermediate', 'parent')
 print(obj1.a_name)
 obj1.display_names()
- 
-Multiple Inheritance: This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.
+```
 
+__Multiple Inheritance:__
+
+This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.
+
+```python
 # Parent class1
 class Parent1:
    def parent1_func(self):
@@ -1315,8 +1327,13 @@ class Child(Parent1, Parent2):
 # Driver's code
 obj1 = Child()
 obj1.child_func()
-# Hierarchical Inheritance: When a parent class is derived by more than one child class, it is called hierarchical inheritance.
+```
 
+__Hierarchical Inheritance:__
+
+When a parent class is derived by more than one child class, it is called hierarchical inheritance.
+
+```python
 # Base class
 class A:
      def a_func(self):
@@ -1347,9 +1364,11 @@ obj2.c_func()    #child 2 method
 
 Following are the ways using which you can access parent class members within a child class:
 
-By using Parent class name: You can use the name of the parent class to access the attributes as shown in the example below:
+
 
 ```python
+# ----
+# By using Parent class name: You can use the name of the parent class to access the attributes as shown in the example below:
 class Parent(object):  
    # Constructor
    def __init__(self, name):
@@ -1367,6 +1386,9 @@ class Child(Parent):
 # Driver Code
 obj = Child("Interviewbit", 6)
 obj.display()
+# ----
+
+# ----
 # By using super(): The parent class members can be accessed in child class using the super keyword.
 class Parent(object):
    # Constructor
@@ -1390,6 +1412,7 @@ class Child(Parent):
 # Driver Code
 obj = Child("Interviewbit", 6)
 obj.display()
+# ----
 ```
 
 ----
@@ -1398,8 +1421,9 @@ obj.display()
 
 Python does not make use of access specifiers specifically like private, public, protected, etc. However,
 it does not derive this from any variables. It has the concept of imitating the behaviour of variables by
-making use of a single (protected) or double underscore (private) as prefixed to the variable names. By
-default, the variables without prefixed underscores are public.
+making use of a single (protected = attr./method can only be used in class where it si defined) or
+double underscore (private = can be viewed an accessed within the class) as prefixed to the variable names. By default, the variables without prefixed
+underscores are public.
 
 ```python
 # Example:
@@ -1419,7 +1443,7 @@ class InterviewbitEmployee:
         self._age = age
         self.__branch = branch
     
-    #public member
+    # public member
     def display():
         print(self._emp_name +" "+self._age+" "+self.__branch)
 ```
@@ -1437,16 +1461,16 @@ static method.
 
 An empty class does not have any members defined in it. It is created by using the pass keyword (the
 pass command does nothing in python). We can create objects for this class outside the class.
-For example-
+For example:
 
 ```python
 class EmptyClassDemo:
-   pass
+  pass
+  
 obj=EmptyClassDemo()
-obj.name="Interviewbit"
-print("Name created= ",obj.name)
-Output:
-Name created = Interviewbit
+print(obj.name="Interviewbit")
+print("Name created = ",obj.name)
+# Output: Name created = Interviewbit
 ```
 
 ----
@@ -1461,14 +1485,18 @@ child class.
 
 **Why is finalize used?**
 
-Finalize method is used for freeing up the unmanaged resources and clean up before the garbage collection method is invoked. This helps in performing memory management tasks.
+Finalize method is used for freeing up the unmanaged resources and clean up before the garbage collection method is invoked.
+This helps in performing memory management tasks.
 
 ----
 
 **What is init method in python?**
 
-The init method works similarly to the constructors in Java. The method is run as soon as an object is instantiated. It is useful for initializing any attributes or default behaviour of the object at the
-time of instantiation.
+The init method works similarly to the constructors in Java.
+
+The method is run as soon as an object is instantiated. It is useful for initializing any attributes
+or default behaviour of the object at the time of instantiation.
+
 For example:
 
 ```python
@@ -1482,7 +1510,7 @@ class InterviewbitEmployee:
    def introduce(self):
        print('Hello, I am ', self.emp_name)
 
-emp = InterviewbitEmployee('Mr Employee')    # __init__ method is called here and initializes the object name with "Mr Employee"
+emp = InterviewbitEmployee('Mr Employee') # __init__ method is called here and initializes the object name with "Mr Employee"
 emp.introduce()
 ```
 
@@ -1516,26 +1544,36 @@ Python Pandas Interview Questions
 
 **What do you know about pandas?**
 
-Pandas is an open-source, python-based library used in data manipulation applications requiring high performance. The name is derived from *Panel Data* having multidimensional data.
+Pandas is an open-source, python-based library used in data manipulation applications requiring high performance.
+
+The name is derived from *Panel Data* having multidimensional data.
+
 This was developed in 2008 by Wes McKinney and was developed for data analysis.
-Pandas are useful in performing 5 major steps of data analysis - Load the data, clean/manipulate
-it, prepare it, model it, and analyze the data.
+
+Pandas are useful in performing 5 major steps of data analysis:
+- Load the data
+- Clean/manipulate it
+- Prepare it
+- Model it
+- Analyze it
 
 ----
 
 **Define pandas dataframe?**
 
 A dataframe is a 2D mutable and tabular structure for representing data labelled with axes - rows
-and columns. The syntax for creating dataframe:
+and columns.
 
+The syntax for creating dataframe:
+
+```python
 import pandas as pd
 dataframe = pd.DataFrame( data, index, columns, dtype)
-where:
-
-data - Represents various forms like series, map, ndarray, lists, dict etc.
-index - Optional argument that represents an index to row labels.
-columns - Optional argument for column labels.
-Dtype - the data type of each column. Again optional.
+# data - Represents various forms like series, map, ndarray, lists, dict etc.
+# index - Optional argument that represents an index to row labels.
+# columns - Optional argument for column labels.
+# Dtype - the data type of each column. Again optional.
+```
 
 ----
 
@@ -1543,16 +1581,25 @@ Dtype - the data type of each column. Again optional.
 
 The dataframes can be combines using the below approaches:
 
-*append() method:* This is used to stack the dataframes horizontally. Syntax:
-df1.append(df2)
+*append() method:*
 
-*concat() method:* This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
+This is used to stack the dataframes horizontally. Syntax:
+
+```python
+df1.append(df2)
+```
+
+*concat() method:*
+
+This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
 
 ```python
 pd.concat([df1, df2])
 ```
 
-*join() method:* This is used for extracting data from various dataframes having one or more common columns.
+*join() method:*
+
+This is used for extracting data from various dataframes having one or more common columns.
 
 ```python
 f1c.join(df2)
@@ -1562,13 +1609,14 @@ f1c.join(df2)
 
 **Can you create a series from the dictionary object in pandas?**
 
-One dimensional array capable of storing different data types is called a series. We can create pandas series from a dictionary object as shown below:
+One dimensional array capable of storing different data types is called a series.
+We can create pandas series from a dictionary object as shown below:
 
 ```python
 import pandas as pd    
 dict_info = {'key1' : 2.0, 'key2' : 3.1, 'key3' : 2.2}  
 series_obj = pd.Series(dict_info)    
-print (series_obj)    
+print(series_obj)    
 # Output:
 # x     2.0
 # y     3.1
@@ -1586,14 +1634,16 @@ extracted from the dictionary.
 
 We can identify if a dataframe has missing values by using the isnull() and isna() methods.
 
+```python
 missing_data_count=df.isnull().sum()
-We can handle missing values by either replacing the values in the column with 0 as follows:
+```
+
+We can handle missing values by either replacing the values in the column with 0 as follows ...
 
 ```python
 df['column_name'].fillna(0)
 ```
-
-Or by replacing it with the mean value of the column
+... or by replacing it with the mean value of the column
 
 ```python
 df['column_name'] = df['column_name'].fillna((df['column_name'].mean()))
@@ -1604,9 +1654,10 @@ df['column_name'] = df['column_name'].fillna((df['column_name'].mean()))
 **What do you understand by reindexing in pandas?**
 
 Reindexing is the process of conforming a dataframe to a new index with optional filling logic. If the values
-are missing in the previous index, then NaN/NA is placed in the location. A new object is returned unless a
-new index is produced that is equivalent to the current one. The copy value is set to False. This is also
-used for changing the index of rows and columns in the dataframe.
+are missing in the previous index, then NaN/NA is placed in the location.
+
+A new object is returned unless a new index is produced that is equivalent to the current one. The copy value
+is set to False. This is also used for changing the index of rows and columns in the dataframe.
 
 ----
 
@@ -1622,11 +1673,11 @@ data_info = {'first' : pd.Series([1, 2, 3], index=['a', 'b', 'c']),
   
 df = pd.DataFrame(data_info) 
 
-#To add new column third
+# to add new column third
 df['third']=pd.Series([10,20,30],index=['a','b','c'])    
 print(df)
 
-#To add new column fourth
+# to add new column fourth
 df['fourth']=df['first']+info['third']    
 print(df)
 ```
@@ -1637,8 +1688,20 @@ print(df)
 
 To delete an Index:
 
-Execute del df.index.name for removing the index by name.
-Alternatively, the df.index.name can be assigned to None.
+```python
+del df.index.name
+```
+
+... for removing the index by name.
+
+Alternatively, the
+
+```python
+df.index.name
+```
+
+can be assigned to None.
+
 For example, if you have the below dataframe:
 
    Names            Column 1             
@@ -1651,8 +1714,8 @@ To drop the index name "Names":
 
 ```python
 df.index.name = None
-# Or run the below:
-# del df.index.name
+# or run the below:
+del df.index.name
 print(df)
 ```
 
@@ -1668,7 +1731,8 @@ To delete row/column from dataframe:
 The axis argument is passed to the drop method where if the value is 0, it indicates to drop/delete a
 row and if 1 it has to drop the column.
 
-Additionally, we can try to delete the rows/columns in place by setting the value of inplace to True. This makes sure that the job is done without the need for reassignment.
+Additionally, we can try to delete the rows/columns in place by setting the value of inplace to True. This makes
+sure that the job is done without the need for reassignment.
 
 The duplicate values from the row/column can be deleted by using the drop_duplicates() method.
 
@@ -1739,12 +1803,17 @@ df = pd.read_csv("some_file.csv", parse_dates=['datetime_column'], date_parser=d
 **What do you understand by NumPy?**
 
 NumPy is one of the most popular, easy-to-use, versatile, open-source, python-based, general-purpose package
-that is used for processing arrays. NumPy is short for NUMerical PYthon. This is very famous for its highly
-optimized tools that result in high performance and powerful N-Dimensional array processing feature that is
-designed explicitly to work on complex arrays. Due to its popularity and powerful performance and its flexibility
-to perform various operations like trigonometric operations, algebraic and statistical computations, it is most
-commonly used in performing scientific computations and various broadcasting functions. The following image shows
-the applications of NumPy:
+that is used for processing arrays.
+
+NumPy is short for NUMerical PYthon.
+
+This is very famous for its highly optimized tools that result in high performance and powerful N-Dimensional array processing feature that is
+designed explicitly to work on complex arrays.
+
+Due to its popularity and powerful performance and its flexibility to perform various operations like trigonometric operations,
+algebraic and statistical computations, it is most commonly used in performing scientific computations and various broadcasting functions.
+
+The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages.
 
 ----
 
@@ -1752,12 +1821,14 @@ the applications of NumPy:
 
 The list data structure of python is very highly efficient and is capable of performing various functions.
 But, they have severe limitations when it comes to the computation of vectorized operations which deals
-with element-wise multiplication and addition. The python lists also require the information regarding the
-type of every element which results in overhead as type dispatching code gets executes every time any operation
-is performed on any element. This is where the NumPy arrays come into the picture as all the limitations of
-python lists are handled in NumPy arrays.
+with element-wise multiplication and addition.
 
-Additionally, as the size of the NumPy arrays increases, NumPy becomes around 30x times faster than the Python List. This is because the Numpy arrays are densely packed in the memory due to their homogenous nature. This ensures the memory free up is also faster.
+The python lists also require the information regarding the type of every element which results in overhead as
+type dispatching code gets executes every time any operation is performed on any element. This is where the
+NumPy arrays come into the picture as all the limitations of python lists are handled in NumPy arrays.
+
+Additionally, as the size of the NumPy arrays increases, NumPy becomes around 30x times faster than the Python List. This is
+because the Numpy arrays are densely packed in the memory due to their homogenous nature. This ensures the memory free up is also faster.
 
 **What are the steps to create 1D, 2D and 3D arrays?**
 
@@ -1788,8 +1859,8 @@ print('Dimensions of array:', ndArray.ndim)
 
 ```python
 # Example:
-# Given array:
 
+# Given array:
 example_array = [[35 53 63]
                 [72 12 22]
                 [43 84 56]]
@@ -1801,7 +1872,6 @@ New Column values:
 ]
 
 # Solution:
-
 import numpy as np
 #inputs
 inputArray = np.array([[35,53,63],[72,12,22],[43,84,56]])
@@ -1810,7 +1880,7 @@ new_col = np.array([[20,30,40]])
 arr = np.delete(inputArray , 1, axis = 1)
 #insert new_col to array
 arr = np.insert(arr , 1, new_col, axis = 1)
-print (arr)
+print(arr)
 ```
 
 ----
@@ -1860,8 +1930,8 @@ arr = np.array([[8, 3, 2],
 # [[6, 1, 4],
 # [8, 3, 2],
 # [3, 6, 5]]
-# We can do this by using the sort() method in numpy as:
 
+# 1. We can do this by using the sort() method in numpy as:
 import numpy as np
 arr = np.array([[8, 3, 2],
           [3, 6, 5],
@@ -1872,7 +1942,7 @@ arr = np.sort(arr.view('i8,i8,i8'),
        order=['f1'],
        axis=0).view(np.int)
 
-# We can also perform sorting and that too inplace sorting by doing:
+# 2. We can also perform sorting and that too inplace sorting by doing:
 arr.view('i8,i8,i8').sort(order=['f1'], axis=0)
 ```
 
@@ -1888,7 +1958,7 @@ def find_nearest_value(arr, value):
    arr = np.asarray(arr)
    idx = (np.abs(arr - value)).argmin()
    return arr[idx]
-#Driver code
+# driver code
 arr = np.array([ 0.21169,  0.61391, 0.6341, 0.0131, 0.16541,  0.5645,  0.5742])
 value = 0.52
 print(find_nearest_value(arr, value)) # Prints 0.5645
@@ -1947,7 +2017,8 @@ A python package is created by following the below steps:
 
 **What are some of the most commonly used built-in modules in Python?**
 
-Python modules are the files having python code which can be functions, variables or classes. These go by *.py* extension. The most commonly available built-in modules are:
+Python modules are the files having python code which can be functions, variables or classes.
+These go by *.py* extension. The most commonly available built-in modules are:
 
 ```python
 import os
@@ -1982,9 +2053,6 @@ The random() method generates float values lying between 0 and 1 randomly.
 
 ```python
 import random
-```
-
-```python
 print(random.random())
 ```
 
@@ -1992,13 +2060,8 @@ To generate customised random numbers between specified ranges, we can use the r
 Syntax:
 
 ```python
-randrange(beginning, end, step)
-```
-
-For example:
-
-```python
 import random
+# randrange(beginning, end, step)
 print(random.randrange(5,100,2))
 ```
 
@@ -2008,11 +2071,11 @@ print(random.randrange(5,100,2))
 
 This can be easily done by making use of the isalnum() method that returns true in case the string has only alphanumeric characters.
 
-For Example -
-
 ```python
-"abdc1321".isalnum() #Output: True
-"xyz@123$".isalnum() #Output: False
+xample_1: str = "abdc1321"
+xample_2: str = "xyz@123$"
+print(xample_1.isalnum()) # Output: True
+print(xample_2.isalnum()) # Output: False
 ```
 
 Another way is to use match() method from the re (regex) module as shown:
@@ -2045,11 +2108,11 @@ in effective thread synchronization by avoiding deadlocks. GIL helps in achievin
 parallel computing).
 
 There are three threads:
-
-First Thread acquires the GIL first and starts the I/O execution. When the I/O operations are done, thread 1
-releases the acquired GIL which is then taken up by the second thread. The process repeats and the GIL are used by
-different threads alternatively until the threads have completed their execution. The threads not having the GIL
-lock goes into the waiting state and resumes execution only when it acquires the lock.
+- First Thread acquires the GIL first and starts the I/O execution.
+- When the I/O operations are done, thread 1 releases the acquired GIL which is then taken up by the second thread.
+- The process repeats and the GIL are used by different threads alternatively until the threads have completed
+their execution. The threads not having the GIL lock goes into the waiting state and resumes execution only when it
+acquires the lock.
 
 ----
 
@@ -2079,7 +2142,7 @@ pip install <package_name>
 
 Yes, there are tools like PyChecker and Pylint which are used as static analysis and linting tools respectively.
 PyChecker helps find bugs in python source code files and raises alerts for code issues and their complexity.
-Pylint checks for the module’s coding standards and supports different plugins to enable custom features to meet
+Pylint checks for the module's coding standards and supports different plugins to enable custom features to meet
 this requirement.
 
 ----
@@ -2093,7 +2156,7 @@ Deep copy creates an independent and new copy of an object and even copies all t
 
 ----
 
-**What is main function in python? How do you invoke it?**
+**What is a main function in python? How do you invoke it?**
 
 In the world of programming languages, the main is considered as an entry point of execution for a program.
 But in python, it is known that the interpreter serially interprets the file line-by-line. This means that
@@ -2104,9 +2167,9 @@ module. This can be done as shown below:
 
 ```python
 def main():
-   print("Hi Interviewbit!")
+   print("Hello world!")
 
-if __name__=="__main__":
+if __name__=="__main__": # oints to the name of the current module
    main()
 ```
 
@@ -2135,8 +2198,7 @@ You can do this by converting the list to set by using set() method and comparin
 the length of the original list. If found equal, return True.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def check_distinct(data_list):
@@ -2160,15 +2222,15 @@ if __name__ == '__main__':
 The idea is to use collections and pprint module as shown below:
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import collections
 import pprint
 
 def manipulate_data(data_list):
-    """manipulate data in Text."""
+    """Manipulate data in Text.
+    """
     with open(data_list, 'r', encoding='utf-8') as data:
         count_data = collections.Counter(data.read().upper())
         count_value = pprint.pformat(count_data)
@@ -2189,8 +2251,7 @@ if __name__ == '__main__':
 This can be done easily by using the phenomenon of hashing. We can use a hash map to check for the current value of the array, x. If the map has the value of (N-x), then there is our pair.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def print_pairs(arr, N):
@@ -2200,11 +2261,10 @@ def print_pairs(arr, N):
     for i in range(0, len(arr)):
         val = N-arr[i]
         if (val in hash_set): # check if N-x is there in set, print the pair
-            print("Pairs " + str(arr[i]) + ", " + str(val))
+            print(f"Pairs {str(arr[i])}, {str(val)}")
         hash_set.add(arr[i])
 
 def main():
-    # driver code
     arr = [1, 2, 40, 3, 9, 4]
     N = 3
     print_pairs(arr, N)
@@ -2220,17 +2280,17 @@ if __name__ == '__main__':
 We can use bitwise operators to achieve this.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def add_nums(num1, num2):
-    """Add two integers > 0 without
-    plus operator
+    """Add two integers > 0 without plus operator
     """
     while num2 != 0:
         data = num1 & num2
+        print(f"data: {data}")
         num1 = num1 ^ num2
+        print(f"num1: {num1}")
         num2 = data << 1
     return num1
 
@@ -2246,8 +2306,7 @@ if __name__ == '__main__':
 **Write a Program to solve the given equation assuming that a,b,c,m,n,o are constants:**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
@@ -2269,13 +2328,12 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to match a string that has the letter ‘a’ followed by 4 to 8 'b’s?**
+**Write a Program to match a string that has the letter 'a' followed by 4 to 8 'b’s?**
 
 We can use the re module of python to perform regex pattern comparison here.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import re
@@ -2283,9 +2341,9 @@ import re
 def match_text(txt_data):
     pattern = 'ab{4,8}'
     if re.search(pattern,  txt_data): # search for pattern in txt_data
-        return 'Match found'
+        return 'Match found :-)'
     else:
-        return('Match not found')
+        return 'Match not found :-('
 
 def main():
     print(match_text("abc")) # prints Match not found
@@ -2302,15 +2360,18 @@ if __name__ == '__main__':
 We can again use the re module to convert the date string as shown below:
 
 ```python
+
 import re
+from datetime import datetime
+
 def transform_date_format(date):
-   return re.sub(r'(\d{4})-(\d{1,2})-(\d{1,2})', '\\3-\\2-\\1', date)
+    return re.sub(r'(\d{4})-(\d{1,2})-(\d{1,2})', '\\3-\\2-\\1', date)
 date_input = "2021-08-01"
 print(transform_date_format(date_input))
-You can also use the datetime module as shown below:
 
-from datetime import datetime
+# You can also use the datetime module as shown below:
 new_date = datetime.strptime("2021-08-01", "%Y-%m-%d").strftime("%d:%m:%Y")
+# new_date = datetime.strptime("2021-08-01", "%Y-%m-%d %d:%m:%Y")
 print(new_data)
 ```
 
@@ -2346,27 +2407,6 @@ dataframe = pd.read_csv(data_source)
 print(dataframe.head())
 ```
 
-Important Resources:
-
-- Python Interview Questions for Data Science
-- Python Basic Programs
-- Python MCQ
-- Python Commands
-- Python Developer Resume
-- Python Projects
-- Difference Between Python 2 and 3
-- Python Frameworks
-- Python Documentation
-- Numpy Tutorial
-- Python Vs R
-- Python Vs Javascript
-- Difference Between C and Python
-- Python Vs Java
-- Features of Python
-- Golang vs Python
-- Python Developer Skills
-- Python MCQ
-
 ----
 
 **Suppose list1 = [3,4,5,2,1,0], what is list1 after list1.pop(1)?**
@@ -2374,7 +2414,7 @@ Important Resources:
 ```python
 list_1 = [3,4,5,2,1]
 list_2 = [3,4,5,2,0]
-list_3 = [3,5,2,1,0]
+list_3 = [3,5,2,1,0] (true, second element was taken out of the list)
 list_4 = [3,4,5,2]
 ```
 
@@ -2391,23 +2431,22 @@ list_4 = [3,4,5,2]
 
 **What is the difference between lists and tuples?**
 
-- List is a sequence data type, while tuple is not.
-- Tuples are mutable but lists are immutable.
-- Tuple is a sequence data type, while lists is not.
-- Lists are mutable but tuples are immutable.
+- List is a sequence data type, while tuple is not. (false)
+- Tuples are mutable but lists are immutable. (false)
+- Tuple is a sequence data type, while lists is not. (false)
+- Lists are mutable but tuples are immutable. (true)
 
 ----
 
 **Let func = lambda a, b : (a ** b), what is the output of func(float(10),20)?**
 
 - 100000000000000000000
-- 1e+20 (correct)
+- 1e+20 (true)
 - 100000000000000000000.0
 - 1.0e+20
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
@@ -2455,12 +2494,25 @@ if __name__ == '__main__':
 
 ----
 
-**Let list1 = ['s', 'r', 'a', 's'] and list2 = ['a', 'a', 'n', 'h'], what is the output of ["".join([i, j]) for i, j in zip(list1, list2)]?**
+**Let list1 = ['s','r','a','s'] and list2 = ['a','a','n','h'], what is the output of ["".join([i, j]) for i, j in zip(list1, list2)]?**
 
 - ['s', 'a', 'r', 'a', 'a', 'n', 's', 'h']
 - ['s', 'r', 'a', 's', 'a', 'a', 'n', 'h']
-- ['sa', 'ra', 'an', 'sh']
+- ['sa', 'ra', 'an', 'sh'] (true)
 - ['sa', 'sa', 'sn', 'sh', 'ra', 'ra', 'rn', 'rh', 'aa', 'aa', 'an', 'ah', 'sa', 'sa', 'sn', 'sh']
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    list1 = ['s','r','a','s']
+    list2 = ['a','a','n','h']
+    print(["".join([i, j]) for i, j in zip(list1, list2)])
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
@@ -2471,32 +2523,58 @@ if __name__ == '__main__':
 - Current time in milliseconds since midnight, January 1, 1970.
 - Current time in milliseconds since midnight, January 1, 1970 GMT (the Unix time).
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import time
+
+def main():
+    print(time.time())
+
+if __name__ == '__main__':
+    main()
+```
+
+----
+
 **What is the output of the following program?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class A(object):
+
    def __init__(self, a):
        self.num = a
+       
    def mul_two(self):
        self.num *= 2
  
 class B(A):
+
    def __init__(self, a):
-       X.__init__(self, a)
+       A.__init__(self, a)
+       
    def mul_three(self):
        self.num *= 3
- 
-obj = B(4)
-print(obj.num)
- 
-obj.mul_two()
-print(obj.num)
- 
-obj.mul_three()
-print(obj.num)
+
+def main():
+    obj = B(4)
+    print(obj.num)
+    
+    obj.mul_two()
+    print(obj.num)
+    
+    obj.mul_three()
+    print(obj.num)
+
+if __name__ == '__main__':
+    main()
 ```
 
-- 4 8 24
+- 4 8 24 (true)
 - 4 4 64
 - 4 8 64
 - None of the above
@@ -2506,33 +2584,41 @@ print(obj.num)
 **What is the output of the below program?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Human(object):
+
    def __init__(self, name):
        self.human_name = name
          
-   def getHumanName(self):
+   def get_human_name(self):
        return self.human_name
      
-   def isEmployee(self):
+   def is_employee(self):
        return False
  
 class IBEmployee(Human):
+
    def __init__(self, name, emp_id): 
        super(IBEmployee, self).__init__(name)
        self.emp_id = emp_id
          
-   def isEmployee(self):
+   def is_employee(self):
        return True
          
    def get_emp_id(self):
        return self.emp_id
- 
-# Driver code
-employee = IBEmployee("Mr Employee", "IB007") 
-print(employee.getHumanName(), employee.isEmployee(), employee.get_emp_id()
+
+def main():
+    employee = IBEmployee("Mr Employee", "IB007") 
+    print(employee.get_human_name(), employee.is_employee(), employee.get_emp_id())
+
+if __name__ == '__main__':
+    main()
 ```
 
-- (None, True, ‘IB007’)
+- (None, True, ‘IB007’) (true)
 - (‘Mr Employee’, True, ‘IB007’)
 - (“”, False, ‘IB007’)
 - Runtime error
@@ -2541,11 +2627,11 @@ print(employee.getHumanName(), employee.isEmployee(), employee.get_emp_id()
 
 **Which among the below options will correct the below error obtained while reading “sample_file.csv” in pandas?**
 
-- Traceback (most recent call last): File "<input>", line 10, in<module> UnicodeEncodeError:
-'ascii' codec can't encode character.
-- pd.read_csv(“sample_file.csv”, encoding=‘utf-8’)
-- pd.read_csv(“sample_file.csv”, compression=‘gzip’)
-- pd.read_csv(“sample_file.csv”, dialect=‘comma’)
+__Traceback (most recent call last): File "input", line 10, in module UnicodeEncodeError: 'ascii' codec can't encode character.__
+  
+- pd.read_csv("sample_file.csv", encoding='utf-8')
+- pd.read_csv("sample_file.csv", compression='gzip')
+- pd.read_csv("sample_file.csv", dialect='comma')
 
 ----
 
@@ -2554,7 +2640,7 @@ print(employee.getHumanName(), employee.isEmployee(), employee.get_emp_id()
 - df.emptyframe
 - df.blank
 - df.isempty
-- df.empty
+- df.empty (true)
 
 **How will you find the location of numbers which are multiples of 5 in a series?**
 
@@ -2563,7 +2649,7 @@ print(employee.getHumanName(), employee.isEmployee(), employee.get_emp_id()
 - series_data = pd.Series(np.random.randint(1, 20, 7))
 
 ```python
-#insert code here
+# insert code here
 np.search(series_data % 5)
 np.find(series_data % 5 ==0)
 np.argwhere(series_data % 5==0)
@@ -2575,20 +2661,28 @@ np.locate(series_data % 5)
 **What is the output of the below code?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Person:
+
    def __init__(self, first_name, last_name):
        self.first_name = first_name
        self.last_name = last_name
 
-first_name = "XYZ"
-person = Person(first_name, "ABC")
-first_name = "LMN"
-person.last_name = "PQR"
-print(person.first_name, person.last_name)
+def main():
+    first_name = "XYZ"
+    person = Person(first_name, "ABC")
+    first_name = "LMN"
+    person.last_name = "PQR"
+    print(person.first_name, person.last_name)
+
+if __name__ == '__main__':
+    main()
 ```
 
 - XYZ ABC
-- XYZ PQR
+- XYZ PQR (true)
 - LMN ABC
 - LMN PQR
 
@@ -2596,9 +2690,9 @@ print(person.first_name, person.last_name)
 
 **Which among the below options picks out negative numbers from the given list?**
 
-- [num for num<0 in list]
+- [num for num < 0 in list]
 - [num<0 in list]
-- [num for num in list if num<0]
+- [num for num in list if num < 0] (true)
 - [num in list for num<0]
 
 ----
@@ -2606,13 +2700,13 @@ print(person.first_name, person.last_name)
 **What is the output of the below code?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
-    """Driver code"""
+    
     main_dict={}
+
     def insert_item(item):
         if item in main_dict:
             main_dict[item] += 1
@@ -2640,11 +2734,11 @@ if __name__ == '__main__':
 **What is the output of the below code?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class X:
+
     def __init__(self):
         self.__num1 = 5
         self.num2 = 2
@@ -2653,6 +2747,7 @@ class X:
         print(self.__num1, self.num2)
 
 class Y(X):
+
     def __init__(self):
         super().__init__()
         self.__num1 = 1
@@ -2680,7 +2775,7 @@ if __name__ == '__main__':
 
 LIST vs TUPLES
 
-Lists are mutable i.e they can be edited.
+Lists are mutable i.e. they can be edited.
 
 Tuples are immutable (tuples are lists which can’t be edited).
 
@@ -2719,8 +2814,7 @@ Python finds use in many spheres – web applications, automation, scientific mo
 
 **What type of language is python? Programming or scripting?**
 
-Python is capable of scripting, but in general sense, it is considered as a general-purpose programming
-language. To know more about Scripting, you can refer to the Python Scripting Tutorial.
+Python is capable of scripting, but in general sense, it is considered as a general-purpose programming language.
 
 ----
 
@@ -2731,16 +2825,16 @@ Therefore, Python is an interpreted language.
 
 ----
 
-**What is pep 8?**
+**What is PEP 8?**
 
-PEP stands for Python Enhancement Proposal. It is a set of rules that specify how to format Python code
+PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code
 for maximum readability.
 
 ----
 
 **What are the benefits of using Python?**
 
-The benefits of using python are-
+The benefits of using python are:
 
 _Easy to use_ – Python is a high-level programming language that is easy to use, read, write and learn.
 
@@ -2779,11 +2873,10 @@ _There 4 types of namespace:_
 
 Dictionary and list comprehensions are just another concise way to define dictionaries and lists.
 
-
 ```python
 # Example of list comprehension is : 
-x=[i for i in range(5)]
-# The above code creates a list as below-
+x = [i for i in range(5)]
+# The above code creates a list as below:
 # 1
 # 2
 # 4
@@ -2805,7 +2898,7 @@ _The common built-in data types in python are:_
 
 *Numbers :* They include integers, floating-point numbers, and complex numbers. eg. 1, 7.9,3+4i
 
-*List :* An ordered sequence of items is called a list. The elements of a list may belong to different data types. Eg. [5,’market’,2.4]
+*List :* An ordered sequence of items is called a list. The elements of a list may belong to different data types. Eg. [5,'market',2.4]
 
 *Tuple :* It is also an ordered sequence of elements. Unlike lists , tuples are immutable, which means they can’t be changed. Eg. (3,’tool’,1)
 
@@ -2827,7 +2920,7 @@ can get a better understanding with the Data Engineering Course in Washington.
 
 ----
 
-**What is slicing in Python?**
+**What is slicing in python?**
 
 Slicing is used to access parts of sequences like lists, tuples, and strings. The syntax of slicing is-[start:end:step]. The step can be omitted
 as well. When we write [start:end] this returns all the elements of the sequence from the start (inclusive) till the end-1 element. If the start
@@ -2837,7 +2930,7 @@ every second element.i.e. [8,6,4].
 
 ----
 
-**What are Keywords in Python?**
+**What are Keywords in python?**
 
 Keywords in python are reserved words that have special meaning.They are generally used to define type of variables. Keywords cannot be used
 for variable or function names. There are following 33 keywords in python:
@@ -2880,23 +2973,25 @@ Yield
 
 **What are Literals in Python and explain about different Literals?**
 
-A literal in python source code represents a fixed value for primitive data types. There are 5 types of literals in python-
+A literal in python source code represents a fixed value for primitive data types.
 
-String literals : A string literal is created by assigning some text enclosed in single or double quotes to a variable. To create multiline literals, assign the multiline text enclosed in triple quotes. Eg.name=”Tanya”
+There are 5 types of literals in python:
 
-A character literal : It is created by assigning a single character enclosed in double quotes. Eg. a=’t’
+1. String literals : A string literal is created by assigning some text enclosed in single or double quotes to a variable. To create multiline literals, assign the multiline text enclosed in triple quotes. Eg.name=”Tanya”
 
-Numeric literals :  Include numeric values that can be either integer, floating point value, or a complex number. Eg. a=50
+2. A character literal : It is created by assigning a single character enclosed in double quotes. Eg. a=’t’
 
-Boolean literals : These can be 2 values- either True or False.
+3. Numeric literals :  Include numeric values that can be either integer, floating point value, or a complex number. Eg. a=50
 
-Literal Collections : These are of 4 types ...
-- a. List collections-Eg. a=[1,2,3,’Amit’]
-- b. Tuple literals- Eg. a=(5,6,7,8)
-- c. Dictionary literals- Eg. dict={1: ’apple’, 2: ’mango, 3: ’banana`’}
-- d. Set literals- Eg. {“Tanya”, “Rohit”, “Mohan”}
+4. Boolean literals : These can be 2 values- either True or False.
 
-Special literal- Python has 1 special literal None which is used to return a null variable.
+5. Literal Collections : These are of 4 types ...
+- a. List collections-Eg. a = [1,2,3,’Amit’]
+- b. Tuple literals- Eg. a = (5,6,7,8)
+- c. Dictionary literals- Eg. dict = {1: ’apple’, 2: ’mango, 3: ’banana`’}
+- d. Set literals- Eg. {"Tanya", "Rohit", "Mohan"}
+
+Special literal:  Python has 1 special literal None which is used to return a null variable.
 
 ----
 
