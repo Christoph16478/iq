@@ -125,12 +125,12 @@ There are three distinct numeric types:
 - complex numbers.
 - Additionally, booleans are a sub-type of integers.
 
-| Class Name | Description |
-| ---------- | ----------- |
-| int | Stores integer literals including hex, octal and binary numbers as integers. |
-| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. |
-| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. |
-| bool | Stores boolean value (True or False). |
+| Class Name | Description | Example |
+| ---------- | ----------- | ------- |
+| int | Stores integer literals including hex, octal and binary numbers as integers. | ```python print(443) ``` |
+| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```python print(34.89) ``` |
+| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```python print(complex(3)), Output: (3+0j) ``` |
+| bool | Stores boolean value (True or False). | ```python print(1 == 1), Output: True ``` |
 
 Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal
 to store floating-point numbers with user-defined precision.
@@ -145,45 +145,54 @@ According to Python Docs, there are three basic Sequence Types:
 Sequence types have the in and not in operators defined for their traversing their elements. These operators share the same priority as
 the comparison operations.
 
-| Class Name | Description |
-| ---------- | ----------- |
-| list | Mutable sequence used to store collection of items. |
-| tuple | Immutable sequence used to store collection of items. |
-| range | Represents an immutable sequence of numbers generated during execution. |
-| str | Immutable sequence of Unicode code points to store textual data. |
+| Class Name | Description | Example |
+| ---------- | ----------- | ------- |
+| list | Mutable sequence used to store collection of items. | ```python print([1,2,3,4]) ``` |
+| tuple | Immutable sequence used to store collection of items. | ```python print(("mouse", [8, 4, 6], (1, 2, 3))) ``` |
+| range | Represents an immutable sequence of numbers generated during execution. | ```python range(3, 6) ``` |
+| str | Immutable sequence of Unicode code points to store textual data. | ```python print("This is an example string") ``` |
 
 Note: The standard library also includes additional types for processing:
-1. Binary data such as bytearray bytes memoryview, and
-2. Text strings such as str.
+1. Binary data such as
+   * bytearray - ```python array1 = bytearray(str, 'utf-8') # encoding the string with utf-8.```
+   * bytes - ```python b'\xf0\xf1\xf2'.hex() # Return a string object containing two hexadecimal digits for each byte in the instance.```
+   * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```python memoryview(b'abcefg')```
+ , and ...
+3. Text strings such as str.
 
-**Mapping Types:**
+__Mapping Types:__
 
 A mapping object can map hashable values to random objects in Python. Mappings objects are mutable and there is currently only one standard mapping type, the dictionary.
 
-| Class Name | Description |
-| --- | ----- |
-| dict | Stores comma-separated list of key: value pairs |
+| Class Name | Description | Description |
+| ---------- | ----------- | ------------ |
+| dict | Stores comma-separated list of key: value pairs | ```python { "name": "thisIsAFirstName", "age": 25 }``` |
 
-**Set Types:**
+__Set Types:__
 
 Currently, Python has two built-in set types - set and frozenset. set type is mutable and supports methods like add() and remove().
 frozenset type is immutable and can't be modified after creation.
 
-| Class Name | Description |
-| --- | ----- |
-| set | Mutable unordered collection of distinct hashable objects. |
-| frozenset | Immutable collection of distinct hashable objects. |
+| Class Name | Description | Examples |
+| ---------- | ----------- | -------- |
+| set | Mutable unordered collection of distinct hashable objects. | ```python  myset = {"apple", "banana", "cherry"}``` |
+| frozenset | Immutable collection of distinct hashable objects. | ```python  frozenset(["apple", "banana", "cherry"])``` |
 
-Note: set is mutable and thus cannot be used as key for a dictionary. On the other hand, frozenset is immutable and thus, hashable,
-and can be used as a dictionary key or as an element of another set.
+Note: set is mutable and thus cannot be used as key for a dictionary.
+On the other hand, frozenset is immutable and thus, hashable, and can be used as a dictionary key or as an element of another set.
 
-**Modules:**
+__Modules:__
 
 Module is an additional built-in type supported by the Python Interpreter. It supports one special operation, i.e., attribute access:
-mymod.myobj, where mymod is a module and myobj references a name defined in m's symbol table. The module's symbol table resides in a
+
+```python
+mymod.myobj
+```
+
+where mymod is a module and myobj references a name defined in m's symbol table. The module's symbol table resides in a
 very special attribute of the module __dict__, but direct assignment to this module is neither possible nor recommended.
 
-**Callable Types:**
+__Callable Types:__
 
 Callable types are the types to which function call can be applied. They can be user-defined functions, instance methods, generator
 functions, and some other built-in functions, methods and classes.
@@ -191,14 +200,13 @@ Refer to the documentation at docs.python.org for a detailed view of the callabl
 
 ----
 
-What is pass in Python?
+**What is 'pass' in Python?**
 
 The pass keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may
 execute during runtime but has yet to be written. Without the pass statement in the following code, we may run into some errors during code execution.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def empty_func_with_pass():
@@ -229,20 +237,20 @@ Python packages and Python modules are two mechanisms that allow for modular pro
 
 Modularizing has several advantages:
 
-**Simplicity:**
+__Simplicity:__
 
 Working on a single module helps you focus on a relatively small portion of the problem at hand. This makes development easier and less error-prone.
 
-**Maintainability:**
+__Maintainability:__
 
 Modules are designed to enforce logical boundaries between different problem domains. If they are written in a manner that reduces interdependency,
 it is less likely that modifications in a module might impact other parts of the program.
 
-**Reusability:**
+__Reusability:__
 
 Functions defined in a module can be easily reused by other parts of the application.
 
-**Scoping:**
+__Scoping:__
 
 Modules typically define a separate namespace, which helps avoid confusion between identifiers from other
 parts of the program.
@@ -268,15 +276,74 @@ package to the local namespace, thus, it is practically useless.
 **Global variables** are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we
 use the global keyword.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def my_func():
+  x = "fantastic"
+  print("Python is " + x)
+
+def main():
+    x = "awesome"
+    print(my_func("Python is " + x))
+    print("Python is " + x)
+
+if __name__ == '__main__':
+    main()
+```
+
 **Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
 modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Student:
+
+    _schoolName = 'XYZ School' # protected class attribute
+
+    def __init__(self, name, age):
+        self._name = name # protected instance attribute
+        self._age = age # protected instance attribute
+
+def main():
+    student_1 = Student("Jack", 25)
+    print(student_1._name)
+    student_1._name = "John"
+    print(student_1._name)
+
+if __name__ == '__main__':
+    main()
+```
 
 **Private attributes** are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified
 from the outside directly and will result in an AttributeError if such an attempt is made.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Geek:
+    def _single_method(self):
+        pass
+    def __double_method(self): # for mangling
+        pass
+class Pyth(Geek):
+    def __double_method(self): # for mangling
+        pass
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
+```
+
 ----
 
-**What is the use of self in Python?**
+**What is the use of 'self' in Python?**
 
 Used to represent the instance of the class. With this keyword, you can access the attributes and methods of
 the class in python. It binds the attributes with the given arguments. self is used in different places and
@@ -284,20 +351,17 @@ often thought to be a keyword. But unlike in C++, self is not a keyword in Pytho
 
 ----
 
-**What is __init__?**
+**What is '__init__'?**
 
-__init__ is a constructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes
-have a __init__ method associated with them. It helps in distinguishing methods and attributes of a class from local variables.
+```python __init__ ``` is a constructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes
+have such a __method associated with them__. It helps in distinguishing methods and attributes of a class from local variables.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class Student:
-    """
-    Class definition
-    """
+
     def __init__(self, fname, lname, age, section):
         self.firstname = fname
         self.lastname = lname
@@ -305,7 +369,6 @@ class Student:
         self.section = section
 
 def main():
-    """Creating a new object."""
     stu_1 = Student("Sara", "Ansh", 22, "A2")
     print(stu_1)
 
@@ -315,26 +378,26 @@ if __name__ == '__main__':
 
 ----
 
-**What is break, continue and pass in Python?**
+**What is 'break', 'continue' and 'pass' in Python?**
 
-*break*
+__break__
 
 The break statement terminates the loop immediately and the control flows to the statement after
 the body of the loop.
 
-*continue*
+__continue__
+
 The continue statement terminates the current iteration of the statement, skips the rest of
 the code in the current iteration and the control flows to the next iteration of the loop.
 
-*pass*
+__pass__
 
 As explained above, the pass keyword in Python is generally used to fill up empty blocks and
 is similar to an empty statement represented by a semi-colon in languages such as
 Java, C++, Javascript, etc.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
@@ -360,7 +423,7 @@ Unit test is a unit testing framework of Python.
 
 Unit testing means testing different components of software separately.
 
-Can you think about why unit testing is important?
+__Can you think about why unit testing is important?__
 
 Imagine a scenario, you are building software that uses three components namely A, B, and C.
 Now, suppose your software breaks at a point time. How will you find which component was
@@ -372,8 +435,7 @@ This is why it is necessary to test each and every component properly so that we
 Example can be viewed here:
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import random
@@ -421,30 +483,34 @@ class Test(unittest.Testcase):
 
 ----
 
-**What is docstring in Python?**
+**What are 'docstrings' in Python?**
 
 Documentation string or docstring is a multiline string used to document a specific code segment.
-The docstring should describe what the function or method does.
+The docstring should describe what the function or method does. The ensemble of docstrings should
+be read like a history in the program.
 
 ----
 
 **What is slicing in Python?**
 
-As the name suggests, ‘slicing’ is taking parts of.
+As the name suggests, slicing is taking parts of.
 
-Syntax for slicing is [start : stop : step]
+Syntax for slicing is:
 
-start - is the starting index from where to slice a list or tuple
-stop - is the ending index or where to sop.
-step - is the number of steps to jump.
+```python
+[start : stop : step]
+```
+
+- start is the starting index from where to slice a list or tuple. Default value: 0
+- stop is the ending index or where to sop.
+- step is the number of steps to jump.
 
 Default value for start is 0, stop is number of items, step is 1.
 
 Slicing can be done on strings, arrays, lists, and tuples.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
@@ -462,14 +528,20 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
 ----
 
 **Explain how can you make a Python Script executable on Unix?**
 
-Script file must begin with #!/usr/bin/env python3
+Script file must begin with:
 
 ```python
 #!/usr/bin/env python3
+```
+
+```python
+#!/usr/bin/python3 // run with system Python
+#!/usr/bin/env python3 // run with dev version
 
 def main():
     ...
@@ -482,16 +554,24 @@ if __name__ == '__main__':
 
 **What is the difference between Python Arrays and lists?**
 
-*Arrays* in python can only contain elements of same data types i.e., data type of array should be homogeneous.
+*Arrays* in python can only contain __elements of same data types__ i.e., data type of array should be homogeneous.
 It is a thin wrapper around C language arrays and consumes far less memory than lists.
+
+```python
+# Example
+int_array = array.array('i', [-1, 0, 1, 2])
+```
 
 *Lists* in python can contain elements of different data types i.e., data
 type of lists can be heterogeneous.
 It has the disadvantage of consuming large memory.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+int_list = [1,3,"firstName","secondName"]
+```
+
+```python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import array
@@ -499,11 +579,11 @@ import array
 def main():
     a = array.array('i', [1, 2, 3])
     for i in a:
-        print(i, end=' ') #OUTPUT: 1 2 3
+        print(i, end=' ') # OUTPUT: 1 2 3
     # a = array.array('i', [1, 2, 'string']) #OUTPUT: TypeError: an integer is required (got type str)
     a = [1, 2, 'string']
     for i in a:
-        print(i, end=' ') #OUTPUT: 1 2 string
+        print(i, end=' ') # OUTPUT: 1 2 string
 
 if __name__ == '__main__':
     main()
@@ -514,16 +594,21 @@ if __name__ == '__main__':
 **How is memory managed in Python?**
 
 Memory management in Python is handled by the *Python Memory Manager*. The memory allocated by the manager is
-in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being
-private, it is inaccessible to the programmer. Though, python does provide some core API functions to work
+in form of a *private heap space dedicated to Python*. All Python objects are stored in this heap and being
+private, it is *inaccessible to the programmer*. Though, python does provide some core API functions to work
 upon the private heap space.
+
 Additionally, Python has an *in-built garbage collection* to recycle the unused memory for the private heap space.
+
+----
 
 **What are Python namespaces? Why are they used?**
 
-A namespace in Python ensures that object names in a program are unique and can be used without any
-conflict.
-Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding *object as value*. This allows for multiple namespaces to use the same name and map it to a separate object.
+A namespace in Python ensures that object names in a program are unique and can be used without any conflict.
+
+Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding *object as value*.
+This allows for multiple namespaces to use the same name and map it to a separate object.
+
 A few examples of namespaces are as follows:
 
 *Local Namespace* includes local names inside a function. the namespace is temporarily created for
@@ -534,11 +619,11 @@ current project. This namespace is created when the package is imported in the s
 until the execution of the script.
 
 *Built-in Namespace* includes built-in functions of core Python and built-in names for various types of exceptions.
-The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
+The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of
+that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def some_func():
@@ -548,7 +633,6 @@ def some_func():
         print("Inside inner function, value of var:",var)
     some_inner_func()
     print("Try printing var from outer function: ",var)
-
 
 def main():
     # var1 is in the global namespace
@@ -583,44 +667,49 @@ if __name__ == '__main__':
 **What is Scope Resolution in Python?**
 
 Sometimes objects within the same scope have the same name but function differently. In such cases,
-scope resolution comes into play in Python automatically. A few examples of such behavior are:
+__scope resolution__ comes into play in Python automatically.
+
+An example of such behavior are:
 
 Python modules namely 'math' and 'cmath' have a lot of functions that are common to both of them - log10(), acos(), exp() etc.
-
 To resolve this ambiguity, it is necessary to prefix them with their respective module, like math.exp() and cmath.exp().
 
-Consider the code below, an object temp has been initialized to 10 globally and then to 20 on function call. 
-However, the function call didn't change the value of the temp globally. Here, we can observe that Python draws a clear line between global and local variables, treating their namespaces as separate identities.
-
 ```python
-temp = 10   # global-scope variable
+# Consider the code below, an object temp has been initialized to 10 globally and
+# then to 20 on function call. 
+# However, the function call didn't change the value of the temp globally. Here, we
+# can observe that Python draws a clear line between global and local variables,
+# treating their namespaces as separate identities.
+temp = 10 # global-scope variable
 def func():
-     temp = 20   # local-scope variable
+     temp = 20 # local-scope variable
      print(temp)
-print(temp)   # output => 10
-func()    # output => 20
-print(temp)   # output => 10
+print(temp) # output: 10
+func() # output: 20
+print(temp) # output: 10
 ```
 
-This behavior can be overridden using the global keyword inside the function, as shown in the following example:
-
 ```python
+# This behavior above can be overridden using the global keyword inside
+# the function, as shown in the following example:
 temp = 10   # global-scope variable
 def func():
      global temp
      temp = 20   # local-scope variable
      print(temp)
-print(temp)   # output => 10
-func()    # output => 20
-print(temp)   # output => 20
+print(temp) # output; 10
+func() # output; 20
+print(temp)# output; 20
 ```
 
 ----
 
 **What are decorators in Python?**
 
-Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the @decorator_name in
-Python and are called in a bottom-up fashion. For example:
+Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure
+of the function itself. They are represented the @decorator_name in Python and are called in a bottom-up fashion.
+
+For example:
 
 ```python
 # decorator function to convert to lowercase
@@ -630,6 +719,7 @@ def lowercase_decorator(function):
        string_lowercase = func.lower()
        return string_lowercase
    return wrapper
+   
 # decorator function to split words
 def splitter_decorator(function):
    def wrapper():
@@ -637,116 +727,140 @@ def splitter_decorator(function):
        string_split = func.split()
        return string_split
    return wrapper
-@splitter_decorator # this is executed next
-@lowercase_decorator # this is executed first
-def hello():
-   return 'Hello World'
-hello()   # output => [ 'hello' , 'world' ]
+   
+def main():
+    @splitter_decorator # this is executed next
+    @lowercase_decorator # this is executed first
+    def hello():
+        return 'Hello World'
+    hello() # output: [ 'hello' , 'world' ]
+    
+if __name__ == '__main__':
+    main()    
 ```
 
-The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to
-the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here.
-It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.
+The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even
+accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner
+nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus,
+keep itself hidden from the global scope.
 
 ```python
 # decorator function to capitalize names
 def names_decorator(function):
-   def wrapper(arg1, arg2):
-       arg1 = arg1.capitalize()
-       arg2 = arg2.capitalize()
-       string_hello = function(arg1, arg2)
-       return string_hello
-   return wrapper
-@names_decorator
-def say_hello(name1, name2):
-   return 'Hello ' + name1 + '! Hello ' + name2 + '!'
-say_hello('sara', 'ansh')   # output => 'Hello Sara! Hello Ansh!'
+    def wrapper(arg1, arg2):
+        arg1 = arg1.capitalize()
+        arg2 = arg2.capitalize()
+        string_hello = function(arg1, arg2)
+        return string_hello
+    return wrapper
+   
+def main():
+    @names_decorator
+    def say_hello(name1, name2):
+        return 'Hello ' + name1 + '! Hello ' + name2 + '!'
+    say_hello('sara', 'ansh')   # output => 'Hello Sara! Hello Ansh!'
+
+if __name__ == '__main__':
+    main()  
 ```
 
 ----
 
 **What are Dict and List comprehensions?**
 
-Python comprehensions, like decorators, are syntactic sugar constructs that help build altered and filtered lists, dictionaries, or sets from a given list, dictionary, or set. Using comprehensions saves a lot of
-time and code that might be considerably more verbose (containing more lines of code). Let's check out
-some examples, where comprehensions can be truly beneficial:
+Python comprehensions, like decorators, are syntactic sugar constructs that help build altered and filtered lists, dictionaries, or sets
+from a given list, dictionary, or set. Using comprehensions saves a lot of time and code that might be considerably more verbose
+(containing more lines of code). Let's check out some examples, where comprehensions can be truly beneficial:
 
 ```python
 # Performing mathematical operations on the entire list
 my_list = [2, 3, 5, 7, 11]
 squared_list = [x**2 for x in my_list]    # list comprehension
-# output => [4 , 9 , 25 , 49 , 121]
+# output: [4 , 9 , 25 , 49 , 121]
+
 squared_dict = {x:x**2 for x in my_list}    # dict comprehension
-# output => {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
-Performing conditional filtering operations on the entire list
+# output: {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
+
+# Performing conditional filtering operations on the entire list
 my_list = [2, 3, 5, 7, 11]
 squared_list = [x**2 for x in my_list if x%2 != 0]    # list comprehension
-# output => [9 , 25 , 49 , 121]
-squared_dict = {x:x**2 for x in my_list if x%2 != 0}    # dict comprehension
-# output => {11: 121, 3: 9 , 5: 25 , 7: 49}
-Combining multiple lists into one
-Comprehensions allow for multiple iterators and hence, can be used to combine multiple lists into one. 
+# output: [9 , 25 , 49 , 121]
 
+squared_dict = {x:x**2 for x in my_list if x%2 != 0}    # dict comprehension
+# output: {11: 121, 3: 9 , 5: 25 , 7: 49}
+
+# Combining multiple lists into one
+
+# Comprehensions allow for multiple iterators and hence, can be used to combine multiple lists into one. 
 a = [1, 2, 3]
 b = [7, 8, 9]
-[(x + y) for (x,y) in zip(a,b)]  # parallel iterators
-# output => [8, 10, 12]
-[(x,y) for x in a for y in b]    # nested iterators
-# output => [(1, 7), (1, 8), (1, 9), (2, 7), (2, 8), (2, 9), (3, 7), (3, 8), (3, 9)] 
-Flattening a multi-dimensional list
-A similar approach of nested iterators (as above) can be applied to flatten a multi-dimensional list or work upon its inner elements. 
+[(x + y) for (x,y) in zip(a,b)] # parallel iterators
+# output: [8, 10, 12]
 
+[(x,y) for x in a for y in b] # nested iterators
+# output: [(1, 7), (1, 8), (1, 9), (2, 7), (2, 8), (2, 9), (3, 7), (3, 8), (3, 9)] 
+
+# Flattening a multi-dimensional list
+
+# A similar approach of nested iterators (as above) can be applied to flatten a multi-dimensional list
+# or work upon its inner elements. 
 my_list = [[10,20,30],[40,50,60],[70,80,90]]
 flattened = [x for temp in my_list for x in temp]
-# output => [10, 20, 30, 40, 50, 60, 70, 80, 90]
+# output: [10, 20, 30, 40, 50, 60, 70, 80, 90]
 ```
 
-Note: List comprehensions have the same effect as the map method in other languages. They follow the mathematical set builder notation rather than map and filter functions in Python.
+Note: List comprehensions have the same effect as the map method in other languages.
+They follow the mathematical set builder notation rather than map and filter functions in Python.
 
 ----
 
 **What is lambda in Python? Why is it used?**
 
-Lambda is an anonymous function in Python, that can accept any number of arguments, but can only have a single expression. It is generally used in situations requiring an anonymous function for a short time period. Lambda functions can be used in either of the two ways:
+Lambda is an anonymous function in Python, that can accept any number of arguments, but can only have a single expression.
+It is generally used in situations requiring an anonymous function for a short time period. Lambda functions can be used
+in either of the two ways:
 
 ```python
-# Assigning lambda functions to a variable:
+# assigning lambda functions to a variable:
 mul = lambda a, b : a * b
-print(mul(2, 5))    # output => 10
+print(mul(2, 5)) # output: 10
 Wrapping lambda functions inside another function:
 def myWrapper(n):
  return lambda a : a * n
 mulFive = myWrapper(5)
-print(mulFive(2))    # output => 10
+print(mulFive(2)) # output: 10
 ```
 
 ----
 
 **How do you copy an object in Python?**
 
-In Python, the assignment statement (= operator) does not copy objects. Instead, it creates a binding between
+In Python, the assignment statement ('='-operator) does not copy objects. Instead, it creates a binding between
 the existing object and the target variable name. To create copies of an object in Python, we need to use the
-copy module. Moreover, there are two ways of creating copies for the given object using the copy module -
+copy module. Moreover, there are two ways of creating copies for the given object using the copy module:
 
-*Shallow Copy* is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.
+*Shallow Copy* is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values
+is a reference to other objects, just the reference addresses for the same are copied.
 
 *Deep Copy* copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.
 
 ```python
 from copy import copy, deepcopy
 list_1 = [1, 2, [3, 5], 4]
-## shallow copy
+
+# shallow copy
 list_2 = copy(list_1) 
 list_2[3] = 7
 list_2[2].append(6)
-list_2    # output => [1, 2, [3, 5, 6], 7]
-list_1    # output => [1, 2, [3, 5, 6], 4]
-## deep copy
+list_2 # output: [1, 2, [3, 5, 6], 7]
+list_1 # output: [1, 2, [3, 5, 6], 4]
+
+# deep copy
 list_3 = deepcopy(list_1)
 list_3[3] = 8
 list_3[2].append(7)
-list_3    # output => [1, 2, [3, 5, 6, 7], 8]
-list_1    # output => [1, 2, [3, 5, 6], 4]
+list_3 # output: [1, 2, [3, 5, 6, 7], 8]
+list_1 # output: [1, 2, [3, 5, 6], 4]
 ```
 
 ----
