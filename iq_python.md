@@ -872,12 +872,14 @@ with the only difference that range() returns a Python list, whereas, xrange() r
 
 *So how does that make a difference?*
 
-It sure does, because unlike range(), xrange() doesn't generate a static list, it creates the value on the go. This technique is commonly used with an object-type generator and has been termed as "yielding".
+It sure does, because unlike range(), xrange() doesn't generate a static list, it creates the value on the go. This technique is
+commonly used with an object-type generator and has been termed as "yielding".
 
-Yielding is crucial in applications where memory is a constraint. Creating a static list as in range() can lead to a Memory Error in such conditions, while, xrange() can handle it optimally by using just enough memory for the generator (significantly less in comparison).
+Yielding is crucial in applications where memory is a constraint. Creating a static list as in range() can lead to a Memory Error in such
+conditions, while, xrange() can handle it optimally by using just enough memory for the generator (significantly less in comparison).
 
 ```python
-for i in xrange(10): # numbers from o to 9
+for i in xrange(10): # numbers from 0 to 9
    print i # output => 0 1 2 3 4 5 6 7 8 9
 for i in xrange(1,10): # numbers from 1 to 9
    print i # output => 1 2 3 4 5 6 7 8 9
@@ -899,15 +901,23 @@ deserialize it, later on, to obtain the original object. Here, the pickle module
 
 *Pickling:*
 
-Pickling is the name of the serialization process in Python. Any object in Python can be serialized into a byte stream and dumped as a file in the memory. The process of pickling is compact but pickle objects can
-be compressed further. Moreover, pickle keeps track of the objects it has serialized and the
-serialization is portable across versions.
-The function used for the above process is pickle.dump().
+Pickling is the name of the serialization process in Python. Any object in Python can be serialized into a byte stream and dumped as a file in the memory.
+The process of pickling is compact but pickle objects can be compressed further. Moreover, pickle keeps track of the objects it has serialized and the
+serialization is portable across versions. The function used for the above process is:
+
+```python
+pickle.dump()
+```
 
 *Unpickling:*
 
 Unpickling is the complete inverse of pickling. It deserializes the byte stream to recreate the objects stored in the file and loads the object to memory.
-The function used for the above process is pickle.load().
+The function used for the above process is:
+
+```python
+pickle.load().
+```
+
 Note: Python has another, more primitive, serialization module called marshall, which exists primarily to support .pyc files in Python and differs significantly from the pickle.
 
 ----
@@ -947,17 +957,48 @@ for i in fib(10):
 **What is PYTHONPATH in Python?**
 
 PYTHONPATH is an environment variable which you can set to add additional directories where Python will
-look for modules and packages. This is especially useful in maintaining Python libraries that you do not
-wish
-to install in the global default location.
+look for modules and packages.
+
+This is especially useful in maintaining Python libraries that you do not wish to install in the global default location.
 
 ----
 
 **What is the use of help() and dir() functions?**
 
+__help()__
+
 help() function in Python is used to display the documentation of modules, classes, functions, keywords,
-etc. If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
+etc.
+
+```python
+help('print')
+help('math')
+help('')
+```
+
+If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
+
+__dir()__
+
 dir() function tries to return a valid list of attributes and methods of the object it is called upon. It behaves differently with different objects, as it aims to produce the most relevant data, rather than the complete information.
+
+```python
+class Person:
+    
+    def __init__(self, name, age, country):
+      ...
+      self.name = name
+      self.age = age
+      self.country = country
+     
+     def get_name(self):
+        return self.name
+     
+     def get_coutry(self):
+        ...
+
+print(dir(Person))
+```
 
 For Modules/Library objects, it returns a list of all attributes, contained in that module.
 For Class Objects, it returns a list of all valid attributes and base attributes.
@@ -968,7 +1009,10 @@ With no arguments passed, it returns a list of attributes in the current scope.
 **What is the difference between .py and .pyc files?**
 
 .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program.
-We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.
+We get bytecode after compilation of .py file (source code).
+
+.pyc files are not created for all the files that you run. It is only created for the files that you import.
+
 Before executing a python program python interpreter checks for the compiled files. If the file is
 present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles
 it to .pyc file and then python virtual machine executes it.
@@ -978,10 +1022,15 @@ Having .pyc file saves you the compilation time.
 
 **How Python is interpreted?**
 
-Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation. Python is a bytecode(set of interpreter readable instructions) interpreted generally.
+Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation.
+
+Python is a bytecode(set of interpreter readable instructions) interpreted generally.
+
 Source code is a file with .py extension.
+
 Python compiles the source code to a set of instructions for a virtual machine. The Python interpreter
-is an implementation of that virtual machine. This intermediate format is called “bytecode”.
+is an implementation of that virtual machine. This intermediate format is called __bytecode__.
+
 .py source code is first compiled to give .pyc which is bytecode. This bytecode can be then interpreted
 by the official CPython or JIT(Just in Time compiler) compiled by PyPy.
 
@@ -999,11 +1048,12 @@ In Python, arguments are passed by reference, i.e., reference to the actual obje
 
 ```python
 def appendNumber(arr):
-   arr.append(4)
+  arr.append(4)
+
 arr = [1, 2, 3]
-print(arr)  #Output: => [1, 2, 3]
+print(arr)  # output: [1, 2, 3]
 appendNumber(arr)
-print(arr)  #Output: => [1, 2, 3, 4]
+print(arr)  # output: [1, 2, 3, 4]
 ```
 
 ----
@@ -1011,42 +1061,53 @@ print(arr)  #Output: => [1, 2, 3, 4]
 **What are iterators in Python?**
 
 An iterator is an object.
+
 It remembers its state i.e., where it is during iteration (see code below to see how)
 __iter__() method initializes an iterator.
+
 It has a __next__() method which returns the next item in iteration and points to the next element.
 Upon reaching the end of iterable object __next__() must return StopIteration exception.
 It is also self-iterable.
+
 Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.
 
 ```python
 class ArrayList:
+
    def __init__(self, number_list):
        self.numbers = number_list
+       
    def __iter__(self):
        self.pos = 0
        return self
+       
    def __next__(self):
        if(self.pos < len(self.numbers)):
            self.pos += 1
            return self.numbers[self.pos - 1]
        else:
            raise StopIteration
+           
 array_obj = ArrayList([1, 2, 3])
 it = iter(array_obj)
 print(next(it)) #output: 2
 print(next(it)) #output: 3
 print(next(it))
-#Throws Exception
-#Traceback (most recent call last):
-#...
-#StopIteration
+# Throws Exception
+# Traceback (most recent call last):
+# ...
+# StopIteration
 ```
 
 ----
 
 **Explain how to delete a file in Python?**
 
-Use command os.remove(file_name)
+Use command:
+
+```python
+os.remove(file_name)
+```
 
 ```python
 import os
@@ -1059,9 +1120,9 @@ print("File Removed!")
 You can use split() function to split a string based on a delimiter to a list of strings.
 You can use join() function to join a list of strings based on a delimiter to give a single string.
 string = "This is a string."
-string_list = string.split(' ') #delimiter is ‘space’ character or ‘ ‘
+string_list = string.split(' ') # delimiter is ‘space’ character or ‘ ‘
 print(string_list) #output: ['This', 'is', 'a', 'string.']
-print(' '.join(string_list)) #output: This is a string.
+print(' '.join(string_list)) # output: This is a string.
 
 ----
 
@@ -1069,8 +1130,9 @@ print(' '.join(string_list)) #output: This is a string.
 
 __*args__
 
-*args is a special syntax used in the function definition to pass variable-length arguments.
-“*” means variable length and “args” is the name used by convention. You can use any other.
+is a special syntax used in the function definition to pass variable-length arguments.
+
+'*' means variable length and 'args' is the name used by convention. You can use any other.
 
 ```python
 def multiply(a, b, *argv):
@@ -1083,7 +1145,7 @@ print(multiply(1, 2, 3, 4, 5)) #output: 120
 
 __**kwargs__
 
-**kwargs is a special syntax used in the function definition to pass variable-length keyworded arguments.
+is a special syntax used in the function definition to pass variable-length keyworded arguments.
 Here, also, “kwargs” is used just by convention. You can use any other name.
 Keyworded argument means a variable that has a name when passed to a function.
 It is actually a dictionary of the variable names and its value.
@@ -1093,7 +1155,7 @@ def tellArguments(**kwargs):
    for key, value in kwargs.items():
        print(key + ": " + value)
 tellArguments(arg1 = "argument 1", arg2 = "argument 2", arg3 = "argument 3")
-#output:
+# output:
 # arg1: argument 1
 # arg2: argument 2
 # arg3: argument 3
