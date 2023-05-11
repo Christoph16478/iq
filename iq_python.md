@@ -65,8 +65,19 @@ Note: Local scope objects can be synced with global scope objects using keywords
 **What are lists and tuples? What is the key difference between the two?**
 
 Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects
-stored in both sequences can have different data types. Lists are represented with square brackets
-['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97).
+stored in both sequences can have different data types.
+
+Lists are represented with square brackets:
+
+```python
+['sara', 6, 0.19]
+```
+
+while tuples are represented with parantheses:
+
+```python
+('ansh', 5, 0.97).
+```
 
 But what is the real difference between the two?
 The key difference between the two is that while lists are mutable, tuples on the other hand are immutable
@@ -98,34 +109,44 @@ explicitly during variable declarations type errors are likely to occur if the k
 and their compatibility with each other are neglected. Python provides type() and isinstance() functions
 to check the type of these variables. These data types can be grouped into the following categories-
 
-**None Type:**
+__None Type__
 
 None keyword represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.
 
+| Class Name | Description | Example |
+| --------- | ------------- | ------- |
+| NoneType | Represents the NULL values in Python. | ```python print(type(None)) ``` |
+
+__Numeric Types__
+
+There are three distinct numeric types:
+- integers
+- floating-point numbers
+- complex numbers.
+- Additionally, booleans are a sub-type of integers.
+
 | Class Name | Description |
-| --- | ----- |
-| NoneType | Represents the NULL values in Python. | 
-
-**Numeric Types:**
-
-There are three distinct numeric types - integers, floating-point numbers, and complex numbers. Additionally, booleans are a sub-type of integers.
-
-| Class Name | Description |
-| --- | ----- |
+| ---------- | ----------- |
 | int | Stores integer literals including hex, octal and binary numbers as integers. |
 | float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. |
 | complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. |
 | bool | Stores boolean value (True or False). |
 
-Note: The standard library also includes fractions to store rational numbers and decimal to store floating-point numbers with user-defined precision.
+Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal
+to store floating-point numbers with user-defined precision.
 
-**Sequence Types:**
+__Sequence Types:__
 
-According to Python Docs, there are three basic Sequence Types - lists, tuples, and range objects. Sequence types have the in and not in operators
-defined for their traversing their elements. These operators share the same priority as the comparison operations.
+According to Python Docs, there are three basic Sequence Types:
+- lists
+- tuples
+- range objects.
+
+Sequence types have the in and not in operators defined for their traversing their elements. These operators share the same priority as
+the comparison operations.
 
 | Class Name | Description |
-| --- | ----- |
+| ---------- | ----------- |
 | list | Mutable sequence used to store collection of items. |
 | tuple | Immutable sequence used to store collection of items. |
 | range | Represents an immutable sequence of numbers generated during execution. |
