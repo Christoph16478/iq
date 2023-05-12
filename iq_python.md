@@ -2986,10 +2986,10 @@ There are 5 types of literals in python:
 4. Boolean literals : These can be 2 values- either True or False.
 
 5. Literal Collections : These are of 4 types ...
-- a. List collections-Eg. a = [1,2,3,’Amit’]
-- b. Tuple literals- Eg. a = (5,6,7,8)
-- c. Dictionary literals- Eg. dict = {1: ’apple’, 2: ’mango, 3: ’banana`’}
-- d. Set literals- Eg. {"Tanya", "Rohit", "Mohan"}
+  - a. List collections-Eg. a = [1,2,3,’Amit’]
+  - b. Tuple literals- Eg. a = (5,6,7,8)
+  - c. Dictionary literals- Eg. dict = {1: ’apple’, 2: ’mango, 3: ’banana`’}
+  - d. Set literals- Eg. {"Tanya", "Rohit", "Mohan"}
 
 Special literal:  Python has 1 special literal None which is used to return a null variable.
 
@@ -3037,11 +3037,13 @@ Type conversion refers to the conversion of one data type into another.
 - str() – Used to convert integer into a string.
 - complex(real,imag) – This function converts real numbers to complex(real,imag) number.
 
+----
+
 **How to install Python on Windows and set path variable?**
 
 To install Python on Windows, follow the below steps:
 
-1. Install python from this link: https://www.python.org/downloads/
+1. Install python from this link: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 1. After this, install it on your PC. Look for the location where PYTHON has been installed on your PC using the following command on your command
 1. prompt: cmd python. 
 1. Then go to advanced system settings and add a new variable and name it as PYTHON_NAME and paste the copied path.
@@ -3063,17 +3065,19 @@ and will throw errors as well.
 Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
 
 ```python
-# Example:
-# 1
-# 2
-# 3
-# 4
-# 5
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import array as arr
-My_Array=arr.array('i',[1,2,3,4])
-My_list=[1,'abc',1.20]
-print(My_Array)
-print(My_list)
+
+def main():
+    My_Array=arr.array('i',[1,2,3,4])
+    My_list=[1,'abc',1.20]
+    print(My_Array)
+    print(My_list)
+
+if __name__ == '__main__':
+    main()
 # Output:
 # array(‘i’, [1, 2, 3, 4]) [1, ‘abc’, 1.2]
 ```
@@ -3082,7 +3086,7 @@ print(My_list)
 
 **What are functions in Python?**
 
-A function is a block of code which is executed only when it is called. To define a Python function, the def keyword is used.
+A function is a block of code which is executed only when it is called. To define a Python function, the 'def' keyword is used.
 
 ----
 
@@ -3101,13 +3105,20 @@ was called.
 Consider the example shown below:
 
 ```
-from random import shuffle
-x = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']
-shuffle(x)
-print(x)
-The output of the following code is as below.
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-['Flying', 'Keep', 'Blue', 'High', 'The', 'Flag']
+from random import shuffle
+
+def main():
+    x = ['Keep', 'The', 'Blue', 'Flag', 'Flying', 'High']
+    shuffle(x)
+    print(x)
+
+if __name__ == '__main__':
+    main()
+# Output:
+# ['Flying', 'Keep', 'Blue', 'High', 'The', 'Flag']
 ```
 
 ----
@@ -3127,23 +3138,28 @@ import random
 import random.random
 ```
 
-The statement random.random() method return the floating-point number that is in the range of [0, 1]. The function generates random float numbers. The methods that are used with the random class are the bound methods of the hidden instances. The instances of the Random can be done to show the multi-threading programs that creates a different instance of individual threads. The other random generators that are used in this are:
+The statement random.random() method return the floating-point number that is in the range of [0, 1]. The function generates random float numbers.
+The methods that are used with the random class are the bound methods of the hidden instances. The instances of the Random can be done to show
+the multi-threading programs that creates a different instance of individual threads. The other random generators that are used in this are:
 
-randrange(a, b): it chooses an integer and define the range in-between [a, b). It returns the elements by selecting it randomly from the range that is specified. It doesn’t build a range object.
-uniform(a, b): it chooses a floating point number that is defined in the range of [a,b).Iyt returns the floating point number
-normalvariate(mean, sdev): it is used for the normal distribution where the mu is a mean and the sdev is a sigma that is used for standard deviation.
-The Random class that is used and instantiated creates independent multiple random number generators.
+```python
+randrange(a, b)
+# It chooses an integer and define the range in-between [a, b). It returns the elements by selecting it randomly
+# from the range that is specified. It doesn’t build a range object.
+```
 
-----
+```python
+uniform(a, b)
+# It chooses a floating point number that is defined in the range of [a,b).
+# Iyt returns the floating point number
+```
 
-**What is the difference between range & xrange?**
-
-For the most part, xrange and range are the exact same in terms of functionality. They both provide a way to generate a list of integers
-for you to use, however you please. The only difference is that range returns a Python list object and x range returns an xrange object.
-
-This means that xrange doesn’t actually generate a static list at run-time like range does. It creates the values as you need them with a
-special technique called yielding. This technique is used with a type of object known as generators. That means that if you have a really
-gigantic range you’d like to generate a list for, say one billion, xrange is the function to use.
+```python
+normalvariate(mean, sdev)
+# It is used for the normal distribution where the mu is a mean and the sdev is a sigma
+# that is used for standard deviation. The Random class that is used and instantiated
+# creates independent multiple random number generators.
+```
 
 ----
 
@@ -3157,9 +3173,9 @@ triple quotes).
 # 1
 # 2
 # 3
-<span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_end"></span>
-<pre><span>#Comments in Python start like this
-print("Comments in Python start with a #")
+# <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_end"></span>
+# <pre><span>#Comments in Python start like this
+# print("Comments in Python start with a #")
 # Output: Comments in Python start with a #
 ```
 
@@ -3167,7 +3183,35 @@ print("Comments in Python start with a #")
 
 **What are the generators in python?**
 
-Functions that return an iterable set of items are called generators.
+Introduced with PEP 255, generator functions are a special kind of function that return a lazy iterator.
+These are objects that you can loop over like a list. However, unlike lists, lazy iterators do not store
+their contents in memory. For an overview of iterators in Python, take a look at Python “for” Loops (Definite Iteration).
+
+```python
+# Reading Large Files
+# A common use case of generators is to work with data streams or large files, like CSV files. These text files separate
+# data into columns by using commas. This format is a common way to share data. Now, what if you want to count the number
+# of rows in a CSV file? The code block below shows one way of counting those rows:
+csv_gen = csv_reader("some_csv.txt")
+row_count = 0
+
+for row in csv_gen:
+    row_count += 1
+
+print(f"Row count is {row_count}")
+```
+
+```python
+# Generating an Infinite Sequence
+# Let’s switch gears and look at infinite sequence generation. In Python, to get a finite sequence,
+# you call range() and evaluate it in a list context:
+
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
+```
 
 ----
 
@@ -3175,6 +3219,12 @@ Functions that return an iterable set of items are called generators.
 
 In Python, the capitalize() method capitalizes the first letter of a string. If the string already consists of a capital letter
 at the beginning, then, it returns the original string.
+
+```python
+str = "capitalize this string here!"
+output=str.capitalize()
+print("The resultant string is:", output)
+```
 
 ----
 
@@ -3208,15 +3258,6 @@ Docstrings are not actually comments, but, they are documentation strings. These
 quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well.
 
 ```python
-# Example:
-# 1
-# 2
-# 3
-# 4
-# 5
-# 6
-# 7
-# 8
 """
 Using docstring as a comment.
 This code divides 2 numbers
@@ -3234,7 +3275,7 @@ print(z)
 
 Operators are special functions. They take one or more values and produce a corresponding result.
 
-_is_ : returns true when 2 operands are true  (Example: “a” is ‘a’)
+_is_ : returns true when 2 operands are true  (Example: "a" is 'a')
 
 _not_ : returns the inverse of the boolean value
 
@@ -3254,8 +3295,8 @@ _Dir() function:_ The dir() function is used to display the defined symbols.
 
 **Whenever Python exits, why isn’t all the memory de-allocated?**
 
-Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed.
-It is impossible to de-allocate those portions of memory that are reserved by the C library.
+Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from
+the global namespaces are not always de-allocated or freed. It is impossible to de-allocate those portions of memory that are reserved by the C library.
 On exit, because of having its own efficient clean up mechanism, Python would try to de-allocate/destroy every other object.
 
 ----
@@ -3290,19 +3331,25 @@ or false values with a statement that has to be evaluated for it.
 ```python
 # The Ternary operator will be given as:
 [on_true] if [expression] else [on_false]x, y = 25, 50big = x if x < y else y
-```
-Example:
 
-The expression gets evaluated like if x < y else y, in this case if x < y is true then the value is returned as big=x and if it is incorrect then big=y will be sent as a result.
+# Example:
+# Program to demonstrate conditional operator
+a, b = 10, 20
+# Copy value of a in min if a < b else copy b
+min = a if a < b else b
+print(min)
+# The expression gets evaluated like if x < y else y, in this case if x < y is true then the value is returned as big=x and
+# if it is incorrect then big=y will be sent as a result.
+```
 
 ----
 
 **What does this mean: *args, **kwargs? And why would we use it?**
 
 We use *args when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a
-stored list or tuple of arguments to a function. **kwargs is used when we don’t know how many keyword arguments will
+stored list or tuple of arguments to a function. __**kwargs__ is used when we don’t know how many keyword arguments will
 be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers
-args and kwargs are a convention, you could also use *bob and **billy but that would not be wise.
+args and kwargs are a convention, you could also use *bob and __**billy__ but that would not be wise.
 
 ----
 
@@ -3311,9 +3358,6 @@ args and kwargs are a convention, you could also use *bob and **billy but that w
 It is used to determine the length of a string, a list, an array, etc.
 
 ```python
-# Example:
-# 1
-# 2
 stg='ABCD'
 len(stg)
 # Output:4
@@ -3323,13 +3367,13 @@ len(stg)
 
 **Explain split(), sub(), subn() methods of “re” module in Python?**
 
-To modify the strings, Python’s “re” module is providing 3 methods. They are:
+To modify the strings, Python’s “re” module is providing 3 methods:
 
-_split()_ : uses a regex pattern to “split” a given string into a list.
+_split()_ : Uses a regex pattern to "split" a given string into a list.
 
-_sub()_ : finds all substrings where the regex pattern matches and then replace them with a different string.
+_sub()_ : Finds all substrings where the regex pattern matches and then replace them with a different string.
 
-_subn()_ : it is similar to sub() and also returns the new string along with the no. of replacements.
+_subn()_ : It is similar to sub() and also returns the new string along with the no. of replacements.
 
 ----
 
@@ -3379,12 +3423,15 @@ Built-in types in Python are as follows:
 
 **What advantages do NumPy arrays offer over (nested) Python lists?**
 
-Python's lists are efficient general-purpose containers. They support (fairly) efficient insertion, deletion, appending, and concatenation, and Python's list comprehensions make them easy to construct and manipulate.
+Python's lists are efficient general-purpose containers. They support (fairly) efficient insertion, deletion, appending, and concatenation, and Python's list
+comprehensions make them easy to construct and manipulate.
 
-They have certain limitations: they don’t support “vectorized” operations like elementwise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
+They have certain limitations: they don’t support “vectorized” operations like elementwise addition and multiplication, and the fact that they can contain
+objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
 
-NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work. And they are also efficiently implemented.
-NumPy array is faster and You get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc. 
+NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work.
+And they are also efficiently implemented. NumPy array is faster and You get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra,
+histograms, etc. 
 
 ---
 
@@ -3440,10 +3487,31 @@ is used to copy the reference pointers just like it copies the values. These ref
 made in any member of the class will also affect the original copy of it. Shallow copy allows faster execution of the program and it
 depends on the size of the data that is used.
 
+```python
+# Example:
+# importing copy module
+import copy
+# initializing list 1
+li1 = [1, 2, [3, 5], 4]
+li2 = copy.copy(li1)
+print("li2 ID: ", id(li2), "Value: ", li2)
+```
+
 _Deep copy_ is used to store the values that are already copied. Deep copy doesn’t copy the reference pointers to the objects. It
 makes the reference to an object and the new object that is pointed by some other object gets stored. The changes made in the
 original copy won’t affect any other copy that uses the object. Deep copy makes execution of the program slower due to making
 certain copies for each object that is been called.
+
+```python
+# Example:
+# importing copy module
+import copy
+# initializing list 1
+li1 = [1, 2, [3, 5], 4]
+# using deepcopy for deepcopy
+li3 = copy.deepcopy(li1)
+print("li3 ID: ", id(li3), "Value: ", li3)
+```
 
 ----
 
@@ -3489,7 +3557,7 @@ Scikit-learn and many more.
 The split() method is used to separate a given String in Python.
 
 ```python
-a="edureka python"
+a="example string to split"
 print(a.split())
 # Output: [‘edureka’, ‘python’]
 ```
@@ -3501,9 +3569,9 @@ print(a.split())
 Modules can be imported using the import keyword.  You can import modules in three ways-
 
 ```python
-import array           #importing using the original module name
-import array as arr    # importing using an alias name
-from array import *    #imports everything present in the array module
+import array # importing using the original module name
+import array as arr # importing using an alias name
+from array import * # imports everything present in the array module
 ```
 
 ----
@@ -3516,10 +3584,133 @@ and the class that is inherited is called a derived / child class.
 
 They are different types of inheritance supported by Python:
 
-_Single Inheritance_ – where a derived class acquires the members of a single super class.
-_Multi-level inheritance_ – a derived class d1 in inherited from base class base1, and d2 are inherited from base2.
-_Hierarchical inheritance_ – from one base class you can inherit any number of child classes
-_Multiple inheritance_ – a derived class is inherited from more than one base class.
+_Single Inheritance_ – where a derived class acquires the members of a single super class:
+
+```python
+# Python program to demonstrate
+# single inheritance
+ 
+# Base class
+class Parent:
+    def func1(self):
+        print("This function is in parent class.")
+ 
+# Derived class
+class Child(Parent):
+    def func2(self):
+        print("This function is in child class.")
+ 
+# Driver's code
+object = Child()
+object.func1()
+object.func2()
+```
+
+_Multi-level inheritance_ – a derived class d1 in inherited from base class base1, and d2 are inherited from base2:
+
+```python
+# Python program to demonstrate
+# multilevel inheritance
+
+# Base class
+class Grandfather:
+	def __init__(self, grandfathername):
+		self.grandfathername = grandfathername
+
+# Intermediate class
+class Father(Grandfather):
+	def __init__(self, fathername, grandfathername):
+		self.fathername = fathername
+
+		# invoking constructor of Grandfather class
+		Grandfather.__init__(self, grandfathername)
+
+# Derived class
+class Son(Father):
+	def __init__(self, sonname, fathername, grandfathername):
+		self.sonname = sonname
+
+		# invoking constructor of Father class
+		Father.__init__(self, fathername, grandfathername)
+
+	def print_name(self):
+		print('Grandfather name :', self.grandfathername)
+		print("Father name :", self.fathername)
+		print("Son name :", self.sonname)
+
+
+# Driver code
+s1 = Son('Prince', 'Rampal', 'Lal mani')
+print(s1.grandfathername)
+s1.print_name()
+```
+
+_Hierarchical inheritance_ – from one base class you can inherit any number of child classes:
+
+```python
+# Python program to demonstrate
+# Hierarchical inheritance
+
+# Base class
+class Parent:
+	def func1(self):
+		print("This function is in parent class.")
+
+# Derived class1
+class Child1(Parent):
+	def func2(self):
+		print("This function is in child 1.")
+
+# Derivied class2
+class Child2(Parent):
+	def func3(self):
+		print("This function is in child 2.")
+
+
+# Driver's code
+object1 = Child1()
+object2 = Child2()
+object1.func1()
+object1.func2()
+object2.func1()
+object2.func3()
+
+```
+
+_Hybrid inheritance_ – a derived class is inherited from more than one base class:
+
+```python
+# Python program to demonstrate
+# hybrid inheritance
+
+
+class School:
+	def func1(self):
+		print("This function is in school.")
+
+
+class Student1(School):
+	def func2(self):
+		print("This function is in student 1. ")
+
+
+class Student2(School):
+	def func3(self):
+		print("This function is in student 2.")
+
+
+class Student3(Student1, School):
+	def func4(self):
+		print("This function is in student 3.")
+
+
+# Driver's code
+object = Student3()
+object.func1()
+object.func2()
+
+```
+
 
 ----
 
@@ -3547,27 +3738,27 @@ In Python, the term monkey patch only refers to dynamic modifications of a class
 # m.py
 class MyClass:
 def f(self):
-print "f()"
+print("f()")
 ```
 
 ```python
 import m
 def monkey_f(self):
-print "monkey_f()"
+print("monkey_f()")
  
 m.MyClass.f = monkey_f
 obj = m.MyClass()
 obj.f()
 # The output will be as below:
-
 # monkey_f()
 # As we can see, we did make some changes in the behavior of f() in MyClass using the function we defined, monkey_f(), outside of the module m.
 ```
 
 ----
 
-Q69. Does python support multiple inheritance?
-Ans: Multiple inheritance means that a class can be derived from more than one parent classes. Python does support multiple inheritance, unlike Java.
+**Does python support multiple inheritance?**
+
+Multiple inheritance means that a class can be derived from more than one parent classes. Python does support multiple inheritance, unlike Java.
 
 ----
 
@@ -3576,6 +3767,39 @@ Ans: Multiple inheritance means that a class can be derived from more than one p
 Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named
 ABC then the child class also can have a method with the same name ABC having its own parameters and variables.
 Python allows polymorphism.
+
+```python
+# Polymorphism with class methods:
+# The below code shows how Python can use two different class types, in the same way. We create a for loop that iterates
+# through a tuple of objects. Then call the methods without being concerned about which class type each object is. We
+# assume that these methods actually exist in each class. 
+class India():
+	def capital(self):
+		print("New Delhi is the capital of India.")
+
+	def language(self):
+		print("Hindi is the most widely spoken language of India.")
+
+	def type(self):
+		print("India is a developing country.")
+
+class USA():
+	def capital(self):
+		print("Washington, D.C. is the capital of USA.")
+
+	def language(self):
+		print("English is the primary language of USA.")
+
+	def type(self):
+		print("USA is a developed country.")
+
+obj_ind = India()
+obj_usa = USA()
+for country in (obj_ind, obj_usa):
+	country.capital()
+	country.language()
+	country.type()
+```
 
 ----
 
@@ -3589,6 +3813,50 @@ Encapsulation means binding the code and the data together. A Python class in an
 
 Data Abstraction is providing only the required details and hiding the implementation from the world.
 It can be achieved in Python by using interfaces and abstract classes.
+
+```python
+# Consider a real-life example of encapsulation, in a company, there are different sections like the accounts section, finance section,
+# sales section etc. The finance section handles all the financial transactions and keeps records of all the data related to finance.
+# Similarly, the sales section handles all the sales-related activities and keeps records of all the sales. Now there may arise a
+# situation when due to some reason an official from the finance section needs all the data about sales in a particular month. In
+# this case, he is not allowed to directly access the data of the sales section. He will first have to contact some other officer
+# in the sales section and then request him to give the particular data. This is what encapsulation is. Here the data of the sales
+# section and the employees that can manipulate them are wrapped under a single name “sales section”. Using encapsulation also hides
+# the data. In this example, the data of the sections like sales, finance, or accounts are hidden from any other section.
+
+# Python program to
+# demonstrate protected members
+
+# Creating a base class
+class Base:
+	def __init__(self):
+
+		# Protected member
+		self._a = 2
+
+# Creating a derived class
+class Derived(Base):
+	def __init__(self):
+
+		# Calling constructor of
+		# Base class
+		Base.__init__(self)
+		print("Calling protected member of base class: ",
+			self._a)
+
+		# Modify the protected variable:
+		self._a = 3
+		print("Calling modified protected member outside class: ",
+			self._a)
+
+obj1 = Derived()
+obj2 = Base()
+# Calling protected member
+# Can be accessed but should not be done due to convention
+print("Accessing protected member of obj1: ", obj1._a)
+# Accessing the protected variable outside
+print("Accessing protected member of obj2: ", obj2._a)
+```
 
 ----
 
@@ -3613,7 +3881,7 @@ obj=a()
 obj.name="xyz"
 print("Name = ",obj.name)
 # Output: 
-Name =  xyz
+# Name = xyz
 ```
 
 ----
@@ -3629,17 +3897,37 @@ Basic Python Programs – Python Interview Questions
 **Write a program in Python to execute the Bubble sort algorithm?**
 
 ```python
-def bs(a):
-    # a = name of list
-    b=len(a)-1nbsp; 
-    # minus 1 because we always compare 2 adjacent values
-    for x in range(b):
-            for y in range(b-x):
-                a[y]=a[y+1]
-    
-    a=[32,5,3,6,7,54,87]
-    bs(a)
-# Output:  [3, 5, 6, 7, 32, 54, 87]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def bubble_sort(arr):
+	n = len(arr)
+	# optimize code, so if the array is already sorted, it doesn't need
+	# to go through the entire process
+	swapped = False
+	# Traverse through all array elements
+	for i in range(n-1):
+		# range(n) also work but outer loop will
+		# repeat one time more than needed.
+		# Last i elements are already in place
+		for j in range(0, n-i-1):
+			# traverse the array from 0 to n-i-1
+			# Swap if the element found is greater
+			# than the next element
+			if arr[j] > arr[j + 1]:
+				swapped = True
+				arr[j], arr[j + 1] = arr[j + 1], arr[j]
+		if not swapped:
+			# if we haven't needed to make a single swap, we
+			# can just exit the main loop.
+			return
+
+def main():
+    arr = [32,5,3,6,7,54,87]
+    print(bubble_sort(arr))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -3647,20 +3935,18 @@ def bs(a):
 **Write a program in Python to produce Star triangle?**
 
 ```python
-def pyfunc(r):
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def gen_star_triangle(r):
     for x in range(r):
-        print(' '*(r-x-1)+'*'*(2*x+1))    
-pyfunc(9)
-# Output:
-#         *
-#        ***
-#       ***
-#      *****
-#     *****
-#    *******
-#   *******
-#  *********
-# *********
+        print(' '*(r-x-1)+'*'*(2*x+1))
+
+def main():
+    print(gen_star_triangle(9))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -3669,10 +3955,10 @@ pyfunc(9)
 
 ```python
 # Enter number of terms needednbsp;#0,1,1,2,3,5....
-a=int(input("Enter the terms"))
-f=0;#first element of series
-s=1#second element of series
-if a=0:
+a = int(input("Enter the terms"))
+f = 0;#first element of series
+s = 1 # second element of series
+if a = 0:
    print("The requested series is",f)
 else:
   print(f,s,end=" ")
@@ -3800,14 +4086,17 @@ Local variable: Any variable declared inside a function is known as Local variab
 
 Global Variable: Any variable declared outside the function is known as Global variable and it can be easily accessible by any function present throughout the program.
 
-g=4                #global variable
+```python
+g=4 #global variable
 def func_multiply():
-l=5       #local variable
+l=5 #local variable
 m=g*l
 return m
 func_multiply()
 Output: 20
-If you try to access the  local variable outside the multiply function then you will end up with getting an error.
+# If you try to access the  local variable outside the multiply function
+# then you will end up with getting an error.
+```
 
 ----
 
@@ -3821,7 +4110,7 @@ Type Conversion is classified into types:
 
 **Implicit Type Conversion: In this form of type conversion python interpreter helps in automatically converting the data type?**
 
-Into another data type without any User involvement.
+Into another data type without any user involvement.
 
 ----
 
@@ -3829,13 +4118,13 @@ Into another data type without any User involvement.
 
 Various Functions of explicit conversion are shown below:
 
-int() –  function converts any data type into integer.
-float() –   function converts any data type into float.
+int() – function converts any data type into integer.
+float() – function converts any data type into float.
 ord() – function returns an integer representing the Unicode character
 
-hex() –  function converts integers to hexadecimal strings.
+hex() – function converts integers to hexadecimal strings.
 
-oct() –   function converts integer to octal strings.
+oct() – function converts integer to octal strings.
 
 tuple() – function convert to a tuple.
 
@@ -3861,8 +4150,8 @@ Let’s understand with an example of an array:
 
 import array as arr
 Array_d=arr.array('i',[1,2,3,4,5])
-Array_d[::-1]          #reverse the array or sequence
-Output: 5,4,3,2,1
+Array_d[::-1] # reverse the array or sequence
+# Output: 5,4,3,2,1
 
 ----
 
@@ -3874,21 +4163,35 @@ A Python package refers to the collection of different sub-packages and modules 
 
 **What are decorators?**
 
-In Python, decorators are necessary functions that help add functionality to an existing function without changing the structure of the function at all. These are represented by @decorator_name in Python and are called in a bottom-up format.
+In Python, decorators are necessary functions that help add functionality to an existing function without changing the structure of
+the function at all. These are represented by @decorator_name in Python and are called in a bottom-up format.
 
 Let’s have a look how it works:
 
-def decorator_lowercase(function):   # defining python decorator
-def wrapper():
-func = function()
-input_lowercase = func.lower()
-return input_lowercase
-return wrapper
-@decorator_lowercase    ##calling decoractor
-def intro():                        #Normal function
-return 'Hello,I AM SAM'
-hello()
-Output: ‘hello,i am sam’
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def decorator_lowercase(function): # defining python decorator
+    def wrapper():
+        func = function()
+        input_lowercase = func.lower()
+        return input_lowercase
+    return wrapper
+
+@decorator_lowercase # calling decoractor
+def intro(): # normal function
+    return 'Hello,I AM SAM'
+
+def main():
+    print(intro())
+
+if __name__ == '__main__':
+    main()
+    
+# Output:
+# "hello,i am sam"    
+```
 
 ----
 
@@ -3896,7 +4199,8 @@ Output: ‘hello,i am sam’
 
 Indentation in Python is compulsory and is part of its syntax.
 
-All programming languages have some way of defining the scope and extent of the block of codes. In Python, it is indentation. Indentation provides better readability to the code, which is probably why Python has made it compulsory.
+All programming languages have some way of defining the scope and extent of the block of codes. In Python, it is indentation.
+Indentation provides better readability to the code, which is probably why Python has made it compulsory.
 
 Learn the Pros and Cons of Python in our comprehensive blog on the Advantages and Disadvantages of Python.
 
@@ -3906,11 +4210,40 @@ Learn the Pros and Cons of Python in our comprehensive blog on the Advantages an
 
 These statements help to change the phase of execution from the normal flow that is why they are termed loop control statements.
 
-Python break: This statement helps terminate the loop or the statement and pass the control to the next statement.
+__Python break:__
 
-Python continue: This statement helps force the execution of the next iteration when a specific condition meets, instead of terminating it.
+This statement helps terminate the loop or the statement and pass the control to the next statement.
 
-Python pass: This statement helps write the code syntactically and wants to skip the execution. It is also considered a null operation as nothing happens when you execute the pass statement.
+```python
+for i in range(10):
+    print(i)
+    if i == 2:
+        break
+```
+
+__Python continue:__
+
+This statement helps force the execution of the next iteration when a specific condition meets, instead of terminating it.
+
+```python
+for var in "Geeksforgeeks":
+	if var == "e":
+		continue
+	print(var)
+```
+
+__Python pass:__
+
+This statement helps write the code syntactically and wants to skip the execution. It is also considered a null operation as nothing happens when you execute the pass statement.
+
+```python
+n = 26
+
+if n > 26:
+	# write code your here
+
+print('Geeks')
+```
 
 ----
 
@@ -3918,18 +4251,41 @@ Python pass: This statement helps write the code syntactically and wants to skip
 
 This can be easily achieved by using the Shuffle() function from the random library as shown below:
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from random import shuffle
 
-List = ['He', 'Loves', 'To', 'Code', 'In', 'Python']
-shuffle(List)
-print(List)
-Output: [‘Loves’,’He’ ,’To ,’In’, ‘Python’,’Code’]
+def main():
+    List = ['He', 'Loves', 'To', 'Code', 'In', 'Python']
+    shuffle(List)
+    print(List)
+    # Output: [‘Loves’,’He’ ,’To ,’In’, ‘Python’,’Code’]
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
 **How to comment with multiple lines in Python?**
 
 To add a multiple lines comment in python, all the line should be prefixed by #.
+
+```python
+#This is a comment
+#written in
+#more than just one line
+print("Hello, World!") 
+
+"""
+This is a comment
+written in
+more than just one line
+"""
+print("Hello, World!")
+```
 
 ----
 
@@ -3941,72 +4297,86 @@ Generally, Python is an all purpose Programming Language ,in addition to that Py
 
 **What are negative indexes and why are they used?**
 
-To access an element from ordered sequences, we simply use the index of the element, which is the position number of that particular element. The index usually starts from 0, i.e., the first element has index 0, the second has 1, and so on.
+To access an element from ordered sequences, we simply use the index of the element, which is the position number of that particular element.
+The index usually starts from 0, i.e., the first element has index 0, the second has 1, and so on.
 
 Python Indexing
-When we use the index to access elements from the end of a list, it’s called reverse indexing. In reverse indexing, the indexing of elements starts from the last element with the index number ‘−1’. The second last element has index ‘−2’, and so on. These indexes used in reverse indexing are called negative indexes.
-
-Python Intermediate Interview Questions
+When we use the index to access elements from the end of a list, it’s called reverse indexing. In reverse indexing, the indexing of elements starts
+from the last element with the index number ‘−1’. The second last element has index ‘−2’, and so on. These indexes used in reverse indexing are
+called negative indexes.
 
 ----
 
-**Explain split(), sub(), subn() methods of “re” module in Python?**
+**Explain split(), sub(), subn() methods of re module in Python?**
 
 These methods belong to the Python RegEx or ‘re’ module and are used to modify strings.
 
-split(): This method is used to split a given string into a list.
-sub(): This method is used to find a substring where a regex pattern matches, and then it replaces the matched substring with a different string.
-subn(): This method is similar to the sub() method, but it returns the new string, along with the number of replacements.
-Learn more about Python from this Python Training in New York to get ahead in your career!
+__split():__
 
-----
+This method is used to split a given string into a list.
 
-**What do you mean by Python literals?**
+```python
+txt = "welcome to the jungle"
+x = txt.split()
+print(x)
+```
 
-Literals refer to the data which will be provided to a given in a variable or constant.
+__sub():__
 
-Literals supported by python are listed below:
+This method is used to find a substring where a regex pattern matches, and then it replaces the matched substring with a different string.
 
-String Literals
+```python
+# Importing re module
+import re
+# Given String
+s = "I am a human being."
+# Performing Sub() operation
+res_1 = re.sub('a', 'x', s)
+res_2 = re.sub('[a,I]','x',s)
+# Print Results
+print(res_1)
+print(res_2)
+# The original string remains unchanged
+print(s)
+```
 
-These literals are formed by enclosing text in the single or double quotes.
+__subn():__
 
-For Example:
+This method is similar to the sub() method, but it returns the new string, along with the number of replacements.
 
-“Intellipaat”
-
-‘45879’
-
-Numeric Literals
-
-Python numeric literals support three types of literals
-
-Integer:I=10
-
-Float: i=5.2
-
-Complex:1.73j
-
-Boolean Literals
-
-Boolean literals help to denote boolean values. It contains either True or False.
-
-x=True
+```python
+import re
+print(re.subn('ov', '~*' , 'movie tickets booking in online'))
+t = re.subn('ov', '~*' , 'movie tickets booking in online', flags = re.IGNORECASE)
+print(t)
+print(len(t))
+print(t[0])
+```
 
 ----
 
 **What is a map function in Python?**
 
-The map() function in Python has two parameters, function and iterable. The map() function takes a function as an argument and then applies that function to all the elements of an iterable, passed to it as another argument. It returns an object list of results.
+The map() function in Python has two parameters, function and iterable. The map() function takes a function as an argument and then
+applies that function to all the elements of an iterable, passed to it as another argument. It returns an object list of results.
 
 For example:
 
-def calculateSq(n):
-return n*n
-numbers = (2, 3, 4, 5)
-result = map( calculateSq, numbers)
-print(result)
-Interested in learning Python? Check out this Python Training in Sydney!
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def calc_sequence(n):
+    return n*n
+
+def main():
+    numbers = (2, 3, 4, 5)
+    result = map(calc_sequence, numbers)
+    print(result)
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
@@ -4032,80 +4402,61 @@ Certification in Full Stack Web Development
 
 **What are Dict and List comprehensions?**
 
-Python comprehensions are like decorators, that help to build altered and filtered lists, dictionaries, or sets from a given list, dictionary, or set. Comprehension saves a lot of time and code that might be considerably more complex and time-consuming.
+Python comprehensions are like decorators, that help to build altered and filtered lists, dictionaries, or sets from a given list, dictionary, or set.
+Comprehension saves a lot of time and code that might be considerably more complex and time-consuming.
 
 Comprehensions are beneficial in the following scenarios:
 
-Performing mathematical operations on the entire list
-Performing conditional filtering operations on the entire list
-Combining multiple lists into one
-Flattening a multi-dimensional list
+- Performing mathematical operations on the entire list
+- Performing conditional filtering operations on the entire list
+- Combining multiple lists into one
+- Flattening a multi-dimensional list
+
 For example:
 
+```python
 my_list = [2, 3, 5, 7, 11]
 squared_list = [x**2 for x in my_list]    # list comprehension
 # output => [4 , 9 , 25 , 49 , 121]
-
 squared_dict = {x:x**2 for x in my_list}    # dict comprehension
 # output => {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
-
-----
-
-**How do you write comments in python?**
-
-Python Comments are the statement used by the programmer to increase the readability of the code. With the help of #, you can define the single comment and the other way to do commenting is to use the docstrings(strings enclosed within triple quotes).
-For example:
-
-#Comments in Python 
-print("Comments in Python ")
-Master Python by taking up this online Python Course in Toronto!
+```
 
 ----
 
 **Is multiple inheritance supported in Python?**
 
-Yes, unlike Java, Python provides users with a wide range of support in terms of inheritance and its usage. Multiple inheritance refers to a scenario where a class is instantiated from more than one individual parent class. This provides a lot of functionality and advantages to users.
-
-----
-
-**What is the difference between range & xrange?**
-
-Functions in Python, range() and xrange() are used to iterate in a for loop for a fixed number of times. Functionality-wise, both these functions are the same. The difference comes when talking about Python version support for these functions and their return values.
-
-range() Method	xrange() Method
-In Python 3, xrange() is not supported; instead, the range() function is used to iterate in for loops	The xrange() function is used in Python 2 to iterate in for loops
-It returns a list	It returns a generator object as it doesn’t really generate a static list at the run time
-It takes more memory as it keeps the entire list of iterating numbers in memory	It takes less memory as it keeps only one number at a time in memory
-
-----
-
-**What is pickling and unpickling?**
-
-The Pickle module accepts the Python object and converts it into a string representation and stores it into a file by using the dump function. This process is called pickling. On the other hand, the process of retrieving the original Python objects from the string representation is called unpickling.
-
-Want to know about the real-world uses of Python? Read our detailed blog on Python Applications now.
+Yes, unlike Java, Python provides users with a wide range of support in terms of inheritance and its usage. Multiple
+inheritance refers to a scenario where a class is instantiated from more than one individual parent class. This provides
+a lot of functionality and advantages to users.
 
 ----
 
 **What do you understand by Tkinter?**
 
-Tkinter is a built-in Python module that is used to create GUI applications. It is Python’s standard toolkit for GUI development. Tkinter comes with Python, so there is no separate installation needed. You can start using it by importing it in your script.
-
-Python Interview Questions - Python Career
+Tkinter is a built-in Python module that is used to create GUI applications. It is Python’s standard toolkit for GUI development.
+Tkinter comes with Python, so there is no separate installation needed. You can start using it by importing it in your script.
 
 ----
 
 **Is Python fully object oriented?**
 
-Python does follow an object-oriented programming paradigm and has all the basic OOPs concepts such as inheritance, polymorphism, and more, with the exception of access specifiers. Python doesn’t support strong encapsulation (adding a private keyword before data members). Although, it has a convention that can be used for data hiding, i.e., prefixing a data member with two underscores.
+Python does follow an object-oriented programming paradigm and has all the basic OOPs concepts such as inheritance, polymorphism, and more,
+with the exception of access specifiers. Python doesn’t support strong encapsulation (adding a private keyword before data members). Although,
+it has a convention that can be used for data hiding, i.e., prefixing a data member with two underscores.
 
 ----
 
 **Differentiate between NumPy and SciPy?**
 
-NumPy	SciPy
-NumPy stands for Numerical Python	SciPy stands for Scientific Python
-It is used for efficient and general numeric computations on numerical data saved in arrays. E.g., sorting, indexing, reshaping, and more	This module is a collection of tools in Python used to perform operations such as integration, differentiation, and more
+__NumPy !=SciPy__
+
+NumPy stands for Numerical Python	SciPy stands for Scientific Python.
+
+It is used for efficient and general numeric computations on numerical data saved in arrays. E.g., sorting, indexing, reshaping, and more.
+
+This module is a collection of tools in Python used to perform operations such as integration, differentiation, and more.
+
 There are some linear algebraic functions available in this module, but they are not full-fledged	Full-fledged algebraic functions are available in SciPy for algebraic computations
 
 ----
@@ -4114,22 +4465,25 @@ There are some linear algebraic functions available in this module, but they are
 
 Python has various file processing modes.
 
-For opening files, there are three modes:
+__For opening files, there are three modes:__
 
 read-only mode (r)
 write-only mode (w)
 read–write mode (rw)
-For opening a text file using the above modes, we will have to append ‘t’ with them as follows:
+
+__For opening a text file using the above modes, we will have to append ‘t’ with them as follows:__
 
 read-only mode (rt)
 write-only mode (wt)
 read–write mode (rwt)
-Similarly, a binary file can be opened by appending ‘b’ with them as follows:
+
+__Similarly, a binary file can be opened by appending ‘b’ with them as follows:__
 
 read-only mode (rb)
 write-only mode (wb)
 read–write mode (rwb)
-To append the content in the files, we can use the append mode (a):
+
+__To append the content in the files, we can use the append mode (a):__
 
 For text files, the mode would be ‘at’
 For binary files, it would be ‘ab’
@@ -4138,19 +4492,22 @@ For binary files, it would be ‘ab’
 
 **What do file-related modules in Python do? Can you name some file-related modules in Python?**
 
-Python comes with some file-related modules that have functions to manipulate text files and binary files in a file system. These modules can be used to create text or binary files, update their content, copy, delete, and more.
+Python comes with some file-related modules that have functions to manipulate text files and binary files in a file system. These modules
+can be used to create text or binary files, update their content, copy, delete, and more.
 
-Some file-related modules are os, os.path, and shutil.os. The os.path module has functions to access the file system, while the shutil.os module can be used to copy or delete files.
-
-Know about Python developer roles and responsibilities to begin a career as a Python developer.
+Some file-related modules are os, os.path, and shutil.os. The os.path module has functions to access the file system, while the shutil.os
+module can be used to copy or delete files.
 
 ----
 
 **Explain the use of the 'with' statement and its syntax?**
 
-In Python, using the ‘with’ statement, we can open a file and close it as soon as the block of code, where ‘with’ is used, exits. In this way, we can opt for not using the close() method.
+In Python, using the `with` statement, we can open a file and close it as soon as the block of code, where with is used, exits.
+In this way, we can opt for not using the close() method.
 
+```python
 with open("filename", "mode") as file_var:
+```
 
 ----
 
@@ -4158,18 +4515,19 @@ with open("filename", "mode") as file_var:
 
 To display the contents of a file in reverse, the following code can be used:
 
+```python
 for line in reversed(list(open(filename.txt))):
 print(line.rstrip())
+```
 
 ----
 
 **Which of the following is an invalid statement?**
 
 xyz = 1,000,000
-x y z = 1000 2000 3000
+x y z = 1000 2000 3000 (invalid)
 x,y,z = 1000, 2000, 3000
 x_y_z = 1,000,000
-Ans. 2 statement is invalid.
 
 ----
 
@@ -4177,7 +4535,9 @@ Ans. 2 statement is invalid.
 
 Command:
 
-f= open(“hello.txt”, “wt”)
+```python
+f = open(“hello.txt”, “wt”)
+```
 
 ----
 
@@ -4185,16 +4545,18 @@ f= open(“hello.txt”, “wt”)
 
 len() is an inbuilt function used to calculate the length of sequences like list, python string, and array.
 
+```python
 my _list=[1,2,3,4,5]
-len(my_list)
+print(len(my_list))
+```
 
 ----
 
 **What does *args and **kwargs mean?**
 
-.*args: It is used to pass multiple arguments in a function.
-**kwargs: It is used to pass multiple keyworded arguments in a function in python.
-Want to know about the real-world uses of Python? Read our detailed blog on Python Project ideas now.
+__*args:__ It is used to pass multiple arguments in a function.
+
+__**kwargs:__ It is used to pass multiple keyworded arguments in a function in python.
 
 ----
 
@@ -4204,9 +4566,11 @@ To remove duplicate elements from the list we use the set() function.
 
 Consider the below example:
 
+```python
 demo_list=[5,4,4,6,8,12,12,1,5]
- unique_list = list(set(demo_list))
+unique_list = list(set(demo_list))
 output:[1,5,6,8,12]
+```
 
 ----
 
@@ -4215,8 +4579,10 @@ output:[1,5,6,8,12]
 You need to import the OS Module and use os.remove() function for deleting a file in python.
 consider the code below:
 
+```python
 import os
 os.remove("file_name.txt")
+```
 
 ----
 
@@ -4226,34 +4592,44 @@ We can read a random line in a file using the random module.
 
 For example:
 
+```python
 import random
 def read_random(fname):
 lines = open(fname).read().splitlines()
 return random.choice(lines)
 print(read_random (‘hello.txt’))
+```
 
 ----
 
 **Write a Python program to count the total number of lines in a text file?**
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def file_count(fname):
-with open(fname) as f:
-for i, 1 in enumerate(f):
-paas
-return i+1
-print(“Total number of lines in the text file: ”, file_count(“file.txt”))
+    with open(fname) as f:
+        for i in enumerate(f):
+            pass
+    return i+1
+  
+def main():
+    print(f"Total number of lines in the text file: {file_count('file.txt')}")
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
 **What would be the output if I run the following code block?**
 
+```python
 list1 = [2, 33, 222, 14, 25]
 print(list1[-2])
-14
-33
-25
-Error
-Ans. output:14
+# Output: 14
+```
 
 ----
 
@@ -4275,53 +4651,44 @@ On exit, because of having its own efficient clean up mechanism, Python would tr
 
 ----
 
-**How can the ternary operators be used in python?**
+**How to add values to a python array?**
 
-The ternary operator is the operator that is used to show conditional statements in Python. This consists of the boolean true or false values with a statement that has to be checked.
-
-Syntax:
-
-[on_true] if [expression] else [on_false]x, y = 10, 20 count = x if x < y else y
-Explanation:
-
-The above expression is evaluated like if x<y else y, in this case, if x<y is true then the value is returned as count=x and if it is incorrect then count=y will be stored to result.
-
-----
-
-60. How to add values to a python array?
 In python, adding elements in an array can be easily done with the help of extend(),append() and insert() functions.
 Consider the following example:
 
-x=arr.array('d', [11.1 , 2.1 ,3.1] )
+```python
+x = arr.array('d', [11.1 , 2.1 ,3.1] )
 x.append(10.1)
-print(x)   #[11.1,2.1,3.1,10.1]
+print(x) # [11.1,2.1,3.1,10.1]
 x.extend([8.3,1.3,5.3])
-print(x)  #[11.1,2.1,3.1,10.1,8.3,1.3,5.3]
+print(x) # [11.1,2.1,3.1,10.1,8.3,1.3,5.3]
 x.insert(2,6.2)
-print(x)        # [11.1,2.1,6.2,3.1,10.1,8.3,1.3,5.3]
+print(x) # [11.1,2.1,6.2,3.1,10.1,8.3,1.3,5.3]
+```
 
 ----
 
-61. How to remove values to a python array?
+**How to remove values to a python array?**
+
 Elements can be removed from the python array using pop() or remove() methods.
 
-pop(): This function will return the removed element .
+__pop():__ This function will return the removed element .
 
-remove():It will not return the removed element.
+__remove():__ It will not return the removed element.
 
 Consider the below example :
 
+```python
 x=arr.array('d', [8.1, 2.4, 6.8, 1.1, 7.7, 1.2, 3.6])
 print(x.pop())
 print(x.pop(3))
 x.remove(8.1)
 print(x)
-Output:
-
-3.6
-1.1  # element popped at 3 rd  index
+# Output:
+# 3.6
+# 1.1  # element popped at 3 rd  index
 array('d', [ 2.4, 6.8, 7.7, 1.2])
-Are you interested in learning Python from experts? Enroll in our online Python Course in Bangalore today!
+```
 
 ----
 
@@ -4329,10 +4696,12 @@ Are you interested in learning Python from experts? Enroll in our online Python 
 
 The following code can be used to sort a numerical list in Python:
 
-list = [“2”, “5”, “7”, “8”, “1”]
+```python
+list = ["2", "5", "7", "8", "1"]
 list = [int(i) for i in list]
 list.sort()
-print (list)
+print(list)
+```
 
 ----
 
@@ -4343,14 +4712,16 @@ The normal solution for this problem statement would be as follows:
 
 with open(SOME_LARGE_FILE) as countletter:
 
+```python
 count = 0
 text = countletter.read()
 for character in text:
 if character.isupper():
 count += 1
-To make this code more efficient, the whole code block can be converted into a one-liner code using the feature called generator expression. With this, the equivalent code line of the above code block would be as follows:
-
+# To make this code more efficient, the whole code block can be converted into a one-liner code using the
+# feature called generator expression. With this, the equivalent code line of the above code block would be as follows:
 count sum(1 for line in countletter for character in line if character.isupper())
+```
 
 ----
 
@@ -4362,8 +4733,10 @@ The function list.reverse() reverses the objects of a list.
 
 **How will you remove the last object from a list in Python?**
 
+```
 list.pop(obj=list[-1]):
-Here, −1 represents the last element of the list. Hence, the pop() function removes the last object (obj) from the list.
+# Here, −1 represents the last element of the list. Hence, the pop() function removes the last object (obj) from the list.
+```
 
 Get certified in Python from the top Python Course in Singapore now!
 
@@ -4386,41 +4759,45 @@ lower() function is  used to convert a string to lowercase.
 
 For Example:
 
+```python
 demo_string='ROSES'
 print(demo_string.lower())
 Learn the complete Python Training in Hyderabad in 24 hours!
+```
 
 ----
 
 **Why would you use NumPy arrays instead of lists in Python?**
 
 NumPy arrays provide users with three main advantages as shown below:
-
-NumPy arrays consume a lot less memory, thereby making the code more efficient.
-NumPy arrays execute faster and do not add heavy processing to the runtime.
-NumPy has a highly readable syntax, making it easy and convenient for programmers.
+- NumPy arrays consume a lot less memory, thereby making the code more efficient.
+- NumPy arrays execute faster and do not add heavy processing to the runtime.
+- NumPy has a highly readable syntax, making it easy and convenient for programmers.
 
 ----
 
 **What is Polymorphism in Python?**
 
-Polymorphism is the ability of the code to take multiple forms. Let’s say, if the parent class has a method named XYZ then the child class can also have a method with the same name XYZ having its own variables and parameters.
+Polymorphism is the ability of the code to take multiple forms. Let’s say, if the parent class has a method named XYZ then the child class can
+also have a method with the same name XYZ having its own variables and parameters.
 
 ----
 
 **Define encapsulation in Python?**
 
-encapsulation in Python refers to the process of wrapping up the variables and different functions into a single entity or capsule.Python class is the best example of encapsulation in python.
+encapsulation in Python refers to the process of wrapping up the variables and different functions into a single entity or capsule.
+Python class is the best example of encapsulation in python.
 
 ----
 
 **What advantages do NumPy arrays offer over (nested) Python lists?**
 
-Nested Lists:
+__Nested Lists:__
 
 Python lists are efficient general-purpose containers that support efficient operations like insertion,appending,deletion and concatenation.
 The limitations of lists are that they don’t support “vectorized” operations like element wise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
-Numpy:
+
+__Numpy:__
 
 NumPy is more efficient and more convenient as you get a lot of vector and matrix operations for free, which helps to avoid unnecessary work and complexity of the code.Numpy is also efficiently implemented when compared to nested
 NumPy array is faster and contains a lot of built-in functions which will help in FFTs, convolutions, fast searching, linear algebra,basic statistics, histograms,etc.
@@ -4434,25 +4811,31 @@ A lambda function is an anonymous function (a function that does not have a name
 
 For example:
 
+```
 l = lambda x,y : x*y
 print(a(5, 6))
-Output:30
-
-Any more queries? Feel free to share all your doubts with us in our Python Community and get them clarified today!
+# Output:30
+```
 
 ----
 
 **What is self in Python?**
 
-Self is an object or an instance of a class. This is explicitly included as the first parameter in Python. On the other hand, in Java it is optional. It helps differentiate between the methods and attributes of a class with local variables.
+Self is an object or an instance of a class. This is explicitly included as the first parameter in Python. On the other hand, in Java it is optional.
+It helps differentiate between the methods and attributes of a class with local variables.
 
 The self variable in the init method refers to the newly created object, while in other methods, it refers to the object whose method was called.
 
 Syntax:
 
+```
 Class A:
-def func(self):
-print(“Hi”)
+    def __init__(self):
+        ...
+    
+    def func(self):
+        print(“Hi”)
+```
 
 ----
 
@@ -4460,34 +4843,38 @@ print(“Hi”)
 
 Both append() and extend() methods are methods used to add elements at the end of a list.
 
-append(element): Adds the given element at the end of the list that called this append() method
-extend(another-list): Adds the elements of another list at the end of the list that called this extend() method
-For in-depth knowledge, check out our Python Tutorial and boost your Python skills!
+__append(element):__ Adds the given element at the end of the list that called this append() method
+
+__extend(another-list):__ Adds the elements of another list at the end of the list that called this extend() method
 
 ----
 
 **How does Python Flask handle database requests?**
 
-Flask supports a database-powered application (RDBS). Such a system requires creating a schema, which needs piping the schema.sql file into the sqlite3 command. Python developers need to install the sqlite3 command to create or initiate the database in Flask.
+Flask supports a database-powered application (RDBS). Such a system requires creating a schema, which needs piping the schema.sql file
+into the sqlite3 command. Python developers need to install the sqlite3 command to create or initiate the database in Flask.
 
 Flask allows to request for a database in three ways:
 
-before_request(): They are called before a request and pass no arguments.
-after_request(): They are called after a request and pass the response that will be sent to the client.
-teardown_request(): They are called in a situation when an exception is raised and responses are not guaranteed. They are called after the response has been constructed. They are not allowed to modify the request, and their values are ignored.
+__before_request():__ They are called before a request and pass no arguments.
+__after_request():__ They are called after a request and pass the response that will be sent to the client.
+__teardown_request():__ They are called in a situation when an exception is raised and responses are not guaranteed. They are called
+after the response has been constructed. They are not allowed to modify the request, and their values areignored.
+
 Sign up for the Full Stack Developer Course to begin your career journey today.
 
 ----
 
 **How is Multithreading achieved in Python?**
 
-Python has a multi-threading package ,but commonly not considered as good practice to use it as it will result in increased code
+Python has a multi-threading package, but commonly not considered as good practice to use it as it will result in increased code
 execution time.
 
-Python has a constructor called the Global Interpreter Lock (GIL). The GIL ensures that only one of your ‘threads’ can execute at
-one time.The process makes sure that a thread acquires the GIL, does a little work, then passes the GIL onto the next thread.
+Python has a constructor called the [Global Interpreter Lock (GIL)](https://realpython.com/python-gil/). The GIL ensures that only one of your ‘threads’ can execute at
+one time. The process makes sure that a thread acquires the GIL, does a little work, then passes the GIL onto the next thread.
 
-This happens at a very Quick instance of time and that’s why to the human eye it seems like your threads are executing parallely, but in reality they are executing one by one by just taking turns using the same CPU core.
+This happens at a very Quick instance of time and that’s why to the human eye it seems like your threads are executing parallely, but
+in reality they are executing one by one by just taking turns using the same CPU core.
 
 ----
 
@@ -4560,15 +4947,19 @@ This can only be done as Python supports changes in the behavior of the program 
 The following is an example, denoting monkey patching in Python:
 
 ```python
-# monkeyy.py
 class X:
-def func(self):
-print "func() is being called"
-The above module (monkeyy) is used to change the behavior of a function at the runtime as shown below:
-
+    def __init__(self):
+        pass
+    
+    def func(self):
+        print "func() is being called"
+        
+# The above module (monkeyy) is used to change the behavior of a
+# function at the runtime as shown below:
 import monkeyy
 def monkey_f(self):
-print "monkey_f() is being called"
+    print "monkey_f() is being called"
+
 # replacing address of “func” with “monkey_f”
 monkeyy.X.func = monkey_f
 obj = monk.X()
@@ -4581,20 +4972,29 @@ obj.func()
 
 **What is the difference between / and // operator in Python?**
 
-
 /: is a division operator and returns the Quotient value.
-10/3
-3.33
+
+```python
+x = 10/3
+print(x)
+# Output: 3.33
+```
 
 // : is known as floor division operator and used to return only the value of quotient before decimal
-10//3
-3
+
+```python
+y = 10//3
+print(y)
+# Output: 3
+```
 
 ----
 
 **What is pandas?**
 
-Pandas is an open source python library which supports data structures for data based operations associated with data analyzing and data Manipulation . Pandas with its rich sets of features fits in every role of data operation,whether it be related to implementing different algorithms or for solving complex business problems. Pandas helps to deal with a number of files in performing certain operations on the data stored by files.
+Pandas is an open source python library which supports data structures for data based operations associated with data analyzing and data Manipulation.
+Pandas with its rich sets of features fits in every role of data operation,whether it be related to implementing different algorithms or for solving
+complex business problems. Pandas helps to deal with a number of files in performing certain operations on the data stored by files.
 
 ----
 
@@ -4604,10 +5004,10 @@ A dataframe refers to a two dimensional mutable data structure or data aligned i
 
 ```python
 pandas.DataFrame( data, index, columns, dtype)
-data:It refers to various forms like ndarray, series, map, lists, dict, constants and can take other DataFrame as Input.
-index:This argument is optional as the index for row labels will be automatically taken care of by pandas library.
-columns:This argument is optional as the index for column labels will be automatically taken care of by pandas library.
-Dtype: refers to the data type of each column.
+# data:It refers to various forms like ndarray, series, map, lists, dict, constants and can take other DataFrame as Input.
+# index:This argument is optional as the index for row labels will be automatically taken care of by pandas library.
+# columns:This argument is optional as the index for column labels will be automatically taken care of by pandas library.
+# Dtype: refers to the data type of each column.
 ```
 
 ----
@@ -4616,7 +5016,9 @@ Dtype: refers to the data type of each column.
 
 The different dataframes can be easily combined with the help of functions listed below:
 
-<li>Append():</li>
+```python
+# <li>Append():</li>
+```
 
 This function is used for horizontal stacking of dataframes.
 data_frame1.append(data_frame2)
@@ -4633,24 +5035,30 @@ Identification:
 
 isnull() and isna() functions are used to identify the missing values in your data loaded into dataframe.
 
+```python
 missing_count=data_frame1.isnull().sum()
-Handling missing Values:
+```
 
 There are two ways of handling the missing values :
 
-Replace the  missing values with 0
+1. Replace the  missing values with 0
 
-df[‘col_name’].fillna(0)
-Replace the missing values with the mean value of that column
+```python
+df['col_name'].fillna(0)
+```
 
-df[‘col_name’] = df[‘col_name’].fillna((df[‘col_name’].mean()))
+2. Replace the missing values with the mean value of that column
+
+```python
+df['col_name'] = df['col_name'].fillna((df['col_name'].mean()))
+```
 
 ----
 
 **What is regression?**
 
 Regression is termed as supervised machine learning algorithm technique which is used to find the correlation between variables and
-help to predict the dependent variable(y) based upon the independent variable (x). It is mainly used for prediction, time series
+help to predict the dependent variable(y) based upon the independent variable(x). It is mainly used for prediction, time series
 modeling, forecasting, and determining the causal-effect relationship between variables.
 
 Scikit library is used in python to implement the regression and all machine learning algorithms.
@@ -4665,25 +5073,28 @@ Logistic Regression: Used when the variables are continuous and categorical in n
 
 **What is classification?**
 
-Classification refers to a predictive modeling process where a class label is predicted for a given example of input data. It
+[Classification](https://www.geeksforgeeks.org/getting-started-with-classification/) refers to a predictive modeling process where a class label is predicted for a given example of input data. It
 helps categorize the provided input into a label that other observations with similar features have. For example, it can be
 used for classifying a mail whether it is spam or not, or for checking whether users will churn or not based on their behavior.
 
 These are some of the classification algorithms used in Machine Learning:
-
-Decision tree
-Random forest classifier
-Support vector machine
+- Decision Trees
+- Bayesian Classifiers
+- Neural Networks
+- K-Nearest Neighbour
+- Support Vector Machines
+- Linear Regression
+- Logistic Regression
 
 ----
 
 **How do you split the data in train and test dataset in python?**
 
-This can be achieved by using the scikit machine learning  library and importing train_test_split function in python as shown below:
+This can be achieved by using the scikit machine learning library and importing train_test_split function in python as shown below:
 
 ```python
 Import sklearn.model_selection.train_test_split
-# test size =30% and train= 70 %
+# test size = 30% and train = 70 %
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=0).
 ```
 
@@ -4691,8 +5102,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random
 
 **What is SVM?**
 
-_Support vector machine (SVM)_ is a supervised machine learning model that considers the classification algorithms for two-group classification problems. Support vector machine is a representation of the training data as points in space are separated into
-categories with the help of a clear gap that should be as wide as possible.
+_Support Vector Machine (SVM)_ is a supervised machine learning model that considers the classification algorithms for two-group classification problems. Support vector machine is a representation of the training data as points in space are separated into categories with the help of a clear gap that should be as wide as possible.
 
 ----
 
@@ -4773,41 +5183,6 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to execute the Bubble sort algorithm?**
-
-```python
-def bubbleSort(x):
-
-n = len(x)
-
-# Traverse through all array elements
-
-for i in range(n-1):
-
-for j in range(0, n-i-1):
-
-
-if x[j] > x[j+1] :
-
-x[j], x[j+1] = x[j+1], x[j]
-
-# Driver code to test above
-
-arr = [25, 34,47, 21, 22, 11,37]
-
-bubbleSort(arr)
-
-print ("Sorted array is:")
-
-for i in range(len(arr)):
-
-print ("%d" %arr[i]),
-# Output:
-# 11,21,22,25,34,37,47
-```
-
-----
-
 **Write a program in Python to produce Star triangle?**
 
 ```python
@@ -4824,17 +5199,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-#         *
-#        ***
-#       ***
-#      *****
-#     *****
-#    *******
-#   *******
-#  *********
-# *********
 ```
 
 ----
@@ -4868,28 +5232,8 @@ count += 1
 **Write a program in Python to check if a number is prime?**
 
 ```python
-num = 13
 
-if num > 1:
-
-for i in range(2, int(num/2)+1):
-
-if (num % i) == 0:
-
-print(num, "is not a prime number")
-
-break
-
-else:
-
-print(num, "is a prime number")
-
-else:
-
-print(num, "is not a prime number")
-Output:
-
-# 13 is a prime number
+# Output: 13 is a prime number
 ```
 
 ----
@@ -4897,18 +5241,23 @@ Output:
 **Write a sorting algorithm for a numerical dataset in Python?**
 
 ```python
-code to sort a list in Python:
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+  
+def main(num):
+    if num > 1:
+        for i in range(2, int(num/2)+1):
+            if (num % i) == 0:
+                print(num, "is not a prime number")
+                break
+            else:
+                print(num, "is a prime number")
+                break
+    else:
+        print(num, "is not a prime number")
 
-my_list = ["8", "4", "3", "6", "2"]
-
-my_list = [int(i) for i in list]
-
-my_list.sort()
-
-print (my_list)
-Output:
-
-# 2,3,4,6,8
+if __name__ == '__main__':
+    main(14)
 ```
 
 ----
@@ -4933,13 +5282,15 @@ print(" ASCII value of '" + x + "' is", ord(x))
 A virtualenv is what Python developers call an isolated environment for development, running, debugging Python code.
 It is used to isolate a Python interpreter together with a set of libraries and settings.
 
-Together with pip, it allows develop, deploy and run multiple applications on a single host, each with its own version of the Python interpreter, and a separate set of libraries.
+Together with pip, it allows develop, deploy and run multiple applications on a single host, each with its own version of
+the Python interpreter, and a separate set of libraries.
 
 ----
 
 **What are the Wheels and Eggs? What is the difference?**
 
-Wheel and Egg are both packaging formats that aim to support the use case of needing an install artifact that doesn’t require building or compilation, which can be costly in testing and production workflows.
+Wheel and Egg are both packaging formats that aim to support the use case of needing an install artifact that doesn’t
+require building or compilation, which can be costly in testing and production workflows.
 
 The Egg format was introduced by setuptools in 2004, whereas the Wheel format was introduced by PEP 427 in 2012.
 
@@ -4966,11 +5317,11 @@ Wheel is internally organized by sysconfig path type, therefore making it easier
 
 ----
 
-**What does an x = y or z assignment do in Python?**
+**What does an x = a or b assignment do in Python?**
 
 ```python
 x = a or b
-If bool(a) returns False, then x is assigned the value of b.
+# If bool(a) returns False, then x is assigned the value of b.
 ```
 
 ----
@@ -5004,13 +5355,17 @@ automatically. It refers to a separate instance of the variable for individual o
 
 Let's say you have a class ClassA which contains a method methodA defined as:
 
-def methodA(self, arg1, arg2): #do something
-and ObjectA is an instance of this class.
+```python
+def methodA(self, arg1, arg2): # do something
+# and ObjectA is an instance of this class.
+```
 
 Now when ObjectA.methodA(arg1, arg2) is called, python internally converts it for you as:
 
+```python
 ClassA.methodA(ObjectA, arg1, arg2)
 The self variable refers to the object itself.
+```
 
 ----
 
@@ -5049,7 +5404,7 @@ OR
 
 ```python
 lock = threading.Lock()
-with lock: #Critical section of code
+with lock: # critical section of code
 ```
 
 ----
@@ -5098,11 +5453,13 @@ with pre-defined behavior. They are also used extensively in functional programm
 
 What is the result of the execution of the following code:
 
->>> isinstance(type, object)
->>> isinstance(object, type)
->>> isinstance(object, object)
->>> isinstance(type, type)
-Correct answer: True, True, True, True
+```python
+isinstance(type, object)
+isinstance(object, type)
+isinstance(object, object)
+isinstance(type, type)
+# Correct answer: True, True, True, True
+```
 
 Everything is an object in Python, thus any instance check for an object will return True: isinstance(Anything, object) #=> True.
 
@@ -5110,12 +5467,14 @@ Python type represents a metaclass for constructing all Python types. Therefore 
 
 type is the only object in Python, that is an instance of itself.
 
->>> type(5)
-<class 'int'>
->>> type(int)
-<class 'type'>
->>> type(type)
-<class 'type'>
+```python
+# >>> type(5)
+# <class 'int'>
+# >>> type(int)
+# <class 'type'>
+# >>> type(type)
+# <class 'type'>
+```
 
 ----
 
@@ -5123,17 +5482,22 @@ type is the only object in Python, that is an instance of itself.
 
 What is the result of the execution of the following code:
 
->>> any([])
->>> all([])
-Answer: False, True
+```python
+# >>> any([])
+# >>> all([])
+# Answer: False, True
+```
 
 From the definition of any built-in functions we know, that it will:
 
 Return True if any element of the iterable is true.
 
-Logical operators in Python are lazy, the algorithm is to look for a first occurrence of a true element and, if none were found, return False, Since the sequence is empty, there are no elements that can be true, therefore any([])returns False.
+Logical operators in Python are lazy, the algorithm is to look for a first occurrence of a true element and, if none were
+found, return False, Since the sequence is empty, there are no elements that can be true, therefore any([])returns False.
 
-all example is a little bit more complicated, since it represents the concept of vacuous truth. Like with chained lazy logical operators, the algorithm is to look for the first false element, and if none were found, return True. Since there are no false elements in an empty sequence, all([]) returns True.
+All example is a little bit more complicated, since it represents the concept of vacuous truth. Like with chained lazy logical
+operators, the algorithm is to look for the first false element, and if none were found, return True. Since there are no false
+elements in an empty sequence, all([]) returns True.
 
 ----
 
@@ -5141,12 +5505,15 @@ all example is a little bit more complicated, since it represents the concept of
 
 What is the result of the execution of the following code:
 
->>> round(7 / 2)
->>> round(3 / 2)
->>> round(5 / 2)
-Answer: 4, 2, 2
+```python
+round(7 / 2)
+round(3 / 2)
+round(5 / 2)
+# Answer: 4, 2, 2
+```
 
-Why does round(5 / 2) return 2 instead of 3? The issue here is that Python’s round method implements banker’s rounding, where all half values will be rounded to the closest even number.
+Why does round(5 / 2) return 2 instead of 3? The issue here is that Python’s round method implements
+__banker’s rounding__, where all half values will be rounded to the closest even number.
 
 ----
 
@@ -5164,7 +5531,9 @@ class A:
 print(A() + 5)
 Answer: 16 (21 - 5)
 
-In order to resolve an attribute name, Python will firstly search for it on an instance level, then on class level, then in parent classes. This hold true for everything but __dunder__ methodd. While searching for them, Python will skip an instance check and search directly in a class instead.
+In order to resolve an attribute name, Python will firstly search for it on an instance level, then on class level, then in parent classes.
+This hold true for everything but __dunder__ methodd. While searching for them, Python will skip an instance check and search directly in
+a class instead.
 
 ----
 
@@ -5172,18 +5541,23 @@ In order to resolve an attribute name, Python will firstly search for it on an i
 
 What is the result of the execution of the following code:
 
->>> sum("")
->>> sum("", [])
->>> sum("", {})
-Answer: 0, [], {}
+```python
+sum("")
+sum("", [])
+sum("", {})
+# Answer: 0, [], {}
+```
 
 In order to understand what is happening here we need to inspect the signature of the sum function:
 
+```python
 sum(iterable, /, start=0)
+```
 
 Sums start and the items of an iterable from left to right and returns the total. The iterable’s items are normally numbers, and the start value is not allowed to be a string.
 
-In all the cases above “” (empty string) is treated as an empty sequence, therefore sum will simply return the start argument as a total result. In the first case it defaults to zero, for the second and the third case it implies that empty list and dictionary are passed in as a start argument.
+In all the cases above “” (empty string) is treated as an empty sequence, therefore sum will simply return the start argument as a total result.
+In the first case it defaults to zero, for the second and the third case it implies that empty list and dictionary are passed in as a start argument.
 
 ----
 
@@ -5191,15 +5565,13 @@ In all the cases above “” (empty string) is treated as an empty sequence, th
 
 What is the result of the execution of the following code:
 
->>> sum([
-    el.imag 
-    for el in [
-        0, 5, 10e9, float('inf'), float('nan')
-    ]
-])
-Answer: 0.0
+```python
+sum([el.imag for el in [0, 5, 10e9, float('inf'), float('nan')]])
+# Answer: 0.0
+```
 
-This snippet won’t cause AttributeError. All numerical types in Python (int, real, float) are inherited from a base object class. Despite this, all of them support real and imag attributes, returning real and imaginary parts respectively. That includes Infinity and NaN as well.
+This snippet won’t cause AttributeError. All numerical types in Python (int, real, float) are inherited from a base object class. Despite this,
+all of them support real and imag attributes, returning real and imaginary parts respectively. That includes Infinity and NaN as well.
 
 ----
 
@@ -5207,15 +5579,20 @@ This snippet won’t cause AttributeError. All numerical types in Python (int, r
 
 What is the result of the execution of the following code:
 
+```python
 class A:
     def function(self):
         return A()
 a = A()
 A = int
 print(a.function())
-Answer: 0
+# Answer: 0
+```
 
-Code inside python functions will be executed only upon invocation, meaning that all NameErrors will be raised and variables will be bonded only when you actually call the method. In the example above, during method definition Python allows to reference the class that is not defined yet. However, during the execution Python will bind the name A from the outer scope, which means that function method will return a newly created int instance.
+Code inside python functions will be executed only upon invocation, meaning that all NameErrors will be raised and variables will be bonded only
+when you actually call the method. In the example above, during method definition Python allows to reference the class that is not defined yet.
+
+However, during the execution Python will bind the name A from the outer scope, which means that function method will return a newly created int instance.
 
 ----
 
@@ -5223,12 +5600,13 @@ Code inside python functions will be executed only upon invocation, meaning that
 
 What is the result of the execution of the following code:
 
->>> "this is a very long string" * (-1)
-Answer: ‘’ (empty string)
+```python
+"this is a very long string" * (-1)
+# Answer: ‘’ (empty string)
+```
 
 From the python docs:
-
-Values of n less than 0 are treated as 0 (which yields an empty sequence of the same type as s)
+__"Values of n less than 0 are treated as 0 (which yields an empty sequence of the same type as s)"__
 
 This holds true for any sequence types.
 
@@ -5238,16 +5616,18 @@ This holds true for any sequence types.
 
 What is the result of the execution of the following code:
 
->>> max(-0.0, 0.0)
+```python
+max(-0.0, 0.0)
 Answer: -0.0
+```
 
 Why is that happens? This occurs because of the two reasons.
 
 Negative zero and zero are treated as equal in Python.
 Max function description from python docs states:
-If multiple items are maximal, the function returns the first one encountered.
+__"If multiple items are maximal, the function returns the first one encountered."__
 
-Therefore max function returns the first occurrence of zero, which just happens to be the negative one. Case solved.
+Therefore max function returns the first occurrence of zero, which just happens to be the negative one.
 
 ----
 
@@ -5255,17 +5635,27 @@ Therefore max function returns the first occurrence of zero, which just happens 
 
 What is the result of the execution of the following code:
 
->>> x = (1 << 53) + 1
->>> x + 1.0 > x
-Answer: False
+```python
+x = (1 << 53) + 1
+x + 1.0 > x
+# Answer: False
+```
 
-There are three things to blame for that counter-intuitive behavior: long arithmetic, float precision limits and numeric comparisons. Python can support very large integers, switching a computation mode if the limit was exceeded implicitly (Or explicitly with a long type in Python 2.*), but the float precision in Python is limited. The number is question:
+There are three things to blame for that counter-intuitive behavior: long arithmetic, float precision limits and numeric comparisons.
+Python can support very large integers, switching a computation mode if the limit was exceeded implicitly (Or explicitly with a long
+type in Python 2.*), but the float precision in Python is limited. The number is question:
 
-2⁵³ + 1 = 9007199254740993
+```python
+2**5**3 + 1 = 9007199254740993
+```
 
-Is the smallest integer that cannot be fully represented as a Python float. Therefore, in order to perform x + 1.0 Python casts xto float, rounding it to 9007199254740992.0 which Python can represent, then adds 1.0 to it, but because of the same representation limits it sets it back to 9007199254740992.0.
+Is the smallest integer that cannot be fully represented as a Python float. Therefore, in order to perform x + 1.0 Python casts xto float,
+rounding it to 9007199254740992.0 which Python can represent, then adds 1.0 to it, but because of the same representation limits it sets it
+back to 9007199254740992.0.
 
-Another issue here is the comparison rules. Unlike other languages, Python and Ruby do not throw an error for float vs int comparison and neither they try to cast both operands to the same type. Instead they compare actual numerical values. And because 9007199254740992.0 is lover than 9007199254740993 Python returns False.
+Another issue here is the comparison rules. Unlike other languages, Python and Ruby do not throw an error for float vs int comparison and neither
+they try to cast both operands to the same type. Instead they compare actual numerical values. And because 9007199254740992.0 is lover than
+9007199254740993 Python returns False.
 
 # https://medium.com/@saint_sdmn/10-hardest-python-questions-98986c8cd309
 
@@ -5274,9 +5664,9 @@ Another issue here is the comparison rules. Unlike other languages, Python and R
 **Exploring the dataset?**
 
 According to the question, we are required to calculate the sales growth per territory for Q3 and Q4 of 2021. In order to calculate the same, we need two parameters:
+- Territories and their Q3 2021 sales total
+- Territories and their Q4 2021 sales total
 
-Territories and their Q3 2021 sales total; and
-Territories and their Q4 2021 sales total
 Firstly, locate the information in the tables provided. The first table provided is fct_customer_sales which has the following schema:
 
 Table: fct_customer_sales
@@ -5290,7 +5680,8 @@ Show all
 Toggle dTypes
 From the preview of the table, we can observe that this is a list of Amazon orders, and the columns we need from this table are the order_value as well as the order_date.
 
-Going back to the parameters we require, the second information we need is the territory of the sale. Let’s take a look at the second table provided, which is the map_customer_territory table. Following are the schema and a preview of the table:
+Going back to the parameters we require, the second information we need is the territory of the sale. Let’s take a look at the second table provided,
+which is the map_customer_territory table. Following are the schema and a preview of the table:
 
 Table: map_customer_territory
 cust_id	territory_id
@@ -5301,11 +5692,15 @@ C276	T1
 C277	T1
 Show all
 Toggle dTypes
-If we hadn’t been provided this schema, we would be confused about whether the location of the sale refers to the customer-related location or the seller’s location. With this insight, we can assume that this analysis will reveal which areas have the strongest customer sales and is indicative of successful marketing efforts or strong consumer demand.
+If we hadn’t been provided this schema, we would be confused about whether the location of the sale refers to the customer-related location or the seller’s
+location. With this insight, we can assume that this analysis will reveal which areas have the strongest customer sales and is indicative of successful
+marketing efforts or strong consumer demand.
 
 An edge case to anticipate in this advanced python interview question is that some locations may not have had a sale at all for either of the quarters (Q3, Q4) of 2021.
 
-There are a couple of reasons for this, new store openings or temporary closures. You could also consider a case where there may be missing locations. Handling such edge cases in the database can be a little tricky. It can either be entered in the database as zero, blank, or no entry for the territory. Given how the fct_customer_sales table is structured, it will most likely be the latter option.
+There are a couple of reasons for this, new store openings or temporary closures. You could also consider a case where there may be missing locations.
+Handling such edge cases in the database can be a little tricky. It can either be entered in the database as zero, blank, or no entry for the territory.
+Given how the fct_customer_sales table is structured, it will most likely be the latter option.
 
 ----
 
@@ -5313,19 +5708,27 @@ There are a couple of reasons for this, new store openings or temporary closures
 
 It’s time to lay out the approach you will be using to solve the problem.
 
-Firstly, when it comes to Python, we always start with importing the necessary libraries. This is crucial because it gives you access to the various packages and functions that are needed to manipulate the data. After we’re done importing the libraries, we can begin preparing our data for analysis.
+Firstly, when it comes to Python, we always start with importing the necessary libraries. This is crucial because it gives you access to the various
+packages and functions that are needed to manipulate the data. After we’re done importing the libraries, we can begin preparing our data for analysis.
 
-Secondly, keeping in mind the required information for the solution, we need the territories and their sales value for Q3 and Q4 of 2021. We will achieve this in two steps which can be performed interchangeably.
+Secondly, keeping in mind the required information for the solution, we need the territories and their sales value for Q3 and Q4 of 2021.
+We will achieve this in two steps which can be performed interchangeably.
 
 Filter for rows showing Q3 and Q4 sales of 2021; and
 Identify the territory of sale by merging the two tables.
-Thirdly, we need to analyze the sales quarterly, as opposed to at a transactional level. So, we will aggregate the sales by summing this for each territory-quarter pair, viz., T1-Q3, T1-Q4, T2-Q3, and so on…
+Thirdly, we need to analyze the sales quarterly, as opposed to at a transactional level. So, we will aggregate the sales by
+summing this for each territory-quarter pair, viz., T1-Q3, T1-Q4, T2-Q3, and so on.
 
 The expected table after these steps are performed will contain the territory ID, quarter, and their respective sum of sales.
 
-It is good practice to think ahead about the format that you need your data to be in to make your operations easier. It is best to have the table in the form of Territory ID | Q3 Sales | Q4 Sales. This step is to allow us to quickly calculate the ratio using the Q3 and Q4 sales columns.
+It is good practice to think ahead about the format that you need your data to be in to make your operations easier. It is best to
+have the table in the form of Territory ID | Q3 Sales | Q4 Sales. This step is to allow us to quickly calculate the ratio
+using the Q3 and Q4 sales columns.
 
-Let’s merge Q3 sales with Q4 sales in an inner join, relating them using the territory_id. This step is necessary to transform our data into the structure we mentioned above. An inner join is what we’re going for here as we only want the territories with both Q3 and Q4 sales. This way, we exclude the territories which have a sale only in Q3 or Q4, which includes newly opened stores and stores with temporary closures.
+Let’s merge Q3 sales with Q4 sales in an inner join, relating them using the territory_id. This step is necessary to transform our data
+into the structure we mentioned above. An inner join is what we’re going for here as we only want the territories with both Q3 and Q4
+sales. This way, we exclude the territories which have a sale only in Q3 or Q4, which includes newly opened stores and stores with
+temporary closures.
 
 Now, we can calculate the sales growth ratio using the formula provided in the question.
 
@@ -5346,12 +5749,12 @@ Step 8: Show the territory and the sales growth ratio
 
 Now, let’s begin coding the solution. Let’s follow our written approach.
 
-1). Import pandas and datetime libraries first
+1. Import pandas and datetime libraries first
 
 import pandas as pd
 import datetime as dt
 
-2). Filter for rows showing Q3 and Q4 sales
+2. Filter for rows showing Q3 and Q4 sales
 
 Prepare the data by selecting only the sales for Q3 and Q4 across all the territories in 2021. For this, we will use the datetime package, which allows us to identify the year and quarter information from the order_date column.
 
@@ -5361,7 +5764,7 @@ fct_customer_sales_21 = fct_customer_sales[
 
 Output for advanced python interview question
 
-3). Identify the territory of sales by merging the two tables
+3. Identify the territory of sales by merging the two tables
 
 The table above does not include the territory information that we require, so we will need to merge it with the map_customer_territory table using the common column cust_id.
 
@@ -5375,13 +5778,13 @@ sales = fct_customer_sales_21.merge(map_customer_territory, on='cust_id', how='i
 
 Output 3 for advanced python interview question
 
-4). Output Table: Territory ID | Q3 Sales | Q4 Sales
+4. Output Table: Territory ID | Q3 Sales | Q4 Sales
 
 Next, let us summarize the sales information by territory and by quarter. The first step to achieve that is to create groups based on unique territory_id and quarter combinations using the groupby() function and then aggregate this by summing up the fields.
 
 sales = sales.groupby([sales.territory_id, sales.order_date.dt.quarter]).sum()
 
- Output 4 for advanced python interview question
+Output 4 for advanced python interview question
 
 
 Now, this snippet only returns the field you are aggregating, i.e., order_value as the columns sales.territory_id and sales.order_date.dt.quarter specified in the groupby() function are used as an index.
@@ -5392,7 +5795,7 @@ sales = sales.groupby([sales.territory_id, sales.order_date.dt.quarter]).sum().r
 
 Output 5 for advanced python interview question
 
-5). Territory ID | Q3 Sales | Q4 Sales
+5. Territory ID | Q3 Sales | Q4 Sales
 
 The next step is to transform this table into a table with the columns territory, Q3 sales, and Q4 sales. Let’s take a subset from the sales table, containing the Q3 sales.
 
@@ -5400,7 +5803,7 @@ sales = sales[sales.order_date==3]
 
 Output 6 for advanced python interview question
 
-6). Merge Q3 sales with Q4 sales in an inner join, relating them by territory_id
+6. Merge Q3 sales with Q4 sales in an inner join, relating them by territory_id
 
 Now, let us merge it with another subset containing the Q4 sales.
 
@@ -5409,7 +5812,7 @@ An important thing to note here is that when merging datasets, using suffixes ca
 
 Output 7 for advanced python interview question
 
-7). Calculate the Sales Growth Ratio using the following formula:
+7. Calculate the Sales Growth Ratio using the following formula:
 
 (Q4 Sales - Q3 Sales) / Q3 Sales * 100
 
@@ -5419,7 +5822,8 @@ sales['sales_growth'] = (sales['order_value_q4'] - sales['order_value_q3'])/sale
 
 Output 8 for advanced python interview question
 
-8). Show the territory and the sales growth ratio
+8
+9. . Show the territory and the sales growth ratio
 
 Finally, let us select only the columns that we require, viz., territory_id and sales_growth.
 
@@ -5491,7 +5895,7 @@ rapid development of easily maintainable and secure websites. It’s a favorite 
 
 **Is Django named after that Quentin Tarantino movie?**
 
-No, Django is named after Django Reinhardt, a jazz guitarist from the 1930s to the early 1950s who is considered one of the
+No, Django is named after [Django Reinhardt](https://de.wikipedia.org/wiki/Django_Reinhardt), a jazz guitarist from the 1930s to the early 1950s who is considered one of the
 best guitarists of all time.
 
 ----
@@ -5499,13 +5903,20 @@ best guitarists of all time.
 **What are Django's most prominent features?**
 
 Programmers like Django mostly for its convenient features like:
-
+- Excellent documentation
+- python- Web-framework
+- SEO Optimised
+- High Scalability
+- Versatile in Nature
+- Offers High Security
+- Thoroughly tested
+- Provides rapid development
+- Source: [https://data-flair.training/blogs/django-features/](https://data-flair.training/blogs/django-features/)
 ----
 
 **Can you name some companies that use Django?**
 
 Some of the more well-known companies that use Django include:
-Sure, here are some well-known companies that use Django:
 
 1. Instagram - A social media platform for sharing photos and videos.
 2. Disqus - A commenting system used by many websites.
@@ -5527,28 +5938,29 @@ of industries and applications that use the framework.
 
 Web developers use Django because it:
 
-Allows code modules to be divided into logical groups, making them flexible to change
-Provides an auto-generated web admin module to ease website administration
-Provides a pre-packaged API for common user tasks
-Enables developers to define a given function’s URL
-Allows users to separate business logic from the HTML
-Is written in Python, one of the most popular programming languages available today
-Gives you a system to define the HTML template for your web page, avoiding code duplication
+Allows code modules to be divided into logical groups, making them flexible to change.
+Provides an auto-generated web admin module to ease website administration.
+Provides a pre-packaged API for common user tasks.
+Enables developers to define a given function’s URL.
+Allows users to separate business logic from the HTML.
+Is written in Python, one of the most popular programming languages available today.
+Gives you a system to define the HTML template for your web page, avoiding code duplication.
 
 ----
 
 **What is CRUD?**
-It has nothing to do with dirt or grime. It’s a handy acronym for Create, Read, Update, and Delete. It’s a mnemonic framework used to remind developers on how to construct usable models when building application programming interfaces (APIs).
+
+It has nothing to do with dirt or grime. It’s a handy acronym for Create, Read, Update, and Delete. It’s a mnemonic framework used to remind developers
+on how to construct usable models when building application programming interfaces (APIs).
 
 ----
 
 **Does Django have any drawbacks?**
 
 Django’s disadvantages include:
-
-Its monolithic size makes it unsuitable for smaller projects
-Everything hinges on Django’s ORM (Object-Relational Mapping)
-Everything must be explicitly defined due to a lack of convention
+- Its monolithic size makes it unsuitable for smaller projects.
+- Everything hinges on Django’s ORM (Object-Relational Mapping).
+- Everything must be explicitly defined due to a lack of convention.
 
 ----
 
@@ -5556,10 +5968,10 @@ Everything must be explicitly defined due to a lack of convention
 
 Django architecture consists of:
 
-Models. Describes the database schema and data structure
-Views. Controls what a user sees. The view retrieves data from appropriate models, executes any calculations made, and passes it on to the template
-Templates. Controls how the user sees the pages. It describes how the data received from the views need to be altered or formatted to display on the page
-Controller. Made up of the Django framework and URL parsing
+__Models:__ Describes the database schema and data structure.
+__Views:__ Controls what a user sees. The view retrieves data from appropriate models, executes any calculations made, and passes it on to the template.
+__Templates:__ Controls how the user sees the pages. It describes how the data received from the views need to be altered or formatted to display on the page.
+__Controller:__ Made up of the Django framework and URL parsing.
 
 ----
 
@@ -5574,7 +5986,8 @@ the files required to provide basic functionality to your web applications.
 
 **What are models in Django?**
 
-A Django model is a built-in feature of Django that allows you to construct tables, fields, and constraints. SQL (Structured Query Language) is a complicated language that includes many different queries for generating, removing, updating, and other database-related tasks. 
+A Django model is a built-in feature of Django that allows you to construct tables, fields, and constraints. SQL (Structured Query Language) is 
+complicated language that includes many different queries for generating, removing, updating, and other database-related tasks. 
 
 ----
 
@@ -5593,13 +6006,17 @@ like add, delete, modify and query objects.
 
 **Define static files and explain their uses?**
 
-​​The word "static files" refers to files in a web app that do not change, such as CSS, JavaScript, or pictures. They remain still. Static files are served up by the local Django web server for local development, and minimal configuration is required.
+The word "static files" refers to files in a web app that do not change, such as CSS, JavaScript, or pictures.
+They remain still. Static files are served up by the local Django web server for local development, and minimal
+configuration is required.
 
 ----
 
 **What are Django-admin and manage.py and explain their commands?**
 
-“Django-admin” is the command line utility of Django to perform administrative tasks. And manage.py is created automatically in every Django project. It performs the same functions as Django-admin, but it also modifies the DJANGO SETTINGS MODULE environment variable to point to your project's settings.py file.
+“Django-admin” is the command line utility of Django to perform administrative tasks. And manage.py is created automatically in every
+Django project. It performs the same functions as Django-admin, but it also modifies the DJANGO SETTINGS MODULE environment variable
+to point to your project's settings.py file.
 
 ----
 
@@ -5627,22 +6044,21 @@ _Multi-table inheritance_ - When the parent class has common fields, but the par
 
 _Proxy models_ - Use this when you want to change the parent class's behavior, for as by modifying the order or adding a new model manager.
 
-
 ----
 
-**In Django’s context, what’s the difference between a project and an app?**
+**In Django' context, what’s the difference between a project and an app?**
 
 The project covers the entire application, while an app is a module or application within the project that deals with one dedicated requirement. So, a project consists of several apps, while an app features in multiple projects.
 
 ----
 
-**What’s a model in Django?**
+**What' a model in Django?**
 
 A model consists of all the necessary fields and attributes of your stored data. They are a single, definitive source of information regarding your data.
 
 ----
 
-**What are Django’s templates?**
+**What are Django' templates?**
 
 Django templates render information in a designer-friendly format to present to the user. Using the Django Template Language
 (DTL), a user can generate HTML dynamically. Django templates consist of simple text files that can create any text-based
@@ -5650,7 +6066,7 @@ format such as XML, CSV, and HTML.
 
 ----
 
-**Discuss Django’s Request/Response Cycle?**
+**Discuss Django' Request/Response Cycle?**
 
 Starting the process off, the Django server receives a request. The server then looks for a matching URL in the URL patterns
 defined for the project. If the server can’t find a matching URL, it produces a 404-status code. If the URL matches, it
@@ -5668,15 +6084,14 @@ file to use a database table with the admin interface.
 
 **How do you install Django?**
 
-Users download and install Python per the operating system used by the host machine. Then run the command
+Users download and install Python per the operating system used by the host machine.
+Then run the command:
 
 ```cmd
-pip install "django>=2.2,<3"
+pip install django=2.2/"
 ```
 
 on the terminal and wait for the installation to finish.
-
-Also Read: Why Learn Python?
 
 ----
 
@@ -5684,7 +6099,9 @@ Also Read: Why Learn Python?
 
 You can check the version by opening the command prompt and entering the command:
 
+```cmd
 Python-m Django–version
+```
 
 You can also visit the Django homepage https://www.djangoproject.com/ and look at the “Download latest release” button located on the right of the page.
 
@@ -5728,19 +6145,19 @@ content.
 
 ----
 
-**30. What are Django.shortcuts.render functions?**
+**What are Django.shortcuts.render functions?**
 
 The render function is a shortcut function that allows the developer to quickly pass the data dictionary together with the template. The template is then combined with the data dictionary using the templating engine in this function. Finally, the render() function provides a HttpResponse containing the rendered text, which is the data returned by the models. As a result, Django render() saves the developer time and allows him to utilize multiple template engines. 
 
 ----
 
-**31. What's the significance of the settings.py file?**
+**What's the significance of the settings.py file?**
 
 This file, as the name implies, stores our Django project's configurations or settings, such as database configuration, backend engines, middlewares, installed applications, main URL configurations, static file addresses, templating engines, security keys, allowed hosts etc.
 
 ----
 
-**32. How to view all items in the Model?**
+**How to view all items in the Model?**
 
 The 'all()' function in your interactive shell can be used as follows to display every item in your database:
 
@@ -5757,7 +6174,7 @@ Automation Testing Masters ProgramEXPLORE PROGRAMUnleash a High-paying Automatio
 
 ----
 
-**33. How to filter items in the Model?**
+**How to filter items in the Model?**
 
 Depending on the user's interests, it is a very normal need for the web application to display data on the web page. The application is made more user-friendly by its search feature. The filter() method of the Django framework can be used to filter data from database tables. A table may have numerous records, and depending on the specific criteria, it may be necessary to determine some specific data. By utilizing the filter() technique in numerous ways, this process gets simpler.  There are four types of filtering: Simple filtering, filter data with multiple fields, filter data with Q objects, and Filter data using filter chaining. 
 
@@ -5768,13 +6185,13 @@ We conclude with eight considerably tougher Django interview questions, designed
 
 ----
 
-**34. What is the Django Rest Framework?**
+**What is the Django Rest Framework?**
 
 The Django Rest Framework (DRF) is a framework that helps you quickly create RESTful APIs. They are ideal for web applications due to low bandwidth utilization.
 
 ----
 
-**35. What do you use middleware for in Django?**
+**What do you use middleware for in Django?**
 
 You use middleware for four different functions:
 
@@ -5785,19 +6202,19 @@ Use authentication
 
 ----
 
-**36. What does a URLs-config file contain?**
+**What does a URLs-config file contain?**
 
 The URLs-config file in Django contains a list of URLs and mappings created to view those URLs' functions. The URLs can map to view functions, class-based views, and the URLs-config of other applications.
 
 ----
 
-**37. Does Django support multiple-column primary keys?**
+**Does Django support multiple-column primary keys?**
 
 No, Django supports only single-column primary keys.
 
 ----
 
-**38. How can you see raw SQL queries running in Django?**
+**How can you see raw SQL queries running in Django?**
 
 To begin, make sure that the DEBUG setting is set to True. If the setting is squared away, then type the following commands:
 
@@ -5807,7 +6224,7 @@ To begin, make sure that the DEBUG setting is set to True. If the setting is squ
 
 ----
 
-**39. List several caching strategies supported by Django?**
+**List several caching strategies supported by Django?**
 
 Django supports these caching strategies:
 
@@ -5818,52 +6235,59 @@ Memcached
 
 ----
 
-**40. What is a QuerySet in the context of Django?**
+**What is a QuerySet in the context of Django?**
 
 QuerySet is a collection of SQL queries. The command print(b.query) shows you the SQL query created from the Django filter call.
 
 ----
 
-**41. What do you use django.test.Client class for?**
+**What do you use django.test.Client class for?**
 
 The Client class acts like a dummy web browser, enabling users to test views and interact with Django-powered applications programmatically. This is especially useful when performing integration testing.
 
 ----
 
-**42. How to use file-based sessions?**
+**How to use file-based sessions?**
 
 To use a file-based session, you must set the SESSION_ENGINE settings to "Djangoo.contrib.sessions.backends.file".
 
 ----
 
-**43. What is mixin?**
+**What is mixin?**
 
-In Django, a mixin is a Python class that is inherited by another class to carry out extra functions. Classes that can be reused and scaled are mixins. A unique form of multiple inheritances is a mixin. Mixins are typically employed in two contexts:
+In Django, a mixin is a Python class that is inherited by another class to carry out extra functions. Classes that can be reused and scaled are mixins.
+A unique form of multiple inheritances is a mixin. Mixins are typically employed in two contexts:
 
 You wish to give a class several optional features.
 You wish to apply a specific feature to numerous classes.
 
 ----
 
-**44. What is Django Field Class?**
+**What is Django Field Class?**
 
-In general, "Field" is an abstract class that represents a database table column. In turn, RegisterLookupMixin is a subclass of the Field class. These fields are utilized by Django's get prep value() and from db value() methods to construct database tables (db type()), which are then used to transfer Python types to the database. As a result, fields are essential components of other Django APIs like models and querysets.
-
-----
-
-**45. Why is permanent redirection not a good option?**
-
-Permanent redirection is only employed if it does not require visitors to be directed to the old URLs. The browser caches the response of permanent redirections, thus attempting to redirect to somewhere different will cause problems. Because this is a browser-side process, if your user navigates to a different page, it will load the same page.
+In general, "Field" is an abstract class that represents a database table column. In turn, RegisterLookupMixin is a subclass of the Field class.
+These fields are utilized by Django's get prep value() and from db value() methods to construct database tables (db type()), which are then used
+to transfer Python types to the database. As a result, fields are essential components of other Django APIs like models and querysets.
 
 ----
 
-**46. Difference between Django OneToOneField and ForeignKey Field?**
+**Why is permanent redirection not a good option?**
 
-Both are among the most frequent sorts of fields in Django. The sole difference between these two is that the ForeignKey field includes an on_delete option in addition to a model's class because it is used for many-to-one relationships, whilst the OneToOneField only handles one-to-one relationships and requires only the model's class.
+Permanent redirection is only employed if it does not require visitors to be directed to the old URLs. The browser caches the response of
+permanent redirections, thus attempting to redirect to somewhere different will cause problems. Because this is a browser-side process, if
+your user navigates to a different page, it will load the same page.
 
 ----
 
-**47. How to combine multiple QuerySets in a View?**
+**Difference between Django OneToOneField and ForeignKey Field?**
+
+Both are among the most frequent sorts of fields in Django. The sole difference between these two is that the ForeignKey field includes an on_delete
+option in addition to a model's class because it is used for many-to-one relationships, whilst the OneToOneField only handles one-to-one relationships
+and requires only the model's class.
+
+----
+
+**How to combine multiple QuerySets in a View?**
 
 QuerySets can be combined into another QuerySet, and they do not have to be from the same model.
 
@@ -5885,16 +6309,15 @@ model_combination = model_set1.union(model_set2, all=TRUE)
 
 ----
 
-**48. Mention the ways used for the customization of the functionality of the Django admin interface?**
+**Mention the ways used for the customization of the functionality of the Django admin interface?**
 
-Numerous customization options are available in the Django admin interface, and additional admin interfaces can even be created to enable user separation through permissions. The ModelAdmin class, which serves as a representation of a model in the administration interface, can be used to perform the majority of adjustments.
-
-Front or Back-End Development? Learn It All!
-Caltech Coding BootcampEXPLORE PROGRAMFront or Back-End Development? Learn It All!
+Numerous customization options are available in the Django admin interface, and additional admin interfaces can even be created to enable user
+separation through permissions. The ModelAdmin class, which serves as a representation of a model in the administration interface, can be used
+to perform the majority of adjustments.
 
 ----
 
-**49. Difference between select_related and prefetch_related?**
+**Difference between select_related and prefetch_related?**
 
 Django's select-related and prefetch-related functions are intended to reduce the number of database queries that are generated when related objects are accessed. 
 
@@ -5906,13 +6329,13 @@ When picking a single object, such as an OneToOneField or a ForeignKey, users ut
 
 ----
 
-**50. Explain Q objects in Django ORM?**
+**Explain Q objects in Django ORM?**
 
 When writing complex queries, Q objects are employed because filter() functions only allow you to 'AND' the conditions; whereas, Q objects allow you to 'OR' the conditions. 
 
 ----
 
-**51. What are Django exceptions?**
+**What are Django exceptions?**
 
 An exception is an unusual event that causes a programme to fail. Django has its exception classes to cope with this circumstance, and it also supports all fundamental Python exceptions. The Django. core. exceptions module defines the Django core exceptions classes.
 
@@ -5920,14 +6343,13 @@ An exception is an unusual event that causes a programme to fail. Django has its
 
 # https://mindmajix.com/django-interview-questions
 
-**1. What is Django? And why is it used?**
+**What is Django? And why is it used?**
 
 Django is a high-level Python web framework that enables the rapid development of secure and maintainable websites. It's free and open source. It takes care of much of the hassle of web development and allows you to focus on writing apps without any need to reinvent the wheel. 
 
 The purpose behind developing this framework is to make developers spend time on new application components instead of already developed components.
 
 The reasons why Django is most preferred are:
-
 The Django framework is fast and flexible.
 Suits for any web app development 
 It's secure and Scalable.
@@ -5959,17 +6381,16 @@ If you want to enrich your career and become a professional in Python Django, th
 
 **4. What is the difference between Python and Django?**
 
-Both Python and Django are intertwined but not the same. Python is a programming language used for various application developments: machine learning, artificial intelligence, desktop apps, etc.
+Both Python and Django are intertwined but not the same. Python is a programming language used for
+various application developments:machine learning, artificial intelligence, desktop apps, etc.
 
 Django is a Python web framework used for full-stack app development and server development.
 
 Using core Python, you can build an app from scratch or craft the app with Django using prewritten bits of code
 
-MindMajix Youtube Channel
-
 ----
 
-**5. What architecture does Django use?**
+**What architecture does Django use?**
 
 Django follows a Model-View-Template (MVT) architecture. It contains three different parts:
 
@@ -5980,7 +6401,7 @@ Model template view
 
 ----
 
-**6. Explain Django Architecture?**
+**Explain Django Architecture?**
 
 As discussed in the previous question, Django follows MVT architecture - Model, Template, View.
 
@@ -6008,7 +6429,7 @@ That's how the Django MVT architecture is working.
 
 ----
 
-**7. Explain Django's code reusability?**
+**Explain Django's code reusability?**
 
 Compared to other frameworks, Django offers more code reusability. As Django is a combination of apps, copying those apps from one directory to another with some tweaks to the settings.py file won't need much time to write new applications from scratch.
 
@@ -6016,21 +6437,18 @@ That is why Django is the rapid development framework, and this kind of code reu
 
 ----
 
-**8. Is Django easy to learn?**
+**Is Django easy to learn?**
 
 Yes, Django is an easy-to-learn framework compared to others. Having some knowledge of Python and web-working helps you to start developing with Django.
 
-→ Learn Python Tutorial
-
 ----
 
-**9. What are the unique features of Django that make it a better framework?**
+**What are the unique features of Django that make it a better framework?**
 
 The best features of Django that make it better compared to others are:
 
 Compared to other open-source technologies, Django offers excellent documentation in the market.
-It's a
- web framework and one of the main reasons that people started using it. It's the only one that can solve any kind of operation out there.
+It's aweb framework and one of the main reasons that people started using it. It's the only one that can solve any kind of operation out there.
 Django is SEO optimized.
 Django is scalable and can flexibly switch from small to large-scale projects.
 Versatile in nature. Django allows you to build applications for various types of domains.
@@ -6039,7 +6457,7 @@ Provides rapid development
 
 ----
 
-**10. What are the advantages of Django?**
+**What are the advantages of Django?**
 
 Django has many advantages, but we'll look at major ones that differentiate it from other frameworks.
 
@@ -6047,22 +6465,30 @@ Better CDN connectivity and content management
 Designed as batteries included framework
 Supports MVC programming paradigm
 Provides robust security features
-Accelerated custom web app development 
+Accelerated custom web app development       
 Compatible with major operating systems and databases
 
 ----
 
-**11. Describe the inheritance styles in Django?**
+**Describe the inheritance styles in Django?**
 
 Django offers three inheritance styles:
 
-Abstract base classes: You use this style when you want the parent class to retain the data you don't want to type out for every child model.
-Multi-table inheritance: You use this style when you want to use a subclass on an existing model and want each model to have its database table.
-Proxy models: You use this style to modify Python-level behaviour with the models without changing the Model's field. 
+__Abstract base classes:__
+
+You use this style when you want the parent class to retain the data you don't want to type out for every child model.
+
+__Multi-table inheritance:__
+
+You use this style when you want to use a subclass on an existing model and want each model to have its database table.
+
+__Proxy models:__
+
+You use this style to modify Python-level behaviour with the models without changing the Model's field. 
 
 ----
 
-**12. What are Django Models?**
+**What are Django Models?**
 
 A model is a definitive source of information about data, defined in the “app/models.py”. 
 
