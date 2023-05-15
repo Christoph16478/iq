@@ -2068,136 +2068,175 @@ of a program rather than before performance. It commonly uses bytecode translati
 
 **What are Brief Access Specifiers and Types of Access Specifiers?**
 
-Access Specifiers are predefined keywords used to help JVM understand the scope of a variable, method, and class. We have four access specifiers.
-Public Access Specifier 
-Private Access Specifier 
-Protected Access Specifier 
-Default Access Specifier
-80. How many types of constructors are used in Java?
+Access specifiers are predefined keywords used to help JVM understand the scope of a variable, method, and class. We have four access specifiers.
+- Public Access Specifier 
+- Private Access Specifier 
+- Protected Access Specifier 
+- Default Access Specifier
+
+----
+
+**How many types of constructors are used in Java?**
+
 There are two types of constructors in Java.
-
-Parameterized Constructors: Parameterized constructor accepts the parameters with which users can initialize the instance variables. Users can initialize the class variables dynamically at the time of instantiating the class.
-
-Default constructors: This type doesn’t accept any parameters; rather, it instantiates the class variables with their default values. It is used mainly for object creation.
+- Parameterized Constructors: Parameterized constructor accepts the parameters with which users can initialize the instance variables. Users can initialize the class variables dynamically at the time of instantiating the class.
+- Default constructors: This type doesn’t accept any parameters; rather, it instantiates the class variables with their default values. It is used mainly for object creation.
 
 ----
 
-81. Can a constructor return a value?
-Yes, A constructor can return a value. It replaces the class's current instance implicitly; you cannot make a constructor return a value explicitly.
+**Can a constructor return a value?**
+
+Yes, a constructor can return a value. It replaces the class's current instance implicitly; you cannot make a constructor return a value explicitly.
 
 ----
 
-82. Explain ‘this’ keyword in Java.
+**Explain 'this' keyword in Java?**
+
 The term "this" is a particular keyword designated as a reference keyword. The "this" keyword is used to refer to the current class properties like method, instance, variable, and constructors.
 
 ----
 
-83. Explain ‘super’ keyword in Java.
+**Explain 'super' keyword in Java?**
+
 The term "super" is a particular keyword designated as a reference keyword. The "super" keyword refers to the immediate parent class object.
 
 ----
 
-84. Explain Method Overloading in Java.
+***Explain Method Overloading in Java?**
+
 The process of creating multiple method signatures using one method name is called Method Overloading in Java. Two ways to achieve method overloading are:
-
-Varying the number of arguments
-Changing the return type of the Method
-
-----
-
-85. Can we overload a static method?
-No, Java does not support the Overloading of a static method. The process would throw an error reading "static method cannot be referenced."
+- Varying the number of arguments.
+- Changing the return type of the Method.
 
 ----
 
-86. Define Late Binding.
+**Can we overload a static method?**
+
+No, Java does not support the Overloading of a static method. The process would throw an error reading __"static method cannot be referenced."__
+
+----
+
+**Define Late Binding?**
+
 Binding is a process of unifying the method call with the method's code segment. Late binding happens when the method's code segment is unknown until it is called during the runtime. 
 
-New Course: Full Stack Development for Beginners
-Learn Git Command, Angular, NodeJS, Maven & MoreENROLL NOWNew Course: Full Stack Development for Beginners
+```java
+
+```
 
 ----
 
-87. Define Dynamic Method Dispatch.
-The Dynamic method dispatch is a process where the method call is executed during the runtime. A reference variable is used to call the super-class. This process is also known as Run-Time Polymorphism.     
+**Define Dynamic Method Dispatch?**
+
+The Dynamic method dispatch is a process where the method call is executed during the runtime. A reference variable is used to call
+the super-class. This process is also known as Run-Time Polymorphism.     
+
+```java
+
+```
 
 ----
 
-88. Why is the delete function faster in the linked list than an array?
+**Why is the delete function faster in the linked list than an array?**
+
 Delete Function is faster in linked lists in Java as the user needs to make a minor update to the pointer value so that the node can point to the next successor in the list
 
+```java
+
+```
+
 ----
 
-89. Give a briefing on the life cycle of a thread.
+**Give a briefing on the life cycle of a thread?**
+
 The life cycle of a thread includes five stages, as mentioned below.
-
-New Born State
-Runnable State
-Running State
-Blocked State
-Dead State
+- New Born State
+- Runnable State
+- Running State
+- Blocked State
+- Dead State
 
 ----
 
-90. Explain the difference between >> and >>> operators.
+**Explain the difference between >> and >>> operators?**
+
 Although they look similar, there is a massive difference between both.
 
->> operator does the job of right shifting the sign bits
->>> operator is used in shifting out the zero-filled bits
+`>>` operator does the job of right shifting the sign bits
+`>>>` operator is used in shifting out the zero-filled bits
 
 ----
 
-91. Brief the life cycle of an applet.
+**Brief the life cycle of an applet?**
+
 The life cycle of an applet involves the following.
-
-Initialization
-Start
-Stop
-Destroy
-Paint
-92. Why are generics used in Java Programming?
-Compile-time type safety is provided by using generics. Compile-time type safety allows users to catch unnecessary invalid types at compile time. Generic methods and classes help programmers specify a single method declaration, a set of related methods, or related types with an available class declaration. 
+- Initialization
+- Start
+- Stop
+- Destroy
+- Paint
 
 ----
 
-93. Explain the Externalizable interface.
+**Why are generics used in Java Programming?**
+
+Compile-time type safety is provided by using generics. Compile-time type safety allows users to catch unnecessary invalid types at compile time. Generic methods
+and classes help programmers specify a single method declaration, a set of related methods, or related types with an available class declaration. 
+
+----
+
+**Explain the Externalizable interface?**
+
 The Externalizable interface helps with control over the process of serialization. An "externalisable" interface incorporates readExternal and writeExternal methods.
 
 ----
 
-94. What is the Daemon Thread?
-The Daemon thread can be defined as a thread with the least priority. This Daemon thread is designed to run in the background during the Garbage Collection in Java.
+**What is the Daemon Thread?**
 
+The Daemon thread can be defined as a thread with the least priority. This Daemon thread is designed to run in the background during the Garbage Collection in Java.
 The setDaemon() method creates a Daemon thread in Java.
 
+```java
+
+```
+
 ----
 
-95. Explain the term enumeration in Java.
-Enumeration or enum is an interface in Java. Enum allows the sequential access of the elements stored in a collection in Java.
+**Explain the term enumeration in Java?**
+
+`Enumeration` or `enum` is an interface in Java. Enum allows the sequential access of the elements stored in a collection in Java.
+
+```java
+
+```
 
 ----
 
-96. Why is Java is Dynamic?
+**Why is Java is Dynamic?**
+
 Java is designed to adapt to an evolving environment. Java programs include a large amount of runtime information that is used to resolve access to objects in real-time. 
 
 ----
 
-97. Can you run a code before executing the main method?
-Yes, we can execute any code, even before the main method. We will be using a static block of code when creating the objects at the class's load time. Any statements within this static block of code will get executed at once while loading the class, even before creating objects in the main method.
+**Can you run a code before executing the main method?**
+
+Yes, we can execute any code, even before the main method. We will be using a static block of code when creating the objects at the class's
+load time. Any statements within this static block of code will get executed at once while loading the class, even before creating objects in the main method.
 
 ----
 
-98. How many times is the finalize method called?
+**How many times is the finalize method called?**
+
 The finalize method is called the Garbage collector. For every object, the Garbage Collector calls the finalize() method just for one time.
 
-Java Interview Questions for Experienced
-Now, lets move on to our last section of Advanced Core Java Interview Questions which is primarly useful for experienced and working professionals.
 
 ----
 
-99. Can "this" and "super" keywords be used together?
+**Can "this" and "super" keywords be used together?**
+
 No, "this" and "super" keywords should be used in the first statement in the class constructor. The following code gives you a brief idea.
 
+```java
 public class baseClass {  
 
      baseClass() {  
@@ -2217,46 +2256,45 @@ public class baseClass {
      }  
 
 }
+```
 
 ----
 
-100. What is a JSP page?
+**What is a JSP page?**
+
 JSP is an abbreviation for Java Servlet Page. The JSP page consists of two types of text.
+- Static Data 
+- JSP elements
 
-Static Data 
-JSP elements
-Find Our Java Training in Top Cities
+**What is JDBC?**
 
-India	United States	Other Countries
-Java Training in Bangalore	Java Training New York	Java Course London
-Java Training in Chennai	Java Training San Diego	Java Course Singapore
-Java Training in Hyderabad	Java Training Dallas	Java Course Melbourne
-101. What is JDBC?
 JDBC is an abbreviation for Java Database Connector.
 
 JDBC is an abstraction layer used to establish connectivity between an existing database and a Java application
 
 ----
 
-102. Explain the various directives in JSP.
+**Explain the various directives in JSP?**
+
 Directives are instructions processed by JSP Engine. After the JSP page is compiled into a Servlet, Directives set page-level instructions, insert external files, and define customized tag libraries. Directives are defined using the symbols below:
 
-start with "< %@" and then end with "% >" 
+start with `< %@` and then end with `% >`. 
 
 The various types of directives are shown below:
 
-Include directive
+__Include directive__
 It includes a file and combines the content of the whole file with the currently active pages.
 
-Page directive
+__Page directive__
 Page Directive defines specific attributes in the JSP page, like the buffer and error page.
 
-Taglib
+__Taglib__
 Taglib declares a custom tag library, which is used on the page.
 
 ----
 
-103. What are the observer and observable classes?
+**What are the observer and observable classes?**
+
 Objects that inherit the "Observable class" take care of a list of "observers." 
 
 When an Observable object gets upgraded, it calls the update() method of each of its observers. 
@@ -2265,49 +2303,55 @@ After that, it notifies all the observers that there is a change of state.
 
 The Observer interface gets implemented by objects that observe Observable objects.
 
-Free Course: JavaScript for Beginners
-Learn the Basics of JavaScriptENROLL NOWFree Course: JavaScript for Beginners
+```java
+
+```
 
 ----
 
-104. What is Session Management in Java?
-A session is essentially defined as the random conversation's dynamic state between the client and the server. The virtual communication channel includes a string of responses and requests from both sides. The popular way of implementing session management is establishing a session ID in the client's communicative discourse and the server.
+**What is Session Management in Java?**
+
+A session is essentially defined as the random conversation's dynamic state between the client and the server. The virtual communication channel
+includes a string of responses and requests from both sides. The popular way of implementing session management is establishing a session ID in
+the client's communicative discourse and the server.
 
 ----
 
-105. Briefly explain the term Spring Framework.
-Spring is essentially defined as an application framework in Java and inversion of control containers for Java. The spring framework creates enterprise applications in Java. Especially useful to keep in mind that the spring framework's central features are essentially conducive to any Java application.
+**Briefly explain the term Spring Framework?**
+
+Spring is essentially defined as an application framework in Java and inversion of control containers for Java. The spring framework creates enterprise
+applications in Java. Especially useful to keep in mind that the spring framework's central features are essentially conducive to any Java application.
 
 ----
 
-106. How to handle exceptions in Spring MVC Framework?
+**How to handle exceptions in Spring MVC Framework?**
+
 Spring MVC has two approaches for handling the exceptions:
-
-Exception handler method: In this kind of exception handling, the user will get the @ExceptionHandler annotation type used to annotate a method to handle exceptions.
-XML Configuration: The user can use the SimpleMappingExceptionResolver bean in Spring’s application file and map the exception.
+- Exception handler method: In this kind of exception handling, the user will get the @ExceptionHandler annotation type used to annotate a method to handle exceptions.
+- XML Configuration: The user can use the SimpleMappingExceptionResolver bean in Spring’s application file and map the exception.
 
 ----
 
-107. What is JCA in Java?
+**What is JCA in Java?**
+
 Java Cryptography Architecture gives a platform and provides architecture and application programming interfaces that enable decryption and encryption. 
-
 Developers use Java Cryptography Architecture to combine the application with the security applications. Java Cryptography Architecture helps in implementing third party security rules and regulations. 
-
 Java Cryptography Architecture uses the hash table, encryption message digest, etc. to implement the security.
 
 ----
 
-108. Explain JPA in Java.
-The Java Persistence API enables us to create the persistence layer for desktop and web applications. Java Persistence deals in the following:
+**Explain JPA in Java?**
 
-Java Persistence API
-Query Language
-Java Persistence Criteria API
-Object Mapping Metadata
+The Java Persistence API enables us to create the persistence layer for desktop and web applications. Java Persistence deals in the following:
+- Java Persistence API
+- Query Language
+- Java Persistence Criteria API
+- Object Mapping Metadata
 
 ----
 
-109. Explain the different authentications in Java Servlets.
+**Explain the different authentications in Java Servlets?**
+
 Authentication options are available in Servlets: There are four different options for authentication in servlet:
 
 Basic Authentication: 
@@ -2324,10 +2368,12 @@ It requires that each client accessing the resource has a certificate that it se
 
 ----
 
-110. Explain FailFast iterator and FailSafe iterator along with examples for each.
+**Explain FailFast iterator and FailSafe iterator along with examples for each?**
+
 FailFast iterators and FailSafe iterators are used in Java Collections. 
 
-FailFast iterators do not allow changes or modifications to the Java Collections, which means they fail when the latest element is added to the collection or an existing element gets removed from the collection. The FailFast iterators tend to fail and throw an exception called ConcurrentModificationException.
+FailFast iterators do not allow changes or modifications to the Java Collections, which means they fail when the latest element is added to the collection or an existing element gets removed from the collection.
+The FailFast iterators tend to fail and throw an exception called ConcurrentModificationException.
 
 Ex: ArrayList, HashMap
 
@@ -2337,9 +2383,11 @@ Ex: CopyOnWriteArrayList
 
 ----
 
-111. How do we reverse a string?
+**How do we reverse a string?**
+
 The string can be reversed by using the following program.
 
+```java
 package simplilearnJava;
 
 public class StringReverse {
@@ -2376,15 +2424,17 @@ return reverse;
 
 }
 
-Expected Output:
-
-Actual Word: Simplilearn, Word after reversing nraelilpmiS
+// Expected Output:
+// Actual Word: Simplilearn, Word after reversing nraelilpmiS
+```
 
 ----
 
-112. Write a program to find the square root of a number.
+**Write a program to find the square root of a number?**
+
 The Square root of a number can be found by using the following program.
 
+```java
 package simplilearnJava;
 
 import java.util.Scanner;
@@ -2409,19 +2459,19 @@ System.out.printf("The square root is: %f ", squareRoot);
 
 }
 
-Expected Output:
+// Expected Output:
+// Input a number to find square root: 
+// 25
+// The square root is: 5
+```
 
-Input a number to find square root: 
+----
 
-25
+**Write a program that detects the duplicate characters in a string?**
 
-The square root is: 5
-
-Free Course: Java Hibernate Fundamentals
-Learn Java Hibernate Basic Skills for FreeENROLL NOWFree Course: Java Hibernate Fundamentals
-113. Write a program that detects the duplicate characters in a string.
 The program that finds the duplicate elements in a string is written below:
 
+```java
 package simplilearnJava;
 
 import java.util.HashMap;
@@ -2476,19 +2526,19 @@ System.out.printf("%s: %d %n", entry.getKey(), entry.getValue());
 
 }
 
-Expected output:
-
-List of duplicate characters in String 'Simplilearn.' 
-
-i: 2 
-
-l: 2 
+// Expected output:
+// List of duplicate characters in String 'Simplilearn.' 
+// i: 2 
+// l: 2 
+```
 
 ----
 
-114. Write a Program to remove duplicates in an ArrayList.
+**Write a Program to remove duplicates in an ArrayList?**
+
 The following program can be implemented to remove duplicate elements in an ArrayList
 
+```java
 package simplilearnJava;
 
 import java.util.ArrayList;
@@ -2544,12 +2594,15 @@ Expected Output:
 Your list of elements in ArrayList : [1, 2, 3, 4, 5, 6, 3, 4, 5, 6]
 
 list of original numbers without duplication: [1, 2, 3, 4, 5, 6]
+```
 
 ----
 
-115. Find the word count in a string using HashMap Collection.
-The following program can be used for word count.
+**Find the word count in a string using HashMap Collection?**
 
+The following program can be used for word count:
+
+```java
 package simplilearnJava;
 
 import java.util.HashMap;
@@ -2585,16 +2638,17 @@ System.out.println(map);
 }
 
 }
-
-Expected Output:
-
-{Hello=1, Simplilearn=1, Welcome=1, to=1, World,=1}
+// Expected Output:
+// {Hello=1, Simplilearn=1, Welcome=1, to=1, World,=1}
+```
 
 ----
 
-116. Write a program to find the Second Highest number in an ArrayList
+**Write a program to find the Second Highest number in an ArrayList?**
+
 The following program can be used to find the second biggest number in an array list.
 
+```java
 package simplilearnJava;
 
 public class NextHighest {
@@ -2651,24 +2705,25 @@ public static void main(String[] args)
 
 }
 
-Expected Output:
-
-The given array is:
-
-1 2 3 4 11 12 13 14 21 22 23 24 31 32
-
-Second Highest is:31
-
-The highest number is: 32
+// Expected Output:
+// The given array is:
+// 1 2 3 4 11 12 13 14 21 22 23 24 31 32
+// Second Highest is:31
+// The highest number is: 32
+```
 
 ----
 
-117. What is the difference between System.out, System.err, and System.in?
-System.out and System.err represent the monitor by default and thus can be used to send data or results to the monitor. System.out is used to display normal messages and results. System.eerr is used to display error messages. System.in represents InputStream object which by default represents standard input device, i.e., keyboard.
+**What is the difference between System.out, System.err, and System.in?**
+
+System.out and System.err represent the monitor by default and thus can be used to send data or results to the monitor. System.out is used
+to display normal messages and results. System.eerr is used to display error messages. System.in represents InputStream object which by
+default represents standard input device, i.e., keyboard.
 
 ----
 
-118. Could you provide some implementation of a Dictionary having a large number of words?
+**Could you provide some implementation of a Dictionary having a large number of words?**
+
 The simplest implementation that can be given is that of a List wherein one can place ordered words and perform a Binary search. The other implementation with a better search performance is HashMap where the key is used as the first character of the word and the value as a LinkedList.
 
 Up another level, there are HashMaps like:
