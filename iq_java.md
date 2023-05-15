@@ -305,24 +305,25 @@ String args[]: it is a main method argument.
 
 ---
 
-What is the different between Final, finally and finilize?
+**What is the different between Final, finally and finilize?**
 
-Final:
+__Final:__
 final is a modifier which is used with classes, methods and variables. If the class is declared as final then that class is not extended by other class. If the method is declared as final then we cannot override that method in the child class. i.e. final method is not overridden by child class. If the variable is declared as final then it behave as a constant and we cannot re-assingment for that variable.
 
-finally:
+__finally:__
 finally is a block which is always associated with try-catch block.finally block is always executed whether exception is handled or not.finally block is used to execute important code such as closing connection, stream when any exception arise.
 
-finalize();
+__finalize()__
 finalize() method is used to perform cleanup operation just before destroying any object. This finalize() method is always invoked by garbage collector. 
 
 ----
 
-What is the difference between “==” and “equals()” method.
+**What is the difference between "==" and "equals()" method?**
 
 "==" is used for address/reference comparison.
 
 Example:
+
 String str1=new String("prakash");
 String str2=new String("prakash");
 System.out.println(str1==str2);
@@ -339,15 +340,15 @@ output: true
 
 ----
 
-Why Java is called as platform independent?
+**Why Java is called as platform independent?**
 
 After the compilation of Java code, code is converted into byte code. This byte code
 can be executed in any other system and environment. Because of that it is known as
 platform independent.
 
----
+----
 
-What is meant by Local variable and Instance variable?
+**What is meant by Local variable and Instance variable?**
 
 Local variables are defined in the method and scope of the variables that have existed
 inside the method itself.
@@ -355,18 +356,21 @@ inside the method itself.
 An instance variable is defined inside the class and outside the method and scope of the
 variables exist throughout the class.
 
-Oops Concept Interview Questions
-Q1). Define Constructor.
-Ans: We can define as constructor is a method or block which is use to initialise the objects. Constructor should have same name as a name of class which have no return type. It is automatically called by java at the time of object creation.
+----
+
+**Define Constructor?**
+
+We can define as constructor is a method or block which is use to initialise the objects. Constructor should have same name as a name
+of class which have no return type. It is automatically called by java at the time of object creation.
 
 There are 3 types of constructor
-1). Default constructor: It is automatically inserted by Java when we not declared any constructor. It is not visible in your source code.
-2). Parameterised constructor : Constructor with arguments are known as Parameterised constructor.
-3). No-arg Constructor : it is very similar to default constructor. We declare it when we want to perform some operation at a time of object creation then we write that code in no-args constructor. For example some initialization of value.
+1. Default constructor: It is automatically inserted by Java when we not declared any constructor. It is not visible in your source code.
+1. Parameterised constructor : Constructor with arguments are known as Parameterised constructor.
+1. No-arg Constructor : it is very similar to default constructor. We declare it when we want to perform some operation at a time of object creation then we write that code in no-args constructor. For example some initialization of value.
 
 ----
 
-Explain access modifiers in Java?
+**Explain access modifiers in Java?**
 
 Access modifiers is a keywords in Java that define the accessibility of any class, methods and member variables.
 
@@ -376,87 +380,144 @@ Public
 Private
 Protected
 Default
-Modifier	Default	Private	Protected	Public
-Same class	YES	YES	YES	YES
-Same Package subclass	YES	NO	YES	YES
-Same Package non-subclass	YES	NO	YES	YES
-Different package subclass	NO	NO	YES	YES
-Different package non-subclass	NO	NO	NO	YES
+
+| Modifier | Default | Private | Protected | Public |
+| -------- | ------- | ------- | --------- | ----- |
+| Same class | YES | YES | YES | YES |
+| Same Package subclass | YES | NO | YES | YES |
+| Same Package non-subclass | YES | NO | YES | YES |
+| Different package subclass | NO | NO | YES | YES |
+| Different package non-subclass | NO | NO | NO | YES |
 
 ----
 
-Explain some features of oops?
+**Explain some features of oops?**
 
 Inheritance: Inheritance is process in which child objects of child class acquires the all properties and behaviour of its parent class. It improves the code reusability.
 
-Abstraction: Abstraction means hide the complexity and show the functionality. For examples in education portal
+__Abstraction:__ Abstraction means hide the complexity and show the functionality. For examples in education portal
 you just sign up and then login by giving credential and then access your dashboard but you won’t aware of
 how its happening in backend. It is known as abstraction.
 
-Encapsulation: Encapsulation is a process of binding the data and methods together in a single entity
+```java
+
+```
+
+__Encapsulation:__ Encapsulation is a process of binding the data and methods together in a single entity
 known as class for data safety.
 
-Polymorphism: Polymorphism defines to perform single actions in multiple form. It is derived from two
+```java
+
+```
+
+__Polymorphism:__ Polymorphism defines to perform single actions in multiple form. It is derived from two
 word Poly + morphs that means many forms.
 
-It is of two types:
-Method overloading
-Method Overriding
+```java
 
-----
-
-What is this and super keyword in Java?
-
-this : this is a keyword is use to access the member of present class.
-super : super keyword is used to access the member of parent class.
-
-----
-
-What is the different between static and non-static method of java?
-
-Static method: static method is a class level method. We need not required any instance to access them we can access it directly using class. A static method can only access static variable.
-
-non-static method: non-static method belongs to objects of the class. It can be accessible inside the static method with the help of class instance.
-
-----
-
-What do you mean by Polymorphism?
-
-Polymorphism is derived from two greek word “poly” and “morphs” means many form. It allows to perform single task in multiple form. In Java term we can say that there can be multiple methods with same name but different functionality.
+```
 
 It is of two types:
-1). Compile time polymorphism
-2). Runtime Polymorphism
 
-Compile time polymorphism is also known as method overloading and Runtime polymorphism is known as overriding.
+- Method overloading
+
+In method overloading a class have different methods with same name but different number of arguments. In Overloading case methods should have different signature. It is also known as compile time polymorphism.
+
+```java
+
+```
+
+- Method Overriding
+
+In Method Overriding sub class have similar method as parent class. Similar mean name, return type, parameter of methods for both parent and sub class method.
+
+```java
+
+```
 
 ----
 
-Explain Method overloading and method overriding?
+**What is this and super keyword in Java?**
 
-Method overloading: In method overloading a class have different methods with same name but different number of arguments. In Overloading case methods should have different signature. It is also known as compile time polymorphism.
+__this:__ this is a keyword is use to access the member of present class.
 
-Method Overriding: In Method Overriding sub class have similar method as parent class. Similar mean name, return type, parameter of methods for both parent and sub class method.
+```java
+
+```
+
+__super:__ super keyword is used to access the member of parent class.
+
+```java
+
+```
+
+----
+
+**What is the different between static and non-static method of java?**
+
+__Static method:__ static method is a class level method. We need not required any instance to access them we can access it directly using class. A static method can only access static variable.
+
+```java
+
+```
+
+__Non-static method:__ non-static method belongs to objects of the class. It can be accessible inside the static method with the help of class instance.
+
+```java
+
+```
+
+----
+
+**What do you mean by Polymorphism?**
+
+Polymorphism is derived from two greek word “poly” and “morphs” means many form. It allows to perform single task in
+multiple form. In Java term we can say that there can be multiple methods with same name but different functionality.
+
+It is of two types:
+
+1. Compile time polymorphism
+
+```java
+
+```
+
+1. Runtime Polymorphism
+
+```java
+
+```
+
+__NOTE: Compile time polymorphism is also known as method overloading and Runtime polymorphism is known as overriding.__
 
 ----
 
 How many ways you can overload method?
 
 1) By number of passing parameters the valid case for overloading the method is
+
+```java
 add(int,int)
 add(int,int,int)
+```
 
 2) By changing the data type of parameter
+
+```java
 add(int,int)
 add(float,int)
+```
 
 3) By changing the sequence of data type
+
+```java
 add(int, float)
 add(float,int)
+```
 
 ----
 
-What is the some invalid cases of method overloading in Java?
+**What is the some invalid cases of method overloading in Java?**
 
 In java if two methods having the same name, same parameters but different return type,
 then this is not a valid method overloading. Also if two methods having the same name,
@@ -464,31 +525,54 @@ same parameters and different return type, then this is also not a valid method
 overloading. This will throw compilation error.
 
 Example:
+
+```java
 int sum(int,int)
 float sum(int,int)
+```
 
 ----
 
-What do you mean by abstract class?
+**What do you mean by abstract class?**
 
 Abstract class is declared with the help of Abstract Keyword. It can have both abstract and non-abstract method. We cannot instantiate abstract method. It is extended by another class which can implement its methods to use. It can have static and final methods.
 
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+The abstract keyword is a non-access modifier, used for classes and methods:
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+
+```java
+abstract class Animal {
+  public abstract void animalSound();
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+```
+
 ----
 
-What do you mean by Interface?
+**What do you mean by Interface?**
 
 Interface is a blueprint of class that have abstract and public methods without body. Class that implements interface should implement all methods of interface.
 
+```java
 public interface Man
 {
 	public void eat();
 	public void sleep();
 	public void walk();
 }
+```
 
-Java String Interview Questions
+----
 
-Difference between String and StringBuffer.
+**Difference between String and StringBuffer?**
 
 String: String object is immutable but the StringBuffer objects are mutable.
 Immutable means once we create a String object we cannot perform any changes
@@ -496,93 +580,87 @@ on object.
 
 Example of String:
 
+```java
 String str=new String("prakash");
 str.concat("kumar");
 System.out.println(str);
 output:- prakash
+```
 
 Example of StringBuffer:
 
+```java
 StringBuffer strbfr=new StringBuffer("prakash");
 strbfr.append("kumar");
 System.out.println(strbfr);
 output:- prakash kumar
+```
 
 ----
 
-Difference between StringBuffer and StringBuilder?
+**Difference between StringBuffer and StringBuilder?**
 
-Ans: Both StringBuffer and StringBuilder are mutable.
+Both StringBuffer and StringBuilder are mutable.
 
 StringBuffer:
-All method of StringBuffer is synchronized. As it is synchronized, it is also thread-safe.
 
-Thread-Safe means two threads can’t call the StringBuffer method simultaneously. Its performance is low because every task is dependent on the other.
+All method of StringBuffer is synchronized. As it is synchronized, it is also thread-safe. Thread-Safe means two
+threads can’t call the StringBuffer method simultaneously. Its performance is low because every task is dependent on the other.
 
 Example:
 
+```java
 StringBuffer strbuffer = new StringBuffer("java"); 
 strbuffer.append("developer"); 
 System.out.println(strbuffer); 
+```
 
 StringBuilder:
+
 Methods are not synchronized so it is not thread-safe. It means two threads can call the string builder method simultaneously. Its performance is high because more than one thread can be allowed.
 
 Example:
 
+```java
 StringBuilder strBuilder=new StringBuilder("java"); 
 strBuilder.append("developer"); 
 System.out.println(strBuilder);
+```
 
 ----
 
-Difference between String, StringBuilder, and StringBuffer.
+**Difference between String, StringBuilder and StringBuffer?**
 
-Factor
+__Factor__
+- String
+- StringBuilder
+- StringBuffer
 
-String
+__Storage Area__
+- Constant String Pool
+- Heap Area
+- Heap Area
 
-StringBuilder
+__Mutability__
+- Immutable
+- Mutable
+- Mutable
 
-StringBuffer
+__Thread Safety__
+- Yes
+- No
+- Yes
 
-Storage Area
-
-Constant String Pool
-
-Heap Area
-
-Heap Area
-
-Mutability
-
-Immutable
-
-Mutable
-
-Mutable
-
-Thread Safety
-
-Yes
-
-No
-
-Yes
-
-Performance
-
-Fast
-
-More efficient
-
-Less efficient
+__Performance__
+- Fast
+- More efficient
+- Less efficient
 
 ----
 
-Difference between Array and ArrayList?
+**Difference between Array and ArrayList?**
 
-Arrays:
+__Arrays:__
 Array is fixed in size which is decided at a time of array declaration.
 Array can contain both primitives data and objects.
 Example:
@@ -592,66 +670,115 @@ arr[1]=20;
 arr[2]=70;
 Arrays.stream(arr).forEach(e->System.out.print(e + " "));
 
-ArrayList:
+__ArrayList:__
 Size of ArrayList is dynamic.
 It is a part of the collection framework of java.
 ArrayList can contain the only object. After Java 5 It converts primitive data into object itself.
+
+```java
 ArrayList<Integer> arrList = new ArrayList<Integer>(3);
 for (int i = 1; i <= 3; i++)
   arrList.add(i);
 arrList.stream().forEach(e->System.out.print(e + " ")); 
+```
 
 ----
 
-What do you mean by Collections in Java?
+**What do you mean by Collections in Java?**
 
 Collection is a Java framework that have some predefined class and interfaces to store and manipulate the group of objects.
 
-Interfaces comes with Collection framework:
-Set
-List
-Queue
-Dequeue
-Classes comes with Collection framework:
+__Interfaces comes with Collection framework:__
+- Set
 
-ArrayList
-LinkedList
-HashSet
-TreeSet
-LinkedHashSet etc.
+```java
 
-Explain the lists that are present in Java Collection?
-Types of Lists are:
+```
 
-1). ArrayList
-Fast iteration and fast Random Access
-It is an ordered collection.
-It is not sorted collection.
-Example:
-Output:
-[Dog, Cat, Donkey, Cow]
+- List
 
-2). Linked List
-Performance is slow than ArrayList.
-Maintain the Insertion Order.
-It can have duplicate values
-Output:
-[Dog, Cat, Donkey, Cow]
+```java
 
-3). Vector
-Similar as ArrayList.
-Maintain the Insertion Order.
-It can have duplicate values.
-Its Methods are Synchronized.
-Output:
-[Dog, Cat, Donkey, Cow]
+```
+
+- Queue
+
+```java
+
+```
+
+- Dequeue
+
+```java
+
+```
+
+__Classes comes with Collection framework:__
+- ArrayList
+
+```java
+
+```
+
+- LinkedList
+
+```java
+
+```
+
+- HashSet
+
+```java
+
+```
+
+- TreeSet
+
+```java
+
+```
+
+- LinkedHashSet
+
+```java
+
+```
 
 ----
 
-Explain the Set and their types in a Java Collection?
+**Explain the lists that are present in Java Collection?**
+
+Types of Lists are:
+
+1). ArrayList
+
+Fast iteration and fast Random Access. It is an ordered collection. It is not sorted collection.
+
+```java
+
+```
+
+2). Linked List
+
+Performance is slow than ArrayList. Maintain the Insertion Order. It can have duplicate values
+
+```java
+
+```
+
+3). Vector
+
+Similar as ArrayList. Maintain the Insertion Order. It can have duplicate values. Its Methods are Synchronized.
+
+```java
+
+```
+
+----
+
+**Explain the Set and their types in a Java Collection?**
 
 Set cares of uniqueness, It means that it does not allow duplicate value.
-
 
 Types of Set in Java Collection are:
 
@@ -660,31 +787,31 @@ Types of Set in Java Collection are:
 HashSet is unordered and unsorted.
 It uses the hash code of the object to insert the values.
 We can use Hash Set when order is not concerned and we want no duplicate value.
-Example:
 
-Output:
+```java
 
-[Dog, Cat, Donkey, Cow]
+```
 
 2). Linked Hash set
 
 It maintains the insertion order.
 Does not allows duplicate value.
 It can be used when iteration order is required.
-Output:
 
-[Dog, Cat, Donkey, Cow]
+```java
+
+```
 
 3). Tree Set
 
 It sorts the elements in ascending order.
 It does not allow duplicate values.
-Output:
 
-[Dog, Cat, Donkey, Cow]
+```java
 
-Q5). Difference between HashMap and HashTable
-Ans:
+```
+
+**Difference between HashMap and HashTable?**
 
 HashMap	HashTable
 1. HashMap is non synchronized	1. HashTable is synchronized
@@ -692,35 +819,36 @@ HashMap	HashTable
 3. Performance of HashMap is fast.	3. HashTable is slow.
 4. HashMap inherits class AbstractMap.	4. HashTable inherits class Dictionary.
 5. We can traverse HashMap using Iterator.	5. We can traverse HashTable using Iterator and Enumerator.
-Q6). Difference between HashSet and TreeSet.
-Ans:
+
+----
+
+**Difference between HashSet and TreeSet?**
 
 HashSet	TreeSet
 1. HashSet is faster and gives better performace.	1. TreeSet is little bit slower than HashSet.
 2. HashSet performs operation in constant time	2. TreeSet performs operation in Log(n) time.
 3. HashSet does not follow any order	3. TreeSet elements are arranged in ascending order.
 4. HashSet does not hold duplicate value.	4. TreeSet also does not hold duplicate value.
-Q7). Difference between Collection and Collections in Java.
-Ans:
 
+----
 
-Collection:
+**Difference between Collection and Collections in Java?**
+
+__Collection:__
 
 The collection is an interface in Java. It represents a group of individual objects as a single unit. 
 
 After java8, Collection can contain a static method. and abstract and default method.
 
-Collections:
+__Collections:__
 
 The collections is a utility class in Java. It defines several utility methods that are used to operate on collection.
 
 Collections includes only static methods. 
 
-</https://quescol.com/interview-preparation/core-java-interview-questions>
+# https://quescol.com/interview-preparation/core-java-interview-questions
 
-<https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions>
-
-----
+https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions
 
 What are the differences between C++ and Java?
 
