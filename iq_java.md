@@ -7263,6 +7263,7 @@ Enterprise Data Tier: This tier includes database servers, resource planning sys
 ----
 
 **How is JDK different from JIT?**
+
 JDK (Java Development Kit) is a cross-platformed software development environment offering various collections of libraries and tools required for developing Java applications and applets. It also consists of JRE that provides tools and libraries which aids in byte code execution. JDK is needed for writing and running programs in Java. Whereas JIT stands for Just In Time Compiler which is a module inside JVM (which is inside JRE). JIT compiler is used for compiling some parts of byte code having similar functionality at the same time to machine code for optimising the compilation time and performance.
 
 ----
@@ -7537,7 +7538,6 @@ J2EE defines standards and specifications for various components such as e-maili
 ----
 
 **Which of the following exception is thrown when the initialization of servlet fails?**
-
 
 RemoteException
 
@@ -8021,13 +8021,14 @@ J2EE stands for Java 2 Enterprise Edition. The functionality of J2EE is developi
 
 ----
 
-**hat do you mean by J2EE Module?**
+**What do you mean by J2EE Module?**
 
 A J2EE module is a software unit that consists of one or more J2EE components for the same container type with one deployment descriptor of that type. Modules can be easily deployed or assembled into J2EE applications.
 
 ----
 
-**hat are the four types of J2EE modules?**
+**What are the four types of J2EE modules?**
+
 J2EE defines four types of modules:
 
 Backward Skip 10s
@@ -8044,7 +8045,8 @@ Resource Adapter Module
 
 ----
 
-4) What does the application client module contain?
+**What does the application client module contain?**
+
 Application client module contains the following:
 
 Class files
@@ -8053,7 +8055,8 @@ It is packaged as JAR files with a .jar extension.
 
 ----
 
-5) What does the web module contain?
+**What does the web module contain?**
+
 The web module contains the following:
 
 JSP (Java Server Pages) files
@@ -8064,7 +8067,8 @@ These modules are packaged as JAR files with a .war (Web Archive) extension.
 
 ----
 
-6) What does Enterprise JavaBeans module contain?
+**What does Enterprise JavaBeans module contain?**
+
 The Enterprise JavaBeans (EJB) module contains the following:
 
 Class files for enterprise beans
@@ -8073,7 +8077,8 @@ These modules are packaged as JAR files with a .jar extension.
 
 ----
 
-7) What does resource adapt module contain?
+**What does resource adapt module contain?**
+
 The resource adapter module contains the following:
 
 Java interfaces
@@ -8086,7 +8091,8 @@ These modules are packaged as JAR files with a .rar (Resource Adapter Archive) e
 
 ----
 
-8) What are the main components of the J2EE application?
+**What are the main components of the J2EE application?**
+
 A J2EE component is assembled into a J2EE application with its related classes and files. It can also communicate with other components. The J2EE defines the following main components:
 
 Application clients components.
@@ -8096,12 +8102,14 @@ Resource adaptor components.
 
 ----
 
-9) What is considered as a web component?
+**What is considered as a web component?**
+
 Java Servlet and Java Server Pages technology components are considered as web components. Servlets are based on Java programming language which dynamically receives requests and generates responses. Java Server pages execute as servlets and allow a more natural approach to creating static content.
 
 ----
 
-10) What are the types of J2EE clients?
+**What are the types of J2EE clients?**
+
 Applets
 Application clients
 Java Web Start-enabled clients
@@ -8109,43 +8117,51 @@ Wireless clients
 
 ----
 
-11) What do you understand by a word applet?
+**What do you understand by a word applet?**
+
 An applet is a J2EE component that typically executes in a web browser. It can also be executed in a variety of other applications or devices that support the applet programming model.
 
 ----
 
-12) What is the container?
+**What is the container?**
+
 A container is the runtime support of a system level entity. Containers provide components with features such as lifecycle management, security, deployment, and threading.
 
 ----
 
-13) What is an "applet container"?
+**What is an "applet container"?**
+
 A container that provides support for the applet programming model is known as "applet container."
 
 
 ----
 
-14) What do you understand by a thin client?
+**What do you understand by a thin client?**
+
 A thin client is a light-weight interface to the application that does not support operations like query database, execute complex business rules, or connect to legacy applications.
 
 ----
 
-15) What is JavaServer Faces (JSF)?
+**What is JavaServer Faces (JSF)?**
+
 JavaServer Faces is a user interface (UI) designing framework which is used for Java-based web applications. JavaServer Faces provides a set of reusable UI components- a standard for web applications. JSF is based on the MVC design pattern. It automatically saves the form data to the server and populates the form dates when display on the client side.
 
 ----
 
-16) What is an EJB platform?
+**What is an EJB platform?**
+
 EJB stands for The Enterprise JavaBeans. EJB platform manages functions such as transaction and state management, resource pooling, multithreading, and simple searches while you concentrate on writing business logic.
 
 ----
 
-17) What do you mean by the deployment descriptor?
+**What do you mean by the deployment descriptor?**
+
 A deployment descriptor is based on XML (Extensible Markup Language) that supports .xml extension. It is used to describe a component's deployment settings. A J2EE application and its module, both have its deployment descriptor.
 
 ----
 
-18) Define the Struts in the J2EE framework?
+**Define the Struts in the J2EE framework?**
+
 Struts is an application development framework based on MVC (Model-View-Controller) architecture. It is a combination of Java Servlets, JSP, Custom tags, and messages. It is used to design applications for large enterprises. It can be described as:
 
 Model
@@ -8159,17 +8175,20 @@ A controller is used to manage the actions of users. It processes the client req
 
 ----
 
-19) Define Hashtable in J2EE?
+**Define Hashtable in J2EE?**
+
 Hashtable is similar to HashMap except that Hashtable is synchronized. Hashtable is a cluster of synchronized objects where null values and duplicate values are not allowed.
 
 ----
 
-20) Define Hibernate and HQL?
+**Define Hibernate and HQL?**
+
 Hibernate is an object-relational mapping and query service. In hibernate, we can write HQL (Hibernate Query Language) scripts instead of SQL, which saves lots of time and effort. Hibernate provides a more powerful association, inheritance, polymorphism, composition, and collections. We can process queries easily into the database using the Java objects. Hibernate also allows us to express queries using Java-based criteria.
 
 ----
 
-21) What are the limitations of Hibernate?
+**What are the limitations of Hibernate?**
+
 Following are some limitations of hibernate:
 
 Slower execution of queries.
@@ -8178,7 +8197,8 @@ No shared references are available to the value type.
 
 ----
 
-22) What are the major benefits of hibernate?
+**What are the major benefits of hibernate?**
+
 Following are some major benefits of hibernate:
 
 
@@ -8189,51 +8209,60 @@ Better database connectivity in Hibernate when compared to JDBC.
 
 ----
 
-23) Define ORM and its working in J2EE?
+**Define ORM and its working in J2EE?**
+
 ORM refers to Object-Relational mapping. It is the object in a Java class which is mapped into the tables of a relational database using the metadata that describes the mapping between the objects and database. It transforms the data from one representation to another.
 
 ----
 
-24) What is authorization?
+**What is authorization?**
+
 An authorization is a process by which access to a method or resource is determined. It relies on the determination of whether the principal associated with a request through authentication is in a given security role. A security role can be explained as a logical grouping of users defined by the person who assembles the application. A deployer maps the security roles to security identities. Security identities may be principles or groups in the operational environment.
 
 ----
 
-25) Define authorization constraint?
+**Define authorization constraint?**
+
 An authorization rule which determines who is permitted to access Web resource collection is known as authorization constraint.
 
 ----
 
-26) How will you explain save() and saveorupdate() methods in hibernate?
+**How will you explain save() and saveorupdate() methods in hibernate?**
+
 The Save() method in hibernate is used to store an object in the database. It creates a new entry if the record doesn't exist.
 
 The Saveorupdate() method in hibernate is used for updating the object using the identifier. If the identifier is unavailable, this method calls save(). If the identifier is available, it will call the update method.
 
 ----
 
-27) How will you explain load() and get() methods?
+**How will you explain load() and get() methods?**
+
 Load(): If an object is missing in the Cache or database, Load() method will throw an exception. Load() method never returns null.
 
 Get(): If an object is missing in the Cache or database, Get() method returns a null value, not the exception.
 
 ----
 
-28) What is a web container in J2EE?
+**What is a web container in J2EE?**
+
 An interface between a component and the low-level platform with defined functionality that is designed to support the component is defined as the web container in J2EE.
 
 ----
 
-29) What is the concept of connection pooling?
+**What is the concept of connection pooling?**
+
 Connection pooling is a simple concept which is popular to reuse existing connections. It means that if object connections are already well-defined and connected, then they can be reused whenever there is a requirement instead of generating a new one.
 
 ----
 
-30) What do you understand by the servlet?
+**What do you understand by the servlet?**
+
 Servlet is a server-side component which provides full functionalities to create a server-side program. There are different servlets available with a specific design for a variety of protocols. The most popular type of protocol for the servlet is HTTP.Servlets, which use the classes in the java packages javax.servlet, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.http.HttpSession;. All servlets must include the Servlet interface, which defines life-cycle methods.
 
 ----
 
-31) Give some advantages of ORM (object-relational mapping)?
+**Give some advantages of ORM (object-relational mapping)?**
+
 Productivity
 The automatic code is generated to reduce the overall data access time based on the data model defined.
 
@@ -8247,7 +8276,8 @@ The code is well tested and generated by the ORM, and only a developer can under
 
 ----
 
-32) Tell about the core interfaces of the hibernate framework?
+**Tell about the core interfaces of the hibernate framework?**
+
 Session Interface
 SessionFactory Interface
 Configuration Interface
@@ -8256,26 +8286,32 @@ Query and Criteria Interface
 
 ----
 
-33) What is B2b?
+**What is B2b?**
+
 B2b indicates to business-to-business.
 
 ----
 
-34) What is the file extension used for hibernate mapping file and hibernate configuration file?
+**What is the file extension used for hibernate mapping file and hibernate configuration file?**
+
 For hibernate mapping, the file name should be like filename.hbm.xml.
 
 For hibernate configuration, the file name should be like hibernate.cfg.xml.
 
 ----
 
-35) Define a way to add Hibernate mapping file in hibernate configuration file?
+**Define a way to add Hibernate mapping file in hibernate configuration file?**
+
 It can be easily performed by:
 
+```java
 <mapping resource="filename.hbm.xml"/>  
+```
 
 ----
 
-36) What are the main components of multi-tier architecture?
+**What are the main components of multi-tier architecture?**
+
 The main components of multi-tier architecture are:
 
 Presentation Tier
@@ -8289,7 +8325,8 @@ The component existing in this tier is used to provide business logic for the sy
 
 ----
 
-37) Explain JTA, JNDI, and JMS.
+**Explain JTA, JNDI, and JMS.**
+
 JTA represents JAVA Transaction API, which is used for coordinating and managing transactions across the enterprise information system.
 
 JNDI represents Java Naming Directory Interface, which is used for accessing data from directory services.
@@ -8298,7 +8335,8 @@ JMS represents the Java Messaging Service, which is used for receiving and sendi
 
 ----
 
-38) Explain the J2EE tiers.
+**Explain the J2EE tiers.**
+
 J2EE has the following tiers:
 
 Client Tier
@@ -8313,7 +8351,8 @@ It constitutes the Enterprise Information System (EIS) which is used to store th
 
 ----
 
-39) Describe the EAR, WAR, and JAR.
+**Describe the EAR, WAR, and JAR.**
+
 EAR stands for Enterprise Archive file. It consists of the components of the web, EJB, and client. All the components of the EAR are packed in a compressed file with the extension .ear.
 
 WAR stands for a Web Archive file. It consists of all the components related to the web application. All the components are packed in a compressed file with the extension .war.
@@ -8324,12 +8363,14 @@ Each type of file (.ear, .war, and .jar) is processed uniquely by application se
 
 ----
 
-40) What do you understand by Spring?
+**What do you understand by Spring?**
+
 Spring is a light-weight open source framework for developing enterprise applications. It resolves the complexity of enterprise application development and provides easy development for the J2EE. It was initially written by Rod Johnson. It was released under the Apache 2.0 license in June 2003.
 
 ----
 
-41) What are the different modules used in Spring?
+**What are the different modules used in Spring?**
+
 There are mainly seven core modules in spring:
 
 The Core container module
@@ -8342,39 +8383,45 @@ MVC module
 
 ----
 
-42) What is action mapping?
+**What is action mapping?**
+
 In action mapping, a user specifies action class for a particular URL, i.e., path and different target view, which means, forwards on to which request-response is forwarded. The ActionMapping defines the information that the ActionServlet knows about the mapping of a particular request to an instance of a specific Action class. The mapping is transferred to the execute() method of the Action class, enabling access to this information directly.
 
 ----
 
-43) What do you understand by ActionForm?
+**What do you understand by ActionForm?**
 ActionForm is a Java bean which may associate one or more ActionMappings. A java bean changes to FormBean when a user extends a class org.apache.struts.action.ActionForm. ActionForm object is generally populated on the server side automatically, and the client enters data from UI. ActionForm manages the session state for a web application.
 
 ----
 
-44) What is backing bean?
+**What is backing bean?**
+
 A backing bean is a JavaBeans component which corresponds to JavaServer Pages that includes JavaServer Faces components. The backing bean describes the properties for the components on the page and methods which perform processing for the component.
 
 This processing may include event handling, validation, and processing associated with navigation.
 
 ----
 
-45) What is the build file?
+**What is the build file?**
+
 A build file is an XML file that consists of one or more asant targets. A target is a set of tasks that a user wants to get executed. When starting asant, a user can select which target is to be executed. If there is no target, then the default target of the project is executed.
 
 ----
 
-46) What do you understand by business logic?
+**What do you understand by business logic?**
+
 Business logic is the code that includes the functionality of an application. In the EJB (Enterprise JavaBeans) architecture, this logic is implemented by the methods of an enterprise bean.
 
 ----
 
-47) How will you explain CDATA?
+**How will you explain CDATA?**
+
 A CDATA is a predefined XML tag for the character data, which means "don't interpret these characters," it is similar to parsed character data (PCDATA), in which the standard rules of XML syntax apply. CDATA sections are used to show examples of XML syntax.
 
 ----
 
-48) What do you mean by the Component Contract?
+**What do you mean by the Component Contract?**
+
 The contract between the J2EE component and its container is known as the component contract. This type of contract includes:
 
 Life-cycle management of the component
@@ -8383,7 +8430,8 @@ List of services that every container must provide for its components.
 
 ----
 
-49) What do you understand by Connector? Explain Connector Architecture.
+**What do you understand by Connector? Explain Connector Architecture.**
+
 A connector is a standard extension mechanism for containers, which provides connectivity to enterprise information systems. It is specific to an enterprise information system and contains a resource adapter and application development tools for enterprise information system connectivity. The resource adapter is plugged into a container through its support for system-level contracts, defined in the Connector architecture.
 
 An architecture for the integration of J2EE products with enterprise information systems is known as the connector architecture. A connector architecture consists of:
@@ -8392,28 +8440,32 @@ A resource adapter which is given by an enterprise information system vendor
 A J2EE product that allows this resource adapter to plug in.
 Connector architecture also defines a set of contracts which a resource adapter must support to plug into a J2EE product (e.g., transactions, security, and resource management).
 
-</https://www.javatpoint.com/j2ee-interview-questions>
+# https://www.javatpoint.com/j2ee-interview-questions
 
-<https://www.interviewkickstart.com/interview-questions/java-and-j2ee-interview-questions>
+# https://www.interviewkickstart.com/interview-questions/java-and-j2ee-interview-questions
 
 ----
 
-Q1. What’s the difference between JVM Spec, JVM Runtime, and JVM Implementation?
+**What’s the difference between JVM Spec, JVM Runtime, and JVM Implementation?**
+
 JVM spec is simply the specification of JVM. JVM implementation is the actual implementation of JVM by vendors. Meanwhile, JVM runtime is a running program supporting Java specified programs.
 
 ----
 
-Q2. What is JIT?
+**What is JIT?**
+
 The Just-in-Time compiler improves the performance of Java apps by combining platform-neutral bytecode to the native machine code during run time.
 
 ----
 
-Q3. What are JRE and JDK?
+**What are JRE and JDK?**
+
 JDK is a kit providing an environment to execute and develop the Java program. On the other hand, JRE is a kit that provides an environment to run (not develop) the Java program.
 
 ----
 
-Q4. Define Locale.
+**Define Locale.**
+
 A locale object shows a specific political, cultural, or geographical region. An operation that requires locale is called locale-sensitive.
 
 Apart from these, do prepare for the below Java and J2EE interview questions as well:
@@ -8440,27 +8492,32 @@ Mentioned below are a few advanced level Java and J2EE programming interview que
 
 ----
 
-Q1. Define HQL.
+**Define HQL.**
+
 HQL (Hibernate Query Language) is an object-oriented query language. Unlike SQL, which works on tables and columns, HQL works on persistent objects and properties. HQL is a superset of Java Persistence Query Language (JPQL). This means that all JPQL queries are valid HQL queries, but all HQL queries are not JPQL queries
 
 ----
 
-Q2. What is a Java thin client?
+**What is a Java thin client?**
+
 Thin client is a lightweight client. A thin client connects to the cluster through a standard socket connection without becoming a part of the cluster topology. Thin client does not hold any data and is not used for computing calculations. It performs all operations through the standard node​.
 
 ----
 
-Q3. What does URN mean?
+**What does URN mean?**
+
 URN is an abbreviation for Uniform Resource Name. It is a unique identifier that identifies an entity. 
 
 ----
 
-Q4. What are the uses of Spring?
+**What are the uses of Spring?**
+
 Spring is an open-source application development framework for enterprise Java. It is one of the most widely used frameworks for Java. Developers use Spring to develop high-performing, testable, and reusable code
 
 ----
 
-Q5. What are the different phases that fall under the life cycle of a servlet?
+**What are the different phases that fall under the life cycle of a servlet?**
+
 Request handling, Servlet installation, The init method, Servlet class loading, and Removal from the service.
 
 Here are a few other Java and J2EE interview questions for experienced professionals:
@@ -8487,12 +8544,14 @@ Here are some design patterns for Java and J2EE interview questions:
 
 ----
 
-Q1. What are the different components in the multi-tier architecture?
+**What are the different components in the multi-tier architecture?**
+
 The presentation tier, Resource tier, and Business tier are the components of multi-tier architecture.
 
 ----
 
-Q2. What are the different modules in Spring?
+**What are the different modules in Spring?**
+
 The list of spring modules is
 
 Aspect-oriented programming
@@ -8504,12 +8563,14 @@ Application context module.
 
 ----
 
-Q3. What is a servlet?
+**What is a servlet?**
+
 A servlet is a server-side component that provides development mechanisms for server-side programs. It makes use of classes available under a Java package.
 
 ----
 
-Q4. Define the various phases in the life cycle of a servlet.
+**Define the various phases in the life cycle of a servlet.**
+
 The different phases are:
 
 Servlet instantiation
@@ -8517,116 +8578,94 @@ Servlet class loading
 The init method
 Removal from the service
 Request handling
-Q5. Define JMS, JNDI, and JTA.
-JNDI: It is Java Naming Directory Interface. It helps access information from the directory services.
-JMS: It is a Java Messaging Service. It is responsible for receiving and sending messages through various messaging systems.
-JTA: It is a Java Transaction API. It coordinates and manages the transaction in an enterprise information system.
-You can also go through the following Java and J2EE technical architect interview questions:
-
-Explain the terms - EDI and EAI.
-What are the roles of third-party software in the EJB framework?
-Explain the difference between load and get.
-What are the benefits of using spring for developing applications?
-Mention the different types of JSP tags.
-Briefly define SSL or secure socket layer.
-What does EJB mean? Mention the subtypes and basics of the same.
-What does the JSP directive mean? Mention the different types of JSP directives.
-These Java and J2EE interview questions will assist aspiring architects in their upcoming tech interview prep. You can also take a look at some of the Top Java Programming Interview Questions and Answers.
-
-Miscellaneous Java and J2EE Interview Questions
-Apart from the above-mentioned questions, the following miscellaneous Java and J2EE interview questions might be asked by an interviewer:
 
 ----
 
-Q1. What is connection pooling?
+**Define JMS, JNDI, and JTA.**
+JNDI: It is Java Naming Directory Interface. It helps access information from the directory services.
+JMS: It is a Java Messaging Service. It is responsible for receiving and sending messages through various messaging systems.
+JTA: It is a Java Transaction API. It coordinates and manages the transaction in an enterprise information system.
+
+----
+
+**What is connection pooling?**
+
 Connection pooling is a practice generally used to extract already existing connections. These connections can be used instead of generating new connections.
 
 ----
 
-Q2. Define hibernate proxy.
+**Define hibernate proxy.**
+
 It is an object proxy that includes the process of retrieving the objects until and unless you require them.
 
 ----
 
-Q3. How will you create a SessionFactory?
+**How will you create a SessionFactory?**
+
 Configuration cfg = new Configuration(); cfg.addResource("dir/hibernate.hbm.xml"); cfg.setProperties( System.getProperties() ); SessionFactory sessions = cfg.buildSessionFactory();
 
 ----
 
-Q4. Mention the collection types in hibernate.
+**Mention the collection types in hibernate.**
+
 List, array, map, bag, set are the collection types in hibernate.
 
 ----
 
-Q5. Mention the JSP tag types.
+**Mention the JSP tag types.**
+
 JSP tags are divided into four categories:
 
 Declarations
 Directives
 Expressions
 Scriptlets
-Go through the following additional miscellaneous Java and J2EE interview questions:
-
-How can you access web.xml parameters from the JSP page?
-What is the EAR file?
-Define JSP Directives.
-Define ActionErrors.
-What are struts?
-What is action mapping?
-Define ActionForm.
-What are the different spring modules?
-Define Bean Factory. Have you used it before?
-Define MCV on struts.
-What does authorization constraint and authorization mean?
-What is the difference between savings and update or save?
-Define design objectives of the J2EE architecture.
-What are the core design goals of J2EE architecture?
-What is the role of a J2EE architect?
-That said, brushing up your overall skills related to Java and J2EE interview questions is of paramount importance and can help you secure your dream job in Tier-1 tech companies. You can practice some Java Interview Questions for Software Developers With 5 Years of Experience too.
 
 ----
 
-FAQs on Java and J2EE Interview Questions 
-Q1. How much does a Java developer earn in the US?
+**How much does a Java developer earn in the US?**
 
 The average annual salary of a Java developer is around $106,019 in the US.
 
 ----
 
-Q2. What is the minimum eligibility to become a Java developer?
+**What is the minimum eligibility to become a Java developer?**
 
 Becoming a Java developer requires a Bachelor’s degree in Computer Science or any related field. However, experience is equally important to appear for Java and J2EE interview questions.
 
 ----
 
-Q3. Are Java and J2EE the same?
+**Are Java and J2EE the same?**
 
-Before appearing for Java and J2EE interview questions, you should have a common understanding of the difference between both these programming languages. J2EE is just an extension of Java SE, which is based on the Java programming language. In simple words, J2EE is a part of Java featuring a powerful library set.
+Before appearing for Java and J2EE interview questions, you should have a common understanding of the difference between both these programming languages. J2EE is just an extension of Java SE, which is based on the Java programming language.
+In simple words, J2EE is a part of Java featuring a powerful library set.
 
 ----
 
-Q4. What are the four types of J2EE modules?
+**What are the four types of J2EE modules?**
 
 The four types of J2EE modules are Application Client Module, WEB Module, Enterprise JavaBeans Module, and Resource Adapter Module.
 
 ----
 
-Q5. What is J2EE?
+**What is J2EE?**
 
 J2EE stands for Java 2 Platform, Enterprise Edition. The J2EE platform is used to create multi-tier, web-based applications by utilizing a set of protocols and application programming interfaces (APIs).
 
-</https://www.interviewkickstart.com/interview-questions/java-and-j2ee-interview-questions>
+# https://www.interviewkickstart.com/interview-questions/java-and-j2ee-interview-questions
 
-<https://career.guru99.com/top-50-j2ee-interview-questions/>
+# https://career.guru99.com/top-50-j2ee-interview-questions
 
 ----
 
-1) What is J2EE?
+**What is J2EE?**
+
 J2EE means Java 2 Enterprise Edition. The functionality of J2EE is developing multitier web-based applications. The J2EE platform is consists of a set of services, application programming interfaces (APIs), and protocols.
 
 ----
 
-2) What are the four components of J2EE application?
+**What are the four components of J2EE application?**
+
 Application clients components.
 Servlet and JSP technology are web components.
 Business components (JavaBeans).
@@ -8634,7 +8673,8 @@ Resource adapter components
 
 ----
 
-3) What are types of J2EE clients?
+**What are types of J2EE clients?**
+
 Applets
 Application clients
 Java Web Start-enabled clients, by Java Web Start technology.
@@ -8643,39 +8683,41 @@ The video player is currently playing an ad. You can skip the ad in 5 sec with a
 
 ----
 
-4) What is considered as a web component?
+**What is considered as a web component?**
+
 Java Servlet and Java Server Pages technology components are web components. Servlets are Java programming language that dynamically receives requests and makes responses. JSP pages execute as servlets but allow a more natural approach to creating static content.
 
 ----
 
-5) What is JSF?
-JavaServer Faces (JSF) is a user interface (UI) designing framework for Java web applications. JSF provides a set of reusable UI components, a standard for web applications. JSF is based on MVC design pattern. It automatically saves the form data to the server and populates the form date when display on the client side.
+**What is JSF?**
 
-J2EE Interview Questions and Answers
-J2EE Interview Questions and Answers
+JavaServer Faces (JSF) is a user interface (UI) designing framework for Java web applications. JSF provides a set of reusable UI components, a standard for web applications. JSF is based on MVC design pattern. It automatically saves the form data to the server and populates the form date when display on the client side.
 
 ----
 
-6) Define Hash table
+**Define Hash table**
 HashTable is just like Hash Map, Collection having a key(Unique), value pairs. Hashtable is a collection Synchronized object. It does not allow duplicate values or null values.
 
 ----
 
-7) What is Hibernate?
+**What is Hibernate?**
+
 Hibernate is an open source object-relational mapping and query service. In hibernate we can write HQL instead of SQL which save developers to spend more time on writing the native SQL.
 
 Hibernate has a more powerful association, inheritance, polymorphism, composition, and collections. It is a beautiful approach for persisting into the database using the Java objects. Hibernate also allows you to express queries using Java-based criteria.
 
 ----
 
-8) What is the limitation of hibernate?
+**What is the limitation of hibernate?**
+
 Slower in executing the queries than queries are used directly.
 Only query language support for composite keys.
 No shared references to value types.
 
 ----
 
-9) What are the advantages of hibernate?
+**What are the advantages of hibernate?**
+
  Hibernate is portable i mean database independent, Vendor independence.
  Standard ORM also supports JPA
  Mapping of the Domain object to the relational database.
@@ -8688,24 +8730,28 @@ ORM stands for Object-Relational mapping. The objects in a Java class which is m
 
 ----
 
-11) Difference between save and saveorupdate
+**Difference between save and saveorupdate**
+
 save() – This method in Hibernate is used to stores an object in the database. It inserts an entry if the record doesn’t exist, otherwise not.
 saveorupdate () -This method in the hibernate is used for updating the object using identifier. If the identifier is missing this method calls save(). If the identifier exists, it will call update method.
 
 ----
 
-12) Difference between load and get method?
+**Difference between load and get method?**
+
 load() can’t find the object from cache or database, an exception is thrown, and the load() method never returns null.
 get() method returns null if the object can’t be found. The load() method may return a proxy instead of a real persistent instance get() never returns a proxy.
 
 ----
 
-13) How to invoke a stored procedure in hibernate?
+**How to invoke a stored procedure in hibernate?**
+
 { ? = call thisISTheProcedure() }
 
 ----
 
-14) What are the benefits of ORM?
+**What are the benefits of ORM?**
+
 Productivity
 Maintainability
 Performance
@@ -8713,7 +8759,8 @@ Vendor independence
 
 ----
 
-15) What are the Core interfaces of Hibernate framework?
+**What are the Core interfaces of Hibernate framework?**
+
 Session Interface
 SessionFactory Interface
 Configuration Interface
@@ -8722,68 +8769,84 @@ Query and Criteria Interface
 
 ----
 
-16) What is the file extension used for hibernate mapping file?
+**What is the file extension used for hibernate mapping file?**
+
 The name of the file should be like this: filename.hbm.xml
 
 ----
 
-17) What is the file name of hibernate configuration file?
+**What is the file name of hibernate configuration file?**
+
 The name of the file should be like this: hibernate.cfg.xml
 
 ----
 
-18) How Hibernate is database independent explain?
+**How Hibernate is database independent explain?**
+
 Only changing the full property full database can be replaced.
 
+```java
 <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property> and
 
 <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+```
 
 ----
 
-19) How to add Hibernate mapping file in hibernate configuration file?
+**How to add Hibernate mapping file in hibernate configuration file?**
+
+```java
 By <mapping resource=” filename.hbm.xml”/>
+```
 
 ----
 
-20) Define connection pooling?
+**Define connection pooling?**
+
 Connection pooling is a mechanism reuse the connection which contains the number of already created object connection. So whenever it is necessary for an object, this mechanism is used to get objects without creating it.
 
 ----
 
-21) What is the Hibernate proxy?
+**What is the Hibernate proxy?**
+
 An object proxy is just a way to avoid retrieving an object until you need it. Hibernate 2 does not proxy objects by default.
 
 ----
 
-22) What do you create a SessionFactory?
+**What do you create a SessionFactory?**
+
 Configuration cfg = new Configuration(); cfg.addResource("dir/hibernate.hbm.xml"); cfg.setProperties( System.getProperties() ); SessionFactory sessions = cfg.buildSessionFactory();
 
 ----
 
-23) What is HQL?
+**What is HQL?**
+
 HQL stands for Hibernate Query Language. Hibernate allows to the user to express queries in its portable SQL extension, and this is called as HQL. It also allows the user to express in native SQL.
 
 ----
 
-24) What are the Collection types in Hibernate?
+**What are the Collection types in Hibernate?**
+
 Set, List, Array, Map, Bag are collection type in Hibernate.
 
 ----
 
-25) What is a thin client?
+**What is a thin client?**
+
 A thin client is a program interface to the application that does not have any operations like the query of databases, execute complex business rules, or connect to legacy applications.
 
 ----
 
-26) Differentiate between .ear,  .jar and .war files.
+**Differentiate between .ear,  .jar and .war files.**
+
 .jar files: These files are with the .jar extension. The .jar files contain the libraries, resources and accessories files like property files.
 .war files: These files are with the .war extension. The .war file contains JSP, HTML, javascript and other files necessary for the development of web applications.
 .ear files: The .ear file contains the EJB modules of the application.
 
 ----
 
-27) What is the JSP tag?
+**What is the JSP tag?**
+
 In JSP tags can be divided into four different types.
 
 Directives
@@ -8793,7 +8856,8 @@ Expressions
 
 ----
 
-28) How to access web.xml init parameters from JSP page?
+**How to access web.xml init parameters from JSP page?**
+
 For example, if you have:
 <context-param> <param-name>Id</param-name> <param-value>this is the value</param-value></context-param>
 You can access this parameter
@@ -8802,44 +8866,52 @@ Id: <h:outputText value="#{initParam['Id']}"/>
 
 ----
 
-29) What are JSP Directives?
+**What are JSP Directives?**
+
 1.page Directives <%@page language=”java” %>
 2. include Directives: <%@ include file=”/header.jsp” %>
 3. taglib Directives <%@ taglib uri=”tlds/taglib.tld” prefix=”html” %>
 
 ----
 
-30) What is the EAR file?
+**What is the EAR file?**
+
 An EAR file is a JAR file with an .ear extension. A J2EE application with all of its modules is delivered in an EAR file.
 
 ----
 
-31) What will happen when you compile and run the following code?
+**What will happen when you compile and run the following code?**
+
 public class MyClass { public static void main(String argv[]){ int array[]=new int[]{1,2,3}; System.out.println(array [1]); } } Answer: Compiled and shows output : 2
 
 ----
 
-32) What are Struts?
+**What are Struts?**
+
 Struts framework is a Model-View-Controller(MVC) architecture for designing large-scale applications. It is a combination of Java Servlets, JSP, Custom tags, and message. Struts help you to create an extensible development environment for your application, based on published standards and proven design patterns. Model in many applications represents the internal state of the system as a set of one or more JavaBeans.The View is most often constructed using JavaServer Pages (JSP) technology.The Controller is focused on receiving requests from the client and producing the next phase of the user interface to an appropriate View component. The primary component of the Controller in the framework is a servlet of class ActionServlet. This servlet is configured by defining a set of ActionMappings.
 
 ----
 
-33) What is ActionErrors?
+**What is ActionErrors?**
+
 ActionErrors object that encapsulates any validation errors that have been found. If no errors are found, return null or an ActionErrors object with no recorded error messages.The default implementation attempts to forward to the HTTP version of this method. Holding request parameters  mapping and request  and returns set of validation errors, if validation failed; an empty set or null
 
 ----
 
-34) What is ActionForm?
+**What is ActionForm?**
+
 ActionForm is a Java bean that associates one or more ActionMappings. A java bean become FormBean when extend org.apache.struts.action.ActionForm class. ActionForm object is automatically populated on the server side which data has been entered by the client from UI. ActionForm maintains the session state for a web application.
 
 ----
 
-35) What is action mapping??
+**What is action mapping?**
+
 In action mapping, we specify action class for particular URL ie path and different target view ie forwards on to which request response will be forwarded.The ActionMapping represents the information that the ActionServlet knows about the mapping of a particular request to an instance of a particular Action class. The mapping is passed to the execute() method of the Action class, enabling access to this information directly.
 
 ----
 
-36) What is the MVC on struts?
+**What is the MVC on struts?**
+
 MVC stands Model-View-Controller.
 
 Model: Model in many applications represent the internal state of the system as a set of one or more JavaBeans.
@@ -8850,7 +8922,8 @@ Controller: The Controller is focused on receiving requests from the client and 
 
 ----
 
-37) What are different modules in spring?
+**What are different modules in spring?**
+
 There are seven core modules in spring
 
 The Core container module
@@ -8863,17 +8936,20 @@ MVC module
 
 ----
 
-38) What is Bean Factory, have you used XMLBean factory?
+**What is Bean Factory, have you used XMLBean factory?**
+
 XmlBeanFactory is one of the implementation of bean Factory org.springframework.beans.factory.xml.XmlBeanFactory is used to creat bean instance defined in our xml file. BeanFactory factory = new XmlBeanFactory(new FileInputStream("beans.xml")); Or ClassPathResource resorce = new ClassPathResource("beans.xml"); XmlBeanFactory factory = new XmlBeanFactory(resorce);
 
 ----
 
-39) What is Spring?
+**What is Spring?**
+
 Spring is a lightweight open source framework for the development of enterprise application that resolves the complexity of enterprise application development is also providing a cohesive framework for J2EE application development which is primarily based on IOC (inversion of control) or DI (dependency injection) design pattern.
 
 ----
 
-40) What is the functionality of ActionServlet and RequestProcessor?
+**What is the functionality of ActionServlet and RequestProcessor?**
+
 Receiving the HttpServletRequest
 Populating JavaBean from the request parameters
 Displaying response on the web page Issues
@@ -8882,17 +8958,20 @@ Provide extension points
 
 ----
 
-41) ActionServlet, RequestProcessor, and Action classes are the components of
+**ActionServlet, RequestProcessor, and Action classes are the components of ...**
+
 Controller
 
 ----
 
-42) What is default scope in Spring?
+**What is default scope in Spring?**
+
 Singleton.
 
 ----
 
-43) What are advantages of Spring usage?
+**What are advantages of Spring usage?**
+
 Pojo based programming enables reuse component.
 Improve productivity and subsequently reduce development cost.
 Dependency Injection can be used to improve testability.
@@ -8901,7 +8980,8 @@ It reduces coupling in code and improves maintainability.
 
 ----
 
-44) What are the Benefits Spring Framework?
+**What are the Benefits Spring Framework?**
+
 Lightweight container
 Spring can effectively organize your middle tier objects
 Initialization of properties is easy. No need to read from a properties file
@@ -8911,29 +8991,34 @@ Spring’s configuration management services can be used in any architectural la
 
 ----
 
-45) Lifecycle interfaces in spring?
+**Lifecycle interfaces in spring?**
+
 1) InitializingBean <bean id="expInitBean" init-method="init"/> public class ExpBean { public void init() { // do some initialization code } } OR <bean id=" expInitBean "/> public class ExpBean implements InitializingBean { public void afterPropertiesSet() { // do some initialization code } } 2) DisposableBean <bean id="expInitBean" destroy-method="cleanup"/> public class ExpBean { public void cleanup() { // do some destruction code (like releasing pooled connections) } } OR <bean id="expInitBean"/> public class ExpBean implements DisposableBean { public void destroy() { // do some destruction code (like releasing pooled connections) } }
 
 ----
 
-46) How to Create Object without using the keyword “new” in java?
+**How to Create Object without using the keyword "new" in java?**
+
 Without new, the Factory methods are used to create objects for a class. For example
 Calender c=Calender.getInstance();
 Here Calender is a class, and the method getInstance() is a Factory method which can create an object for Calendar class.
 
 ----
 
-47) What is a servlet?
+**What is a servlet?**
+
 Servlets is a server-side component that provides a powerful mechanism for developing server side programs. Servlets is a server, as well as platform-independent and Servlets, are designed for various protocols. Most commonly used HTTP protocols. Servlets use the classes in the java packages javax.servlet, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.http.HttpSession;. All servlets must implement the Servlet interface, which defines life-cycle methods.
 
 ----
 
-48) Servlet is pure java object or not?
+**Servlet is pure java object or not?**
+
 Yes, pure java object.
 
 ----
 
-49) What are the phases of the servlet life cycle?
+**What are the phases of the servlet life cycle?**
+
 The life cycle of a servlet consists of the following phases:
 
 Servlet class loading
@@ -8942,16 +9027,18 @@ Servlet instantiation
 Request handling (call the service method)
 Removal from service (call the destroy method)
 
-</https://career.guru99.com/top-50-j2ee-interview-questions/>
+# https://career.guru99.com/top-50-j2ee-interview-questions
 
-<https://www.simplilearn.com/j2ee-interview-questions-answers-article>
+# https://www.simplilearn.com/j2ee-interview-questions-answers-article
 
-1. What is J2EE?
+**What is J2EE?**
+
 J2EE, or Java Enterprise Edition, is a Java-based platform that combines services protocols with APIs (Application Programming Interfaces), giving users the ability to create enterprise-level applications that are multi-tiered, safe, stable, and quick. J2EE offers a variety of specifications for creating enterprise-level online applications, including web, enterprise, web service, and others.
 
 ----
 
-2. What are the benefits of J2EE?
+**What are the benefits of J2EE?**
+
 Given below are the benefits of J2EE:
 
 Faster time to market: J2EE employs the idea of containers to make development simpler. This supports the separation of business logic from lifecycle management and resources, allowing developers to concentrate more on the business logic than the infrastructure. The EJB (Enterprise JavaBeans) container, for example, handles threading, distributed communication, transaction management, scaling, etc. and offers the developers the necessary abstraction.
@@ -8961,7 +9048,8 @@ Simplified Connectivity: J2EE facilitates applications' connectivity, enabling t
 
 ----
 
-3. Name various components of J2EE application architecture.
+**Name various components of J2EE application architecture.**
+
 J2EE is made up of 3 main components (tiers) - Client tier, Middle tier, Enterprise data tier:
 
 Client Tier: Programs and apps in this tier typically run on machines other than the server and interact with users. Different user inputs are taken in this instance, and the requests are submitted to the server for processing before being returned to the client with the result.
@@ -8970,7 +9058,8 @@ Enterprise Data Tier: Database servers, resource management programmes, and seve
 
 ----
 
-4. What are the different technologies provided to the J2EE platform?
+**What are the different technologies provided to the J2EE platform?**
+
 Given below are the important technologies provided to J2EE platform:
 
 Java Server Pages (JSP): Delivering XML and HTML documents makes use of this. In addition to these, we may use other sorts of data using OutputStream.
@@ -8992,17 +9081,20 @@ Full Stack Java Developer Career BootcampEXPLORE COURSEGet Access to 200+ Hiring
 
 ----
 
-5. How is JDK different from JIT?
+**How is JDK different from JIT?**
+
 A cross-platform software development environment called JDK (Java Development Kit) provides diverse collections of libraries and tools needed to create Java programmes and applets. It also includes JRE, which offers tools and libraries that support the execution of byte code. JDK is required for creating and executing Java programmes. while JIT refers to the Just In Time Compiler, a module found inside the JVM (which is inside JRE). For the purpose of reducing compilation time and improving speed, JIT compilers are used to compile some portions of byte code that perform similarly to machine code simultaneously.
 
 ----
 
-6. What do you understand by build file?
+**What do you understand by build file?**
+
 A build file is used to automate numerous software development processes. The build file additionally specifies the versions of libraries that must be included in addition to this. The kinds of optimizations needed for the project are also included. When the project size grows, build offers a standardized method for building the project.
 
 ----
 
-7. How are CLASSPATH and PATH different from each other in terms of J2EE?
+**How are CLASSPATH and PATH different from each other in terms of J2EE?**
+
 Key environmental variables utilized by Java systems include PATH and CLASSPATH.
 
 Whether Java is installed on the system or not has no bearing on PATH, a system-level variable. While JVM uses CLASSPATH, which is entirely Java-specific, to load the classes needed by running Java programmes.
@@ -9010,7 +9102,8 @@ The JDK binaries or native libraries like java.exe are referenced by the PATH va
 
 ----
 
-8. How is a multi tier client server architectural model advantageous?
+**How is a multi tier client server architectural model advantageous?**
+
 The tiers that make up a multi-tier client-server architectural model all communicate with one another. The three-tier application paradigm shown below shows how the client/presentation, business logic, and database tiers interact with one another to handle requests and provide responses:
 
 The user interface and business logic can both be altered independently.
@@ -9020,17 +9113,20 @@ Instead of needing to create a new connection for each user, the database may fe
 
 ----
 
-9. Why do we have JNDI and JDBC in J2EE?
+**Why do we have JNDI and JDBC in J2EE?**
+
 JDBC, or Java Database Connectivity, offers instructions and APIs for establishing connections to databases from many vendors, including MySQL, Oracle, PostgreSQL, etc., in order to obtain data. Without knowing the precise host address or port, JNDI (Java Naming and Directory Interface) assists in creating a logical framework to access a resource from the database, EJB beans, messaging queues, etc. After registering a resource with JNDI, application components can subsequently be accessed by using the JNDI name.
 
 ----
 
-10. What are the J2EE aplets? Why can we use it?
+**What are the J2EE aplets? Why can we use it?**
+
 Applets are Java-based J2EE client components that run in a web browser or on a number of other platforms that support the applet development model. They assist in providing small, portable embedded Java programmes in HTML pages that will be run automatically when we browse the pages and are used to provide interactive capabilities to online apps.
 
 ----
 
-11. What is EJB? How can you use it in J2EE?
+**What is EJB? How can you use it in J2EE?**
+
 One of the most crucial components of the J2EE platform, EJB, or Enterprise Java Beans, enables the creation and deployment of enterprise-level multi-tiered applications while keeping performance, scalability, and robustness in mind. When we wish to accomplish the following, we can utilize EJBs:
 
 Clustering: EJBs can be utilized for the application's deployment in a cluster environment to provide high availability and fault tolerance.
@@ -9040,7 +9136,8 @@ To become an expert in MEAN StackVIEW COURSEFull Stack Web Developer Course
 
 ----
 
-12. What is the architecture model of Struts?
+**What is the architecture model of Struts?**
+
 Strut is an application development framework for creating enterprise-level applications that combines JSP, Java Servlets, messages, and custom tags. MVC (Model-View-Controller) architecture is the foundation of it.
 
 View: JSP technology is used by Struts to develop views for enterprise-level applications.
@@ -9049,27 +9146,32 @@ Controller:It manages user actions that process requests and give answers to the
 
 ----
 
-13. What is ORM?
+**What is ORM?**
+
 By leveraging metadata that describes the relationship between the database and the objects, object-relational mapping, or ORM, converts Java class objects to tables in relational databases and vice versa.
 
 ----
 
-14. What constitutes web components?
+**What constitutes web components?**
+
 Web components are made up of Java Servlets and Java Server Pages (JSP) elements. Java Servlets process requests and responses on the fly. Servlets that enable a natural method to create static content are executed through JSP pages.
 
 ----
 
-15. What is EJB platform?
+**What is EJB platform?**
+
 The Enterprise JavaBeans are referred to as EJBs. While you focus on building business logic, the EJB platform handles tasks like transaction and state management, resource pooling, multithreading, and simple searches.
 
 ----
 
-16. What is JSF?
+**What is JSF?**
+
 JSF, or Java Server Faces, is a web framework designed to make the creation of user interfaces more straightforward. It is a common display solution for web applications with a Java foundation. It offers reusable UI components and is built on the MVC (Model-View-Controller) pattern.
 
 ----
 
-17. What factors should a J2EE application possess for operating in a global economy?
+**What factors should a J2EE application possess for operating in a global economy?**
+
 The following are the factors that a J2EE application possess for operating in a global economy:
 
 Language Requirements: For a wider user base, a programme should support the national language as well as regional ones.
@@ -9078,12 +9180,14 @@ Legal Differences: Every government has its own set of customary laws, privacy l
 
 ----
 
-18. What are Connectors? Describe the Connector Architecture.
+**What are Connectors? Describe the Connector Architecture.**
+
 Connectors are used to offer connectivity to various enterprise information systems through standard extension protocols. Resource adapters and system-level contracts, both of which are unique to enterprise information systems, make up a connector architecture. Plugging the resource adapters into the container. For a resource adapter to be plugged into J2EE applications, it must satisfy certain contracts that the connector architecture prescribes, such as security, transaction, resource management, etc.
 
 ----
 
-19. What are the design goals of J2EE architecture?
+**What are the design goals of J2EE architecture?**
+
 The following are the design goals of J2EE architecture:
 
 User Interaction: The user experience should be smooth and connect to a variety of devices, including computers, mobile phones, laptops, etc.
@@ -9096,17 +9200,20 @@ Learn Git Command, Angular, NodeJS, Maven & MoreENROLL NOWNew Course: Full Stack
 
 ----
 
-20. What is JRMP?
+**What is JRMP?**
+
 JRMP, or Java Remote Method Protocol, is a tool used for Remote Method Invocation (RMI), which allows Java objects to be passed as arguments. When moving items from one JVM to another using object serialization, RMI uses this underlying protocol to marshal objects as a stream.
 
 ----
 
-21. How is 32-bit JVM different from 64-bit JVM?
+**How is 32-bit JVM different from 64-bit JVM?**
+
 In contrast to 32-bit operating systems, 64-bit operating systems use the 64-bit JVM. As opposed to the 4G limit of 32-bit JVM, we can select higher heap size memory in 64-bit JVM up to 100G. When running in a 64-bit JVM, Java programmes consume more memory than when running in a 32-bit JVM. The Ordinary Object Pointer's larger size is to blame for this. However, this can be avoided by instructing the JVM to utilize 32-bit pointers by using the -XXCompressedOOP option. In contrast to the 32-bit JVM, which utilizes 8-byte headers and a maximum of 4-byte internal references, the 64-bit JVM employs 12-byte object headers and a maximum of 8-byte internal references.
 
 ----
 
-22. What is the purpose of heap dumps and how do you analyze a heap dump?
+**What is the purpose of heap dumps and how do you analyze a heap dump?**
+
 Heap dumps are a snapshot of all active objects being used by active Java programmes on the Java heap memory. The heap dump contains comprehensive information for each item, including type, class name, address, size, and relationships to other objects. Numerous tools are useful when examining Java heap dumps. For instance, JDK itself offers the jhat tool for heap dump analysis. Heap dumps are also used for memory leak analysis. Memory leaks are a phenomenon that happens when there are objects that are no longer needed by the application but are still represented as referenced objects by the garbage collection, making it impossible to free that memory. Following are the causes that result in memory leaks:
 
 Constantly creating new instances of objects without relinquishing them.
@@ -9119,7 +9226,8 @@ As a result, the application keeps using more and more memory, which finally cau
 
 ----
 
-23. What are EAR, WAR, and JAR?
+**What are EAR, WAR, and JAR?**
+
 Enterprise Archive File, or EAR, is a compressed and packaged file that contains client, EJB, and web components. Its extension is.ear. We can deploy many modules simultaneously to the application server using EAR files.
 
 The term "WAR" refers to a file that contains all web components that have been compressed and packaged together. This file makes it simple to test and deploy web apps with just one request.
@@ -9128,17 +9236,20 @@ Java Archive file is referred to as a JAR. It includes all of the class files an
 
 ----
 
-24. What is Spring?
+**What is Spring?**
+
 A lightweight open source framework for creating enterprise apps is called Spring. It solves the enterprise application development complexity and offers simple J2EE development. Rod Johnson was the author of the original draught. In June 2003, it was made available under the Apache 2.0 license.
 
 ----
 
-25. What is Hibernate?
+**What is Hibernate?**
+
 Hibernate is a Java-based Object Relational Mapper technology that offers an abstraction layer for accessing or changing database data. The developer should not worry about how the connections to the databases are formed, how the data translation from Java application to Database and vice versa occurs because it handles all implementations inside. Strong object-oriented concepts supported by Hibernate include inheritance, association, polymorphism, compositions, and collections that aid in query creation when using the Java method and HQL (Hibernate Query Language).
 
 ----
 
-26. Can you describe the phases of the servlet life cycle?
+**Can you describe the phases of the servlet life cycle?**
+
 Given below are the five phases:
 
 Classloading phases: The web container must first load the servlet class file with the.class extension.
@@ -9149,7 +9260,8 @@ Remove phases: The Servlet interface destroy() lifecycle method, which is used t
 
 ----
 
-27. What are different modules used in Spring?
+**What are different modules used in Spring?**
+
 Given below are the various modules used in Spring:
 
 The Core container module
@@ -9164,30 +9276,31 @@ Learn A-Z of Java like never beforeENROLL NOWFREE Java Certification Training
 
 ----
 
-28. What is a backing bean?
+**What is a backing bean?**
+
 Backing beans are JavaBeans components that relate to JavaServer Pages and contain JavaServer Faces components. The backing bean outlines the characteristics for the page components as well as the methods that process them. Event handling, validation, and navigational processing are a few examples of this processing.
 
 ----
 
-29. What is the build file?
+**What is the build file?**
+
 An XML file with one or more asant targets is referred to as a build file. A target is a list of assignments that a user hopes to complete. A user can specify which target should be executed when asant is started. If there isn't a target, the project's default target is carried out.
 
 ----
 
-30. Explain business logic.
+**Explain business logic.**
+
 The code that contains an application's functionality is known as business logic. This logic is implemented in the EJB (Enterprise JavaBeans) architecture by the enterprise bean's methods.
 
-</https://www.simplilearn.com/j2ee-interview-questions-answers-article>
+# https://www.simplilearn.com/j2ee-interview-questions-answers-article
 
-<https://engineeringinterviewquestions.com/java-swing-interview-questions-and-answers/>
-</https://engineeringinterviewquestions.com/java-swing-interview-questions-and-answers/>
+# https://engineeringinterviewquestions.com/java-swing-interview-questions-and-answers
+# https://engineeringinterviewquestions.com/java-swing-interview-questions-and-answers
 
-<http://www.a2zinterviews.com/java-questions/swing-questions/>
+# http://www.a2zinterviews.com/java-questions/swing-questions
 
+**What are differences between Swing and AWT?**
 
-----
-
-1.	What are differences between Swing and AWT?
  	There is couple of differences between swing and AWT.
 AWT component are considered to be heavyweight while Swing component are lightweights.
 Swing has plug gable look and feel.
@@ -9195,121 +9308,114 @@ AWT is platform dependent same GUI will look different platform while Swing is d
 
 ----
 
- 	DISCUSS
-2.	Why Swing components are called lightweight component?
+**Why Swing components are called lightweight component?**
  	
 AWT component are associated with native screen resource and called heavyweight component.
 While Swing components is uses the screen resource of an ancestor instead of having their own and that's why called lightweight or lighter component.
- 	DISCUSS
 
 ----
 
-3.	What is the difference between a scrollbar and a scrollpane?
+**What is the difference between a scrollbar and a scrollpane?**
  	
 A Scrollbar is just a component, but not a container.
 A Scrolpane is a container.
 A Scrollpane handles its own events and performs its own scrolling.
- 	DISCUSS
 
 ----
 
-4.	What is a container in a GUI?
- 	A container contains and arranges other components (including other container) through the use of layout managers, which use specific layout policies to determine where components should go as a function of the size of the container.
+**What is a container in a GUI?**
+
+A container contains and arranges other components (including other container) through the use of layout managers, which use specific layout policies to determine where components should go as a function of the size of the container.
 
 ----
 
-5.	What is Event Driven Thread (EDT) is Swing?
+**What is Event Driven Thread (EDT) is Swing?**
  	
 Event Driven Thread or EDT is a special thread in Swing and AWT. Event Driven Thread is used to draw graphics and listen for events in Swing.
 You will get a bonus point if you able to highlight that time consuming operations like connecting to database, opening a file or connecting to network should not be done on EDT thread because it could lead to freezing GUI because of blocking and time consuming nature of these operations instead they should be done on separate thread and EDT can just be used o spawn those thread on a button click or mouse click.
- 	DISCUSS
 
 ----
 
-6.	What is a layout manager and what are different types of layout managers available in Java Swing?
- 	A layout manager is an object that is used to organize components in a container.
+**What is a layout manager and what are different types of layout managers available in Java Swing?**
+
+A layout manager is an object that is used to organize components in a container.
 FlowLayout: The elements of a Flow Layout are organized in a top to bottom, left to right fashion.
 Border Layout: The elements of a BorderLayout are organized at the borders(North, South East and West) and the center of a container.
 Card Layout: The elements of a CardLayout are stacked, on top of the other, like a deck of cards.
 Grid Layout: The elements of a GridLayout are of equal size and laid out using the square of a grid.
 Grid Bag Layout: The elements of a GridBagLayout are organized according to a grid. However, the elements may be different sizes and may occupy more than one row or column of the grid. In addition, the rows and columns may have different sizes.
- 	DISCUSS
 
 ----
 
-7.	What is the difference between a Window and a Frame?
- 	The Frame extends Window to define a main application window that can have a menu bar.
- 	DISCUSS
+**What is the difference between a Window and a Frame?**
+
+The Frame extends Window to define a main application window that can have a menu bar.
 
 ----
 
-8.	What is the difference between the paint() and repaint() methods?
+**What is the difference between the paint() and repaint() methods?**
  	
 The paint() method supports painting via a Graphics object.
 The repaint() method is used to cause paint() to be invoked by the AWT painting thread.
 
 ----
 
-9.	Does Swing is thread safe?
+**Does Swing is thread safe?**
  	
 Since Swing components are not thread safe it means you cannot update these components in any thread other than Event Driven Thread.
 If you do so you will get unexpected behavior.
 Some time interviewer will also ask what are thread safe methods in swing which can be safely called from any thread only few like repaint() and revalidate().
- 	DISCUSS
 
 ----
 
-10.	What are peerless components?
- 	The peerless components are called light weight components.
- 	DISCUSS
+**What are peerless components?**
+
+The peerless components are called light weight components.
 
 ----
 
-11.	What advantage do Java's layout managers provide over traditional windowing systems?
+**What advantage do Java's layout managers provide over traditional windowing systems?**
  	
 Java uses layout managers to lay out components in a consistent manner across all windowing platforms.
 Since Java's layout managers aren't tied to absolute sizing and positioning, they are able to accommodate platform specific differences among windowing systems.
- 	DISCUSS
 
 ----
 
-12.	Which package has light weight component?
+**Which package has light weight component?**
  	
 javax.Swing package contains light weight components.
 All components in Swing, except JApplet, JDialog, JFrame and JWindow are lightweight components.
 
+----
+
+**What is the difference between the Font and FontMetrics classes?**
+
+The FontMetrics class is used to define implementation specific properties, such as ascent and descent of a Font object.
 
 ----
 
-13.	What is the difference between the Font and FontMetrics classes?
- 	The FontMetrics class is used to define implementation specific properties, such as ascent and descent of a Font object.
+**What is the difference between the Font and FontMetrics classes?**
 
-
-----
-
-13.	What is the difference between the Font and FontMetrics classes?
- 	The FontMetrics class is used to define implementation specific properties, such as ascent and descent of a Font object.
- 	DISCUSS
+The FontMetrics class is used to define implementation specific properties, such as ascent and descent of a Font object.
 
 ----
 
-14.	How can a GUI component handle its own events?
- 	A component can handle its own events by implementing the required event listener interface and adding itself as its own event listener.
- 	DISCUSS
+**How can a GUI component handle its own events?**
+
+A component can handle its own events by implementing the required event listener interface and adding itself as its own event listener.
 
 ----
 
-15.	Why swing is not thread safe?
+**Why swing is not thread safe?**
  	
 The Swing API was designed to be powerful, flexible and easy of use.
 In particular, we wanted to make it easy for programmers to build new Swing components, whether from scratch or by extending components that we provide.
 For this reason, we do not require Swing components to support access from multiple threads.
 Instead, we make it easy to send requests to a component so that the requests run on a single thread.
- 	DISCUSS
 
 ----
 
-16.	Name Container classes?
+**Name Container classes?**
  	
 Window
 Frame
@@ -9318,63 +9424,58 @@ File Dialog
 Panel
 Applet or ScrollPane
 
-
 ----
 
-17.	What method is used to specify a container's layout?
+**What method is used to specify a container's layout?**
  	
 The setLayout() method is used to specify a container's layout.
 For example, setLayout(new Flow Layout()); will be set the layout as Flow Layout.
- 	DISCUSS
 
 ----
 
-18.	Which containers use a Flow Layout as their default layout?
- 	The Panel and Applet classes use the Flow Layout as their default layout.
- 	DISCUSS
+**Which containers use a Flow Layout as their default layout?**
+
+The Panel and Applet classes use the Flow Layout as their default layout.
 
 ----
 
-19.	Name Components subclasses that support painting?
+**Name Components subclasses that support painting?**
  	
 The Canvas
 Frame
 Panel and
 Applet classes support painting
- 	DISCUSS
 
 ----
 
-20.	What is the preferred size of a component?
- 	The preferred size of a component is the minimum component size that will allow the component to display normally.
+**What is the preferred size of a component?**
 
-
-----
-
-21.	Which container method is used to cause a container to be laid out and redisplayed?
- 	validate()
- 	DISCUSS
+The preferred size of a component is the minimum component size that will allow the component to display normally.
 
 ----
 
-22.	Name the containers which use Border Layouts as their default layout?
- 	
+**Which container method is used to cause a container to be laid out and redisplayed?**
+
+validate()
+
+----
+
+**Name the containers which use Border Layouts as their default layout?**
+	
 Window
 Frame and
 Dialog classes
- 	DISCUSS
 
 ----
 
-23.	What do heavy weight components mean?
+**What do heavy weight components mean?**
  	
 Heavy weight components like Abstract Window Toolkit (AWT) depend on the local windowing toolkit.
 For example, java.awt. Button is a heavy weight component.
- 	DISCUSS
 
 ----
 
-24.	What is the purpose of the enableEvents() method?
+**What is the purpose of the enableEvents() method?**
  	
 The enableEvents() method is used to enable an event for a particular component.
 Normally, an event is enabled when a listener is added to an object for a particular event.
@@ -9382,32 +9483,32 @@ The enableEvents() method is used by objects that handle events by overriding th
 
 ----
 
-25.	What is swing?
- 	Swing is a comprehensive set of user interface components whose look and feel can be defined at runtime. Swing is a set of classes that provide more powerful and flexible components that are possible with the AWT.
- 	DISCUSS
+**What is swing?**
+
+Swing is a comprehensive set of user interface components whose look and feel can be defined at runtime. Swing is a set of classes that provide more powerful and flexible components that are possible with the AWT.
 
 ----
 
-26.	Explain the JTable and TableDateModel interface in Swing?
+**Explain the JTable and TableDateModel interface in Swing?**
  	
 JTable is one of the powerful features given by Swing. This class, present in the swing.table package, shows the data in the form of tables, in a much better way. We can also select an entire column or row at a time.
 JTable (TableDataaModel) is the constructor for a JTable.
 The method addColumn (JTableColumn) appends a column to the end of the JTable's array of columns and JTableHeader's getTableHeader () method gives a Header to the table.
 The TableDataModel interface specifies the interface for objects that provides data for cells in a JTable. We can have an object of this interface by creating an object of JTableDataModelAdapter after overriding the methods.
- 	DISCUSS
 
 ----
 
-27.	How different is Swing from AWT?
- 	
+**How different is Swing from AWT?**
+ 
 In addition to familiar components, such as buttons, check boxes, labels, etc. Swing supplies several exciting additions, including tabbed panes, scroll panes, trees, and tables. Even familiar components, such as buttons, have more capabilities in Swing. For example, a button may have both an image and a text string associated with it. Also, the image can be changed as the state of the button changes.
 Unlike AWT components, Swing components are not implemented by platform-specific code. Instead, they are written entirely in Java and, therefore, are platform-independent.
 Swing components can be treated as lightweight components. One of the most important features of Swing components is their pluggable look and feel design, which increases the reliability and consistency of applications and applets deployed across platforms.
 
 ----
 
-28.	How do you classify Swing Components?
- 	Swing components are classified under the following headings:
+**How do you classify Swing Components?**
+
+Swing components are classified under the following headings:
 Top level containers – The containers at the top of any swing component hierarchy are:
 Applet
 Dialog
@@ -9443,8 +9544,9 @@ Tree
 
 ----
 
-29.	What is MVC?
- 	Model-View-Controller (MVC) is a well known object oriented design for GUI components. The architecture of swing components is based on MVC design. When a GUI component is developed using MVC architecture, it is divided into three parts:
+**What is MVC?**
+
+Model-View-Controller (MVC) is a well known object oriented design for GUI components. The architecture of swing components is based on MVC design. When a GUI component is developed using MVC architecture, it is divided into three parts:
 Model-An object that defines the component's state
 View-The visual screen representation of component.
 Controller-An object that controls a component in such a way that it responds to user input.
@@ -9454,7 +9556,7 @@ The View part manages the way in which the object is drawn on the screen.
 
 ----
 
-30.	What is the main difference between Dialog and Frame?
+**What is the main difference between Dialog and Frame?**
  	
 In AWT, the top level window, which is itself not contained in another window, is called a FRAME.
 On the other hand, a window that appears over existing window (mostly Frame) and forces the user to respond is called a DIALOG.
@@ -9473,980 +9575,1049 @@ modal – True for modal type, false for modeless type.
 31.	Explain Thread Rule in Swing?
  	Once a swing component has been realized, i.e. the component has been painted on screen or it is ready to painted, all the code that might affect or depend on the state of that component should be executed in the event dispatching thread. This is called thread rule in swing.
  	
-</http://www.a2zinterviews.com/java-questions/swing-questions/>
+# http://www.a2zinterviews.com/java-questions/swing-questions
 
-<https://quescol.com/interview-preparation/core-java-coding-questions>
+# https://quescol.com/interview-preparation/core-java-coding-questions
 
-Java Coding Questions on Numbers
-Write a program to reverse an integer in Java.
-Write a program in Java to check whether an integer is Armstrong number or not.
-Write a program in Java to check given number is prime or not.
-Write a program in Java to print the Fibonacci series using iteration.
-Write a program in Java to print the Fibonacci series using recursion.
-Write a program in Java to check whether a number is Palindrome or not using iteration.
-Write a program in Java to check whether a number is Palindrome or not using recursion.
-Write a program in Java to find greatest among three integers.
-Write a program in Java to find sum of digits of a number using recursion?
-Write a program in Java to swap two numbers without using third variable?
-Write a program in Java to swap two numbers using third variable?
-Write a program in Java to find prime factors of a given integer.
-Write a program in Java to add two integer without using arithmetic operator?
-Write a program in Java to find given number is perfect or not?
-Java Program to Calculate the Average of Integer Array.
-Java Program to calculate the Average of number taken from user.
-Java Program to calculate factorial using iterative method.
-Java Program to calculate factorial using recursion.
-Java Program to check a given number is even or odd.
-Java program to print first n Prime Number with explanation.
-Java Program to print Prime Number in a given range.
-Java Program to find Smallest number among three.
-Java program to calculate the power using the POW method.
-Java Program to calculate the power without using POW function.
-Java Program to calculate the square of a given number.
-Java Program to calculate the cube of a given number.
-Java Program to calculate the square root of a given number.
-Java program to calculate LCM of given two numbers.
+**Write a program to reverse an integer in Java.**
 
-Java Program to find GCD or HCF of two numbers.
-Java Program to find GCD of two numbers using recursion.
-Java Program to check the given year is a leap year or not.
-Java Program to convert Celsius to Fahrenheit.
-Java Program to convert Fahrenheit to Celsius.
-Java program to calculate Simple Interest with explanation.
-Java Coding Questions on String
-Write a method in Java which will remove any given character from a String.
-Write a program in Java to count occurrence of a given character in a String?
-Write a program in Java to check if two String are Anagram.
-Write a program in Java to check a String is palindrome or not.
-Java program to check given character is vowel or consonant.
-Java program to check given character is digit or not.
-Java program to replace the string space with a given character.
-Java program to convert lowercase char to uppercase of string.
-Java program to convert lowercase vowel to uppercase in string.
-Java program to delete vowels in a given string.
-Java program to count Occurrence Of Vowels & Consonants in a String.
-Java program to print the highest frequency character in a String.
-Java program to Replace First Occurrence Of Vowel With ‘-‘ in String.
-Java program to count alphabets, digits and special characters.
-Java program to remove blank space from string.
-Java program to Concatenate two strings.
-Java Program to remove repeated character from string.
-Java program to calculate sum of integers in string.
-Java program to print all non repeating character in string.
-Java Program to sort characters of string in Ascending Order.
-Java Program to sort character of string in descending order.
-Java Interview Questions for Freshe...
+```java
+
+```
+
+----
+
+**Write a program in Java to check whether an integer is Armstrong number or not.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to check given number is prime or not.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to print the Fibonacci series using iteration.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to print the Fibonacci series using recursion.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to check whether a number is Palindrome or not using iteration.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to check whether a number is Palindrome or not using recursion.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to find greatest among three integers.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to find sum of digits of a number using recursion?**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to swap two numbers without using third variable?**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to swap two numbers using third variable?**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to find prime factors of a given integer.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to add two integer without using arithmetic operator?**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to find given number is perfect or not?**
+
+```java
+
+```
+
+----
+
+**Java Program to Calculate the Average of Integer Array.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate the Average of number taken from user.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate factorial using iterative method.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate factorial using recursion.**
+
+```java
+
+```
+
+----
+
+**Java Program to check a given number is even or odd.**
+
+```java
+
+```
+
+----
+
+**Java program to print first n Prime Number with explanation.**
+
+```java
+
+```
+
+----
+
+**Java Program to print Prime Number in a given range.**
+
+```java
+
+```
+
+----
+
+**Java Program to find Smallest number among three.**
+
+```java
+
+```
+
+----
+
+**Java program to calculate the power using the POW method.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate the power without using POW function.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate the square of a given number.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate the cube of a given number.**
+
+```java
+
+```
+
+----
+
+**Java Program to calculate the square root of a given number.**
+
+```java
+
+```
+
+----
+
+**Java program to calculate LCM of given two numbers.**
+
+```java
+
+```
+
+----
+
+**Java Program to find GCD or HCF of two numbers.**
+
+```java
+
+```
+
+----
+
+**Java Program to find GCD of two numbers using recursion.**
+
+```java
+
+```
+
+----
+
+**Java Program to check the given year is a leap year or not.**
+
+```java
+
+```
+
+----
+
+**Java Program to convert Celsius to Fahrenheit.**
+
+```java
+
+```
+
+----
+
+**Java Program to convert Fahrenheit to Celsius.**
+
+```java
+
+```
+
+----
+
+**Java program to calculate Simple Interest with explanation.**
+
+```java
+
+```
+
+----
+
+**Java Coding Questions on String**
+
+```java
+
+```
+
+----
+
+**Write a method in Java which will remove any given character from a String.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to count occurrence of a given character in a String?**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to check if two String are Anagram.**
+
+```java
+
+```
+
+----
+
+**Write a program in Java to check a String is palindrome or not.**
+
+```java
+
+```
+
+----
+
+**Java program to check given character is vowel or consonant.**
+
+```java
+
+```
+
+----
+
+**Java program to check given character is digit or not.**
+
+```java
+
+```
+
+----
+
+**Java program to replace the string space with a given character.**
+
+```java
+
+```
+
+----
+
+**Java program to convert lowercase char to uppercase of string.**
+
+```java
+
+```
+
+----
+
+**Java program to convert lowercase vowel to uppercase in string.**
+
+```java
+
+```
+
+----
+
+**Java program to delete vowels in a given string.**
+
+```java
+
+```
+
+----
+
+**Java program to count Occurrence Of Vowels & Consonants in a String.**
+
+```java
+
+```
+
+----
+
+**Java program to print the highest frequency character in a String.**
+
+```java
+
+```
+
+----
+
+**Java program to Replace First Occurrence Of Vowel With ‘-‘ in String.**
+
+```java
+
+```
+
+----
+
+**Java program to count alphabets, digits and special characters.**
+
+```java
+
+```
+
+----
+
+**Java program to remove blank space from string.**
+
+```java
+
+```
+
+----
+
+**Java program to Concatenate two strings.**
+
+```java
+
+```
+
+----
+
+**Java Program to remove repeated character from string.**
+
+```java
+
+```
+
+----
+
+**Java program to calculate sum of integers in string.**
+
+```java
+
+```
+
+----
+
+**Java program to print all non repeating character in string.**
+
+```java
+
+```
+
+----
+
+**Java Program to sort characters of string in Ascending Order.**
+
+```java
+
+```
+
+----
+
+**Java Program to sort character of string in descending order.**
+
+```java
+
+```
+
+----
 
 Write a program in Java for, In array 1-100 numbers are stored, one number is missing how do you find it.
+
+```java
+
+```
+
+----
+
 Write a program in Java for, In a array 1-100 multiple numbers are duplicates, how do you find it.
+
+```java
+
+```
+
+----
+
 Write a program in Java for, How to find all pairs in array of integers whose sum is equal to given number.
+
+```java
+
+```
+
+----
+
 Write a program in Java for, In a array 1-100 exactly one number is duplicate how do you find it.
+
+```java
+
+```
+
+----
+
 Write a program in Java for, Given two arrays 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
+
+```java
+
+```
+
+----
+
 Write a program in Java for, How to compare two array is equal in size or not.
+
+```java
+
+```
+
+----
+
 Write a program in Java to find largest and smallest number in array.
+
+```java
+
+```
+
+----
+
 Write a program in Java to find second highest number in an integer array.
+
+```java
+
+```
+
+----
+
 Write a program in Java to find top two maximum number in array?
+
+```java
+
+```
+
+----
+
 Java program to print array in reverse Order.
+
+```java
+
+```
+
+----
+
 Java program to reverse array without using second array.
+
+```java
+
+```
+
+----
+
 Java Program to calculate length of an array.
+
+```java
+
+```
+
+----
+
 Java program to insert an element at end of an Array.
+
+```java
+
+```
+
+----
+
 Java program to insert element at a given location in Array.
+
+```java
+
+```
+
+----
+
 Java Program to delete element at end of Array.
+
+```java
+
+```
+
+----
+
 Java Program to delete given element from Array.
+
+```java
+
+```
+
+----
+
 Java Program to delete element from array at given index.
+
+```java
+
+```
+
+----
+
 Java Program to find sum of array elements.
+
+```java
+
+```
+
+----
+
 Java Program to print all even numbers in array.
+
+```java
+
+```
+
+----
+
 Java Program to print all odd numbers in array.
+
+```java
+
+```
+
+----
+
 Java program to perform left rotation of array elements by two positions.
+
+```java
+
+```
+
+----
+
 Java program to perform right rotation in array by 2 positions.
+
+```java
+
+```
+
+----
+
 Java program to find all pairs in array of integers whose sum is equal to given number.
+
+```java
+
+```
+
+----
+
 Java Program to remove duplicate elements form array.
 
-</https://quescol.com/interview-preparation/core-java-coding-questions>
+```java
 
-<https://quescol.com/interview-preparation/core-java-pattern-questions>
+```
 
-Pattern Programs In Java: 25+ types that asked most often
-One of the most important areas you should have a focus on when you are preparing for the interview is a pattern printing program. I don’t think that in an interview if your recruiter is recruiting you as a software developer/software engineering profile will not ask to write a program to print given pattern (maybe in some interview not).
-
-Writing program is all about how efficiently and fast you can think logics
-Basically, Writing a program of any pattern is not tough. It only requires time and practices.
-
-When you are going to write a program of any pattern for the first time then you will surely realize that it is taking time to build a logic and writing program to print that particularly given pattern. Here 80-90% is only the game of thinking the logic and once you imagine the logic then very quickly you can write a program.
-
-14 Popular Programming Languages an...
-
-Play
-
-Unmute
-Remaining Time -1:46
+----
 
 
-Fullscreen
+# https://quescol.com/interview-preparation/core-java-coding-questions
 
-Advertisement: 0:00
-14 Popular Programming Languages and Their Uses Explained
-Below I have collected the list if most important and most frequently asked pattern program and also I have provided their program in Java. Solution contains nested for loops and if else block etc.
+# https://quescol.com/interview-preparation/core-java-pattern-questions
 
+**Different Types of Pyramid Patterns**
 
-You should also prepare pattern program in C language.
-
-NOTE:-I kindly request to all readers and my website lovers please try to make all programs by self before go for the solution.
-
-Different Types of Pyramid Patterns
 half pyramid pattern programquescol
+
+```java
+
+```
+
+----
+
 Half Pyramid Pattern Using *
 
+```java
+
+```
+
+----
+
 right inverted half pyramid program in c quescol
+
+```java
+
+```
+
+----
+
 Right Inverted Half Pyramid Pattern
+
+```java
+
+```
+
+----
 
 
 half pyramid using number in C
+
+```java
+
+```
+
+----
+
 Half Pyramid Pattern
 
+```java
+
+```
+
+----
+
 inverted half pyramid program quescol
+
+```java
+
+```
+
+----
+
 Inverted Half Pyramid Pattern
+
+```java
+
+```
+
+----
 
 full pyramid pattern program in c using star quescol
+
+```java
+
+```
+
+----
+
 Full Pyramid Pattern
+
+```java
+
+```
+
+----
 
 inverted half pyramid using number program in c
+
+```java
+
+```
+
+----
+
 Inverted Half Pyramid Pattern
 
+```java
+
+```
+
+----
+
+
 right half pyramid program quescol
+
+```java
+
+```
+
+----
+
 Right Half Pyramid Pattern
 
+```java
+
+```
+
+----
+
+
 inverted full pyramid pattern program in c using star
+
+```java
+
+```
+
+----
+
 Inverted Full Pyramid Pattern
 
+```java
+
+```
+
+----
+
 full pyramid using number program in c
+
+```java
+
+```
+
+----
+
 Full Pyramid Pattern
 
+```java
 
-Click Here To See Pyramid Pattern Program In Java
+```
 
-Different Types of Diamond Patterns
+----
+
+
+**Different Types of Diamond Patterns**
+
 solid right half diamond pattern program in C
+
+```java
+
+```
+
+----
+
 Right Half Diamond Pattern
 
+```java
+
+```
+
+----
+
+
 solid left half diamond pattern program in c
+
+```java
+
+```
+
+----
+
 Left Half Diamond Pattern
 
+```java
+
+```
+
+----
+
 solid diamond using star program in c
+
+```java
+
+```
+
+----
+
 Full Diamond Pattern
 
+```java
 
-Click here To See Diamond Pattern Program In Java
+```
 
-Pascal’s Triangle
+----
+
 pascal triangle pattern program in c
+
+```java
+
+```
+
+----
+
 Pascal’s Traingle
 
+```java
 
-Click here To See Pascal’s Triangle Program In Java
+```
 
-Print Floyd’s Triangle
+----
+
 floyd triangle pattern program in c
+
+```java
+
+```
+
+----
+
 Print Floyd’s Triangle
 
+```java
 
-Click here To See Floyd’s Triangle Program In Java
+```
 
-Different Types of Rhombus Patterns
+----
+
+**Different Types of Rhombus Patterns**
+
 solid rhombus right inclined pattern program in c
+
+```java
+
+```
+
+----
+
 Solid Rhombus Right Inclined
 
+```java
+
+```
+
+----
+
 solid rhombus left inclined pattern program in C
+
+```java
+
+```
+
+----
+
 Solid Rhombus Left Inclined
 
+```java
 
-Click here To See Rhombus Pattern Program In Java
+```
 
-Different Types of Rectangle Patterns
+----
+
+**Different Types of Rectangle Patterns**
+
 solid rectangle pattern program in C
+
+```java
+
+```
+
+----
+
 Solid Rectangle
 
+```java
+
+```
+
+----
+
 hollow rectangle pattern program in C
+
+```java
+
+```
+
+----
+
 Hollow Rectangle
 
+```java
 
-Click here To See Rectangle Pattern Program In Java
+```
 
-Different Types of Patterns Using Star And Hyphen
+----
+
+**Different Types of Patterns Using Star And Hyphen**
+
 star hyphen combination pattern program in c
+
+```java
+
+```
+
+----
+
 star hyphen combination pattern 1
 
+```java
+
+```
+
+----
+
 star hyphen combination 3 pattern program in C
+
+```java
+
+```
+
+----
+
 Triangle Using Star Hyphen
 
+```java
+
+```
+
+----
+
 star hyphen combination pattern program in c
+
+```java
+
+```
+
+----
+
 star hyphen combination pattern 2
 
+```java
+
+```
+
+----
+
 inverted Triangle Using Star Hyphen pattern program in C
+
+```java
+
+```
+
+----
+
 Inverted Triangle Using Star Hyphen
 
+```java
+
+```
+
+----
+
 star hyphen combination full pattern program in c
+
+```java
+
+```
+
+----
+
 Daimond Using Star Hyphen
 
-</https://quescol.com/interview-preparation/core-java-pattern-questions>
+```java
 
-<https://quescol.com/interview-preparation/java-interview-question-experienced>
-
-MNCs Choice Java Interview Question For Experienced
-If Your are struggling to find the most important and frequently asked face two face c interview questions, Then hold down and take a deep breath because you are at the right place.
-
-I know that It is very tough for fresher students to prepare for an interview as well as finding some great bunch of right questions that cover the most important topics.
-In this section, I have tried to cover all important and most asked c programming interview questions topics wise.
-Let us start Preparing.
-
-Java interview questions for Experienced MNCs
-Q1). Tell me something about HashMap in Java
-Ans:
-
-HashMap is a Collection classes in java which implementation is based on the hash table data structure. HashMap class extends AbstractMap class and AbstractMap  class implements the Map interface.
-
-
-Some Important point about Hashmap:
-
-HashMap allows only one null key and multiple null value.
-HashMap does not maintain the order of insertion into the map.
-Initial size of hashmap bucket is 16 which grows to 32 when the map entries crosses  75%.
-HashMap uses hashCode() and equals() methods on keys  to perform put and get operations. It internally check the key is already exist or not?
-Hashmap is not a thread safe. This is the reason it won’t uses in multithreaded environment. 
-Q2). What is load Factor, Threshold, Rehashing and collision in hashmap?
-Ans:
-
-Load factor is the measure to decide when to increase the size of the Map. By default, the load factor is 75% of the capacity.
-
-The threshold can be calculated by multiplying the current capacity and load factor. 
-
-
-Rehashing means, re-calculating the hash code of already stored entries. When entries in the hash table exceed the threshold, the Map is rehashed and increases the size of buckets.
-
-Collision is a condition when a hash function returns the same bucket location for two different keys.
-
-For example:
-
-
-Suppose Our HashMap has an initial capacity is 16 and a load factor is 0.75. 
-
-Threshold will be 16 * 0.75 = 12, 
-
-It means after the 12th entry in the hashmap, the capacity of the hashmap will increase from 16 to 32.
+```
 
 ----
 
-Q3). How HashMap Internally works in Java?
-Ans:
+# https://quescol.com/interview-preparation/core-java-pattern-questions
+
+# https://quescol.com/interview-preparation/java-interview-question-experienced
+# https://quescol.com/interview-preparation/java-interview-question-experienced
+
+# https://quescol.com/interview-preparation/spring-boot-interview-questions
 
 ----
 
-Q4). Explain how hashcode will be calculated for String Key.
-Ans:
+**What is Java Spring Boot?**
 
-Hashmap has hashCode() method. This method is used to calculate the hashcode value of the String as an Integer.
-
-Syntax of hascode:
-public int hashCode()
-
-Program
-
-import java.io.*; 
-class Main {
-public static void main(String[] args)
-{
-  String str = "Name";
-  System.out.println(str);
-  int hashCode = str.hashCode();
-  System.out.println(hashCode);
- }
-}
-Output
-
-Name
-2420395
-Here we got Output 2420395 for String “Name”. Below is the way to calculate hashcode of string.
-
-How hashcode is calculated for string key?
-
-Below  is the formula to calculate the hashcode value of a String:
-
-s[0]*31^(n-1) + s[1]*31^(n-2) + … + s[n-1]
-
-Here:
-
-s[i] is the ith character of the string
-^ is a the exponential operator
-n shows the length of the string
-
-----
-
-Q5). What is the Difference between HashMap and LinkedHashMap.
-Ans:
-
-The difference between HashMap and LinkedHashMap is that LinkedHashMap maintains the insertion order of keys but HashMap doesn’t maintain the insertion order of keys.
-LinkedHashMap requires more memory than HashMap to keep the record of insertion order. Basically LinkedHashMap  uses doubly LinkedList to keep track of the insertion order of keys.
-LinkedHashMap extends HashMap and implements the Map interface and Hashmap extends AbstractMap class and implements the Map interface.
-Hashmap were introduced in JDK 2.0 but LinkedHashMap introduced in JDK 4.0.
-Here is the Program of HashMap and LinkedHashMap.
-
-Example of Hashmap
-
-import java.util.HashMap;
-public class Main {
-public static void main(String[] args)
-{
-  HashMap<String,String> map = new HashMap<>();
-  map.put("firstName","Interview");
-  map.put("lastName","Expert");
-  map.put("rollNo","1");
-  System.out.println(map.size());
-  if(map.containsKey("firstName")){
-    System.out.println(map.get("firstName"));
-  }
-  if(Integer.parseInt(map.get("rollNo"))<20){
-    System.out.println(map.get("lastName"));
-  } 
- }
-}
-﻿
-Output:
-
-3
-
-Interview
-
-Expert
-Example Of LinkedHashMap:
-
-import java.util.LinkedHashMap;
-public class Main {
-public static void main(String[] args)
-{
-  LinkedHashMap<String,String> map = new LinkedHashMap<>();
-  map.put("firstName","Interview");
-  map.put("lastName","Expert");
-  map.put("rollNo","1");
-  System.out.println(map.size());
-  if(map.containsKey("firstName")){
-    System.out.println(map.get("firstName"));
-  }
-  if(Integer.parseInt(map.get("rollNo"))<10){
-    System.out.println(map.get("lastName"));
-  } 
- }
-}
-Output:
-
-3
-
-Interview
-
-Expert
-
-----
-
-Q6). What is Concurrent HashMap?
-Ans:
-
-ConcurrentHashMap is a class of Collection Framework that provides a concurrent version of HashMap. It is a thread safe i.e multiple threads can access the single object of the map.
-
-At a time any number of threads can perform the read operations without locking. But for write/update operation at a single time thread must lock the particular segment in which the thread wants to operate.
-
-Functionality wise HashMap and ConcurrentHashMap are same, except ConcurrentHashMap maintains concurrency. Hashmap Can have a null key and value but concurrentHashMap Cannot have null key and value pair.
-
-ConcurrentHashMap uses a Hashtable data structure. 
-
-ConcurrentHashMap Example
-
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.Map;
-public class Main {
-public static void main(String[] args)
-{
-  Map<String,String> chm = new ConcurrentHashMap<>();
-  chm.put(null,null);
-}
-}
-Output
-
-Exception in thread "main" java.lang.NullPointerException
-at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
-at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
-at Main.main(Main.java:7)
-Here we will get an NullPointerException because we are trying to insert null key value in concurrent hashmap which is not allowed.
-
-----
-
-Q7). What is the Time Complexity of HashMap.
-Ans : 
-
-Usually Time complexity of Hashmap is O(1). But in some cases it might change. Let’s assume a scenario in hashmap when hashcode will return same index value for each enteries. In that case at single index of hashtable, a singly linked list will create to store the key value pair of hashmap.
-
-This is a worst case scenario in HashMap which will be O(n) complexity to lookup. Here we have to walk through all entries in the same hash bucket. This situation is very rare.
-
-There are some improvements done in java 8 to improve the time compelxity from O(n) to O(log n). Instead of using singly linked list, Hashmap in Java 8 uses self balancing tree like RB tree and AVL tree.
-
-----
-
-Q8) Tell me some difference between ArrayList and LinkedList.
-Ans:
-
-ArrayList uses a dynamic array/Array object data strucutre to store the elements but LinkedList internally uses a doubly linked list to store the elements. 
-ArrayList Manipulation is slow because it uses an array and if we remove any element from the array we have to shift other elements in memory. But LinkedList Manipulation is faster because it uses a doubly linked list so no shift is required when we remove any element.
-ArrayList is better for storing and accessing elements but LinkedList is better for manipulating elements.
-ArrayList takes memory in a contiguous fashion but the linked list does not takes memory in a contiguous.
-
-----
-
-Q9) When you will prefer ArrayList and when LinkedList in your RealTime projects.
-Ans:
-
-As We know Accessing an element in ArrayList takes constant time [O(1)] and adding an element takes O(n) in the worst case. And in LinkedList inserting an element takes O(n) time and accessing also takes O(n) time but LinkedList needs some more memory than ArrayList.
-
-Accessing elements in ArrayList is faster because it is index based. But Accessing elements in LinkedList is slower because we need to traverse each node. Insertion and deletion in Linked List are much faster because here we need to change the pointer of the node only. We need not shift the element as we do in ArrayList. 
-
-So here we are at the conclusion, if we need to perform more manipulation work on the element and memory is not a problem then we can prefer Linked List over ArrayList.
-
-But When we require more searching of the element then we can choose ArrayList over LinkedList.
-
-Time complexity with operations
-
- For ArrayList<E>
-
-get(int index) takes O(1).
-add(E element) operation takes O(1) amortized, but in the worst case it will be O(n) since the array must be resized and copied.
-add(int index, E element) takes O(n) Complexity (with n/2 steps on average).
-remove(int index) operation takes O(n) (with n/2 steps on average).
-Iterator.remove() have O(n) Complexity (with n/2 steps on average). 
-ListIterator.add(E element) operation takes O(n) (with n/2 steps on average)
-For LinkedList<E>
-
-get(int index) operation takes O(n) , It will take O(1) when index = 0 or index = list.size() -1 .
-add(int index, E element) take O(n) and It will take O(1) when index = 0 or index = list.size() – 1
-remove(int index) takes O(n) and It will take O(1) when index = 0 or index = list.size() – 1. 
-
-----
-
-Q10) What is the difference between Hashset and LinkedHashSet.
-Ans:
-
-HashSet uses Hashtable to store the elements. LinkedHashSet uses HashTable and a doubly linked list to store and maintain the insertion order of the elements.
-HashSet extends AbstractSet class but LinkedHashSet extends HashSet.
-HashSet won’t maintain the insertion order of the element but LinkedHashSet maintains the insertion order of an element.
-HashSet takes less memory in comparison to LinkedHashSet because HashSet won’t maintain insertion order but LinkedHashSet maintains the insertion order.
-HashSet provides faster performance than LinkedHashSet.
-
-----
-
-Q11) Differences between HashMap and HashSet.
-Ans:
-
-Hashmap is the implementation of the Map interface But HashSet is the implementation of the Set interface.
-HashSet internally uses Hashmap for its implementation But HashMap Won’t.
-HashMap stores value in key-value pair But HashSet Stores only object no key-value pair.
-HashMap uses the put(k,v) method to add elements to the map whereas HashSet uses add(K) method.
-HashMap Allows duplicate values not key But HashSet won’t allow duplicate values.
-HashMap allows a single null key and multiple null values but HashSet allow only one null value.
-Multi-threading Questions
-
-----
-
-Q12) What is the Different ways to create threads in java?
-Ans:
-
-There are two ways to create threads in Java:
-
-By extending Thread class
-By implementing Runnable interface.
-1). By Extending Thread Class
-
-class Main extends Thread{  
-    public void run(){  
-        System.out.println("thread is running");  
-    }  
-    public static void main(String args[]){  
-        Main thread1 = new Main();  
-        thread1.start();  
-    }  
-} 
-Output:
-
-Thread is running
-2). By implementing Runnable interface
-
-class Main implements Runnable{  
-  public void run(){  
-    System.out.println("thread is running");  
-  }    
-  public static void main(String args[]){  
-    Main obj=new Main();  
-    // Here we are Using the constructor Thread(Runnable r)
-    Thread tobj =new Thread(obj);     
-    tobj.start();  
-  }  
-}  
-Output:
-
-Thread is running
-
-----
-
-Q13). Difference between Thread and Runnable.
-Ans:
-
-Thread is a class used to create a thread Whereas Runnable is an interface that is used to create a thread.
-Thread has methods like start() and run() but Runnable has only one method run().
-Thread won’t allow multiple inheritance but Runnable allows multiple inheritance.
-Thread requires more memory but Runnable requires less memory.
-In Thread Each thread creates a unique object but in Runnable same object is shared with multiple threads.
-
-----
-
-Q14) Tell some Difference between Callable & Runnable in Java.
-Ans: 
-
-Callable belongs to java.util.concurrent package whereas Runnable belongs to java.lang package.
-Thread will not create by passing callable as a parameter but Runnable will create a thread by passing runnable as a parameter.
-Callable has call() method whereas Runnable has run() method.
-Callable might return some output but Runnable does not return anything.
-By invoking invokeAll() method bulk execution of the task is possible in callable but in runnable we can’t use it for bulk execution of the task.
-
-----
-
-Q15). What is the Difference between sleep() & wait() method in java.
-Ans:
-
-Sleep() method belongs to the Thread class whereas Wait() method belongs to the Object class.
-Sleep() method is used to pause the execution of the current thread for a given time in Milliseconds. But the wait() method tells the thread to wait until another thread invoke’s the notify() or notifyAll() method for this object.
-Sleep() method will not release the lock on the object during Synchronization but Wait() method can release the lock on the object during Synchronization.
-Sleep() is a static method but wait() is not a static method.
-Sleep() has two overloaded methods sleep(long millis) and sleep(long millis, int nanos), Whereas Wait() has Three Overloaded methods wait(), wait(long timeout), wait(long timeout, int nanos).
-Example of Sleep method
-
-import java.lang.Thread;
-class Main {
-    public static void main(String[] args)
-    {
-        try {
-            for (int i = 1; i <=10; i++) {
-                Thread.sleep(1000);
-                System.out.println(i);
-            }
-        }
-        catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-}
-Output
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-Exceptional Handling in Java
-Q16). What is exceptional handling in java?
-Ans:
-
-In Java, Exception Handling is a mechanism to handle the runtime errors and protect the program from abnormal termination. It help to maintain the normal flow of the application in case any exceptions come.
-
-There are multiple type of Exceptions such as ClassNotFoundException, IOException, SQLException.
-
-java.lang.Throwable class is the root class of Java Exception hierarchy. It is inherited by two subclasses Exception and Error. The hierarchy of Java Exception classes is given below:
-
-java interview question for mncs experienced
-
-----
-
-Q17). Difference between Checked and Unchecked Exceptions.
-Ans: 
-
-Checked exception occurs at compile time whereas the Unchecked exception occurs at run time.
-Checked Exception is checked by the compiler but the Unchecked exception is not.
-Checked Exception can be handled at compile time but Unchecked Exception can be handled at runtime.
-Checked Exception is a sub-class of the Exception class but Unchecked Exception is not a part of the Exception class.
-Some Checked Exceptions are ClassNotFoundException, IOException, SQLException, etc. Some Unchecked Exceptions are ArithmeticException, NullPointerException, ArrayIndexOutOfBoundExceptions.
-java interview questions for experienced
-
-----
-
-Q18). How many ways you can print exceptions in java?
-Ans:
-
-There are multiple ways to print the exceptions in Java. Here we will see 3 methods to print the exceptions.
-
-1). printStackTrace()
-
-2). toString()
-
-3). getMessage()
-
-1.printStackTrace()
-
-printStackTrace method prints exception information printStackTrace() is a method of Java.lang.Throwable class. It is used to print the details of exceptions like class name and line number where the exception occurred.
-
-Program to demonstrate printStackTrace() method
-
-import java.io.*;
-class Main {
-    public static void main (String[] args) {
-      int a=5, b=0;
-        try{
-          System.out.println(a/b);
-        }
-        catch(ArithmeticException e){
-          e.printStackTrace();
-        }
-    }
-}
-Output:
-
-java.lang.ArithmeticException: / by zero
-
-at Main.main(Main.java:6)
-
-2. toString() 
-
-toString() method is also used to  prints exception. It prints exception information in the format of Name of the exception along with description of the exception.
-
-Program to demonstrate toString() method
-
-import java.io.*;
-class Main {
-    public static void main (String[] args) {
-      int a=5, b=0;
-        try{
-          System.out.println(a/b);
-        }
-        catch(ArithmeticException e){
-            System.out.println(e.toString());
-        }
-    }
-}
-Output:
-
-java.lang.ArithmeticException: / by zero
-
-3. getMessage()
-
-getMessage() method prints only the description of the exception message.
-
-Program to demonstrate  getMessage() method
-
-
-import java.io.*;
-class Main {
-    public static void main (String[] args) {
-      int a=5, b=0;
-        try{
-          System.out.println(a/b);
-        }
-        catch(ArithmeticException e){
-            System.out.println(e.getMessage());
-        }
-    }
-}
-Output:
-
-/ by zero
-
-----
-
-Q19). What is the process to create custom exception in java?
-Ans: Here we are showing two examples to show how you can create you own custom exception class in Java. 
-
-Example 1: 
-
-class CustomException extends Exception{
-    public CustomException(String ex){
-        super(ex);
-    }
-}
-
-public class Main{
-    public static void main(String ...a){
-        int age = 13;
-        try{
-            if(age<18){
-                throw new CustomException("no valid Age");
-            }else{
-                System.out.println("Age is valid");
-            }
-        }
-        catch(CustomException e){
-             System.out.println("Exception occured: " + e); 
-        }
-        System.out.println("Rest Code is running"); 
-    }
-}
-Output
-
-
-Exception occured: CustomException: no valid Age
-Rest Code is running
-Example 2:
-
-
-class CustomException extends Exception {
-   String message;
-   CustomException(String str) {
-      message = str;
-   }
-   public String toString() {
-      return ("Custom Exception Occurred : " + message);
-   }
-}
-public class Main {
-   public static void main(String args[]) {
-      try {
-         throw new CustomException("This is CustomException");
-      } catch(CustomException e) {
-         System.out.println(e);
-      }
-   }
-}
-Output
-
-Custom Exception Occurred : This is CustomException
-
-----
-
-Q20). Write the difference between Throw Vs Throws.
-Ans:
-
-throw keyword is used inside the function or the block of code to throw an exception explicitly when an exception occurs. Whereas throws keyword is used with method signature with exception means exception might be thrown by the function during the execution if an exception occurs.
-throw keyword is followed by an instance of Exception that will be thrown whereas throws keyword is followed by class names of Exceptions to be thrown.
-throw keyword can be used to throw only one exception at a time but in throws keywords, we can use multiple Exception classes separated by a comma.
-throw keyword is used to propagate unchecked Exceptions whereas the throws keyword is used to propagate checked Exceptions.
-Example of using throw keyword
-
-public class Main{
-   public void checkAge(int age){
-      if(age<18)
-         throw new ArithmeticException("Age is not valid for voting");
-      else
-         System.out.println("Age is valid for voting");
-   }
-   public static void main(String args[]){
-      Main obj = new Main();
-      obj.checkAge(10);
-      System.out.println("Execution continue");
-   }
-}
-Output
-
-Exception in thread "main" java.lang.ArithmeticException: Age is not valid for voting
-at Main.checkAge(Main.java:4)
-at Main.main(Main.java:10)
-Example of using throws keywords
-
-public class Main{
-   public int division(int a, int b) throws ArithmeticException{
-      int result = a/b;
-      return result;
-   }
-   public static void main(String args[]){
-      Main obj = new Main();
-      try{
-         System.out.println(obj.division(15,0));
-      }
-      catch(ArithmeticException e){
-         System.out.println("We can't divide number by zero");
-      }
-   }
-}
-Output
-
-We can't divide number by zero
-
-----
-
-Q21). What is Serialization and why we use it?
-Ans:
-
-Serialization is used to convert the object into a byte stream so that it can be sent over the network. Deserialization is the reverse process where the byte stream is converted into an actual Java object. 
-
-Serialization is required because Network infrastructure and Hard disk or any other hardware components can understand bits and bytes only but not the JAVA objects.
-
-So we use Serialization as a translation to translate our Java object’s values/states to bytes to send it over the network or save it.
-
-SerialVersionUID is used here for identity purpose. It must be static, final, and of type long.
-
-Java Program for Serialization and Deserialization 
-
-import java.io.*;
-public class Main {
-    public static void main(String[] args) {
-        Student student = new Student("quescol", 2);
-        byte[] bytes = convertObjectToBytes(student);
-        System.out.println(bytes);
-        Student s = (Student) convertBytesToObject(bytes);
-        System.out.println(s);
-    }
-    public static byte[] convertObjectToBytes(Object obj) {
-        ByteArrayOutputStream boas = new ByteArrayOutputStream();
-        try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
-            ois.writeObject(obj);
-            return boas.toByteArray();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-        throw new RuntimeException();
-    }
-    public static Object convertBytesToObject(byte[] bytes) {
-        InputStream is = new ByteArrayInputStream(bytes);
-        try (ObjectInputStream ois = new ObjectInputStream(is)) {
-            return ois.readObject();
-        } catch (IOException | ClassNotFoundException ioe) {
-            ioe.printStackTrace();
-        }
-        throw new RuntimeException();
-    }
-}
-
-class Student implements Serializable {
-    private String name;
-    private int age;
-    public Student( String name, int id) {  
-        this.age = age;  
-        this.name = name;  
-    }
-}
-Output
-
-[B@7d4793a8
-Student@721e0f4f
-
-----
-
-Q22). What is volatile and Transient keyword in java?
-Ans:
-
-A volatile keyword is used in a multithreading environment. When two threads are performing reading and writing operations on the same variable, a volatile keyword is used. It flushes the changes directly to the main memory instead of the CPU cache. A transient keyword is used in serialization. Variable where transient is used, cannot be part of the serialization and deserialization.
-Volatile variable is not initialized with any default value whereas transient variables are initialized with a default value during deserialization.
-Volatile variable can be used with the final keyword whereas Transient cannot be used with the final keyword.
-Volatile variable can be used with static keyword whereas Transient cannot be used with the static keyword.
-
-----
-
-Q23). How you will create Immutable class in java
-Ans:
-In Java, an Immutable class means once the object is created in the class, its fields cannot be changed or modified. 
-All the wrapper classes like Boolean, Byte, Long, Short, Integer, Float, Double, Char, and String are immutable.
-There are some steps by following we can create an immutable class in Java
-
-First Declare the class with the final keyword so it can’t be extended.
-Make all the classes private. It will not allow direct access.
-Don’t make any setter methods for variables.
-Make all mutable fields final so that their value can be assigned only once.
-Initialize the all fields value using the constructor. 
-Example of Immutable java Class
-
-final class Student{
-  private String name;
-  private int roll;
-  Student(String name, int roll) {
-    this.name = name;
-    this.roll = roll;
-  }
-  public String getName() {
-    return name;
-  }
-  public int getRoll() {
-    return roll;
-  }
-}
-class Main {
-  public static void main(String[] args) {
-    Student obj = new Student("quescol", 1);
-    System.out.println("Name: " + obj.getName());
-    System.out.println("Roll: " + obj.getRoll());
-  }
-}
-
-----
-
-Q24). How you will Create Singleton class in Java.
-Ans:
-
-
-Singleton class is a class in oops that can have only one object at a time and can be globally accessible.
-
-It Saves memory because Only a single instance is created and reused again and again.
-
-Single Class is mostly used in the multi-threaded system, database application, logging, caching, configuration settings, etc.
-
-There are two forms of singleton design pattern
-
-Early Instantiation: In this Singleton design pattern object will create at the load time.
-
-Lazy Instantiation: In this Singleton design pattern object will create according to the requirement.
-
-
-Early Instantiation Example
-
-class Singlton {
-    //Instance will be created at load time  
-    private static Singlton obj=new Singlton();
-    private Singlton(){}  
-    public static Singlton getSinglton(){  
-        return obj;  
-    }  
-}
-class Main {
-   public static void main(String[] args) {
-      Singlton s1;
-      s1= Singlton.getSinglton();
-      Singlton s2;
-      s2= Singlton.getSinglton();
-      System.out.println(s1);
-      System.out.println(s2);
-   }
-}
-Output
-
-
-Singlton@1e81f4dc
-Singlton@1e81f4dc
-Lazy Instantiation example
-
-class Singlton {
-    private static Singlton singlton;
-    private Singlton(){
-        
-    }
-    public static Singlton getInstance() {
-        if(null == singlton){
-            singlton = new Singlton();
-        }
-    return singlton;
-    }
-}
-class Main {
-   public static void main(String[] args) {
-      Singlton s1;
-      s1= Singlton.getInstance();
-      Singlton s2;
-      s2= Singlton.getInstance();
-      System.out.println(s1);
-      System.out.println(s2);
-   }
-}
-
-</https://quescol.com/interview-preparation/java-interview-question-experienced>
-
-<https://quescol.com/interview-preparation/spring-boot-interview-questions>
-
-----
-
-Q0) What is Java Spring Boot?
 What is Spring Boot?
 Java Spring Boot is an open-source tool that makes it easier to use Java-based frameworks to create microservices and web apps.
 For any definition of Spring Boot, the conversation has to start with Java—one of the most popular and widely used development
@@ -10456,22 +10627,7 @@ apps to networking and enterprise applications.
 
 ----
 
-Q1). Explain the Spring Boot key components?
-6 MOST DIFFICULT INTERVIEW QUESTION...
-
-Pause
-
-Unmute
-Remaining Time -12:06
-
-
-Fullscreen
-
-----
-
-6 MOST DIFFICULT INTERVIEW QUESTIONS & ANSWERS! (How to ANSWER the HARDEST Interview Questions!)
-Ans:
-
+**Explain the Spring Boot key components?**
 
 There are four important key components of spring-boot are
 
@@ -10479,6 +10635,7 @@ Spring Boot auto-configuration.
 Spring Boot CLI.
 Spring Boot starter POMs.
 Spring Boot Actuators.
+
 There are two more Spring Boot components
 
 Spring initializr: To quick start new Spring Boot projects
@@ -10554,7 +10711,8 @@ Whenever we run  the Spring Boot Web Application, Spring Boot Actuator provides 
 
 ----
 
-Q2). Tell some List of Sprint Boot Actuator EndPoints
+**Tell some List of Sprint Boot Actuator EndPoints**
+
 Ans: Some of Spring Boot Actuator End Point are:
 
 auditevents: This endpoint Exposes the audit events information for the current application.
@@ -10567,7 +10725,8 @@ There are some more Spring Actuator endpoints are loggers, mappings, sessions, s
 
 ----
 
-Q3). Tell us some benefits of Spring Boot over Spring?
+**Tell us some benefits of Spring Boot over Spring?**
+
 Ans: Spring boot framework is the extension of spring framework to help developers to start coding with low configuration. It eliminates the boilerplate configurations required for setting up a Spring application. 
 
 Spring Boot comes with multiple starter dependencies for different Spring modules. 
@@ -10592,7 +10751,8 @@ Version Management
 
 ----
 
-Q4). What is the starter dependency of the Spring boot module?
+***What is the starter dependency of the Spring boot module?**
+
 Ans:
 
 Some of Spring Boot Starter Dependencies are
@@ -10636,12 +10796,14 @@ Spring Boot Starter Test: This dependency is used in Spring Boot Application to 
 
 ----
 
-Q5). What is Spring Boot dependency management.
+**What is Spring Boot dependency management.**
+
 Ans: Spring Boot dependency management system manages dependencies and configuration automatically. We need not to specify the version of the dependencies in our configuration file. Spring Boot automatically upgrades all dependencies added in configuration file when we update the Spring Boot version.
 
 ----
 
-Q6) How does Spring Boot works Internally?
+**How does Spring Boot works Internally?**
+
 Ans:
 
 When we Create Spring Boot Application we add the starter Dependencies in it. This Starter Dependencies automatically configures Spring Boot application based on the dependencies you have added to the project. We add @EnableAutoConfiguration annotation for the configuration.
@@ -10654,7 +10816,8 @@ The entry point of the spring boot application is the class contains @SpringBoot
 
 ----
 
-Q7). Explain Auto Configuration in Spring Boot.
+**Explain Auto Configuration in Spring Boot.**
+
 Ans:
 
 Spring Boot Auto Configuration , configures Spring application based on the dependencies we have added in the project.
@@ -10710,7 +10873,8 @@ public class SpringBootApplicationDemo {
 
 ----
 
-Q8) How does a spring boot application get started?
+**How does a spring boot application get started?**
+
 Ans:
 
 Spring Boot application Looks for the class having @SpringBootApplication annotation with main method. This method serves as an entry point, which invokes the SpringApplication.run method to start the application.
@@ -10724,7 +10888,8 @@ public class SpringBootApplicationDemo{
 
 ----
 
-Q9) Tell some commonly used Spring Boot CLI commands?
+**Tell some commonly used Spring Boot CLI commands?**
+
 Ans:
 
 Some commonly used Spring Boot CLI Commands Are:
@@ -10732,7 +10897,8 @@ Some commonly used Spring Boot CLI Commands Are:
 
 ----
 
-Q10) Tell Some Basic Annotations used in Spring Boot?
+**Tell Some Basic Annotations used in Spring Boot?**
+
 Ans:
 
 The Spring Boot annotations reside in its org.springframework.boot.autoconfigure package and its sub-packages.
@@ -10775,14 +10941,16 @@ For Component Types
 
 ----
 
-Q11) What is Spring Boot dependency management?
+**What is Spring Boot dependency management?**
+
 Ans:
 
 Spring Boot manages dependencies and configuration automatically. We don’t need to mention the version of the dependencies in our configuration. We can say Dependency Management as it is a way to manage the dependencies efficiently in one place. When we update the Spring Boot version Spring Boot upgrades all dependencies automatically.
 
 ----
 
-Q12) How you can change the port of embedded Tomcat server in Spring Boot?
+**How you can change the port of embedded Tomcat server in Spring Boot?**
+
 Ans:
 
 There are two ways to change the default port of server in Spring Boot
@@ -10803,7 +10971,8 @@ Also you can change the port value from application.yaml by changing the default
 
 ----
 
-Q13). How you can change the tomcat server to any other Server in Spring Boot?
+**How you can change the tomcat server to any other Server in Spring Boot?**
+
 Ans:
 
 To Replace the embedded tomcat server in Spring Boot first we have to exclude the default server from the pom.xml. And to  add new server we will add the new dependency.
@@ -10831,14 +11000,15 @@ And to include new server add as a dependency. Below is the example to add jetty
 
 ----
 
-Q14) What is @RestController annotation in Sprint boot?
+**What is @RestController annotation in Sprint boot?**
 Ans: 
 
 @RestController  annotation is a combination of @Controller and @ResponseBody annotation. It is used to make restful web services and also it converts the response to JSON or XML. This annotation is used at the class level and it allows class to handle the requests made by the client.
 
 ----
 
-Q15). What is the difference between @Controller and @RestController?
+**What is the difference between @Controller and @RestController?**
+
 Ans: 
 
 With @controller annotation class is responsible for preparing a model Map with data to be displayed by the view But @RestController annotation class is responsible  for creating Restful controllers.
@@ -10849,7 +11019,8 @@ In @Controller, we need to use @ResponseBody on every handler method but in @Res
 
 ----
 
-Q16). What is the difference between RequestMapping and GetMapping?
+**What is the difference between RequestMapping and GetMapping?**
+
 Ans:
 
 
@@ -10858,12 +11029,14 @@ RequestMapping annotation is used with GET, POST, PUT, and other request methods
 
 ----
 
-Q17). What is Actuator in Spring Boot?
+**What is Actuator in Spring Boot?**
+
 Ans: An actuator in Spring boot is a feature  that helps you to monitor and manage your application when you push it to production. These actuators include auditing, health, CPU usage, HTTP hits, metric gathering, and many more that are automatically applied to your application.
 
 ----
 
-Q18). What is the process to enable Actuator in Spring boot application?
+**What is the process to enable Actuator in Spring boot application?**
+
 Ans:
 
 To enable the spring actuator feature, we need to add the dependency of “spring-boot-starter-actuator” in pom.xml.
@@ -10877,7 +11050,8 @@ Below is the xml snippet that can be added
 
 ----
 
-Q19). Tell some endpoint actuator-provide to monitor the Spring boot application?
+**Tell some endpoint actuator-provide to monitor the Spring boot application?**
+
 Ans:
 
 Actuators provide below pre-defined endpoints to monitor our application –
@@ -10903,7 +11077,8 @@ spring boot interview question
 
 ----
 
-Q21). What is dependency Injection in Spring Boot?
+**What is dependency Injection in Spring Boot?**
+
 Ans:
 
 The process of injecting dependent objects into target class is called dependency injection. Suppose our one class is dependent on the another class object. In that case we will provide the other class object to our class. This process is known as dependency injections.
@@ -10924,13 +11099,14 @@ Class Student {
     school.mark();
   }
 }
-Q22). What is an IOC container?
+
+**What is an IOC container?**
 
 ----
 
 Ans: IoC Container is a framework for implementing automatic dependency injection. It manages object creation and its life-time and also injects dependencies into the class.
 
-Q23). Tell the steps how you will create spring boot project using Spring Initializer.
+**Tell the steps how you will create spring boot project using Spring Initializer.**
 
 ----
 
@@ -10951,7 +11127,7 @@ Ans:The advantage of the YAML file over the properties file in Spring Boot is, t
 
 ----
 
-Q25). Tell some difference between @RequestParam vs @PathVariable Annotations.
+**Tell some difference between @RequestParam vs @PathVariable Annotations.**
 Ans:
 
 
@@ -11042,12 +11218,14 @@ It is used to Delete single or multiple value from the database in the Spring Ap
 
 ----
 
-Q27). What is Thymeleaf in Spring Boot?
+**What is Thymeleaf in Spring Boot?**
+
 Ans:Thymeleaf is a server-side Java-based template engine. It is used for both web and standalone environments. It is capable of processing HTML, XML, JavaScript, CSS and even plain text. 
 
 ----
 
-Q28). Tell some embedded containers supported by Spring Boot.
+**Tell some embedded containers supported by Spring Boot.**
+
 Ans:
 
 There are three embedded containers supported by Spring Boot are :
@@ -11058,17 +11236,17 @@ Jetty
 
 ----
 
-Q4). Are exit () and return statements same in function definition?
+**Are exit () and return statements same in function definition?**
 Ans:No, both are different as we used exit() to immediately exit from the program, where as return is used to return the control of programs execution from the called function to calling function.
 
 ----
 
-Q5). When is the “void” keyword used in a function?
+***When is the “void” keyword used in a function?**
 Ans:When we declare the function we have to decide whether we want some return value from the function or not, if we only want to print some value or statements on the screen we use void on the left side of function name otherwise we place the data type of the value on the left side of function name.
 
 ----
 
-Q6). Differentiate between call by value and call by reference.
+**Differentiate between call by value and call by reference.**
 Ans:
 
 Factor
@@ -11098,85 +11276,26 @@ In this actual parameters are passed.
 
 ----
 
-Q7). Explain rand() function in c. Write a program in c to generate a random number.
+**Explain rand() function in c. Write a program in c to generate a random number.**
+
 Ans: The rand() function in c is used to generate a random number.
 
-</https://quescol.com/interview-preparation/spring-boot-interview-questions>
+# https://quescol.com/interview-preparation/spring-boot-interview-questions
 
-<https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#axzz80dfcO0nd>
+# https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#axzz80dfcO0nd
 
-130+ Java Interview Questions Answers for 2 to 7 Year Experienced Programmers
-
-Time is changing and so is Java interviews. Gone are the days, when knowing the difference between String and StringBuffer can help you to go through the second round of interview, questions are becoming more advanced and interviewers are asking more deep questions. When I started my career, questions like Vector vs Array and HashMap vs Hashtable were the most popular ones and just memorizing them gives you a good chance to do well in interviews, but not anymore. Nowadays, you will get questions from the areas where not many Java programmer looks e.g. NIO, patterns, sophisticated unit testing or those which are hard to master e.g. concurrency, algorithms, data structures and coding.
-
-Since I like to explore interview questions, I have got this huge list of questions with me, which contains lots and lots of questions on different topics. I have been preparing this MEGA list for quite some time and now It's ready to share with you guys.
-
-It contains interview questions not only from classic topics like threads, collections, equals and hashcode, sockets but also from NIO, array, string, Java 8, and much more.
-
-It has questions for both entry-level Java programmers and senior developers with years of experience. No matter whether you are a Java developer of 1, 2, 3, 4, 5, 6, 8, 9, or even 10 years of experience, you will find something interesting in this list. 
-
-It contains questions that are super easy to answer, and also, a question that is tricky enough for even seasoned Java programmers. If you need more questions then you can also check out these Java Interview Courses and books to better prepare yourself. 
-
-
-Top 5 Courses to Learn Eclipse IDE for Java Programmers - Best of Lot
-Given the list is long and we have questions from everywhere, it's imperative that answers must be short, concise, and crisp, with no fluffing at all. So apart from this paragraph, you will only hear from me in the questions and answers, no more context, no more feedback, and no more evaluation.
-
-For that, I have already written blog posts, where you can find my views on a particular question, e.g. why I like that question, what makes them challenging, and what kind of answer you should expect from candidates.
-
-This list is a little bit different and I encourage you to share questions and answers in a similar way so that it should be easy to revise. 
-
-I hope this list can be of great use for both interviewer and candidates, the interviewer can, of course, but a little variety on questions to bring novelty and surprise element, which is important for a good interview. While a candidate, can expand and test their knowledge about key areas of Java programming language and platform.
-
-Nowadays and in coming years the focus will be more on advanced concurrency concepts, JVM internals, 32-bit vs 64-bit JVM, unit testing, and clean code. I am sure, once you read through this MEGA list of Java interview questions, you should be able to do well on both telephonic and face-to-face programming interviews.
-
-I have also written a book for Java interviews, Grokking the Java Interview, and Grokking the Spring Boot Interview, where I have shared tips, tricks and frequently asked Java questions from different topics. If you are keen to do well and better prepare for Java interviews, you can also take a look at that. If you want to buy, use the code - friends20 to get a 20% discount because you are already my reader. 
-
-
-Important Topics for Java Interviews
-Apart from quantity, as you can see with a huge number of questions, I have worked hard to maintain quality as well. I have not only shared questions from all important topics but also ensured to include so-called advanced topics which many programmers do not prefer to prepare or just left out because they have not worked on that.
-
-Java NIO and JVM internals questions are the best examples of that. You can keep design patterns also on the same list but a growing number of experienced programmers are now well aware of GOF design patterns and when to use them. 
-
-I have also worked hard to keep this list up-to-date to include what interviewers are asking nowadays and what will be their core focus in the coming years. To give you an idea, this list of Java interview questions includes the following topics:
-Multithreading, concurrency, and thread basics
-Date type conversion and fundamentals
-Garbage Collection
-Java Collections Framework
-Array
-String
-GOF Design Patterns
-SOLID design principles
-Abstract class and interface
-Java basics like equals() and hashcode
-Generics and Enum
-Java IO and NIO
-Common Networking protocols
-Data structure and algorithm in Java
-Regular expressions
-JVM internals
-Java Best Practices
-JDBC
-Date, Time, and Calendar
-XML Processing in Java
-JUnit
-Programming
-
-You guys are also lucky that nowadays there are some good books available to prepare for Java interviews, one of them which I particularly find useful and interesting to read is Java Programming Interview Exposed by Markham. It will take you to some of the most important topics for Java and JEE interviews, worth reading even if you are not preparing for a Java interview.
-
-Top 120 Java Interview Questions Answers
-So now the time has come to introduce you to this MEGA list of 120 Java questions collected from various interviews of last 5 years. I am sure you have seen many of these questions personally on your interviews and many of you would have answered them correctly as well.
-
-
-Multithreading, Concurrency and Thread basics Questions
+**Multithreading, Concurrency and Thread basics Questions**
 
 ----
 
-1) Can we make array volatile in Java?
+**Can we make array volatile in Java?**
+
 This is one of the tricky Java multi-threading questions you will see in senior Java developer Interview. Yes, you can make an array volatile in Java but only the reference which is pointing to an array, not the whole array. What I mean, if one thread changes the reference variable to points to another array, that will provide a volatile guarantee, but if multiple threads are changing individual array elements they won't be having happens before guarantee provided by the volatile modifier.
 
 ----
 
-2) Can volatile make a non-atomic operation to atomic?
+**Can volatile make a non-atomic operation to atomic?**
+
 This another good question I love to ask on volatile, mostly as a follow-up of the previous question. This question is also not easy to answer because volatile is not about atomicity, but there are cases where you can use a volatile variable to make the operation atomic.
 
 One example I have seen is having a long field in your class. If you know that a long field is accessed by more than one thread e.g. a counter, a price field or anything, you better make it volatile. Why? because reading to a long variable is not atomic in Java and done in two steps, If one thread is writing or updating long value, it's possible for another thread to see half value (fist 32-bit). While reading/writing a volatile long or double (64 bit) is atomic.
@@ -11184,22 +11303,26 @@ One example I have seen is having a long field in your class. If you know that a
 ----
 
 
-3) What are practical uses of volatile modifier? 
+**What are practical uses of volatile modifier?**
+
 One of the practical use of the volatile variable is to make reading double and long atomic. Both double and long are 64-bit wide and they are read in two parts, first 32-bit first time and next 32-bit second time, which is non-atomic but volatile double and long read is atomic in Java. Another use of the volatile variable is to provide a memory barrier, just like it is used in Disrupter framework. Basically, Java Memory model inserts a write barrier after you write to a volatile variable and a read barrier before you read it. Which means, if you write to volatile field then it's guaranteed that any thread accessing that variable will see the value you wrote and anything you did before doing that right into the thread is guaranteed to have happened and any updated data values will also be visible to all threads, because the memory barrier flushed all other writes to the cache.
 
 ----
 
-4) What guarantee volatile variable provides? (answer)
+**What guarantee volatile variable provides?**
+
 volatile variables provide the guarantee about ordering and visibility e.g. volatile assignment cannot be re-ordered with other statements but in the absence of any synchronization instruction compiler, JVM or JIT are free to reorder statements for better performance. volatile also provides the happens-before guarantee which ensures changes made in one thread is visible to others. In some cases volatile also provide atomicity e.g. reading 64-bit data types like long and double are not atomic but read of volatile double or long is atomic.
 
+----
 
+**Which one would be easy to write? synchronization code for 10 threads or 2 threads?**
 
-
-5) Which one would be easy to write? synchronization code for 10 threads or 2 threads?
 In terms of writing code, both will be of same complexity because synchronization code is independent of a number of threads. Choice of synchronization though depends upon a number of threads because the number of thread present more contention, so you go for advanced synchronization technique e.g. lock stripping, which requires more complex code and expertise.
 
+----
 
-6) How do you call wait() method? using if block or loop? Why? (answer)
+**How do you call wait() method? using if block or loop? Why?**
+
 wait() method should always be called in loop because it's possible that until thread gets CPU to start running again the condition might not hold, so it's always better to check condition in loop before proceeding. Here is the standard idiom of using wait and notify method in Java:
 // The standard idiom for using the wait method
 synchronized (obj) {
@@ -11211,8 +11334,8 @@ See Effective Java Item 69 to learn more about why wait method should call in th
 
 ----
 
+**What is false sharing in the context of multi-threading?**
 
-7)  What is false sharing in the context of multi-threading? 
 false sharing is one of the well-known performance issues on multi-core systems, where each process has its local cache. false sharing occurs when threads on different processor modify variables that reside on same cache line as shown in the following image:
 
 Java Interview questions for experienced programmers
@@ -11222,106 +11345,118 @@ False sharing is very hard to detect because the thread may be accessing complet
 
 ----
 
-8) What is busy spin? Why should you use it?
+**What is busy spin? Why should you use it?**
+
 Busy spin is one of the technique to wait for events without releasing CPU. It's often done to avoid losing data in CPU cached which is lost if the thread is paused and resumed in some other core. So, if you are working on low latency system where your order processing thread currently doesn't have any order, instead of sleeping or calling wait(), you can just loop and then again check the queue for new messages. It's only beneficial if you need to wait for a very small amount of time e.g. in micro seconds or nano seconds. LMAX Disrupter framework, a high-performance inter-thread messaging library has a BusySpinWaitStrategy which is based on this concept and uses a busy spin loop for EventProcessors waiting on the barrier.
 
 
 ----
 
-9) How do you take thread dump in Java?
+**How do you take thread dump in Java?**
+
 You can take a thread dump of Java application in Linux by using kill -3 PID, where PID is the process id of Java process. In Windows, you can press Ctrl + Break. This will instruct JVM to print thread dump in standard out or err and it could go to console or log file depending upon your application configuration. If you have used Tomcat then when
 
 
 ----
 
 
-10) is Swing thread-safe? (answer)
+**is Swing thread-safe?**
+
 No, Swing is not thread-safe. You cannot update Swing components e.g. JTable, JList or JPanel from any thread, in fact, they must be updated from GUI or AWT thread. That's why swings provide invokeAndWait() and invokeLater() method to request GUI update from any other threads. This methods put update request in AWT threads queue and can wait till update or return immediately for an asynchronous update. You can also check the detailed answer to learn more.
 
-
 ----
 
-11) What is a thread local variable in Java? (answer)
+**What is a thread local variable in Java?**
+
 Thread-local variables are variables confined to a thread, its like thread's own copy which is not shared between multiple threads. Java provides a ThreadLocal class to support thread-local variables. It's one of the many ways to achieve thread-safety. Though be careful while using thread local variable in manged environment e.g. with web servers where worker thread out lives any application variable. Any thread local variable which is not removed once its work is done can potentially cause a memory leak in Java application.
 
-
 ----
 
-12) Write wait-notify code for producer-consumer problem? (answer)
+**Write wait-notify code for producer-consumer problem?**
+
 Please see the answer for a code example. Just remember to call wait() and notify() method from synchronized block and test waiting for condition on the loop instead of if block.
 
 
 ----
 
-13) Write code for thread-safe Singleton in Java? (answer)
+**Write code for thread-safe Singleton in Java?**
+
 Please see the answer for a code example and step by step guide to creating thread-safe singleton class in Java. When we say thread-safe, which means Singleton should remain singleton even if initialization occurs in the case of multiple threads. Using Java enum as Singleton class is one of the easiest ways to create a thread-safe singleton in Java.
 
 ----
 
 
-14) The difference between sleep and wait in Java? (answer)
+**The difference between sleep and wait in Java?**
+
 Though both are used to pause currently running thread, sleep() is actually meant for short pause because it doesn't release lock, while wait() is meant for conditional wait and that's why it release lock which can then be acquired by another thread to change the condition on which it is waiting.
 
 ----
 
+**What is an immutable object? How do you create an Immutable object in Java?**
 
-15) What is an immutable object? How do you create an Immutable object in Java? (answer)
 Immutable objects are those whose state cannot be changed once created. Any modification will result in a new object e.g. String, Integer, and other wrapper class. Please see the answer for step by step guide to creating Immutable class in Java.
 
 ----
 
 
-16) Can we create an Immutable object, which contains a mutable object?
+**Can we create an Immutable object, which contains a mutable object?**
+
 Yes, its possible to create an Immutable object which may contain a mutable object, you just need to be a little bit careful not to share the reference of the mutable component, instead, you should return a copy of it if you have to. Most common example is an Object which contain the reference of java.util.Date object.
-
-
-
-Date types and Basic Java Interview Questions
 
 ----
 
-17) What is the right data type to represent a price in Java? (answer)
+**Date types and Basic Java Interview Questions**
+
+----
+
+**What is the right data type to represent a price in Java?**
+
 BigDecimal if memory is not a concern and Performance is not critical, otherwise double with predefined precision.
 
 
 ----
 
-18) How do you convert bytes to String? (answer)
+**How do you convert bytes to String?**
+
 you can convert bytes to the string using string constructor which accepts byte[], just make sure that right character encoding otherwise platform's default character encoding will be used which may or may not be same.
 
 
 ----
 
-19) How do you convert bytes to long in Java? (answer)
+**How do you convert bytes to long in Java?**
 This questions if for you to answer :-)
 
 ----
 
 
-20) Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?
+20**Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?**
+
 Yes, we can cast but int is 32 bit long in java while byte is 8 bit long in java so when you cast an int to byte higher 24 bits are lost and a byte can only hold a value from -128 to 128.
 
 ----
 
 
-21) There are two classes B extends A and C extends B, Can we cast B into C e.g. C = (C) B; (answer)
+**There are two classes B extends A and C extends B, Can we cast B into C e.g. C = (C) B**
 
 ----
 
 
-22) Which class contains clone method? Cloneable or Object? (answer)
+**Which class contains clone method? Cloneable or Object?**
+
 java.lang.Cloneable is marker interface and doesn't contain any method clone method is defined in the object class. It is also knowing that clone() is a native method means it's implemented in C or C++ or any other native language.
 
 
 ----
 
-23) Is ++ operator is thread-safe in Java? (answer)
+**Is ++ operator is thread-safe in Java?**
+
  No it's not a thread safe operator because its involve multiple instructions like reading a value, incriminating it and storing it back into memory which can be overlapped between multiple threads.
 
 ----
 
 
-24) Difference between a = a + b and a += b ? (answer)
+**Difference between a = a + b and a += b ?**
+
 The += operator implicitly cast the result of addition into the type of variable used to hold the result. When you add two integral variable e.g. variable of type byte, short, or int then they are first promoted to int and them addition happens. If result of addition is more than maximum value of a then a + b will give compile time error but a += b will be ok as shown below
 byte a = 127;
 byte b = 127;
@@ -11331,191 +11466,213 @@ b += a; // ok
 ----
 
 
-25) Can I store a double value in a long variable without casting? (answer)
+**Can I store a double value in a long variable without casting?**
+
 No, you cannot store a double value into a long variable without casting because the range of double is more  that long and you we need to type cast. It's not dificult to answer this question but many develoepr get it wrong due to confusion on which one is bigger between double and long in Java.
 
 
 ----
 
-26) What will this return 3*0.1 == 0.3? true or false? (answer)
+**What will this return 3*0.1 == 0.3? true or false?**
+
 This is one of the really tricky questions. Out of 100, only 5 developers answered this question and only of them have explained the concept correctly. The short answer is false because some floating point numbers can not be represented exactly.
 
 ----
 
 
-27) Which one will take more memory, an int or Integer? (answer)
+**Which one will take more memory, an int or Integer?**
+
 An Integer object will take more memory an Integer is the an object and it  store meta data overhead about the object and int is primitive type so its takes less space.
 
 ----
 
 
-28) Why is String Immutable in Java? (answer)
+**Why is String Immutable in Java?**
+
 One of my favorite Java interview question. The String is Immutable in java because java designer thought that string will be heavily used and making it immutable allow some optimization easy sharing same String object between multiple clients. See the link for the more detailed answer. This is a great question for Java programmers with less experience as it gives them food for thought, to think about how things works in Java, what Jave designers might have thought when they created String class etc.
 
 ----
 
-29) Can we use String in the switch case? (answer)
+**Can we use String in the switch case?**
+
 Yes from Java 7 onward we can use String in switch case but it is just syntactic sugar. Internally string hash code is used for the switch. See the detaiedl answer for more explanation and discussion.
 
 ----
 
-30) What is constructor chaining in Java? (answer)
+**What is constructor chaining in Java?**
+
 When you call one constructor from other than it's known as constructor chaining in Java. This happens when you have multiple, overloaded constructor in the class.
 
+----
 
+**JVM Internals and Garbage Collection Interview Questions**
 
-JVM Internals and Garbage Collection Interview Questions
+----
+
 In last a couple of years I have seen increased focus on JVM internal and Garbage collection tuning, monitoring Java appliation, dealing with Java performance issues on various Java interviews. This is actually become the prime topic for interviewing any experienced Java developer for senior position e.g. technical lead, VP or team lead. If you feel you are short of experience and knowledge in this area then you should read atleast one book mentioned in my list of Java Performance books. I vote goes to Java Performance, The Definitive guide by Scott.
 
 ----
 
-31) What is the size of int in 64-bit JVM?
+**What is the size of int in 64-bit JVM?**
+
 The size of an int variable is constant in Java, it's always 32-bit irrespective of platform. Which means the size of primitive int is same in both 32-bit and 64-bit Java virtual machine.
 
 ----
 
-32) The difference between Serial and Parallel Garbage Collector? (answer)
+**The difference between Serial and Parallel Garbage Collector?**
+
 Even though both the serial and parallel collectors cause a stop-the-world pause during Garbage collection. The main difference between them is that a serial collector is a default copying collector which uses only one GC thread for garbage collection while a parallel collector uses multiple GC threads for garbage collection.
 
 ----
 
-33) What is the size of an int variable in 32-bit and 64-bit JVM? (answer)
+**What is the size of an int variable in 32-bit and 64-bit JVM?**
+
 The size of int is same in both 32-bit and 64-bit JVM, it's always 32 bits or 4 bytes.
 
 ----
 
-34) A difference between WeakReference and SoftReference in Java? (answer)
+**A difference between WeakReference and SoftReference in Java?**
+
 Though both WeakReference and SoftReference helps garbage collector and memory efficient, WeakReference becomes eligible for garbage collection as soon as last strong reference is lost but SoftReference even thought it can not prevent GC, it can delay it until JVM absolutely need memory.
 
 ----
 
-35) How do WeakHashMap works? (answer)
+**How do WeakHashMap works?**
+
 WeakHashMap works like a normal HashMap but uses WeakReference for keys, which means if the key object doesn't have any reference then both key/value mapping will become eligible for garbage collection.
 
 ----
 
-36) What is -XX:+UseCompressedOops JVM option? Why use it? (answer)
+**What is -XX:+UseCompressedOops JVM option? Why use it?**
+
 When you go migrate your Java application from 32-bit to 64-bit JVM, the heap requirement suddenly increases, almost double, due to increasing size of ordinary object pointer from 32 bit to 64 bit. This also adversely affect how much data you can keep in CPU cache, which is much smaller than memory. Since main motivation for moving to 64-bit JVM is to specify large heap size, you can save some memory by using compressed OOP. By using -XX:+UseCompressedOops, JVM uses 32-bit OOP instead of 64-bit OOP.
 
 ----
 
 
-37) How do you find if JVM is 32-bit or 64-bit from Java Program? (answer)
+**How do you find if JVM is 32-bit or 64-bit from Java Program?**
+
 You can find that by checking some system properties like sun.arch.data.model or os.arch
 
 
 ----
 
-38) What is the maximum heap size of 32-bit and 64-bit JVM? (answer)
+**What is the maximum heap size of 32-bit and 64-bit JVM?**
+
 Theoretically, the maximum heap memory you can assign to a 32-bit JVM is 2^32 which is 4GB but practically the limit is much smaller. It also varies between operating systems e.g. form 1.5GB in Windows to almost 3GB in Solaris. 64-bit JVM allows you to specify larger heap size, theoretically 2^64 which is quite large but practically you can specify heap space up to 100GBs. There are even JVM e.g. Azul where heap space of 1000 gigs is also possible.
 
 ----
 
 
-39) What is the difference between JRE, JDK, JVM and JIT? (answer)
+**What is the difference between JRE, JDK, JVM and JIT?**
+
 JRE stands for Java run-time and it's required to run Java application. JDK stands for Java development kit and provides tools to develop Java program e.g. Java compiler. It also contains JRE. The JVM stands for Java virtual machine and it's the process responsible for running Java application. The JIT stands for Just In Time compilation and helps to boost the performance of Java application by converting Java byte code into native code when the crossed certain threshold i.e. mainly hot code is converted into native code.
 
-Java Interview Questions for 3 years experience
+----
 
+**Java Interview Questions for 3 years experience**
 
 ----
 
-40) Explain Java Heap space and Garbage collection? (answer)
+**Explain Java Heap space and Garbage collection?**
 When a Java process is started using java command, memory is allocated to it. Part of this memory is used to create heap space, which is used to allocate memory to objects whenever they are created in the program. Garbage collection is the process inside JVM which reclaims memory from dead objects for future allocation.
 
-JVM Internals Java Interview Questions Answers
-
 ----
 
+**Can you guarantee the garbage collection process?**
 
-41) Can you guarantee the garbage collection process? (answer)
 No, you cannot guarantee the garbage collection, though you can make a request using System.gc() or Runtime.gc() method.
 
 
 ----
 
-42) How do you find memory usage from Java program? How much percent of the heap is used?
+**How do you find memory usage from Java program? How much percent of the heap is used?**
+
 You can use memory related methods from java.lang.Runtime class to get the free memory, total memory and maximum heap memory in Java.  By using these methods, you can find out how many percents of the heap is used and how much heap space is remaining. Runtime.freeMemory() return amount of free memory in bytes, Runtime.totalMemory() returns total memory in bytes and Runtime.maxMemory() returns maximum memory in bytes.
 
 
 ----
 
-43) What is the difference between stack and heap in Java? (answer)
+**What is the difference between stack and heap in Java?**
+
 Stack and heap are different memory areas in the JVM and they are used for different purposes. The stack is used to hold method frames and local variables while objects are always allocated memory from the heap. The stack is usually much smaller than heap memory and also didn't shared between multiple threads, but heap is shared among all threads in JVM.
-
-Java Interview Questions and Answers on Memory
-
 
 ----
 
+***What's the difference between "a == b" and "a.equals(b)"?**
 
-Basic Java concepts Interview Questions
-44) What's the difference between "a == b" and "a.equals(b)"? (answer)
 The a = b does object reference matching if both a and b are an object and only return true if both are pointing to the same object in the heap space, on the other hand, a.equals(b) is used for logical mapping and its expected from an object to override this method to provide logical equality. For example, String class overrides this equals() method so that you can compare two Strings, which are the different object but contains same letters.
 
 ----
 
 
-45) What is a.hashCode() used for? How is it related to a.equals(b)? (answer)
+**What is a.hashCode() used for? How is it related to a.equals(b)?**
+
 hashCode() method returns an int hash value corresponding to an object. It's used in hash based collection classes e.g Hashtable, HashMap, LinkedHashMap and so on. It's very tightly related to equals() method. According to Java specification, two objects which are equal to each other using equals() method must have same hash code.
 
 
 ----
 
-46) Difference between final, finalize and finally? (answer)
+**Difference between final, finalize and finally?**
+
 The final is a modifier which you can apply to variable, methods and classes. If you make a variable final it means its value cannot be changed once initialized. finalize is a method, which is called just before an object is a garbage collected, giving it last chance to resurrect itself, but the call to finalize is not guaranteed. finally is a keyword which is used in exception handling along with try and catch. the finally block is always executed irrespective of whether an exception is thrown from try block or not.
 
 ----
 
 
-47) What is a compile time constant in Java? What is the risk of using it?
+**What is a compile time constant in Java? What is the risk of using it?**
+
 public static final variables are also known as a compile time constant, the public is optional there. They are replaced with actual values at compile time because compiler know their value up-front and also knows that it cannot be changed during run-time. One of the problem with this is that if you happened to use a public static final variable from some in-house or third party library and their value changed later than your client will still be using old value even after you deploy a new version of JARs. To avoid that, make sure you compile your program when you upgrade dependency JAR files.
-
-
-Java Collections Framework Interview Questions
-It also contains Data structure and algorithm Interview question in Java, questions on array, linked list, HashMap, ArrayList, Hashtable, Stack, Queue, PriorityQueue, LinkedHashMap and ConcurrentHashMap.
 
 ----
 
-48) The difference between List, Set, Map, and Queue in Java? (answer)
+**The difference between List, Set, Map, and Queue in Java?**
+
 The list is an ordered collection which allows duplicate. It also has an implementation which provides constant time index based access, but that is not guaranteed by List interface. Set is unordered collection which
 
 ----
 
 
-49) Difference between poll() and remove() method?
+**Difference between poll() and remove() method?**
+
 Both poll() and remove() take out the object from the Queue but if poll() fails then it returns null but if remove fails it throws Exception.
 
 ----
 
 
-50) The difference between LinkedHashMap and PriorityQueue in Java? (answer)
+**The difference between LinkedHashMap and PriorityQueue in Java?**
+
 PriorityQueue guarantees that lowest or highest priority element always remain at the head of the queue, but LinkedHashMap maintains the order on which elements are inserted. When you iterate over a PriorityQueue, iterator doesn't guarantee any order but iterator of LinkedHashMap does guarantee the order on which elements are inserted.
 
 ----
 
+**Difference between ArrayList and LinkedList in Java?**
 
-51) Difference between ArrayList and LinkedList in Java? (answer)
 The obvious difference between them is that ArrrayList is backed by array data structure, supprots random access and LinkedList is backed by linked list data structure and doesn't supprot random access. Accessing an element with the index is O(1) in ArrayList but its O(n) in LinkedList. See the answer for more detailed discussion.
 
 
-52) What is a couple of ways that you could sort a collection? (answer)
+**What is a couple of ways that you could sort a collection?**
+
 You can either use the Sorted collection like TreeSet or TreeMap or you can sort using the ordered collection like a list and using Collections.sort() method.
 
 
-53) How do you print Array in Java? (answer)
+**How do you print Array in Java?**
+
 You can print an array by using the Arrays.toString() and Arrays.deepToString() method. Since array doesn't implement toString() by itself, just passing an array to System.out.println() will not print its contents but Arrays.toString() will print each element.
 
-54) LinkedList in Java is doubly or singly linked list? (answer)
+**LinkedList in Java is doubly or singly linked list?**
+
 It's a doubly linked list, you can check the code in JDK. In Eclipse, you can use the shortcut, Ctrl + T to directly open this class in Editor.
 
-55) Which kind of tree is used to implement TreeMap in Java? (answer)
+**Which kind of tree is used to implement TreeMap in Java?**
+
 A Red Black tree is used to implement TreeMap in Java.
 
 
 ----
 
-56) What is the difference between Hashtable and HashMap? (answer)
+**What is the difference between Hashtable and HashMap?**
+
 There are many differences between these two classes, some of them are following:
 a) Hashtable is a legacy class and present from JDK 1, HashMap was added later.
 b) Hashtable is synchronized and slower but HashMap is not synchronized and faster.
@@ -11525,25 +11682,28 @@ See the answer for more differences between HashMap and Hashtable in Java.
 
 ----
 
-57) How HashSet works internally in Java? (answer)
+**How HashSet works internally in Java?**
+
 HashSet is internally implemented using an HashMap. Since a Map needs key and value, a default value is used for all keys. Similar to HashMap, HashSet doesn't allow duplicate keys and only one null key, I mean you can only store one null object in HashSet.
 
 ----
 
 
-58) Write code to remove elements from ArrayList while iterating? (answer)
- Key here is to check whether candidate uses ArrayList's remove() or Iterator's remove(). Here is the sample code which uses right way o remove elements from ArrayList while looping over and avoids ConcurrentModificationException.
+**Write code to remove elements from ArrayList while iterating?**
 
+ Key here is to check whether candidate uses ArrayList's remove() or Iterator's remove(). Here is the sample code which uses right way o remove elements from ArrayList while looping over and avoids ConcurrentModificationException.
 
 ----
 
-59) Can I write my own container class and use it in the for-each loop?
+**Can I write my own container class and use it in the for-each loop?**
+
 Yes, you can write your own container class. You need to implement the Iterable interface if you want to loop over advanced for loop in Java, though. If you implement Collection then you by default get that property.
 
 
 ----
 
-60) What is default size of ArrayList and HashMap in Java? (answer)
+**What is default size of ArrayList and HashMap in Java?**
+
 As of Java 7 now, default size of ArrayList is 10 and default capacity of HashMap is 16, it must be power of 2. Here is code snippet from ArrayList  and HashMap class :
 // from ArrayList.java JDK 1.7
 private static final int DEFAULT_CAPACITY = 10;  
@@ -11551,38 +11711,46 @@ private static final int DEFAULT_CAPACITY = 10;
 //from HashMap.java JDK 7
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
 
-
 ----
 
+**Is it possible for two unequal objects to have the same hashcode?**
 
-61) Is it possible for two unequal objects to have the same hashcode?
 Yes, two unequal objects can have same hashcode that's why collision happen in a hashmap.
 the equal hashcode contract only says that two equal objects must have the same hashcode it doesn't say anything about the unequal object.
 
 ----
 
-62) Can two equal object have the different hash code?
+**Can two equal object have the different hash code?**
+
 No, thats not possible according to hash code contract.
 
 ----
 
+**Can we use random numbers in the hashcode() method?**
 
-63) Can we use random numbers in the hashcode() method? (answer)
 No, because hashcode of an object should be always same. See the answer to learning more about things to remember while overriding hashCode() method in Java.
 
 ----
 
 
-64) What is the difference between Comparator and Comparable in Java? (answer)
+**What is the difference between Comparator and Comparable in Java?**
+
 The Comparable interface is used to define the  natural order of object while Comparator is used to define custom order. Comparable can be always one, but we can have multiple comparators to define customized order for objects.
 
 ----
 
-65) Why you need to override hashcode, when you override equals in Java? (answer)
+**Why you need to override hashcode, when you override equals in Java?**
+
  Because equals have code contract mandates to override equals and hashcode together .since many container class like HashMap or HashSet depends on hashcode and equals contract.
 
-Java IO and NIO Interview questions
-IO is very important from Java interview point of view. You should have a good knowledge of old Java IO, NIO, and NIO2 alsong with some operating system and disk IO fundamentals. Here are some frequently asked questions form Java IO.
+----
+
+**Java IO and NIO Interview questions**
+
+----
+
+IO is very important from Java interview point of view. You should have a good knowledge of old Java IO, NIO, and NIO2 alsong with some operating system and disk IO fundamentals.
+
 
 66) In my Java program, I have three sockets? How many threads I will need to handle that
 
@@ -11604,14 +11772,15 @@ IO is very important from Java interview point of view. You should have a good k
 
 75) The difference between ByteBuffer and StringBuffer in Java? (answer)
 
+----
 
-
-Java Best Practices Interview question
+**Java Best Practices Interview question**
 Contains best practices from different parts of Java programming e.g. Collections, String, IO, Multi-threading, Error and Exception handling, design patterns etc. This section is mostly for experience Java developer, technical lead,  AVP, team lead and coders who are responsible for products. If you want to create quality products you must know and follow the best practices.
 
 ----
 
-76) What best practices you follow while writing multi-threaded code in Java? (answer)
+**What best practices you follow while writing multi-threaded code in Java?**
+
 Here are couple of best practices which I follow while writing concurrent code in Java:
 a) Always name your thread, this will help in debugging.
 b) minimize the scope of synchronization, instead of making whole method synchronized, only critical section should be synchronized.
@@ -11621,8 +11790,8 @@ e) Prefer concurrent collection over synchronized collection in Java. They provi
 
 ----
 
+**Tell me few best practices you apply while using Collections in Java?**
 
-77) Tell me few best practices you apply while using Collections in Java? (answer)
 Here are couple of best practices I follow while using Collectionc classes from Java:
 a) Always use the right collection e.g. if you need non-synchronized list then use ArrayList and not Vector.
 b) Prefer concurrent collection over synchronized collection because they are more scalable.
@@ -11632,8 +11801,8 @@ e) Always use generics with collection.
 
 ----
 
+**Can you tell us at least 5 best practice you use while using threads in Java?**
 
-78) Can you tell us at least 5 best practice you use while using threads in Java? (answer)
 This is similar to the previous question and you can use the answer given there. Particularly with thread, you should:
 a) name your thread
 b) keep your task and thread separate, use Runnable or Callable with thread pool executor.
@@ -11645,7 +11814,8 @@ Look there are many best practices and I give extra points to the developer whic
 
 ----
 
-79) Name 5 IO best practices? (answer)
+**Name 5 IO best practices?**
+
 IO is very important for performance of your Java application. Ideally you should avoid IO in critical path of your application. Here are couple of Java IO best practices you can follow:
 a) Use buffered IO classes instead of reading individual bytes and char.
 b) Use classes from NIO and NIO2
@@ -11654,7 +11824,8 @@ d) use memory mapped file for faster IO.
 If a Java candidate doesn't know about IO and NIO, especially if he has at least 2 to 4 years of experience, he needs some reading.
 
 
-80) Name 5 JDBC best practices your follow? (answer)
+**Name 5 JDBC best practices your follow?**
+
 Another good Java best practices for experienced Java developer of 7 to 8 years experience. Why it's important? because they are the ones which set the trend in the code and educate junior developers. There are many best practices and you can name as per your confort and conviniece. Here are some of the more common ones:
 a) use batch statement for inserting and updating data.
 b) use PreparedStatement to avoid SQL exception and better performance.
@@ -11664,67 +11835,64 @@ e) Don't generate dynamic SQL by concatenating String with user input.
 
 ----
 
+**Name couple of method overloading best practices in Java?**
 
-81) Name couple of method overloading best practices in Java? (answer)
 Here are some best practices you can follow while overloading a method in Java to avoid confusion with auto-boxing:
 a) Don't overload method where one accepts int and other accepts Integer.
 b) Don't overload method where number of argument is same and only order of argument is different.
 c) Use varargs after overloaded methods has more than 5 arguments.
 
-
-
-Date, Time and Calendar Interview questions in Java
-
 ----
 
-82) Does SimpleDateFormat is safe to use in the multi-threaded program? (answer)
+**Does SimpleDateFormat is safe to use in the multi-threaded program?**
+
 No, unfortunately, DateFormat and all its implementations including SimpleDateFormat is not thread-safe, hence should not be used in the multi-threaded program until external thread-safety measures are applied e.g. confining SimpleDateFormat object into a ThreadLocal variable. If you don't do that, you will get an incorrect result while parsing or formatting dates in Java. Though, for all practical date time purpose, I highly recommend joda-time library.
 
 ----
 
+**How do you format a date in Java? e.g. in the ddMMyyyy format?**
 
-83) How do you format a date in Java? e.g. in the ddMMyyyy format? (answer)
 You can either use SimpleDateFormat class or joda-time library to format date in Java. DateFormat class allows you to format date on many popular formats. Please see the answer for code samples to format date into different formats e.g. dd-MM-yyyy or ddMMyyyy.
 
+----
 
-84) How do you show timezone in formatted date in Java? (answer)
+**How do you show timezone in formatted date in Java?**
 
 ----
 
-85) The difference between java.util.Date and java.sql.Date in Java? (answer)
+**The difference between java.util.Date and java.sql.Date in Java?**
 
 ----
 
-86) How to you calculate the difference between two dates in Java? (program)
+**How to you calculate the difference between two dates in Java?**
 
 ----
 
-87) How do you convert a String(YYYYMMDD) to date in Java? (answer)
-
-
+**How do you convert a String(YYYYMMDD) to date in Java?**
 
 ----
 
+**Unit testing JUnit Interview questions**
 
-Unit testing JUnit Interview questions
-89) How do you test static method? (answer)
+----
+
+**How do you test static method?**
+
 You can use PowerMock library to test static methods in Java.
 
 ----
 
-90) How to do you test a method for an exception using JUnit? (answer)
+**How to do you test a method for an exception using JUnit?**
 
 ----
 
-91) Which unit testing libraries you have used for testing Java programs? (answer)
+**Which unit testing libraries you have used for testing Java programs?**
 
 ----
 
-92) What is the difference between @Before and @BeforeClass annotation? (answer)
-
+**What is the difference between @Before and @BeforeClass annotation?**
 
 ----
-
 
 Programming and Coding Questions
 93) How to check if a String contains only numeric digits? (solution)
@@ -12804,35 +12972,35 @@ Any class which cannot stand in place of its parent violate LSP or Liskov substi
 
 ----
 
-29. What is the Open closed design principle? (answer)
+**What is the Open closed design principle?**
+
 Open closed is another principle from SOLID, which asserts that a system should be open for extension but closed for modification. This means if new functionality is required in a stable system then your tried and tested code should not be touched and new functionality should be provided by adding new classes only. 
 
 
 ----
 
-30. What is the difference between a binary tree and a binary search tree? (answer)
+**What is the difference between a binary tree and a binary search tree?**
+
 Binary search tree is an ordered binary tree, where the value of all nodes in the left tree are less than or equal to node and values of all nodes in right subtree is greater than or equal to the node (e.g. root). It's an important data structure and can be used to represent a sorted structure.
 
 ----
 
+**Can you give a practical example of a recursive algorithm?**
 
-31. Can you give a practical example of a recursive algorithm? (example)
 There are lots of places where recursive algorithm fits e.g. algorithm related to binary and linked list. A couple of examples of a recursive algorithm is reversing String and calculating Fibonacci series. Other examples include reversing linked list, tree traversal, and quick sort algorithm. 
-
 
 ----
 
-31. What is the time complexity of an algorithm?
+**What is the time complexity of an algorithm?**
+
 Time complexity specifies the ratio of time to the input. It shows how much time an algorithm will take to complete for a given number of input. It's approximated valued but enough to give you an indication that how your algorithm will perform if the number of input is increased from 10 to 10 million?
 
 What is the time complexity of an algorithm?
 
-
-
-
 ----
 
-32. What are some important differences between a linked list and an array? (detailed answer)
+**What are some important differences between a linked list and an array?**
+
 linked list and array are two of the most important data structure in the programming world. The most significant difference between them is that array stores its element at the contiguous location while linked list stores its data anywhere in memory. 
 
 This gives linked list enormous flexibility to expand itself because memory is always scattered. 
@@ -12841,16 +13009,16 @@ It's always possible that you wouldn't be able to create an array to store 1M in
 
 For example, you can search an element in array with O(1) time if you know the index but searching will take O(n) time in linked list. For more differences see the detailed answer.
 
-
 ----
 
-33. What is a couple of ways to resolve collision in the hash table?  (answer)
+**What is a couple of ways to resolve collision in the hash table?**
+
 linear probing, double hashing, and chaining. In linear probing, if the bucket is already occupied then function check next bucket linearly until it finds an empty one, while in chaining, multiple elements are stored in same bucket location.
 
 ----
 
+**What is a regular expression?**
 
-34. What is a regular expression? (answer)
 A regular expression is a way to perform pattern matching on text data. It's very powerful tool to find something like some character in a long string e.g. finding if a book contains some word or not. Almost all major programming language supports regular expression but Perl has been renowned for its enormous capability. 
 
 Java also supports Perl-like regular expression using java.util.regex package. 
@@ -12859,8 +13027,8 @@ You can use the regular expression to check if an email is valid or not, if a ph
 
 ----
 
+**What is a stateless system?**
 
-35. What is a stateless system?
 A stateless system is a system which doesn't maintain any internal state. Such system will produce the same output for same input at any point of time. It's always easier to code and optimize a stateless system, so you should always strive for one if possible.
 
 Programming Phone  Interview Questions answers
@@ -12868,8 +13036,7 @@ Programming Phone  Interview Questions answers
 
 ----
 
-
-36. Write SQL query to find second highest salary in employee table? (solution)
+**Write SQL query to find second highest salary in employee table?**
 This is one of the classic questions from SQL interviews, the event it's quite old it is still interesting and has lots of follow-ups you can use to check the depth of candidate's knowledge. You can find second highest salary by using the correlated and non-correlated subquery. 
 
 You can also use keyword's like TOP or LIMIT if you are using SQL Server or MySQL, given Interviewer allows you. The simplest way to find 2nd highest salary is following:
@@ -12882,7 +13049,8 @@ This query first finds maximum salary and then exclude that from the list and ag
 
 ----
 
-37. Can you describe the difference between correlated and non-correlated subquery? (answer)
+**Can you describe the difference between correlated and non-correlated subquery?**
+
 In correlated sub-query, the inner query depends upon the outer query and executes for each row in the outer query. While non-correlated subquery doesn't depend upon the outer query and can be executed independently. 
 
 Due to this reason, former is slow and later is fast. BTW, correlated subquery has some nice applications, one of them is finding Nth highest salary in Employee table, as seen on previous SQL question as well.
@@ -12890,7 +13058,8 @@ Due to this reason, former is slow and later is fast. BTW, correlated subquery h
 
 ----
 
-39. How do you find if a number is a power of two, without using an arithmetic operator? (solution)
+**How do you find if a number is a power of two, without using an arithmetic operator?**
+
 Assume it's a question of using the bitwise operator as soon as you hear restriction about not allowed to use arithmetic operator. If that restriction is not in place then you can easily check if a number is a power of two by using modulus and division operator. By the using bitwise operator, there is a nice trick to do this.  You can use following code to check if a number if power of two or not
 
 public static boolean powerOfTwo(int x) {
@@ -12902,7 +13071,8 @@ x & (x-1) is a nice trick to convert right most bit to zero if it's on, I learne
 
 ----
 
-40. How do you find a  running Java process on UNIX? (command)
+**How do you find a  running Java process on UNIX?**
+
 You can use the combination of 'ps' and 'grep' command to find any process running on UNIX machine. Suppose your Java process has a name or any text which you can use to match against just use following command.
 
 ps -ef | grep "myJavaApp"
@@ -12912,7 +13082,8 @@ ps -e will list every process i.e. process from all user not just you and  ps -f
 ----
 
 
-41. How do you find large files in UNIX  like more than 1GB? (command)
+**How do you find large files in UNIX  like more than 1GB?**
+
 You can easily find big files by using the find command because it provides an option to search files based upon their size. Use this if your file system is full and your Java process is crashing with no more space. This command will list all files which are more than 1GB. You can tweak the size easily like to find all files with more than 100 MB just use +100M.
 
 find . - type f -size +1G -print
