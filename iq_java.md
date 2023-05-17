@@ -2435,34 +2435,23 @@ return reverse;
 The Square root of a number can be found by using the following program.
 
 ```java
-package simplilearnJava;
-
 import java.util.Scanner;
 
-public class SRoot {
-
-public static void main(String args[]) {
-
-try (Scanner sc = new Scanner(System.in)) {
-
-System.out.println("Input a number to find square root: ");
-
-double square = sc.nextDouble();
-
-double squareRoot = Math.sqrt(square);
-
-System.out.printf("The square root is: %f ", squareRoot);
-
-}
-
-}
-
+public class Main {
+    public static void main(String args[]) {
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Input a number to find square root: ");
+            double square = sc.nextDouble();
+            double squareRoot = Math.sqrt(square);
+            System.out.printf("The square root is: %f ", squareRoot);
+        }
+    }
 }
 
 // Expected Output:
 // Input a number to find square root: 
-// 25
-// The square root is: 5
+// 4
+// The square root is: 2,000000 
 ```
 
 ----
@@ -2472,64 +2461,42 @@ System.out.printf("The square root is: %f ", squareRoot);
 The program that finds the duplicate elements in a string is written below:
 
 ```java
-package simplilearnJava;
-
 import java.util.HashMap;
-
 import java.util.Map;
-
 import java.util.Set;
 
-public class FindDuplicate {
+public class Main {
+    public static void main(String args[]) {
+        printDuplicateCharacters("Java is so cool!");
+    }
 
-public static void main(String args[]) {
+    public static void printDuplicateCharacters(String word) {
+        char[] characters = word.toCharArray();
+        Map<Character, Integer> charMap = new HashMap<Character, Integer>();
+        for (Character ch : characters) {
+            if (charMap.containsKey(ch)) {
+                charMap.put(ch, charMap.get(ch) + 1);
+            } else {
+                charMap.put(ch, 1);
+            }
+        }
 
-printDuplicateCharacters("Simplilearn");
-
+        Set<Map.Entry<Character, Integer>> entrySet = charMap.entrySet();
+        System.out.printf("List of duplicate characters in String '%s' %n", word);
+        for (Map.Entry<Character, Integer> entry : entrySet) {
+            if (entry.getValue() > 1) {
+                System.out.printf("%s: %d %n", entry.getKey(), entry.getValue());
+            }
+        }
+    }
 }
 
-public static void printDuplicateCharacters(String word) {
-
-char[] characters = word.toCharArray();
-
-Map<Character, Integer> charMap = new HashMap<Character, Integer>();
-
-for (Character ch : characters) {
-
-if (charMap.containsKey(ch)) {
-
-charMap.put(ch, charMap.get(ch) + 1);
-
-} else {
-
-charMap.put(ch, 1);
-
-}
-
-}
-
-Set<Map.Entry<Character, Integer>> entrySet = charMap.entrySet();
-
-System.out.printf("List of duplicate characters in String '%s' %n", word);
-
-for (Map.Entry<Character, Integer> entry : entrySet) {
-
-if (entry.getValue() > 1) {
-
-System.out.printf("%s: %d %n", entry.getKey(), entry.getValue());
-
-}
-
-}
-
-}
-
-}
-
-// Expected output:
+// Output:
 // List of duplicate characters in String 'Simplilearn.' 
-// i: 2 
-// l: 2 
+// : 3 
+// : 2 
+// : 2 
+// : 3
 ```
 
 ----
@@ -2539,61 +2506,41 @@ System.out.printf("%s: %d %n", entry.getKey(), entry.getValue());
 The following program can be implemented to remove duplicate elements in an ArrayList
 
 ```java
-package simplilearnJava;
-
 import java.util.ArrayList;
-
 import java.util.LinkedHashSet;
-
 import java.util.List;
-
 import java.util.Set;
 
-public class ArrayDuplicate {
+public class Main {
 
-public static void main(String args[]) {
+    public static void main(String args[]) {
+        List<Integer> num = new ArrayList<Integer>();
+        num.add(1);
+        num.add(2);
+        num.add(3);
+        num.add(4);
+        num.add(5);
+        num.add(6);
+        num.add(3);
+        num.add(4);
+        num.add(5);
+        num.add(6);
 
-List<Integer> num = new ArrayList<Integer>();
+        System.out.println("Your list of elements in ArrayList : " + num);
 
-num.add(1);
+        Set<Integer> primesWithoutDuplicates = new LinkedHashSet<Integer>(num);
 
-num.add(2);
+        num.clear();
 
-num.add(3);
+        num.addAll(primesWithoutDuplicates);
 
-num.add(4);
-
-num.add(5);
-
-num.add(6);
-
-num.add(3);
-
-num.add(4);
-
-num.add(5);
-
-num.add(6);
-
-System.out.println("Your list of elements in ArrayList : " + num);
-
-Set<Integer> primesWithoutDuplicates = new LinkedHashSet<Integer>(num);
-
-num.clear();
-
-num.addAll(primesWithoutDuplicates);
-
-System.out.println("list of original numbers without duplication: " + num);
-
+        System.out.println("list of original numbers without duplication: " + num);
+    }
 }
 
-}
-
-Expected Output:
-
-Your list of elements in ArrayList : [1, 2, 3, 4, 5, 6, 3, 4, 5, 6]
-
-list of original numbers without duplication: [1, 2, 3, 4, 5, 6]
+// Output:
+// Your list of elements in ArrayList : [1, 2, 3, 4, 5, 6, 3, 4, 5, 6]
+// list of original numbers without duplication: [1, 2, 3, 4, 5, 6]
 ```
 
 ----
@@ -2603,41 +2550,7 @@ list of original numbers without duplication: [1, 2, 3, 4, 5, 6]
 The following program can be used for word count:
 
 ```java
-package simplilearnJava;
 
-import java.util.HashMap;
-
-public class WordCount {
-
-public static void main(String[] args) {
-
-String str = "Hello World, Welcome to Simplilearn";
-
-String[] split = str.split(" ");
-
-HashMap<String, Integer> map = new HashMap<String, Integer>();
-
-for (int i = 0; i < split.length; i++) {
-
-if (map.containsKey(split[i])) {
-
-int count = map.get(split[i]);
-
-map.put(split[i], count + 1);
-
-} else {
-
-map.put(split[i], 1);
-
-}
-
-}
-
-System.out.println(map);
-
-}
-
-}
 // Expected Output:
 // {Hello=1, Simplilearn=1, Welcome=1, to=1, World,=1}
 ```
@@ -2649,67 +2562,29 @@ System.out.println(map);
 The following program can be used to find the second biggest number in an array list.
 
 ```java
-package simplilearnJava;
+import java.util.HashMap;
 
-public class NextHighest {
+public class Main {
 
-public static void main(String[] args)
+    public static void main(String[] args) {
+        String str = "Hello World, Welcome to Simplilearn";
+        String[] split = str.split(" ");
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
 
-    {
-
-        int array[] = { 1, 2, 3, 4, 11, 12, 13, 14, 21, 22, 23, 24, 31, 32};
-
-        int high = 0;
-
-        int nextHigh = 0;
-
-        System.out.println("The given array is:");
-
-        for (int i = 0; i < array.length; i++)
-
-        {
-
-            System.out.print(array[i] + "\t");
-
-        }
-
-        for (int i = 0; i < array.length; i++)
-
-        {
-
-            if (array[i] > high)
-
-            {
-
-                nextHigh = high;
-
-                high = array[i];
-
+        for (int i = 0; i < split.length; i++) {
+            if (map.containsKey(split[i])) {
+                int count = map.get(split[i]);
+                map.put(split[i], count + 1);
+            } else {
+                map.put(split[i], 1);
             }
-
-            else if (array[i] > nextHigh)
-
-            {
-
-                nextHigh = array[i];
-
-            }
-
         }
-
-        System.out.println("Second Highest is:" + nextHigh);
-
-        System.out.println("Highest Number is: "  +high);
-
+        System.out.println(map);
     }
-
 }
 
-// Expected Output:
-// The given array is:
-// 1 2 3 4 11 12 13 14 21 22 23 24 31 32
-// Second Highest is:31
-// The highest number is: 32
+// Output:
+// {Hello=1, Simplilearn=1, Welcome=1, to=1, World,=1}
 ```
 
 ----
@@ -2724,19 +2599,18 @@ default represents standard input device, i.e., keyboard.
 
 **Could you provide some implementation of a Dictionary having a large number of words?**
 
-The simplest implementation that can be given is that of a List wherein one can place ordered words and perform a Binary search. The other implementation with a better search performance is HashMap where the key is used as the first character of the word and the value as a LinkedList.
+The simplest implementation that can be given is that of a List wherein one can place ordered words and perform a Binary search.
+The other implementation with a better search performance is HashMap where the key is used as the first character of the word and the value as a LinkedList.
 
 Up another level, there are HashMaps like:
 
+```java
 hashmap {
-
 a (key) -> hashmap (key-aa , value (hashmap(key-aaa,value)
-
 b (key) -> hashmap (key-ba , value (hashmap(key-baa,value)
-
 z (key) -> hashmap (key-za , value (hashmap(key-zaa,value)
-
 }
+```
 
 Up to n levels where n is the average size of the word in the dictionary.
 
@@ -2748,42 +2622,24 @@ Generally, instance variables are declared in a class but outside methods wherea
 
 
 ```java
-//Local Variable
-
-import Java.io.*;
-
+// Local Variable
 class Main {
-
-public static void main(String[] args)
-
-{
-
-int var = 145;
-
-System.out.println("Local Variable: " + var);
-
+    public static void main(String[] args)
+    {
+        int var = 145;
+        System.out.println("Local Variable: " + var);
+    }
 }
 
-}
 
 //Instance variable
-
-import Java.io.*;
-
 class Main {
-
-public int value = 12;
-
-public static void main(String[] args)
-
-{
-
-Main va = new Main();
-
-System.out.println("My value is: " + va.value);
-
-}
-
+    public int value = 12;
+    public static void main(String[] args)
+    {
+        Main va = new Main();
+        System.out.println("My value is: " + va.value);
+    }
 }
 ```
 
@@ -2800,35 +2656,27 @@ Example:
 class Main {
 
     public static void main(String args[]) {
-
         System.out.println(" Main Method");
-
     }
 
     public static void main(int[] args){
-
         System.out.println("Overloaded Integer array Main Method");
-
     }
 
     public static void main(char[] args){
-
         System.out.println("Overloaded Character array Main Method");
-
     }
 
+    /*
     public static int main(double[] args){
-
         System.out.println("Overloaded Double array Main Method");
-
+        // Missing return statement here
     }
+    */
 
     public static void main(float args){
-
         System.out.println("Overloaded float Main Method");
-
     }
-
 }
 ```
 
@@ -2841,69 +2689,46 @@ binding is used during overloading, whereas dynamic binding is used during metho
 
 ```java
 //Function overloading
+class Podium {
+    Podium(){};
+    // function1
+    void addPodium(int a, int b) {
+        System.out.println(a + b);
+    }
 
-#function1
-
-void addPodium(int a, int b)
-
-{
-
-System.out.println(a + b);
-
-}
-
-#function2
-
-float addPodium(float a, float b, float c)
-
-{
-
-System.out.println(a + b + c);
-
+    // function2 is overloaded
+    float addPodium(float a, float b, float c) {
+        System.out.println(a + b + c);
+        float res = a + b + c;
+        System.out.println(res);
+        return res;
+    }
 }
 
 //Function overriding
-
 class Parent {
-
     void show()
-
     {
-
         System.out.println("I am Parent");
-
     }
-
 }
 
 class Child extends Parent {
-
+    // show() function is overwritten below
     void show()
-
     {
-
         System.out.println("I am Child");
-
     }
-
 }
 
 class Main {
-
     public static void main(String[] args)
-
     {
-
         Parent obja = new Parent();
-
         obja.show();
-
         Parent objb = new Child();
-
         objb.show();
-
     }
-
 }
 ```
 
@@ -2919,12 +2744,9 @@ to perform multiple tasks in response to various exceptions, use the Java multi-
 **Do final, finally and finalize keywords have the same function?**
 
 No, final, finally and finalize keywords have different functionalities.
-
-Final is used to restrict classes, variables, or methods, the final keyword.
-
-Finally is used to execute the code written inside the block without handling any exceptions.
-
-Finalize is used to call the function of the implementation of cleaning the garbage collection of an object. 
+- Final is used to restrict classes, variables, or methods, the final keyword.
+- Finally is used to execute the code written inside the block without handling any exceptions.
+- Finalize is used to call the function of the implementation of cleaning the garbage collection of an object. 
 
 ----
 
@@ -2933,17 +2755,97 @@ Finalize is used to call the function of the implementation of cleaning the garb
 Basically, the super keyword is used to refer to the parent class. When there are the same fields in
 both parent and child classes, then one can use a super keyword to access data members of the parent class.
 
+```java
+class Vehicle {
+    int maxSpeed = 120;
+}
+
+class Car extends Vehicle {
+    int maxSpeed = 180;
+
+    void display()
+    {
+        // print maxSpeed of base class Vehicle
+        System.out.println("Maximum Speed: " + super.maxSpeed);
+    }
+}
+
+class Main {
+    public static void main(String[] args)
+    {
+        Car small = new Car();
+        small.display();
+    }
+}
+```
+
 ----
 
 **What are shallow copy and deep copy in Java?**
 
 In the case of a shallow copy, primitive data types are copied, whereas in the case of a deep copy along with primitive data types the object references are also copied.
 
+```java
+import java.util.Arrays;
+
+class Ex {
+    private int[] data;
+    // makes a shallow copy of values
+    public Ex(int[] values) {
+        data = values;
+    }
+
+    public void showData() {
+        System.out.println( Arrays.toString(data) );
+    }
+}
+
+class Main {
+    public static void main(String[] args)
+    {
+        int[] newData = {1,2,3,4,5};
+        Ex small = new Ex(newData);
+        small.showData();
+    }
+}
+```
+
+```java
+import java.util.Arrays;
+
+// Code explaining deep copy
+class Ex {
+    private int[] data;
+
+    // altered to make a deep copy of values
+    public Ex(int[] values) {
+        data = new int[values.length];
+        for (int i = 0; i < data.length; i++) {
+            data[i] = values[i];
+        }
+    }
+
+    public void showData() {
+        System.out.println(Arrays.toString(data));
+    }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        int[] newData = {1,2,3,4,5};
+        Ex small = new Ex(newData);
+        small.showData();
+    }
+}
+```
+
 ----
 
 **Using relevant properties highlight the differences between interfaces and abstract classes?**
 
-An abstract class can have a combination of both abstract and non-abstract methods, whereas an interface has only abstract methods in it.
+An abstract class can have a combination of both abstract and non-abstract methods,
+whereas an interface has only abstract methods in it.
 
 ----
 
@@ -2951,45 +2853,33 @@ An abstract class can have a combination of both abstract and non-abstract metho
 
 There are two ways to define and implement a thread in Java. They are by implementing the runnable interface and extending the thread class.
 
-Extending the Thread class
+
 
 ```java
-class InterviewBitThreadExample extends Thread{  
+// Extending the Thread class
+class Main extends Thread{
+    public void run(){
+        System.out.println("Thread runs...");
+    }
 
-   public void run(){  
-
-       System.out.println("Thread runs...");  
-
-   }  
-
-   public static void main(String args[]){  
-
-       InterviewBitThreadExample ib = new InterviewBitThreadExample();  
-
-       ib.start();  
-
-   }  
-
+    public static void main(String args[]){
+        Main ib = new Main();
+        ib.start();
+    }
 }
+```
 
-Implementing the Runnable interface
+```java
+// Implementing the Runnable interface
+class InterviewBitThreadExample implements Runnable {
+    public void run(){
+        System.out.println("Thread runs...");
+    }
 
-class InterviewBitThreadExample implements Runnable{  
-
-   public void run(){  
-
-       System.out.println("Thread runs...");  
-
-   }  
-
-   public static void main(String args[]){  
-
-       Thread ib = new Thread(new InterviewBitThreadExample()); 
-
-       ib.start();  
-
-   }  
-
+    public static void main(String args[]){
+        Thread ib = new Thread(new InterviewBitThreadExample());
+        ib.start();
+    }
 }
 ```
 
@@ -3011,73 +2901,92 @@ The throw keyword is often used to explicitly throw an exception. It can only th
 
 ```java
 class Main {
-
     public static void main(String args[]) {
-
         Scaler s = new Scaler(5);
-
     }
-
 }
 
-class InterviewBit{
-
-    InterviewBit(){
-
+class IB{
+    IB(){
         System.out.println(" Welcome to InterviewBit ");
-
     }
-
 }
 
-class Scaler extends InterviewBit{
-
+class Scaler extends IB{
     Scaler(){
-
         System.out.println(" Welcome to Scaler Academy ");
-
     }
 
     Scaler(int x){
-
+        // both statements must be first in line
+        // super();
         this();
-
-        super();
-
         System.out.println(" Welcome to Scaler Academy 2");
-
     }
-
 }
 ```
 
 The above code will throw the compilation error. It is because the super() is used to call the parent class constructor. But there is the
 condition that super() must be the first statement in the block. Now in this case, if we replace this() with super() then also it will
 throw the compilation error. Because this() also has to be the first statement in the block. So in conclusion, we can say that we
-cannot use this() and super() keywords in the same block.
+__cannot use this() and super() keywords in the same block__.
 
 ----
 
 **Java works as a “pass by value” or “pass by reference” phenomenon?**
 
-Java works as a “pass by value” phenomenon, because “pass by reference” needs the help of pointers. But there are no pointers in Java.
+Java works as a __pass by value__ phenomenon, because __pass by reference__ needs the help of pointers. But there are no pointers in Java.
 
 ----
 
-132. How to not allow serialization of attributes of a class in Java?
+**How to not allow serialization of attributes of a class in Java?**
+
 One approach to not allow serialization of attributes of a class in Java is by using writeObject() and readObject() methods in the subclass and throwing a not Serializable exception.
+
+```java
+// To prevent the serialization of specific attributes of a class in Java, you can use the transient keyword. When you declare a variable as transient,
+// it indicates that the variable should not be serialized. Here's how you can use it:
+
+import java.io.Serializable;
+
+public class MyClass implements Serializable {
+    private transient String sensitiveData;
+    private int normalData;
+    // Rest of the class code
+}
+
+// In this example, the sensitiveData attribute is marked as transient, while the normalData attribute is not. When an object of MyClass is serialized,
+// the sensitiveData attribute will be excluded from the serialization process. Only the non-transient attributes will be serialized.
+
+// It's important to note that the transient keyword only affects the serialization process. When an object is deserialized, the transien
+// attributes will be initialized with their default values (e.g., null for reference types, 0 for numeric types) unless you explicitly provide custom deserialization logic.
+
+// Keep in mind that the transient keyword should be used with caution and applied only to attributes that are not essential or should not be persisted during serialization.**
+```
 
 ----
 
 **What are the default values assigned to variables and instances in Java?**
 
-By default, for a numerical value it is 0, for the boolean value it is false and for objects it is NULL.
+By default, for a __numerical value__ it is __0__, for the __boolean value__ it is __false__ and for __objects__ it is __NULL__.
 
 ----
 
 **What do you mean by data encapsulation?**
 
-Data encapsulation is one of the properties of OOPS concepts, where all the data such as variables and methods are enclosed together as a single unit.
+Data encapsulation, also known as data hiding, is a fundamental principle of object-oriented programming (OOP) that involves bundling data and methods (functions) that operate on that data into a single unit called an object. It is a mechanism that allows the internal representation and implementation details of an object to be hidden from other parts of the program.
+
+The concept of data encapsulation provides several benefits:
+
+Data Protection: Encapsulation helps protect the integrity of data by hiding the internal representation of an object. The data can only be accessed and modified through the defined public methods (getters and setters) of the object. This prevents direct manipulation or accidental modification of the object's internal state by external code, ensuring data consistency and preventing unauthorized access.
+
+Modularity: Encapsulation promotes modularity in software design. By encapsulating data and related methods into objects, the code can be organized into separate units that can be developed, tested, and maintained independently. This allows for better code organization and promotes code reuse.
+
+Abstraction: Encapsulation provides an abstraction layer, where the complex internal details of an object are hidden behind a simplified public interface. Users of the object don't need to know how the data is stored or how the methods are implemented. They only need to know how to interact with the object through its public methods.
+
+Code Flexibility: Encapsulation allows the internal implementation of an object to be changed without affecting the external code that uses the object. By keeping the internal details hidden, the implementation can be modified or optimized as long as the public interface remains consistent. This provides flexibility in making changes to the codebase without impacting other parts of the program.
+
+In Java, data encapsulation is achieved through the use of access modifiers (e.g., public, private, protected) to control the visibility of fields and methods, and by providing public getter and setter methods (also known as accessor and mutator methods) to access and modify the object's data. By encapsulating data within objects and exposing a controlled interface, Java supports the principles of encapsulation and facilitates secure, modular, and flexible software development.
 
 ----
 
@@ -3092,28 +3001,58 @@ Equality operator (==) is used to check the equality condition between two varia
 An infinite loop can be declared in Java by breaking the logic in the instruction block.  For example,
 
 ```java
-for(int i = 1; i > 0; i++)
-
-{
-
-//statements
-
+// In this example, the for loop has no initialization, condition, or increment statement. Without these components, the loop will continue indefinitely without any termination condition.
+for (;;) {
+    // Code to be executed repeatedly
 }
 ```
 
-The above code forms an infinite loop in Java.
+```java
+// In this example, the condition true is always true, so the loop will continue to execute indefinitely.
+while (true) {
+    // Code to be executed repeatedly
+}
+```
 
 ----
 
 **Briefly explain the concept of constructor overloading?**
 
-The concept of constructor overloading refers to having multiple methods in a class with their name being the same as the class name. The difference lies in the set of parameters passed to the functions.
+The concept of constructor overloading refers to having multiple methods in a class with their name being the same as the class name.
+The difference lies in the set of parameters passed to the functions.
+
+```java
+public class MyClass {
+    private int value;
+
+    // Constructor with no parameters
+    public MyClass() {
+        value = 0;
+    }
+
+    // Constructor with one parameter
+    public MyClass(int initialValue) {
+        value = initialValue;
+    }
+
+    // Constructor with two parameters
+    public MyClass(int initialValue, boolean isPositive) {
+        if (isPositive) {
+            value = Math.abs(initialValue);
+        } else {
+            value = initialValue;
+        }
+    }
+    // Rest of the class code
+}
+```
 
 ----
 
 **Explain the use of the final keyword in variable, method and class?**
 
-In Java, one can apply the final keyword to a variable, methods, and class. With the help of the final keyword, the variable turns out to be a constant, the method cannot be inherited and the class cannot be overridden.
+In Java, one can apply the final keyword to a variable, methods, and class. With the help of the final keyword, the variable turns
+out to be a constant, the method cannot be inherited and the class cannot be overridden.
 
 ----
 
@@ -3128,7 +3067,9 @@ During the time of using System.exit()
 
 **Difference between static methods, static variables, and static classes in Java?**
 
-A variable, method, or class can be made static by using the static keyword. A static class cannot be instantiated. When both objects or instances of a class share the same variables, this is referred to as static variables. Static methods are simply methods that refer to the class in which they are written.
+A variable, method, or class can be made static by using the static keyword. A static class cannot be instantiated. When both objects
+or instances of a class share the same variables, this is referred to as static variables. Static methods are simply methods that
+refer to the class in which they are written.
 
 ----
 
@@ -3147,13 +3088,14 @@ Because of security, synchronization, concurrency, caching, and class loading, t
 **Which of the below generates a compile-time error? State the reason?**
 
 ```java
-int[] n1 = new int[0];
-
-boolean[] n2 = new boolean[-200];
-
-double[] n3 = new double[2241423798];
-
-char[] ch = new char[20];
+class Main {
+    public static void main(String args[]) {
+        int[] n1 = new int[0];
+        boolean[] n2 = new boolean[-200]; // Negative ArraySize Exceptions
+        // double[] n3 = new double[2241423798]; // Integer number too large
+        char[] ch = new char[20];
+    }
+}
 ```
 
 We get a compile-time error in line 3. The error we will get in Line 3 is - the integer number too large. It is because the array requires size as an integer.  And Integer takes 4 Bytes in the memory. And the number (2241423798) is beyond the capacity of the integer. The maximum array size we can declare is - (2147483647).
@@ -3166,7 +3108,8 @@ Here what will happen is - At the time when JVM will allocate the required memor
 
 **How would you differentiate between a String, StringBuffer, and a StringBuilder?**
 
-The string class is immutable but the other two are mutable in nature. StringBuffer is synchronous whereas the StringBuilder is asynchronous. String uses string pool as memory storage whereas the other two use heap memory for storage purposes.
+The string class is immutable but the other two are mutable in nature. StringBuffer is synchronous whereas the StringBuilder is asynchronous.
+String uses string pool as memory storage whereas the other two use heap memory for storage purposes.
 
 ----
 
@@ -3178,7 +3121,8 @@ A comparator is an interface, which is used to sort the objects.
 
 **In Java, static as well as private method overriding is possible. Comment on the statement?**
 
-In Java, you could indeed override a private or static method. If you create a similar method in a child class with the same return type and method arguments, it will hide the super class method; this is known as method hiding. Similarly, you cannot override a private method in a subclass because it is not accessible from that.
+In Java, you could indeed override a private or static method. If you create a similar method in a child class with the same return type and method arguments,
+it will hide the super class method; this is known as method hiding. Similarly, you cannot override a private method in a subclass because it is not accessible from that.
 
 ----
 
@@ -3186,11 +3130,26 @@ In Java, you could indeed override a private or static method. If you create a s
 
 In a HashSet, the elements are unsorted and work faster than a Tree set.  It is implemented using a hash table.
 
+1. Ordering: HashSet does not maintain any particular order of its elements. The order in which elements are stored and retrieved is not guaranteed. It uses the hash code of the elements to determine their storage locations, resulting in efficient element retrieval but without any specific order.
+TreeSet, on the other hand, maintains the elements in sorted order. It uses a binary tree data structure (specifically, a self-balancing red-black tree) to store the elements in a sorted manner. This enables efficient element retrieval and also allows for operations like finding the minimum or maximum element or retrieving elements within a specified range.
+
+1. Sorting: HashSet does not provide any inherent sorting capability. If you need sorted elements, you would need to manually sort them using other mechanisms.
+TreeSet automatically maintains the elements in sorted order according to their natural ordering (if they implement the Comparable interface) or a custom comparator provided during TreeSet creation.
+
+1. Performance: HashSet generally offers better performance for basic operations like adding, removing, and checking for the presence of an element (contains) because it relies on the hash code of elements for efficient storage and retrieval.
+TreeSet has a slightly slower performance for basic operations compared to HashSet because it needs to maintain the sorted order of elements using a binary tree structure.
+
+1. Duplicates: HashSet does not allow duplicate elements. If you try to add a duplicate element, it will not be stored in the set.
+TreeSet also does not allow duplicates. It maintains a distinct set of elements based on their natural ordering or the custom comparator.
+
+1. Navigational Operations: TreeSet provides additional navigational operations that are not available in HashSet. These operations include finding the first and last elements, finding elements less than or greater than a given element, and finding elements within a specific range.
+
 ----
 
 **Why is the character array preferred over string for storing confidential information?**
 
-Because Strings are immutable, any change will result in the creation of a new String, whereas char[] allows you to set all of the elements to blank or zero. So storing a password in a character array clearly reduces the security risk of password theft.
+Because Strings are immutable, any change will result in the creation of a new String, whereas char[] allows you to set all of the elements to blank or
+zero. So storing a password in a character array clearly reduces the security risk of password theft.
 
 ----
 
@@ -3212,7 +3171,21 @@ HashTable
 
 **What is the importance of reflection in Java?**
 
-Reflection is a property of Java, enabling the Java code to inspect itself. A Java class, for example, can get the names of all its members and showcase them.
+Reflection is a powerful feature in Java that allows a program to examine and modify its own structure, behavior, and data at runtime. It provides the ability to analyze and manipulate classes, interfaces, methods, fields, and constructors dynamically, without having prior knowledge of their specific details at compile-time. Here are some key aspects that highlight the importance of reflection in Java:
+
+Dynamic Loading and Instantiation: Reflection enables dynamic loading and instantiation of classes at runtime. It allows you to load classes, create objects, and invoke methods dynamically based on runtime conditions or configuration. This provides flexibility and extensibility by allowing the program to work with classes and objects that are determined at runtime.
+
+Introspection and Metadata: Reflection allows you to examine the structure and characteristics of classes, interfaces, methods, and fields. You can retrieve information about their names, types, modifiers, annotations, and more. This introspection capability is useful for building generic frameworks, tools, and libraries that need to operate on classes and objects based on their metadata.
+
+Dynamic Method Invocation: Reflection allows you to invoke methods dynamically at runtime, even if you don't know the exact method signature at compile-time. This enables you to build flexible and extensible systems that can adapt to different method variations or configurations.
+
+Access to Private Members: Reflection provides the ability to access and modify private members of classes, such as private fields and methods, that are not accessible through normal programmatic means. While this can be useful in certain scenarios, it should be used judiciously to respect encapsulation and maintain code integrity.
+
+Framework Development: Reflection is extensively used in Java frameworks, such as dependency injection frameworks (e.g., Spring), object-relational mapping (ORM) frameworks (e.g., Hibernate), and testing frameworks (e.g., JUnit). These frameworks utilize reflection to provide powerful features like automatic wiring of dependencies, mapping objects to database tables, and executing test methods dynamically.
+
+Code Generation and Dynamic Adaptation: Reflection enables code generation and dynamic adaptation of classes and objects. It allows you to create new classes, modify existing classes, or generate proxy classes dynamically. This can be useful in scenarios where you need to generate code dynamically or adapt the behavior of existing classes at runtime.
+
+Although reflection is a powerful feature, it should be used judiciously as it can introduce complexity, impact performance, and bypass compile-time safety checks. It is generally recommended to use reflection sparingly and only when there is a legitimate need for runtime introspection, dynamic behavior, or interaction with external components that rely on reflection.
 
 ----
 
@@ -3222,11 +3195,25 @@ There are different types of thread properties in Java. They are MIN_PRIORITY, M
 
 ----
 
-**What is the ‘IS-A ‘ relationship in OOPs Java?**
+**What is the 'IS-A' relationship in OOPs Java?**
 
 'IS-A' relationship is related to the Inheritance property of OOPs Java. It is a kind of parent-child relationship that is established between two classes.
 
 We offer complete Job Guarantee and money-back if you don't secure a job within 6 months of graduation. Get interview ready with intense and comprehensive career mentoring sessions in our Full Stack Java Developer Program. Enroll TODAY!
+
+```java
+class Animal {
+    // ...
+}
+
+class Dog extends Animal {
+    // ...
+}
+```
+
+In this example, Dog is a subclass of Animal. We can say that "Dog IS-A Animal." The Dog class inherits the attributes and behaviors defined in the Animal class, such as Animal's methods and fields. This allows us to treat a Dog object as an Animal object, which means we can use a Dog object wherever an Animal object is expected.
+
+The "IS-A" relationship facilitates code reuse, polymorphism, and abstraction. It allows you to create specialized classes that inherit and extend the functionality of more general classes, promoting code organization, modularity, and flexibility in your Java programs.
 
 # https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions
 
@@ -3240,18 +3227,44 @@ Java is not 100% Object-oriented because it makes use of eight primitive data ty
 
 **What are wrapper classes in Java?**
 
-Wrapper classes convert the Java primitives into the reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper classes because they “wrap” the primitive data type into an object of that class. Refer to the below image which displays different primitive type, wrapper class and constructor argument.
+Wrapper classes convert the Java primitives into the reference types (objects). Every primitive data type has a class dedicated to it. These are known as wrapper
+classes because they “wrap” the primitive data type into an object of that class. Refer to the below image which displays different primitive type, wrapper class and constructor argument.
+
+Wrapper classes in Java are classes that provide a way to use primitive data types as objects. In Java, primitive data types (such as int, double, boolean, etc.) are not considered objects and do not have methods or other features available to objects. However, there are situations where it is necessary to treat primitive data types as objects. Wrapper classes bridge this gap by providing a class representation for each primitive type.
+
+Java provides a set of predefined wrapper classes for each primitive type:
+
+Integer for int
+Double for double
+Boolean for boolean
+Character for char
+Byte for byte
+Short for short
+Long for long
+Float for float
+Wrapper classes offer several useful functionalities:
+
+Object Representation: Wrapper classes allow primitive data types to be represented as objects. This enables them to be used in situations where objects are required, such as in collections (e.g., ArrayList) or when passing parameters to methods that expect objects.
+
+Conversion and Parsing: Wrapper classes provide methods for converting between primitive types and their corresponding wrapper class objects. For example, Integer class provides methods like parseInt() to parse a string into an int.
+
+Methods and Utility Functions: Wrapper classes provide useful methods and utility functions specific to each data type. These include mathematical operations, comparison methods, conversion methods, and more. For example, the Double class provides methods like doubleValue(), compareTo(), isNaN(), etc.
+
+Autoboxing and Unboxing: Java also provides automatic conversion between primitive types and their corresponding wrapper classes through a process called autoboxing and unboxing. This allows you to assign primitive values to wrapper class variables and vice versa without explicit conversion.
+
+Wrapper classes are particularly useful in scenarios where you need to treat primitive types as objects, such as when working with collections, Java generics, or when utilizing Java libraries that expect objects rather than primitive types.
 
 ----
 
 **What is the difference between Array list and vector in Java?**
 
-ArrayList	Vector
-Array List is not synchronized.	 Vector is synchronized.
-Array List is fast as it’s non-synchronized.	Vector is slow as it is thread safe.
-If an element is inserted into the Array List, it increases its Array size by 50%.	Vector defaults to doubling size of its array.
-Array List does not define the increment size.	Vector defines the increment size.
-Array List can only use Iterator for traversing an Array List.	Vector can use both Enumeration and Iterator for traversing.
+| ArrayList	| Vector |
+| ------- | -------- |
+| Array List is not synchronized.	| Vector is synchronized. |
+| Array List is fast as it’s non-synchronized.	| Vector is slow as it is thread safe. |
+| If an element is inserted into the Array List, it increases its Array size by 50%.	| Vector defaults to doubling size of its array. |
+| Array List does not define the increment size.	| Vector defines the increment size. |
+| Array List can only use Iterator for traversing an Array List.	| Vector can use both Enumeration and Iterator for traversing. |
 
 ----
 
@@ -3259,50 +3272,47 @@ Array List can only use Iterator for traversing an Array List.	Vector can use bo
 
 Equals() method is defined in Object class in Java and used for checking equality of two objects defined by business logic.
 
-“==” or equality operator in Java is a binary operator provided by Java programming language and used to compare primitives and objects. public boolean equals(Object o) is the method provided by the Object class. The default implementation uses == operator to compare two objects. For example: method can be overridden like String class. equals() method is used to compare the values of two objects.
+"==" or equality operator in Java is a binary operator provided by Java programming language and used to compare primitives and objects. public boolean
+equals(Object o) is the method provided by the Object class. The default implementation uses == operator to compare two objects. For example: method can
+be overridden like String class. equals() method is used to compare the values of two objects.
 
-Course Curriculum
-Java Certification Training Course
-Instructor-led SessionsReal-life Case StudiesAssignmentsLifetime Access
-Q10. When can you use the super keyword?
+**When can you use the super keyword?**
+
 In Java, the super keyword is a reference variable that refers to an immediate parent class object.
-
 When you create a subclass instance, you’re also creating an instance of the parent class, which is referenced to by the super reference variable.
 
-The uses of the Java super Keyword are- 
-
-To refer to an immediate parent class instance variable, use super.
-The keyword super can be used to call the method of an immediate parent class.
-Super() can be used to call the constructor of the immediate parent class.
- 
+The uses of the Java super Keyword are: 
+- To refer to an immediate parent class instance variable, use super.
+- The keyword super can be used to call the method of an immediate parent class.
+- Super() can be used to call the constructor of the immediate parent class.
 
 ----
 
 **What makes a HashSet different from a TreeSet?**
 
-HashSet	TreeSet
-It is implemented through a hash table.	TreeSet implements SortedSet Interface that uses trees for storing data.
-It permits the null object.	It does not allow the null object.
-It is faster than TreeSet especially for search, insert, and delete operations.	It is slower than HashSet for these operations.
-It does not maintain elements in an ordered way.	The elements are maintained in a sorted order.
-It uses equals() method to compare two objects.	It uses compareTo() method for comparing two objects.
-It does not permit a heterogenous object.	It permits a heterogenous object.
- 
+| HashSet | TreeSet |
+| -------- | -------- |
+| It is implemented through a hash table. | TreeSet implements SortedSet Interface that uses trees for storing data. |
+| It permits the null object. | It does not allow the null object. |
+| It is faster than TreeSet especially for search, insert, and delete operations. | It is slower than HashSet for these operations. |
+| It does not maintain elements in an ordered way. | The elements are maintained in a sorted order. |
+| It uses equals() method to compare two objects. | It uses compareTo() method for comparing two objects. |
+| It does not permit a heterogenous object. | It permits a heterogenous object. |
 
 ----
 
 **What are the differences between HashMap and HashTable in Java?**
 
-HashMap	Hashtable
-It is non synchronized. It cannot be shared between many threads without proper synchronization code.	It is synchronized. It is thread-safe and can be shared with many threads.
-It permits one null key and multiple null values.	It does not permit any null key or value.
-is a new class introduced in JDK 1.2.	It was present in earlier versions of java as well.
-It is faster.	It is slower.
-It is traversed through the iterator.	It is traversed through Enumerator and Iterator.
-It uses fail fast iterator.	It uses an enumerator which is not fail fast.
-It inherits AbstractMap class.	It inherits Dictionary class.
+| HashMap | Hashtable |
+| --------- | --------- |
+| It is non synchronized. | It cannot be shared between many threads without proper synchronization code. | It is synchronized. It is thread-safe and can be shared with many threads. |
+| It permits one null key and multiple null values. | It does not permit any null key or value. |
+| is a new class introduced in JDK 1.2. | It was present in earlier versions of java as well. |
+| It is faster. | It is slower. |
+| It is traversed through the iterator. | It is traversed through Enumerator and Iterator. |
+| It uses fail fast iterator. | It uses an enumerator which is not fail fast. |
+| It inherits AbstractMap class. | It inherits Dictionary class. |
  
-
 ----
 
 **What is the importance of reflection in Java?**
@@ -3320,21 +3330,56 @@ You should also make an object that potentially contains security-sensitive data
 
 **Can you call a constructor of a class inside another constructor?**
 
-Yes, we can call a constructor of a class inside another constructor. This is also called as constructor chaining. Constructor chaining can be done in 2 ways-
+Yes, we can call a constructor of a class inside another constructor. This is also called as __constructor chaining__. Constructor chaining can be done in 2 ways-
 
 Within the same class: For constructors in the same class, the this() keyword can be used.
 From the base class: The super() keyword is used to call the constructor from the base class.
 The constructor chaining follows the process of inheritance. The constructor of the sub class first calls the constructor of the super class. Due to this, the creation of sub class’s object starts with the initialization of the data members of the super class. The constructor chaining works similarly with any number of classes. Every constructor keeps calling the chain till the top of the chain.
  
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person() {
+        this("Unknown", 0); // Invokes the parameterized constructor with default values
+    }
+
+    public Person(String name) {
+        this(name, 0); // Invokes the parameterized constructor with name and default age
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getters and setters
+
+    public static void main(String[] args) {
+        Person person1 = new Person(); // Invokes the default constructor
+        System.out.println(person1.getName()); // Output: Unknown
+        System.out.println(person1.getAge()); // Output: 0
+
+        Person person2 = new Person("John"); // Invokes the constructor with name parameter
+        System.out.println(person2.getName()); // Output: John
+        System.out.println(person2.getAge()); // Output: 0
+
+        Person person3 = new Person("Jane", 25); // Invokes the constructor with name and age parameters
+        System.out.println(person3.getName()); // Output: Jane
+        System.out.println(person3.getAge()); // Output: 25
+    }
+}
+```
 
 ----
 
 **Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain.**
 
-An array generally contains elements of the primitive data types such as int, float, etc. In such cases, the array directly stores these elements at contiguous memory locations. While an ArrayList does not contain primitive data types. An arrayList contains the reference of the objects at different memory locations instead of the object itself. That is why the objects are not stored at contiguous memory locations.
-
+An array generally contains elements of the primitive data types such as int, float, etc. In such cases, the array directly stores these elements at contiguous
+memory locations. While an ArrayList does not contain primitive data types. An arrayList contains the reference of the objects at different memory locations instead
+of the object itself. That is why the objects are not stored at contiguous memory locations.
  
-
 ----
 
 **How is the creation of a String using new() different from that of a literal?**
@@ -3348,33 +3393,81 @@ When we create a string using new(), a new object is created. Whereas, if we cre
 Java allows multiple threads to execute. They may be accessing the same variable or object. Synchronization helps to execute threads one after another.
 It is important as it helps to execute all concurrent threads while being in sync. It prevents memory consistency errors due to access to shared memory. An example of synchronization code is-
 
-Programming & Frameworks Training
-1
-2
-3
-4
-public synchronized void increment()
-{
-a++;
+```java
+class Counter {
+    private int count = 0;
+
+    public void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
 }
-As we have synchronized this function, this thread can only use the object after the previous thread has used it.
+
+class IncrementerThread extends Thread {
+    private Counter counter;
+
+    public IncrementerThread(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            counter.increment();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+
+        IncrementerThread thread1 = new IncrementerThread(counter);
+        IncrementerThread thread2 = new IncrementerThread(counter);
+
+        thread1.start();
+        thread2.start();
+
+        thread1.join();
+        thread2.join();
+
+        System.out.println("Final count: " + counter.getCount());
+    }
+}
+```
+In this example, we have a Counter class with an increment() method that increments a shared count variable by 1. We create two IncrementerThread instances that both share the same Counter object. Each thread runs a loop to call the increment() method 1000 times.
+
+Without synchronization, there is a possibility of a race condition. Since both threads access and modify the count variable concurrently, they may interfere with each other's operations and lead to inconsistent results. The final count may vary each time the program is executed.
+
+To ensure proper synchronization and consistent results, we can apply synchronization mechanisms. One way is by using the synchronized keyword:
+
+```java
+public synchronized void increment() {
+    count++;
+}
+```
+
+With synchronization, only one thread can execute the increment() method at a time, and other threads will be blocked until the execution completes. This ensures that the count variable is properly updated without any interference, and the final count will always be the expected value of 2000 (1000 increments from each thread).
+
+By applying synchronization in the appropriate sections of code, we can prevent data races, maintain data integrity, and ensure thread safety in multi-threaded environments. It allows for proper coordination and consistency when multiple threads access shared resources or perform critical operations.
 
 ----
 
-**Explain the term “Double Brace Initialization” in Java?**
+**Explain the term "Double Brace Initialization" in Java?**
 
 Double Brace Initialization is a Java term that refers to the combination of two independent processes. There are two braces used in this. The first brace creates an anonymous inner class. The second brace is an initialization block. When these both are used together, it is known as Double Brace Initialization. The inner class has a reference to the enclosing outer class, generally using the ‘this’ pointer. It is used to do both creation and initialization in a single statement. It is generally used to initialize collections. It reduces the code and also makes it more readable.
-
  
 ----
 
-
 **Why is it said that the length() method of String class doesn’t return accurate results?**
 
-The length() method of String class doesn’t return accurate results because
-it simply takes into account the number of characters within in the String. In other words, code points outside of the BMP (Basic Multilingual Plane), that is, code points having a value of U+10000 or above, will be ignored.
+The length() method of String class doesn’t return accurate results because it simply takes into account the number of characters within in the String.
+In other words, code points outside of the BMP (Basic Multilingual Plane), that is, code points having a value of U+10000 or above, will be ignored.
 
-The reason for this is historical. One of Java’s original goals was to consider all text as Unicode; yet, Unicode did not define code points outside of the BMP at the time. It was too late to modify char by the time Unicode specified such code points.
+The reason for this is historical. One of Java’s original goals was to consider all text as Unicode; yet, Unicode did not define code points outside of the
+BMP at the time. It was too late to modify char by the time Unicode specified such code points.
 
 ----
 
@@ -3382,18 +3475,21 @@ The reason for this is historical. One of Java’s original goals was to conside
 
 The major difference between Heap and Stack memory are:
 
-Features	Stack	Heap
-Memory	Stack memory is used only by one thread of execution.	Heap memory is used by all the parts of the application.
-Access	Stack memory can’t be accessed by other threads.	Objects stored in the heap are globally accessible.
-Memory Management	Follows LIFO manner to free memory.	Memory management is based on the generation associated with each object.
-Lifetime	Exists until the end of execution of the thread.	Heap memory lives from the start till the end of application execution.
-Usage	Stack memory only contains local primitive and reference variables to objects in heap space.	Whenever an object is created, it’s always stored in the Heap space.
+| Features | Stack | Heap |
+| ------- | ------- | ------- |
+| Memory | Stack memory is used only by one thread of execution. | Heap memory is used by all the parts of the application. |
+| Access | Stack memory can’t be accessed by other threads. | Objects stored in the heap are globally accessible. |
+| Memory | Management	Follows LIFO manner to free memory. | Memory management is based on the generation associated with each object. |
+| Lifetime | Exists until the end of execution of the thread. | Heap memory lives from the start till the end of application execution. |
+| Usage | Stack memory only contains local primitive and reference variables to objects in heap space. | Whenever an object is created, it’s always stored in the Heap space. |
 
 ----
 
 **Why pointers are not used in Java?**
 
-Java doesn’t use pointers because they are unsafe and increases the complexity of the program. Since, Java is known for its simplicity of code, adding the concept of pointers will be contradicting. Moreover, since JVM is responsible for implicit memory allocation, thus in order to avoid direct access to memory by the user,  pointers are discouraged in Java.
+Java doesn’t use pointers because they are unsafe and increases the complexity of the program. Since, Java is known for its simplicity of code, adding
+the concept of pointers will be contradicting. Moreover, since JVM is responsible for implicit memory allocation, thus in order to avoid direct access
+to memory by the user,  pointers are discouraged in Java.
 
 ----
 
@@ -3405,22 +3501,13 @@ Methods	Constructors
 3. Needs to be invoked explicitly	3. Is invoked implicitly
 4. No default method is provided by the compiler	4. A default constructor is provided by the compiler if the class has none
 5. Method name may or may not be same as class name	5. Constructor name must always be the same as the class name
-In case you are facing any challenges with these Core Java interview questions, please comment on your problems in the section below.
-
-----
-
-**What is constructor chaining in Java?**
-
-In Java, constructor chaining is the process of calling one constructor from another with respect to the current object. Constructor chaining is possible only through legacy where a subclass constructor is responsible for invoking the superclass’ constructor first. There could be any number of classes in the constructor chain. Constructor chaining can be achieved in two ways:
-
-Within the same class using this()
-From base class using super()
 
 ----
 
 **What is a Map in Java?**
 
-In Java, Map is an interface of Util package which maps unique keys to values. The Map interface is not a subset of the main Collection interface and thus it behaves little different from the other collection types. Below are a few of the characteristics of Map interface: 
+In Java, Map is an interface of Util package which maps unique keys to values. The Map interface is not a subset of the main Collection interface and thus it
+behaves little different from the other collection types. Below are a few of the characteristics of Map interface: 
 
 Map doesn’t contain duplicate keys.
 Each key can map at max one value.
@@ -3433,75 +3520,71 @@ Each key can map at max one value.
 
 **Can you override a private or static method in Java?**
 
-You cannot override a private or static method in Java. If you create a similar method with the same return type and same method arguments in child class then it will hide the superclass method; this is known as method hiding. Similarly, you cannot override a private method in subclass because it’s not accessible there. What you can do is create another private method with the same name in the child class. Let’s take a look at the example below to understand it better.
+You cannot override a private or static method in Java. If you create a similar method with the same return type and same method arguments in child class then
+it will hide the superclass method; this is known as method hiding. Similarly, you cannot override a private method in subclass because it’s not accessible
+there. What you can do is create another private method with the same name in the child class. Let’s take a look at the example below to understand it better.
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
+```java
 class Base {
-private static void display() {
-System.out.println("Static or class method from Base");
+    private static void display() {
+        System.out.println("Static or class method from Base");
+    }
+
+    public void print() {
+        System.out.println("Non-static or instance method from Base");
+    }
+
+    class Main extends Base {
+        private static void display() {
+            System.out.println("Static or class method from Derived");
+        }
+
+        public void print() {
+            System.out.println("Non-static or instance method from Derived");
+        }
+
+        public class test {
+            public void main(String args[]) {
+                Base obj = new Main();
+                obj.display();
+                obj.print();
+            }
+        }
+    }
 }
-public void print() {
-System.out.println("Non-static or instance method from Base");
-}
-class Derived extends Base {
-private static void display() {
-System.out.println("Static or class method from Derived");
-}
-public void print() {
-System.out.println("Non-static or instance method from Derived");
-}
-public class test {
-public static void main(String args[])
-{
-Base obj= new Derived();
-obj1.display();
-obj1.print();
-}
-}
+```
 
 ----
 
 **What is multiple inheritance? Is it supported by Java?**
 
-MultipleInheritance - Java Interview Questions - EdurekaIf a child class inherits the property from multiple classes is known as multiple inheritance. Java does not allow to extend multiple classes.
-
 The problem with multiple inheritance is that if multiple parent classes have the same method name, then at runtime it becomes difficult for the compiler to decide which method to execute from the child class.
 
 Therefore, Java doesn’t support multiple inheritance. The problem is commonly referred to as Diamond Problem.
-
-In case you are facing any challenges with these java interview questions, please comment on your problems in the section below.
 
 ----
 
 **What is a marker interface?**
 
-A Marker interface can be defined as the interface having no data member and member functions. In simpler terms, an empty interface is called the Marker interface. The most common examples of Marker interface in Java are Serializable, Cloneable etc. The marker interface can be declared as follows.
+n Java, a marker interface is an interface that does not declare any methods. It serves as a special type of interface that acts as a "marker" or a tag to indicate something about the classes that implement it. The presence of the marker interface on a class provides additional information to the compiler or runtime environment.
 
-1
-2
-public interface Serializable{
-}
+Marker interfaces in Java are typically used for:
+
+Identifying Special Behaviors: Marker interfaces are often used to identify certain characteristics or behaviors of a class. By implementing a specific marker interface, a class indicates that it possesses a particular capability or feature.
+
+Flagging or Categorizing Classes: Marker interfaces can be used to categorize classes into specific groups or categories. They can act as metadata to mark classes for specific processing or handling based on their classification.
+
+Enabling Runtime Processing: The presence of a marker interface on a class can enable certain runtime processing or behavior. It allows the runtime environment to make decisions or apply special treatment based on the interface implementation.
+
+Some examples of marker interfaces in Java include:
+
+java.io.Serializable: The Serializable interface is a marker interface that indicates that a class can be serialized, allowing objects of that class to be converted into a stream of bytes for storage or transmission.
+
+java.lang.Cloneable: The Cloneable interface is a marker interface that indicates that a class can be cloned, allowing objects of that class to be copied or cloned using the clone() method.
+
+java.util.RandomAccess: The RandomAccess interface is a marker interface that indicates that a List implementation provides efficient random access to its elements, allowing constant-time access to any position.
+
+Marker interfaces are simple and lightweight, providing a way to add extra information or behavior to classes without adding any method requirements. They rely on conventions and the presence of the interface itself to convey meaning or trigger specific behavior.
 
 ----
 
@@ -3509,51 +3592,195 @@ public interface Serializable{
 
 Object cloning in Java is the process of creating an exact copy of an object. It basically means the ability to create an object with a similar state as the original object. To achieve this, Java provides a method clone() to make use of this functionality. This method creates a new instance of the class of the current object and then initializes all its fields with the exact same contents of corresponding fields. To object clone(), the marker interface java.lang.Cloneable must be implemented to avoid any runtime exceptions. One thing you must note is Object clone() is a protected method, thus you need to override it.
 
+```java
+// Marker interface
+interface MyMarkerInterface {
+    // No methods declared
+}
+
+// Class implementing the marker interface
+class MyClass implements MyMarkerInterface {
+    // Class implementation
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass myObj = new MyClass();
+
+        // Check if the object implements the marker interface
+        if (myObj instanceof MyMarkerInterface) {
+            System.out.println("MyClass object implements MyMarkerInterface");
+        } else {
+            System.out.println("MyClass object does not implement MyMarkerInterface");
+        }
+    }
+}
+```
+
 ----
 
 **What is a copy constructor in Java?**
 
 Copy constructor is a member function that is used to initialize an object using another object of the same class. Though there is no need for copy constructor in Java since all objects are passed by reference. Moreover, Java does not even support automatic pass-by-value.
 
+```java
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Copy constructor
+    public Person(Person other) {
+        this.name = other.name;
+        this.age = other.age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("John", 25);
+
+        // Create a new object using the copy constructor
+        Person person2 = new Person(person1);
+
+        // Modify the original object
+        person1.setName("Alice");
+        person1.setAge(30);
+
+        // Display the details of both objects
+        System.out.println("Person 1 - Name: " + person1.getName() + ", Age: " + person1.getAge());
+        System.out.println("Person 2 - Name: " + person2.getName() + ", Age: " + person2.getAge());
+    }
+}
+```
+
 ----
 
 **What is Request Dispatcher?**
 
-RequestDispatcher interface is used to forward the request to another resource that can be HTML, JSP or another servlet in same application. We can also use this to include the content of another resource to the response.
+RequestDispatcher interface is used to forward the request to another resource that can be HTML, JSP or another servlet in same application.
+We can also use this to include the content of another resource to the response.
 
 There are two methods defined in this interface:
+- 1.void forward()
+- 1.void include()
 
-1.void forward()
+In Java, the RequestDispatcher interface is part of the Java Servlet API and provides a way to forward or include HTTP requests and responses between server-side components. It allows servlets or JSP pages to collaborate and share processing tasks.
 
-2.void include()
+The RequestDispatcher can be obtained from the ServletRequest object using the getRequestDispatcher() method. It provides two main methods:
 
-ForwardMethod - Java Interview Questions - Edureka
-IncludeMethod - Java Interview Questions - Edureka
+forward(ServletRequest request, ServletResponse response): This method forwards the request and response objects from the current servlet to another servlet or JSP page for further processing. The original servlet relinquishes control, and the target servlet or JSP page becomes responsible for generating the response.
+
+include(ServletRequest request, ServletResponse response): This method includes the response of another servlet or JSP page in the current servlet's response. The processing of the current servlet continues after the included response is appended.
+
+The RequestDispatcher allows components in a web application to collaborate and delegate processing tasks to each other. It is commonly used for:
+
+Forwarding requests to other servlets or JSP pages for additional processing or generating the response.
+Including the output of other servlets or JSP pages in the current response.
+Implementing MVC (Model-View-Controller) architecture by dispatching requests to appropriate components for handling different aspects of the application.
+Overall, the RequestDispatcher provides a mechanism for coordinating and sharing processing tasks within a web application, allowing different components to work together to handle HTTP requests and generate responses.
+
+Example:
+
+Suppose we have two servlets, Servlet1 and Servlet2, and we want to forward a request from Servlet1 to Servlet2 for further processing.
+
+```java
+// Serverlet1.java
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+public class Servlet1 extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Perform some processing
+        // ...
+
+        // Obtain the RequestDispatcher for Servlet2
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/servlet2");
+
+        // Forward the request and response objects to Servlet2
+        dispatcher.forward(request, response);
+    }
+}
+
+```
+
+
+```java
+// Serverlet2.java
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Servlet2 extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Perform some processing
+        // ...
+
+        // Set the response content type
+        response.setContentType("text/html");
+
+        // Get the PrintWriter object to write the response
+        PrintWriter out = response.getWriter();
+
+        // Write the response content
+        out.println("<h1>Servlet2 Response</h1>");
+        out.println("<p>This is the response from Servlet2.</p>");
+
+        // Close the PrintWriter
+        out.close();
+    }
+}
+
+```
+
+In this example, when a request is made to Servlet1, it performs some processing and then obtains the RequestDispatcher object for Servlet2 using the getRequestDispatcher() method.
+
+The forward() method of the RequestDispatcher is then called to forward the request and response objects to Servlet2 for further processing. This means that the control is transferred to Servlet2, and it becomes responsible for generating the response.
+
+In Servlet2, we perform some processing and generate the response using the PrintWriter object. The response content includes an HTML heading and a paragraph. Finally, the response is sent back to the client.
+
+Note that the URL pattern "/servlet2" is used as the argument to getRequestDispatcher(), which corresponds to the URL pattern mapped to Servlet2 in the servlet configuration.
+
+By using the RequestDispatcher and the forward() method, we can forward the request and response between servlets or JSP pages in a web application, allowing them to collaborate and share processing tasks.
 
 ----
 
 **What are the differences between forward() method and sendRedirect() methods?**
 
-forward() method	SendRedirect() method
-forward() sends the same request to another resource.	sendRedirect() method sends new request always because it uses the URL bar of the browser.
- forward() method works at server side.	 sendRedirect() method works at client side.
- forward() method works within the server only.	sendRedirect() method works within and outside the server.
+| forward() method | SendRedirect() method |
+| ---------------- | ---------------------- |
+| forward() sends the same request to another resource. | sendRedirect() method sends new request always because it uses the URL bar of the browser. |
+| forward() method works at server side. | sendRedirect() method works at client side. |
+| forward() method works within the server only. | sendRedirect() method works within and outside the server. |
 
 ----
 
 **What is the life-cycle of a servlet?**
 
 There are 5 stages in the lifecycle of a servlet:LifeCycleServlet - Java Interview Questions - Edureka
-
-Servlet is loaded
-Servlet is instantiated
-Servlet is initialized
-Service the request
-Servlet is destroyed
+- Servlet is loaded
+- Servlet is instantiated
+- Servlet is initialized
+- Service the request
+- Servlet is destroyed
 
 ----
 
-**How does cookies work in Servlets?**
+**How do cookies work in Servlets?**
 
 Cookies are text data sent by server to the client and it gets saved at the client local machine.
 Servlet API provides cookies support through javax.servlet.http.Cookie class that implements Serializable and Cloneable interfaces.
@@ -3566,12 +3793,13 @@ Similarly HttpServletResponse addCookie(Cookie c) method is provided to attach c
 
 The difference between ServletContext and ServletConfig in Servlets JSP is in below tabular format.
 
-ServletConfig	ServletContext
-Servlet config object represent single servlet	It represent whole web application running on particular JVM and common for all the servlet
-Its like local parameter associated with particular servlet	Its like global parameter associated with whole application
-It’s a name value pair defined inside the servlet section of web.xml file so it has servlet wide scope	ServletContext has application wide scope so define outside of servlet tag in web.xml file.
-getServletConfig() method is used to get the config object	getServletContext() method is  used to get the context object.
-for example shopping cart of a user is a specific to particular user so here we can use servlet config	To get the MIME type of a file or application session related information is stored using servlet context object.
+| ServletConfig	| ServletContext |
+| -------------	| ------------- |
+| Servlet config object represent single servlet | It represent whole web application running on particular JVM and common for all the servlet |
+| Its like local parameter associated with particular servlet | Its like global parameter associated with whole application |
+| It’s a name value pair defined inside the servlet section of web.xml file so it has servlet wide scope | ServletContext has application wide scope so define outside of servlet tag in web.xml file. |
+| getServletConfig() method is used to get the config object| getServletContext() method is  used to get the context object. |
+| for example shopping cart of a user is a specific to particular user so here we can use servlet config | To get the MIME type of a file or application session related information is stored using servlet context object.  |
 
 ----
 
@@ -3580,15 +3808,11 @@ for example shopping cart of a user is a specific to particular user so here we 
 Session is a conversational state between client and server and it can consists of multiple request and response between client and server. Since HTTP and Web Server both are stateless, the only way to maintain a session is when some unique information about the session (session id) is passed between server and client in every request and response.
 
 Some of the common ways of session management in servlets are:
-
-User Authentication
-HTML Hidden Field
-Cookies
-URL Rewriting
-Session Management API
-
-SessionManagement - Java Interview Questions - Edureka
-Apart from this blog, if you want to get trained by professionals on this technology, you can opt for structured training from edureka! Click below to know more.
+- User Authentication
+- HTML Hidden Field
+- Cookies
+- URL Rewriting
+- Session Management API
 
 ----
 
@@ -3600,29 +3824,37 @@ JDBC-ODBC bridge driver
 Native-API driver (partially java driver)
 Network Protocol driver (fully java driver)
 Thin driver (fully java driver)
-2. What are the steps to connect to a database in java?
+
+----
+
+**What are the steps to connect to a database in java?**
+
 Registering the driver class
 Creating connection
 Creating statement
 Executing queries
 Closing connection
-3. What are the JDBC API components?
+
+----
+
+**What are the JDBC API components?**
+
 The java.sql package contains interfaces and classes for JDBC API.
 
 Interfaces:
-Connection
-Statement
-PreparedStatement
-ResultSet
-ResultSetMetaData
-DatabaseMetaData
-CallableStatement etc.
-Classes:
-DriverManager
-Blob
-Clob
-Types
-SQLException etc.
+- Connection
+- Statement
+- PreparedStatement
+- ResultSet
+- ResultSetMetaData
+- DatabaseMetaData
+- CallableStatement etc.
+- Classes:
+- DriverManager
+- Blob
+- Clob
+- Types
+- SQLException etc.
 
 ----
 
@@ -3741,23 +3973,23 @@ For generic exceptions, most of the times we serve static pages. Spring Framewor
 
 Some of the Spring annotations that I have used in my project are:
 
-@Controller – for controller classes in Spring MVC project.
+__@Controller__ – for controller classes in Spring MVC project.
 
-@RequestMapping – for configuring URI mapping in controller handler methods. This is a very important annotation, so you should go through Spring MVC RequestMapping Annotation Examples
+__@RequestMapping__ – for configuring URI mapping in controller handler methods. This is a very important annotation, so you should go through Spring MVC RequestMapping Annotation Examples
 
-@ResponseBody – for sending Object as response, usually for sending XML or JSON data as response.
+__@ResponseBody__ – for sending Object as response, usually for sending XML or JSON data as response.
 
-@PathVariable – for mapping dynamic values from the URI to handler method arguments.
+__@PathVariable__ – for mapping dynamic values from the URI to handler method arguments.
 
-@Autowired – for autowiring dependencies in spring beans.
+__@Autowired__ – for autowiring dependencies in spring beans.
 
-@Qualifier – with @Autowired annotation to avoid confusion when multiple instances of bean type is present.
+__@Qualifier__ – with @Autowired annotation to avoid confusion when multiple instances of bean type is present.
 
-@Service – for service classes.
+__@Service__ – for service classes.
 
-@Scope – for configuring the scope of the spring bean.
+__@Scope__ – for configuring the scope of the spring bean.
 
-@Configuration, @ComponentScan and @Bean – for java based configurations.
+__@Configuration, @ComponentScan and @Bean__ – for java based configurations.
 
 AspectJ annotations for configuring aspects and advices , @Aspect, @Before, @After, @Around, @Pointcut, etc.
 
@@ -3765,9 +3997,114 @@ AspectJ annotations for configuring aspects and advices , @Aspect, @Before, @Aft
 
 **How to integrate Spring and Hibernate Frameworks?**
 
-We can use Spring ORM module to integrate Spring and Hibernate frameworks if you are using Hibernate 3+ where SessionFactory provides current session, then you should avoid using HibernateTemplate or HibernateDaoSupport classes and better to use DAO pattern with dependency injection for the integration.
+We can use Spring ORM module to integrate Spring and Hibernate frameworks if you are using Hibernate 3+ where SessionFactory provides current session, then
+you should avoid using HibernateTemplate or HibernateDaoSupport classes and better to use DAO pattern with dependency injection for the integration.
 
 Also, Spring ORM provides support for using Spring declarative transaction management, so you should utilize that rather than going for hibernate boiler-plate code for transaction management. 
+
+Integrating Spring and Hibernate frameworks involves configuring and wiring them together to leverage the benefits of both frameworks. Here are the general steps to integrate Spring and Hibernate:
+
+Set up the project:
+
+Create a new Java project using your preferred build tool (e.g., Maven or Gradle).
+Include the required dependencies for both Spring and Hibernate in your project's build file.
+Configure the Spring container:
+
+Create a Spring configuration file (e.g., applicationContext.xml) to define the Spring beans and their dependencies.
+Configure the data source bean to establish the database connection. You can use Spring's built-in DriverManagerDataSource or other data source implementations.
+Set up the Hibernate session factory bean by providing the data source and other required Hibernate properties.
+Configure the transaction manager to manage database transactions. Spring provides various transaction manager implementations, such as DataSourceTransactionManager or HibernateTransactionManager.
+Create Hibernate entity classes:
+
+Create your entity classes that represent the database tables in your application.
+Annotate the entity classes with Hibernate annotations or use XML mappings to define the object-relational mapping (ORM) metadata.
+Define Hibernate DAO classes:
+
+Create DAO (Data Access Object) classes that encapsulate the CRUD operations and interact with the database using Hibernate.
+Inject the session factory bean into the DAO classes to obtain a Hibernate session for performing database operations.
+Configure Spring to manage Hibernate DAOs:
+
+Declare the DAO beans in the Spring configuration file, specifying their dependencies (e.g., session factory).
+Enable Spring's component scanning or explicitly define the DAO beans in the configuration file.
+Implement business logic:
+
+Create service classes that contain the business logic of your application.
+Inject the DAO beans into the service classes to perform database operations.
+Leverage Spring's transaction management:
+
+Annotate the service classes or specific methods with @Transactional to enable Spring's declarative transaction management.
+Spring will handle transaction boundaries, commit/rollback, and other transaction-related operations.
+Build and run the application:
+
+Build the project using your build tool.
+Deploy the application to a web server or run it in your preferred environment.
+By following these steps, you can integrate Spring and Hibernate frameworks, allowing Spring to manage the Hibernate session factory, transactions, and dependency injection while leveraging Hibernate's ORM capabilities for data persistence.
+
+```java
+// Entity class
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    // Getters and setters
+}
+
+// DAO class
+@Repository
+public class UserDaoImpl implements UserDao {
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    @Override
+    public User getUserById(Long id) {
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(User.class, id);
+    }
+
+    // Other database operations
+}
+
+// Service class
+@Service
+@Transactional
+public class UserService {
+    @Autowired
+    private UserDao userDao;
+
+    public User getUserById(Long id) {
+        return userDao.getUserById(id);
+    }
+
+    // Other business logic methods
+}
+
+// Main class
+public class MainApp {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService = context.getBean(UserService.class);
+
+        // Use the service to interact with the database
+        User user = userService.getUserById(1L);
+        System.out.println(user.getName());
+
+        // ...
+    }
+}
+```
+
+In this example, we have a User entity class annotated with Hibernate annotations. The UserDaoImpl class is a Hibernate DAO that uses the session factory to perform database operations. The UserService class is a service layer that injects the DAO and provides business logic methods.
+
+The Spring configuration file applicationContext.xml defines the beans, including the data source, session factory, transaction manager, DAO, and service beans. The @Repository, @Service, and @Transactional annotations are used to enable Spring's component scanning and transaction management.
+
+In the MainApp class, we obtain the UserService bean from the Spring context and use it to retrieve a user from the database.
+
+Note that this example is a simplified representation to demonstrate the integration of Spring and Hibernate. In a real-world application, you may need to configure additional settings, handle exceptions, and implement more advanced features based on your specific requirements.
 
 ----
 
@@ -3785,27 +4122,130 @@ Hibernate – Java Interview Questions for Experienced Professionals
 
 **What is Hibernate Framework?**
 
-Object-relational mapping or ORM is the programming technique to map application domain model objects to the relational database tables. Hibernate is Java-based ORM tool that provides a framework for mapping application domain objects to the relational database tables and vice versa.
+Object-relational mapping or ORM is the programming technique to map application domain model objects to the relational database tables. Hibernate is Java-based ORM tool
+that provides a framework for mapping application domain objects to the relational database tables and vice versa.
 
-Hibernate provides a reference implementation of Java Persistence API, that makes it a great choice as ORM tool with benefits of loose coupling. We can use the Hibernate persistence API for CRUD operations. Hibernate framework provide option to map plain old java objects to traditional database tables with the use of JPA annotations as well as XML based configuration.
+Hibernate provides a reference implementation of Java Persistence API, that makes it a great choice as ORM tool with benefits of loose coupling. We can use the Hibernate
+persistence API for CRUD operations. Hibernate framework provide option to map plain old java objects to traditional database tables with the use of JPA
+annotations as well as XML based configuration.
 
 Similarly, hibernate configurations are flexible and can be done from XML configuration file as well as programmatically.
+
+----
+
+**Example of Hibernate Framework**
+
+Certainly! Here's a simple example of using Hibernate in Java:
+
+Set up the project:
+
+1. Create a new Java project and set up the necessary build configuration. Add the required dependencies for Hibernate in your project's build file (e.g., Maven or Gradle). Create Hibernate entity class:
+
+2. Create a Java class that represents a table in your database. Annotate the class and its attributes with Hibernate annotations to define the object-relational mapping (ORM) metadata.
+
+```java
+import javax.persistence.*;
+
+@Entity
+@Table(name = "employees")
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "age")
+    private int age;
+
+    // Getters and setters
+}
+```
+
+3. Configure Hibernate: Create a Hibernate configuration file (e.g., hibernate.cfg.xml) to specify the database connection details and other Hibernate settings.
+
+```xml
+<!-- hibernate.cfg.xml -->
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydatabase</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+    </session-factory>
+</hibernate-configuration>
+```
+
+4. Perform CRUD operations: Use the Hibernate API to perform CRUD (Create, Read, Update, Delete) operations on the database.
+
+```java
+import org.hibernate.*;
+import org.hibernate.cfg.Configuration;
+
+public class MainApp {
+    public static void main(String[] args) {
+        // Create a Hibernate SessionFactory
+        SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+
+        // Create a new employee
+        Employee employee = new Employee();
+        employee.setName("John Doe");
+        employee.setAge(30);
+
+        // Open a new Hibernate session
+        Session session = sessionFactory.openSession();
+
+        // Begin a transaction
+        Transaction transaction = session.beginTransaction();
+
+        // Save the employee to the database
+        session.save(employee);
+
+        // Commit the transaction
+        transaction.commit();
+
+        // Close the session
+        session.close();
+
+        // Retrieve the employee from the database
+        Session session2 = sessionFactory.openSession();
+        Employee retrievedEmployee = session2.get(Employee.class, employee.getId());
+        System.out.println("Retrieved Employee: " + retrievedEmployee.getName() + " (Age: " + retrievedEmployee.getAge() + ")");
+
+        // Close the session
+        session2.close();
+
+        // Close the SessionFactory
+        sessionFactory.close();
+    }
+}
+```
+
+In this example, we have an Employee class annotated with Hibernate annotations. We create an Employee object, set its attributes, and save it to the database using the Hibernate Session object.
+
+The Hibernate configuration file hibernate.cfg.xml specifies the database connection details and other Hibernate settings, such as the JDBC driver, database URL, dialect, and more.
+
+We create a Hibernate SessionFactory using the Configuration class and the configuration file. Then, we open a new Hibernate Session and begin a transaction. We save the Employee object to the database, commit the transaction, and close the session.
 
 ----
 
 **What are the important benefits of using Hibernate Framework?**
 
 Some of the important benefits of using hibernate framework are:
+- Hibernate eliminates all the boiler-plate code that comes with JDBC and takes care of managing resources, so we can focus on business logic.
+- Hibernate framework provides support for XML as well as JPA annotations, that makes our code implementation independent.
+- Hibernate provides a powerful query language (HQL) that is similar to SQL. However, HQL is fully object-oriented and understands concepts like inheritance, polymorphism, and association.
+- Hibernate is an open source project from Red Hat Community and used worldwide. This makes it a better choice than others because learning curve is small and there are tons of online documentation and help is easily available in forums.
+- Hibernate is easy to integrate with other Java EE frameworks, it’s so popular that Spring Framework provides built-in support for integrating hibernate with Spring applications.
+- Hibernate supports lazy initialization using proxy objects and perform actual database queries only when it’s required.
+- Hibernate cache helps us in getting better performance.
+- For database vendor specific feature, hibernate is suitable because we can also execute native sql queries.
 
-Hibernate eliminates all the boiler-plate code that comes with JDBC and takes care of managing resources, so we can focus on business logic.
-Hibernate framework provides support for XML as well as JPA annotations, that makes our code implementation independent.
-Hibernate provides a powerful query language (HQL) that is similar to SQL. However, HQL is fully object-oriented and understands concepts like inheritance, polymorphism, and association.
-Hibernate is an open source project from Red Hat Community and used worldwide. This makes it a better choice than others because learning curve is small and there are tons of online documentation and help is easily available in forums.
-Hibernate is easy to integrate with other Java EE frameworks, it’s so popular that Spring Framework provides built-in support for integrating hibernate with Spring applications.
-Hibernate supports lazy initialization using proxy objects and perform actual database queries only when it’s required.
-Hibernate cache helps us in getting better performance.
-For database vendor specific feature, hibernate is suitable because we can also execute native sql queries.
-Overall hibernate is the best choice in current market for ORM tool, it contains all the features that you will ever need in an ORM tool.
+Overall Hibernate is the best choice in current market for ORM tool, it contains all the features that you will ever need in an ORM tool.
 
 ----
 
@@ -3814,11 +4254,10 @@ Overall hibernate is the best choice in current market for ORM tool, it contains
 Hibernate has a layered architecture which helps the user to operate without having to know the underlying APIs. Hibernate makes use of the database and configuration data to provide persistence services (and persistent objects) to the application. It includes many objects such as persistent object, session factory, transaction factory, connection factory, session, transaction etc.HibernateArchitecture - Java Interview Questions - Edureka
 
 The Hibernate architecture is categorized in four layers.
-
-Java application layer
-Hibernate framework layer
-Backhand API layer
-Database layer
+- Java application layer
+- Hibernate framework layer
+- Backhand API layer
+- Database layer
 
 ----
 
@@ -3826,17 +4265,17 @@ Database layer
 
 The differences between get() and load() methods are given below.
 
-No.	get()	load()
- 1)	 Returns null if object is not found.	Throws ObjectNotFoundException if an object is not found.
- 2)	 get() method always hit the database.	 load() method doesn’t hit the database.
- 3)	 It returns a real object, not a proxy.	 It returns a proxy object.
- 4)	It should be used if you are not sure about the existence of instance.	It should be used if you are sure that the instance exists.
+| No. | get() | load() |
+| 1) | Returns null if object is not found. | Throws ObjectNotFoundException if an object is not found. |
+| 2) | get() method always hit the database. | load() method doesn’t hit the database. |
+| 3) | It returns a real object, not a proxy. | It returns a proxy object. |
+| 4) | It should be used if you are not sure about the existence of instance. | It should be used if you are sure that the instance exists. |
 
 ----
 
 **What are the advantages of Hibernate over JDBC?**
 
-Some of the important advantages of Hibernate framework over JDBC are:
+Some of the important advantages of Hibernate framework over are:
 
 Hibernate removes a lot of boiler-plate code that comes with JDBC API, the code looks cleaner and readable.
 Hibernate supports inheritance, associations, and collections. These features are not present with JDBC API.
@@ -3852,12 +4291,98 @@ In case you are facing any challenges with these Java interview questions, pleas
 
 ----
 
+**What is JDBC?**
+
+JDBC stands for Java Database Connectivity. It is a Java API that provides a standard way to interact with relational databases. JDBC enables Java applications to connect to a database, execute SQL queries, retrieve and manipulate data, and manage database transactions.
+
+Here are some key features and concepts related to JDBC:
+
+Database Connectivity: JDBC provides classes and interfaces to establish a connection with a database server. It supports various database vendors through database-specific JDBC drivers.
+
+JDBC Drivers: JDBC drivers are responsible for translating the generic JDBC API calls into the database-specific protocol required to communicate with the database server. There are four types of JDBC drivers: Type 1 (JDBC-ODBC bridge driver), Type 2 (native-API driver), Type 3 (network-protocol driver), and Type 4 (pure Java driver).
+
+Connection and Statement: Once the connection to the database is established, JDBC provides the Connection interface to manage the connection. The Statement interface is used to execute SQL statements, such as queries, updates, inserts, and deletes.
+
+Result Sets: When executing a query, JDBC returns a ResultSet object that represents the result of the query. The ResultSet allows you to navigate through the rows and retrieve data from the query result.
+
+Prepared Statements: JDBC supports prepared statements, which allow you to pre-compile SQL statements with placeholders for parameters. Prepared statements help improve performance and prevent SQL injection attacks by separating SQL code from the data values.
+
+Transactions: JDBC provides transaction management capabilities through the Connection interface. You can start, commit, or rollback transactions to ensure the integrity and consistency of database operations.
+
+JDBC is widely used in Java applications to interact with relational databases, ranging from small desktop applications to large-scale enterprise systems. It provides a standardized and portable way to work with databases, allowing Java developers to leverage the power and flexibility of relational databases in their applications.
+
+Example:
+
+```java
+import java.sql.*;
+
+public class JdbcExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "root";
+        String password = "password";
+
+        try {
+            // Step 1: Load the JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            // Step 2: Establish a connection to the database
+            Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+
+            // Step 3: Create a Statement object
+            Statement statement = connection.createStatement();
+
+            // Step 4: Execute a query
+            String sqlQuery = "SELECT * FROM employees";
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            // Step 5: Process the results
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int age = resultSet.getInt("age");
+                System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+            }
+
+            // Step 6: Close the resources
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+In this example, we are connecting to a MySQL database using the MySQL JDBC driver. Here's a breakdown of the steps:
+
+Load the JDBC driver using Class.forName(). The driver class name may vary depending on the database vendor.
+
+Establish a connection to the database using DriverManager.getConnection(). Provide the JDBC URL, username, and password specific to your database.
+
+Create a Statement object using the Connection.createStatement() method.
+
+Execute a query using the Statement.executeQuery() method. In this example, we are retrieving all records from the "employees" table.
+
+Process the results using a ResultSet. Iterate over the rows using the ResultSet.next() method and retrieve the values using column names or indices.
+
+Close the resources (ResultSet, Statement, and Connection) to free up system resources.
+
+Note: Make sure to replace the JDBC URL, username, and password with your actual database details.
+
+This example demonstrates the basic JDBC workflow for executing a query and retrieving the results. Keep in mind that error handling, resource management, and best practices may vary depending on the specific requirements and complexity of your application.
+
+----
+
 **What are the life-cycle methods for a jsp?**
 
-Methods	Description
- public void jspInit()	It is invoked only once, same as init method of servlet.
-public void _jspService(ServletRequest request,ServletResponse)throws ServletException,IOException	It is invoked at each request, same as service() method of servlet.
- public void jspDestroy()	It is invoked only once, same as destroy() method of servlet.
+| Methods | Description |
+| -------- | ---------- |
+| public void jspInit() | It is invoked only once, same as init method of servlet. |
+| public void _jspService(ServletRequest request,ServletResponse)throws ServletException,IOException | It is invoked at each request, same as service() method of servlet. |
+| public void jspDestroy() | It is invoked only once, same as destroy() method of servlet. |
 
 ----
 
@@ -3865,21 +4390,26 @@ public void _jspService(ServletRequest request,ServletResponse)throws ServletExc
 
 JSP provides 9 implicit objects by default. They are as follows:
 
-Object	Type
-1) out	 JspWriter
-2) request	 HttpServletRequest
-3) response	 HttpServletResponse
-4) config	 ServletConfig
-5) session	 HttpSession
-6) application	 ServletContext
-7) pageContext	 PageContext
-8) page	 Object
-9) exception	 Throwable
-3. What are the differences between include directive and include action?
-include directive	include action
-The include directive includes the content at page translation time.	The include action includes the content at request time.
-The include directive includes the original content of the page so page size increases at runtime.	The include action doesn’t include the original content rather invokes the include() method of Vendor provided class.
- It’s better for static pages.	 It’s better for dynamic pages.
+| Object | Type |
+| ----- | ----- |
+| 1) out | JspWriter |
+| 2) request | HttpServletRequest |
+| 3) response | HttpServletResponse |
+| 4) config | ServletConfig |
+| 5) session | HttpSession |
+| 6) application | ServletContext |
+| 7) pageContext |  PageContext |
+| 8) page | Object |
+| 9) exception | Throwable |
+
+----
+
+**What are the differences between include directive and include action?**
+
+| include directive | include action |
+| The include directive includes the content at page translation time. | The include action includes the content at request time. |
+| The include directive includes the original content of the page so page size increases at runtime. | The include action doesn’t include the original content rather invokes the include() method of Vendor provided class. |
+| It’s better for static pages. | It’s better for dynamic pages. |
 
 ----
 
@@ -3898,71 +4428,85 @@ The include directive includes the original content of the page so page size inc
 **What are the different tags provided in JSTL?**
 
 There are 5 type of JSTL tags.
-
-core tags
-sql tags
-xml tags
+- core tags
+- sql tags
+- xml tags
 internationalization tags
 functions tags
-6. How to disable session in JSP?
-<%@ page session=“false” %>   
+
+----
+
+**How to disable session in JSP?**
+
+```java
+// <%@ page session=“false” %>   
+```
 
 ----
 
 **How to delete a Cookie in a JSP?**
 
-The following code explains how to delete a Cookie in a JSP :
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+```jsp
 Cookie mycook = new Cookie("name1","value1");
- 
 response.addCookie(mycook1);
- 
 Cookie killmycook = new Cookie("mycook1","value1");
- 
 killmycook . set MaxAge ( 0 );
- 
 killmycook . set Path ("/");
- 
 killmycook . addCookie ( killmycook 1 );
+```
+
+OR
+
+```jsp
+<%
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if ("myCookieName".equals(cookie.getName())) {
+                cookie.setMaxAge(0); // Set maximum age to 0 to delete the cookie
+                response.addCookie(cookie); // Update the cookie in the response
+                break;
+            }
+        }
+    }
+%>
+```
+
+In the above example, we first retrieve all the cookies using request.getCookies(). We iterate over the cookies and check if the cookie name matches the one we want to delete (in this case, "myCookieName"). If a match is found, we set the maximum age of the cookie to 0 using cookie.setMaxAge(0). Finally, we add the updated cookie to the response using response.addCookie(cookie).
+By setting the maximum age to 0, the browser will remove the cookie from its storage during the next request/response cycle.
+
 
 ----
 
 **Explain the jspDestroy() method.**
 
-jspDestry() method is invoked from javax.servlet.jsp.JspPage interface whenever a JSP page is about to be destroyed. Servlets destroy methods can be easily overridden to perform cleanup, like when closing a database connection.
+jspDestry() method is invoked from javax.servlet.jsp.JspPage interface whenever a JSP page is about to be destroyed. Servlets destroy methods can be easily
+overridden to perform cleanup, like when closing a database connection.
 
 ----
 
 **How is JSP better than Servlet technology?**
 
-JSP is a technology on the server’s side to make content generation simple. They are document-centric, whereas servlets are programs. A Java server page can contain fragments of Java program, which execute and instantiate Java classes. However, they occur inside an HTML template file. It provides the framework for the development of a Web Application.
+JSP is a technology on the server’s side to make content generation simple. They are document-centric, whereas servlets are programs.
+A Java server page can contain fragments of Java program, which execute and instantiate Java classes. However, they occur inside an
+HTML template file. It provides the framework for the development of a Web Application.
 
 ----
 
 **Why should we not configure JSP standard tags in web.xml?**
 
-We don’t need to configure JSP standard tags in web.xml because when container loads the web application and find TLD files, it automatically configures them to be used directly in the application JSP pages. We just need to include it in the JSP page using taglib directive.
+We don’t need to configure JSP standard tags in web.xml because when container loads the web application and find TLD files, it automatically
+configures them to be used directly in the application JSP pages. We just need to include it in the JSP page using taglib directive.
 
 ----
 
 **How will you use JSP EL in order to get the HTTP method name?**
 
-Using pageContext JSP EL implicit object you can get the request object reference and make use of the dot operator to retrieve the HTTP method name in the JSP page. The JSP EL code for this purpose will look like ${pageContext.request.method}.
+Using pageContext JSP EL implicit object you can get the request object reference and make use of the dot operator to retrieve the HTTP method name
+in the JSP page. The JSP EL code for this purpose will look like ${pageContext.request.method}.
 
-In case you are facing any challenges with these java interview questions, please comment on your problems in the section below. Apart from this Java Interview Questions Blog, if you want to get trained from professionals on this technology, you can opt for structured training from edureka!
-
-Exception and Thread Java Interview Questions
+In case you are facing any challenges with these java interview questions, please comment on your problems in the section below. Apart from this 
+ava Interview Questions Blog, if you want to get trained from professionals on this technology, you can opt for structured training from edureka!
 
 ----
 
@@ -3975,56 +4519,87 @@ While exceptions are conditions that occur because of bad input or human error e
 ----
 
 **How can you handle Java exceptions?**
-There are five keywords used to handle exceptions in Java: 
 
-try
-catch
-finally
-throw
-throws
+There are five keywords used to handle exceptions in Java: 
+- try
+- catch
+- finally
+- throw
+- throws
 
 ----
 
 **What are the differences between Checked Exception and Unchecked Exception?**
 
-Checked Exception
+__Checked Exception__
 The classes that extend Throwable class except RuntimeException and Error are known as checked exceptions. 
 Checked exceptions are checked at compile-time.
 Example: IOException, SQLException etc.
-Unchecked Exception
+
+```java
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileExample {
+    public static void main(String[] args) {
+        FileReader fileReader = null;
+        try {
+            // Open a file
+            fileReader = new FileReader("myfile.txt");
+
+            // Perform some operations on the file
+            // ...
+
+        } catch (IOException e) {
+            // Handle the IOException
+            System.out.println("An error occurred while reading the file: " + e.getMessage());
+        } finally {
+            // Close the file in the finally block to ensure it's always closed
+            try {
+                if (fileReader != null) {
+                    fileReader.close();
+                }
+            } catch (IOException e) {
+                // Handle the IOException while closing the file
+                System.out.println("An error occurred while closing the file: " + e.getMessage());
+            }
+        }
+    }
+}
+```
+
+__Unchecked Exception__
 The classes that extend RuntimeException are known as unchecked exceptions. 
 Unchecked exceptions are not checked at compile-time.
 Example: ArithmeticException, NullPointerException etc.
 
-----
+```java
+public class DivisionExample {
+    public static void main(String[] args) {
+        int dividend = 10;
+        int divisor = 0;
 
-**What are the different ways of thread usage?**
+        try {
+            int result = divide(dividend, divisor);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
 
-There are two ways to create a thread:
-
-Extending Thread class
-This creates a thread by creating an instance of a new class that extends the Thread class. The extending class must override the run() function, which is the thread’s entry point.
-
-Implementing Runnable interface
-This is the easiest way to create a thread, by creating a class that implements the runnable interface. After implementing the runnable interface, the class must implement the public void run() method ()
-
-The run() method creates a parallel thread in your programme. When run() returns, the thread will come to an end.
-
-The run() method creates a parallel thread in your programme. When run() returns, the thread will come to an end.
-
-Within the run() method, you must specify the thread’s code.
-
-Like any other method, the run() method can call other methods, use other classes, and define variables.
-
-Java works as “pass by value” or “pass by reference” phenomenon?
-
-Java is always pass-by-value. This means that it creates a copy of the contents of the parameter in memory. In Java, object variables always refer to the memory heap’s real object.
+    public static int divide(int dividend, int divisor) {
+        return dividend / divisor;
+    }
+}
+```
 
 ----
 
 **Will the finally block get executed when the return statement is written at the end of try block and catch block as shown below?**
 
-The finally block always gets executed even hen the return statement is written at the end of the try block and the catch block. It always executes , whether there is an exception or not. There are only a few situations in which the finally block does not execute, such as VM crash, power failure, software crash, etc. If you don’t want to execute the finally block, you need to call the System.exit() method explicitly in the finally block.
+The finally block always gets executed even hen the return statement is written at the end of the try block and the catch block. It always executes , whether there is
+an exception or not. There are only a few situations in which the finally block does not execute, such as VM crash, power failure, software crash, etc. If you don’t want
+to execute the finally block, you need to call the System.exit() method explicitly in the finally block.
 
 ----
 
@@ -4038,113 +4613,85 @@ If an exception is not caught, it is thrown from the top of the stack and falls 
 
 The java thread lifecycle has the following states-
 
-New-
-
+__New-__
 When a thread is created, and before the program starts the thread, it is in the new state. It is also referred to as a born thread.
 
- Runnable
-
+__Runnable__
 When a thread is started, it is in the Runnable state. In this state, the thread is executing its task.
 
-Waiting
-
+__Waiting__
 Sometimes, a thread goes to the waiting state, where it remains idle because another thread is executing. When the other thread has finished, the waiting thread again comes into the running state.
 
-Timed Waiting
-
+__Timed Waiting__
 In timed waiting, the thread goes to waiting state. But, it remains in waiting state for only a specified interval of time after which it starts executing.It remains waiting either till the time interval ends or till the other thread has finished.
 
-Terminated
-
+__Terminated__
 A thread is said to be in this state once it terminates. It may be because the thread has completed its task or due to any other reason.
 
 ----
 
 **What purpose do the keywords final, finally, and finalize fulfill?**
 
-Final:
+__Final:__
 Final is used to apply restrictions on class, method, and variable. A final class can’t be inherited, final method can’t be overridden and final variable value can’t be changed. Let’s take a look at the example below to understand it better.
 
-1
-2
-3
-4
-5
-6
-class FinalVarExample {
-public static void main( String args[])
-{
-final int a=10;   // Final variable
-a=50;             //Error as value can't be changed
+```java
+class Main {
+    public static void main(String args[]) {
+        final int a = 10; // Final variable
+        int a = 50; // Error as value can't be changed
+    }
 }
-Finally
+```
+
+__Finally__
 Finally is used to place important code, it will be executed whether the exception is handled or not. Let’s take a look at the example below to understand it better.
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-class FinallyExample {
-public static void main(String args[]){
-try {
-int x=100;
+```java
+class Main {
+    public static void main(String args[]) {
+        try {
+            int x=100;
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+        finally {
+            System.out.println("finally block is executing");}
+    }
 }
-catch(Exception e) {
-System.out.println(e);
-}
-finally {
-System.out.println("finally block is executing");}
-}}
-}
-Finalize
+```
+
+__Finalize__
 Finalize is used to perform clean up processing just before the object is garbage collected. Let’s take a look at the example below to understand it better.
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-class FinalizeExample {
-public void finalize() {
-System.out.println("Finalize is called");
+```java
+class Main {
+    public void finalize() {
+        System.out.println("Finalize is called");
+    }
+    public static void main(String args[])
+    {
+        Main f1=new Main();
+        Main f2=new Main();
+        f1=NULL;
+        f2=NULL;
+        System.gc();
+    }
 }
-public static void main(String args[])
-{
-FinalizeExample f1=new FinalizeExample();
-FinalizeExample f2=new FinalizeExample();
-f1= NULL;
-f2=NULL;
-System.gc();
-}
-}
+```
 
 ----
 
 **What are the differences between throw and throws?**
 
-throw keyword	throws keyword
-Throw is used to explicitly throw an exception.	Throws is used to declare an exception.
-Checked exceptions can not be propagated with throw only.	Checked exception can be propagated with throws.
-Throw is followed by an instance.	Throws is followed by class.
-Throw is used within the method.	Throws is used with the method signature.
-You cannot throw multiple exception	You can declare multiple exception e.g. public void method()throws IOException,SQLException.
-In case you are facing any challenges with these java interview questions, please comment on your problems in the section below.
+| throw keyword | throws keyword |
+| -------------- | -------------- |
+| Throw is used to explicitly throw an exception. | Throws is used to declare an exception. |
+| Checked exceptions can not be propagated with throw only. | Checked exception can be propagated with throws. |
+| Throw is followed by an instance. | Throws is followed by class. |
+| Throw is used within the method. | Throws is used with the method signature. |
+| You cannot throw multiple exception | You can declare multiple exception e.g. public void method()throws IOException,SQLException. |
 
 ----
 
@@ -4162,9 +4709,11 @@ ExceptionHierarchy - Java Interview Questions - Edureka
 
 To create you own exception extend the Exception class or any of its subclasses.
 
-class New1Exception extends Exception { }               // this will create Checked Exception
-class NewException extends IOException { }             // this will create Checked exception
-class NewException extends NullPonterExcpetion { }  // this will create UnChecked exception
+```java
+class New1Exception extends Exception { } // this will create Checked Exception
+class NewException extends IOException { } // this will create Checked exception
+class NewException extends NullPonterExcpetion { } // this will create UnChecked exception
+```
 
 ----
 
@@ -4172,24 +4721,24 @@ class NewException extends NullPonterExcpetion { }  // this will create UnChecke
 
 Exception and all of it’s subclasses doesn’t provide any specific methods and all of the methods are defined in the base class Throwable.
 
-String getMessage() – This method returns the message String of Throwable and the message can be provided while creating the exception through it’s constructor.
-String getLocalizedMessage() – This method is provided so that subclasses can override it to provide locale specific message to the calling program. Throwable class implementation of this method simply use getMessage() method to return the exception message.
-Synchronized Throwable getCause() – This method returns the cause of the exception or null id the cause is unknown.
-String toString() – This method returns the information about Throwable in String format, the returned String contains the name of Throwable class and localized message.
-void printStackTrace() – This method prints the stack trace information to the standard error stream, this method is overloaded and we can pass PrintStream or PrintWriter as an argument to write the stack trace information to the file or stream.
+__String getMessage()__ – This method returns the message String of Throwable and the message can be provided while creating the exception through it’s constructor.
+__String getLocalizedMessage()__ – This method is provided so that subclasses can override it to provide locale specific message to the calling program. Throwable class implementation of this method simply use __getMessage()__ - method to return the exception message.
+__Synchronized Throwable getCause()__ – This method returns the cause of the exception or null id the cause is unknown.
+__String toString()__ – This method returns the information about Throwable in String format, the returned String contains the name of Throwable class and localized message.
+__void printStackTrace()__ – This method prints the stack trace information to the standard error stream, this method is overloaded and we can pass PrintStream or PrintWriter as an argument to write the stack trace information to the file or stream.
 
 ----
 
 **What are the differences between processes and threads?**
 
- 	Process	Thread
-Definition	An executing instance of a program is called a process.	A thread is a subset of the process.
-Communication	Processes must use inter-process communication to communicate with sibling processes.	Threads can directly communicate with other threads of its process.
-Control	Processes can only exercise control over child processes.	Threads can exercise considerable control over threads of the same process.
-Changes	Any change in the parent process does not affect child processes.	Any change in the main thread may affect the behavior of the other threads of the process.
-Memory	Run in separate memory spaces.	Run in shared memory spaces.
-Controlled by	Process is controlled by the operating system.	Threads are controlled by programmer in a program.
-Dependence	Processes are independent.	Threads are dependent.
+Process | Thread
+Definition  An executing instance of a program is called a process.	A thread is a subset of the process.
+Communication  Processes must use inter-process communication to communicate with sibling processes.	Threads can directly communicate with other threads of its process.
+Control  Processes can only exercise control over child processes.	Threads can exercise considerable control over threads of the same process.
+Changes  Any change in the parent process does not affect child processes.	Any change in the main thread may affect the behavior of the other threads of the process.
+Memory  Run in separate memory spaces.	Run in shared memory spaces.
+Controlled by	Process  is controlled by the operating system.	Threads are controlled by programmer in a program.
+Dependence  Processes are independent.	Threads are dependent.
 
 ----
 
@@ -4204,52 +4753,30 @@ Yes, finally will not be executed if the program exits either by calling System.
 
 Synchronization refers to multi-threading. A synchronized block of code can be executed by only one thread at a time. As Java supports execution of multiple threads, two or more threads may access the same fields or objects. Synchronization is a process which keeps all concurrent threads in execution to be in sync. Synchronization avoids memory consistency errors caused due to inconsistent view of shared memory. When a method is declared as synchronized the thread holds the monitor for that method’s object. If another thread is executing the synchronized method the thread is blocked until that thread releases the monitor. 
 
-Synchronization - Java Interview Questions - Edureka
-
 ----
 
 **Can we write multiple catch blocks under single try block?**
 
 Yes we can have multiple catch blocks under single try block but the approach should be from specific to general. Let’s understand this with a programmatic example.
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-public class Example {
-public static void main(String args[]) {
-try {
-int a[]= new int[10];
-a[10]= 10/0;
+```java
+public class MultipleCatchExample {
+    public static void main(String[] args) {
+        try {
+            int[] numbers = {1, 2, 3};
+            int index = 4;
+            int result = numbers[index];
+            System.out.println("Result: " + result);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index out of bounds: " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic exception occurred: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("An exception occurred: " + e.getMessage());
+        }
+    }
 }
-catch(ArithmeticException e)
-{
-System.out.println("Arithmetic exception in first catch block");
-}
-catch(ArrayIndexOutOfBoundsException e)
-{
-System.out.println("Array index out of bounds in second catch block");
-}
-catch(Exception e)
-{
-System.out.println("Any exception in third catch block");
-}
-}
+```
 
 ----
 
@@ -4340,90 +4867,6 @@ Object class is considered as the parent class of all the java classes. The impl
 
 ----
 
-**How is an infinite loop declared in Java?**
-
-Infinite loops are those loops that run infinitely without any breaking conditions. Some examples of consciously declaring infinite loop is:
-
-Using For Loop:
-for (;;)
-{
-   // Business logic
-   // Any break logic
-}
-Using while loop:
-while(true){
-   // Business logic
-   // Any break logic
-}
-Using do-while loop:
-do{
-   // Business logic
-   // Any break logic
-}while(true);
-
-----
-
-**When can you use super keyword?**
-
-The super keyword is used to access hidden fields and overridden methods or attributes of the parent class.
-Following are the cases when this keyword can be used:
-Accessing data members of parent class when the member names of the class and its child subclasses are same.
-To call the default and parameterized constructor of the parent class inside the child class.
-Accessing the parent class methods when the child classes have overridden them.
-The following example demonstrates all 3 cases when a super keyword is used.
-class Parent{
-       protected int num = 1;
-       
-       Parent(){
-           System.out.println("Parent class default constructor.");
-       }
-       
-       Parent(String x){
-           System.out.println("Parent class parameterised constructor.");
-       }
-       
-       public void foo(){
-           System.out.println("Parent class foo!");
-       }
-   }
-class Child extends Parent{
-       private int num = 2;
-       
-       Child(){
-           //super constructor call should always be in the first line
-           // super();              // Either call default super() to call default parent constructor OR
-           super("Call Parent");    // call parameterised super to call parameterised parent constructor.
-           System.out.println("Child class default Constructor");
-       }
-       
-       void printNum(){
-           System.out.println(num);
-           System.out.println(super.num); //prints the value of num of parent class
-       }
-       
-       @Override
-       public void foo(){
-           System.out.println("Child class foo!");
-           super.foo();    //Calls foo method of Parent class inside the Overriden foo method of Child class.
-       }
-   }
-
-public class DemoClass {
-    public static void main(String args[]) {
-     Child demoObject=new Child();
-     demoObject.foo();
-     /*
-      This would print - 
-      Parent class parameterised constructor.
-      Child class default Constructor
-      Child class foo!
-      Parent class foo!
-     */
-    }
-}
-
-----
-
 **Can the static methods be overloaded?**
 
 Yes! There can be two or more static methods in a class with the same name but differing input parameters.
@@ -4456,7 +4899,6 @@ Static classes - A class in the java program cannot be static except if it is th
 **What is the main objective of garbage collection?**
 
 The main objective of this process is to free up the memory space occupied by the unnecessary and unreachable objects during the Java program execution by deleting those unreachable objects.
-
 This ensures that the memory resource is used efficiently, but it provides no guarantee that there would be sufficient memory for the program execution.
 
 ----
@@ -4487,10 +4929,13 @@ Collections: In the case of Hashtables and HashMaps, keys are String objects. If
 
 **Which of the below generates a compile-time error? State the reason.**
 
+```java
 int[] n1 = new int[0];
 boolean[] n2 = new boolean[-200];
 double[] n3 = new double[2241423798];
 char[] ch = new char[20];
+```
+
 We get a compile-time error in line 3. The error we will get in Line 3 is - integer number too large. It is because the array requires size as an integer. And Integer takes 4 Bytes in the memory. And the number (2241423798) is beyond the capacity of the integer. The maximum array size we can declare is - (2147483647).
 
 Because the array requires the size in integer, none of the lines (1, 2, and 4) will give a compile-time error. The program will compile fine. But we get the runtime exception in line 2. The exception is - NegativeArraySizeException. 
@@ -4501,30 +4946,33 @@ Here what will happen is - At the time when JVM will allocate the required memor
 
 **Is this program giving a compile-time error? If Yes then state the reason and number of errors it will give. If not then state the reason.**
 
-abstract final class InterviewBit{
-2.    public abstract void printMessage();
-3. }
-4. class ScalarAcademy extends InterviewBit{
-5.    public void printMessage(){
-6.        System.out.println("Welcome to Scalar Academy By InterviewBit");
-7.    }
-8. }
-9. class ScalarTopics extends ScalarAcademy{
-10.    public void printMessage(){
-11.        System.out.println("Welcome to Scalar Topics By Scalar Academy");
-12.    }
-13. }
-public class Main{
-	public static void main(String[] args) {
- 	    InterviewBit ib = new ScalarTopics();
- 	    ib.printMessage();
-	}
-}
-The above program will give a compile-time error. The compiler will throw 2 errors in this.
+```java
+abstract final class IB{
+    public abstract void printMessage();
+ }
+ class ScalarAcademy extends IB{
+    public void printMessage(){
+        System.out.println("Welcome to Scalar Academy By InterviewBit");
+    }
+ }
+ 
+class ScalarTopics extends ScalarAcademy{
+    public void printMessage(){
+                System.out.println("Welcome to Scalar Topics By Scalar Academy");
+            }
+ }
 
-[Illegal Combination of modifiers: abstract and final] at line 1.
-[Cannot inherit from final ‘InterviewBit’] at line 4.
-It is because abstract classes are incomplete classes that need to be inherited for making their concrete classes. And on the other hand, the final keywords in class are used for avoiding inheritance. So these combinations are not allowed in java.
+public class Main{
+    public static void main(String[] args) {
+        IB ib = new ScalarTopics();
+        ib.printMessage();
+    }
+}
+
+// Output:
+// [Illegal Combination of modifiers: abstract and final] at line 1.
+// [Cannot inherit from final ‘InterviewBit’] at line 4.
+```
 
 ----
 
@@ -4533,6 +4981,67 @@ It is because abstract classes are incomplete classes that need to be inherited 
 Consider the example where we have an ArrayList of employees like( EId, Ename, Salary), etc. Now if we want to sort this list of employees based on the names of employees. Then that is not possible to sort using the Collections.sort() method. We need to provide something to the sort() function depending on what values we have to perform sorting. Then in that case a comparator is used.
 
 Comparator is the interface in java that contains the compare method. And by overloading the compare method, we can define that on what basis we need to compare the values. 
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Student {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+class AgeComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student s1, Student s2) {
+        return Integer.compare(s1.getAge(), s2.getAge());
+    }
+}
+
+public class ComparatorExample {
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Alice", 20));
+        students.add(new Student("Bob", 18));
+        students.add(new Student("Charlie", 22));
+
+        System.out.println("Before sorting:");
+        for (Student student : students) {
+            System.out.println(student);
+        }
+
+        Collections.sort(students, new AgeComparator());
+
+        System.out.println("\nAfter sorting by age:");
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+}
+```
 
 ----
 
@@ -4548,95 +5057,126 @@ The phenomenon mentioned here is popularly known as method hiding, and overridin
 
 The term reflection is used for describing the inspection capability of a code on other code either of itself or of its system and modify it during runtime.
 Consider an example where we have an object of unknown type and we have a method ‘fooBar()’ which we need to call on the object. The static typing system of Java doesn't allow this method invocation unless the type of the object is known beforehand. This can be achieved using reflection which allows the code to scan the object and identify if it has any method called “fooBar()” and only then call the method if needed.
+
 Method methodOfFoo = fooObject.getClass().getMethod("fooBar", null);
 methodOfFoo.invoke(fooObject, null);
-Using reflection has its own cons:
+
+__Using reflection has its own cons:__
 Speed — Method invocations due to reflection are about three times slower than the direct method calls.
 Type safety — When a method is invoked via its reference wrongly using reflection, invocation fails at runtime as it is not detected at compile/load time.
-Traceability — Whenever a reflective method fails, it is very difficult to find the root cause of this failure due to a huge stack trace. One has to deep dive into the invoke() and proxy() method logs to identify the root cause.
-Hence, it is advisable to follow solutions that don't involve reflection and use this method as a last resort.
+Traceability — Whenever a reflective method fails, it is very difficult to find the root cause of this failure due to a huge stack trace. One has to deep dive into the invoke() and proxy() method logs to identify the root cause. Hence, it is advisable to follow solutions that don't involve reflection and use this method as a last resort.
+
+Example:
+
+```java
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+class MyClass {
+    private int privateField;
+
+    public void publicMethod() {
+        System.out.println("Inside publicMethod");
+    }
+
+    private void privateMethod() {
+        System.out.println("Inside privateMethod");
+    }
+}
+
+public class ReflectionExample {
+    public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException {
+        MyClass obj = new MyClass();
+
+        // Get the class object
+        Class<?> cls = obj.getClass();
+
+        // Accessing fields using reflection
+        Field privateField = cls.getDeclaredField("privateField");
+        System.out.println("Field name: " + privateField.getName());
+
+        // Accessing methods using reflection
+        Method publicMethod = cls.getMethod("publicMethod");
+        System.out.println("Method name: " + publicMethod.getName());
+
+        Method privateMethod = cls.getDeclaredMethod("privateMethod");
+        System.out.println("Method name: " + privateMethod.getName());
+    }
+}
+```
+
+In the above example, we have a class MyClass with a private field privateField and two methods: publicMethod and privateMethod.
+
+In the ReflectionExample class, we create an instance of MyClass and then obtain its class object using the getClass() method.
+
+Using reflection, we can access the private field and methods of the class. We use the getDeclaredField() method to access the private field privateField and getMethod() to access the public method publicMethod.
+
+To access the private method privateMethod, we use getDeclaredMethod() instead, as it allows us to access private methods.
+
+Finally, we print the names of the field and methods obtained through reflection.
+
+Reflection provides a powerful mechanism to examine and manipulate the properties and behavior of classes at runtime. It allows you to access private members, invoke methods dynamically, and perform other advanced operations. However, it should be used judiciously, as it can introduce complexity and impact performance if used improperly.
 
 ----
 
-**What are the different ways of threads usage?**
+**What are the different types of Thread Priorities in Java? And what is the default priority of a thread assigned by JVM?**
 
-We can define and implement a thread in java using two ways:
-Extending the Thread class
-class InterviewBitThreadExample extends Thread{  
-   public void run(){  
-       System.out.println("Thread runs...");  
-   }  
-   public static void main(String args[]){  
-       InterviewBitThreadExample ib = new InterviewBitThreadExample();  
-       ib.start();  
-   }  
-}
-Implementing the Runnable interface
-class InterviewBitThreadExample implements Runnable{  
-   public void run(){  
-       System.out.println("Thread runs...");  
-   }  
-   public static void main(String args[]){  
-       Thread ib = new Thread(new InterviewBitThreadExample()); 
-       ib.start();  
-   }  
-}
-Implementing a thread using the method of Runnable interface is more preferred and advantageous as Java does not have support for multiple inheritances of classes.
-start() method is used for creating a separate call stack for the thread execution. Once the call stack is created, JVM calls the run() method for executing the thread in that call stack.
-
-----
-
-**What are the different types of Thread Priorities in Java? And what is the default priority of a thread assigned by JVM?
-There are a total of 3 different types of priority available in Java.**
-
-MIN_PRIORITY: It has an integer value assigned with 1.
-MAX_PRIORITY: It has an integer value assigned with 10.
-NORM_PRIORITY: It has an integer value assigned with 5.
+__There are a total of 3 different types of priority available in Java.__
+- MIN_PRIORITY: It has an integer value assigned with 1.
+- MAX_PRIORITY: It has an integer value assigned with 10.
+- NORM_PRIORITY: It has an integer value assigned with 5.
 
 In Java, Thread with MAX_PRIORITY gets the first chance to execute. But the default priority for any thread is NORM_PRIORITY assigned by JVM. 
+
+```java
+public class ThreadPriorityExample {
+    public static void main(String[] args) {
+        Thread thread1 = new MyThread("Thread 1", Thread.MIN_PRIORITY);
+        Thread thread2 = new MyThread("Thread 2", Thread.NORM_PRIORITY);
+        Thread thread3 = new MyThread("Thread 3", Thread.MAX_PRIORITY);
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+    }
+}
+
+class MyThread extends Thread {
+    public MyThread(String name, int priority) {
+        super(name);
+        setPriority(priority);
+    }
+
+    @Override
+    public void run() {
+        System.out.println(getName() + " started.");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(getName() + ": " + i);
+        }
+        System.out.println(getName() + " finished.");
+    }
+}
+```
 
 ----
 
 **What is the difference between the program and the process?**
 
-A program can be defined as a line of code written in order to accomplish a particular task. Whereas the process can be defined as the programs which are under execution. 
+A program can be defined as a line of code written in order to accomplish a particular task.
+Whereas the process can be defined as the programs which are under execution. 
+
 A program doesn't execute directly by the CPU. First, the resources are allocated to the program and when it is ready for execution then it is a process.
-
-----
-
-**What is the difference between the ‘throw’ and ‘throws’ keyword in java?**
-
-The ‘throw’ keyword is used to manually throw the exception to the calling method.
-And the ‘throws’ keyword is used in the function definition to inform the calling method that this method throws the exception. So if you are calling, then you have to handle the exception.
-Example - 
-
-class Main {
-   public static int testExceptionDivide(int a, int b) throws ArithmeticException{
-       if(a == 0 || b == 0)
-           throw new ArithmeticException();
-       return a/b;
-   }
-   public static void main(String args[]) {
-       try{
-           testExceptionDivide(10, 0);
-       }
-       catch(ArithmeticException e){
-           //Handle the exception
-       }
-   }
-}
-Here in the above snippet, the method testExceptionDivide throws an exception. So if the main method is calling it then it must have handled the exception. Otherwise, the main method can also throw the exception to JVM.
-
-And the method testExceptionDivide 'throws’ the exception based on the condition.
 
 ----
 
 **What are the differences between constructor and method of a class in Java?**
 
-Constructor	Method
-Constructor is used for initializing the object state.	Method is used for exposing the object's behavior.
-Constructor has no return type.	Method should have a return type. Even if it does not return anything, return type is void.
-Constructor gets invoked implicitly.	Method has to be invoked on the object explicitly.
+| Constructor | Method |
+| --------- | ------- |
+| Constructor is used for initializing the object state. | Method is used for exposing the object's behavior. |
+| Constructor has no return type. | Method should have a return type. Even if it does not return anything, return type is void. |
+| Constructor gets invoked implicitly. | Method has to be invoked on the object explicitly. |
+
 If the constructor is not defined, then a default constructor is provided by the java compiler.	If a method is not defined, then the compiler does not provide it.
 The constructor name should be equal to the class name.	The name of the method can have any name or have a class name too.
 A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. Hence, marking it final doesn't make sense. Java throws compilation error saying - modifier final not allowed here	A method can be defined as final but it cannot be overridden in its subclasses.
@@ -4646,6 +5186,7 @@ Final variable instantiations are possible inside a constructor and the scope of
 
 **Identify the output of the below java program and Justify your answer.**
 
+```java
 class Main {
     public static void main(String args[]) {
         Scaler s = new Scaler(5);
@@ -4666,6 +5207,8 @@ class Scaler extends InterviewBit{
         System.out.println(" Welcome to Scaler Academy 2");
     }
 }
+```
+
 The above code will throw the compilation error. It is because the super() is used to call the parent class constructor. But there is the condition that super() must be the first statement in the block. Now in this case, if we replace this() with super() then also it will throw the compilation error. Because this() also has to be the first statement in the block. So in conclusion, we can say that we cannot use this() and super() keywords in the same block.
 
 ----
@@ -4677,26 +5220,27 @@ Java always works as a “pass by value”. There is nothing called a “pass by
 Case 1: When the object is pointed to another location: In this case, the changes made to that object do not get reflected the original object before it was passed to the method as the reference points to another location.
 For example:
 
-class InterviewBitTest{
+```java
+class IBT{
    int num;
-   InterviewBitTest(int x){ 
+   IBT(int x){ 
        num = x; 
    }
-   InterviewBitTest(){ 
+   IBT(){ 
        num = 0; 
    }
 }
 class Driver {
    public static void main(String[] args)
    {
-       //create a reference
-       InterviewBitTest ibTestObj = new InterviewBitTest(20);
-       //Pass the reference to updateObject Method
+       // create a reference
+       IBT ibTestObj = new IBT(20);
+       // Pass the reference to updateObject Method
        updateObject(ibTestObj);
-       //After the updateObject is executed, check for the value of num in the object.
+       // After the updateObject is executed, check for the value of num in the object.
        System.out.println(ibTestObj.num);
    }
-   public static void updateObject(InterviewBitTest ibObj)
+   public static void updateObject(IBT ibObj)
    {
        // Point the object to new reference
        ibObj = new InterviewBitTest();
@@ -4704,11 +5248,15 @@ class Driver {
        ibObj.num = 50;
    }
 }
-Output:
-20
+
+// Output:
+// 20
+```
+
 Case 2: When object references are not modified: In this case, since we have the copy of reference the main object pointing to the same memory location, any changes in the content of the object get reflected in the original object.
 For example:
 
+```java
 class InterviewBitTest{
    int num;
    InterviewBitTest(int x){ 
@@ -4735,23 +5283,28 @@ class Driver{
        ibObj.num = 50;
    }
 }
-Output:
-50
+
+// Output:
+// 50
+```
 
 ----
 
 **How to not allow serialization of attributes of a class in Java?**
 
 In order to achieve this, the attribute can be declared along with the usage of transient keyword as shown below:
-public class InterviewBitExample { 
 
-   private transient String someInfo; 
-   private String name;
-   private int id;
-   // :
-   // Getters setters
-   // :
+```java
+public class Main {
+    private transient String someInfo;
+    private String name;
+    private int id;
+    // :
+    // Getters setters
+    // :
 } 
+```
+
 In the above example, all the fields except someInfo can be serialized.
 
 ----
@@ -4764,14 +5317,17 @@ There wouldn't be any compilation error. But then the program is run, since the 
 
 **Consider the below program, identify the output, and also state the reason for that.**
 
+```java
 public class Main{
-public static void main(String[] args) {
- System.out.println(" Hello. Main Method. ");
+    public static void main(String[] args) {
+        System.out.println(" Hello. Main Method. ");
+    }
+    public static void main(int[] args) {
+        System.out.println(" Hello. Main Method2. ");
+    }
 }
-public static void main(int[] args) {
- System.out.println(" Hello. Main Method2. ");
-}
-}
+```
+
 The output of the above program will be Hello. Main Method. This is because JVM will always call the main method based on the definition it already has. Doesn't matter how many main methods we overload it will only execute one main method based on its declaration in JVM.
 
 ----
@@ -4916,35 +5472,36 @@ The loosely coupled nature of composition is preferable over the tightly coupled
 Let’s take an example:
 
 ```java
-package comparison;
 public class Top {
-public int start() {
-  return 0;
-}
+    public int start() {
+        return 0;
+    }
 }
 class Bottom extends Top {
- public int stop() {
-  return 0;
- }
+    public int stop() {
+        return 0;
+    }
 }
-In the above example, inheritance is followed. Now, some modifications are done to the Top class like this:
+// In the above example, inheritance is followed. Now, some modifications
+// are done to the Top class like this:
 
 public class Top {
- public int start() {
-  return 0;
- }
- public void stop() {
- }
+    public int start() {
+        return 0;
+    }
+    public void stop() {
+    }
 }
-If the new implementation of the Top class is followed, a compile-time error is bound to occur in the Bottom class. Incompatible return type is there for the Top.stop() function. Changes have to be made to either the Top or the Bottom class to ensure compatibility. However, the composition technique can be utilized to solve the given problem:
-
+// If the new implementation of the Top class is followed, a compile-time error is bound to occur in the Bottom class. Incompatible return type is there
+// for the Top.stop() function. Changes have to be made to either the Top or the Bottom class to ensure compatibility. However, the composition technique
+// can be utilized to solve the given problem:
 class Bottom {
- Top par = new Top();
- public int stop() {
-  par.start();
-  par.stop();
-  return 0;
- }
+    Top par = new Top();
+    public int stop() {
+        par.start();
+        par.stop();
+        return 0;
+    }
 } 
 ```
 
@@ -4963,37 +5520,56 @@ Now consider one more example. Suppose we have a class department and there are 
 
 When a String is formed as a literal with the assistance of an assignment operator, it makes its way into the String constant pool so that String Interning can take place. This same object in the heap will be referenced by a different String if the content is the same for both of them.
 
-public bool checking() {
-String first = "InterviewBit";
-String second = "InterviewBit";
-if (first == second)
- return true;
-else
- return false;
-}
-The checking() function will return true as the same content is referenced by both the variables.
+```java
+// new()
+String str1 = new String("Hello");
 
+```
+
+```java
+// literal
+String str2 = "Hello";
+```
+
+----
+
+**Question**
+
+The checking() function will return true as the same content is referenced by both the variables.
 
 Conversely, when a String formation takes place with the help of a new() operator, interning does not take place. The object gets created in the heap memory even if the same content object is present.
 
-public bool checking() {
-String first = new String("InterviewBit");
-String second = new String("InterviewBit");
-if (first == second)
- return true;
-else
- return false;
+```java
+class Checker {
+    public boolean checking() {
+        String first = new String("InterviewBit");
+        String second = new String("InterviewBit");
+        if (first == second)
+            return true;
+        else
+            return false;
+    }
 }
-The checking() function will return false as the same content is not referenced by both the variables.
 
+public class Main{
+    public static void main(String[] args){
+        Checker nChecker = new Checker();
+        nChecker.checking();
+    }
+}
+```
+
+The checking() function will return false as the same content is not referenced by both the variables.
 
 ----
 
 **How is the ‘new’ operator different from the ‘newInstance()’ operator in java?**
 
-Both ‘new’ and ‘newInstance()’ operators are used to creating objects. The difference is- that when we already know the class name for which we have to create the object then we use a new operator. But suppose we don’t know the class name for which we need to create the object, Or we get the class name from the command line argument, or the database, or the file. Then in that case we use the ‘newInstance()’ operator.
+Both new and newInstance() operators are used to creating objects.
 
-The ‘newInstance()’ keyword throws an exception that we need to handle. It is because there are chances that the class definition doesn’t exist, and we get the class name from runtime. So it will throw an exception.
+The difference is- that when we already know the class name for which we have to create the object then we use a new operator. But suppose we don’t know the class name for which we need to create the object, Or we get the class name from the command line argument, or the database, or the file. Then in that case we use the 'newInstance()' operator.
+
+The 'newInstance()' keyword throws an exception that we need to handle. It is because there are chances that the class definition doesn’t exist, and we get the class name from runtime. So it will throw an exception.
 
 ----
 
@@ -5008,10 +5584,17 @@ Moreover, exhaustion of the heap memory takes place if objects are created in su
 Let’s take a look at the following example:
 
 ```java
-// List<String> example = new LinkedList<String>();
-// while(true){
-// example.add(new String("Memory Limit Exceeded"));
-// }
+import java.util.LinkedList;
+import java.util.List;
+
+public class Main{
+    public static void main(String[] args){
+        List<String> example = new LinkedList<String>();
+        while(true){
+            example.add(new String("Memory Limit Exceeded"));
+        }
+    }
+}
 ```
 
 ----
@@ -5024,14 +5607,21 @@ Synchronization assists in resolving the issue and the resource is shared by a s
 
 No synchronization:
 
-package anonymous;
-public class Counting {
-       private int increase_counter;
-       public int increase() {
-               increase_counter = increase_counter + 1;
-               return increase_counter;
-       }
+```java
+class Counting {
+    private int increase_counter;
+    public int increase() {
+        increase_counter = increase_counter + 1;
+        return increase_counter;
+    }
 }
+public class Main{
+    public static void main(String[] args){
+        Counting newCounting = new Counting();
+        newCounting.increase();
+    }
+}
+```
 
 If a thread Thread1 views the count as 10, it will be increased by 1 to 11. Simultaneously, if another thread Thread2 views the count as 10, it will be increased by 1 to 11. Thus, inconsistency in count values takes place because the expected final value is 12 but the actual final value we get will be 11.
 
@@ -5039,14 +5629,22 @@ Now, the function increase() is made synchronized so that simultaneous accessing
 
 With synchronization:
 
-package anonymous;
-public class Counting {
-       private int increase_counter;
-       public synchronized int increase() {
-               increase_counter = increase_counter + 1;
-               return increase_counter;
-       }
+```java
+class Counting {
+    private int increase_counter;
+    public synchronized int increase() {
+        increase_counter = increase_counter + 1;
+        return increase_counter;
+    }
 }
+
+public class Main{
+    public static void main(String[] args){
+        Counting newCounting = new Counting();
+        newCounting.increase();
+    }
+}
+```
 
 If a thread Thread1 views the count as 10, it will be increased by 1 to 11, then the thread Thread2 will view the count as 11, it will be increased by 1 to 12. Thus, consistency in count values takes place.
 
@@ -5054,20 +5652,53 @@ If a thread Thread1 views the count as 10, it will be increased by 1 to 11, then
 
 **In the given code below, what is the significance of ... ?**
 
-public void fooBarMethod(String... variables){
-   // method code
-}
 Ability to provide ... is a feature called varargs (variable arguments) which was introduced as part of Java 5.
 The function having ... in the above example indicates that it can receive multiple arguments of the datatype String.
 For example, the fooBarMethod can be called in multiple ways and we can still have one method to process the data as shown below:
-fooBarMethod("foo", "bar");
-fooBarMethod("foo", "bar", "boo");
-fooBarMethod(new String[]{"foo", "var", "boo"});
-public void myMethod(String... variables){
-   for(String variable : variables){
-       // business logic
-   }
+
+```java
+class FooBar {
+    public void fooBarMethod(String... variables){
+        // method code
+    }
 }
+
+class Main {
+    public void myMethod(String... variables){
+        for(String variable : variables){
+            FooBar NewFooBar = new FooBar();
+            NewFooBar.fooBarMethod("foo", "bar");
+            NewFooBar.fooBarMethod("foo", "bar", "boo");
+            NewFooBar.fooBarMethod(new String[]{"foo", "var", "boo"});
+        }
+    }
+}
+```
+
+More explanation:
+
+1. Variable Arguments (Varargs):
+The ... notation allows you to pass a variable number of arguments of the same type to a method. This provides flexibility and convenience when you need to handle methods with a varying number of arguments.
+
+```java
+public void printNumbers(int... numbers) {
+    for (int num : numbers) {
+        System.out.println(num);
+    }
+}
+
+// Usage
+// printNumbers(1, 2, 3); // Prints: 1 2 3
+// printNumbers(10, 20); // Prints: 10 20
+// printNumbers(); // No arguments, prints nothing
+```
+
+2. Array Initialization:
+The ... notation can also be used during array initialization to create an array with an unspecified number of elements.
+
+```
+int[] numbers = {1, 2, 3, ...};
+```
 
 ----
 
@@ -5110,27 +5741,15 @@ class InterviewBit{
         System.out.println(" Static method. ");
     }
 }
+
+// Output:
+// Static Block 1. Value of j = 0
+// Static method. 
+// Static Block 2. Value of j = 10
+// Instance Block 1. Value of i = 0
+// Instance Block 2. Value of i = 5
+// Instance method. 
 ```
-
-The Output we get by executing this program will be
-
-Static Block 1. Value of j = 0
-Static method. 
-Static Block 2. Value of j = 10
-Instance Block 1. Value of i = 0
-Instance Block 2. Value of i = 5
-Instance method. 
-Welcome to InterviewBit
-
-This is a java tricky interview question frequently asked in java interviews for the experienced. The output will be like this because, when the java program is compiled and gets executed, then there are various steps followed for execution. And the steps are - 
-
-Identification of Static Members from top to bottom.
-Execution of Static variable assignment and a Static block from top to bottom.
-Execution of the main method.
-Identification of Instance Members from top to bottom.
-Execution of Instance variable assignment and Instance block from top to bottom.
-Execution of Constructor.
-In above steps from 4 to 6, will be executed for every object creation. If we create multiple objects then for every object these steps will be performed.
 
 Now from the above code, the execution will happen like this - 
 
@@ -5147,6 +5766,7 @@ During identification, the JVM will assign the default value in the static int j
 First static block it will print and because execution from top to bottom and original value in j is not assigned. So it will print the default value of 0.
 After executing static block 1. It will execute the static method_1 because it is called from the static block 1.
 Then it will assign the original value of 5 in the j variable. And executes the remaining static block.
+
 3. Now it will execute the main method. In which it will create an object for the class InterviewBit. And then the execution of instances will happen.
 
 4. Identify the instance variables and blocks from top to bottom. 
@@ -5160,6 +5780,7 @@ Like a static variable, the instance variable also has been initialized with the
 
 Prints the Instance block 1. And the current value of i is not assigned till now, so it will print 0.
 Assign the original value to i. Then print instance block 2. And after that instance method will be called and printed because it is being called in the instance block.
+
 6. And at the last step, the constructor will be invoked and the lines will be executed in the constructor.
 
 This is how the java program gets executed.
@@ -5275,12 +5896,15 @@ In other words, if there is 1 supplementary character of 2 units, the length of 
 **What is the output of the below code and why?**
 
 ```java
-public class InterviewBit{
-   public static void main(String[] args)
-   {
-       System.out.println('b' + 'i' + 't');
-   }
+public class Main{
+    public static void main(String[] args)
+    {
+        System.out.println('b' + 'i' + 't');
+    }
 }
+
+// Output:
+// 319
 ```
 
 “bit” would have been the result printed if the letters were used in double-quotes (or the string literals). But the question has the character literals (single quotes) being used which is why concatenation wouldn't occur. The corresponding ASCII values of each character would be added and the result of that sum would be printed.
@@ -5300,23 +5924,26 @@ Hence 319 would be printed.
 First Approach: Set the object references to null once the object creation purpose is served.
 
 ```java
-public class IBGarbageCollect {
-  public static void main (String [] args){
-       String s1 = "Some String";
-           // s1 referencing String object - not yet eligible for GC
-       s1 = null; // now s1 is eligible for GC
-   }
- }
+public class Main {
+    public static void main (String [] args){
+        String s1 = "Some String";
+        // s1 referencing String object - not yet eligible for GC
+        s1 = null; // now s1 is eligible for GC
+    }
+}
+```
+
 Second Approach: Point the reference variable to another object. Doing this, the object which the reference variable was referencing before becomes eligible for GC.
 
-public class IBGarbageCollect {
- public static void main(String [] args){
-     String s1 = "To Garbage Collect";
-     String s2 = "Another Object";
-     System.out.println(s1); // s1 is not yet eligible for GC
-     s1 = s2; // Point s1 to other object pointed by s2
-     /* Here, the string object having the content  "To Garbage Collect" is not referred by any reference variable. Therefore, it is eligible for GC */
- }
+```java
+public class Main {
+    public static void main(String [] args){
+        String s1 = "To Garbage Collect";
+        String s2 = "Another Object";
+        System.out.println(s1); // s1 is not yet eligible for GC
+        s1 = s2; // Point s1 to other object pointed by s2
+        /* Here, the string object having the content  "To Garbage Collect" is not referred by any reference variable. Therefore, it is eligible for GC */
+    }
 }
 ```
 
@@ -5374,17 +6001,34 @@ There is no boundation for using a particular dependency injection. But the reco
 
 Setters are mostly recommended for optional dependencies injection, and constructor arguments are recommended for mandatory ones. This is because constructor injection enables the injection of values into immutable fields and enables reading them more easily.
 
+```java
+public class UserService {
+    private UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    // Rest of the UserService implementation
+}
+```
+
+In the above example, the UserService class has a dependency on the UserRepository class, which is passed through the constructor. The dependency is explicitly declared, and the class relies on the caller to provide an instance of UserRepository during object creation.
+
+By using constructor injection, you can achieve better decoupling, testability, and maintainability in your code. Other forms of dependency injection, such as setter injection or field injection, have their use cases but can introduce more ambiguity and potential issues compared to constructor injection.
+
 ----
 
 **How we can set the spring bean scope. And what supported scopes does it have?**
 
-A scope can be set by an annotation such as the @Scope annotation or the "scope" attribute in an XML configuration file. Spring Bean supports the following five scopes:
+A scope can be set by an annotation such as the @Scope annotation or the "scope" attribute in an XML configuration file.
 
-Singleton
-Prototype
-Request
-Session
-Global-session
+Spring Bean supports the following five scopes:
+- Singleton
+- Prototype
+- Request
+- Session
+- Global-session
 
 ----
 
@@ -5393,45 +6037,1879 @@ Global-session
 Java Design patterns are categorized into the following different types. And those are also further categorized as 
 
 Structural patterns:
+- Adapter
 
-Adapter
-Bridge
-Filter
-Composite
-Decorator
-Facade
-Flyweight
-Proxy
+```java
+// Adaptee class with incompatible interface
+class LegacyRectangle {
+    public void display(int x1, int y1, int x2, int y2) {
+        System.out.println("LegacyRectangle: display(x1=" + x1 + ", y1=" + y1 + ", x2=" + x2 + ", y2=" + y2 + ")");
+    }
+}
+
+// Target interface
+interface Shape {
+    void draw(int x1, int y1, int x2, int y2);
+}
+
+// Adapter class
+class RectangleAdapter implements Shape {
+    private LegacyRectangle legacyRectangle;
+
+    public RectangleAdapter(LegacyRectangle legacyRectangle) {
+        this.legacyRectangle = legacyRectangle;
+    }
+
+    @Override
+    public void draw(int x1, int y1, int x2, int y2) {
+        legacyRectangle.display(x1, y1, x2, y2);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create the LegacyRectangle object
+        LegacyRectangle legacyRectangle = new LegacyRectangle();
+
+        // Create the RectangleAdapter object and pass the LegacyRectangle to it
+        RectangleAdapter adapter = new RectangleAdapter(legacyRectangle);
+
+        // Use the adapter to call the draw method
+        adapter.draw(10, 20, 30, 40);
+    }
+}
+```
+
+- Bridge
+
+```java
+// Abstraction
+abstract class Shape {
+    protected Color color;
+
+    public Shape(Color color) {
+        this.color = color;
+    }
+
+    public abstract void draw();
+}
+
+// Concrete Abstraction
+class Circle extends Shape {
+    private int radius;
+
+    public Circle(int radius, Color color) {
+        super(color);
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing Circle with radius " + radius);
+        color.applyColor();
+    }
+}
+
+class Square extends Shape {
+    private int sideLength;
+
+    public Square(int sideLength, Color color) {
+        super(color);
+        this.sideLength = sideLength;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing Square with side length " + sideLength);
+        color.applyColor();
+    }
+}
+
+// Implementor
+interface Color {
+    void applyColor();
+}
+
+// Concrete Implementors
+class RedColor implements Color {
+    @Override
+    public void applyColor() {
+        System.out.println("Applying red color");
+    }
+}
+
+class BlueColor implements Color {
+    @Override
+    public void applyColor() {
+        System.out.println("Applying blue color");
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle(5, new RedColor());
+        circle.draw();
+
+        Shape square = new Square(10, new BlueColor());
+        square.draw();
+    }
+}
+```
+
+- Filter
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+// Product class
+class Product {
+    private String name;
+    private String category;
+    private double price;
+
+    public Product(String name, String category, double price) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+
+// Filter interface
+interface Filter {
+    List<Product> filter(List<Product> products);
+}
+
+// Concrete filters
+class CategoryFilter implements Filter {
+    private String category;
+
+    public CategoryFilter(String category) {
+        this.category = category;
+    }
+
+    @Override
+    public List<Product> filter(List<Product> products) {
+        List<Product> filteredProducts = new ArrayList<>();
+        for (Product product : products) {
+            if (product.getCategory().equalsIgnoreCase(category)) {
+                filteredProducts.add(product);
+            }
+        }
+        return filteredProducts;
+    }
+}
+
+class PriceFilter implements Filter {
+    private double minPrice;
+    private double maxPrice;
+
+    public PriceFilter(double minPrice, double maxPrice) {
+        this.minPrice = minPrice;
+        this.maxPrice = maxPrice;
+    }
+
+    @Override
+    public List<Product> filter(List<Product> products) {
+        List<Product> filteredProducts = new ArrayList<>();
+        for (Product product : products) {
+            if (product.getPrice() >= minPrice && product.getPrice() <= maxPrice) {
+                filteredProducts.add(product);
+            }
+        }
+        return filteredProducts;
+    }
+}
+
+// Product catalog
+class ProductCatalog {
+    private List<Product> products;
+
+    public ProductCatalog(List<Product> products) {
+        this.products = products;
+    }
+
+    public List<Product> filterProducts(Filter filter) {
+        return filter.filter(products);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create a list of products
+        List<Product> products = new ArrayList<>();
+        products.add(new Product("iPhone", "Electronics", 1000.0));
+        products.add(new Product("Shirt", "Clothing", 25.0));
+        products.add(new Product("TV", "Electronics", 800.0));
+        products.add(new Product("Jeans", "Clothing", 50.0));
+
+        // Create a product catalog
+        ProductCatalog catalog = new ProductCatalog(products);
+
+        // Apply filters
+        Filter categoryFilter = new CategoryFilter("Electronics");
+        List<Product> electronicsProducts = catalog.filterProducts(categoryFilter);
+        System.out.println("Electronics products:");
+        for (Product product : electronicsProducts) {
+            System.out.println(product.getName());
+        }
+
+        Filter priceFilter = new PriceFilter(30.0, 1000.0);
+        List<Product> affordableProducts = catalog.filterProducts(priceFilter);
+        System.out.println("Affordable products:");
+        for (Product product : affordableProducts) {
+            System.out.println(product.getName());
+        }
+    }
+}
+```
+
+- Composite
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+// Component interface
+interface Component {
+    void render();
+}
+
+// Leaf class
+class Leaf implements Component {
+    private String name;
+
+    public Leaf(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void render() {
+        System.out.println("Rendering Leaf: " + name);
+    }
+}
+
+// Composite class
+class Composite implements Component {
+    private String name;
+    private List<Component> children;
+
+    public Composite(String name) {
+        this.name = name;
+        this.children = new ArrayList<>();
+    }
+
+    public void add(Component component) {
+        children.add(component);
+    }
+
+    public void remove(Component component) {
+        children.remove(component);
+    }
+
+    @Override
+    public void render() {
+        System.out.println("Rendering Composite: " + name);
+        for (Component component : children) {
+            component.render();
+        }
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create leaf components
+        Component leaf1 = new Leaf("Leaf 1");
+        Component leaf2 = new Leaf("Leaf 2");
+        Component leaf3 = new Leaf("Leaf 3");
+
+        // Create composite components
+        Composite composite1 = new Composite("Composite 1");
+        Composite composite2 = new Composite("Composite 2");
+
+        // Add leaf components to composite1
+        composite1.add(leaf1);
+        composite1.add(leaf2);
+
+        // Add leaf and composite components to composite2
+        composite2.add(leaf3);
+        composite2.add(composite1);
+
+        // Render the composite components
+        composite2.render();
+    }
+}
+```
+
+- Decorator
+
+```java
+// Component interface
+interface Pizza {
+    String getDescription();
+    double getCost();
+}
+
+// Concrete component
+class PlainPizza implements Pizza {
+    @Override
+    public String getDescription() {
+        return "Plain pizza";
+    }
+
+    @Override
+    public double getCost() {
+        return 5.0;
+    }
+}
+
+// Decorator abstract class
+abstract class PizzaDecorator implements Pizza {
+    protected Pizza pizza;
+
+    public PizzaDecorator(Pizza pizza) {
+        this.pizza = pizza;
+    }
+
+    @Override
+    public String getDescription() {
+        return pizza.getDescription();
+    }
+
+    @Override
+    public double getCost() {
+        return pizza.getCost();
+    }
+}
+
+// Concrete decorator classes
+class CheeseDecorator extends PizzaDecorator {
+    public CheeseDecorator(Pizza pizza) {
+        super(pizza);
+    }
+
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Cheese";
+    }
+
+    @Override
+    public double getCost() {
+        return super.getCost() + 2.0;
+    }
+}
+
+class TomatoDecorator extends PizzaDecorator {
+    public TomatoDecorator(Pizza pizza) {
+        super(pizza);
+    }
+
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Tomato";
+    }
+
+    @Override
+    public double getCost() {
+        return super.getCost() + 1.5;
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create a plain pizza
+        Pizza pizza = new PlainPizza();
+        System.out.println("Plain Pizza:");
+        System.out.println("Description: " + pizza.getDescription());
+        System.out.println("Cost: $" + pizza.getCost());
+
+        // Decorate the plain pizza with cheese
+        pizza = new CheeseDecorator(pizza);
+        System.out.println("\nCheese Decorated Pizza:");
+        System.out.println("Description: " + pizza.getDescription());
+        System.out.println("Cost: $" + pizza.getCost());
+
+        // Decorate the cheese pizza with tomato
+        pizza = new TomatoDecorator(pizza);
+        System.out.println("\nTomato Decorated Pizza:");
+        System.out.println("Description: " + pizza.getDescription());
+        System.out.println("Cost: $" + pizza.getCost());
+    }
+}
+```
+
+- Facade
+
+```java
+// Complex subsystem classes
+class OrderValidation {
+    public boolean validateOrder(int orderId) {
+        // Perform order validation logic
+        System.out.println("Validating order: " + orderId);
+        return true;
+    }
+}
+
+class PaymentProcessing {
+    public void processPayment(int orderId) {
+        // Perform payment processing logic
+        System.out.println("Processing payment for order: " + orderId);
+    }
+}
+
+class InventoryManagement {
+    public void updateInventory(int orderId) {
+        // Perform inventory update logic
+        System.out.println("Updating inventory for order: " + orderId);
+    }
+}
+
+// Facade class
+class OrderProcessingFacade {
+    private OrderValidation orderValidation;
+    private PaymentProcessing paymentProcessing;
+    private InventoryManagement inventoryManagement;
+
+    public OrderProcessingFacade() {
+        this.orderValidation = new OrderValidation();
+        this.paymentProcessing = new PaymentProcessing();
+        this.inventoryManagement = new InventoryManagement();
+    }
+
+    public void processOrder(int orderId) {
+        boolean isOrderValid = orderValidation.validateOrder(orderId);
+        if (isOrderValid) {
+            paymentProcessing.processPayment(orderId);
+            inventoryManagement.updateInventory(orderId);
+            System.out.println("Order processed successfully.");
+        } else {
+            System.out.println("Order validation failed. Unable to process order.");
+        }
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        OrderProcessingFacade facade = new OrderProcessingFacade();
+        int orderId = 12345;
+        facade.processOrder(orderId);
+    }
+}
+```
+
+- Flyweight
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+// Flyweight interface
+interface Shape {
+    void draw();
+}
+
+// Concrete flyweight class
+class Circle implements Shape {
+    private String color;
+    private int x;
+    private int y;
+    private int radius;
+
+    public Circle(String color) {
+        this.color = color;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle with color: " + color +
+                ", x: " + x + ", y: " + y + ", radius: " + radius);
+    }
+}
+
+// Flyweight factory class
+class ShapeFactory {
+    private static final Map<String, Shape> circleMap = new HashMap<>();
+
+    public static Shape getCircle(String color) {
+        Shape circle = circleMap.get(color);
+
+        if (circle == null) {
+            circle = new Circle(color);
+            circleMap.put(color, circle);
+            System.out.println("Creating a new circle of color: " + color);
+        }
+
+        return circle;
+    }
+}
+
+// Client code
+public class Main {
+    private static final String[] colors = {"Red", "Blue", "Green", "Yellow", "Black"};
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
+            circle.setX(getRandomX());
+            circle.setY(getRandomY());
+            circle.setRadius(10);
+            circle.draw();
+        }
+    }
+
+    private static String getRandomColor() {
+        return colors[(int) (Math.random() * colors.length)];
+    }
+
+    private static int getRandomX() {
+        return (int) (Math.random() * 100);
+    }
+
+    private static int getRandomY() {
+        return (int) (Math.random() * 100);
+    }
+}
+```
+
+- Proxy
+
+```java
+// Subject interface
+interface Image {
+    void display();
+}
+
+// RealSubject class
+class RealImage implements Image {
+    private String filename;
+
+    public RealImage(String filename) {
+        this.filename = filename;
+        loadFromDisk();
+    }
+
+    private void loadFromDisk() {
+        System.out.println("Loading image: " + filename);
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Displaying image: " + filename);
+    }
+}
+
+// Proxy class
+class ImageProxy implements Image {
+    private String filename;
+    private RealImage realImage;
+
+    public ImageProxy(String filename) {
+        this.filename = filename;
+    }
+
+    @Override
+    public void display() {
+        if (realImage == null) {
+            realImage = new RealImage(filename);
+        }
+        realImage.display();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Image image1 = new ImageProxy("image1.jpg");
+        Image image2 = new ImageProxy("image2.jpg");
+
+        // Image1 is loaded and displayed
+        image1.display();
+
+        // Image2 is only loaded when displayed
+        image2.display();
+    }
+}
+```
+
 Behavioral patterns:
+- Interpreter
 
-Interpreter
-Template method/ pattern
-Chain of responsibility
-Command pattern
-Iterator pattern
-Strategy pattern
-Visitor pattern
+```java
+// Abstract Expression
+interface Expression {
+    boolean interpret(String context);
+}
+
+// Terminal Expression
+class TerminalExpression implements Expression {
+    private String data;
+
+    public TerminalExpression(String data) {
+        this.data = data;
+    }
+
+    @Override
+    public boolean interpret(String context) {
+        return context.contains(data);
+    }
+}
+
+// Non-Terminal Expression
+class AndExpression implements Expression {
+    private Expression expression1;
+    private Expression expression2;
+
+    public AndExpression(Expression expression1, Expression expression2) {
+        this.expression1 = expression1;
+        this.expression2 = expression2;
+    }
+
+    @Override
+    public boolean interpret(String context) {
+        return expression1.interpret(context) && expression2.interpret(context);
+    }
+}
+
+// Non-Terminal Expression
+class OrExpression implements Expression {
+    private Expression expression1;
+    private Expression expression2;
+
+    public OrExpression(Expression expression1, Expression expression2) {
+        this.expression1 = expression1;
+        this.expression2 = expression2;
+    }
+
+    @Override
+    public boolean interpret(String context) {
+        return expression1.interpret(context) || expression2.interpret(context);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Expression person1 = new TerminalExpression("John");
+        Expression person2 = new TerminalExpression("Jane");
+
+        // Rule: John and Jane are colleagues
+        Expression isColleague = new AndExpression(person1, person2);
+
+        // Rule: John or Jane is a manager
+        Expression isManager = new OrExpression(person1, person2);
+
+        String context1 = "John is a colleague";
+        String context2 = "Jane is a manager";
+        String context3 = "John and Jane are colleagues and managers";
+
+        System.out.println(context1 + " - Colleague? " + isColleague.interpret(context1));
+        System.out.println(context2 + " - Manager? " + isManager.interpret(context2));
+        System.out.println(context3 + " - Colleague or Manager? " + isColleague.interpret(context3)
+                + " or " + isManager.interpret(context3));
+    }
+}
+```
+
+- Template method/pattern
+
+```java
+// Abstract class defining the template method
+abstract class AbstractClass {
+    // Template method
+    public void templateMethod() {
+        step1();
+        step2();
+        step3();
+    }
+
+    // Concrete implementation of step 1
+    public void step1() {
+        System.out.println("AbstractClass: Step 1");
+    }
+
+    // Abstract methods to be implemented by subclasses
+    public abstract void step2();
+
+    public abstract void step3();
+}
+
+// Concrete class implementing the template method
+class ConcreteClass extends AbstractClass {
+    @Override
+    public void step2() {
+        System.out.println("ConcreteClass: Step 2");
+    }
+
+    @Override
+    public void step3() {
+        System.out.println("ConcreteClass: Step 3");
+    }
+}
+
+// Another concrete class implementing the template method
+class AnotherConcreteClass extends AbstractClass {
+    @Override
+    public void step2() {
+        System.out.println("AnotherConcreteClass: Step 2");
+    }
+
+    @Override
+    public void step3() {
+        System.out.println("AnotherConcreteClass: Step 3");
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        AbstractClass abstractClass = new ConcreteClass();
+        abstractClass.templateMethod();
+
+        System.out.println();
+
+        abstractClass = new AnotherConcreteClass();
+        abstractClass.templateMethod();
+    }
+}
+```
+
+- Chain of responsibility
+
+```java
+// Request class
+class Request {
+    private String type;
+    private String content;
+
+    public Request(String type, String content) {
+        this.type = type;
+        this.content = content;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getContent() {
+        return content;
+    }
+}
+
+// Handler interface
+interface Handler {
+    void setNextHandler(Handler handler);
+
+    void handleRequest(Request request);
+}
+
+// Concrete handler
+class ConcreteHandler implements Handler {
+    private Handler nextHandler;
+
+    @Override
+    public void setNextHandler(Handler handler) {
+        nextHandler = handler;
+    }
+
+    @Override
+    public void handleRequest(Request request) {
+        if (request.getType().equals("Type1")) {
+            System.out.println("ConcreteHandler: Handling Type1 request");
+            // Handle the request
+        } else if (nextHandler != null) {
+            nextHandler.handleRequest(request);
+        } else {
+            System.out.println("ConcreteHandler: Unable to handle the request");
+        }
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Handler handler1 = new ConcreteHandler();
+        Handler handler2 = new ConcreteHandler();
+
+        handler1.setNextHandler(handler2);
+
+        // Create a request
+        Request request = new Request("Type1", "Request content");
+
+        // Send the request to the first handler
+        handler1.handleRequest(request);
+    }
+}
+```
+
+- Command pattern
+
+```java
+// Command interface
+interface Command {
+    void execute();
+}
+
+// Receiver class
+class Light {
+    public void turnOn() {
+        System.out.println("Light is on");
+    }
+
+    public void turnOff() {
+        System.out.println("Light is off");
+    }
+}
+
+// Concrete commands
+class TurnOnCommand implements Command {
+    private Light light;
+
+    public TurnOnCommand(Light light) {
+        this.light = light;
+    }
+
+    @Override
+    public void execute() {
+        light.turnOn();
+    }
+}
+
+class TurnOffCommand implements Command {
+    private Light light;
+
+    public TurnOffCommand(Light light) {
+        this.light = light;
+    }
+
+    @Override
+    public void execute() {
+        light.turnOff();
+    }
+}
+
+// Invoker class
+class RemoteControl {
+    private Command command;
+
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    public void pressButton() {
+        command.execute();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create the receiver
+        Light light = new Light();
+
+        // Create the commands
+        Command turnOnCommand = new TurnOnCommand(light);
+        Command turnOffCommand = new TurnOffCommand(light);
+
+        // Create the invoker
+        RemoteControl remoteControl = new RemoteControl();
+
+        // Set the commands for the invoker
+        remoteControl.setCommand(turnOnCommand);
+        remoteControl.pressButton();
+
+        remoteControl.setCommand(turnOffCommand);
+        remoteControl.pressButton();
+    }
+}
+```
+
+- Iterator pattern
+
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+// Aggregate interface
+interface Aggregate {
+    Iterator<String> createIterator();
+}
+
+// Concrete Aggregate class
+class ConcreteAggregate implements Aggregate {
+    private List<String> items;
+
+    public ConcreteAggregate() {
+        items = new ArrayList<>();
+    }
+
+    public void addItem(String item) {
+        items.add(item);
+    }
+
+    @Override
+    public Iterator<String> createIterator() {
+        return new ConcreteIterator(items);
+    }
+}
+
+// Iterator interface
+interface Iterator<T> {
+    boolean hasNext();
+
+    T next();
+}
+
+// Concrete Iterator class
+class ConcreteIterator implements Iterator<String> {
+    private List<String> items;
+    private int position;
+
+    public ConcreteIterator(List<String> items) {
+        this.items = items;
+        position = 0;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return position < items.size();
+    }
+
+    @Override
+    public String next() {
+        return items.get(position++);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Aggregate aggregate = new ConcreteAggregate();
+        aggregate.addItem("Item 1");
+        aggregate.addItem("Item 2");
+        aggregate.addItem("Item 3");
+
+        Iterator<String> iterator = aggregate.createIterator();
+        while (iterator.hasNext()) {
+            String item = iterator.next();
+            System.out.println(item);
+        }
+    }
+}
+```
+
+- Strategy pattern
+
+```java
+// Strategy interface
+interface PaymentStrategy {
+    void pay(int amount);
+}
+
+// Concrete strategies
+class CreditCardPaymentStrategy implements PaymentStrategy {
+    private String cardNumber;
+    private String expirationDate;
+    private String cvv;
+
+    public CreditCardPaymentStrategy(String cardNumber, String expirationDate, String cvv) {
+        this.cardNumber = cardNumber;
+        this.expirationDate = expirationDate;
+        this.cvv = cvv;
+    }
+
+    @Override
+    public void pay(int amount) {
+        System.out.println("Paid $" + amount + " using Credit Card");
+        // Additional logic for credit card payment
+    }
+}
+
+class PayPalPaymentStrategy implements PaymentStrategy {
+    private String email;
+    private String password;
+
+    public PayPalPaymentStrategy(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    @Override
+    public void pay(int amount) {
+        System.out.println("Paid $" + amount + " using PayPal");
+        // Additional logic for PayPal payment
+    }
+}
+
+// Context class
+class ShoppingCart {
+    private PaymentStrategy paymentStrategy;
+
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+    }
+
+    public void checkout(int amount) {
+        paymentStrategy.pay(amount);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+
+        // Set payment strategy to credit card
+        PaymentStrategy creditCardStrategy = new CreditCardPaymentStrategy("1234567890123456", "12/2025", "123");
+        cart.setPaymentStrategy(creditCardStrategy);
+        cart.checkout(100);
+
+        System.out.println();
+
+        // Set payment strategy to PayPal
+        PaymentStrategy payPalStrategy = new PayPalPaymentStrategy("example@example.com", "password");
+        cart.setPaymentStrategy(payPalStrategy);
+        cart.checkout(200);
+    }
+}
+```
+
+- Visitor pattern
+
+```java
+// Element interface
+interface Element {
+    void accept(Visitor visitor);
+}
+
+// Concrete Element classes
+class ConcreteElementA implements Element {
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public String operationA() {
+        return "ConcreteElementA operation";
+    }
+}
+
+class ConcreteElementB implements Element {
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public String operationB() {
+        return "ConcreteElementB operation";
+    }
+}
+
+// Visitor interface
+interface Visitor {
+    void visit(ConcreteElementA elementA);
+
+    void visit(ConcreteElementB elementB);
+}
+
+// Concrete Visitor class
+class ConcreteVisitor implements Visitor {
+    @Override
+    public void visit(ConcreteElementA elementA) {
+        System.out.println("Visitor is visiting " + elementA.operationA());
+    }
+
+    @Override
+    public void visit(ConcreteElementB elementB) {
+        System.out.println("Visitor is visiting " + elementB.operationB());
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Element[] elements = { new ConcreteElementA(), new ConcreteElementB() };
+
+        Visitor visitor = new ConcreteVisitor();
+
+        for (Element element : elements) {
+            element.accept(visitor);
+        }
+    }
+}
+```
+
 J2EE patterns:
 
-MVC Pattern
-Data Access Object pattern
-Front controller pattern
-Intercepting filter pattern
-Transfer object pattern
-Creational patterns:
+- MVC Pattern
 
-Factory method/Template
-Abstract Factory
-Builder
-Prototype
-Singleton
+```java
+// Model
+class User {
+    private String name;
+    private String email;
+
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
+
+// View
+class UserView {
+    public void displayUserDetails(String name, String email) {
+        System.out.println("User Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+    }
+}
+
+// Controller
+class UserController {
+    private User model;
+    private UserView view;
+
+    public UserController(User model, UserView view) {
+        this.model = model;
+        this.view = view;
+    }
+
+    public void updateView() {
+        view.displayUserDetails(model.getName(), model.getEmail());
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create the model
+        User user = new User("John Doe", "johndoe@example.com");
+
+        // Create the view
+        UserView userView = new UserView();
+
+        // Create the controller
+        UserController userController = new UserController(user, userView);
+
+        // Update and display the view
+        userController.updateView();
+    }
+}
+```
+
+- Data Access Object pattern
+
+```java
+// Model
+class User {
+    private String username;
+    private String password;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+
+// Data Access Object (DAO) interface
+interface UserDao {
+    void addUser(User user);
+    User getUser(String username);
+    void updateUser(User user);
+    void deleteUser(User user);
+}
+
+// Concrete DAO implementation
+class UserDaoImpl implements UserDao {
+    private List<User> userList;
+
+    public UserDaoImpl() {
+        userList = new ArrayList<>();
+    }
+
+    @Override
+    public void addUser(User user) {
+        userList.add(user);
+        System.out.println("User added successfully");
+    }
+
+    @Override
+    public User getUser(String username) {
+        for (User user : userList) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void updateUser(User user) {
+        for (User existingUser : userList) {
+            if (existingUser.getUsername().equals(user.getUsername())) {
+                existingUser.setPassword(user.getPassword());
+                System.out.println("User updated successfully");
+                return;
+            }
+        }
+        System.out.println("User not found");
+    }
+
+    @Override
+    public void deleteUser(User user) {
+        userList.remove(user);
+        System.out.println("User deleted successfully");
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        UserDao userDao = new UserDaoImpl();
+
+        // Add a new user
+        User user1 = new User("john", "password123");
+        userDao.addUser(user1);
+
+        // Get a user by username
+        User fetchedUser = userDao.getUser("john");
+        System.out.println("Fetched User: " + fetchedUser.getUsername() + ", " + fetchedUser.getPassword());
+
+        // Update user password
+        User updatedUser = new User("john", "newpassword");
+        userDao.updateUser(updatedUser);
+
+        // Delete user
+        userDao.deleteUser(updatedUser);
+    }
+}
+```
+
+- Front controller pattern
+
+```java
+// Front Controller
+class FrontController {
+    private Dispatcher dispatcher;
+
+    public FrontController() {
+        dispatcher = new Dispatcher();
+    }
+
+    private boolean isAuthenticUser() {
+        // Check if the user is authenticated
+        // In a real application, you would implement proper authentication logic here
+        System.out.println("User is authenticated.");
+        return true;
+    }
+
+    private void trackRequest(String request) {
+        // Log the user's request
+        System.out.println("Tracking request: " + request);
+    }
+
+    public void dispatchRequest(String request) {
+        // Log and track the request
+        trackRequest(request);
+
+        // Check if the user is authenticated
+        if (isAuthenticUser()) {
+            // Dispatch the request to the appropriate handler
+            dispatcher.dispatch(request);
+        }
+    }
+}
+
+// Dispatcher
+class Dispatcher {
+    private HomeView homeView;
+    private AboutView aboutView;
+
+    public Dispatcher() {
+        homeView = new HomeView();
+        aboutView = new AboutView();
+    }
+
+    public void dispatch(String request) {
+        if (request.equalsIgnoreCase("HOME")) {
+            homeView.show();
+        } else if (request.equalsIgnoreCase("ABOUT")) {
+            aboutView.show();
+        } else {
+            System.out.println("Invalid request.");
+        }
+    }
+}
+
+// Views
+class HomeView {
+    public void show() {
+        System.out.println("Displaying Home Page");
+    }
+}
+
+class AboutView {
+    public void show() {
+        System.out.println("Displaying About Page");
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create the front controller
+        FrontController frontController = new FrontController();
+
+        // Simulate user requests
+        frontController.dispatchRequest("HOME");
+        frontController.dispatchRequest("ABOUT");
+        frontController.dispatchRequest("CONTACT");
+    }
+}
+```
+
+- Intercepting filter pattern
+
+```java
+// Filter interface
+interface Filter {
+    void execute(String request);
+}
+
+// Concrete filters
+class AuthenticationFilter implements Filter {
+    @Override
+    public void execute(String request) {
+        System.out.println("Authenticating request: " + request);
+    }
+}
+
+class LoggingFilter implements Filter {
+    @Override
+    public void execute(String request) {
+        System.out.println("Logging request: " + request);
+    }
+}
+
+class RateLimitFilter implements Filter {
+    @Override
+    public void execute(String request) {
+        System.out.println("Applying rate limit to request: " + request);
+    }
+}
+
+// Target
+class Target {
+    public void execute(String request) {
+        System.out.println("Executing request: " + request);
+    }
+}
+
+// Filter chain
+class FilterChain {
+    private List<Filter> filters = new ArrayList<>();
+    private Target target;
+
+    public void addFilter(Filter filter) {
+        filters.add(filter);
+    }
+
+    public void setTarget(Target target) {
+        this.target = target;
+    }
+
+    public void execute(String request) {
+        for (Filter filter : filters) {
+            filter.execute(request);
+        }
+        target.execute(request);
+    }
+}
+
+// Filter manager
+class FilterManager {
+    private FilterChain filterChain;
+
+    public FilterManager(Target target) {
+        filterChain = new FilterChain();
+        filterChain.setTarget(target);
+    }
+
+    public void addFilter(Filter filter) {
+        filterChain.addFilter(filter);
+    }
+
+    public void filterRequest(String request) {
+        filterChain.execute(request);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create the target
+        Target target = new Target();
+
+        // Create the filter manager
+        FilterManager filterManager = new FilterManager(target);
+
+        // Add filters to the filter manager
+        filterManager.addFilter(new AuthenticationFilter());
+        filterManager.addFilter(new LoggingFilter());
+        filterManager.addFilter(new RateLimitFilter());
+
+        // Execute the request through the filter manager
+        filterManager.filterRequest("GET /api/data");
+    }
+}
+```
+
+- Transfer object pattern
+
+```java
+// Transfer Object
+class UserTO {
+    private String username;
+    private String email;
+
+    public UserTO(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+}
+
+// Business Service
+class UserService {
+    public UserTO getUserById(int userId) {
+        // Simulate fetching user data from a database
+        // Here, we create a dummy user for demonstration purposes
+        String username = "John Doe";
+        String email = "john.doe@example.com";
+
+        // Create and return the transfer object
+        return new UserTO(username, email);
+    }
+
+    public void updateUser(UserTO user) {
+        // Simulate updating user data in a database
+        System.out.println("Updating user: " + user.getUsername());
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the business service
+        UserService userService = new UserService();
+
+        // Retrieve user data using the transfer object
+        UserTO user = userService.getUserById(123);
+
+        // Modify the user data
+        user.setEmail("new-email@example.com");
+
+        // Update the user data using the transfer object
+        userService.updateUser(user);
+    }
+}
+```
+
+Creational patterns:
+- Factory method/Template
+
+```java
+// Product interface
+interface Product {
+    void operation();
+}
+
+// Concrete products
+class ConcreteProductA implements Product {
+    @Override
+    public void operation() {
+        System.out.println("Operation in Product A");
+    }
+}
+
+class ConcreteProductB implements Product {
+    @Override
+    public void operation() {
+        System.out.println("Operation in Product B");
+    }
+}
+
+// Creator interface
+interface Creator {
+    Product createProduct();
+}
+
+// Concrete creators
+class ConcreteCreatorA implements Creator {
+    @Override
+    public Product createProduct() {
+        return new ConcreteProductA();
+    }
+}
+
+class ConcreteCreatorB implements Creator {
+    @Override
+    public Product createProduct() {
+        return new ConcreteProductB();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create a concrete creator
+        Creator creatorA = new ConcreteCreatorA();
+
+        // Use the creator to create a product
+        Product productA = creatorA.createProduct();
+        productA.operation();
+
+        // Create a different concrete creator
+        Creator creatorB = new ConcreteCreatorB();
+
+        // Use the different creator to create a different product
+        Product productB = creatorB.createProduct();
+        productB.operation();
+    }
+}
+```
+
+- Abstract Factory
+
+```java
+// Abstract Product A
+interface ProductA {
+    void operationA();
+}
+
+// Concrete Product A1
+class ConcreteProductA1 implements ProductA {
+    @Override
+    public void operationA() {
+        System.out.println("Operation A in Product A1");
+    }
+}
+
+// Concrete Product A2
+class ConcreteProductA2 implements ProductA {
+    @Override
+    public void operationA() {
+        System.out.println("Operation A in Product A2");
+    }
+}
+
+// Abstract Product B
+interface ProductB {
+    void operationB();
+}
+
+// Concrete Product B1
+class ConcreteProductB1 implements ProductB {
+    @Override
+    public void operationB() {
+        System.out.println("Operation B in Product B1");
+    }
+}
+
+// Concrete Product B2
+class ConcreteProductB2 implements ProductB {
+    @Override
+    public void operationB() {
+        System.out.println("Operation B in Product B2");
+    }
+}
+
+// Abstract Factory
+interface AbstractFactory {
+    ProductA createProductA();
+    ProductB createProductB();
+}
+
+// Concrete Factory 1
+class ConcreteFactory1 implements AbstractFactory {
+    @Override
+    public ProductA createProductA() {
+        return new ConcreteProductA1();
+    }
+
+    @Override
+    public ProductB createProductB() {
+        return new ConcreteProductB1();
+    }
+}
+
+// Concrete Factory 2
+class ConcreteFactory2 implements AbstractFactory {
+    @Override
+    public ProductA createProductA() {
+        return new ConcreteProductA2();
+    }
+
+    @Override
+    public ProductB createProductB() {
+        return new ConcreteProductB2();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create a concrete factory
+        AbstractFactory factory1 = new ConcreteFactory1();
+
+        // Use the factory to create products
+        ProductA productA1 = factory1.createProductA();
+        productA1.operationA();
+
+        ProductB productB1 = factory1.createProductB();
+        productB1.operationB();
+
+        // Create a different concrete factory
+        AbstractFactory factory2 = new ConcreteFactory2();
+
+        // Use the different factory to create different products
+        ProductA productA2 = factory2.createProductA();
+        productA2.operationA();
+
+        ProductB productB2 = factory2.createProductB();
+        productB2.operationB();
+    }
+}
+```
+
+- Builder
+
+```java
+// Product class
+class Product {
+    private String property1;
+    private String property2;
+    private String property3;
+
+    public void setProperty1(String property1) {
+        this.property1 = property1;
+    }
+
+    public void setProperty2(String property2) {
+        this.property2 = property2;
+    }
+
+    public void setProperty3(String property3) {
+        this.property3 = property3;
+    }
+
+    public void display() {
+        System.out.println("Property 1: " + property1);
+        System.out.println("Property 2: " + property2);
+        System.out.println("Property 3: " + property3);
+    }
+}
+
+// Builder interface
+interface Builder {
+    void buildProperty1(String property1);
+    void buildProperty2(String property2);
+    void buildProperty3(String property3);
+    Product getResult();
+}
+
+// Concrete builder
+class ConcreteBuilder implements Builder {
+    private Product product = new Product();
+
+    @Override
+    public void buildProperty1(String property1) {
+        product.setProperty1(property1);
+    }
+
+    @Override
+    public void buildProperty2(String property2) {
+        product.setProperty2(property2);
+    }
+
+    @Override
+    public void buildProperty3(String property3) {
+        product.setProperty3(property3);
+    }
+
+    @Override
+    public Product getResult() {
+        return product;
+    }
+}
+
+// Director class
+class Director {
+    public Product construct(Builder builder) {
+        builder.buildProperty1("Value 1");
+        builder.buildProperty2("Value 2");
+        builder.buildProperty3("Value 3");
+        return builder.getResult();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        Director director = new Director();
+        Builder builder = new ConcreteBuilder();
+
+        Product product = director.construct(builder);
+        product.display();
+    }
+}
+```
+
+- Prototype
+
+```java
+// Prototype interface
+interface Prototype {
+    Prototype clone();
+}
+
+// Concrete prototype
+class ConcretePrototype implements Prototype {
+    private String property;
+
+    public ConcretePrototype(String property) {
+        this.property = property;
+    }
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
+
+    public String getProperty() {
+        return property;
+    }
+
+    @Override
+    public Prototype clone() {
+        return new ConcretePrototype(property);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Create a prototype object
+        ConcretePrototype prototype = new ConcretePrototype("Initial Property");
+
+        // Clone the prototype
+        ConcretePrototype clone = (ConcretePrototype) prototype.clone();
+
+        // Modify the property of the clone
+        clone.setProperty("Modified Property");
+
+        // Output the properties of the prototype and clone
+        System.out.println("Prototype Property: " + prototype.getProperty());
+        System.out.println("Clone Property: " + clone.getProperty());
+    }
+}
+```
+
+- Singleton
+
+```java
+// Singleton class
+class Singleton {
+    private static Singleton instance;
+
+    // Private constructor to prevent direct instantiation
+    private Singleton() {
+    }
+
+    // Public method to access the singleton instance
+    public static Singleton getInstance() {
+        if (instance == null) {
+            // Create a new instance if it doesn't exist
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // Other methods of the singleton class
+    public void showMessage() {
+        System.out.println("Hello, I am a singleton object!");
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Get the singleton instance
+        Singleton singleton = Singleton.getInstance();
+
+        // Use the singleton object
+        singleton.showMessage();
+    }
+}
+```
 
 ----
 
 **What is a Memory Leak? Discuss some common causes of it.**
 
 The Java Garbage Collector (GC) typically removes unused objects when they are no longer required, but when they are still referenced, the unused objects cannot be removed. So this causes the memory leak problem. Example - Consider a linked list like the structure below -
-
 
 In the above image, there are unused objects that are not referenced. But then also Garbage collection will not free it. Because it is referencing some existing referenced object. So this can be the situation of memory leak.
 
@@ -5443,13 +7921,45 @@ Improper written custom data structures.
 Inserting into a collection object without first deleting it.
 etc.
 
+```java
+public class GarbageCollectorExample {
+    public static void main(String[] args) {
+        // Create objects
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        MyClass obj3 = new MyClass();
+
+        // Set references to null
+        obj1 = null;
+        obj2 = null;
+
+        // Trigger garbage collection
+        System.gc();
+
+        // Other program logic...
+    }
+}
+
+class MyClass {
+    // Constructor
+    public MyClass() {
+        System.out.println("Creating object: " + this);
+    }
+
+    // Finalizer
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalizing object: " + this);
+        super.finalize();
+    }
+}
+```
+
 ----
 
 **Assume a thread has a lock on it, calling the sleep() method on that thread will release the lock?**
 
 A thread that has a lock won't be released even after it calls sleep(). Despite the thread sleeping for a specified period of time, the lock will not be released.
-
-Java Programming Interview Questions
 
 ----
 
@@ -5465,8 +7975,7 @@ public class InterviewBit {
        Scanner s = new Scanner(System.in);
        String word = s.nextLine();
        System.out.println("Is "+word+" palindrome? - "+isWordPalindrome(word));
-   } 
-   
+   }
    
    public static boolean isWordPalindrome(String word){ 
        String reverseWord = getReverseWord(word); 
@@ -5481,24 +7990,10 @@ public class InterviewBit {
        if(word == null || word.isEmpty()){ 
            return word; 
        } 
-       
        return word.charAt(word.length()- 1) + getReverseWord(word.substring(0, word.length() - 1)); 
    } 
 }
 ```
-
-logo
-Practice Problems
-Solve these problems to ace this concept
-Substring
-Medium
-9.47 Mins
-Solve
-
-StringBuffer
-Easy
-24.24 Mins
-Solve
 
 ----
 
@@ -5540,26 +8035,30 @@ The main idea is to validate the length of strings and then if found equal, conv
 ```java
 import java.util.Arrays;
 import java.util.Scanner;
-public class InterviewBit {
- public static void main(String[] args) {
-   Scanner s = new Scanner(System.in);
-   //Input from two strings
-   System.out.print("First String: ");
-   String string1 = s.nextLine();
-   System.out.print("Second String: ");
-   String string2 = s.nextLine();
-   // check for the length
-   if(string1.length() == string2.length()) {
-     // convert strings to char array
-     char[] characterArray1 = string1.toCharArray();
-     char[] characterArray2 = string2.toCharArray();
-     // sort the arrays
-     Arrays.sort(characterArray1);
-     Arrays.sort(characterArray2);
-     // check for equality, if found equal then anagram, else not an anagram
-     boolean isAnagram = Arrays.equals(characterArray1, characterArray2);
-     System.out.println("Anagram: "+ isAnagram);
- }
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        //Input from two strings
+        System.out.print("First String: ");
+        String string1 = s.nextLine();
+        System.out.print("Second String: ");
+        String string2 = s.nextLine();
+
+        // check for the length
+        if (string1.length() == string2.length()) {
+            // convert strings to char array
+            char[] characterArray1 = string1.toCharArray();
+            char[] characterArray2 = string2.toCharArray();
+            // sort the arrays
+            Arrays.sort(characterArray1);
+            Arrays.sort(characterArray2);
+            // check for equality, if found equal then anagram, else not an anagram
+            boolean isAnagram = Arrays.equals(characterArray1, characterArray2);
+            System.out.println("Anagram: " + isAnagram);
+        }
+    }
 }
 ```
 
@@ -5567,29 +8066,39 @@ public class InterviewBit {
 
 **Write a Java Program to find the factorial of a given number.**
 
-public class FindFactorial {
-   public static void main(String[] args) {
-       int num = 10;
-       long factorialResult = 1l;
-       for(int i = 1; i <= num; ++i)
-       {
-           factorialResult *= i;
-       }
-       System.out.println("Factorial: "+factorialResult);
-   }
+```java
+class FindFactorial {
+    public void findFactorial() {
+        int num = 10;
+        long factorialResult = 1l;
+        for(int i = 1; i <= num; ++i)
+        {
+            factorialResult *= i;
+        }
+        System.out.println("Factorial: "+factorialResult);
+    }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        FindFactorial nFindFactorial = new FindFactorial();
+        nFindFactorial.findFactorial();
+
+    }
+}
+```
 
 ----
 
 **Given an array of non-duplicating numbers from 1 to n where one number is missing, write an efficient java program to find that missing number.**
 
-Idea is to find the sum of n natural numbers using the formula and then finding the sum of numbers in the given array. Subtracting these two sums results in the number that is the actual missing number. This results in O(n) time complexity and O(1) space complexity.
+Idea is to find the sum of n natural numbers using the formula and then finding the sum of numbers in the given array. Subtracting these two sums results
+in the number that is the actual missing number. This results in O(n) time complexity and O(1) space complexity.
 
 ```java
 public class IBMissingNumberProblem {
 
    public static void main(String[] args) {
-
        int[] array={4,3,8,7,5,2,6};
        int missingNumber = findMissingNum(array);
        System.out.println("Missing Number is "+ missingNumber); 
@@ -5648,13 +8157,13 @@ public class IBMagicNumber{
 **Write a Java program to create and throw custom exceptions.**
 
 ```java
-class InterviewBit {
+class Main {
     public static void main(String args[]) throws CustomException {
-
         // Throwing the custom exception be passing the message
         throw new CustomException(" This is my custom Exception ");
     }
 }
+
 //Creating Custom Exception Class
 class CustomException extends Exception{
     //Defining Constructor to throw exception message
@@ -5672,17 +8181,17 @@ And to avoid handling exceptions in the main method, we have used the throws key
 **Write a Java program to reverse a string.**
 
 ```java
-class InterviewBit{
+class Main{
     public static void main(String[] args){
         //Input String
         String str = "Welcome to InterviewBit";
-        
+
         //Pointers.
         int i = 0, j = str.length()-1;
-        
+
         //Result character array to store the reversed string.
         char[] revString = new char[j+1];
-        
+
         //Looping and reversing the string.
         while(i < j){
             revString[j] = str.charAt(i);
@@ -5703,33 +8212,36 @@ In the above code, we are storing the last character from the string to the firs
 **Write a Java program to rotate arrays 90 degree clockwise by taking matrices from user input.**
 
 ```java
-mport java.util.Scanner;
-public class InterviewBit
+import java.util.Scanner;
+
+public class Main
 {
     public static void main(String[] args) {
-	  Scanner sc = new Scanner(System.in);
-	  int no;
+        Scanner sc = new Scanner(System.in);
+        int no;
         System.out.print("Enter size of Array : ");
         no = sc.nextInt();
         int[][] a = new int[no][no];
         System.out.print("Enter  "+ no*no+" Element Array : ");
-        
+
         for(int i = 0; i<no; i++){
             for(int j = 0; j<no; j++){
                 a[i][j] = sc.nextInt();
             }
         }
+
         System.out.print("\nArray Before Rotation\n\n");
+
         for(int i = 0; i<no; i++){
             for(int j = 0; j<no; j++){
                 System.out.print(a[i][j] + " ");
             }
             System.out.println();
         }
-    
         System.out.println("\n");
+
         //Rotation
-        
+
         //Transpose
         for(int i = 0; i < no; i++){
             for(int j = i; j < no; j++){
@@ -5738,7 +8250,7 @@ public class InterviewBit
                 a[j][i] = temp;
             }
         }
-        
+
         //Reverse Each row
         for(int i = 0; i < no; i++){
             int l, j;
@@ -5749,9 +8261,9 @@ public class InterviewBit
                 l--;
             }
         }
-        
+
         System.out.println("Array After Rotation - \n");
-    
+
         for(int i = 0; i<no; i++){
             for(int j = 0; j<no; j++){
                 System.out.print(a[i][j] + " ");
@@ -5778,7 +8290,7 @@ Output -
 18 = 11 + 7
 
 ```java
-public class InterviewBit
+public class Main
 {
     // Method to Check Prime Number
     private static int check_prime(int num){
@@ -5802,9 +8314,9 @@ public class InterviewBit
             }
         }
     }
-	public static void main(String[] args) {
-		find(18);
-	}
+    public static void main(String[] args) {
+        find(18);
+    }
 }
 ```
 
@@ -5815,19 +8327,19 @@ In the above code, for any number n, we find all the 2 pairs of numbers that are
 **Write a Java program for solving the Tower of Hanoi Problem.**
 
 ```java
-public class InterviewBit
+public class Main
 {
     //Recursive Method for Solving the Tower of hanoi.
     private static void TOH(char source, char auxiliary, char destination, int numOfDisk){
-    	if (numOfDisk > 0){
-    		TOH(source, destination, auxiliary, numOfDisk-1);
-    		System.out.println("Move 1 disk from "+source+" to "+destination+" using "+auxiliary+".");
-    		TOH(auxiliary, source, destination, numOfDisk-1);
-    	}
+        if (numOfDisk > 0){
+            TOH(source, destination, auxiliary, numOfDisk-1);
+            System.out.println("Move 1 disk from "+source+" to "+destination+" using "+auxiliary+".");
+            TOH(auxiliary, source, destination, numOfDisk-1);
+        }
     }
-	public static void main(String[] args) {
-		TOH('A','B','C', 3);
-	}
+    public static void main(String[] args) {
+        TOH('A','B','C', 3);
+    }
 }
 ```
 
@@ -5842,33 +8354,33 @@ public class Main
 {
     //Recursive method for binary search
     private static boolean binarySearch(int[] arr, int low, int high, int key){
-       
+
         //Calculating Mid.
         int mid = (low + high)/2;
-       
+
         //Base Case.
         if(low > high)
             return false;
-       
+
         //Checking if the key is found in the middle.
         if(arr[mid] == key)
             return true;
-       
+
         //Searching on the left half if a key exists there.  
         if(key < arr[mid])
             return binarySearch(arr, low, mid-1, key);
-       
+
         //Searching on the other half otherwise.
         return binarySearch(arr, mid+1, high, key);
     }
-public static void main(String[] args) {
-   
-   int[] arr = {2, 5, 9, 13, 17, 21, 30};
-   if(binarySearch(arr, 0, (arr.length-1), 30))
-       System.out.println(" Element Found. ");
-   else
-       System.out.println(" Element not Found.");
-}
+    public static void main(String[] args) {
+
+        int[] arr = {2, 5, 9, 13, 17, 21, 30};
+        if(binarySearch(arr, 0, (arr.length-1), 30))
+            System.out.println(" Element Found. ");
+        else
+            System.out.println(" Element not Found.");
+    }
 }
 ```
 
@@ -5887,28 +8399,26 @@ There is no reverse() utility method in the String class. However, you can creat
 The following example code shows one way to reverse a string:
 
 ```java
-public class StringPrograms {
+public class Main {
+    public static void main(String[] args) {
+        String str = "123";
 
-	public static void main(String[] args) {
-		String str = "123";
+        System.out.println(reverse(str));
+    }
 
-		System.out.println(reverse(str));
-	}
+    public static String reverse(String in) {
+        if (in == null)
+            throw new IllegalArgumentException("Null is not valid input");
 
-	public static String reverse(String in) {
-		if (in == null)
-			throw new IllegalArgumentException("Null is not valid input");
+        StringBuilder out = new StringBuilder();
 
-		StringBuilder out = new StringBuilder();
+        char[] chars = in.toCharArray();
 
-		char[] chars = in.toCharArray();
+        for (int i = chars.length - 1; i >= 0; i--)
+            out.append(chars[i]);
 
-		for (int i = chars.length - 1; i >= 0; i--)
-			out.append(chars[i]);
-
-		return out.toString();
-	}
-
+        return out.toString();
+    }
 }
 ```
 
@@ -5926,27 +8436,24 @@ b = b - a; // (b + a) - b = a (b is swapped)
 The following example code shows one way to implement the number swap method:
 
 ```java
-public class SwapNumbers {
+public class Main {
 
-public static void main(String[] args) {
-	int a = 10;
-	int b = 20;
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
 
-    System.out.println("a is " + a + " and b is " + b);
+        System.out.println("a is " + a + " and b is " + b);
 
-	a = a + b;
-	b = a - b;
-	a = a - b;
+        a = a + b;
+        b = a - b;
+        a = a - b;
 
-    System.out.println("After swapping, a is " + a + " and b is " + b);
+        System.out.println("After swapping, a is " + a + " and b is " + b);
     }
-
 }
 ```
 
 The output shows that the integer values are swapped:
-
-Output
 a is 10 and b is 20
 After swapping, a is 20 and b is 10
 
@@ -5975,30 +8482,33 @@ public class StringContainsVowels {
 
 You can write a program to divide the given number n, by a number from 2 to n/2 and check the remainder. If the remainder is 0, then it’s not a prime number. The following example code shows one way to check if a given number is a Prime number:
 
-public class PrimeNumberCheck {
+```java
+// Prime number check
+public class Main {
 
-	public static void main(String[] args) {
-		System.out.println(isPrime(19)); // true
-		System.out.println(isPrime(49)); // false
-	}
+    public static void main(String[] args) {
+        System.out.println(isPrime(19)); // true
+        System.out.println(isPrime(49)); // false
+    }
 
-	public static boolean isPrime(int n) {
-		if (n == 0 || n == 1) {
-			return false;
-		}
-		if (n == 2) {
-			return true;
-		}
-		for (int i = 2; i <= n / 2; i++) {
-			if (n % i == 0) {
-				return false;
-			}
-		}
+    public static boolean isPrime(int n) {
+        if (n == 0 || n == 1) {
+            return false;
+        }
+        if (n == 2) {
+            return true;
+        }
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
 
-		return true;
-	}
-
+        return true;
+    }
 }
+```
+
 Although this program works, it’s not very memory and time-efficient. Consider that, for a given number N, if there is a prime number M between 2 to √N (square root of N) that evenly divides it, then N is not a prime number.
 
 ----
@@ -11001,15 +13511,12 @@ And to include new server add as a dependency. Below is the example to add jetty
 ----
 
 **What is @RestController annotation in Sprint boot?**
-Ans: 
 
 @RestController  annotation is a combination of @Controller and @ResponseBody annotation. It is used to make restful web services and also it converts the response to JSON or XML. This annotation is used at the class level and it allows class to handle the requests made by the client.
 
 ----
 
 **What is the difference between @Controller and @RestController?**
-
-Ans: 
 
 With @controller annotation class is responsible for preparing a model Map with data to be displayed by the view But @RestController annotation class is responsible  for creating Restful controllers.
 @controller only behave as controller, we need to add @responsebody annotation with method to return value and writes it to the HTTP response. But @RestController annotation is a combination of @controller and @responsebody which by default converts return as HTTP Response.
@@ -11020,9 +13527,6 @@ In @Controller, we need to use @ResponseBody on every handler method but in @Res
 ----
 
 **What is the difference between RequestMapping and GetMapping?**
-
-Ans:
-
 
 RequestMapping annotation is used with GET, POST, PUT, and other request methods. getMapping is an extension of RequestMapping which helps you to improve on clarity of requests.
 @RequestMapping annotation is used on a class level but the @GetMapping is used on method-level
@@ -11037,8 +13541,6 @@ Ans: An actuator in Spring boot is a feature  that helps you to monitor and mana
 
 **What is the process to enable Actuator in Spring boot application?**
 
-Ans:
-
 To enable the spring actuator feature, we need to add the dependency of “spring-boot-starter-actuator” in pom.xml.
 
 Below is the xml snippet that can be added 
@@ -11052,8 +13554,6 @@ Below is the xml snippet that can be added
 
 **Tell some endpoint actuator-provide to monitor the Spring boot application?**
 
-Ans:
-
 Actuators provide below pre-defined endpoints to monitor our application –
 
 Health
@@ -11065,21 +13565,26 @@ Httptrace
 Heapdump
 Threaddump
 Shutdown
-Q20). What is the use of Profiles in spring boot?
-Ans:
 
-To Complete the development process of an application  or we can say during  the development of any application, we deal with multiple environments such as dev, test and Prod. Sometime we need specific configuration at each environment level. Suppose we are using an embedded H2 database for dev but for prod, we might have proprietary Oracle.
+----
 
-A profile is a set of configuration settings. Spring Boot allows to define profile specific property files in the form of application-{profile}.properties. It automatically loads the properties in an application.properties file for all profiles, and the ones in profile-specific property files only for the specified profile. 
+**What is the use of Profiles in spring boot?**
 
+To Complete the development process of an application  or we can say during  the development of any application, we deal with multiple
+environments such as dev, test and Prod. Sometime we need specific configuration at each environment level. Suppose we are using an
+embedded H2 database for dev but for prod, we might have proprietary Oracle.
 
-spring boot interview question
+A profile is a set of configuration settings. Spring Boot allows to define profile specific property files in the form of
+application-{profile}.properties. It automatically loads the properties in an application.properties file for all profiles,
+and the ones in profile-specific property files only for the specified profile. 
+
+----
+
+**spring boot interview question**
 
 ----
 
 **What is dependency Injection in Spring Boot?**
-
-Ans:
 
 The process of injecting dependent objects into target class is called dependency injection. Suppose our one class is dependent on the another class object. In that case we will provide the other class object to our class. This process is known as dependency injections.
 
@@ -11100,15 +13605,15 @@ Class Student {
   }
 }
 
-**What is an IOC container?**
-
 ----
+
+**What is an IOC container?**
 
 Ans: IoC Container is a framework for implementing automatic dependency injection. It manages object creation and its life-time and also injects dependencies into the class.
 
-**Tell the steps how you will create spring boot project using Spring Initializer.**
-
 ----
+
+**Tell the steps how you will create spring boot project using Spring Initializer.**
 
 Ans:
 
@@ -11128,8 +13633,6 @@ Ans:The advantage of the YAML file over the properties file in Spring Boot is, t
 ----
 
 **Tell some difference between @RequestParam vs @PathVariable Annotations.**
-Ans:
-
 
 1). @RequestParams extract values from the query string and @PathVariables extract values from the URI path.
 
@@ -11302,7 +13805,6 @@ One example I have seen is having a long field in your class. If you know that a
 
 ----
 
-
 **What are practical uses of volatile modifier?**
 
 One of the practical use of the volatile variable is to make reading double and long atomic. Both double and long are 64-bit wide and they are read in two parts, first 32-bit first time and next 32-bit second time, which is non-atomic but volatile double and long read is atomic in Java. Another use of the volatile variable is to provide a memory barrier, just like it is used in Disrupter framework. Basically, Java Memory model inserts a write barrier after you write to a volatile variable and a read barrier before you read it. Which means, if you write to volatile field then it's guaranteed that any thread accessing that variable will see the value you wrote and anything you did before doing that right into the thread is guaranteed to have happened and any updated data values will also be visible to all threads, because the memory barrier flushed all other writes to the cache.
@@ -11429,7 +13931,7 @@ This questions if for you to answer :-)
 ----
 
 
-20**Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?**
+**Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?**
 
 Yes, we can cast but int is 32 bit long in java while byte is 8 bit long in java so when you cast an int to byte higher 24 bits are lost and a byte can only hold a value from -128 to 128.
 
@@ -11751,30 +14253,351 @@ The Comparable interface is used to define the  natural order of object while Co
 
 IO is very important from Java interview point of view. You should have a good knowledge of old Java IO, NIO, and NIO2 alsong with some operating system and disk IO fundamentals.
 
+**In my Java program, I have three sockets? How many threads I will need to handle that**
 
-66) In my Java program, I have three sockets? How many threads I will need to handle that
+To handle three sockets in a Java program, you typically need three separate threads, one for each socket. Each thread will be responsible for handling the communication and processing associated with its corresponding socket.
 
-67) How do you create ByteBuffer in Java?
+Here's a simple example illustrating the usage of multiple threads to handle three sockets:
 
-68) How do you write and read from ByteBuffer in Java?
+```java
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-69) Is Java BIG endian or LITTLE endian?
+public class SocketHandlerExample {
+    public static void main(String[] args) throws IOException {
+        int port1 = 1234;
+        int port2 = 5678;
+        int port3 = 9999;
 
-70) What is the byte order of ByteBuffer?
+        // Create threads for each socket
+        Thread thread1 = new SocketHandlerThread(port1);
+        Thread thread2 = new SocketHandlerThread(port2);
+        Thread thread3 = new SocketHandlerThread(port3);
 
-71) The difference between direct buffer and non-direct buffer in Java? (answer)
+        // Start the threads
+        thread1.start();
+        thread2.start();
+        thread3.start();
+    }
 
-72) What is the memory mapped buffer in Java? (answer)
+    static class SocketHandlerThread extends Thread {
+        private final int port;
 
-73) What is TCP NO DELAY socket option?
+        SocketHandlerThread(int port) {
+            this.port = port;
+        }
 
-74) What is the difference between TCP and UDP protocol? (answer)
+        @Override
+        public void run() {
+            try {
+                ServerSocket serverSocket = new ServerSocket(port);
+                System.out.println("Listening on port " + port);
 
-75) The difference between ByteBuffer and StringBuffer in Java? (answer)
+                while (true) {
+                    Socket clientSocket = serverSocket.accept();
+                    // Handle the client socket communication and processing here
+                    // You can create a separate class or method to encapsulate the logic
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+
+In this example, we create three threads (SocketHandlerThread) to handle three separate sockets. Each thread listens on a specific port using a ServerSocket and enters a loop to accept client connections (Socket).
+
+Inside the loop, you can handle the communication and processing for each client socket according to your program's requirements. You can create a separate class or method to encapsulate the logic for handling the socket operations.
+
+By starting the three threads, each one will handle the incoming client connections independently and concurrently.
+
+Note that this is a basic example to illustrate the concept of handling multiple sockets with multiple threads. In a real-world scenario, you might need to consider additional factors like thread synchronization, thread pool management, error handling, and scalability, depending on the complexity and specific requirements of your program.
+
+----
+
+**How do you create ByteBuffer in Java?**
+
+In Java, you can create a ByteBuffer using the ByteBuffer.allocate() method or the ByteBuffer.wrap() method. Here's how you can use each method:
+
+Using ByteBuffer.allocate():
+
+```java
+int bufferSize = 1024; // Specify the desired buffer size in bytes
+ByteBuffer buffer = ByteBuffer.allocate(bufferSize);
+```
+
+This method creates a new ByteBuffer with the specified capacity. The buffer is initially filled with zeros.
+
+Using ByteBuffer.wrap():
+
+```java
+byte[] byteArray = { 1, 2, 3, 4, 5 }; // Provide the byte array
+ByteBuffer buffer = ByteBuffer.wrap(byteArray);
+```
+
+This method wraps an existing byte array into a ByteBuffer. Any changes made to the buffer will reflect in the underlying byte array.
+
+Once you have created a ByteBuffer, you can use its various methods to read from or write to the buffer, manipulate its position and limit, and perform other operations.
+
+It's worth noting that there are also other methods available for creating a ByteBuffer with different characteristics, such as ByteBuffer.allocateDirect() for creating a direct buffer that uses native memory or ByteBuffer.allocate(int capacity) to create a buffer with a specified capacity. The choice of which method to use depends on your specific requirements and use case.
+
+----
+
+**How do you write and read from ByteBuffer in Java?**
+
+```java
+import java.nio.ByteBuffer;
+
+public class ByteBufferExample {
+    public static void main(String[] args) {
+        int intValue = 42;
+        double doubleValue = 3.14;
+
+        // Create a ByteBuffer with a specific capacity
+        ByteBuffer buffer = ByteBuffer.allocate(12);
+
+        // Writing data to the ByteBuffer
+        buffer.putInt(intValue);
+        buffer.putDouble(doubleValue);
+
+        // Resetting the position to prepare for reading
+        buffer.flip();
+
+        // Reading data from the ByteBuffer
+        int readIntValue = buffer.getInt();
+        double readDoubleValue = buffer.getDouble();
+
+        // Output the read values
+        System.out.println("Read int value: " + readIntValue);
+        System.out.println("Read double value: " + readDoubleValue);
+    }
+}
+```
+
+----
+
+**Is Java BIG endian or LITTLE endian?**
+
+Java is a language that is platform-independent and does not specify a particular endianness. The endianness (whether big-endian or little-endian) is determined by the underlying hardware architecture and the implementation of the Java Virtual Machine (JVM) on that platform.
+
+Most modern processors and architectures, including x86 and x86-64, use the little-endian byte order. However, some other architectures, such as certain ARM processors and network protocols like IPv6, use big-endian byte order.
+
+In Java, you can use the ByteOrder class from the java.nio package to explicitly specify the byte order when working with byte buffers. The default byte order used by Java's ByteBuffer is the native byte order of the platform.
+
+For example, to create a ByteBuffer with big-endian byte order, you can use the order() method as follows:
+
+```java
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+public class ByteBufferEndianExample {
+    public static void main(String[] args) {
+        short value = 42;
+
+        ByteBuffer buffer = ByteBuffer.allocate(2);
+        buffer.order(ByteOrder.BIG_ENDIAN);
+
+        buffer.putShort(value);
+
+        buffer.flip();
+
+        short readValue = buffer.getShort();
+
+        System.out.println("Read value: " + readValue);
+    }
+}
+```
+
+In this example, the order() method is used to set the byte order of the ByteBuffer to big-endian explicitly before writing and reading the short value.
+
+----
+
+**What is the byte order of ByteBuffer?**
+
+The byte order of a ByteBuffer in Java is initially set to the native byte order of the underlying platform. The native byte order refers to the byte order used by the hardware architecture on which the Java Virtual Machine (JVM) is running.
+
+You can determine the byte order of a ByteBuffer by using the order() method from the java.nio.ByteBuffer class. It returns a ByteOrder enum representing the current byte order of the buffer.
+
+Here's an example:
+
+```java
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+public class ByteBufferByteOrderExample {
+    public static void main(String[] args) {
+        ByteBuffer buffer = ByteBuffer.allocate(4);
+
+        ByteOrder byteOrder = buffer.order();
+
+        System.out.println("Byte order: " + byteOrder);
+    }
+}
+```
+
+When you run this code, it will print the byte order of the ByteBuffer. The output will be either BIG_ENDIAN or LITTLE_ENDIAN, depending on the native byte order of your platform.
+
+You can also explicitly set the byte order of a ByteBuffer using the order() method. For example, you can use buffer.order(ByteOrder.BIG_ENDIAN) or buffer.order(ByteOrder.LITTLE_ENDIAN) to set the byte order to a specific value regardless of the native byte order.
+
+----
+
+**The difference between direct buffer and non-direct buffer in Java?**
+
+In Java, the ByteBuffer class provides two types of buffers: direct buffers and non-direct (or heap) buffers. The main difference between these two types is how the underlying memory is allocated and accessed.
+
+Direct Buffer:
+
+A direct buffer is allocated outside of the JVM heap, typically in native memory.
+It is created using the ByteBuffer.allocateDirect() method.
+Direct buffers are intended for scenarios where data needs to be efficiently transferred between Java and native code or I/O operations.
+Direct buffers can be more efficient for certain I/O operations, as they can be directly read from or written to by native I/O operations without the need for additional copying.
+However, the memory allocation and deallocation of direct buffers are typically more expensive compared to non-direct buffers.
+Direct buffers are generally recommended for large data transfers, such as network communication or disk I/O operations.
+Non-Direct (Heap) Buffer:
+
+A non-direct buffer is allocated within the JVM heap using the ByteBuffer.allocate() method.
+Non-direct buffers are the default type of buffer created by ByteBuffer.allocate() and are suitable for most general-purpose scenarios.
+They have a slightly higher memory allocation and deallocation overhead compared to direct buffers.
+Non-direct buffers are managed by the Java garbage collector, which simplifies memory management.
+They are typically used for various data processing tasks, such as in-memory computations or file processing, where the buffer's content is accessed and manipulated within the Java application itself.
+It's important to note that the choice between direct and non-direct buffers depends on the specific requirements of your application. If you're working with large amounts of data or performing I/O operations that benefit from direct memory access, using direct buffers may provide performance advantages. However, for most general-purpose use cases, non-direct buffers are suitable and easier to work with.
+
+----
+
+**What is the memory mapped buffer in Java?**
+
+In Java, a memory-mapped buffer is a ByteBuffer that is associated with a region of memory mapped to a file or other data source. It allows you to directly read from or write to the mapped file as if you were accessing the buffer in memory, without explicit I/O operations.
+
+The memory mapping technique provides a way to efficiently handle large files or data sources by leveraging the underlying operating system's virtual memory management. Instead of reading or writing data in smaller chunks, you can map a file into memory and access it as a contiguous block.
+
+To create a memory-mapped buffer in Java, you can use the java.nio.channels.FileChannel class and its map() method. Here's an example:
+
+```java
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+
+public class MemoryMappedBufferExample {
+    public static void main(String[] args) {
+        try (RandomAccessFile file = new RandomAccessFile("data.txt", "rw")) {
+            FileChannel channel = file.getChannel();
+            long fileSize = channel.size();
+
+            // Map the entire file into memory
+            MappedByteBuffer buffer = channel.map(FileChannel.MapMode.READ_WRITE, 0, fileSize);
+
+            // Access the buffer as if it were in memory
+            // Read or write data directly to the buffer
+
+            // Remember to clean up resources
+            buffer.clear();
+            channel.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+----
+
+**What is TCP NO DELAY socket option?**
+
+The TCP_NODELAY socket option is used in TCP (Transmission Control Protocol) to disable the Nagle's algorithm.
+
+The Nagle's algorithm is a technique used to improve network efficiency by reducing the number of small TCP packets that are sent over the network. By default, TCP uses the Nagle's algorithm, which buffers small amounts of outgoing data and delays sending until a sufficient amount of data is accumulated or a TCP acknowledgment (ACK) is received.
+
+However, in some scenarios, such as real-time applications or situations where low latency is crucial, the Nagle's algorithm can introduce unwanted delays. In such cases, you can set the TCP_NODELAY socket option to disable the algorithm and send data immediately without waiting for additional data or ACKs.
+
+When TCP_NODELAY is enabled (set to true), it indicates that the TCP stack should not buffer small amounts of data and should send each packet as soon as possible. This can result in smaller, more frequent TCP packets being sent, but it can reduce latency for applications where responsiveness is important.
+
+In Java, you can enable or disable the TCP_NODELAY socket option using the setTcpNoDelay() method provided by the Socket class or the ServerSocket class. Here's an example:
+
+```java
+import java.net.Socket;
+import java.io.IOException;
+
+public class TcpNoDelayExample {
+    public static void main(String[] args) {
+        try {
+            Socket socket = new Socket("example.com", 8080);
+
+            // Enable TCP_NODELAY option
+            socket.setTcpNoDelay(true);
+
+            // Use the socket for communication
+
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In this example, we create a Socket and enable the TCP_NODELAY option by calling setTcpNoDelay(true) on the socket object. After enabling the option, the socket can be used for communication, and the data will be sent immediately without additional buffering.
+
+It's important to note that enabling TCP_NODELAY can increase network overhead due to the smaller packet sizes, so it should be used judiciously in situations where low latency is a priority.
+
+----
+
+**What is the difference between TCP and UDP protocol?**
+
+TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are two widely used transport layer protocols in computer networks. Here are the key differences between them:
+
+Connection-Oriented vs Connectionless:
+
+TCP is a connection-oriented protocol. It establishes a reliable and ordered connection between the sender and receiver before data transmission. It guarantees the delivery of data packets in the order they were sent and handles retransmission of lost packets.
+UDP is a connectionless protocol. It does not establish a dedicated connection between sender and receiver. Each UDP packet is independent and can be sent to the recipient without prior setup. It does not guarantee delivery or order of packets.
+Reliability:
+
+TCP provides reliable transmission of data. It uses acknowledgments and retransmissions to ensure that all data packets are received correctly.
+UDP does not guarantee reliable delivery. It does not have built-in mechanisms for acknowledgment or retransmission. If a UDP packet is lost or corrupted during transmission, it will not be automatically retransmitted.
+Ordering:
+
+TCP guarantees the ordering of data packets. It ensures that the packets are delivered in the same order they were sent.
+UDP does not guarantee the ordering of packets. The packets may arrive at the receiver in a different order than they were sent.
+Flow Control and Congestion Control:
+
+TCP implements flow control and congestion control mechanisms to regulate the rate of data transmission and prevent network congestion.
+UDP does not have built-in flow control or congestion control mechanisms. It allows the application to send packets at its own rate, which can potentially lead to network congestion.
+Header Overhead:
+
+TCP has a larger header size compared to UDP. TCP headers contain additional information for establishing and maintaining connections, sequencing packets, and handling reliability.
+UDP has a smaller header size compared to TCP. UDP headers contain minimal information, providing a lightweight overhead.
+Usage:
+
+TCP is commonly used for applications that require reliable and ordered data delivery, such as web browsing, email, file transfer, and database communication.
+UDP is suitable for applications that prioritize low latency and real-time communication, such as video streaming, voice over IP (VoIP), online gaming, and DNS (Domain Name System) queries.
+Choosing between TCP and UDP depends on the specific requirements of the application. TCP is preferred when reliability and ordered delivery are crucial, while UDP is suitable for scenarios where low latency and real-time communication are more important, even at the expense of reliability.
+
+----
+
+**The difference between ByteBuffer and StringBuffer in Java?**
+
+ByteBuffer:
+
+The ByteBuffer class is part of the java.nio package and is used for handling binary data. It provides a way to manage a fixed-size buffer of bytes.
+ByteBuffer is primarily used for I/O operations, such as reading from or writing to channels, sockets, or files.
+It offers methods for reading and writing various data types in binary format, such as integers, floats, and characters.
+ByteBuffer is commonly used in scenarios where direct manipulation of binary data is required, such as network communication, serialization, and file handling.
+StringBuffer:
+
+The StringBuffer class is part of the java.lang package and is used for manipulating character strings.
+StringBuffer is designed to be mutable, meaning you can modify its contents without creating a new object.
+It provides methods for appending, deleting, inserting, and modifying strings.
+
+StringBuffer is thread-safe, meaning it can be safely used in multithreaded environments without external synchronization.
+StringBuffer is commonly used when you need to build or modify strings dynamically, such as constructing long strings or modifying existing strings in a thread-safe manner.
+In summary, ByteBuffer is used for handling binary data and is often used in I/O operations, while StringBuffer is used for manipulating character strings and is commonly used when you need to dynamically build or modify strings.
 
 ----
 
 **Java Best Practices Interview question**
+
 Contains best practices from different parts of Java programming e.g. Collections, String, IO, Multi-threading, Error and Exception handling, design patterns etc. This section is mostly for experience Java developer, technical lead,  AVP, team lead and coders who are responsible for products. If you want to create quality products you must know and follow the best practices.
 
 ----
@@ -11811,7 +14634,6 @@ d) use volatile to indicate compiler about ordering, visibility, and atomicity.
 e) avoid thread local variable because incorrect use of ThreadLocal class in Java can create a memory leak.
 Look there are many best practices and I give extra points to the developer which bring something new, something even I don't know. I make sure to ask this question to Java developers of 8 to 10 years of experience just to gauge his hands on experience and knowledge.
 
-
 ----
 
 **Name 5 IO best practices?**
@@ -11823,6 +14645,7 @@ c) Always close streams in finally block or use try-with-resource statements.
 d) use memory mapped file for faster IO.
 If a Java candidate doesn't know about IO and NIO, especially if he has at least 2 to 4 years of experience, he needs some reading.
 
+----
 
 **Name 5 JDBC best practices your follow?**
 
@@ -11858,17 +14681,90 @@ You can either use SimpleDateFormat class or joda-time library to format date in
 
 **How do you show timezone in formatted date in Java?**
 
+```java
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
+public class TimeZoneExample {
+    public static void main(String[] args) {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+        sdf.setTimeZone(TimeZone.getTimeZone("America/New_York")); // Set the desired timezone
+        String formattedDate = sdf.format(date);
+        System.out.println("Formatted Date with Timezone: " + formattedDate);
+    }
+}
+```
+
 ----
 
 **The difference between java.util.Date and java.sql.Date in Java?**
+
+In Java, java.util.Date and java.sql.Date are two different classes that represent dates and times but have different purposes and are used in different contexts.
+
+java.util.Date: This class represents a specific instant in time, including both the date and time components. It is part of the core Java library and can be used for general-purpose date and time operations. However, it has some limitations and is not recommended for new code.
+
+java.sql.Date: This class is a subclass of java.util.Date and is specifically designed to work with databases in the context of Java Database Connectivity (JDBC). It represents only the date component (year, month, and day) and does not store the time information. It is used to interact with date columns in relational databases.
+
+The key differences between java.util.Date and java.sql.Date are:
+
+Representation: java.util.Date represents both the date and time components, while java.sql.Date represents only the date component.
+
+Time information: java.util.Date includes the time information, such as hours, minutes, and seconds, along with the date. java.sql.Date does not store the time information and is set to midnight (00:00:00) in the default time zone.
+
+Usage: java.util.Date is a general-purpose class for working with dates and times in Java. It can be used in various contexts outside of databases. java.sql.Date is specifically designed for working with databases using JDBC and is used for interacting with date columns in relational databases.
+
+When working with databases, it is recommended to use the appropriate date and time classes provided by the JDBC API, such as java.sql.Date, java.sql.Time, and java.sql.Timestamp, for better compatibility and consistency with database operations. For general-purpose date and time operations, it is recommended to use the newer date and time classes introduced in Java 8, such as java.time.LocalDate, java.time.LocalTime, and java.time.LocalDateTime, which provide more flexibility and improved functionality.
 
 ----
 
 **How to you calculate the difference between two dates in Java?**
 
+```java
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class DateDifferenceExample {
+    public static void main(String[] args) {
+        LocalDate date1 = LocalDate.of(2023, 1, 1);
+        LocalDate date2 = LocalDate.now();
+
+        long daysDiff = ChronoUnit.DAYS.between(date1, date2);
+        System.out.println("Difference in days: " + daysDiff);
+
+        long monthsDiff = ChronoUnit.MONTHS.between(date1, date2);
+        System.out.println("Difference in months: " + monthsDiff);
+
+        long yearsDiff = ChronoUnit.YEARS.between(date1, date2);
+        System.out.println("Difference in years: " + yearsDiff);
+    }
+}
+```
+
 ----
 
 **How do you convert a String(YYYYMMDD) to date in Java?**
+
+```java
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class StringToDateExample {
+    public static void main(String[] args) {
+        String dateString = "20230516";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        
+        try {
+            Date date = sdf.parse(dateString);
+            System.out.println("Parsed Date: " + date);
+        } catch (ParseException e) {
+            System.out.println("Error parsing the date: " + e.getMessage());
+        }
+    }
+}
+```
 
 ----
 
@@ -11880,220 +14776,620 @@ You can either use SimpleDateFormat class or joda-time library to format date in
 
 You can use PowerMock library to test static methods in Java.
 
+To test a static method in Java, you can follow these steps:
+
+Create a test class: Create a separate test class to contain your test methods. This class should be in the same package as the class containing the static method you want to test.
+
+Write test methods: In your test class, write one or more test methods to verify the behavior of the static method. Each test method should be annotated with the @Test annotation from a testing framework like JUnit.
+
+Call the static method: Inside each test method, call the static method you want to test, providing appropriate arguments.
+
+Verify the results: Use assertions or other verification techniques to check if the static method produces the expected results. You can use assertions provided by testing frameworks like JUnit's assertEquals() or Hamcrest's assertThat().
+
+Run the tests: Run your test class using a testing framework like JUnit. The testing framework will execute the test methods and report any failures or errors.
+
+Here's an example using JUnit 4:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class MyStaticClassTest {
+
+    @Test
+    public void testStaticMethod() {
+        // Call the static method
+        int result = MyStaticClass.myStaticMethod(10, 5);
+        
+        // Verify the result
+        assertEquals(15, result);
+    }
+}
+```
+
 ----
 
 **How to do you test a method for an exception using JUnit?**
+
+
+To test a method for an expected exception using JUnit, you can use the @Test annotation along with the expected attribute or the assertThrows() method. Here's how you can do it:
+
+In this example, the @Test annotation is used with the expected attribute set to the expected exception class (MyException in this case). The test method testMethod() is executed, and it is expected that the MyClass.myMethod() will throw a MyException. If the exception is thrown during the execution of the method, the test will pass. If the exception is not thrown or a different exception is thrown, the test will fail.
+
+```java
+import org.junit.Test;
+
+public class MyClassTest {
+
+    @Test(expected = MyException.class)
+    public void testMethod() throws MyException {
+        // Call the method that is expected to throw an exception
+        MyClass.myMethod();
+    }
+}
+```
 
 ----
 
 **Which unit testing libraries you have used for testing Java programs?**
 
+JUnit: JUnit is one of the most widely used unit testing frameworks for Java. It provides annotations, assertions, and test runners to write and execute tests effectively. JUnit has versions for both Java 4 (JUnit 4) and Java 5+ (JUnit 5).
+
+TestNG: TestNG is another popular testing framework for Java. It offers additional features compared to JUnit, such as flexible test configuration, support for parameterized tests, and better reporting capabilities.
+
+Mockito: Mockito is a mocking framework that allows you to create mock objects for testing. It works well in conjunction with JUnit and TestNG and helps in isolating and testing specific parts of your code.
+
+PowerMock: PowerMock is an extension of Mockito and EasyMock frameworks. It enables you to mock static methods, final classes, and other difficult-to-test code constructs, providing more flexibility in unit testing.
+
+AssertJ: AssertJ is a fluent assertion library that provides a rich set of assertion methods for making assertions in your tests. It offers a more readable and expressive syntax compared to the standard assertions available in JUnit or TestNG.
+
+Hamcrest: Hamcrest is a library for writing matcher objects and performing more flexible assertions in your tests. It provides a large set of matchers that allow you to create custom assertions and make your tests more descriptive.
+
 ----
 
 **What is the difference between @Before and @BeforeClass annotation?**
 
-----
+In JUnit, the @Before and @BeforeClass annotations are used to mark methods that should be executed before each test method and before the test class, respectively. The main difference between them is when they are executed.
 
-Programming and Coding Questions
-93) How to check if a String contains only numeric digits? (solution)
+The @Before annotation is used to mark a method that should be executed before each test method. This is typically used to set up any necessary resources or objects that will be used by the test methods. The method annotated with @Before is executed once before each test method.
 
-----
+On the other hand, the @BeforeClass annotation is used to mark a method that should be executed before the first test method in the test class. This method is executed only once, and typically used to set up any static objects or resources that will be used by all test methods in the test class.
 
-94) How to write LRU cache in Java using Generics? (answer)
-
-----
-
-95) Write a Java program to convert bytes to long? (answer)
+To summarize, @Before is executed before each test method, whereas @BeforeClass is executed only once before the first test method in the test class. It's important to note that methods annotated with @BeforeClass must be static, while methods annotated with @Before do not have to be static.
 
 ----
 
-96) How to reverse a String in Java without using StringBuffer? (solution)
+To check if a String contains only numeric digits in Java, you can use regular expressions or loop through the characters of the String. Here are examples of both approaches:
+
+Using Regular Expressions:
+
+**How to check if a String contains only numeric digits?**
+
+```java
+public static boolean containsOnlyDigits(String str) {
+    return str.matches("\\d+");
+}
+```
+
+In this example, the matches() method is used with the regular expression \\d+. The \\d represents a digit and the + indicates one or more occurrences. The method will return true if the String contains only numeric digits and false otherwise.
+
+```java
+public static boolean containsOnlyDigits(String str) {
+    for (char c : str.toCharArray()) {
+        if (!Character.isDigit(c)) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+In this example, the toCharArray() method is used to convert the String into an array of characters. Then, each character is checked using the Character.isDigit() method to determine if it is a digit. If any character is found to not be a digit, the method returns false. If all characters are digits, the method returns true.
+
+You can use either approach based on your preference and requirements. Regular expressions provide a concise way to check for digit patterns, while the loop approach gives you more flexibility for custom checks if needed.
 
 ----
 
-97) How to find the word with the highest frequency from a file in Java? (solution)
+**How to write LRU cache in Java using Generics?**
+
+To implement an LRU (Least Recently Used) cache in Java using generics, you can create a class that combines a LinkedHashMap and a maximum size limit. Here's an example:
+
+java
+
+```java
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class LRUCache<K, V> {
+
+    private LinkedHashMap<K, V> cache;
+    private int maxSize;
+
+    public LRUCache(int maxSize) {
+        this.maxSize = maxSize;
+        this.cache = new LinkedHashMap<>(maxSize, 0.75f, true) {
+            protected boolean removeEldestEntry(Map.Entry eldest) {
+                return size() > maxSize;
+            }
+        };
+    }
+
+    public synchronized V get(K key) {
+        return cache.get(key);
+    }
+
+    public synchronized void put(K key, V value) {
+        cache.put(key, value);
+    }
+
+    public synchronized void clear() {
+        cache.clear();
+    }
+
+    public synchronized int size() {
+        return cache.size();
+    }
+}
+```
+
+In this example, the LRUCache class is defined with type parameters K for the key and V for the value. The cache is implemented using a LinkedHashMap, which maintains the insertion order of the elements. The removeEldestEntry method is overridden to limit the cache size by removing the least recently used entry when the cache reaches the maximum size.
+
+The get method retrieves the value associated with a given key from the cache. The put method inserts a key-value pair into the cache. The clear method clears the cache, and the size method returns the current size of the cache.
+
+You can use the LRUCache class with any data types by providing appropriate key and value types when creating an instance of the class. For example:
+
+```java
+LRUCache<String, Integer> cache = new LRUCache<>(10);
+cache.put("key1", 100);
+int value = cache.get("key1");  // Retrieves the value 100
+```
+
+By using generics, the LRUCache class provides flexibility in defining the key and value types according to your specific use case.
 
 ----
 
-98) How do you check if two given String are anagrams? (solution)
+**Write a Java program to convert bytes to long?**
+
+```java
+import java.nio.ByteBuffer;
+
+public class ByteToLongExample {
+    public static void main(String[] args) {
+        byte[] bytes = {0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC, 0xDE, 0xF0};
+        
+        long value = bytesToLong(bytes);
+        
+        System.out.println("Converted Long value: " + value);
+    }
+    
+    public static long bytesToLong(byte[] bytes) {
+        ByteBuffer buffer = ByteBuffer.wrap(bytes);
+        return buffer.getLong();
+    }
+}
+```
 
 ----
 
-99) How to print all permutation of a String in Java? (solution)
+**How to reverse a String in Java without using StringBuffer?**
+
+```java
+public class StringReversalExample {
+    public static void main(String[] args) {
+        String original = "Hello, World!";
+        String reversed = reverseString(original);
+        System.out.println("Reversed String: " + reversed);
+    }
+    
+    public static String reverseString(String str) {
+        char[] characters = str.toCharArray();
+        int left = 0;
+        int right = characters.length - 1;
+        
+        while (left < right) {
+            // Swap characters at left and right indices
+            char temp = characters[left];
+            characters[left] = characters[right];
+            characters[right] = temp;
+            
+            // Move indices towards the center
+            left++;
+            right--;
+        }
+        
+        return new String(characters);
+    }
+}
+```
 
 ----
 
-100) How do you print duplicate elements from an array in Java? (solution)
+**How to find the word with the highest frequency from a file in Java?**
+
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class HighestFrequencyWordExample {
+    public static void main(String[] args) {
+        File file = new File("input.txt");
+        String mostFrequentWord = findMostFrequentWord(file);
+        System.out.println("The most frequent word is: " + mostFrequentWord);
+    }
+
+    public static String findMostFrequentWord(File file) {
+        Map<String, Integer> wordFrequency = new HashMap<>();
+
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNext()) {
+                String word = scanner.next().toLowerCase();
+                wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String mostFrequentWord = "";
+        int highestFrequency = 0;
+
+        for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
+            String word = entry.getKey();
+            int frequency = entry.getValue();
+            if (frequency > highestFrequency) {
+                highestFrequency = frequency;
+                mostFrequentWord = word;
+            }
+        }
+
+        return mostFrequentWord;
+    }
+}
+```
 
 ----
 
-101) How to convert String to int in Java? (solution)
+**How do you check if two given String are anagrams?**
+
+```java
+import java.util.Arrays;
+
+public class AnagramCheckExample {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+
+        boolean areAnagrams = checkIfAnagrams(str1, str2);
+
+        if (areAnagrams) {
+            System.out.println(str1 + " and " + str2 + " are anagrams.");
+        } else {
+            System.out.println(str1 + " and " + str2 + " are not anagrams.");
+        }
+    }
+
+    public static boolean checkIfAnagrams(String str1, String str2) {
+        // Remove whitespace and convert to lowercase
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        // Check if lengths are different
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        // Convert strings to character arrays
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+
+        // Sort character arrays
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Compare sorted arrays
+        return Arrays.equals(charArray1, charArray2);
+    }
+}
+```
 
 ----
 
-102) How to swap two integers without using temp variable? (solution)
+**How to print all permutation of a String in Java?**
 
+```java
+public class StringPermutationExample {
+    public static void main(String[] args) {
+        String str = "abc";
+        printPermutations(str);
+    }
 
+    public static void printPermutations(String str) {
+        char[] chars = str.toCharArray();
+        printPermutations(chars, 0, chars.length - 1);
+    }
 
-Java Interview questions from OOP and Design Patterns
+    private static void printPermutations(char[] chars, int left, int right) {
+        if (left == right) {
+            System.out.println(new String(chars));
+        } else {
+            for (int i = left; i <= right; i++) {
+                swap(chars, left, i);
+                printPermutations(chars, left + 1, right);
+                swap(chars, left, i);
+            }
+        }
+    }
+
+    private static void swap(char[] chars, int i, int j) {
+        char temp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = temp;
+    }
+}
+```
+
+----
+
+**How do you print duplicate elements from an array in Java?**
+
+```java
+public class DuplicateElementsExample {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 3, 2, 1, 5, 6, 5};
+
+        System.out.println("Duplicate elements in the array:");
+
+        // Create a set to store unique elements
+        Set<Integer> uniqueElements = new HashSet<>();
+        
+        // Iterate over the array
+        for (int i = 0; i < arr.length; i++) {
+            // If the element is already present in the set, it's a duplicate
+            if (!uniqueElements.add(arr[i])) {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+```
+
+----
+
+**How to convert String to int in Java?**
+
+To convert a String to an int in Java, you can use the Integer.parseInt() method or the Integer.valueOf() method. Here's an example of both approaches:
+
+Using Integer.parseInt():
+
+```java
+String str = "123";
+int number = Integer.parseInt(str);
+System.out.println("Converted int value: " + number);
+```
+
+In this example, the Integer.parseInt() method is used to convert the String "123" to an int value. The converted value is stored in the number variable, which can then be used in further computations or printed.
+
+Using Integer.valueOf():
+
+```java
+String str = "123";
+Integer number = Integer.valueOf(str);
+System.out.println("Converted Integer value: " + number);
+```
+
+In this example, the Integer.valueOf() method is used to convert the String "123" to an Integer object. The Integer object is auto-boxed to an int value because of auto-unboxing in Java. The converted value is stored in the number variable, which can be used as an int or an Integer.
+
+Both methods will throw a NumberFormatException if the String cannot be parsed as an int. Therefore, it's important to handle or catch this exception when converting a String to an int to ensure the program doesn't terminate abruptly in case of an invalid input.
+
+----
+
+**How to swap two integers without using temp variable?**
+
+To swap two integers without using a temporary variable in Java, you can utilize the bitwise XOR operation. Here's an example:
+
+```java
+public class IntegerSwapExample {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        
+        System.out.println("Before swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        
+        swapIntegers(a, b);
+        
+        System.out.println("After swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+    
+    public static void swapIntegers(int a, int b) {
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+    }
+}
+```
+
+In this example, the swapIntegers() method takes two integers a and b as parameters. It performs the swap using the XOR operation. The XOR operation (^) on two integers flips the bits in the binary representation if they are different, effectively swapping the bits.
+
+When you run this program, it will output the following result:
+
+```java
+Before swapping:
+a = 10
+b = 20
+After swapping:
+a = 20
+b = 10
+```
+
+----
+
+**Java Interview questions from OOP and Design Patterns**
+
 It contains Java Interview questions from SOLID design principles, OOP fundamentals e.g. class, object, interface, Inheritance, Polymorphism, Encapsulation, and Abstraction as well as more advanced concepts like Composition, Aggregation, and Association. It also contains questions from GOF design patterns.
 
 ----
 
-103) What is the interface? Why you use it if you cannot write anything concrete on it?
-The interface is used to define API. It tells about the contract your classes will follow. It also supports abstraction because a client can use interface method to leverage multiple implementations e.g. by using List interface you can take advantage of random access of ArrayList as well as flexible insertion and deletion of LinkedList. The interface doesn't allow you to write code to keep things abstract but from Java 8 you can declare static and default methods inside interface which are concrete.
+**What is the interface? Why you use it if you cannot write anything concrete on it?** 
 
+The interface is used to define API. It tells about the contract your classes will follow. It also supports abstraction because a client can use interface method to leverage multiple implementations e.g. by using List interface you can take advantage of random access of ArrayList as well as flexible insertion and deletion of LinkedList. The interface doesn't allow you to write code to keep things abstract but from Java 8 you can declare static and default methods inside interface which are concrete.
 
 ----
 
-104) The difference between abstract class and interface in Java? (answer)
+**The difference between abstract class and interface in Java?**
+
 There are multiple differences between abstract class and interface in Java, but the most important one is Java's restriction on allowing a class to extend just one class but allows it to implement multiple interfaces. An abstract class is good to define default behavior for a family of class, but the interface is good to define Type which is later used to leverage Polymorphism. Please check the answer for a more thorough discussion of this question.
 
 ----
 
+**Which design pattern have you used in your production code? apart from Singleton?**
 
-105) Which design pattern have you used in your production code? apart from Singleton?
 This is something you can answer from your experience. You can generally say about dependency injection, factory pattern, decorator pattern or observer pattern, whichever you have used. Though be prepared to answer follow-up question based upon the pattern you choose.
-
 
 ----
 
-106) Can you explain Liskov Substitution principle? (answer)
-This is one of the toughest questions I have asked in Java interviews. Out of 50 candidates, I have almost asked only 5 have managed to answer it. I am not posting an answer to this question as I like you to do some research, practice and spend some time to understand this confusing principle well.
+**Can you explain Liskov Substitution principle?**
 
+This is one of the toughest questions I have asked in Java interviews. Out of 50 candidates, I have almost asked only 5 have managed to answer it. I am not posting an answer to this question as I like you to do some research, practice and spend some time to understand this confusing principle well.
 
 ----
 
 107) What is Law of Demeter violation? Why it matters? (answer)
 Believe it or not, Java is all about application programming and structuring code. If  you have good knowledge of common coding best practices, patterns and what not to do than only you can write quality code.  Law of Demeter suggests you "talk to friends and not stranger", hence used to reduce coupling between classes.
 
-
 ----
 
-108) What is Adapter pattern? When to use it?
+**What is Adapter pattern? When to use it?**
+
 Another frequently asked Java design pattern questions. It provides interface conversion. If your client is using some interface but you have something else, you can write an Adapter to bridge them together. This is good for Java software engineer having 2 to 3 years experience because the question is neither difficult nor tricky but requires knowledge of OOP design patterns.
 
 
 ----
 
-109) What is "dependency injection" and "inversion of control"? Why would someone use it? (answer)
+**What is "dependency injection" and "inversion of control"? Why would someone use it?**
 
 ----
 
-110) What is an abstract class? How is it different from an interface? Why would you use it? (answer)
+**What is an abstract class? How is it different from an interface? Why would you use it?**
+
 One more classic question from Programming Job interviews, it is as old as chuck Norris. An abstract class is a class which can have state, code and implementation, but an interface is a contract which is totally abstract. Since I have answered it many times, I am only giving you the gist here but you should read the article linked to answer to learn this useful concept in much more detail.
 
-
 ----
 
-111) Which one is better constructor injection or setter dependency injection? (answer)
+**Which one is better constructor injection or setter dependency injection?**
+
 Each has their own advantage and disadvantage. Constructor injection guaranteed that class will be initialized with all its dependency, but setter injection provides flexibility to set an optional dependency. Setter injection is also more readable if you are using an XML file to describe dependency. Rule of thumb is to use constructor injection for mandatory dependency and use setter injection for optional dependency.
 
 
 ----
 
-112) What is difference between dependency injection and factory design pattern? (answer)
+**What is difference between dependency injection and factory design pattern?**
+
 Though both patterns help to take out object creation part from application logic, use of dependency injection results in cleaner code than factory pattern. By using dependency injection, your classes are nothing but POJO which only knows about dependency but doesn't care how they are acquired. In the case of factory pattern, the class also needs to know about factory to acquire dependency. hence, DI results in more testable classes than factory pattern. Please see the answer for a more detailed discussion on this topic.
 
 ----
 
+**Difference between Adapter and Decorator pattern?**
 
-113) Difference between Adapter and Decorator pattern? (answer)
 Though the structure of Adapter and Decorator pattern is similar, the difference comes on the intent of each pattern. The adapter pattern is used to bridge the gap between two interfaces, but Decorator pattern is used to add new functionality into the class without the modifying existing code.
 
 ----
 
+**Difference between Adapter and Proxy Pattern?**
 
-114) Difference between Adapter and Proxy Pattern? (answer)
 Similar to the previous question, the difference between Adapter and Proxy patterns is in their intent. Since both Adapter and Proxy pattern encapsulate the class which actually does the job, hence result in the same structure, but Adapter pattern is used for interface conversion while the Proxy pattern is used to add an extra level of indirection to support distribute, controlled or intelligent access.
 
 ----
 
+**What is Template method pattern?**
 
-115) What is Template method pattern? (answer)
 Template pattern provides an outline of an algorithm and lets you configure or customize its steps. For examples, you can view a sorting algorithm as a template to sort object. It defines steps for sorting but let you configure how to compare them using Comparable or something similar in another language. The method which outlines the algorithms is also known as template method.
 
-
 ----
 
-116) When do you use Visitor design pattern? (answer)
+**When do you use Visitor design pattern?**
+
 The visitor pattern is a solution of problem where you need to add operation on a class hierarchy but without touching them. This pattern uses double dispatch to add another level of indirection.
 
-
 ----
 
-117) When do you use Composite design pattern? (answer)
+**When do you use Composite design pattern?**
+
 Composite design pattern arranges objects into tree structures to represent part-whole hierarchies. It allows clients treat individual objects and container of objects uniformly. Use Composite pattern when you want to represent part-whole hierarchies of objects.
 
-
 ----
 
-118) The difference between Inheritance and Composition? (answer)
+**The difference between Inheritance and Composition?**
+
 Though both allows code reuse, Composition is more flexible than Inheritance because it allows you to switch to another implementation at run-time. Code written using Composition is also easier to test than code involving inheritance hierarchies.
 
-
 ----
 
-119) Describe overloading and overriding in Java? (answer)
+**Describe overloading and overriding in Java?**
+
 Both overloading and overriding allow you to write two methods of different functionality but with the same name, but overloading is compile time activity while overriding is run-time activity. Though you can overload a method in the same class, but you can only override a method in child classes. Inheritance is necessary for overriding.
 
-
 ----
 
-120) The difference between nested public static class and a top level class in Java? (answer)
+**The difference between nested public static class and a top level class in Java?**
+
 You can have more than one nested public static class inside one class, but you can only have one top-level public class in a Java source file and its name must be same as the name of Java source file.
 
-
 ----
 
-121) Difference between Composition, Aggregation and Association in OOP? (answer)
+**Difference between Composition, Aggregation and Association in OOP?**
+
 If two objects are related to each other, they are said to be associated with each other. Composition and Aggregation are two forms of association in object-oriented programming. The composition is stronger association than Aggregation. In Composition, one object is OWNER of another object while in Aggregation one object is just USER of another object. If an object A is composed of object B then B doesn't exist if A ceased to exists, but if object A is just an aggregation of object B then B can exists even if A ceased to exist.
 
 ----
 
+**Give me an example of design pattern which is based upon open closed principle?**
 
-122) Give me an example of design pattern which is based upon open closed principle? (answer)
 This is one of the practical questions I ask experienced Java programmer. I expect them to know about OOP design principles as well as patterns. Open closed design principle asserts that your code should be open for extension but closed for modification. Which means if you want to add new functionality, you can add it easily using the new code but without touching already tried and tested code.  There are several design patterns which are based upon open closed design principle e.g. Strategy pattern if you need a new strategy, just implement the interface and configure, no need to modify core logic. One working example is Collections.sort() method which is based on Strategy pattern and follows the open-closed principle, you don't modify sort() method to sort a new object, what you do is just implement Comparator in your own way.
 
 ----
 
+**Difference between Abstract factory and Prototype design pattern?**
 
-123) Difference between Abstract factory and Prototype design pattern? (answer)
 This is the practice question for you, If you are feeling bored just reading and itching to write something, why not write the answer to this question. I would love to see an example the, which should answer where you should use the Abstract factory pattern and where is the Prototype pattern is more suitable.
 
 ----
 
+**When do you use Flyweight pattern?**
 
-124) When do you use Flyweight pattern? (answer)
 This is another popular question from the design pattern. Many Java developers with 4 to 6 years of experience know the definition but failed to give any concrete example. Since many of you might not have used this pattern, it's better to look examples from JDK. You are more likely have used them before and they are easy to remember as well. Now let's see the answer.
 Flyweight pattern allows you to share object to support large numbers without actually creating too many objects. In order to use Flyweight pattern, you need to make your object Immutable so that they can be safely shared. String pool and pool of Integer and Long object in JDK are good examples of Flyweight pattern.
-
-
 
 Miscellaneous Java Interview Questions
 It contains XML Processing in Java Interview question, JDBC Interview question, Regular expressions Interview questions, Java Error and Exception Interview Questions, Serialization,
 
 ----
 
-125) The difference between nested static class and top level class? (answer)
+**The difference between nested static class and top level class?**
+
 One of the fundamental questions from Java basics. I ask this question only to junior Java developers of 1 to 2 years of experience as it's too easy for an experience Java programmers. The answer is simple, a public top level class must have the same name as the name of the source file, there is no such requirement for nested static class. A nested class is always inside a top level class and you need to use the name of the top-level class to refer nested static class e.g. HashMap.Entry is a nested static class, where HashMap is a top level class and Entry is nested static class.
 
 ----
 
+**Can you write a regular expression to check if String is a number?**
 
-126) Can you write a regular expression to check if String is a number? (solution)
 If you are taking Java interviews then you should ask at least one question on the regular expression. This clearly differentiates an average programmer with a good programmer. Since one of the traits of a good developer is to know tools, regex is the best tool for searching something in the log file, preparing reports etc. Anyway, answer to this question is, a numeric String can only contain digits i.e. 0 to 9 and + and - sign that too at start of the String, by using this information you can write following regular expression to check if given String is number or not
 
 ----
 
+**The difference between checked and unchecked Exception in Java?**
 
-127) The difference between checked and unchecked Exception in Java? (answer)
 checked exception is checked by the compiler at compile time. It's mandatory for a method to either handle the checked exception or declare them in their throws clause. These are the ones which are a sub class of Exception but doesn't descend from RuntimeException. The unchecked exception is the descendant of RuntimeException and not checked by the compiler at compile time. This question is now becoming less popular and you would only find this with interviews with small companies, both investment banks and startups are moved on from this question.
-
 
 ----
 
-128) The difference between throw and throws in Java? (answer)
+**The difference between throw and throws in Java?**
+
 the throw is used to actually throw an instance of java.lang.Throwable class, which means you can throw both Error and Exception using throw keyword e.g.
 
 throw new IllegalArgumentException("size must be multiple of 2")
@@ -12102,26 +15398,26 @@ On the other hand, throws is used as part of method declaration and signals whic
 
 ----
 
+**The difference between Serializable and Externalizable in Java?**
 
-129) The difference between Serializable and Externalizable in Java? (answer)
 This is one of the frequently asked questions from Java Serialization. The interviewer has been asking this question since the day Serialization was introduced in Java, but yet only a few good candidate can answer this question with some confidence and practical knowledge. Serializable interface is used to make Java classes serializable so that they can be transferred over network or their state can be saved on disk, but it leverages default serialization built-in JVM, which is expensive, fragile and not secure. Externalizable allows you to fully control the Serialization process, specify a custom binary format and add more security measure.
 
-
 ----
 
-130) The difference between DOM and SAX parser in Java? (answer)
+**The difference between DOM and SAX parser in Java?**
+
 Another common Java question but from XML parsing topic. It's rather simple to answer and that's why many interviewers prefers to ask this question on the telephonic round. DOM parser loads the whole XML into memory to create a tree based DOM model which helps it quickly locate nodes and make a change in the structure of XML while SAX parser is an event based parser and doesn't load the whole XML into memory. Due to this reason DOM is faster than SAX but require more memory and not suitable to parse large XML files.
 
-
 ----
 
-131) Tell me 3 features introduced on JDK 1.7? (answer)
+**Tell me 3 features introduced on JDK 1.7?**
+
 This is one of the good questions I ask to check whether the candidate is aware of recent development in Java technology space or not. Even though JDK 7 was not a big bang release like JDK 5 or JDK 8, it still has a lot of good feature to count on e.g. try-with-resource statements, which free you from closing streams and resources when you are done with that, Java automatically closes that. Fork-Join pool to implement something like the Map-reduce pattern in Java. Allowing String variable and literal into switch statements. Diamond operator for improved type inference, no need to declare generic type on the right-hand side of variable declaration anymore, results in more readable and succinct code. Another worth noting feature introduced was improved exception handling e.g. allowing you to catch multiple exceptions in the same catch block.
 
 ----
 
+**Tell me 5 features introduced in JDK 1.8?**
 
-132) Tell me 5 features introduced in JDK 1.8? (answer)
 This is the follow-up question of the previous one. Java 8 is path breaking release in Java's history, here are the top 5 features from JDK 8 release
 Lambda expression, which allows you pass an anonymous function as object.
 Stream API, take advantage of multiple cores of modern CPU and allows you to write succinct code.
@@ -12131,11 +15427,11 @@ Repeated annotation, allows you apply the same annotation multiple times on a ty
 
 ----
 
-133) What is the difference between Maven and ANT in Java? (answer)
+**What is the difference between Maven and ANT in Java?**
+
 Another great question to check the all round knowledge of Java developers. It's easy to answer questions from core Java but when you ask about setting things up, building Java artifacts, many Java software engineer struggles. 
 
 Coming back to the answer of this question, Though both are build tools and used to create Java application build, Maven is much more than that. It provides a standard structure for Java project based upon the "convention over configuration" concept and automatically manages dependencies (JAR files on which your application is dependent) for Java applications. Please see the answer for more differences between the Maven and ANT tools.
-
 
 That's all guys, lots of Java Interview questions? isn't it? I am sure if you can answer this list of Java questions you can easily crack any core Java or advanced Java interview. Though I have not included questions from Java EE or J2EE topics e.g. Servlet, JSP, JSF, JPA, JMS, EJB, or any other Java EE technology or from major web frameworks like Spring MVC, Struts 2.0, Hibernate, or both SOAP and RESTful web services, it's still useful for Java developers preparing for Java web developer position, because every Java interview starts with questions from fundamentals and JDK API. 
 
@@ -12143,9 +15439,7 @@ If you think, I have missed any popular Java question here and you think it shou
 
 In case you don't know, I  have also written a book for Java interviews, Grokking the Java Interview, and Grokking the Spring Boot Interview, where I have shared tips, tricks and frequently asked Java questions from different topics. You can read the book to better prepare for your Java interviews. You can also use the code - friends20 to get a 20% discount because you are already my reader. 
 
-
-
-Related Java EE Interview Questions
+**Related Java EE Interview Questions**
 For my Java EE friends, here are web development specific questions, which you can use to prepare for JEE part:
 Top 10 Spring Framework Interview Questions with Answers (see here)
 10 Great XML Interview Questions for Java Programmers (read here)
@@ -12167,8 +15461,9 @@ Top 10 XSLT Interview Questions with Answers (read more)
 Top 10 Trick Java Interview Questions and Answers (see here)
 Top 40 Core Java Phone Interview Questions with Answers (list)
 
+----
 
-Recommended Books for Java Programmers
+**Recommended Books for Java Programmers**
 If you are looking for some goods to prepare for your Java Interviews, You can take a look at the following books to cover both theory and coding questions:
 9 Must-Read Books for Java Developers (see book)
 5 Java Performance Tuning Books for Experienced Programmers (see book)
@@ -12182,103 +15477,64 @@ The Java Language Specification (Java SE 8) (see here)
 Java SE 8 API Specification (see here)
 Thanks a lot, for reading this article so far. All the best for your Java interviews. If you have any interesting questions to share or want to share your interview experience, please drop a note so that others can benefit from it. 
 
+Read more: [https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#ixzz80dhIw3nT](https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#ixzz80dhIw3nT)
 
-Read more: https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#ixzz80dhIw3nT
+# https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#axzz80dfcO0nd
 
-</https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#axzz80dfcO0nd>
+# https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#axzz80dfcO0nd
 
-<https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#axzz80dfcO0nd>
+**What is Thread in Java?**
 
-Top 50 Java Thread and Concurrency Interview Questions Answers for 2 to 5 Years Experienced
-
-You go to any Java interview, senior or junior, experience or freshers,  you are bound to see a couple of questions from the thread, concurrency, and multi-threading. In fact, this built-in concurrency support is one of the strongest points of the Java programming language and helped it to gain popularity among the enterprise world and programmers equally. Most of the lucrative Java developer position demands excellent core Java multi-threading skills and experience in developing, debugging, and tuning high-performance low latency concurrent Java applications. This is the reason, it is one of the most important topics in Java interviews. Multithreading and concurrency are also hard to master the concept and only good developers with solid experience can effectively deal with concurrency issues.
-
-PauseUnmute
-Fullscreen
-
-
-In a typical Java interview, the Interviewer slowly starts from basic concepts of Thread by asking questions like, why you need threads, how to create threads, which one is a better way to create threads like by extending thread class or implementing Runnable, and then slowly goes into Concurrency issues, challenges faced during the development of concurrent Java applications.
-
-Java memory model, higher-order concurrency utilities introduced in JDK 1.5, principles and design patterns of concurrent Java applications, classical multithreading problems like producer-consumer, dining philosopher, reader-writer, or simply bounded buffer problems.
-
-Since it's also not enough just to know the basics of threading, you must know how to deal with concurrency problems like deadlock, race conditions, memory inconsistency, and various thread safety-related issues. These skills are thoroughly get tested by presenting various multi-threading and concurrency problems.
-
-
-Many Java developers are used to only looking and reading interview questions before going for the interview, which is not bad but you should not be too far away. Also collecting questions and going through the same exercise is too time-consuming, that's why I have created this list of the top 50 Java multi-threading and concurrency-related questions, collected from various interviews. I am only going to add new and recent interview questions as and when I am going to discover them.
-
-Though you need good knowledge and solid experience to do well on Java interviews focused on advanced multithreading and concurrency skill, I strongly recommend Java programmers to read Effective Java and Java Concurrency in Practice twice before going to an interview. They do not only help you to answer questions better but also help you to present your idea clearly.
-Top 5 Courses to Learn Eclipse IDE for Java Programmers - Best of Lot
-
-And, if you are serious about mastering Java multi-threading and concurrency then I also suggest you take a look at these best Java Multithreading courses for experienced developers. It's a collection of advanced Java courses to become an expert in Multithreading, concurrency, and Parallel programming in Java with a strong emphasis on high performance
-
-By the way, I have not provided answers to some questions here, Why? because I expect most Java developers to know the answers to this question and if not, also answers are widely available by using Google. 
-
-If you don't find the answer to any particular question, you can always ask me in the comments section. You can even find answers to a few questions on the link provided or my earlier post Top 12 Java Thread Questions with Answers.
-
-
-
-
-50 Interview questions from Java Multithreading and Concurrency with Answers 
-Here is our list of top questions from Java thread, concurrency, and multi-threading. You can use this list to prepare well for your Java interview.
-
-
-----
-
-1)  What is Thread in Java? (answer)
 The thread is an independent path of execution. It's a way to take advantage of multiple CPUs available on a machine. By employing multiple threads you can speed up CPU-bound tasks. For example, if one thread takes 100 milliseconds to do a job, you can use 10 threads to reduce that task into 10 milliseconds. Java provides excellent support for multithreading at the language level, and it's also one of the strong selling points.
 
 ----
 
+**What is the difference between Thread and Process in Java?**
 
-2)  What is the difference between Thread and Process in Java? (answer)
 The thread is a subset of Process, in other words, one process can contain multiple threads. Two processes run on different memory spaces, but all threads share the same memory space. Don't confuse this with stack memory, which is different for the different threads and used to store local data to that thread. For more detail see the answer.
 
 What is the difference between Thread and Process in Java?
 
-
-
 ----
 
+**How do you implement Thread in Java?**
 
-3)  How do you implement Thread in Java? (answer)
 At the language level, there are two ways to implement Thread in Java. An instance of java.lang.Thread represents a thread but it needs a task to execute, which is an instance of interface java.lang.Runnable. 
 
 Since the Thread class itself implement Runnable, you can override the run() method either by extending the Thread class or just implementing the Runnable interface. For a detailed answer and discussion see this article.
 
-
 ----
 
-4)  When to use Runnable vs Thread in Java? (answer)
+**When to use Runnable vs Thread in Java?**
+
 This is a follow-up to a previous multi-threading interview question. As we know we can implement thread either by extending the Thread class or implementing Runnable interface, the question arises, which one is better and when to use one? This question will be easy to answer if you know that the Java programming language doesn't support multiple inheritances of class, but it allows you to implement multiple interfaces. 
 
 This means it's better to implement Runnable than extend Thread if you also want to extend another class e.g. Canvas or CommandListener. For more points and discussion you can also refer to this post.
 
-
-
 ----
 
+**What is the difference between the start() and run() method of the Thread class?**
 
-6)  What is the difference between the start() and run() method of the Thread class?  (answer)
 One of trick Java questions from early days, but still good enough to differentiate between shallow understanding of Java threading model start() method is used to start a newly created thread, while start() internally calls run() method, there is difference calling run() method directly. 
 
 When you invoke run() as a normal method, it's called in the same thread, no new thread is started, which is the case when you call the start() method. Read this answer for a much more detailed discussion.
 
 ----
 
+**What is the difference between Runnable and Callable in Java?**
 
-7)  What is the difference between Runnable and Callable in Java? (answer)
 Both Runnable and Callable represent task which is intended to be executed in a separate thread. Runnable is there from JDK 1.0 while Callable was added on JDK 1.5. The main difference between these two is that Callable's call() method can return value and throw Exception, which was not possible with Runnable's run() method. Callable return Future object, which can hold the result of the computation. See my blog post on the same topic for a more in-depth answer to this question.
 
 ----
 
+**What is the difference between CyclicBarrier and CountDownLatch in Java?**
 
-8)  What is the difference between CyclicBarrier and CountDownLatch in Java?  (answer)
 Though both CyclicBarrier and CountDownLatch wait for a number of threads on one or more events, the main difference between them is that you can not re-use CountDownLatch once the count reaches to zero, but you can reuse the same CyclicBarrier even after the barrier is broken.  See this answer for a few more points and a sample code example.
 
 ----
 
+**What is the Java Memory model?**
 
-9)  What is the Java Memory model? (answer)
 Java Memory model is a set of rules and guidelines which allows Java programs to behave deterministically across multiple memory architecture, CPU, and operating systems. It's particularly important in the case of multi-threading. 
 
 Java Memory Model provides some guarantee on which changes made by one thread should be visible to others, one of them is the happens-before relationship. This relationship defines several rules which allow programmers to anticipate and reason the behavior of concurrent Java programs. For example, happens-before relationship guarantees :
@@ -12293,135 +15549,128 @@ I strongly suggest reading Chapter 16 of Java Concurrency in Practice to underst
 
 What is the Java Memory model? (answer)
 
-
-
-
 ----
 
-10) What is a volatile variable in Java? (answer)
+**What is a volatile variable in Java?**
+
 volatile is a special modifier, which can only be used with instance variables. In concurrent Java programs, changes made by multiple threads on instance variables are not visible to others in absence of any synchronizers like synchronized keywords or locks. 
 
 Volatile variable guarantees that a write will happen before any subsequent read: as stated: "volatile variable rule" in the previous question. Read this answer to learn more about volatile variables and when to use them.
 
-
-
 ----
 
+**What is thread-safety? is Vector a thread-safe class?**
 
-11) What is thread-safety? is Vector a thread-safe class? (Yes, see details)
 Thread safety is a property of an object or code which guarantees that if executed or used by multiple threads in any manner e.g. read vs writing it will behave as expected. For example, a thread-safe counter object will not miss any count if the same instance of that counter is shared among multiple threads.
 
 Apparently, you can also divide collection classes into two categories, thread-safe and non-thread-safe. Vector is indeed a thread-safe class and it achieves thread-safety by synchronizing methods that modify the state of Vector, on the other hand, its counterpart ArrayList is not thread-safe.
 
-
 ----
 
-12) What is a race condition in Java? Given one example?  (answer)
+**What is a race condition in Java? Given one example?**
+
 Race conditions are caused by some subtle programming bugs when Java programs are exposed to a concurrent execution environment. As the name suggests, a race condition occurs due to race between multiple threads, if a thread that is supposed to execute first lost the race and is executed second, the behavior of code changes, which surface as non-deterministic bugs. 
 
 This is one of the hardest bugs to find and re-produce because of the random nature of racing between threads. One example of race conditions is out-of-order processing, see this answer for some more examples of race conditions in Java programs.
 
-
 ----
 
-13) How to stop a thread in Java? (answer(answer)
+**How to stop a thread in Java?**
+
 I always said that Java provides rich APIs for everything but ironically Java doesn't provide a sure-shot way of stopping the thread. There were some control methods in JDK 1.0 e.g. stop(), suspend(), and resume() which were deprecated in later releases due to potential deadlock threats, then Java API designers have not made any effort to provide a consistent, thread-safe, and elegant way to stop threads. 
 
 Programmers mainly rely on the fact that thread stops automatically as soon as they finish execution of run() or call() method. To manually stop, programmers either take advantage of volatile boolean variables and check in every iteration if the run method has loops or interrupt threads to abruptly cancel tasks. See this tutorial for a sample code of stopping thread in Java.
 
-
 ----
 
-14) What happens when an Exception occurs in a thread? (answer)
+**What happens when an Exception occurs in a thread?**
+
 This is one of the good tricky Java questions I have seen in interviews. In simple words, If not caught thread will die, if an uncaught exception handler is registered then it will get a callback. Thread.UncaughtExceptionHandler is an interface, defined as a nested interface for handlers invoked when a Thread abruptly terminates due to an uncaught exception. 
 
 When a thread is about to terminate due to an uncaught exception the Java Virtual Machine will query the thread for its UncaughtExceptionHandler using Thread.getUncaughtExceptionHandler() and will invoke the handler's uncaughtException() method, passing the thread and the exception as arguments.
 
-
 ----
 
-15) How do you share data between two threads in Java? (answer)
+**How do you share data between two threads in Java?**
+
 You can share data between threads by using shared objects, or concurrent data structures like BlockingQueue. See this tutorial to learn inter-thread communication in Java. It implements the Producer consumer pattern using wait and notify methods, which involves sharing objects between two threads.
 
 
 Java concurrency questions for experienced programmers
 
-
 ----
 
-16) What is the difference between notify and notifyAll in Java? (answer)
+**What is the difference between notify and notifyAll in Java?**
+
 This is another tricky question from core Java interviews since multiple threads can wait on a single monitor lock, Java API designer provides a method to inform only one of them or all of them, once the waiting condition changes, but they provide the half implementation. 
 
 There notify() method doesn't provide any way to choose a particular thread, that's why it's only useful when you know that there is only one thread is waiting. 
 
 On the other hand, notifyAll() sends a notification to all threads and allows them to compete for locks, which ensures that at least one thread will proceed further. See my blog post on a similar topic for a more detailed answer and code example.
 
-
 ----
 
-17) Why wait, notify, and notifyAll are not inside the thread class?  (answer)
+**Why wait, notify, and notifyAll are not inside the thread class?**
+
 This is a design-related question, which checks what the candidate thinks about the existing system or does he ever thought of something which is so common but looks inappropriate at first. In order to answer this question, you have to give some reasons why it makes sense for these three methods to be in the Object class, and why not on Thread class. 
 
 One reason which is obvious is that Java provides lock at the object level, not at the thread level. Every object has a lock, which is acquired by a thread. Now if the thread needs to wait for a certain lock it makes sense to call wait() on that object rather than on that thread.
 
 Had wait() method declared on Thread class, it was not clear for which lock thread was waiting. In short, since wait, notify and notifyAll operate at lock level, it makes sense to define it on object class because the lock belongs to object. You can also see this article for a more elaborate answer to this question.
 
-
 ----
 
-18) What is the ThreadLocal variable in Java?  (answer)
+**What is the ThreadLocal variable in Java?**
+
 ThreadLocal variables are a special kind of variable available to Java programmers. Just like instance, the variable is per instance, ThreadLocal variable is per thread. It's a nice way to achieve thread-safety of expensive-to-create objects, for example, you can make SimpleDateFormat thread-safe using ThreadLocal. Since that class is expensive, it's not good to use it in local scope, which requires separate instances on each invocation. 
 
 By providing each thread their own copy, you shoot two birds with one arrow. First, you reduce the number of instances of expensive objects by reusing a fixed number of instances, and Second, you achieve thread safety without paying the cost of synchronization or immutability. 
 
 Another good example of a thread-local variable is ThreadLocalRandom class, which reduces the number of instances of expensive-to-create Random objects in a multi-threading environment. See this answer to learn more about thread-local variables in Java.
 
-
-
 ----
 
+**What is FutureTask in Java?**
 
-19) What is FutureTask in Java? (answer)
 FutureTask represents a cancellable asynchronous computation in concurrent Java applications. This class provides a base implementation of Future, with methods to start and cancel a computation, query to see if the computation is complete and retrieve the result of the computation. 
 
 The result can only be retrieved when the computation has been completed; the get methods will block if the computation has not yet been completed. A FutureTask object can be used to wrap a Callable or Runnable object. Since FutureTask also implements Runnable, it can be submitted to an Executor for execution.
 
-
 ----
 
-20) What is the difference between the interrupted() and isInterrupted() method in Java? (answer)
+**What is the difference between the interrupted() and isInterrupted() method in Java?**
+
 The main difference between interrupted() and isInterrupted() is that the former clears the interrupt status while the latter does not. The interrupt mechanism in Java multi-threading is implemented using an internal flag known as the interrupt status. Interrupting a thread by calling Thread.interrupt() sets this flag. 
 
 When interrupted thread checks for an interrupt by invoking the static method Thread.interrupted(), interrupt status is cleared. The non-static isInterrupted() method, which is used by one thread to query the interrupt status of another, does not change the interrupt status flag. 
 
 By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so. However, it's always possible that interrupt status will immediately be set again, by another thread invoking interrupt
 
-
 ----
 
-21) Why wait and notify methods are called from the synchronized block? (answer)
+**Why wait and notify methods are called from the synchronized block?**
 The main reason for calling the wait and notify method from either synchronized block or method is that it is made mandatory by Java API. If you don't call them from a synchronized context, your code will throw IllegalMonitorStateException. A more subtle reason is to avoid the race condition between wait and notify calls. To learn more about this, check my similarly titled post here.
 
-
 ----
 
-22) Why should you check the condition for waiting in a loop? (answer)
+**Why should you check the condition for waiting in a loop?**
+
 It's possible for a waiting thread to receive false alerts and spurious wake-up calls, if it doesn't check the waiting condition in a loop, it will simply exit even if the condition is not met. As such, when awaiting thread wakes up, it cannot assume that the state it was waiting for is still valid. It may have been valid in the past, but the state may have been changed after the notify() method was called and before the waiting thread woke up. 
 
 That's why it is always better to call the wait() method from a loop, you can even create a template for calling wait and notify in Eclipse. To learn more about this question, I would recommend you to read Effective Java items on thread and synchronization.
 
-
 ----
 
-23) What is the difference between synchronized and concurrent collection in Java? (answer)
+**What is the difference between synchronized and concurrent collection in Java?**
+
 Though both synchronized and concurrent collection provides thread-safe collection suitable for multi-threaded and concurrent access, later is more scalable than former. Before Java 1.5, Java programmers only had synchronized collection which becomes a source of contention if multiple threads access them concurrently, which hampers the scalability of the system. 
 
 Java 5 introduced concurrent collections like ConcurrentHashMap, which not only provides thread safety but also improves scalability by using modern techniques like lock stripping and partitioning internal tables. See this answer for more differences between synchronized and concurrent collection in Java.
 
-
 ----
 
-24) What is the difference between Stack and Heap in Java? (answer)
+**What is the difference between Stack and Heap in Java?**
+
 Why does someone this question as part of multi-threading and concurrency? because Stack is a memory area that is closely associated with threads. To answer this question, both stack and heap are specific memories in Java applications. 
 
 Each thread has its own stack, which is used to store local variables, method parameters, and call stack. Variable stored in one Thread's stack is not visible to other. On another hand, the heap is a common memory area that is shared by all threads. 
@@ -12431,25 +15680,24 @@ Objects whether local or at any level is created inside the heap. To improve per
 
 Java thread interview questions with answers difficult ones
 
-
 ----
 
+**What is a thread pool? Why should you thread pool in Java?**
 
-25) What is a thread pool? Why should you thread pool in Java?  (answer)
 Creating a thread is expensive in terms of time and resources. If you create a thread at the time of request processing it will slow down your response time, also there is only a limited number of threads a process can create. To avoid both of these issues, a spool of threads is created when the application starts up and threads are reused for request processing.
 
 This pool of thread is known as "thread pool" and threads are known as a worker thread. From JDK 1.5 release, Java API provides Executor framework, which allows you to create different types of thread pools e.g. single thread pool, which processes one task at a time, fixed thread pool (a pool of fixed number of threads), or cached thread pool (an expandable thread pool suitable for applications with many short-lived tasks). See this article to learn more about thread pools in Java to prepare a detailed answer to this question.
 
 ----
 
+**Write code to solve Producer Consumer problems in Java?**
 
-26) Write code to solve Producer Consumer problems in Java? (answer)
 Most of the threading problems you solved in the real world are of the category of Producer consumer pattern, where one thread is producing a task and another thread is consuming that. You must know how to do inter-thread communication to solve this problem. At the lowest level, you can use wait and notify to solve this problem, and at a high level, you can leverage Semaphore or BlockingQueue to implement a Producer consumer pattern, as shown in this tutorial.
-
 
 ----
 
-27) How do you avoid deadlock in Java? Write Code? (answer)
+**How do you avoid deadlock in Java? Write Code?**
+
 Deadlock is a condition in which two threads wait for each other to take action which allows them to move further. It's a serious issue because when it happens your program hangs and doesn't do the task it is intended for. 
 
 In order for the deadlock to happen, the following four conditions must be true:
@@ -12462,85 +15710,78 @@ The easiest way to avoid deadlock is to prevent Circular wait, and this can be d
 
 deadlock in multithreading Java
 
-
 ----
 
+**What is the difference between livelock and deadlock in Java?**
 
-28) What is the difference between livelock and deadlock in Java? (answer)
 This question is an extension of the previous interview question. A livelock is similar to a deadlock, except that the states of the threads or processes involved in the livelock constantly change with regard to one another, without anyone progressing further. 
 
 Livelock is a special case of resource starvation. A real-world example of livelock occurs when two people meet in a narrow corridor, and each tries to be polite by moving aside to let the other pass, but they end up swaying from side to side without making any progress because they both repeatedly move the same way at the same time. In short, the main difference between livelock and deadlock is that in the former state of process change but no progress is made.
 
-
-
 ----
 
+**How do you check if a thread holds a lock or not?**
 
-29) How do you check if a thread holds a lock or not? (answer)
 I didn't even know that you can check if a Thread already holds a lock before this question hits me in a telephonic round of Java interviews. There is a method called holdsLock() on java.lang.Thread, it returns true if and only if the current thread holds the monitor lock on the specified object. You can also check this article for a more detailed answer.
 
-
 ----
 
-30) How do you take thread dump in Java? (answer)
+**How do you take thread dump in Java?**
+
 There are multiple ways to take a thread dump of the Java process depending upon the operating system. When you take thread dump, JVM dumps the state of all threads in log files or standard error console. In windows, you can use Ctrl + Break key combination to take thread dump, on Linux you can use the kill -3 command for the same. You can also use a tool called jstack for taking thread dump, it operates on process id, which can be found using another tool called jps.
 
-
 ----
 
-31) Which JVM parameter is used to control the stack size of a thread? (answer)
+**Which JVM parameter is used to control the stack size of a thread?**
+
 This is the simple one, -Xss parameter is used to control the stack size of Thread in Java. You can see this list of JVM options to learn more about this parameter.
 
 ----
 
+**What is the difference between synchronized and ReentrantLock in Java?**
 
-32) What is the difference between synchronized and ReentrantLock in Java? (answer)
 There were days when the only way to provide mutual exclusion in Java was via synchronized keyword, but it has several shortcomings e.g. you can not extend lock beyond a method or block boundary, you can not give up trying for a lock, etc.
 
 Java 5 solves this problem by providing more sophisticated control via the Lock interface. ReentrantLock is a common implementation of the Lock interface and provides re-entrant mutual exclusion Lock with the same basic behavior and semantics as the implicit monitor lock accessed using synchronized methods and statements, but with extended capabilities. See this article to learn about those capabilities and some more differences between synchronized vs ReentrantLock in Java.
 
-
-
 ----
 
+**There are three threads T1, T2, and T3? How do you ensure sequence T1, T2, T3 in Java?**
 
-33) There are three threads T1, T2, and T3? How do you ensure sequence T1, T2, T3 in Java? (answer)
 Sequencing in multi-threading can be achieved by different means but you can simply use the join() method of thread class to start a thread when another one has finished its execution. To ensure three threads execute you need to start the last one first e.g. T3 and then call join methods in reverse order e.g. T3 calls T2. join and T2 calls T1.join, these ways T1 will finish first and T3 will finish last. To learn more about the join method, see this tutorial.
 
-
 ----
 
-34) What does the yield method of the Thread class do? (answer)
+**What does the yield method of the Thread class do?**
+
 The yield method is one way to request the current thread to relinquish CPU so that other threads can get a chance to execute. Yield is a static method and only guarantees that the current thread will relinquish the CPU but doesn't say anything about which other thread will get CPU. It's possible for the same thread to get the CPU back and start its execution again. See this article to learn more about the yield method and to answer this question better.
 
 ----
 
+**What is the concurrency level of ConcurrentHashMap in Java?**
 
-35) What is the concurrency level of ConcurrentHashMap in Java? (answer)
 ConcurrentHashMap achieves its scalability and thread-safety by partitioning the actual map into a number of sections. This partitioning is achieved using a concurrency level.
 
 Its optional parameter of ConcurrentHashMap constructor and its default value is 16. The table is internally partitioned to try to permit the indicated number of concurrent updates without contention. To learn more about concurrency level and internal resizing, see my post How ConcurrentHashMap works in Java.
 
-
-
 ----
 
+**What is Semaphore in Java?**
 
-36) What is Semaphore in Java? (answer)
 Semaphore in Java is a new kind of synchronizer. It's a counting semaphore. Conceptually, a semaphore maintains a set of permits. Each acquire() blocks if necessary until a permit is available and then takes it. Each release() adds a permit, potentially releasing a blocking acquirer. 
 
 However, no actual permit objects are used; the Semaphore just keeps a count of the number available and acts accordingly. Semaphore is used to protect an expensive resource that is available in fixed numbers e.g. database connection in the pool. See this article to learn more about counting Semaphore in Java.
 
 ----
 
+**What happens if you submit a task when the queue of the thread pool is already filled?**
 
-37) What happens if you submit a task when the queue of the thread pool is already filled? (answer)
 This is another tricky question on my list. Many programmers will think that it will block until a task is cleared but it's true. ThreadPoolExecutor's submit() method throws RejectedExecutionException if the task cannot be scheduled for execution.
 
 ----
 
+**What is the difference between the submit() and execute() method thread pool in Java?**
 
-38) What is the difference between the submit() and execute() method thread pool in Java? (answer)
 Both methods are ways to submit a task to thread pools but there is a slight difference between them. execute(Runnable command) is defined in Executor interface and executes given task in future, but more importantly, it does not return anything. Its return type is void. 
 
 On other hand submit() is an overloaded method, it can take either Runnable or Callable task and can return Future object which can hold the pending result of the computation. 
@@ -12549,84 +15790,80 @@ This method is defined on ExecutorService interface, which extends Executor inte
 
 ----
 
+**What is the blocking method in Java?**
 
-39) What is the blocking method in Java? (answer)
 A blocking method is a method that blocks until the task is done, for example, accept() method of ServerSocket blocks until a client is connected. here blocking means control will not return to the caller until the task is finished. On the other hand, there is an asynchronous or non-blocking method that returns even before the task is finished. To learn more about the blocking method see this answer.
-
 
 ----
 
-40) Is Swing thread-safe? What do you mean by Swing thread-safe? (answer)
+**Is Swing thread-safe? What do you mean by Swing thread-safe?**
+
 You can simply this question as No, Swing is not thread-safe, but you have to explain what you mean by that even if the interviewer doesn't ask about it. When we say swing is not thread-safe we usually refer to its component, which can not be modified in multiple threads. 
 
 All updates to GUI components have to be done on the AWT thread, and Swing provides synchronous and asynchronous callback methods to schedule such updates. You can also read my article to learn more about swing and thread safety to better answer this question. Even next two questions are also related to this concept.
 
-
 ----
 
-41) What is the difference between invokeAndWait and invokeLater in Java? (answer)
+**What is the difference between invokeAndWait and invokeLater in Java?**
 These are two methods Swing API provides Java developers for updating GUI components from threads other than the Event dispatcher thread. InvokeAndWait() synchronously update GUI component, for example, a progress bar, once progress is made, the bar should also be updated to reflect that change. 
 
 If progress is tracked in a different thread, it has to call invokeAndWait() to schedule an update of that component by the Event dispatcher thread. On another hand, invokeLater() is an asynchronous call to update components. You can also refer to this answer for more points.
 
-
 ----
 
-42) Which method of Swing API is thread-safe in Java? (answer)
+**Which method of Swing API is thread-safe in Java?**
+
 This question is again related to swing and thread-safety though components are not thread-safe there is a certain method that can be safely called from multiple threads. I know about repaint(), and revalidate() being thread-safe but there are other methods on different swing components e.g. setText() method of JTextComponent, insert() and append() method of JTextArea class.
 
 ----
 
+**How to create an Immutable object in Java?**
 
-43) How to create an Immutable object in Java? (answer)
 This question might not look related to multi-threading and concurrency, but it is. Immutability helps to simplify already complex concurrent code in Java. Since immutable objects can be shared without any synchronization it's very dear to Java developers. Core value object, which is meant to be shared among threads should be immutable for performance and simplicity. 
 
 Unfortunately, there is no @Immutable annotation in Java, which can make your object immutable, hard work must be done by Java developers. You need to keep basics like initializing state in the constructor, no setter methods, no leaking of reference, keeping a separate copy of the mutable object to create an Immutable object. For step by step guide see my post, how to make an object Immutable in Java. This will give you enough material to answer this question with confidence.
 
-
 ----
 
-44) What is ReadWriteLock in Java? (answer)
+**What is ReadWriteLock in Java?**
 In general, the read-write lock is the result of the lock stripping technique to improve the performance of concurrent applications. In Java, ReadWriteLock is an interface that was added in Java 5 release. 
 
 A ReadWriteLock maintains a pair of associated locks, one for read-only operations and one for writing. The read lock may be held simultaneously by multiple reader threads, so long as there are no writers. 
 
 The write lock is exclusive. If you want you can implement this interface with your own set of rules, otherwise you can use ReentrantReadWriteLock, which comes along with JDK and supports a maximum of 65535 recursive write locks and 65535 read locks.
 
-
 ----
 
-45) What is a busy spin in multi-threading? (answer)
+**What is a busy spin in multi-threading?**
+
 Busy spin is a technique that concurrent programmers employ to make a thread wait on certain conditions. Unlike traditional methods e.g. wait(), sleep(), or yield() which all involve relinquishing CPU control, this method does not relinquish CPU, instead, it just runs the empty loop. Why would someone do that? to preserve CPU caches. 
 
 In a multi-core system, it's possible for a paused thread to resume on a different core, which means rebuilding the cache again. To avoid the cost of rebuilding cache, programmers prefer to wait for a much smaller time doing busy spin. You can also see this answer to learn more about this question.
 
-
-
 ----
 
+**What is the difference between the volatile and atomic variables in Java?**
 
-46) What is the difference between the volatile and atomic variables in Java? (answer)
 This is an interesting question for Java programmers, at first, volatile and atomic variables look very similar, but they are different. A volatile variable provides you happens-before guarantee that a write will happen before any subsequent write, it doesn't guarantee atomicity. 
 
 For example, the count++ operation will not become atomic just by declaring the count variable as volatile.  On the other hand, AtomicInteger class provides an atomic method to perform such compound operation atomically e.g. getAndIncrement() is the atomic replacement of increment operator. It can be used to atomically increment the current value by one. 
 
 Similarly, you have an atomic version for other data types and reference variables as well.
 
-
 ----
 
-47) What happens if a thread throws an Exception inside a synchronized block? (answer)
+**What happens if a thread throws an Exception inside a synchronized block?**
+
 This is one more tricky question for the average Java programmer if he can bring the fact about whether the lock is released or not is a key indicator of his understanding. 
 
 To answer this question, no matter how you exist synchronized block, either normally by finishing execution or abruptly by throwing an exception, the thread releases the lock it acquired while entering that synchronized block. 
 
 This is actually one of the reasons I like synchronized block over lock interface, which requires explicit attention to release lock, generally, this is achieved by releasing the lock in a finally block.
 
-
 ----
 
-48) What is double-checked locking of Singleton? (answer)
+**What is double-checked locking of Singleton?**
+
 This is one of the very popular questions on Java interviews, and despite its popularity, the chances of candidates answering this question satisfactory is only 50%. Half of the time, they failed to write code for double-checked locking, and half of the time they failed how it was broken and fixed on Java 1.5.
 
 This is actually an old way of creating a thread-safe singleton, which tries to optimize performance by only locking when the Singleton instance is created the first time, but because of complexity and the fact it was broken for JDK 1.4,  I personally don't like it. 
@@ -12635,16 +15872,16 @@ Anyway, even if you do not prefer this approach it's good to know from an interv
 
 ----
 
+**How to create thread-safe Singleton in Java?**
 
-49) How to create thread-safe Singleton in Java? (answer)
 This question is actually a follow-up to the previous question. If you say you don't like double-checked locking then the Interviewer is bound to ask about alternative ways of creating a thread-safe Singleton class. 
 
 There is actually man, you can take advantage of class loading and static variable initialization feature of JVM to create an instance of Singleton, or you can leverage powerful enumeration type in Java to create Singleton. I actually preferred that way, you can also read this article to learn more about it and see some sample code.
 
-
 ----
 
-50) List down 3 multi-threading best practices you follow? (answer)
+**List down 3 multi-threading best practices you follow?**
+
 This is my favorite question because I believe that you must follow certain best practices while writing concurrent code which helps in performance, debugging, and maintenance. Following are three best practices, I think an average Java programmer should follow:
 Always give a meaningful name to your thread 
 This goes a long way to find a bug or trace execution in concurrent code. OrderProcessor, QuoteProcessor, or TradeProcessor is much better than Thread-1. Thread-2 and Thread-3. The name should say about task done by that thread. All major frameworks and even JDK follow this best practice.
@@ -12655,30 +15892,27 @@ Synchronizers like CountDownLatch, Semaphore, CyclicBarrier or Exchanger simplif
 Prefer Concurrent Collection over Synchronized Collection
 This is another simple best practice that is easy to follow but reap good benefits. Concurrent collections are more scalable than their synchronized counterpart, that's why it's better to use them while writing concurrent code. So next time if you need a map, think about ConcurrentHashMap before thinking Hashtable. See my article Concurrent Collections in Java, to learn more about modern collection classes and how to make best use of them.
 
-
-
 ----
 
+**How do you force to start a thread in Java?**
 
-51) How do you force to start a thread in Java? (answer)
 This question is like how do you force garbage collection in Java, there is no way though you can make a request using System.gc() but it's not guaranteed. On Java multi-threading there is absolutely no way to force start a thread, this is controlled by thread scheduler and Java exposes no API to control thread scheduling. This is still a random bit in Java.
 
-
 ----
 
-52) What is the fork-join framework in Java? (answer)
+**What is the fork-join framework in Java?**
+
 The fork-join framework, introduced in JDK 7 is a powerful tool available to Java developers to take advantage of multiple processors of modern-day servers. It is designed for work that can be broken into smaller pieces recursively. 
 
 The goal is to use all the available processing power to enhance the performance of your application. One significant advantage of The fork/join framework is that it uses a work-stealing algorithm. Worker threads that run out of things to do can steal tasks from other threads that are still busy. See this article for a much more detailed answer to this question.
 
-
 ----
 
-53) What is the difference between the calling wait() and sleep() method in Java multi-threading? (answer)
+**What is the difference between the calling wait() and sleep() method in Java multi-threading?**
+
 Though both wait and sleep introduce some form of pause in Java applications, they are tools for different needs. The wait method is used for inter-thread communication, it relinquishes lock if waiting for a condition is true and waits for notification when due to an action of another thread waiting condition becomes false. 
 
 On the other hand sleep() method is just to relinquish CPU or stop the execution of the current thread for a specified time duration. The calling sleep method doesn't release the lock held by the current thread. You can also take look at this article to answer this question with more details.
-
 
 That's all on this list of top 50 Java multi-threading and concurrency interview questions. I have not shared answers to all the questions but provided enough hints and links to explore further and find answers by yourself. As I said, let me know if you don't find an answer to any particular question and I will add an answer here.
 
@@ -12689,7 +15923,6 @@ My intention is to make this list of questions as the mother of all list of Java
 This master list is equally useful to Java developers of all levels of experience. You can read through this list even if you have 2 to 3 years of working experience as a junior developer or 5 to 6 years as a senior developer. 
 
 It's even useful for freshers and beginners to expand their knowledge. I will add new and latest multi-threading questions as and when I come across them, and I request you all to ask, share and answer questions via comments to keep this list relevant to all Java programmers.
-
 
 Other Java Interview Questions list you may want to check
 50 Java Programs from Coding Interviews (list)
@@ -12717,149 +15950,105 @@ These questions will not only help you to understand multithreading and concurre
 
 P. S. - If you are preparing for Java Interviews and looking for some interesting questions for practice, then you can also check out these best Java Interview online courses, and books that contain more than 200+ real-world questions from Java interviews and their explanation.
 
-
 Read more: https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#ixzz80dhR0l1K
 
-</https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#axzz80dfcO0nd>
+# https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html#axzz80dfcO0nd
 
-<https://javarevisited.blogspot.com/2015/02/50-programmer-phone-interview-questions-answers.html#axzz80dfcO0nd>
+# https://javarevisited.blogspot.com/2015/02/50-programmer-phone-interview-questions-answers.html#axzz80dfcO0nd
 
-Top 42 Programming Interview Questions with Answers for 1 to 3 Years Experienced
+**How much time does it take to retrieve an element if stored in HashMap, Binary tree, and a Linked list? how it change if you have millions of records?**
 
-For the last few years, phone interviews also known as the telephonic round is the single most popular way to screen candidates in a programming job interview. It's easy for both parties to gauge each other, the candidate doesn't need to travel to the prospective Employer's premises and the Interviewer also doesn't need to make any necessary arrangements. This is the second part of my article on programming interview questions, in the first part, I got feedback that it is a little bit heavy on coding-based questions and many programmers asked me to share a similar list for the telephonic round of programming Interviews. In order to clear the telephonic round and proceed to the next round, you must be good enough to answer all the questions related to your Job description.
-
-
-
-
-In most of the phone interviews for Java or C++ developers, you will not only find questions from respective programming languages but also from other technology like SQL, XML, UNIX, General Programming, Object-oriented programming, Data Structure, and Algorithm, Networking, Coding, and other areas of work.
-
-Because of this vast nature of the phone round of programming job interviews, you need to come up with a special strategy to present yourself in a manner Interviewer is expecting.
-
-Also, basic knowledge of essential data structure and algorithms is also very important and that's why I suggest all Java programmers join these online Data structures and Algorithms courses to improve their knowledge and algorithms skills.
-
-One of the most important things to remember, while answering questions on a phone interview is to mention key points early and always give the point answer. Since most interviewers like to cover lots of topics to screen the candidate, they usually like to-the-point answers rather than blah blah and OK I know the stuff, you will get your chance to explain things in deep in the face to face interview.
-
-By the way, this is not the hard and fast rule and you can actually understand what the interviewer is expecting from you by noting his response to your answers. If he asks follow-up or expects you to speak more then go ahead, but it quickly jumps to the next question then be clear and concise.
-Top 5 Books to Learn DevOps for Developers - Best of Lot
-
-In this article, I am sharing some popular and interesting programming questions especially tailored for phone interviews. Most of them are actually from the telephonic round of various tech companies including banks like Barclays, Citi, Nomura, and various service-based companies like Infosys, TCS, CTS, Tech Mahindra, and HCL.
-
-As I mentioned before questions are randomly picked from the various topics but mostly based upon fundamentals because that is what the Interviewer tests on phone interviews. Though these questions are mostly for less experienced developers like 2 to 5 years, Senior and experienced programmers can also use these for their interview purpose.
-
-If you are seriously preparing for Job interviews, I also suggest you take a look at either Programming Interviews Exposed by Wrox or Cracking the coding Interview, two of the good books I have found for preparing any programming job interviews.
-
-The first one is my favorite and I have read it almost 7 years back, but still, it's quite relevant because of an excellent explanation of data structure and algorithm questions. If you are an interviewer, you can also use these questions to quickly screen candidates for development positions. I have provided the short answer here and a pointer for a more detailed answer.
-
-
-
-
-42 Programming and Tech Questions for Telephonic Interviews
-Here is a list of almost 50 questions from the phone round of programming job interviews. These questions are good for any programmers, developers, software engineer, QA, and support engineer because they are based upon fundamentals of programming, but most suited for programmers and developers.
-
-By the way, If you are a Java developer and looking for Java Questions for Phone interviews, check out that list. This list is more general and applicable for all programmers including Python, Ruby, Perl, and C# developers.
-
-
-----
-
-1. How much time does it take to retrieve an element if stored in HashMap, Binary tree, and a Linked list? how it change if you have millions of records?
 In HashMap it takes O(1) time, in the binary tree it takes O(logN) where N is a number of nodes in the tree and in linked list it takes O(n) time where n is a number of element in the list. Millions of records don't affect the performance if the data structure is working as expected e.g. HashMap has no or relatively less number of collision or binary tree is balanced. If that's not the case then their performance degrades as a number of records grows.
 
-
-
-
 ----
 
+**What is the difference between Overriding and Overloading?**
 
-
-2. What is the difference between Overriding and Overloading? (detailed answer)
 Overriding is resolved at runtime while overloading is compile time. Also, rules of overriding and overloading are different, for example in Java, method signature of the overloaded method must be different than original method, but in the case of overriding it must be exactly same as an overriding method.
 
 ----
 
+**What is the difference between forking a process and spawning a thread?**
 
-3. What is the difference between forking a process and spawning a thread? (answer)
 When you fork a process, the new process will run the same code as the parent process but in different memory space, but when you spawn a new thread in existing process, it just creates another independent path of execution but share same memory space.
 
-
 ----
 
-4. What is a critical section? (answer)
+**What is a critical section?**
+
 A critical section is the part of a code, which is very important and in multi-threading must be exclusively modified by any thread. Semaphore or mutex is used to protect critical section. In Java, you can use synchronized keyword or ReentrantLock to protect a critical section.
 
-
 ----
 
+**What is the difference between a value type and a reference type?**
 
-5. What is the difference between a value type and a reference type? (answer)
 A value type is a more optimized type and always immutable e.g. primitive int, long, double and float in Java while a reference type points to an object, which can be mutable or Immutable. You can also say that value type points to a value while reference type points to an object.
 
-
 ----
 
-6. What is heap and stack in a process? (detailed answer)
+**What is heap and stack in a process?**
+
 They are two separate areas of memory in the same process. Talking about Java, the stack is used to store primitive values and reference type to object but actual object is always created in heap. One critical difference between heap and stack is that heap memory is shared by all threads but each thread has their own stack.
 
 ----
 
+**What is revision/version control?**
 
-7. What is revision/version control? (answer)
 Version control is software which is used to store code and manage versions of codebase e.g. SVN, CVS, Git, Perforce, and ClearCase. They are very effective while comparing code, reviewing code and creating a build from previous stable version. All professional development use some sort of revision or version control tool, without them, you cannot manage code effectively, especially if 20 developers are working on same code base at the same time. Version control tool plays very important role to keep code base consistent and resolving code conflicts.
 
 ----
 
+**What is a strongly typed programming language?**
 
-8. What is a strongly typed programming language? (answer)
 In a strongly typed language compiler ensure type correctness, for example, you can not store the number in String or vice-versa. Java is a strongly typed language, that's why you have different data types e.g. int, float, String, char, boolean etc. You can only store compatible values in respective types. 
 
 On the other hand, weakly typed language don't enforce type checking at compile time and they tree values based upon context. Python and Perl are two popular example of weakly typed programming language, where you can store a numeric string in number type.
 
 ----
 
+**Can you describe the difference between valid and well-formed XML?**
 
-9. Can you describe the difference between valid and well-formed XML?
 A well-formed XML is the one which has root element and all tags are closed properly, attributes are defined properly, their value is also quoted properly. On another hand, a valid XML is the one which can be validated against an XSD file or schema. So it's possible for an XML to be well-formed but not valid because they contain tags which may not be allowed by their schema.
-
 
 ----
 
-10. What is the difference between DOM and SAX parser? (detailed answer)
+**What is the difference between DOM and SAX parser?**
+
 DOM parser is an in-memory parser so it loads whole XML file in memory and create a DOM tree to parse. SAX parser is an event based parser, so it parses XML document based on the event received e.g. opening tag, closing tag, the start of attribute or end of the attribute. 
 
 Because of their working methodology, DOM parser is not suitable for large XML file as they will take a lot of space in memory and your process may run out of memory, SAX is the one which should be used to parse large files. For small files, DOM is usually much faster than SAX.
 
 ----
 
+**What is the relationship between threads and processes?**
 
-
-11. What is the relationship between threads and processes? (detailed answer)
 A process can have multiple threads but a thread always belongs to a single process. Two processes cannot share memory space until they are purposefully doing inter-process communication via shared memory but two threads from the same process always share the same memory.
-
 
 ----
 
-12. What is Immutable class mean? (detailed answer)
+**What is Immutable class mean?**
+
 A class is said to be Immutable if its state cannot be changed once created, for example, String in Java is immutable. Once you create a String say "Java", you cannot change its content. Any modification in this string e.g. converting into upper case,  concatenating with another String will result in the new object. 
 
 An immutable object is very useful for concurrent programming because they can be shared between multiple threads without worrying about synchronization. In fact, the whole model of functional programming is built on top of Immutable objects.
 
 ----
 
-
-13. Why would you ever want to create a mock object? (answer)
+**Why would you ever want to create a mock object?**
 A mock object is very useful to test an individual unit in your Software, in fact, stub and mocks a are a powerful tool for creating automated unit tests. Suppose you write a program to display currency conversion rates but you don't have a URL to connect to, now if you want to test your code, you can use mock objects. In Java world, there are a lot of frameworks which can create powerful mock objects for you e.g. Mockito and PowerMock.
-
 
 ----
 
-14. What is SQL injection?
+**What is SQL injection?**
+
 SQL injection is a security vulnerability which allows an intruder to steal data from the system. Any system which takes input from the user and creates SQL query without validating or sanitizing that input is vulnerable to SQL injection. In such system, an intruder can inject SQL code instead of data to retrieve more than expected data. 
 
 There are many instances on which sensitive information e.g. user id, password, and personal details are stolen by exploiting this vulnerability. In Java, you can avoid SQL injection by using Prepared statement.
 
 ----
 
+**What is the difference between an inner join and a left join in SQL?**
 
-15. What is the difference between an inner join and a left join in SQL? (answer)
 In SQL, there are mainly two types of joins, inner join, and outer join. Again outer joins can be two types right and left outer join. 
 
 The main difference between inner join and left join is that in the case of former only matching records from both tables are selected while in the case of left join, all records from left table are selected in addition to matching records from both tables. 
@@ -12868,101 +16057,94 @@ Always watch out for queries which have "all" in it, they usually require left j
 
 What is the difference between an inner join and a left join in SQL
 
-
-
 ----
 
+**What does the V in MVC stand for, and what does it signify?**
 
-
-16. What does the V in MVC stand for, and what does it signify? (answer)
 V stands for View in MVC pattern. The view is what user sees  like web pages. This is a very important design pattern of web development which is based upon segregation of concern so that each area can be modified without impacting other areas. 
 
 In Java world, there are lots of open source framework which provides an implementation of MVC pattern like Struts 2 and Spring MVC. 
 
 By the way, M stands the for model and C stands the for controller. Modes are actual business objects like User, Employee, Order; while the controller is used for the routing request to correct processor.
 
-
 ----
 
-17. What is the difference between a class and an object? (detailed answer)
+**What is the difference between a class and an object?**
+
 A class is a blueprint on which objects are created. A class has code and behavior but an object has both the state and behavior. You cannot create an object without creating a class to represent its structure. The class is also used to map an object in memory, in Java, JVM does that for you.
 
-
 ----
 
-18. What is loose-coupling?
+**What is loose-coupling?**
+
 Loose coupling is a desirable quality of software, which allows one part of the software to modify without affecting another part of the software. For example, in a loosely coupled software, a change in UI layout should not affect the back-end class structure.
 
-
 ----
 
-19. What is the difference between composition, aggregation, and association? (detailed answer)
+**What is the difference between composition, aggregation, and association?**
+
 Association means two objects are related to each other but can exist without each other, Composition is a form of association where one object is composed of multiple objects, but they only exists together e.g. human body is the composition of organs, individual organs cannot live they only useful in the body. Aggregation is a collection of object e.g. city is an aggregation of citizens.
 
 What is the difference between composition, aggregation, and association?
 
-
 ----
 
+**What is the difference between an interface and an abstract class?**
 
-
-20. What is the difference between an interface and an abstract class? (detailed answer)
 This is the most classical question of all programming interviews. An interface is the purest form of abstraction with nothing concrete in place while an abstract class is a combination of some abstraction and concrete things. The difference may vary depending upon language e.g. in Java you can extend multiple interface but you can only extend on the abstract class. For a more comprehensive discussion see the detailed answer.
 
-
 ----
 
-21. What is unit testing? (answer)
+**What is unit testing?**
+
 Unit testing is a way to test individual unit for their functionality instead of testing whole application. There are a lot of tools to do the unit testing in different programming language e.g. in Java, you can use JUnit or TestNG to write unit tests. It is often run automatically during the build process or in a continuous environment like Jenkins.
 
-
 ----
 
-22. Can you describe three different kinds of testing that might be performed on an application before it goes live?
+**Can you describe three different kinds of testing that might be performed on an application before it goes live?**
+
 unit testing, integration testing and smoke testing. Unit testing is used to test individual units to verify whether they are working as expected, integration testing is done to verify whether individually tested module can work together or not and smoke testing is a way to test whether most common functionality of software is working properly or not like in a flight booking website, you should be able to book, cancel or change flights.
 
 ----
 
+**What is the difference between iteration and recursion?**
 
-23. What is the difference between iteration and recursion? (detailed answer)
 Iteration uses a loop to perform the same step again and again while recursion calls the function itself to do the repetitive task. Many times recursion result in a clear and concise solution to a complex problem like tower of Hanoi, reversing a linked list or reversing a String itself. 
 
 One drawback of recursion is depth  since recursion stores intermediate result in the stack you can only go up to a certain depth, after that your program will die with StackOverFlowError, this is why iteration is preferred over recursion in production code.
 
-
 ----
 
-24. What is difference between & and && operator? (detailed answer)
+**What is difference between & and && operator?**
+
 & is a bitwise operator while && is a logical operator. One difference between & and && is that bitwise operator (&) can be applied to both integer and boolean but logical operator (&&) can only be applied to boolean variables. 
 
 When you do a & b then AND operator is applied to each bit of both integer number, while in the case of a && b, the second argument may or may not be evaluated, that's why it is also known as short circuit operator, at least in Java. I like this question and often asked it to junior or developer and college graduates.
 
 ----
 
+**What is the result of 1 XOR 1?**
 
-25. What is the result of 1 XOR 1? (example)
 The answer is zero because XOR returns 1 if two operands are distinct and zero if two operands are same, for example, 0 XOR 0 is also zero, but 0 XOR 1 or 1 XOR 0 is always 1.
 
 ----
 
+**How do you get the last digit of an integer?**
 
-26. How do you get the last digit of an integer? (answer)
 By using modulus operator, number % 10 returns the last digit of the number, for example, 2345%10 will return 5 and 567%10 will return 7.  Similarly, division operator can be used to get rid of the last digit of  a number e.g. 2345/10 will give 234 and 567/10 will return 56. This is an important technique to know and useful to solve problems like number palindrome or reversing numbers.
 
 ----
 
+**What is test-driven development?**
 
-27. What is test-driven development?
 Test driven is one of the popular development methodologies in which tests are written before writing any function code. In fact, test drives the structure of your program. Purists never wrote a single line of application code without writing a test for that. It greatly improve code quality and often attributed as a quality of Rockstar developers.
 
 What is test-driven development?
 
-
 ----
 
+**What is the Liskov substitution principle?**
 
-
-28. What is the Liskov substitution principle? (answer)
 Liskov substitution principle is one of the five principle introduced by Uncle Bob as SOLID design principles. It's the 'L' in SOLID. Liskov substitution principle asserts that every subtype should be able to work as the proxy for parent type. 
 
 For example, if a method except object of Parent class then it should work as expected if you pass an object of the Child class. 
@@ -13081,13 +16263,11 @@ ps -e will list every process i.e. process from all user not just you and  ps -f
 
 ----
 
-
 **How do you find large files in UNIX  like more than 1GB?**
 
 You can easily find big files by using the find command because it provides an option to search files based upon their size. Use this if your file system is full and your Java process is crashing with no more space. This command will list all files which are more than 1GB. You can tweak the size easily like to find all files with more than 100 MB just use +100M.
 
 find . - type f -size +1G -print
-
 
 ----
 
@@ -13098,4 +16278,4 @@ script to the daily cleanup of logs files,  for backing up data for historical u
 
 Read more: https://javarevisited.blogspot.com/2015/02/50-programmer-phone-interview-questions-answers.html#ixzz80dhW7mB9
 
-</https://javarevisited.blogspot.com/2015/02/50-programmer-phone-interview-questions-answers.html#axzz80dfcO0nd>
+# https://javarevisited.blogspot.com/2015/02/50-programmer-phone-interview-questions-answers.html#axzz80dfcO0nd>
