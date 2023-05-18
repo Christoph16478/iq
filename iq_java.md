@@ -5257,31 +5257,31 @@ Case 2: When object references are not modified: In this case, since we have the
 For example:
 
 ```java
-class InterviewBitTest{
-   int num;
-   InterviewBitTest(int x){ 
-       num = x; 
-   }
-   InterviewBitTest(){ 
-       num = 0; 
-   }
+class IBTest{
+    int num;
+    IBTest(int x){
+        num = x;
+    }
+    IBTest(){
+        num = 0;
+    }
 }
-class Driver{
-   public static void main(String[] args)
-   {
-       //create a reference
-       InterviewBitTest ibTestObj = new InterviewBitTest(20);
-       //Pass the reference to updateObject Method
-       updateObject(ibTestObj);
-       //After the updateObject is executed, check for the value of num in the object.
-       System.out.println(ibTestObj.num);
-   }
-   public static void updateObject(InterviewBitTest ibObj)
-   {
-       // no changes are made to point the ibObj to new location
-       // Update the value of num
-       ibObj.num = 50;
-   }
+class Main{
+    public static void main(String[] args)
+    {
+        //create a reference
+        IBTest ibTestObj = new IBTest(20);
+        //Pass the reference to updateObject Method
+        updateObject(ibTestObj);
+        //After the updateObject is executed, check for the value of num in the object.
+        System.out.println(ibTestObj.num);
+    }
+    public static void updateObject(IBTest ibObj)
+    {
+        // no changes are made to point the ibObj to new location
+        // Update the value of num
+        ibObj.num = 50;
+    }
 }
 
 // Output:
@@ -5326,9 +5326,13 @@ public class Main{
         System.out.println(" Hello. Main Method2. ");
     }
 }
+
+// Output
+// Hello. Main Method.
 ```
 
-The output of the above program will be Hello. Main Method. This is because JVM will always call the main method based on the definition it already has. Doesn't matter how many main methods we overload it will only execute one main method based on its declaration in JVM.
+The output of the above program will be Hello. Main Method. This is because JVM will always call the main method based on the definition it
+already has. Doesn't matter how many main methods we overload it will only execute one main method based on its declaration in JVM.
 
 ----
 
@@ -5347,10 +5351,59 @@ The program can't compile as the compiler says that the method has been already 
 **What do you understand by Object Cloning and how do you achieve it in Java?**
 
 It is the process of creating an exact copy of any object. In order to support this, a java class has to implement the Cloneable interface of java.lang package and override the clone() method provided by the Object class the syntax of which is:
-protected Object clone() throws CloneNotSupportedException{
- return (Object)super.clone();
+
+```java
+// Implement the Cloneable interface
+class MyClass implements Cloneable {
+    private int value;
+
+    public MyClass(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    // Override the clone method
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
-In case the Cloneable interface is not implemented and just the method is overridden, it results in CloneNotSupportedException in Java.
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an object
+        MyClass original = new MyClass(10);
+
+        try {
+            // Clone the object
+            MyClass cloned = (MyClass) original.clone();
+
+            // Modify the value in the cloned object
+            cloned.setValue(20);
+
+            // Output the values of the original and cloned objects
+            System.out.println("Original value: " + original.getValue());
+            System.out.println("Cloned value: " + cloned.getValue());
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+
+In the above example, we have the MyClass class that implements the Cloneable interface. The class has a value field and getter/setter methods.
+
+To enable cloning, we override the clone method from the Object class. In the main method, we create an original object of MyClass. Then, we clone the object using the clone method and cast it to MyClass.
+
+We modify the value of the cloned object and output the values of the original and cloned objects. The output will show that modifying the cloned object does not affect the original object.
 
 ----
 
@@ -5358,30 +5411,25 @@ In case the Cloneable interface is not implemented and just the method is overri
 
 When an exception occurs, first it searches to locate the matching catch block. In case, the matching catch block is located, then that block would be executed. Else, the exception propagates through the method call stack and goes into the caller method where the process of matching the catch block is performed. This propagation happens until the matching catch block is found. If the match is not found, then the program gets terminated in the main method.
 
-
-logo
-Practice Problems
-Solve these problems to ace this concept
-Exception Handling
-Easy
-4.57 Mins
-Solve
-
-Try Catch Block
-Easy
-3.35 Mins
-Solve
-
-Finally Block
-Easy
-2.42 Mins
-Solve
-
 ----
 
 **How do exceptions affect the program if it doesn't handle them?**
 
 Exceptions are runtime errors. Suppose we are making an android application with java. And it all works fine but there is an exceptional case when the application tries to get the file from storage and the file doesn’t exist (This is the case of exception in java). And if this case is not handled properly then the application will crash. This will be a bad experience for users.  This is the type of error that cannot be controlled by the programmer. But programmers can take some steps to avoid this so that the application won’t crash. The proper action can be taken at this step.
+
+If exceptions are not handled in a Java program, they can have several effects:
+
+Program Termination: Unhandled exceptions can cause the program to terminate abruptly. When an exception occurs and is not caught or handled, it propagates up the call stack until it reaches the top-level of the program. At this point, if the exception is not caught, the program terminates, and an error message or stack trace is displayed.
+
+Incomplete Operations: If an exception occurs during the execution of a specific operation or task, and the exception is not handled, the operation may not complete successfully. This can leave the program in an inconsistent state or with incomplete results.
+
+Resource Leaks: If an exception occurs while working with resources like files, database connections, or network sockets, and the exception is not properly handled or cleaned up, it can result in resource leaks. Unclosed resources can lead to memory leaks or prevent other parts of the program from accessing those resources.
+
+Unexpected Behavior: Unhandled exceptions can lead to unexpected behavior in the program. It can cause the program to produce incorrect results, crash, or behave unpredictably.
+
+Debugging Difficulties: If exceptions are not handled, it becomes harder to identify and debug the cause of the problem. Without proper exception handling, error messages or stack traces may not be logged or displayed, making it challenging to trace the root cause of the issue.
+
+It is essential to handle exceptions appropriately in a Java program to ensure proper error handling, graceful program termination, resource cleanup, and to maintain expected program behavior.
 
 ----
 
@@ -5393,17 +5441,20 @@ No, it is not necessary for a catch block to be present after a try block. - A t
 
 **Will the finally block get executed when the return statement is written at the end of try block and catch block as shown below?**
 
+```java
 public int someMethod(int i){
    try{
-       //some statement
+       // some statement
        return 1;
    }catch(Exception e){
-       //some statement
+       // some statement
        return 999;
    }finally{
-       //finally block statements
+       // finally block statements
    }
 }
+```
+
 finally block will be executed irrespective of the exception or not. The only case where finally block is not executed is when it encounters ‘System.exit()’ method anywhere in try/catch block.
 
 ----
@@ -5412,12 +5463,29 @@ finally block will be executed irrespective of the exception or not. The only ca
 
 Yes, the concept can be termed as constructor chaining and can be achieved using this().
 
+```java
+public class Person {
+   private String name;
+   private int age;
+   
+   // Constructor with name and age parameters
+   public Person(String name, int age) {
+      this.name = name;
+      this.age = age;
+   }
+
+   // Constructor with only name parameter, which sets the age to a default value of 0
+   public Person(String name) {
+      this(name, 0);
+   }
+}
+```
+
 ----
 
 **Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain.**
 
 In the case of ArrayList, data storing in the form of primitive data types (like int, float, etc.) is not possible. The data members/objects present in the ArrayList have references to the objects which are located at various sites in the memory. Thus, storing of actual objects or non-primitive data types (like Integer, Double, etc.) takes place in various memory locations.
-
 
 However, the same does not apply to the arrays. Object or primitive type values can be stored in arrays in contiguous memory locations, hence every element does not require any reference to the next element.
 
@@ -5437,7 +5505,7 @@ boolean	addAll(int index, Collection <extends ? Element > c): This is the overlo
 
 **How does the size of ArrayList grow dynamically? And also state how it is implemented internally.**
 
-ArrayList is implemented in such a way that it can grow dynamically. We don't need to specify the size of ArrayList. For adding the values in it, the methodology it uses is -
+__ArrayList is implemented in such a way that it can grow dynamically. We don't need to specify the size of ArrayList. For adding the values in it, the methodology it uses is__
 
 1. Consider initially that there are 2 elements in the ArrayList. [2, 3].
 
@@ -5449,15 +5517,60 @@ Then the new value will be inserted into it. [2, 3, 4, null]. And for the next t
 
 3. This process continues and the time taken to perform all of these is considered as the amortized constant time. 
 
-This is how the ArrayList grows dynamically. And when we delete any entry from the ArrayList then the following steps are performed -
+__This is how the ArrayList grows dynamically. And when we delete any entry from the ArrayList then the following steps are performed__
 
 1. It searches for the element index in the array. Searching takes some time. Typically it’s O(n) because it needs to search for the element in the entire array.
 
-
 2. After searching the element, it needs to shift the element from the right side to fill the index.
 
-
 So this is how the elements are deleted from the ArrayList internally. Similarly, the search operations are also implemented internally as defined in removing elements from the list (searching for elements to delete).
+
+```java
+import java.util.ArrayList;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+
+        // Get the size of the ArrayList
+        int size = numbers.size();
+        System.out.println("Size of ArrayList: " + size);
+
+        // Access elements by index
+        int firstElement = numbers.get(0);
+        System.out.println("First element: " + firstElement);
+
+        // Modify an element
+        numbers.set(1, 25);
+
+        // Remove an element
+        numbers.remove(2);
+
+        // Iterate over the ArrayList
+        System.out.println("Elements in ArrayList:");
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
+        // Check if the ArrayList contains a specific element
+        boolean contains = numbers.contains(10);
+        System.out.println("Contains 10? " + contains);
+
+        // Clear the ArrayList
+        numbers.clear();
+
+        // Check if the ArrayList is empty
+        boolean isEmpty = numbers.isEmpty();
+        System.out.println("Is ArrayList empty? " + isEmpty);
+    }
+}
+```
 
 ----
 
@@ -5482,9 +5595,9 @@ class Bottom extends Top {
         return 0;
     }
 }
+
 // In the above example, inheritance is followed. Now, some modifications
 // are done to the Top class like this:
-
 public class Top {
     public int start() {
         return 0;
@@ -5492,6 +5605,7 @@ public class Top {
     public void stop() {
     }
 }
+
 // If the new implementation of the Top class is followed, a compile-time error is bound to occur in the Bottom class. Incompatible return type is there
 // for the Top.stop() function. Changes have to be made to either the Top or the Bottom class to ensure compatibility. However, the composition technique
 // can be utilized to solve the given problem:
@@ -5523,7 +5637,6 @@ When a String is formed as a literal with the assistance of an assignment operat
 ```java
 // new()
 String str1 = new String("Hello");
-
 ```
 
 ```java
@@ -5563,7 +5676,7 @@ The checking() function will return false as the same content is not referenced 
 
 ----
 
-**How is the ‘new’ operator different from the ‘newInstance()’ operator in java?**
+**How is the 'new' operator different from the ‘newInstance()’ operator in java?**
 
 Both new and newInstance() operators are used to creating objects.
 
@@ -5677,7 +5790,7 @@ class Main {
 
 More explanation:
 
-1. Variable Arguments (Varargs):
+__1. Variable Arguments (Varargs):__
 The ... notation allows you to pass a variable number of arguments of the same type to a method. This provides flexibility and convenience when you need to handle methods with a varying number of arguments.
 
 ```java
@@ -5693,7 +5806,7 @@ public void printNumbers(int... numbers) {
 // printNumbers(); // No arguments, prints nothing
 ```
 
-2. Array Initialization:
+__2. Array Initialization:__
 The ... notation can also be used during array initialization to create an array with an unspecified number of elements.
 
 ```
@@ -5824,7 +5937,7 @@ It is possible to import a class or package more than once, however, it is redun
 
 ----
 
-**In case a package has sub packages, will it suffice to import only the main package? e.g. Does importing of com.myMainPackage.* also import com.myMainPackage.mySubPackage.*?**
+**In case a package has subpackages, will it suffice to import only the main package? E.g. does importing of com.myMainPackage.* also import com.myMainPackage.mySubPackage.*?**
 
 This is a big NO. We need to understand that the importing of the sub-packages of a package needs to be done explicitly. Importing the parent package only results in the import of the classes within it and not the contents of its child/sub-packages.
 
@@ -5842,7 +5955,7 @@ Marker interfaces, also known as tagging interfaces are those interfaces that ha
 
 ----
 
-**Explain the term “Double Brace Initialisation” in Java?**
+**Explain the term "Double Brace Initialisation" in Java?**
 
 This is a convenient means of initializing any collections in Java. Consider the below example.
 
@@ -5910,18 +6023,21 @@ public class Main{
 “bit” would have been the result printed if the letters were used in double-quotes (or the string literals). But the question has the character literals (single quotes) being used which is why concatenation wouldn't occur. The corresponding ASCII values of each character would be added and the result of that sum would be printed.
 The ASCII values of ‘b’, ‘i’, ‘t’ are:
 
-‘b’ = 98
-‘i’ = 105
-‘t’ = 116
+```java
+'b' = 98
+'i' = 105
+'t' = 116
 98 + 105 + 116 = 319
 
-Hence 319 would be printed.
+// Output:
+// 319
+```
 
 ----
 
 **What are the possible ways of making object eligible for garbage collection (GC) in Java?**
 
-First Approach: Set the object references to null once the object creation purpose is served.
+__First Approach: Set the object references to null once the object creation purpose is served.__
 
 ```java
 public class Main {
@@ -5933,7 +6049,7 @@ public class Main {
 }
 ```
 
-Second Approach: Point the reference variable to another object. Doing this, the object which the reference variable was referencing before becomes eligible for GC.
+__Second Approach: Point the reference variable to another object. Doing this, the object which the reference variable was referencing before becomes eligible for GC.__
 
 ```java
 public class Main {
@@ -5947,7 +6063,7 @@ public class Main {
 }
 ```
 
-Third Approach: Island of Isolation Approach: When 2 reference variables pointing to instances of the same class, and these variables refer to only each other and the objects pointed by these 2 variables don't have any other references, then it is said to have formed an “Island of Isolation” and these 2 objects are eligible for GC.
+__Third Approach: Island of Isolation Approach: When 2 reference variables pointing to instances of the same class, and these variables refer to only each other and the objects pointed by these 2 variables don't have any other references, then it is said to have formed an “Island of Isolation” and these 2 objects are eligible for GC.__
 
 ```java
 public class IBGarbageCollect {
@@ -6037,6 +6153,7 @@ Spring Bean supports the following five scopes:
 Java Design patterns are categorized into the following different types. And those are also further categorized as 
 
 Structural patterns:
+
 - Adapter
 
 ```java
@@ -6662,6 +6779,7 @@ public class Main {
 ```
 
 Behavioral patterns:
+
 - Interpreter
 
 ```java
@@ -7569,6 +7687,7 @@ public class Main {
 ```
 
 Creational patterns:
+
 - Factory method/Template
 
 ```java
@@ -8122,10 +8241,10 @@ public class IBMissingNumberProblem {
 
 Example, consider the number:
 
-Step 1: 163 => 1+6+3 = 10
-Step 2: 10 => 1+0 = 1 => Hence 163 is a magic number
-
 ```java
+// Step 1: 163 => 1+6+3 = 10
+// Step 2: 10 => 1+0 = 1 => Hence 163 is a magic number
+
 public class IBMagicNumber{
 
    public static void main(String[] args) { 
@@ -8183,23 +8302,23 @@ And to avoid handling exceptions in the main method, we have used the throws key
 ```java
 class Main{
     public static void main(String[] args){
-        //Input String
+        // Input String
         String str = "Welcome to InterviewBit";
 
-        //Pointers.
+        // Pointers.
         int i = 0, j = str.length()-1;
 
-        //Result character array to store the reversed string.
+        // Result character array to store the reversed string.
         char[] revString = new char[j+1];
 
-        //Looping and reversing the string.
+        // Looping and reversing the string.
         while(i < j){
             revString[j] = str.charAt(i);
             revString[i] = str.charAt(j);
             i++;
             j--;
         }
-        //Printing the reversed String.
+        // Printing the reversed String.
         System.out.println("Reversed String = " + String.valueOf(revString));
     }
 }
@@ -8240,9 +8359,9 @@ public class Main
         }
         System.out.println("\n");
 
-        //Rotation
+        // Rotation
 
-        //Transpose
+        // Transpose
         for(int i = 0; i < no; i++){
             for(int j = i; j < no; j++){
                 int temp = a[i][j];
@@ -8251,7 +8370,7 @@ public class Main
             }
         }
 
-        //Reverse Each row
+        // Reverse Each row
         for(int i = 0; i < no; i++){
             int l, j;
             for(j = 0, l = no -1; j < l; j++){
@@ -8565,9 +8684,9 @@ public class PrintFibonacciRecursive {
   	}
 
 }
-Output
-A Fibonacci sequence of 10 numbers: 0 1 1 2 3 5 8 13 21 34
 
+// Output
+// A Fibonacci sequence of 10 numbers: 0 1 1 2 3 5 8 13 21 34
 ----
 
 **How do you check if a list of integers contains only odd numbers in Java?**
@@ -8583,8 +8702,8 @@ public static boolean onlyOddNumbers(List<Integer> list) {
 
 	return true;
 }
-If the list is large, you can use parallel stream for faster processing, as shown in the following example code:
 
+// If the list is large, you can use parallel stream for faster processing, as shown in the following example code:
 public static boolean onlyOddNumbers(List<Integer> list) {
 	return list
 			.parallelStream() // parallel stream for faster processing
@@ -8601,18 +8720,27 @@ To learn more about the math behind determining if an integer is odd, refer to t
 A palindrome string is the same string backwards or forwards. To check for a palindrome, you can reverse the input string and check if the result is equal to the input. The following example code shows how to use the String charAt(int index) method to check for palindrome strings:
 
 ```java
-boolean checkPalindromeString(String input) {
-	boolean result = true;
-	int length = input.length();
+class Checkers {
+    boolean checkPalindromeString(String input) {
+        boolean result = true;
+        int length = input.length();
 
-	for (int i = 0; i < length/2; i++) {
-		if (input.charAt(i) != input.charAt(length - i - 1)) {
-			result = false;
-			break;
-		}
-	}
+        for (int i = 0; i < length/2; i++) {
+            if (input.charAt(i) != input.charAt(length - i - 1)) {
+                result = false;
+                break;
+            }
+        }
 
-	return result;
+        return result;
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Checkers newCheckers = new Checkers();
+        newCheckers.checkPalindromeString("This is an input string");
+    }
 }
 ```
 
@@ -8623,17 +8751,26 @@ boolean checkPalindromeString(String input) {
 The following example code shows one way to remove spaces from a string using with the Character.isWhitespace() method:
 
 ```java
-String removeWhiteSpaces(String input) {
-	StringBuilder output = new StringBuilder();
-	
-	char[] charArray = input.toCharArray();
-	
-	for (char c : charArray) {
-		if (!Character.isWhitespace(c))
-			output.append(c);
-	}
-	
-	return output.toString();
+class Cleaner {
+    String removeWhiteSpaces(String input) {
+        StringBuilder output = new StringBuilder();
+
+        char[] charArray = input.toCharArray();
+
+        for (char c : charArray) {
+            if (!Character.isWhitespace(c))
+                output.append(c);
+        }
+
+        return output.toString();
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Cleaner newCleaner = new Cleaner();
+        newCleaner.removeWhiteSpaces("This is an input string");
+    }
 }
 ```
 
@@ -8647,12 +8784,15 @@ The String class contains two methods to remove leading and trailing whitespaces
 
 The strip() method is the recommended way to remove whitespaces because it uses the Unicode standard. The following example code shows how to use the strip() method to remove whitespaces:
 
-String s = "  abc  def\t";
-		
-s = s.strip();
-		
-System.out.println(s);
-Because String is immutable, you have to assign the strip() output to the string.
+```java
+public class Main{
+    public static void main(String[] args) {
+        String s = "  abc  def\t";
+        s = s.strip();
+        System.out.println(s);
+    }
+}
+```
 
 ----
 
@@ -8660,11 +8800,18 @@ Because String is immutable, you have to assign the strip() output to the string
 
 The Arrays utility class has many overloaded sort() methods to sort primitive and to object arrays. If you are sorting a primitive array in the natural order, then you can use the Arrays.sort() method, as shown in the following example:
 
-int[] array = {1, 2, 3, -1, -2, 4};
+```java
+import java.util.Arrays;
 
-Arrays.sort(array);
+public class Main{
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, -1, -2, 4};
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+    }
+}
+```
 
-System.out.println(Arrays.toString(array));
 However, if you want to sort an array of objects, then the object must implement the Comparable interface. If you want to specify the sorting criteria, then you can pass the Comparator for the sorting logic. Learn more about Comparable and Comparator in Java.
 
 ----
@@ -8674,26 +8821,6 @@ However, if you want to sort an array of objects, then the object must implement
 Deadlock is a scenario in a multi-threaded Java environment where two or more threads are blocked forever. The deadlock situation arises with at two or more threads. The following example code creates a deadlock scenario:
 
 ```java
-public class ThreadDeadlock {
-
-    public static void main(String[] args) throws InterruptedException {
-        Object obj1 = new Object();
-        Object obj2 = new Object();
-        Object obj3 = new Object();
-    
-        Thread t1 = new Thread(new SyncThread(obj1, obj2), "t1");
-        Thread t2 = new Thread(new SyncThread(obj2, obj3), "t2");
-        Thread t3 = new Thread(new SyncThread(obj3, obj1), "t3");
-        
-        t1.start();
-        Thread.sleep(5000);
-        t2.start();
-        Thread.sleep(5000);
-        t3.start();        
-    }
-
-}
-
 class SyncThread implements Runnable {
 
     private Object obj1;
@@ -8730,8 +8857,30 @@ class SyncThread implements Runnable {
             e.printStackTrace();
         }
     }
-
 }
+
+public class Main {
+
+    public static void main(String[] args) throws InterruptedException {
+        Object obj1 = new Object();
+        Object obj2 = new Object();
+        Object obj3 = new Object();
+
+        Thread t1 = new Thread(new SyncThread(obj1, obj2), "t1");
+        Thread t2 = new Thread(new SyncThread(obj2, obj3), "t2");
+        Thread t3 = new Thread(new SyncThread(obj3, obj1), "t3");
+
+        t1.start();
+        Thread.sleep(5000);
+        t2.start();
+        Thread.sleep(5000);
+        t3.start();
+    }
+}
+
+// Output:
+// t1 acquiring lock on java.lang.Object@418b535d
+// t1 acquired lock on java.lang.Object@418b535d
 ```
 
 All three threads will be able to acquire a lock on the first object. However, they are using shared resources and are started in such a way that they will keep on waiting indefinitely to acquire the lock on the second object. You can use the Java thread dump to detect the deadlocks. Learn more about deadlock in Java.
@@ -8746,11 +8895,17 @@ F(n) = F(1)*F(2)...F(n-1)*F(n)
 The following example code shows how to use recursion to find the factorial of an integer:
 
 ```java
-public static long factorial(long n) {
-	if (n == 1)
-		return 1;
-	else
-		return (n * factorial(n - 1));
+public class Main {
+    public static long factorial(long n) {
+        if (n == 1)
+            return 1;
+        else
+            return (n * factorial(n - 1));
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        factorial(4);
+    }
 }
 ```
 
@@ -8767,25 +8922,31 @@ Finally, if the key is not found in the whole array, then it should return -1. T
 The following example code implements a binary search:
 
 ```java
-public static int binarySearch(int arr[], int low, int high, int key) {
-	int mid = (low + high) / 2;
+public class Main {
+    public static int binarySearch(int arr[], int low, int high, int key) {
+        int mid = (low + high) / 2;
 
-	while (low <= high) {
-		if (arr[mid] < key) {
-			low = mid + 1;
-		} else if (arr[mid] == key) {
-			return mid;
-		} else {
-			high = mid - 1;
-		}
-		mid = (low + high) / 2;
-	}
+        while (low <= high) {
+            if (arr[mid] < key) {
+                low = mid + 1;
+            } else if (arr[mid] == key) {
+                return mid;
+            } else {
+                high = mid - 1;
+            }
+            mid = (low + high) / 2;
+        }
 
-	if (low > high) {
-		return -1;
-	}
+        if (low > high) {
+            return -1;
+        }
 
-	return -1;
+        return -1;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        binarySearch(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 4, 8, 2);
+    }
 }
 ```
 
@@ -8863,7 +9024,6 @@ public class MergeSort {
 
 		return merged;
 	}
-
 }
 ```
 
@@ -8911,10 +9071,11 @@ public class ArraySameElements {
 	}
 
 }
+
+// Output
+// true
+// false
 ```
-Output
-true
-false
 
 ----
 
@@ -8923,14 +9084,21 @@ false
 You can use a for loop to iterate over the array elements and add them to get the final sum:
 
 ```java
-int[] array = { 1, 2, 3, 4, 5 };
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        int[] array = { 1, 2, 3, 4, 5 };
 
-int sum = 0;
+        int sum = 0;
 
-for (int i : array)
-	sum += i;
+        for (int i : array)
+            sum += i;
 
-System.out.println(sum);
+        System.out.println(sum);
+    }
+}
+
+// Output:
+// 15
 ```
 
 ----
@@ -8951,7 +9119,6 @@ private static int findSecondHighest(int[] array) {
 		} else if (i > secondHighest) {
 			secondHighest = i;
 		}
-
 	}
 	return secondHighest;
 }
@@ -8965,15 +9132,21 @@ The following example code shows how to use the Random class to generate random 
 
 
 ```java
-int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+import java.util.Random;
 
-Random rand = new Random();
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        int[] array = { 1, 2, 3, 4, 5, 6, 7 };
 
-for (int i = 0; i < array.length; i++) {
-	int randomIndexToSwap = rand.nextInt(array.length);
-	int temp = array[randomIndexToSwap];
-	array[randomIndexToSwap] = array[i];
-	array[i] = temp;
+        Random rand = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            int randomIndexToSwap = rand.nextInt(array.length);
+            int temp = array[randomIndexToSwap];
+            array[randomIndexToSwap] = array[i];
+            array[i] = temp;
+        }
+    }
 }
 ```
 
@@ -9015,11 +9188,18 @@ Note that the example code assumes that the string that you’re searching for i
 The following example code shows how to use the SimpleDateFormat class to format the date string:
 
 ```java
-String pattern = "MM-dd-yyyy";
-SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-String date = simpleDateFormat.format(new Date());
-System.out.println(date); // 06-23-2020
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        String pattern = "MM-dd-yyyy";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+        String date = simpleDateFormat.format(new Date());
+        System.out.println(date); // 06-23-2020
+    }
+}
 ```
 
 Lear more about the Java SimpleDateFormat.
@@ -9089,7 +9269,6 @@ public class SortHashMapByValue {
 
 		return sortedByValue;
 	}
-
 }
 ```
 
@@ -9099,11 +9278,16 @@ public class SortHashMapByValue {
 
 The String class doesn’t have a method to remove characters. The following example code shows how to use the replace() method to create a new string without the given character:
 
-String str1 = "abcdABCDabcdABCD";
-		
-str1 = str1.replace("a", ""); 
+```java
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        String str1 = "abcdABCDabcdABCD";
+        str1 = str1.replace("a", "");
+        System.out.println(str1); // bcdABCDbcdABCD
+    }
+}
+```
 
-System.out.println(str1); // bcdABCDbcdABCD
 String is immutable in Java. All the string manipulation methods return a new string, which is why you need to assign it to another variable. Learn more about removing characters from a string in Java.
 
 ----
@@ -9112,20 +9296,32 @@ String is immutable in Java. All the string manipulation methods return a new st
 
 You can create the character array from the string. Then iterate over it and create a HashMap with the character as key and their count as value. The following example code shows how to extract and count the characters of a string:
 
-String str1 = "abcdABCDabcd";
+```java
+import java.util.HashMap;
+import java.util.Map;
 
-char[] chars = str1.toCharArray();
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        String str1 = "abcdABCDabcd";
 
-Map<Character, Integer> charsCount = new HashMap<>();
+        char[] chars = str1.toCharArray();
 
-for (char c : chars) {
-	if (charsCount.containsKey(c)) {
-		charsCount.put(c, charsCount.get(c) + 1);
-	} else
-		charsCount.put(c, 1);
+        Map<Character, Integer> charsCount = new HashMap<>();
+
+        for (char c : chars) {
+            if (charsCount.containsKey(c)) {
+                charsCount.put(c, charsCount.get(c) + 1);
+            } else {
+                charsCount.put(c, 1);
+            }
+        }
+        System.out.println(charsCount); // {a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1}
+    }
 }
 
-System.out.println(charsCount); // {a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1}
+// Output:
+// {a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1}
+```
 
 ----
 
@@ -9133,25 +9329,39 @@ System.out.println(charsCount); // {a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1}
 
 The following example code shows how to prove that a String object is immutable and the comments in the code explain each step:
 
-String s1 = "Java"; // "Java" String created in pool and reference assigned to s1
+```java
+import java.util.HashMap;
+import java.util.Map;
 
-String s2 = s1; //s2 also has the same reference to "Java" in the pool
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        String s1 = "Java"; // "Java" String created in pool and reference assigned to s1
 
-System.out.println(s1 == s2); // proof that s1 and s2 have the same reference
+        String s2 = s1; //s2 also has the same reference to "Java" in the pool
 
-s1 = "Python"; 
-//s1 value got changed above, so how String is immutable?
+        System.out.println(s1 == s2); // proof that s1 and s2 have the same reference
 
-//in the above case a new String "Python" got created in the pool
-//s1 is now referring to the new String in the pool 
-//BUT, the original String "Java" is still unchanged and remains in the pool
-//s2 is still referring to the original String "Java" in the pool
+        s1 = "Python";
+        //s1 value got changed above, so how String is immutable?
 
-// proof that s1 and s2 have different reference
-System.out.println(s1 == s2); 
+        //in the above case a new String "Python" got created in the pool
+        //s1 is now referring to the new String in the pool
+        //BUT, the original String "Java" is still unchanged and remains in the pool
+        //s2 is still referring to the original String "Java" in the pool
 
-System.out.println(s2); 
-// prints "Java" supporting the fact that original String value is unchanged, hence String is immutable
+        // proof that s1 and s2 have different reference
+        System.out.println(s1 == s2);
+
+        System.out.println(s2);
+        // prints "Java" supporting the fact that original String value is unchanged, hence String is immutable
+    }
+}
+
+// Output:
+// true
+// false
+// Java
+```
 
 ----
 
@@ -9159,21 +9369,32 @@ System.out.println(s2);
 
 The following example code shows how to use the extends keyword to create a subclass of the class Animal. The new class Cat inherits the variable from the Animal class and adds more code that only belongs to the Cat class.
 
+```java
 class Animal {
-	String color;
+    String color;
 }
 
 class Cat extends Animal {
-	void meow() {
-		System.out.println("Meow");
-	}
+    void meow() {
+        System.out.println("Meow");
+    }
 }
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        Cat Amy = new Cat();
+        Amy.meow();
+    }
+}
+```
 
 ----
 
-29. How do you show a diamond problem with multiple inheritance in Java?
-The diamond problem occurs when a class inherits from multiple classes and ambiguity occurs when it’s unclear which method to execute from which class. Java doesn’t allow extending multiple classes to avoid the diamond problem illustrated by the following example:
+**How do you show a diamond problem with multiple inheritance in Java?**
 
+The diamond problem occurs when a class inherits from multiple classes and ambiguity occurs when it’s unclear which method to execute from
+which class. Java doesn’t allow extending multiple classes to avoid the diamond problem illustrated by the following example:
+
+```java
 interface I {
 	void foo();
 }
@@ -9190,6 +9411,7 @@ class C extends A, B { // won't compile
 		super.foo();
 	}
 }
+```
 
 ----
 
@@ -9197,24 +9419,34 @@ class C extends A, B { // won't compile
 
 The following example code shows an example of try-catch:
 
-try {
-	FileInputStream fis = new FileInputStream("test.txt");
-} catch(FileNotFoundException e) {
-	e.printStackTrace();
-}
-From Java 7 onwards, you can also catch multiple exceptions in a single catch block, as shown in the following example. It’s useful when you have the same code in all the catch blocks.
+```java
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
-public static void foo(int x) throws IllegalArgumentException, NullPointerException {
-	// some code
-}
+public class Main {
 
-public static void main(String[] args) {
-	try {
-		foo(10);
-	} catch (IllegalArgumentException | NullPointerException e) {
-		System.out.println(e.getMessage());
-	}
+    // From Java 7 onwards, you can also catch multiple exceptions in a single catch block,
+    // as shown in the following example. It’s useful when you have the same code in all the catch blocks.
+    public static void foo(int x) throws IllegalArgumentException, NullPointerException {
+        System.out.print(x);
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+
+        try {
+            FileInputStream fis = new FileInputStream("test.txt");
+        } catch(FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            foo(10);
+        } catch (IllegalArgumentException | NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
+```
 
 ----
 
@@ -9222,24 +9454,27 @@ public static void main(String[] args) {
 
 If you are calling a function on null, it will throw a NullPointerException, as shown in the following example code:
 
-public static void main(String[] args) {
-	printString(null, 3);
-	
-}
+```java
+public class Main {
+    static void printString(String s, int count) {
+        for (int i = 0; i < count; i++) {
+            System.out.println(s.toUpperCase()); // Exception in thread "main" java.lang.NullPointerException
+        }
+    }
 
-static void printString(String s, int count) {
-	for (int i = 0; i < count; i++) {
-		System.out.println(s.toUpperCase()); // Exception in thread "main" java.lang.NullPointerException
-	}
-}
-You should have null check in place for early validation, as shown in the following example code:
+    // static void printString(String s, int count) {
+    //     if (s == null) return;
+    //     for (int i = 0; i < count; i++) {
+    //         System.out.println(s.toUpperCase());
+    //     }
+    // }
 
-static void printString(String s, int count) {
-	if (s == null) return;
-	for (int i = 0; i < count; i++) {
-		System.out.println(s.toUpperCase());
-	}
+    public static void main(String[] args) throws InterruptedException {
+        printString(null, 3);
+    }
 }
+```
+
 You can also throw IllegalArgumentException based on the project requirements.
 
 ----
@@ -9248,21 +9483,42 @@ You can also throw IllegalArgumentException based on the project requirements.
 
 Records was added as a standard feature in Java 16. Records enable you to create a POJO class with minimal code. Records automatically generates hashCode(), equals(), getter methods, and toString() method code for the class. Records are final and implicitly extend the java.lang.Record class. The following example code shows one way to cerate a record:
 
+```java
 import java.util.Map;
- 
-public record EmpRecord(int id, String name, long salary, Map<String, String> addresses) {
+
+public class Main {
+    public record EmpRecord(int id, String name, long salary, Map<String, String> addresses) {
+        
+    }
+    
+    public static void main(String[] args) {
+        String textBlock = """
+		Hi
+		Hello
+		Yes""";
+    }
 }
+```
+
 Learn more about records in Java. For details about POJO, refer to Plain old Java object on Wikipedia.
 
 ----
 
-33. How do you create text blocks in Java?
+**How do you create text blocks in Java?**
+
 Java 15 added the text blocks feature. You can create multiline strings using text blocks. The multiline string has to be written inside of a pair of triple-double quotes, as shown in the following example:
 
-String textBlock = """
+```java
+public class Main {
+    public static void main(String[] args) {
+        String textBlock = """
 		Hi
 		Hello
 		Yes""";
+    }
+}
+```
+
 It’s the same as creating a string, such as Hi\\nHello\\nYes.
 
 ----
@@ -9271,32 +9527,44 @@ It’s the same as creating a string, such as Hi\\nHello\\nYes.
 
 The switch expressions were added as a standard feature in Java 14. The following examples show switch expressions as well as multi-label case statements:
 
-int choice = 2;
+```java
+import java.util.Map;
 
-int x = switch (choice) {
-    case 1, 2, 3:
-	    yield choice;
-    default:
-	    yield -1;
-};
+public class Main {
+    public static void main(String[] args) {
+        int choice = 2;
 
-System.out.println("x = " + x); // x = 2
-You can also use lambda expressions in switch expressions.
+        int x = switch (choice) {
+            case 1, 2, 3:
+                yield choice;
+            default:
+                yield -1;
+        };
 
-String day = "TH";
-String result = switch (day) {
-    case "M", "W", "F" -> "MWF";
-    case "T", "TH", "S" -> "TTS";
+        System.out.println("x = " + x); // x = 2
 
-    default -> {
-	    if (day.isEmpty())
-		    yield "Please insert a valid day.";
-	    else
-		    yield "Looks like a Sunday.";
+        // You can also use lambda expressions in switch expressions.
+        String day = "TH";
+        String result = switch (day) {
+            case "M", "W", "F" -> "MWF";
+            case "T", "TH", "S" -> "TTS";
+
+            default -> {
+                if (day.isEmpty())
+                    yield "Please insert a valid day.";
+                else
+                    yield "Looks like a Sunday.";
+            }
+        };
+
+        System.out.println(result); // TTH
     }
-};
+}
 
-System.out.println(result); // TTH
+// Output:
+// x = 2
+// TTS
+```
 
 ----
 
@@ -9304,13 +9572,17 @@ System.out.println(result); // TTH
 
 This example refers to the following Java file:
 
-public class Test {
-
-public static void main(String args[]) {
-		System.out.println("Hi");
-	}
-
+```java
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Hi");
+    }
 }
+
+// Output:
+// Hi
+```
+
 You can compile it using the following command in your terminal:
 
 javac Test.java
@@ -9330,17 +9602,21 @@ java -cp .:~/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar  com/example/Tes
 
 The following example code shows how to create a basic enum:
 
+```java
 public enum ThreadStates {
 	START,
 	RUNNING,
 	WAITING,
 	DEAD;
 }
+```
+
 ThreadStates is the enum with fixed constants fields START, RUNNING, WAITING, and DEAD. All enums implicitly extend the java.lang.Enum class and implement the Serializable and Comparable interfaces. Enum can have methods also. Learn more about enums in Java.
 
 ----
 
-37. How do you use the forEach() method in Java?
+**How do you use the forEach() method in Java?**
+
 The forEach() method provides a shortcut to perform an action on all the elements of an iterable. The following example code shows how to iterate over the list elements and print them:
 
 ```java
@@ -9364,6 +9640,7 @@ list.forEach(System.out::print);
 
 Java 8 introduced default and static methods in interfaces. This bridged the gap between interfaces and abstract classes. The following example code shows one way to write an interface with the default and static method:
 
+```java
 public interface Interface1 {
 	
 	// regular abstract method
@@ -9378,9 +9655,8 @@ public interface Interface1 {
 
 		return str == null ? true : "".equals(str) ? true : false;
 	}
-
 }
-Learn more about about default and static methods in interfaces in Java 8 interface changes.
+```
 
 ----
 
@@ -9388,10 +9664,12 @@ Learn more about about default and static methods in interfaces in Java 8 interf
 
 An interface with exactly one abstract method is called a functional interface. The major benefit of functional interfaces is that you can use lambda expressions to instantiate them and avoid using bulky anonymous class implementation. The @FunctionalInterface annotation indicates a functional interface, as shown in the following example code:
 
+```java
 @FunctionalInterface
 interface Foo {
 	void test();
 }
+```
 
 ----
 
@@ -9399,7 +9677,9 @@ interface Foo {
 
 Runnable is an excellent example of a functional interface. You can use lambda expressions to create a runnable, as shown in the following example code:
 
+```java
 Runnable r1 = () -> System.out.println("My Runnable");
+```
 
 ----
 
@@ -9407,6 +9687,7 @@ Runnable r1 = () -> System.out.println("My Runnable");
 
 When a class has two or more methods with the same name, they are called overloaded methods. The following example code shows as overloaded method called print:
 
+```java
 class Foo {
 	void print(String s) {
 		System.out.println(s);
@@ -9418,10 +9699,9 @@ class Foo {
 			count--;
 		}
 	}
-
 }
-When a superclass method is also implemented in the child class, it’s called overriding. The following example code shows how to annotate the printname() method that’s implemented in both classes:
 
+// When a superclass method is also implemented in the child class, it’s called overriding. The following example code shows how to annotate the printname() method that’s implemented in both classes:
 class Base {
 	void printName() {
 		System.out.println("Base Class");
@@ -9434,7 +9714,7 @@ class Child extends Base {
 		System.out.println("Child Class");
 	}
 }
-Learn more about overriding and overloading in Java.
+```
 
 ----
 
@@ -9442,6 +9722,7 @@ Learn more about overriding and overloading in Java.
 
 Test yourself by guessing the output of the following code snippets.
 
+```java
 String s1 = "abc";
 String s2 = "abc";
 
@@ -9506,7 +9787,8 @@ public class Test {
    	}
 }
 Output
-50. Find 5 mistakes in the following code snippet.
+
+// 50. Find 5 mistakes in the following code snippet.
 package com.digitalocean.programming-interviews;
 
 public class String Programs {
@@ -9516,6 +9798,7 @@ public class String Programs {
 		System.out.println(s);
 	}
 }
+```
 
 # https://www.digitalocean.com/community/tutorials/java-programming-interview-questions
 
@@ -9634,21 +9917,72 @@ The difference between Collection and Collections you can find it in detail here
 
 ----
 
-**Q18 What is multithreaded programming?**
+**What is multithreaded programming?**
 
 Multithreaded means multiple threads will run to execute the task simultaneously.  It's important in the programming world. The operating system is an example of a multithreaded system.
+
+```java
+public class MultithreadedExample {
+    public static void main(String[] args) {
+        MyThread thread1 = new MyThread("Thread 1");
+        MyThread thread2 = new MyThread("Thread 2");
+        MyThread thread3 = new MyThread("Thread 3");
+        
+        thread1.start();
+        thread2.start();
+        thread3.start();
+        
+        try {
+            thread1.join();
+            thread2.join();
+            thread3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        System.out.println("All threads have completed!");
+    }
+}
+
+class MyThread extends Thread {
+    private String name;
+    
+    public MyThread(String name) {
+        this.name = name;
+    }
+    
+    @Override
+    public void run() {
+        System.out.println("Thread " + name + " is running...");
+        
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread " + name + " is counting: " + i);
+            
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+        System.out.println("Thread " + name + " has completed!");
+    }
+}
+```
 
 ----
 
 **What is the difference between Error and Exception?**
 
-Error is generated by the environment at runtime. The exception is generated by the application intentionally or mistakenly. An exception can be checked or unchecked, but the error is only unchecked. You can find the difference between Error and Exception here.
+Error is generated by the environment at runtime. The exception is generated by the application intentionally or mistakenly. An exception can be checked or unchecked,
+but the error is only unchecked. You can find the difference between Error and Exception here.
 
 ----
 
 **Difference between static and non-static methods?**
 
-Static methods belong to a class but non-static methods belong to an object. You don’t need to instantiate a class to access the static methods, but you have to instantiate the class to get access to non-static methods.
+Static methods belong to a class but non-static methods belong to an object. You don’t need to instantiate a class to access the static methods, but you have to instantiate
+the class to get access to non-static methods.
 
 ----
 
@@ -9670,6 +10004,61 @@ b. By extending Thread class
 
 Synchronization is a technique to control access of a method with multiple threads at the same time. If we declare a method synchronized, then only one thread can use this method at a time. This is basically used for Thread safety. You can find it in detail here.
 
+```java
+class Counter {
+    private int count;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public synchronized int getCount() {
+        return count;
+    }
+}
+
+class IncrementThread extends Thread {
+    private Counter counter;
+
+    public IncrementThread(Counter counter) {
+        this.counter = counter;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            counter.increment();
+        }
+    }
+}
+
+public class SynchronizationExample {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+
+        IncrementThread thread1 = new IncrementThread(counter);
+        IncrementThread thread2 = new IncrementThread(counter);
+
+        thread1.start();
+        thread2.start();
+
+        thread1.join();
+        thread2.join();
+
+        System.out.println("Counter value: " + counter.getCount());
+    }
+}
+
+In this example, we have a Counter class that contains a count variable. The increment() method is marked as synchronized, which means only one thread can execute that method at a time. The getCount() method is also marked as synchronized for consistency, even though it doesn't modify any shared state.
+
+We create two IncrementThread instances, each working on the same Counter object. The run() method of each thread calls the increment() method of the Counter object 1000 times.
+
+In the main method, we start both threads and then wait for them to complete using the join() method. Finally, we print the value of the counter.
+
+Due to synchronization, even though the increment() method is called concurrently by multiple threads, the shared count variable is incremented correctly and the final output will always be 2000 (1000 increments from each thread). Without synchronization, there would be a chance of data corruption or inconsistent results.
+
+```
+
 ----
 
 **What is the use of the final keyword?**
@@ -9679,12 +10068,115 @@ We cannot change the value of a final variable. We are not able to inherit a fin
 ----
 
 **What is the garbage collection of java?**
+
 To clean the object from memory which has no reference is called garbage collection. It’s an important feature of java. Java automatically clears the objects from memory. We don’t need to clean the object manually from memory.
+
+```java
+public class GarbageCollectionExample {
+    public static void main(String[] args) {
+        // Create objects
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        
+        // Assign obj2 to obj1
+        obj1 = obj2;
+        
+        // Set obj2 to null
+        obj2 = null;
+        
+        // Request garbage collection
+        System.gc();
+    }
+}
+
+class MyClass {
+    // Constructor
+    public MyClass() {
+        System.out.println("Creating an object");
+    }
+    
+    // Finalize method
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalizing an object");
+    }
+}
+```
 
 ----
 
 **What is the cloning in java?**
-Java cloning means create an exact copy of an object. Shallow or Deep cloning is used in java to clone a java object. The clone() method is used to clone an object. You can find the difference between Shallow and Deep cloning here.
+
+Java cloning means create an exact copy of an object. Shallow or Deep cloning is used in java to clone a java object. The clone() method is used to clone an object.
+You can find the difference between Shallow and Deep cloning here.
+
+```java
+class Person implements Cloneable {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+public class CloningExample {
+    public static void main(String[] args) {
+        try {
+            // Create an object
+            Person person1 = new Person("John", 30);
+
+            // Clone the object
+            Person person2 = (Person) person1.clone();
+
+            // Verify the clone
+            System.out.println("Original: " + person1.getName() + " - " + person1.getAge());
+            System.out.println("Clone: " + person2.getName() + " - " + person2.getAge());
+
+            // Modify the clone
+            person2.setName("Alice");
+            person2.setAge(25);
+
+            // Verify the changes
+            System.out.println("Original: " + person1.getName() + " - " + person1.getAge());
+            System.out.println("Clone: " + person2.getName() + " - " + person2.getAge());
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+// Output:
+// Original: John - 30
+// Clone: John - 30
+// Original: John - 30
+// Clone: Alice - 25
+
+```
+
+In this example, we have a Person class that implements the Cloneable interface. The Person class has a name and an age as its attributes.
+
+Inside the Person class, we override the clone() method inherited from the Object class. We call the super.clone() method to perform a shallow copy of the object. This method creates a new instance of the Person class and copies the values of the attributes.
+
+In the main method, we create an instance of the Person class (person1). We then clone this object using the clone() method and store the clone in another variable (person2).
+
+We verify that the cloning process worked correctly by printing the attributes of both the original object and the clone.
+
+Next, we modify the attributes of the clone (person2). We print the attributes again to demonstrate that the modifications made to the clone do not affect the original object.
 
 ----
 
@@ -9827,6 +10319,35 @@ Scheduler Service: EJBs can be used in the Timer Service which enables task impl
 
 Applets are J2EE client components that are written in Java and are executed in a web browser or a variety of other devices which supports the applet programming model. They are used for providing interactive features to web apps and help in providing small, portable embedded Java programs in HTML pages which will be run automatically when we view the pages.
 
+```java
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class MyJ2EEApplet extends Applet {
+
+    public void init() {
+        // Initialization code goes here
+    }
+
+    public void start() {
+        // Start code goes here
+    }
+
+    public void stop() {
+        // Stop code goes here
+    }
+
+    public void destroy() {
+        // Cleanup code goes here
+    }
+
+    public void paint(Graphics g) {
+        // Drawing code goes here
+        g.drawString("Welcome to J2EE Applet", 50, 50);
+    }
+}
+```
+
 ----
 
 **What is the architecture model of Struts?**
@@ -9846,7 +10367,6 @@ ORM stands for Object-Relational Mapping that transforms objects of Java class t
 
 This is represented as shown in the below image:
 
-
 Consider an example where we have an Employee class having employeeId, firstName, lastName, contactNo as attributes. Consider we also have an Employee table that has ID, FNAME, LNAME and CONTACT_NO as columns. If we want to send data from our Java application and save it in the database, we cannot do it straightforwardly by simply saving the Java objects in the database directly. We need some sort of a mapper that maps the Java objects to the records that are compatible to be saved in the database table. This is where ORM comes into the picture. ORM helps in this transformation while writing data to the database as described in the below image:
 
 
@@ -9859,13 +10379,152 @@ The database records cannot be directly consumed by the Java applications as Jav
 Java Servlets and Java Server Pages (JSP) components together constitute web components.
 
 
-Java Servlets dynamically process requests and responses. JSP pages are used for executing servlets that allow a natural approach to creating static content.
+__Java Servlets dynamically process requests and responses:__
+
+```jsp
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+public class MyServlet extends HttpServlet {
+  
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Set the response content type
+        response.setContentType("text/html");
+
+        // Get the PrintWriter object to write the response
+        PrintWriter out = response.getWriter();
+
+        // Write the HTML content to the response
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>My Servlet</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Hello, Servlet!</h1>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+```
+
+__JSP pages are used for executing servlets that allow a natural approach to creating static content.__
+
+```java
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+
+public class MyServlet extends HttpServlet {
+  
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Set the response content type
+        response.setContentType("text/html");
+
+        // Get the PrintWriter object to write the response
+        PrintWriter out = response.getWriter();
+
+        // Write the HTML content to the response
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>My Servlet</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Hello, Servlet!</h1>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+```
 
 ----
 
 **What do you understand by JSF?**
 
 JSF stands for Java Server Faces which is a web framework that is intended for simplifying the development process for user interfaces. It is a standardized display technology for Java-based web applications. It is based on MVC (Model-View-Controller) pattern and provides reusable UI components.
+
+An example:
+
+First, create a JSF page named "example.xhtml" with the following code:
+
+```jsp
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>JSF Example</title>
+</head>
+<body>
+    <h1>Welcome to JSF!</h1>
+    <h:form>
+        <h:inputText value="#{helloBean.name}" />
+        <h:commandButton value="Say Hello" action="#{helloBean.sayHello}" />
+    </h:form>
+    <h2>#{helloBean.greeting}</h2>
+</body>
+</html>
+```
+
+In this example, the JSF page contains HTML code along with JSF components defined using the "h" namespace. We have an input text field and a command button that triggers the "sayHello" method in the managed bean. The result is displayed using the #{helloBean.greeting} expression.
+
+Next, create a managed bean class named "HelloBean.java" with the following code:
+
+```java
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean
+@RequestScoped
+public class HelloBean {
+
+    private String name;
+    private String greeting;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGreeting() {
+        return greeting;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
+    public void sayHello() {
+        greeting = "Hello, " + name + "!";
+    }
+}
+```
+
+In this example, the managed bean class is annotated with @ManagedBean to indicate that it is a managed bean. The @RequestScoped annotation specifies the scope of the bean. The class has a name property that is bound to the input text field in the JSF page using the value attribute. The greeting property holds the greeting message. The sayHello method is invoked when the command button is clicked, and it sets the greeting message based on the entered name.
+
+Finally, you need to configure your JSF application in the "faces-config.xml" file:
+
+```jsp
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+              version="2.0">
+    <managed-bean>
+        <managed-bean-name>helloBean</managed-bean-name>
+        <managed-bean-class>HelloBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>
+```
+
+In this configuration file, we define the managed bean with its name, class, and scope.
+
+Now, you can deploy and run your JSF application on a compatible server, and the "example.xhtml" page will be rendered with the form and functionality to enter a name and display a greeting message when the button is clicked.
 
 ----
 
@@ -9893,11 +10552,11 @@ J2EE Interview Questions for Experienced
 
 The design goals of J2EE architecture are as follows:
 
-Service Availability: To ensure that the application is available 24*7 to achieve required business goals.
-Data Connectivity: The connection between a J2EE application and legacy systems should remain compatible enough for ensuring business functions.
-Ease of Accessibility: The user should be able to connect to applications using any device and from anywhere.
-User Interaction: The user interaction should be seamless and should be able to connect to different devices like desktops, mobiles, laptops etc.
-Abstraction and Flexibility: The developer should focus on business logic and the configuration details should be handled by the server.
+__Service Availability:__ To ensure that the application is available 24*7 to achieve required business goals.
+__Data Connectivity:__ The connection between a J2EE application and legacy systems should remain compatible enough for ensuring business functions.
+__Ease of Accessibility:__ The user should be able to connect to applications using any device and from anywhere.
+__User Interaction:__ The user interaction should be seamless and should be able to connect to different devices like desktops, mobiles, laptops etc.
+__Abstraction and Flexibility:__ The developer should focus on business logic and the configuration details should be handled by the server.
 
 ----
 
@@ -9911,7 +10570,7 @@ The connector architecture defines certain contracts which a resource adapter mu
 
 **What do you understand by JRMP?**
 
-JRMP stands for Java Remote Method Protocol which is used for Remote Method Invocation (RMI) for passing Java objects as arguments. It is an underlying protocol used by RMI for marshalling objects as a stream during object serialization for transferring objects from one JVM to other.
+JRMP stands for __Java Remote Method Protocol__ which is used for Remote Method Invocation (RMI) for passing Java objects as arguments. It is an underlying protocol used by RMI for marshalling objects as a stream during object serialization for transferring objects from one JVM to other.
 
 ----
 
@@ -9929,27 +10588,30 @@ Since the Java application uses a connection pool, it has active connections tha
 
  **How is a webserver different from an application server?**
 
-Web Server 
-Application Server
+| Web Server | Application Server |
+| ------------- | ------------ |
+| Web servers are computer programs that accept requests and returns responses based on that. | Application servers are used for installing, operating and hosting associated applications and services. |
+| It constitutes the web container. | It constitutes both a web container and an EJB container. |
+| These are useful for getting static content for the applications. | These are useful for getting dynamic content. |
+| This consumes and utilizes fewer resources. | It makes use of more resources. |
+| Provide an environment for running web applications. | Provide an environment for running enterprise applications. |
+| Web servers don’t support multithreading. | Multithreading is supported in application servers. |
+| This server makes use of HTML and HTTP protocols. | The application server has GUI (Graphical User Interface) and also supports HTTP, RPC/RMI protocols. |
+	
+----	
 
-Web servers are computer programs that accept requests and returns responses based on that.
-Application servers are used for installing, operating and hosting associated applications and services.
+**What is the purpose of heap dumps and how do you analyze a heap dump?**
 
-It constitutes the web container.	It constitutes both a web container and an EJB container.
-These are useful for getting static content for the applications.	These are useful for getting dynamic content.
-This consumes and utilizes fewer resources.	It makes use of more resources.
-Provide an environment for running web applications.	Provide an environment for running enterprise applications.
-Web servers don’t support multithreading.	Multithreading is supported in application servers.
-This server makes use of HTML and HTTP protocols.	The application server has GUI (Graphical User Interface) and also supports HTTP, RPC/RMI protocols.
-24. What is the purpose of heap dumps and how do you analyze a heap dump?
-Heap dumps consist of a snapshot of all live objects on Java heap memory that are used by running Java applications. Detailed information for each object like type, class name, address, size and references to other objects can be obtained in the heap dump. Various tools help in analyzing heap dumps in Java. For instance, JDK itself provides jhat tool for analysing heap dump. Heap dumps are also used for analysing memory leaks which is a phenomenon that occurs when there are objects that are not used by the application anymore and the garbage collection is not able to free that memory as they are still shown as referenced objects. Following are the causes that result in memory leaks:
+Heap dumps consist of a snapshot of all live objects on Java heap memory that are used by running Java applications. Detailed information for each object like type, class name, address, size and references to other objects can be obtained in the heap dump. Various tools help in analyzing heap dumps in Java. For instance, JDK itself provides jhat tool for analysing heap dump. Heap dumps are also used for analysing memory leaks which is a phenomenon that occurs when there are objects that are not used by the application anymore and the garbage collection is not able to free that memory as they are still shown as referenced objects.
 
-Continuously instantiating objects without releasing them.
-Unclosed connection objects (such as connections to the database) post the required operation.
-Static variables holding on to references of objects.
-Adding objects in HashMap without overriding hashCode() equals() method. If these methods are not included, then the hashmap will continuously grow without ignoring the duplicates.
-Unbounded caches.
-Listener methods that are uninvoked.
+__Following are the causes that result in memory leaks:__
+- Continuously instantiating objects without releasing them.
+- Unclosed connection objects (such as connections to the database) post the required operation.
+- Static variables holding on to references of objects.
+- Adding objects in HashMap without overriding hashCode() equals() method. If these methods are not included, then the hashmap will continuously grow without ignoring the duplicates.
+- Unbounded caches.
+- Listener methods that are uninvoked.
+
 Due to this, the application keeps consuming more and more memory and eventually this leads to OutOfMemory Errors and can ultimately crash the application. We can make use of the Eclipse Memory Analyzer or jvisualVM tool for analysing heap dump to identify memory leaks.
 
 ----
@@ -9958,24 +10620,29 @@ Due to this, the application keeps consuming more and more memory and eventually
 
 There are multiple ways for taking heap dump of Java process. Tools like jCmd, jVisualVM, jmap are available for this purpose. For example, if we are using jmap, then heap dump can be taken by running the below command:
 
+```cmd
 $ jmap -dump:live, file=/path/of/heap_dump.hprof  PID
+```
+
 This heap dump contains live objects that are stored in heap_dump.hprof file. Process ID (PID) of the Java process is needed to get the dump that can be obtained by using ps or grep commands.
 
 ----
 
 **How is J2EE different from Spring?**
 
-J2EE	Spring
-J2EE is a standard or specification defined by Sun/Oracle which is used for web development.	Spring is a framework used for designing templates for an application.
-J2EE has an Oracle-based license.	Spring is an open-source framework.
-J2EE is based on a 3D framework- Logical Tiers, Client Tiers, and Presentation Tiers.	Spring is based on layered architecture having many modules that are made on top of the core container.
-J2EE makes use of high-level object-oriented languages like Java.	Spring doesn’t have a specific programming model.
-J2EE is faster.	Spring is slower than J2EE.
-Makes use of JTA API with execution.	Spring provides a layer of abstraction to help JTA execution merchants.
+| J2EE | Spring |
+| ----- | ------- |
+| J2EE is a standard or specification defined by Sun/Oracle which is used for web development. | Spring is a framework used for designing templates for an application. |
+| J2EE has an Oracle-based license. | Spring is an open-source framework. |
+| J2EE is based on a 3D framework- Logical Tiers, Client Tiers, and Presentation Tiers. | Spring is based on layered architecture having many modules that are made on top of the core container. |
+| J2EE makes use of high-level object-oriented languages like Java. | Spring doesn’t have a specific programming model. |
+| J2EE is faster. | Spring is slower than J2EE. |
+| Makes use of JTA API with execution. | Spring provides a layer of abstraction to help JTA execution merchants. |
 
 ----
 
 **What are EAR, WAR, and JAR?**
+
 EAR stands for Enterprise Archive file and it consists of web, EJB and client components all compressed and packed into a file called .ear file. EAR files allow us to deploy different modules onto the application server simultaneously.
 
 WAR stands for Web Archive file and consists of all web components packed and compressed in a .war file. This file allows testing and deploying web applications easily in a single request.
@@ -9994,9 +10661,11 @@ Hibernate is an Object Relational Mapper framework in Java that provides a layer
 
 Servlets are server-side components that aid in developing powerful server-side applications. Ther are servers that are platform-independent and follow various protocols as per the application design. The most commonly used protocol is the HTTP protocol. In Java, we can create servlets by implementing the Servlet interface that has 3 lifecycle methods - init, service and destroy - and we can use the below classes for implementing servlets:
 
+```java
 javax.servlet.http.HttpServletRequest
 javax.servlet.http.HttpServletResponse
 javax.servlet.http.HttpSession.
+```
 
 ----
 
@@ -10004,14 +10673,13 @@ javax.servlet.http.HttpSession.
 
 The below image describes the different phases of the servlet lifecycle:
 
-
 There are five phases, are as follows:
 
-Classloading phase: The first step is to load the servlet class file (.class extension) by the web container.
-Instantiation phase: Next step is to instantiate the servlet by calling the default constructor.
-Initialize phase: In this phase, the init() method of the servlet is run where the servlet configuration will be assigned to the servlet. This is a lifecycle method provided by the Servlet interface which is run only once in the servlet lifetime.
-Request Handling phase: Here, the servlets provide services to different requests by making use of the service() method of the Servlet interface.
-Removal phase: In this phase, the destroy() lifecycle method of the Servlet interface will be called that is used for clearing the configuration and closing resources before servlet destruction. Post this, the garbage collection will take place.
+__Classloading phase:__ The first step is to load the servlet class file (.class extension) by the web container.
+__Instantiation phase:__ Next step is to instantiate the servlet by calling the default constructor.
+__Initialize phase:__ In this phase, the init() method of the servlet is run where the servlet configuration will be assigned to the servlet. This is a lifecycle method provided by the Servlet interface which is run only once in the servlet lifetime.
+__Request Handling phase:__ Here, the servlets provide services to different requests by making use of the service() method of the Servlet interface.
+__Removal phase:__ In this phase, the destroy() lifecycle method of the Servlet interface will be called that is used for clearing the configuration and closing resources before servlet destruction. Post this, the garbage collection will take place.
 
 ----
 
@@ -10041,129 +10709,98 @@ JMS is a Java-based API that is like a gateway to the message-oriented middlewar
 
 The following image describes how 2 clients can communicate with each other utilizing JMS providers.
 
-
-Conclusion:
+__Conclusion:__
 J2EE defines standards and specifications for various components such as e-mailing, database connectivity, security, XML parsing, CORBA communication etc that help in developing complex, reliable, secure and distributed servlets and applications that follow the client-server model. It provides various API interfaces that act as standards between different vendor adapters and J2EE components. This ensures that the application components are not dependent on vendor codes. Due to this, J2EE has been very popular among Java developers in the field of software development.
 
 ----
 
 **Which of the following exception is thrown when the initialization of servlet fails?**
 
-RemoteException
-
-ServletException
-
-SocketException
-
-IOException
+- RemoteException
+- ServletException (true)
+- SocketException
+- IOException
 
 ----
 
 **Which of the following option is not a J2EE client?**
 
-JSP
-
-Web Applications
-
-Applets
-
-Java Web Start clients
+- JSP (true)
+- Web Applications
+- Applets
+- Java Web Start clients
 
 ----
 
 **What is the directory path where the classes should be present for the application’s Classloader?**
 
-/root/lib/classes/
-
-/WEB-INF/lib/classes/
-
-/WEB-INF/classes/
-
-/root/classes/
+- /root/lib/classes/
+- /WEB-INF/lib/classes/
+- /WEB-INF/classes/ (true)
+- /root/classes/
 
 ----
 
 **What lifecycle method is called for the first time and only once by a servlet?**
 
-start()
-
-run()
-
-initialize()
-
-init()
+- start()
+- run()
+- initialize()
+- init() (true)
 
 ----
 
 **What is the scope of the response object?**
 
-page
-
-session
-
-response
-
-request
+- page
+- session
+- response (true, local scope)
+- request
 
 ----
 
 **Which of the below files have the EJB modules of the application?**
 
-.zip
-
-.jar
-
-.war
-
-.ear
+- .zip
+- .jar (true)
+- .war
+- .ear
 
 ----
 
 **Which tier provides internal functionality to J2EE apps?**
 
-Enterprise Interface System Tier
-
-Presentation Tier
-
-Enterprise Java Beans Tier
-
-Web Tier
+- Enterprise Interface System Tier
+- Presentation Tier
+- Enterprise Java Beans Tier
+- Web Tier
 
 ----
 
 **When is the destroy method of a filter called?**
 
-Only once at the end of the filter lifecycle
-
-After the doFilter method is executed
-
-Only once at the beginning of the filter lifecycle
-
-never called
+- Only once at the end of the filter lifecycle
+- After the doFilter method is executed
+- Only once at the beginning of the filter lifecycle
+- never called
 
 ----
 
 **Which of the following option is responsible for optimising byte codes to machine code?**
 
-JVM
-
-JDK
-
-JRE
-
-JIT
+- JVM (true)
+- JDK
+- JRE
+- JIT
 
 ----
 
 **Which of the following bean type is defined without client view interfaces?**
 
-Stateful Session bean
-
-Stateless Session bean
-
-Message Driven Bean
-
-BMP Entity bean
+- Stateful Session bean
+- Stateless Session bean (true)
+- Message Driven Bean
+- BMP Entity bean
 
 # https://www.interviewbit.com/j2ee-interview-questions/
 
@@ -10175,21 +10812,20 @@ BMP Entity bean
 
 The components of J2EE applications include:
 
-Client-tier components: Run-on the client machine.
-Web tier components: Run-on the J2EE server.
-Business tier components: Run-on the J2EE server.
-Enterprise Information System software (EIS software): Runs on the EIS server.
+__Client-tier components:__ Run-on the client machine.
+__Web tier components:__ Run-on the J2EE server.
+__Business tier components:__ Run-on the J2EE server.
+__Enterprise Information System software (EIS software):__ Runs on the EIS server.
 
 ----
 
 **What are the J2EE client types?**
 
 J2EE client types are
-
-Applets
-Application clients
-Java Web Start enabled clients, by Java Web Start technology.
-Wireless clients, based on the Mobile Information Device Profile (MIDP) technology.
+- Applets
+- Application clients
+- Java Web Start enabled clients, by Java Web Start technology.
+- Wireless clients, based on the Mobile Information Device Profile (MIDP) technology.
 
 ----
 
@@ -10290,13 +10926,175 @@ In hibernate, method saveorupdate() is used to update an object using the identi
 
 When the object is not available in either cache or database, the load() method throws an exception. No null values are returned from the load() method.
 
+```java
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import com.example.entity.Employee;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Hibernate SessionFactory
+        SessionFactory sessionFactory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
+
+        // Open a Hibernate session
+        Session session = sessionFactory.getCurrentSession();
+
+        try {
+            // Begin a transaction
+            session.beginTransaction();
+
+            // Load an Employee object from the database
+            Employee employee = session.load(Employee.class, 1L);
+
+            // Access the properties of the loaded Employee object
+            System.out.println("Employee ID: " + employee.getId());
+            System.out.println("Employee Name: " + employee.getName());
+            System.out.println("Employee Salary: " + employee.getSalary());
+
+            // Commit the transaction
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the session and release resources
+            session.close();
+            sessionFactory.close();
+        }
+    }
+}
+```
+
 When the object is not available in either cache or database, get() returns null.
+
+```java
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import com.example.entity.Employee;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Hibernate SessionFactory
+        SessionFactory sessionFactory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Employee.class)
+                .buildSessionFactory();
+
+        // Open a Hibernate session
+        Session session = sessionFactory.getCurrentSession();
+
+        try {
+            // Begin a transaction
+            session.beginTransaction();
+
+            // Get an Employee object from the database
+            Employee employee = session.get(Employee.class, 1L);
+
+            // Access the properties of the retrieved Employee object
+            System.out.println("Employee ID: " + employee.getId());
+            System.out.println("Employee Name: " + employee.getName());
+            System.out.println("Employee Salary: " + employee.getSalary());
+
+            // Commit the transaction
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the session and release resources
+            session.close();
+            sessionFactory.close();
+        }
+    }
+}
+```
 
 ----
 
 **What is meant by connection pooling?**
 
 Connection pooling is a mechanism to re-use the existing connections. The pooling mechanism maintains a number of already created object connections and when there is a demand, the mechanism directly uses the existing connection without creating a new one.
+
+Example
+
+1. Add the Apache Commons DBCP dependency to your project. You can include it in your Maven project by adding the following dependency to your pom.xml file:
+
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-dbcp2</artifactId>
+    <version>2.9.0</version>
+</dependency>
+```
+
+2. Create a DataSource object that represents the connection pool configuration. This can be done using the BasicDataSource class provided by DBCP:
+
+```java
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class ConnectionPool {
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/mydb";
+    private static final String DB_USERNAME = "username";
+    private static final String DB_PASSWORD = "password";
+
+    private static BasicDataSource dataSource;
+
+    static {
+        dataSource = new BasicDataSource();
+        dataSource.setUrl(DB_URL);
+        dataSource.setUsername(DB_USERNAME);
+        dataSource.setPassword(DB_PASSWORD);
+    }
+
+    public static BasicDataSource getDataSource() {
+        return dataSource;
+    }
+}
+```
+
+3. Use the connection pool to obtain database connections whenever needed:
+
+```java
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class Main {
+    public static void main(String[] args) {
+        BasicDataSource dataSource = ConnectionPool.getDataSource();
+
+        try (Connection connection = dataSource.getConnection()) {
+            // Use the connection for database operations
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM employees");
+            ResultSet resultSet = statement.executeQuery();
+            
+            while (resultSet.next()) {
+                // Process the result set
+                int employeeId = resultSet.getInt("id");
+                String employeeName = resultSet.getString("name");
+                double employeeSalary = resultSet.getDouble("salary");
+                
+                System.out.println("Employee ID: " + employeeId);
+                System.out.println("Employee Name: " + employeeName);
+                System.out.println("Employee Salary: " + employeeSalary);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In this example, we create a BasicDataSource object that represents the connection pool configuration. The DB_URL, DB_USERNAME, and DB_PASSWORD constants specify the database connection details. We then use the dataSource.getConnection() method to obtain a connection from the pool.
+
+With connection pooling, the connections are managed by the pool and are automatically returned to the pool when the Connection object is closed. This allows for efficient reuse of connections and reduces the overhead of creating new connections for each database operation.
+
+Note that connection pooling libraries like Apache Commons DBCP offer additional configuration options for controlling the size of the connection pool, maximum connection limits, and other advanced features.
 
 ----
 
@@ -10308,7 +11106,56 @@ One-to-many reference is defined as a collection. There are five main collection
 
 **Define a thin client?**
 
-Answer: A program interface that does not have any operations like database queries, complex business rules or any connection to the third-party application is called a thin client.
+A program interface that does not have any operations like database queries, complex business rules or any connection to the third-party application is called a thin client.
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class ThinClient {
+    public static void main(String[] args) {
+        try {
+            // Establish a connection with the server
+            Socket socket = new Socket("localhost", 8080);
+
+            // Create input and output streams for communication
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter output = new PrintWriter(socket.getOutputStream(), true);
+
+            // Send a request to the server
+            output.println("GET /api/data HTTP/1.1");
+            output.println("Host: localhost");
+            output.println();
+
+            // Receive and display the response from the server
+            String response;
+            while ((response = input.readLine()) != null) {
+                System.out.println(response);
+            }
+
+            // Close the connection
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+In this example, the thin client establishes a socket connection with a server (assumed to be running on localhost at port 8080). It then creates input and output streams to send and receive data to and from the server.
+
+The client sends an HTTP GET request to the server by writing the request headers to the output stream. In this case, it sends a simple GET request to retrieve data from an API endpoint.
+
+After sending the request, the client reads the response from the server line by line using the input stream and displays it on the console.
+
+Finally, the client closes the socket connection.
+
+Note that this example assumes a basic understanding of socket programming and HTTP communication. The server-side implementation for handling the client request and providing the desired response is not included here, as it would depend on the specific server application or API being used.
+
+----
 
 **Describe the file types *.ear, * .jar and *.war?**
 
@@ -10319,7 +11166,6 @@ Answer: A program interface that does not have any operations like database quer
 ----
 
 **How spring is related to J2EE?**
-
 
 Spring is an open-source application that reduces the complexity of enterprise application development. Spring is based on an inversion of control or dependency injection design patterns.
 
@@ -10368,11 +11214,10 @@ Removal phase – The destroy () function is called before servlet destruction. 
 **What are the different types of JSP tags?**
 
 There are 4 different types of tags associated with JSP. They are mentioned below:
-
-Directives
-Declarations
-Scriptlets
-Expressions
+- Directives
+- Declarations
+- Scriptlets
+- Expressions
 
 ----
 
@@ -10394,7 +11239,7 @@ The technology establishes an encrypted link between two parties and this link i
 
 **What is id URL?**
 
-URL stands for Uniform Resource Locator and it is the textual reference writing standard to an arbitrary piece of data in the World Wide Web (www). The general structure of the URL is as follows:
+URL stands for __Uniform Resource Locator__ and it is the textual reference writing standard to an arbitrary piece of data in the World Wide Web (www). The general structure of the URL is as follows:
 
 protocol://host/local info
 
@@ -10406,7 +11251,7 @@ local info – String is passed to the protocol handler on the remote host. In m
 
 **What is URN?**
 
-Answer: URN stands for the Uniform Resource Name. It is a unique identifier that identifies an entity. But the information on where the entity is located is not available.
+URN stands for the Uniform Resource Name. It is a unique identifier that identifies an entity. But the information on where the entity is located is not available.
 
 ----
 
@@ -10424,26 +11269,25 @@ Removal from the service phase. In this phase, the destroy method is called.
 
 **Is Servlet is pure java object or not?**
 
-Answer: Yes, Servlet is a pure java object.
+Yes, Servlet is a pure java object.
 
 ----
 
 **What is EJB?**
 
-Answer: EJB stands for Enterprise Java Beans. It is the server-side component that executes in EJB container and encapsulates the business logic for the enterprise application.
+EJB stands for Enterprise Java Beans. It is the server-side component that executes in EJB container and encapsulates the business logic for the enterprise application.
 
 ----
 
 **What are the system services of the EJB container?**
 
-Answer: EJB Container provides the following system services:
-
-Persistence
-Security
-Transaction
-Connection pooling
-Component lifecycle management
-Threading
+EJB Container provides the following system services:
+- Persistence
+- Security
+- Transaction
+- Connection pooling
+- Component lifecycle management
+- Threading
 
 ----
 
@@ -10475,7 +11319,7 @@ It does not maintain resources.
 
 **What are the Basic and subtypes of Enterprise Java Beans (EJB)?**
 
-Answer: Two main types and subtypes of EJB are as follows:
+Two main types and subtypes of EJB are as follows:
 
 Session Beans
 Stateful session beans
@@ -10495,29 +11339,24 @@ Answer: The expressions used for writing dynamic content back to the client brow
 
 **What are the two types of comments supported by JSP?**
 
-Answer: Two types of comments supported by JSP are:
-
-HTML comment:
-HTML comment
-
-JSP comment.:
-JSP comment
+Two types of comments supported by JSP are:
+- HTML comment
+- JSP comment
 
 ----
 
 **What is called the JSP directive?**
 
-Answer: JSP directive is the mechanism to provide metadata information to web containers about the JSP file. In the translation and compilation phases of the JSP life cycle, this Metadata is used by the web container.
+JSP directive is the mechanism to provide metadata information to web containers about the JSP file. In the translation and compilation phases of the JSP life cycle, this Metadata is used by the web container.
 
 ----
 
 **What are the different types of JSP directive?**
 
-Answer: There are 3 different types of JSP directives available. These are:
-
-Page directive
-Include directive
-Taglib directive
+There are 3 different types of JSP directives available. These are:
+- Page directive
+- Include directive
+- Taglib directive
 
 # https://www.softwaretestinghelp.com/j2ee-interview-questions-answers
 
@@ -10538,41 +11377,29 @@ A J2EE module is a software unit that consists of one or more J2EE components fo
 ----
 
 **What are the four types of J2EE modules?**
-
-J2EE defines four types of modules:
-
-Backward Skip 10s
-
-Play Video
-
-Forward Skip 10s
-
-
-Application Client Module
-WEB Module
-Enterprise JavaBeans Module
-Resource Adapter Module
+- Application Client Module
+- WEB Module
+- Enterprise JavaBeans Module
+- Resource Adapter Module
 
 ----
 
 **What does the application client module contain?**
 
 Application client module contains the following:
-
-Class files
-Client deployment descriptor
-It is packaged as JAR files with a .jar extension.
+- Class files
+- Client deployment descriptor
+- It is packaged as JAR files with a .jar extension.
 
 ----
 
 **What does the web module contain?**
 
 The web module contains the following:
-
-JSP (Java Server Pages) files
-Class files for servlets
-Web deployment descriptor
-GIF (Graphics Interchange Format) and HTML (Hypertext Markup Language) files
+- JSP (Java Server Pages) files
+- Class files for servlets
+- Web deployment descriptor
+- GIF (Graphics Interchange Format) and HTML (Hypertext Markup Language) files
 These modules are packaged as JAR files with a .war (Web Archive) extension.
 
 ----
@@ -10580,35 +11407,31 @@ These modules are packaged as JAR files with a .war (Web Archive) extension.
 **What does Enterprise JavaBeans module contain?**
 
 The Enterprise JavaBeans (EJB) module contains the following:
-
-Class files for enterprise beans
-An EJB deployment descriptor
-These modules are packaged as JAR files with a .jar extension.
+- Class files for enterprise beans
+- An EJB deployment descriptor
+- These modules are packaged as JAR files with a .jar extension.
 
 ----
 
 **What does resource adapt module contain?**
 
 The resource adapter module contains the following:
-
-Java interfaces
-Classes
-Native libraries
-Other documentation
-Resource Adapter deployment descriptor
+- Java interfaces
+- Classes
+- Native libraries
+- Other documentation
+- Resource Adapter deployment descriptor
 These modules are packaged as JAR files with a .rar (Resource Adapter Archive) extension.
-
 
 ----
 
 **What are the main components of the J2EE application?**
 
 A J2EE component is assembled into a J2EE application with its related classes and files. It can also communicate with other components. The J2EE defines the following main components:
-
-Application clients components.
-Java Servlet and JavaServer Pages technology components.
-Business Components (Enterprise JavaBeans).
-Resource adaptor components.
+- Application clients components.
+- Java Servlet and JavaServer Pages technology components.
+- Business Components (Enterprise JavaBeans).
+- Resource adaptor components.
 
 ----
 
@@ -10620,10 +11443,10 @@ Java Servlet and Java Server Pages technology components are considered as web c
 
 **What are the types of J2EE clients?**
 
-Applets
-Application clients
-Java Web Start-enabled clients
-Wireless clients
+- Applets
+- Application clients
+- Java Web Start-enabled clients
+- Wireless clients
 
 ----
 
@@ -10710,12 +11533,10 @@ No shared references are available to the value type.
 **What are the major benefits of hibernate?**
 
 Following are some major benefits of hibernate:
-
-
-Hibernate is independent of database and vendor so it is the portable framework.
-Domain objects can be mapped to the relational database.
-JPA support for standard ORM.
-Better database connectivity in Hibernate when compared to JDBC.
+- Hibernate is independent of database and vendor so it is the portable framework.
+- Domain objects can be mapped to the relational database.
+- JPA support for standard ORM.
+- Better database connectivity in Hibernate when compared to JDBC.
 
 ----
 
@@ -10773,13 +11594,13 @@ Servlet is a server-side component which provides full functionalities to create
 
 **Give some advantages of ORM (object-relational mapping)?**
 
-Productivity
+__Productivity__
 The automatic code is generated to reduce the overall data access time based on the data model defined.
 
-Performance
+__Performance__
 The complete requirements of an application are managed by the automated code generated by the ORM, which means that there is no need for any extra code, and the overall data access process is made faster and optimized.
 
-Vendor Independent
+__Vendor Independent__
 The generated code is independent of the vendor, which increases the overall portability of an application.
 Maintainability
 The code is well tested and generated by the ORM, and only a developer can understand the code perfectly.
@@ -10788,11 +11609,24 @@ The code is well tested and generated by the ORM, and only a developer can under
 
 **Tell about the core interfaces of the hibernate framework?**
 
-Session Interface
-SessionFactory Interface
-Configuration Interface
-Transaction Interface
-Query and Criteria Interface
+__Session Interface__
+
+
+
+__SessionFactory Interface__
+
+
+
+__Configuration Interface__
+
+
+
+__Transaction Interface__
+
+
+
+__Query and Criteria Interface__
+
 
 ----
 
