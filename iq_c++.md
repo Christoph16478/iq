@@ -1282,7 +1282,25 @@ int main()
 **How to input strings in C++ with spaces?**
 
 ```c++
+// TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
 
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
+using namespace std;
+
+int main() {
+    std::string input;
+
+    std::cout << "Enter a sentence: ";
+    std::getline(std::cin, input);
+
+    std::cout << "You entered: " << input << std::endl;
+
+    return 0;
+}
 ```
 
 ----
