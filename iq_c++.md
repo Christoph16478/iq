@@ -479,6 +479,7 @@ point, from where all the execution begins. And without the entry point, then yo
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
 using namespace std;
 
@@ -500,7 +501,7 @@ namespace n2
     // for namespace n2
     void fun()
     {
-        cout << "This is fun() of n2 << endl;
+        cout << "This is fun() of n2" << endl;
     }
 }
 
