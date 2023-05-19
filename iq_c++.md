@@ -1159,8 +1159,55 @@ This operator is used to associate function definition to a particular class.
 The scope operator is used for the following purposes:
 - To access a global variable when you have a local variable with the same name.
 - To define a function outside the class.
-- Unleash a High-paying Automation Testing Job!
-- Automation Testing Masters ProgramEXPLORE PROGRAMUnleash a High-paying Automation Testing Job!
+
+```c++
+// TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
+using namespace std;
+
+// Define a namespace
+namespace MyNamespace {
+    int value = 5;
+    void printValue() {
+        std::cout << "Value from MyNamespace: " << value << std::endl;
+    }
+}
+
+// Define a class
+class MyClass {
+public:
+    static int value;
+    static void printValue() {
+        std::cout << "Value from MyClass: " << value << std::endl;
+    }
+};
+
+// Define the static member variable outside the class
+int MyClass::value = 10;
+
+int main() {
+    // Accessing namespace member using scope resolution operator
+    std::cout << "Value from namespace: " << MyNamespace::value << std::endl;
+    MyNamespace::printValue();
+
+    // Accessing class member using scope resolution operator
+    std::cout << "Value from class: " << MyClass::value << std::endl;
+    MyClass::printValue();
+
+    return 0;
+}
+
+// Output:
+// Value from namespace: 5
+// Value from MyNamespace: 5
+// Value from class: 10
+// Value from MyClass: 10
+```
 
 ----
 
