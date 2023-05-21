@@ -8953,15 +8953,25 @@ print("Array after deleting element at index 2:", arr)
 **Python Program to find sum of array elements?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def sum_of_array(arr):
     sum = 0
     for i in arr:
         sum += i
     return sum
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("The sum of the array elements is:", sum_of_array(arr))
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("The sum of the array elements is:", sum_of_array(arr))
+
+if __name__ == '__main__':
+    main()
+
+// Ouput:
+// The sum of the array elements is: 15
 ```
 
 ----
@@ -8969,15 +8979,28 @@ print("The sum of the array elements is:", sum_of_array(arr))
 **Python Program to print all even numbers in array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def print_even_numbers(arr):
     for i in arr:
         if i % 2 == 0:
             print(i)
 
-# Example usage
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-print("The even numbers in the array are:")
-print_even_numbers(arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print("The even numbers in the array are:")
+    print_even_numbers(arr)
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// 2
+// 4
+// 6
+// 8
 ```
 
 ----
@@ -8985,16 +9008,29 @@ print_even_numbers(arr)
 **Python Program to print all odd numbers in array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def print_odd_numbers(arr):
     for i in arr:
         if i % 2 != 0:
             print(i)
 
-# Example usage
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-print("The odd numbers in the array are:")
-print_odd_numbers(arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print("The odd numbers in the array are:")
+    print_odd_numbers(arr)
 
+if __name__ == '__main__':
+    main()
+
+// The odd numbers in the array are:
+// 1
+// 3
+// 5
+// 7
+// 9
 ```
 
 ----
@@ -9002,16 +9038,27 @@ print_odd_numbers(arr)
 **Python program to perform left rotation of array elements by two positions?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def left_rotate(arr):
     n = len(arr)
     temp = arr[2:n] + arr[0:2]
     return temp
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-rotated_arr = left_rotate(arr)
-print("The original array is", arr)
-print("The rotated array is", rotated_arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    rotated_arr = left_rotate(arr)
+    print("The original array is", arr)
+    print("The rotated array is", rotated_arr)
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// The original array is [1, 2, 3, 4, 5]
+// The rotated array is [3, 4, 5, 1, 2]
 ```
 
 ----
@@ -9019,16 +9066,27 @@ print("The rotated array is", rotated_arr)
 **Python program to perform right rotation in array by 2 positions?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def right_rotate(arr):
     n = len(arr)
     temp = arr[n-2:n] + arr[:n-2]
     return temp
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-rotated_arr = right_rotate(arr)
-print("The original array is", arr)
-print("The rotated array is", rotated_arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    rotated_arr = right_rotate(arr)
+    print("The original array is", arr)
+    print("The rotated array is", rotated_arr)
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// The original array is [1, 2, 3, 4, 5]
+// The rotated array is [4, 5, 1, 2, 3]
 ```
 
 ----
@@ -9036,15 +9094,25 @@ print("The rotated array is", rotated_arr)
 **Python Program to merge two arrays?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def merge_arrays(arr1, arr2):
     merged_arr = arr1 + arr2
     return sorted(merged_arr)
 
-# Example usage
-arr1 = [1, 2, 3, 4, 5]
-arr2 = [6, 7, 8, 9, 10]
-merged = merge_arrays(arr1, arr2)
-print("The merged array is", merged)
+def main():
+    # Example usage
+    arr1 = [1, 2, 3, 4, 5]
+    arr2 = [6, 7, 8, 9, 10]
+    merged = merge_arrays(arr1, arr2)
+    print("The merged array is", merged)
+
+if __name__ == '__main__':
+    main()
+    
+// Output:
+// The merged array is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 ----
@@ -9052,16 +9120,26 @@ print("The merged array is", merged)
 **Python Program to find highest frequency element in array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 
 def find_highest_frequency(arr):
     freq_count = Counter(arr)
     return freq_count.most_common(1)[0][0]
 
-# Example usage
-arr = [1, 2, 3, 4, 2, 2, 3, 4, 4, 4]
-highest_freq = find_highest_frequency(arr)
-print("The highest frequency element in", arr, "is", highest_freq)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 2, 2, 3, 4, 4, 4]
+    highest_freq = find_highest_frequency(arr)
+    print("The highest frequency element in", arr, "is", highest_freq)
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// The highest frequency element in [1, 2, 3, 4, 2, 2, 3, 4, 4, 4] is 4 
 ```
 
 ----
@@ -9069,16 +9147,24 @@ print("The highest frequency element in", arr, "is", highest_freq)
 **Python Program to find sum of digit of number using recursion?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def digit_sum(n):
     if n == 0:
         return 0
     else:
-        return (n % 10) + digit_sum(n // 10)
+        res = (n % 10) + digit_sum(n // 10)
+        return res
 
-# Example usage
-num = 12345
-sum = digit_sum(num)
-print("The sum of the digits of", num, "is", sum)
+def main():
+    # Example usage
+    num = 12345
+    sum = digit_sum(num)
+    print("The sum of the digits of", num, "is", sum)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9086,6 +9172,9 @@ print("The sum of the digits of", num, "is", sum)
 **Python Program to Create and Traverse Singly linked list?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 # Define a Node class to represent a single node in the linked list
 class Node:
     def __init__(self, data):
@@ -9115,14 +9204,21 @@ class LinkedList:
             print(current_node.data, end=" ")
             current_node = current_node.next
 
-# Example usage
-linked_list = LinkedList()
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.append(4)
-linked_list.append(5)
-linked_list.traverse()
+def main():
+    # Example usage
+    linked_list = LinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.append(5)
+    linked_list.traverse()
+
+if __name__ == '__main__':
+    main()
+
+// Output
+// 1 2 3 4 5
 ```
 
 ----
@@ -9130,6 +9226,9 @@ linked_list.traverse()
 **Python program to insert a node in linked list?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -9151,32 +9250,19 @@ class LinkedList:
             current_node = current_node.next
         print()
 
-# Example usage
-my_list = LinkedList()
-my_list.insert_at_beginning(3)
-my_list.insert_at_beginning(5)
-my_list.insert_at_beginning(7)
-my_list.print_list() # Output: 7 5 3
-```
+def main():
+    # Example usage
+    my_list = LinkedList()
+    my_list.insert_at_beginning(3)
+    my_list.insert_at_beginning(5)
+    my_list.insert_at_beginning(7)
+    my_list.print_list()Output: 7 5 3
 
-----
+if __name__ == '__main__':
+    main()
 
-**n):**
-
-```python
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            return False
-    return True
-
-# Example usage
-n = 17
-if is_prime(n):
-    print(f"{n} is a prime number")
-else:
-    print(f"{n} is not a prime number")
+// Output:
+// 7 5 3
 ```
 
 ----
@@ -9184,6 +9270,9 @@ else:
 **Write a program in Python to reverse a singly linked list?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -9220,43 +9309,27 @@ class LinkedList:
             current = current.next
         print()
 
-# Example usage
-linked_list = LinkedList()
-linked_list.add_node(1)
-linked_list.add_node(2)
-linked_list.add_node(3)
-linked_list.add_node(4)
-print("Original linked list:")
-linked_list.print_list()
-print("Reversed linked list:")
-linked_list.reverse_list()
-linked_list.print_list()
-```
+def main():
+    # Example usage
+    linked_list = LinkedList()
+    linked_list.add_node(1)
+    linked_list.add_node(2)
+    linked_list.add_node(3)
+    linked_list.add_node(4)
+    print("Original linked list:")
+    linked_list.print_list()
+    print("Reversed linked list:")
+    linked_list.reverse_list()
+    linked_list.print_list()
 
-----
+if __name__ == '__main__':
+    main()
 
-**n):**
-
-```python
-    """
-    Checks if a given number is prime or not
-    """
-    if n <= 1:
-        return False
-    elif n <= 3:
-        return True
-    elif n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
-
-# Example usage
-print(is_prime(5))   # True
-print(is_prime(10))  # False
+// Output:
+// Original linked list:
+// 1 2 3 4
+// Reversed linked list:
+// 4 3 2 1
 ```
 
 ----
@@ -9264,6 +9337,9 @@ print(is_prime(10))  # False
 **Python Program to search an element in singly linked list?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Node:
     """
     Class representing a node in a singly linked list
@@ -9298,62 +9374,43 @@ class LinkedList:
             current = current.next
         return False
 
-# Example usage
-my_list = LinkedList()
-my_list.add_node(3)
-my_list.add_node(7)
-my_list.add_node(1)
-my_list.add_node(8)
+def main():
+    # Example usage
+    my_list = LinkedList()
+    my_list.add_node(3)
+    my_list.add_node(7)
+    my_list.add_node(1)
+    my_list.add_node(8)
 
-print(my_list.search(1))   # True
-print(my_list.search(5))   # False
-```
+    print(my_list.search(1))   # True
+    print(my_list.search(5))   # False
 
-----
-
-**n):**
-
-```python
-    """
-    Checks if a given number is prime or not
-    """
-    if n <= 1:
-        return False
-    elif n <= 3:
-        return True
-    elif n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
-
-# Example usage
-print(is_prime(5))   # True
-print(is_prime(10))  # False
-
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
 **Linked list Deletion in Python: At beginning, End, Given location?**
 
+In this program, we define a Node class that represents a single node in the linked list, and a LinkedList
+class that contains the methods for appending nodes, printing the list, and deleting nodes at the
+beginning, end, or a given position.
+
+To delete a node at the beginning of the list, we simply set the head of the list to the next node in
+the list. To delete a node at the end of the list, we iterate over the list until we reach the second
+to last node, and then set its next pointer to None. To delete a node at a given position, we iterate
+over the list until we reach the desired position, and then set the next pointer of the previous node
+to the next pointer of the current node, effectively removing the current node from the list.
+
+Finally, we use an example usage of the linked list class to create a linked list with five nodes,
+print the list, and then delete a node at the beginning, end, and a given position, printing
+the list after each deletion.
+
 ```python
-# In this program, we define a Node class that represents a single node in the linked list, and a LinkedList
-# class that contains the methods for appending nodes, printing the list, and deleting nodes at the
-# beginning, end, or a given position.
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-# To delete a node at the beginning of the list, we simply set the head of the list to the next node in
-# the list. To delete a node at the end of the list, we iterate over the list until we reach the second
-# to last node, and then set its next pointer to None. To delete a node at a given position, we iterate
-# over the list until we reach the desired position, and then set the next pointer of the previous node
-# to the next pointer of the current node, effectively removing the current node from the list.
-
-# Finally, we use an example usage of the linked list class to create a linked list with five nodes,
-# print the list, and then delete a node at the beginning, end, and a given position, printing
-# the list after each deletion.
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -9412,73 +9469,55 @@ class LinkedList:
         if current_node:
             previous_node.next = current_node.next
 
-# example usage
-linked_list = LinkedList()
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.append(4)
-linked_list.append(5)
+def main():
+    # example usage
+    linked_list = LinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.append(5)
 
-linked_list.print_list()
+    linked_list.print_list()
 
-# delete node at beginning
-linked_list.delete_at_beginning()
-linked_list.print_list()
+    # delete node at beginning
+    linked_list.delete_at_beginning()
+    linked_list.print_list()
 
-# delete node at end
-linked_list.delete_at_end()
-linked_list.print_list()
+    # delete node at end
+    linked_list.delete_at_end()
+    linked_list.print_list()
 
-# delete node at position 2
-linked_list.delete_at_pos(2)
-linked_list.print_list()
+    # delete node at position 2
+    linked_list.delete_at_pos(2)
+    linked_list.print_list()
 
-```
+if __name__ == '__main__':
+    main()
 
-----
-
-**gram, we define a function called is_prime that takes an integer n as input and returns True if n is a**
-
-```python
-# prime number, and False otherwise.
-
-# The function first checks if the input number is less than 2, since 1 and 0 are not prime. If n is greater than or
-# equal to 2, it checks all integers from 2 up to the square root of n to see if they divide n evenly. If any of
-# these integers divide n evenly, then n is not prime and the function returns False. Otherwise, the function
-# returns True since n is prime.
-
-# Finally, we use an example usage of the function to check if the number 17 is prime. If the function returns
-# True, we print that 17 is prime, otherwise we print that it's not prime.
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-# example usage
-n = 17
-if is_prime(n):
-    print(f"{n} is a prime number")
-else:
-    print(f"{n} is not a prime number")
-
+// Output:
+// 1 -> 2 -> 3 -> 4 -> 5 -> None
+// 2 -> 3 -> 4 -> 5 -> None
+// 2 -> 3 -> 4 -> None
+// 2 -> 3 -> None
 ```
 
 ----
 
 **Write a program in Python to find 3rd element of Linked List from last in single pass?**
 
-```python
-# In this program, we define a Node class that represents a single node in the linked list, and a LinkedList class that contains
-# the methods for appending nodes, printing the list, and finding the 3rd element from the last.
+In this program, we define a Node class that represents a single node in the linked list, and a LinkedList class that contains
+the methods for appending nodes, printing the list, and finding the 3rd element from the last.
 
-# To find the 3rd element from the last, we use three pointers: first, second, and third. We first move the third pointer
-# to the third node from the beginning. Then we move all three pointers together until the third pointer reaches the end
-# of the list. At this point, the second pointer will be pointing to the 3rd element from the end of the list, so we
-# return its data.
+To find the 3rd element from the last, we use three pointers: first, second, and third. We first move the third pointer
+to the third node from the beginning. Then we move all three pointers together until the third pointer reaches the end
+of the list. At this point, the second pointer will be pointing to the 3rd element from the end of the list, so we
+return its data.
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -9519,18 +9558,30 @@ class LinkedList:
             third = third.next
             
         return first.data
-        
-linked_list = LinkedList()
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.append(4)
-linked_list.append(5)
 
-linked_list.print_list()
+def main():
+    linked_list = LinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.append(5)
 
-third_last = linked_list.find_third_last()
-print("The 3rd element from the last is:", third_last)
+    linked_list.print_list()
+
+    third_last = linked_list.find_third_last()
+    print(f"The 3rd element from the last is : {third_last}")
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+// The 3rd element from the last is: 2
 ```
 
 ----
@@ -9538,6 +9589,10 @@ print("The 3rd element from the last is:", third_last)
 **Write a program to check if a number is a prime number?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def is_prime(num):
     if num <= 1:
         return False
 
@@ -9546,12 +9601,20 @@ print("The 3rd element from the last is:", third_last)
             return False
     return True
 
-# Example usage
-num = 17
-if is_prime(num):
-    print(f"{num} is a prime number")
-else:
-    print(f"{num} is not a prime number")
+def main():
+    # Example usage
+    num = 17
+    # num = 16
+    if is_prime(num):
+        print(f"{num} is a prime number")
+    else:
+        print(f"{num} is not a prime number")
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// 17 is a prime number
 ```
 
 ----
@@ -9559,6 +9622,10 @@ else:
 **Write a program in Python to find middle element of a linked list in single pass?**
 
 ```python
+#!/usr/bin/python3 // run with system Python
+#!/usr/bin/env python3 // run with dev version
+# -*- coding: utf-8 -*-
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -9588,18 +9655,25 @@ class LinkedList:
 
         return slow_pointer.data
 
-# creating linked list
-linked_list = LinkedList()
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.append(4)
-linked_list.append(5)
+def main():
+    # creating linked list
+    linked_list = LinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.append(5)
 
-# find the middle element
-middle_element = linked_list.find_middle_element()
+    # find the middle element
+    middle_element = linked_list.find_middle_element()
 
-print("Middle element:", middle_element) # Output: 3
+    print(f"Middle element is : {middle_element}") # Output: 3
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// Middle element is : 3
 ```
 
 # https://quescol.com/interview-preparation/python-coding-question
