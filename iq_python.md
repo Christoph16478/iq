@@ -8996,11 +8996,11 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// 2
-// 4
-// 6
-// 8
+# Output:
+# 2
+# 4
+# 6
+# 8
 ```
 
 ----
@@ -9025,12 +9025,12 @@ def main():
 if __name__ == '__main__':
     main()
 
-// The odd numbers in the array are:
-// 1
-// 3
-// 5
-// 7
-// 9
+# The odd numbers in the array are:
+# 1
+# 3
+# 5
+# 7
+# 9
 ```
 
 ----
@@ -9056,9 +9056,9 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// The original array is [1, 2, 3, 4, 5]
-// The rotated array is [3, 4, 5, 1, 2]
+# Output:
+# The original array is [1, 2, 3, 4, 5]
+# The rotated array is [3, 4, 5, 1, 2]
 ```
 
 ----
@@ -9111,8 +9111,8 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// The merged array is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Output:
+# The merged array is [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 ----
@@ -9138,8 +9138,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// The highest frequency element in [1, 2, 3, 4, 2, 2, 3, 4, 4, 4] is 4 
+# Output:
+# The highest frequency element in [1, 2, 3, 4, 2, 2, 3, 4, 4, 4] is 4 
 ```
 
 ----
@@ -9217,8 +9217,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output
-// 1 2 3 4 5
+# Output
+# 1 2 3 4 5
 ```
 
 ----
@@ -9261,8 +9261,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// 7 5 3
+# Output:
+# 7 5 3
 ```
 
 ----
@@ -9325,11 +9325,11 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// Original linked list:
-// 1 2 3 4
-// Reversed linked list:
-// 4 3 2 1
+# Output:
+# Original linked list:
+# 1 2 3 4
+# Reversed linked list:
+# 4 3 2 1
 ```
 
 ----
@@ -9495,11 +9495,11 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// 1 -> 2 -> 3 -> 4 -> 5 -> None
-// 2 -> 3 -> 4 -> 5 -> None
-// 2 -> 3 -> 4 -> None
-// 2 -> 3 -> None
+# Output:
+# 1 -> 2 -> 3 -> 4 -> 5 -> None
+# 2 -> 3 -> 4 -> 5 -> None
+# 2 -> 3 -> 4 -> None
+# 2 -> 3 -> None
 ```
 
 ----
@@ -9575,13 +9575,13 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// 1
-// 2
-// 3
-// 4
-// 5
-// The 3rd element from the last is: 2
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
+# The 3rd element from the last is: 2
 ```
 
 ----
@@ -9613,8 +9613,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// 17 is a prime number
+# Output:
+# 17 is a prime number
 ```
 
 ----
@@ -9672,8 +9672,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// Middle element is : 3
+# Output:
+# Middle element is : 3
 ```
 
 # https://quescol.com/interview-preparation/python-coding-question
