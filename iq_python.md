@@ -85,19 +85,32 @@ objects. This means that lists can be modified, appended or sliced on the go but
 cannot be modified in any manner. You can run the following example on Python IDLE to confirm the difference:
 
 ```python
-example_tuple = ('sara', 6, 5, 0.97)
-example_list = ['sara', 6, 5, 0.97]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-print(example_tuple[0]) # output => 'sara'
-print(example_list[0]) # output => 'sara'
+def main():
+    example_tuple = ('sara', 6, 5, 0.97)
+    example_list = ['sara', 6, 5, 0.97]
 
-# my_tuple[0] = 'ansh' # modifying tuple => throws an error
-# Exception has occurred: TypeError
-# 'tuple' object does not support item assignment
+    print(example_tuple[0]) # output => 'sara'
+    print(example_list[0]) # output => 'sara'
 
-example_list[0] = 'ansh' # modifying list => list modified
-print(example_tuple[0]) # output => 'sara'
-print(example_list[0]) # output => 'ansh'
+    # my_tuple[0] = 'ansh' # modifying tuple => throws an error
+    # Exception has occurred: TypeError
+    # 'tuple' object does not support item assignment
+
+    example_list[0] = 'ansh' # modifying list => list modified
+    print(example_tuple[0]) # output => 'sara'
+    print(example_list[0]) # output => 'ansh'
+
+if __name__ == '__main__':
+    main()
+
+// Output:
+// sara
+// sara
+// sara
+// ansh
 ```
 
 ----
@@ -114,7 +127,7 @@ __None Type__
 None keyword represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.
 
 | Class Name | Description | Example |
-| --------- | ------------- | ------- |
+| --------- | ------------ | ------- |
 | NoneType | Represents the NULL values in Python. | ```python print(type(None)) ``` |
 
 __Numeric Types__
@@ -280,17 +293,22 @@ use the global keyword.
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def my_func():
-  x = "fantastic"
-  print("Python is " + x)
+def print_string(input_string):
+  x = input_string
+  print(f"Python is {x}")
 
 def main():
     x = "awesome"
-    print(my_func("Python is " + x))
+    print(print_string("Python is " + x))
     print("Python is " + x)
 
 if __name__ == '__main__':
     main()
+    
+// Output:
+// Python is Python is awesome
+// None
+// Python is awesome
 ```
 
 **Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
@@ -301,9 +319,7 @@ modified from outside the class they are defined in but a responsible developer 
 # -*- coding: utf-8 -*-
 
 class Student:
-
     _schoolName = 'XYZ School' # protected class attribute
-
     def __init__(self, name, age):
         self._name = name # protected instance attribute
         self._age = age # protected instance attribute
@@ -316,6 +332,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+// Output:
+// Jack
+// John
 ```
 
 **Private attributes** are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified
@@ -328,8 +348,10 @@ from the outside directly and will result in an AttributeError if such an attemp
 class Geek:
     def _single_method(self):
         pass
+    
     def __double_method(self): # for mangling
         pass
+
 class Pyth(Geek):
     def __double_method(self): # for mangling
         pass
@@ -339,6 +361,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+// Output:
+// None
 ```
 
 ----
@@ -349,6 +374,40 @@ Used to represent the instance of the class. With this keyword, you can access t
 the class in python. It binds the attributes with the given arguments. self is used in different places and
 often thought to be a keyword. But unlike in C++, self is not a keyword in Python.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def start_engine(self):
+        print(f"The {self.brand} {self.model}'s engine is starting.")
+
+    def drive(self, distance):
+        print(f"The {self.brand} {self.model} is driving for {distance} kilometers.")
+
+def main():
+    # Creating an instance of the Car class
+    my_car = Car("Toyota", "Corolla")
+
+    # Accessing the attributes using self
+    print(f"My car is a {my_car.brand} {my_car.model}.")
+
+    # Calling the methods using self
+    my_car.start_engine()
+    my_car.drive(50)
+
+if __name__ == '__main__':
+    main()
+    
+// Output:
+// My car is a Toyota Corolla.
+// The Toyota Corolla's engine is starting.
+// The Toyota Corolla is driving for 50 kilometers.
+```
 ----
 
 **What is '__init__'?**
@@ -361,7 +420,6 @@ have such a __method associated with them__. It helps in distinguishing methods 
 # -*- coding: utf-8 -*-
 
 class Student:
-
     def __init__(self, fname, lname, age, section):
         self.firstname = fname
         self.lastname = lname
@@ -374,6 +432,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+// Output:
+// <__main__.Student object at 0x000001DC979A53C0>
 ```
 
 ----
@@ -413,6 +474,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+// Output:
+// 1
+// 3
+// 1
+// 3
+// 1
+// 0
 ```
 
 ----
@@ -442,24 +511,22 @@ import random
 import unittest
 
 class TestDemo:
-
     def __init__(self, s: str):
         self.obj_counter: int = 0
         self.id: int = self.obj_counter+1
-        print (s + ": count = " + id)
+        print (f"{s} : count = {id}")
 
     def close(self):
-        print ("Cleaning up: " + id)
+        print (f"Cleaning up: {id}")
 
     def some_condition(self):
         return 0
-    
+
     def objCounter(self):
         for i in range(random.randint(0,10)):
             print(i)
 
-class Test(unittest.Testcase):
-
+class Test(unittest.TestCase):
     def __init__(self):
         self.test_1 = TestDemo("test1")
         self.test_2 = TestDemo("test2")
@@ -478,7 +545,10 @@ class Test(unittest.Testcase):
         self.assertIsNotNone(TestDemo.objCounter != 0)
         # Causes the build to halt:
         def test_3(self):
-            self.assertTrue(0) 
+            self.assertTrue(0)
+
+if __name__ == '__main__':
+    unittest.main()
 ```
 
 ----
@@ -515,15 +585,15 @@ Slicing can be done on strings, arrays, lists, and tuples.
 
 def main():
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    print(numbers[1::2]) # output : [2, 4, 6, 8, 10]
-    print(numbers[:1]) # output : [1]
-    print(numbers[0]) # output : 1 (get value of index 0)
-    print(numbers[:2]) # output : [1, 2]
-    print(numbers[2:]) # output : [3, 4, 5, 6, 7, 8, 9, 10]
-    print(numbers[:3]) # output : [1, 2, 3]
-    print(numbers[4:]) # output : [5, 6, 7, 8, 9, 10]
-    print(numbers[:-3]) # output : [1, 2, 3, 4, 5, 6, 7]
-    print(numbers[-4:]) # output : [7, 8, 9, 10]
+    print(numbers[1::2]) # Output : [2, 4, 6, 8, 10]
+    print(numbers[:1]) # Output : [1]
+    print(numbers[0]) # Output : 1 (get value of index 0)
+    print(numbers[:2]) # Output : [1, 2]
+    print(numbers[2:]) # Output : [3, 4, 5, 6, 7, 8, 9, 10]
+    print(numbers[:3]) # Output : [1, 2, 3]
+    print(numbers[4:]) # Output : [5, 6, 7, 8, 9, 10]
+    print(numbers[:-3]) # Output : [1, 2, 3, 4, 5, 6, 7]
+    print(numbers[-4:]) # Output : [7, 8, 9, 10]
 
 if __name__ == '__main__':
     main()
@@ -558,8 +628,46 @@ if __name__ == '__main__':
 It is a thin wrapper around C language arrays and consumes far less memory than lists.
 
 ```python
-# Example
-int_array = array.array('i', [-1, 0, 1, 2])
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import array
+
+def main():
+    # Example
+    int_array = array.array('i', [-1, 0, 1, 2, 2])
+    print(int_array)
+    print(int_array.__doc__)
+
+if __name__ == '__main__':
+    main()
+
+"""
+// Output:
+Methods:
+
+append() -- append a new item to the end of the array
+buffer_info() -- return information giving the current memory info
+byteswap() -- byteswap all the items of the array
+count() -- return number of occurrences of an object
+extend() -- extend array by appending multiple elements from an iterable
+fromfile() -- read items from a file object
+fromlist() -- append items from the list
+frombytes() -- append items from the string
+index() -- return index of first occurrence of an object
+insert() -- insert a new item into the array at a provided position
+pop() -- remove and return item (default last)
+remove() -- remove first occurrence of an object
+reverse() -- reverse the order of the items in the array
+tofile() -- write all items to a file object
+tolist() -- return the array converted to an ordinary list
+tobytes() -- return the array converted to a string
+
+Attributes:
+
+typecode -- the typecode character used to create the array
+itemsize -- the length in bytes of one array item
+"""
 ```
 
 *Lists* in python can contain elements of different data types i.e., data
@@ -567,7 +675,24 @@ type of lists can be heterogeneous.
 It has the disadvantage of consuming large memory.
 
 ```python
-int_list = [1,3,"firstName","secondName"]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    # Example
+    int_list = [1,3,"firstName","secondName"]
+    print(int_list)
+    print(int_list.__doc__)
+
+if __name__ == '__main__':
+    main()
+    
+// Output:
+// [1, 3, 'firstName', 'secondName']
+// Built-in mutable sequence.
+
+// If no argument is given, the constructor creates a new empty list.
+// The argument must be an iterable if specified.
 ```
 
 ```python
@@ -594,7 +719,7 @@ if __name__ == '__main__':
 **How is memory managed in Python?**
 
 Memory management in Python is handled by the *Python Memory Manager*. The memory allocated by the manager is
-in form of a *private heap space dedicated to Python*. All Python objects are stored in this heap and being
+in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being
 private, it is *inaccessible to the programmer*. Though, python does provide some core API functions to work
 upon the private heap space.
 
@@ -674,32 +799,47 @@ An example of such behavior are:
 Python modules namely 'math' and 'cmath' have a lot of functions that are common to both of them - log10(), acos(), exp() etc.
 To resolve this ambiguity, it is necessary to prefix them with their respective module, like math.exp() and cmath.exp().
 
+Consider the code below, an object temp has been initialized to 10 globally and
+then to 20 on function call. 
+However, the function call didn't change the value of the temp globally. Here, we
+can observe that Python draws a clear line between global and local variables,
+treating their namespaces as separate identities.
+
 ```python
-# Consider the code below, an object temp has been initialized to 10 globally and
-# then to 20 on function call. 
-# However, the function call didn't change the value of the temp globally. Here, we
-# can observe that Python draws a clear line between global and local variables,
-# treating their namespaces as separate identities.
-temp = 10 # global-scope variable
-def func():
-     temp = 20 # local-scope variable
-     print(temp)
-print(temp) # output: 10
-func() # output: 20
-print(temp) # output: 10
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    temp = 10 # global-scope variable
+    def func():
+        temp = 20 # local-scope variable
+        print(temp)
+    print(temp) # output: 10
+    func() # output: 20
+    print(temp) # output: 10
+
+if __name__ == '__main__':
+    main()
 ```
 
 ```python
-# This behavior above can be overridden using the global keyword inside
-# the function, as shown in the following example:
-temp = 10   # global-scope variable
-def func():
-     global temp
-     temp = 20   # local-scope variable
-     print(temp)
-print(temp) # output; 10
-func() # output; 20
-print(temp)# output; 20
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    # This behavior above can be overridden using the global keyword inside
+    # the function, as shown in the following example:
+    temp = 10   # global-scope variable
+    def func():
+        global temp
+        temp = 20   # local-scope variable
+        print(temp)
+    print(temp) # output; 10
+    func() # output; 20
+    print(temp)# output; 20
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -712,6 +852,9 @@ of the function itself. They are represented the @decorator_name in Python and a
 For example:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 # decorator function to convert to lowercase
 def lowercase_decorator(function):
    def wrapper():
@@ -745,6 +888,9 @@ nested function, i.e. 'wrapper' function, plays a significant role here. It is i
 keep itself hidden from the global scope.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 # decorator function to capitalize names
 def names_decorator(function):
     def wrapper(arg1, arg2):
@@ -773,40 +919,47 @@ from a given list, dictionary, or set. Using comprehensions saves a lot of time 
 (containing more lines of code). Let's check out some examples, where comprehensions can be truly beneficial:
 
 ```python
-# Performing mathematical operations on the entire list
-my_list = [2, 3, 5, 7, 11]
-squared_list = [x**2 for x in my_list]    # list comprehension
-# output: [4 , 9 , 25 , 49 , 121]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-squared_dict = {x:x**2 for x in my_list}    # dict comprehension
-# output: {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
+def main():
+    # Performing mathematical operations on the entire list
+    my_list = [2, 3, 5, 7, 11]
+    squared_list = [x**2 for x in my_list] # list comprehension
+    # output: [4 , 9 , 25 , 49 , 121]
 
-# Performing conditional filtering operations on the entire list
-my_list = [2, 3, 5, 7, 11]
-squared_list = [x**2 for x in my_list if x%2 != 0]    # list comprehension
-# output: [9 , 25 , 49 , 121]
+    squared_dict = {x:x**2 for x in my_list} # dict comprehension
+    # output: {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
 
-squared_dict = {x:x**2 for x in my_list if x%2 != 0}    # dict comprehension
-# output: {11: 121, 3: 9 , 5: 25 , 7: 49}
+    # Performing conditional filtering operations on the entire list
+    my_list = [2, 3, 5, 7, 11]
+    squared_list = [x**2 for x in my_list if x%2 != 0] # list comprehension
+    # output: [9 , 25 , 49 , 121]
 
-# Combining multiple lists into one
+    squared_dict = {x:x**2 for x in my_list if x%2 != 0} # dict comprehension
+    # output: {11: 121, 3: 9 , 5: 25 , 7: 49}
 
-# Comprehensions allow for multiple iterators and hence, can be used to combine multiple lists into one. 
-a = [1, 2, 3]
-b = [7, 8, 9]
-[(x + y) for (x,y) in zip(a,b)] # parallel iterators
-# output: [8, 10, 12]
+    # Combining multiple lists into one
 
-[(x,y) for x in a for y in b] # nested iterators
-# output: [(1, 7), (1, 8), (1, 9), (2, 7), (2, 8), (2, 9), (3, 7), (3, 8), (3, 9)] 
+    # Comprehensions allow for multiple iterators and hence, can be used to combine multiple lists into one. 
+    a = [1, 2, 3]
+    b = [7, 8, 9]
+    [(x + y) for (x,y) in zip(a,b)] # parallel iterators
+    # output: [8, 10, 12]
 
-# Flattening a multi-dimensional list
+    [(x,y) for x in a for y in b] # nested iterators
+    # output: [(1, 7), (1, 8), (1, 9), (2, 7), (2, 8), (2, 9), (3, 7), (3, 8), (3, 9)] 
 
-# A similar approach of nested iterators (as above) can be applied to flatten a multi-dimensional list
-# or work upon its inner elements. 
-my_list = [[10,20,30],[40,50,60],[70,80,90]]
-flattened = [x for temp in my_list for x in temp]
-# output: [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    # Flattening a multi-dimensional list
+
+    # A similar approach of nested iterators (as above) can be applied to flatten a multi-dimensional list
+    # or work upon its inner elements. 
+    my_list = [[10,20,30],[40,50,60],[70,80,90]]
+    flattened = [x for temp in my_list for x in temp]
+    # output: [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+if __name__ == '__main__':
+    main()
 ```
 
 Note: List comprehensions have the same effect as the map method in other languages.
@@ -821,14 +974,29 @@ It is generally used in situations requiring an anonymous function for a short t
 in either of the two ways:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 # assigning lambda functions to a variable:
 mul = lambda a, b : a * b
 print(mul(2, 5)) # output: 10
-Wrapping lambda functions inside another function:
-def myWrapper(n):
- return lambda a : a * n
-mulFive = myWrapper(5)
-print(mulFive(2)) # output: 10
+
+# wrapping lambda functions inside another function:
+def my_wrapper(n):
+    return lambda a : a * n
+
+def main():
+    mul_five = my_wrapper(5)
+    print(mul_five(2)) # Output: 10
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+10
+10
+"""
 ```
 
 ----
@@ -845,22 +1013,38 @@ is a reference to other objects, just the reference addresses for the same are c
 *Deep Copy* copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from copy import copy, deepcopy
+
 list_1 = [1, 2, [3, 5], 4]
 
-# shallow copy
-list_2 = copy(list_1) 
-list_2[3] = 7
-list_2[2].append(6)
-list_2 # output: [1, 2, [3, 5, 6], 7]
-list_1 # output: [1, 2, [3, 5, 6], 4]
+def main():
+    # shallow copy
+    list_2 = copy(list_1) 
+    list_2[3] = 7
+    list_2[2].append(6)
+    print(list_2) # output: [1, 2, [3, 5, 6], 7]
+    print(list_1) # output: [1, 2, [3, 5, 6], 4]
 
-# deep copy
-list_3 = deepcopy(list_1)
-list_3[3] = 8
-list_3[2].append(7)
-list_3 # output: [1, 2, [3, 5, 6, 7], 8]
-list_1 # output: [1, 2, [3, 5, 6], 4]
+    # deep copy
+    list_3 = deepcopy(list_1)
+    list_3[3] = 8
+    list_3[2].append(7)
+    print(list_3) # output: [1, 2, [3, 5, 6, 7], 8]
+    print(list_1) # output: [1, 2, [3, 5, 6], 4]
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+[1, 2, [3, 5, 6], 7]
+[1, 2, [3, 5, 6], 4]
+[1, 2, [3, 5, 6, 7], 8]
+[1, 2, [3, 5, 6], 4]
+"""
 ```
 
 ----
@@ -879,12 +1063,19 @@ Yielding is crucial in applications where memory is a constraint. Creating a sta
 conditions, while, xrange() can handle it optimally by using just enough memory for the generator (significantly less in comparison).
 
 ```python
-for i in xrange(10): # numbers from 0 to 9
-   print i # output => 0 1 2 3 4 5 6 7 8 9
-for i in xrange(1,10): # numbers from 1 to 9
-   print i # output => 1 2 3 4 5 6 7 8 9
-for i in xrange(1, 10, 2): # skip by two for next
-   print i # output => 1 3 5 7 9
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    for i in range(10): # numbers from 0 to 9
+        print(i) # output => 0 1 2 3 4 5 6 7 8 9
+    for i in range(1,10): # numbers from 1 to 9
+        print(i) # output => 1 2 3 4 5 6 7 8 9
+    for i in range(1, 10, 2): # skip by two for next
+        print(i) # output => 1 3 5 7 9
+
+if __name__ == '__main__':
+    main()
 ```
 
 Note: xrange has been deprecated as of Python 3.x. Now range does exactly the same as what xrange used to
@@ -915,41 +1106,60 @@ Unpickling is the complete inverse of pickling. It deserializes the byte stream 
 The function used for the above process is:
 
 ```python
-pickle.load().
+pickle.load()
 ```
 
 Note: Python has another, more primitive, serialization module called marshall, which exists primarily to support .pyc files in Python and differs significantly from the pickle.
 
 ----
 
-*What are generators in Python?*
+**What are generators in Python?**
 
 Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of
 yield keyword rather than return to return a generator object.
 Let's try and build a generator for fibonacci numbers -
 
 ```python
-## generate fibonacci numbers upto n
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+# generate fibonacci numbers upto n
 def fib(n):
    p, q = 0, 1
    while(p < n):
        yield p
        p, q = q, p + q
-x = fib(10)    # create generator object 
- 
-## iterating using __next__(), for Python2, use next()
-x.__next__()    # output => 0
-x.__next__()    # output => 1
-x.__next__()    # output => 1
-x.__next__()    # output => 2
-x.__next__()    # output => 3
-x.__next__()    # output => 5
-x.__next__()    # output => 8
-x.__next__()    # error
- 
-## iterating using loop
-for i in fib(10):
-   print(i)    # output => 0 1 1 2 3 5 8
+
+def main():
+    x = fib(10)    # create generator object 
+    
+    # iterating using __next__(), for Python2, use next()
+    x.__next__() # output => 0
+    x.__next__() # output => 1
+    x.__next__() # output => 1
+    x.__next__() # output => 2
+    x.__next__() # output => 3
+    x.__next__() # output => 5
+    x.__next__() # output => 8
+    # x.__next__() # exception: no description
+    
+    # iterating using loop
+    for i in fib(10):
+        print(i) # output => 0 1 1 2 3 5 8
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+0
+1
+1
+2
+3
+5
+8
+"""
 ```
 
 ----
@@ -971,9 +1181,16 @@ help() function in Python is used to display the documentation of modules, class
 etc.
 
 ```python
-help('print')
-help('math')
-help('')
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    help('print')
+    help('math')
+    help('')
+
+if __name__ == '__main__':
+    main()
 ```
 
 If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
@@ -983,21 +1200,26 @@ __dir()__
 dir() function tries to return a valid list of attributes and methods of the object it is called upon. It behaves differently with different objects, as it aims to produce the most relevant data, rather than the complete information.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Person:
-    
     def __init__(self, name, age, country):
-      ...
-      self.name = name
-      self.age = age
-      self.country = country
+        self.name = name
+        self.age = age
+        self.country = country
      
-     def get_name(self):
+    def get_name(self):
         return self.name
      
-     def get_coutry(self):
+    def get_coutry(self):
         ...
 
-print(dir(Person))
+def main():
+    print(dir(Person))
+
+if __name__ == '__main__':
+    main()
 ```
 
 For Modules/Library objects, it returns a list of all attributes, contained in that module.
@@ -1047,13 +1269,20 @@ will change the value of the original object.
 In Python, arguments are passed by reference, i.e., reference to the actual object is passed.
 
 ```python
-def appendNumber(arr):
-  arr.append(4)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-arr = [1, 2, 3]
-print(arr)  # output: [1, 2, 3]
-appendNumber(arr)
-print(arr)  # output: [1, 2, 3, 4]
+def appendNumber(arr):
+    arr.append(4)
+
+def main():
+    arr = [1, 2, 3]
+    print(arr) # output: [1, 2, 3]
+    appendNumber(arr)
+    print(arr) # output: [1, 2, 3, 4]
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -1062,8 +1291,7 @@ print(arr)  # output: [1, 2, 3, 4]
 
 An iterator is an object.
 
-It remembers its state i.e., where it is during iteration (see code below to see how)
-__iter__() method initializes an iterator.
+It remembers its state i.e., where it is during iteration (see code below to see how) __iter__() method initializes an iterator.
 
 It has a __next__() method which returns the next item in iteration and points to the next element.
 Upon reaching the end of iterable object __next__() must return StopIteration exception.
@@ -1072,8 +1300,10 @@ It is also self-iterable.
 Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.
 
 ```python
-class ArrayList:
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
+class ArrayList:
    def __init__(self, number_list):
        self.numbers = number_list
        
@@ -1087,16 +1317,27 @@ class ArrayList:
            return self.numbers[self.pos - 1]
        else:
            raise StopIteration
-           
-array_obj = ArrayList([1, 2, 3])
-it = iter(array_obj)
-print(next(it)) #output: 2
-print(next(it)) #output: 3
-print(next(it))
-# Throws Exception
-# Traceback (most recent call last):
-# ...
-# StopIteration
+
+def main():
+    array_obj = ArrayList([1, 2, 3])
+    it = iter(array_obj)
+    print(next(it)) #output: 2
+    print(next(it)) #output: 3
+    print(next(it))
+    # Throws Exception
+    # Traceback (most recent call last):
+    # ...
+    # StopIteration
+
+if __name__ == '__main__':
+    main()
+    
+"""
+Output:
+1
+2
+3
+"""
 ```
 
 ----
@@ -1114,6 +1355,8 @@ import os
 os.remove("ChangedFile.csv")
 print("File Removed!")
 ```
+
+----
 
 **Explain split() and join() functions in Python?**
 
@@ -1135,12 +1378,25 @@ is a special syntax used in the function definition to pass variable-length argu
 '*' means variable length and 'args' is the name used by convention. You can use any other.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def multiply(a, b, *argv):
-   mul = a * b
-   for num in argv:
-       mul *= num
-   return mul
-print(multiply(1, 2, 3, 4, 5)) #output: 120
+    mul = a * b
+    for num in argv:
+        mul *= num
+    return mul
+
+def main():
+    print(multiply(1, 2, 3, 4, 5)) #output: 120
+
+if __name__ == '__main__':
+    main()
+    
+"""
+Output:
+120
+"""
 ```
 
 __**kwargs__
