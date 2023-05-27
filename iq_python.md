@@ -140,10 +140,10 @@ There are three distinct numeric types:
 
 | Class Name | Description | Example |
 | ---------- | ----------- | ------- |
-| int | Stores integer literals including hex, octal and binary numbers as integers. | ```python print(443) ``` |
-| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```python print(34.89) ``` |
-| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```python print(complex(3)), Output: (3+0j) ``` |
-| bool | Stores boolean value (True or False). | ```python print(1 == 1), Output: True ``` |
+| int | Stores integer literals including hex, octal and binary numbers as integers. | ```print(443) ``` |
+| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```print(34.89) ``` |
+| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```print(complex(3)), Output: (3+0j) ``` |
+| bool | Stores boolean value (True or False). | ```print(1 == 1), Output: True ``` |
 
 Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal
 to store floating-point numbers with user-defined precision.
@@ -167,9 +167,9 @@ the comparison operations.
 
 Note: The standard library also includes additional types for processing:
 1. Binary data such as
-   * bytearray - ```python array1 = bytearray(str, 'utf-8') # encoding the string with utf-8.```
-   * bytes - ```python b'\xf0\xf1\xf2'.hex() # Return a string object containing two hexadecimal digits for each byte in the instance.```
-   * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```python memoryview(b'abcefg')```
+   * bytearray - ```array1 = bytearray(str, 'utf-8') # encoding the string with utf-8.```
+   * bytes - ```b'\xf0\xf1\xf2'.hex() # Return a string object containing two hexadecimal digits for each byte in the instance.```
+   * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```memoryview(b'abcefg')```
  , and ...
 3. Text strings such as str.
 
@@ -179,7 +179,7 @@ A mapping object can map hashable values to random objects in Python. Mappings o
 
 | Class Name | Description | Description |
 | ---------- | ----------- | ------------ |
-| dict | Stores comma-separated list of key: value pairs | ```python { "name": "thisIsAFirstName", "age": 25 }``` |
+| dict | Stores comma-separated list of key: value pairs | ```{ "name": "thisIsAFirstName", "age": 25 }``` |
 
 __Set Types:__
 
@@ -188,8 +188,8 @@ frozenset type is immutable and can't be modified after creation.
 
 | Class Name | Description | Examples |
 | ---------- | ----------- | -------- |
-| set | Mutable unordered collection of distinct hashable objects. | ```python  myset = {"apple", "banana", "cherry"}``` |
-| frozenset | Immutable collection of distinct hashable objects. | ```python  frozenset(["apple", "banana", "cherry"])``` |
+| set | Mutable unordered collection of distinct hashable objects. | ```myset = {"apple", "banana", "cherry"}``` |
+| frozenset | Immutable collection of distinct hashable objects. | ```frozenset(["apple", "banana", "cherry"])``` |
 
 Note: set is mutable and thus cannot be used as key for a dictionary.
 On the other hand, frozenset is immutable and thus, hashable, and can be used as a dictionary key or as an element of another set.
@@ -246,33 +246,20 @@ if __name__ == '__main__':
 
 **What are modules and packages in Python?**
 
-Python packages and Python modules are two mechanisms that allow for modular programming in Python.
+Python packages and Python modules are two mechanisms that allow for modular programming in Python. Modularizing has several advantages:
 
-Modularizing has several advantages:
+__Simplicity:__ Working on a single module helps you focus on a relatively small portion of the problem at hand. This makes development easier and less error-prone.
 
-__Simplicity:__
-
-Working on a single module helps you focus on a relatively small portion of the problem at hand. This makes development easier and less error-prone.
-
-__Maintainability:__
-
-Modules are designed to enforce logical boundaries between different problem domains. If they are written in a manner that reduces interdependency,
+__Maintainability:__ Modules are designed to enforce logical boundaries between different problem domains. If they are written in a manner that reduces interdependency,
 it is less likely that modifications in a module might impact other parts of the program.
 
-__Reusability:__
+__Reusability:__ Functions defined in a module can be easily reused by other parts of the application.
 
-Functions defined in a module can be easily reused by other parts of the application.
+__Scoping:__ Modules typically define a separate namespace, which helps avoid confusion between identifiers from other parts of the program.
 
-__Scoping:__
+**Modules**, in general, are **simply Python files** with a **.py** extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the import statement. If partial functionality is needed, import the requisite classes or functions using from foo import bar.
 
-Modules typically define a separate namespace, which helps avoid confusion between identifiers from other
-parts of the program.
-
-Modules, in general, are simply Python files with a .py extension and can have a set of functions, classes,
-or variables defined and implemented. They can be imported and initialized once using the import statement.
-If partial functionality is needed, import the requisite classes or functions using from foo import bar.
-
-Packages allow for hierarchial structuring of the module namespace using dot notation. As, modules help
+**Packages** allow for **hierarchial structuring** of the module namespace using dot notation. As, modules help
 avoid clashes between global variable names, in a similar manner, packages help avoid clashes between
 module names. Creating a package is easy since it makes use of the system's inherent file structure.
 So just stuff the modules into a folder and there you have it, the folder name as the package name.
@@ -305,10 +292,10 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// Python is Python is awesome
-// None
-// Python is awesome
+# Output:
+# Python is Python is awesome
+# None
+# Python is awesome
 ```
 
 **Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
@@ -362,8 +349,8 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// None
+# Output:
+# None
 ```
 
 ----
@@ -403,17 +390,16 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// My car is a Toyota Corolla.
-// The Toyota Corolla's engine is starting.
-// The Toyota Corolla is driving for 50 kilometers.
+# Output:
+# My car is a Toyota Corolla.
+# The Toyota Corolla's engine is starting.
+# The Toyota Corolla is driving for 50 kilometers.
 ```
 ----
 
 **What is '__init__'?**
 
-```python __init__ ``` is a constructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes
-have such a __method associated with them__. It helps in distinguishing methods and attributes of a class from local variables.
+python **__init__** is a constructor method in Python and is **automatically called to allocate memory when a new object/instance is created**. All classes have such a __method associated with them__. It helps in distinguishing methods and attributes of a class from local variables.
 
 ```python
 #!/usr/bin/python3
@@ -433,27 +419,21 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// <__main__.Student object at 0x000001DC979A53C0>
+# Output:
+# <__main__.Student object at 0x000001DC979A53C0>
 ```
 
 ----
 
 **What is 'break', 'continue' and 'pass' in Python?**
 
-__break__
-
-The break statement terminates the loop immediately and the control flows to the statement after
+__break__ - The break statement terminates the loop immediately and the control flows to the statement after
 the body of the loop.
 
-__continue__
-
-The continue statement terminates the current iteration of the statement, skips the rest of
+__continue__ - The continue statement terminates the current iteration of the statement, skips the rest of
 the code in the current iteration and the control flows to the next iteration of the loop.
 
-__pass__
-
-As explained above, the pass keyword in Python is generally used to fill up empty blocks and
+__pass__ - As explained above, the pass keyword in Python is generally used to fill up empty blocks and
 is similar to an empty statement represented by a semi-colon in languages such as
 Java, C++, Javascript, etc.
 
@@ -475,13 +455,13 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// 1
-// 3
-// 1
-// 3
-// 1
-// 0
+# Output:
+# 1
+# 3
+# 1
+# 3
+# 1
+# 0
 ```
 
 ----
@@ -510,45 +490,30 @@ Example can be viewed here:
 import random
 import unittest
 
-class TestDemo:
-    def __init__(self, s: str):
-        self.obj_counter: int = 0
-        self.id: int = self.obj_counter+1
-        print (f"{s} : count = {id}")
-
-    def close(self):
-        print (f"Cleaning up: {id}")
-
-    def some_condition(self):
-        return 0
-
-    def objCounter(self):
-        for i in range(random.randint(0,10)):
-            print(i)
-
 class Test(unittest.TestCase):
-    def __init__(self):
-        self.test_1 = TestDemo("test1")
-        self.test_2 = TestDemo("test2")
+    
+    def test_upper(self):
+        self.assertEqual("test1".upper(), 'TEST1')
 
-    def cleanup(self):
-        self.test_2.close()
-        self.test_1.close()
+    def test_isupper(self):
+        self.assertTrue('TEST1'.isupper())
+        self.assertFalse("test2".isupper())
 
-    def test_a(self):
-        print("TestDemo.testA")
-        self.assertIsNotNone(self.test_1.some_condition())
-
-    def test_b(self):
-        print("TestDemo.testB")
-        self.assertIsNotNone(self.test_2.some_condition())
-        self.assertIsNotNone(TestDemo.objCounter != 0)
-        # Causes the build to halt:
-        def test_3(self):
-            self.assertTrue(0)
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
 
 if __name__ == '__main__':
     unittest.main()
+
+# Output:
+# ----------------------------------------------------------------------
+# Ran 3 tests in 0.001s
+# 
+# OK
 ```
 
 ----
@@ -558,6 +523,70 @@ if __name__ == '__main__':
 Documentation string or docstring is a multiline string used to document a specific code segment.
 The docstring should describe what the function or method does. The ensemble of docstrings should
 be read like a history in the program.
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Calculator:
+    """A simple calculator class."""
+
+    def add(self, a, b):
+        """
+        Add two numbers.
+
+        Args:
+            a (int): The first number.
+            b (int): The second number.
+
+        Returns:
+            int: The sum of the two numbers.
+        """
+        return a + b
+
+    def subtract(self, a, b):
+        """
+        Subtract two numbers.
+
+        Args:
+            a (int): The first number.
+            b (int): The second number.
+
+        Returns:
+            int: The difference between the two numbers.
+        """
+        return a - b
+
+    def multiply(self, a, b):
+        """
+        Multiply two numbers.
+
+        Args:
+            a (int): The first number.
+            b (int): The second number.
+
+        Returns:
+            int: The product of the two numbers.
+        """
+        return a * b
+
+def main():
+    # Creating an instance of the Calculator class
+    calculator = Calculator()
+
+    # Calling the methods and displaying the docstrings
+    print(calculator.add.__doc__)
+    print("Result:", calculator.add(5, 3))
+
+    print(calculator.subtract.__doc__)
+    print("Result:", calculator.subtract(10, 4))
+
+    print(calculator.multiply.__doc__)
+    print("Result:", calculator.multiply(2, 6))
+
+if __name__ == '__main__':
+    main()  
+```
 
 ----
 
@@ -571,9 +600,9 @@ Syntax for slicing is:
 [start : stop : step]
 ```
 
-- start is the starting index from where to slice a list or tuple. Default value: 0
-- stop is the ending index or where to sop.
-- step is the number of steps to jump.
+- __start__ is the starting index from where to slice a list or tuple. Default value: 0
+- __stop__ is the ending index or where to sop.
+- __step__ is the number of steps to jump.
 
 Default value for start is 0, stop is number of items, step is 1.
 
@@ -610,8 +639,8 @@ Script file must begin with:
 ```
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3 - run with system Python
+#!/usr/bin/env python3 - run with dev version
 
 def main():
     ...
@@ -643,7 +672,8 @@ if __name__ == '__main__':
     main()
 
 """
-// Output:
+Output:
+
 Methods:
 
 append() -- append a new item to the end of the array
@@ -687,12 +717,12 @@ def main():
 if __name__ == '__main__':
     main()
     
-// Output:
-// [1, 3, 'firstName', 'secondName']
-// Built-in mutable sequence.
+# Output:
+# [1, 3, 'firstName', 'secondName']
+# Built-in mutable sequence.
 
-// If no argument is given, the constructor creates a new empty list.
-// The argument must be an iterable if specified.
+# If no argument is given, the constructor creates a new empty list.
+# The argument must be an iterable if specified.
 ```
 
 ```python
@@ -718,12 +748,12 @@ if __name__ == '__main__':
 
 **How is memory managed in Python?**
 
-Memory management in Python is handled by the *Python Memory Manager*. The memory allocated by the manager is
-in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being
-private, it is *inaccessible to the programmer*. Though, python does provide some core API functions to work
+Memory management in Python is handled by the **Python Memory Manager**. The memory allocated by the manager is
+in form of a **private heap space dedicated to Python**. All Python objects are stored in this heap and being
+private, it is **inaccessible to the programmer**. Though, python does provide some core API functions to work
 upon the private heap space.
 
-Additionally, Python has an *in-built garbage collection* to recycle the unused memory for the private heap space.
+Additionally, Python has an **in-built garbage collection** to recycle the unused memory for the private heap space.
 
 ----
 
@@ -736,10 +766,10 @@ This allows for multiple namespaces to use the same name and map it to a separat
 
 A few examples of namespaces are as follows:
 
-*Local Namespace* includes local names inside a function. the namespace is temporarily created for
+*Local Namespace* - includes local names inside a function. the namespace is temporarily created for
 a function call and gets cleared when the function returns.
 
-*Global Namespace* includes names from various imported packages/ modules that are being used in the
+*Global Namespace* - includes names from various imported packages/ modules that are being used in the
 current project. This namespace is created when the package is imported in the script and lasts
 until the execution of the script.
 
@@ -1131,7 +1161,7 @@ def fib(n):
        p, q = q, p + q
 
 def main():
-    x = fib(10)    # create generator object 
+    x = fib(10) # create generator object 
     
     # iterating using __next__(), for Python2, use next()
     x.__next__() # output => 0
@@ -4063,6 +4093,61 @@ for country in (obj_ind, obj_usa):
 
 Encapsulation means binding the code and the data together. A Python class in an example of encapsulation.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class BankAccount:
+    def __init__(self, account_number, balance):
+        self._account_number = account_number
+        self._balance = balance
+
+    def deposit(self, amount):
+        self._balance += amount
+
+    def withdraw(self, amount):
+        if self._balance >= amount:
+            self._balance -= amount
+        else:
+            print("Insufficient funds.")
+
+    def get_balance(self):
+        return self._balance
+
+def main():
+    # Creating an instance of BankAccount
+    account = BankAccount("123456789", 1000)
+
+    # Accessing and modifying balance directly (not encapsulated)
+    print("Balance before deposit:", account._balance)
+    account._balance += 500
+    print("Balance after direct modification:", account._balance)
+
+    # Using methods to deposit and withdraw (encapsulated)
+    account.deposit(1000)
+    print("Balance after deposit:", account.get_balance())
+
+    account.withdraw(700)
+    print("Balance after withdrawal:", account.get_balance())
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+Balance before deposit: 1000
+Balance after direct modification: 1500
+Balance after deposit: 2500
+Balance after withdrawal: 1800
+"""
+```
+
+In this example, we have a BankAccount class that represents a bank account. The class has attributes _account_number and _balance, which are intended to be accessed within the class and its subclasses (but not from outside).
+
+The deposit() and withdraw() methods are used to modify the balance by adding or subtracting the specified amount. The get_balance() method encapsulates the access to the _balance attribute, allowing the user to retrieve the balance without directly accessing it.
+
+However, it's worth noting that in Python, encapsulation is not strictly enforced as in some other languages. The use of a single leading underscore (e.g., _balance) indicates that the attribute or method should be treated as internal or private, and accessing it directly is discouraged. However, it can still be accessed and modified outside the class.
+
 ----
 
 **How do you do data abstraction in Python?**
@@ -4084,6 +4169,10 @@ It can be achieved in Python by using interfaces and abstract classes.
 # demonstrate protected members
 
 # Creating a base class
+
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class Base:
 	def __init__(self):
 
@@ -4105,13 +4194,17 @@ class Derived(Base):
 		print("Calling modified protected member outside class: ",
 			self._a)
 
-obj1 = Derived()
-obj2 = Base()
-# Calling protected member
-# Can be accessed but should not be done due to convention
-print("Accessing protected member of obj1: ", obj1._a)
-# Accessing the protected variable outside
-print("Accessing protected member of obj2: ", obj2._a)
+def main():
+    obj1 = Derived()
+    obj2 = Base()
+    # Calling protected member
+    # Can be accessed but should not be done due to convention
+    print("Accessing protected member of obj1: ", obj1._a)
+    # Accessing the protected variable outside
+    print("Accessing protected member of obj2: ", obj2._a)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4122,6 +4215,42 @@ Python does not deprive access to an instance variable or function. Python lays 
 the name of the variable, function or method with a single or double underscore to imitate the behavior of
 protected and private access specifiers.  
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Car:
+    def __init__(self, brand, model):
+        self._brand = brand  # Protected attribute
+        self.__model = model  # Private attribute
+
+    def _start_engine(self):  # Protected method
+        print(f"The {self._brand} {self.__model}'s engine is starting.")
+
+    def __drive(self):  # Private method
+        print(f"The {self._brand} {self.__model} is driving.")
+
+    def drive_car(self):
+        self.__drive()
+
+def main():
+    # Creating an instance of the Car class
+    my_car = Car("Toyota", "Corolla")
+    # Accessing protected attribute
+    print(my_car._brand)
+    # Attempting to access private attribute (Name mangling)
+    print(my_car._Car__model)
+    # Calling protected method
+    my_car._start_engine()
+    # Attempting to call private method (Name mangling)
+    my_car._Car__drive()
+    # Calling method that calls private method
+    my_car.drive_car()
+
+if __name__ == '__main__':
+    main()
+```
+
 ----
 
 **How to create an empty class in Python?**
@@ -4131,13 +4260,21 @@ pass keyword. However, you can create objects of this class outside the class it
 PASS command does nothing when its executed. it’s a null statement. 
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class a:
     pass
-obj=a()
-obj.name="xyz"
-print("Name = ",obj.name)
-# Output: 
-# Name = xyz
+
+def main():
+    obj=a()
+    obj.name="xyz"
+    print("Name = ",obj.name)
+    # Output: 
+    # Name = xyz
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4145,8 +4282,15 @@ print("Name = ",obj.name)
 **What does an object() do?**
 
 It returns a featureless object that is a base for all classes. Also, it does not take any parameters.
-Next, let us have a look at some Basic Python Programs in these Python Interview Questions.
-Basic Python Programs – Python Interview Questions
+
+```python
+# Creating a new object using object()
+my_object = object()
+
+# Printing the object and its type
+print(my_object)
+print(type(my_object))
+```
 
 ----
 
@@ -4222,7 +4366,9 @@ else:
          print(next,end=" ")
          f=s
          s=next
-# Output: Enter the terms 5 0 1 1 2 3
+
+# Output:
+# Enter the terms 5 0 1 1 2 3
 ```
 
 ----
@@ -4240,6 +4386,7 @@ if a=1:
       print("Prime")
 else:
    print("not prime")
+
 # Output:
 # enter number 3
 # Prime
@@ -4252,10 +4399,12 @@ else:
 ```python
 a=input("enter sequence")
 b=a[::-1]
+
 if a==b:
   print("palindrome")
 else:
   print("Not a Palindrome")
+
 # Output:
 # enter sequence 323 palindrome
 ```
@@ -4304,11 +4453,18 @@ Lists are usually slower than tuples	Tuples are faster than lists
 Lists consume a lot of memory	Tuples consume less memory when compared to lists
 Lists are less reliable in terms of errors as unexpected changes are more likely to occur	Tuples are more reliable as it is hard for any unexpected change to occur
 Lists consist of many built-in functions.	Tuples do not consist of any built-in functions.
-Syntax:
-list_1 = [10, ‘Intellipaat’, 20]
 
 Syntax:
+
+```python
+list_1 = [10, ‘Intellipaat’, 20]
+```
+
+Syntax:
+
+```python
 tup_1 = (10, ‘Intellipaat’ , 20)
+```
 
 ----
 
@@ -4322,36 +4478,42 @@ PEP in Python stands for Python Enhancement Proposal. It is a set of rules that 
 
 Python supports the below-mentioned built-in data types:
 
-Immutable data types:
-
-Number
-String
-Tuple
-Mutable data types:
-
-List
-Dictionary
-set
-Watch this Video on Python for Data Science Tutorial
+* Immutable data types:
+    * Number
+    * String
+    * Tuple
+* Mutable data types:
+    * List
+    * Dictionary
+    * set
 
 ----
 
 **What are local variables and global variables in Python?**
 
-Local variable: Any variable declared inside a function is known as Local variable and it’s accessibility remains inside that function only.
+__Local variable__: Any variable declared inside a function is known as Local variable and it’s accessibility remains inside that function only.
 
-Global Variable: Any variable declared outside the function is known as Global variable and it can be easily accessible by any function present throughout the program.
+__Global Variable__: Any variable declared outside the function is known as Global variable and it can be easily accessible by any function present throughout the program.
 
 ```python
-g=4 #global variable
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+g=4 # global variable
+
 def func_multiply():
-l=5 #local variable
-m=g*l
-return m
-func_multiply()
-Output: 20
-# If you try to access the  local variable outside the multiply function
-# then you will end up with getting an error.
+    l=5 # local variable
+    m=g*l
+    return m
+
+def main():
+    func_multiply()
+    Output: 20
+    # If you try to access the  local variable outside the multiply function
+    # then you will end up with getting an error.
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4359,8 +4521,6 @@ Output: 20
 **What is type conversion in Python?**
 
 Python provides you with a much-needed functionality of converting one form of data type into the needed one and this is known as type conversion.
-
-Type Conversion is classified into types:
 
 ----
 
@@ -4375,7 +4535,9 @@ Into another data type without any user involvement.
 Various Functions of explicit conversion are shown below:
 
 int() – function converts any data type into integer.
+
 float() – function converts any data type into float.
+
 ord() – function returns an integer representing the Unicode character
 
 hex() – function converts integers to hexadecimal strings.
@@ -4400,14 +4562,27 @@ complex(real,imag) – function used to convert real numbers to complex(real,ima
 
 [::-1] ,this is an example of slice notation and helps to reverse the sequence with the help of indexing.
 
+```python
 [Start,stop,step count]
+```
 
 Let’s understand with an example of an array:
 
-import array as arr
-Array_d=arr.array('i',[1,2,3,4,5])
-Array_d[::-1] # reverse the array or sequence
-# Output: 5,4,3,2,1
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    import array as arr
+    Array_d=arr.array('i',[1,2,3,4,5])
+    Array_d[::-1] # reverse the array or sequence
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 5,4,3,2,1
+```
 
 ----
 
@@ -4428,22 +4603,22 @@ Let’s have a look how it works:
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def decorator_lowercase(function): # defining python decorator
-    def wrapper():
-        func = function()
-        input_lowercase = func.lower()
-        return input_lowercase
-    return wrapper
+def decorator_lowercase(function): # 2. defining python decorator
+    def wrapper(): # define wrapper function
+        func = function() # 4.
+        input_lowercase = func.lower() # 5.
+        return input_lowercase # 6.
+    return wrapper # 3.
 
-@decorator_lowercase # calling decoractor
+@decorator_lowercase # 1. calling decoractor
 def intro(): # normal function
-    return 'Hello,I AM SAM'
+    return 'Hello,I AM SAM' # 4.
 
 def main():
-    print(intro())
+    print(intro()) # 0. calling main method
 
 if __name__ == '__main__':
-    main()
+    main() # 7. at the end of the progarm jump here
     
 # Output:
 # "hello,i am sam"    
@@ -4458,8 +4633,6 @@ Indentation in Python is compulsory and is part of its syntax.
 All programming languages have some way of defining the scope and extent of the block of codes. In Python, it is indentation.
 Indentation provides better readability to the code, which is probably why Python has made it compulsory.
 
-Learn the Pros and Cons of Python in our comprehensive blog on the Advantages and Disadvantages of Python.
-
 ----
 
 **How does break, continue, and pass work?**
@@ -4471,10 +4644,17 @@ __Python break:__
 This statement helps terminate the loop or the statement and pass the control to the next statement.
 
 ```python
-for i in range(10):
-    print(i)
-    if i == 2:
-        break
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    for i in range(10): # i = 0 at the beginning, so at 9 final iteration happens
+        print(i)
+        if i == 10:
+            break
+
+if __name__ == '__main__':
+    main()
 ```
 
 __Python continue:__
@@ -4482,10 +4662,18 @@ __Python continue:__
 This statement helps force the execution of the next iteration when a specific condition meets, instead of terminating it.
 
 ```python
-for var in "Geeksforgeeks":
-	if var == "e":
-		continue
-	print(var)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    for var in "PythonIsTheBestLanguageOnThisPlanet":
+        if var == "e":
+            print("continue with for-loop outside of the if-statement")
+            continue
+        print(var)
+
+if __name__ == '__main__':
+    main()
 ```
 
 __Python pass:__
@@ -4493,12 +4681,18 @@ __Python pass:__
 This statement helps write the code syntactically and wants to skip the execution. It is also considered a null operation as nothing happens when you execute the pass statement.
 
 ```python
-n = 26
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-if n > 26:
-	# write code your here
+def main():
+    n = 26
+    if n > 26:
+        ...
+        # write code your here
+    print('AllGeeks')
 
-print('Geeks')
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4547,7 +4741,7 @@ print("Hello, World!")
 
 **What type of language is python? Programming or scripting?**
 
-Generally, Python is an all purpose Programming Language ,in addition to that Python is also Capable to perform scripting.
+Generally, Python is an all purpose Programming Language, in addition to that Python is also capable to perform scripting.
 
 ----
 
@@ -4556,7 +4750,6 @@ Generally, Python is an all purpose Programming Language ,in addition to that Py
 To access an element from ordered sequences, we simply use the index of the element, which is the position number of that particular element.
 The index usually starts from 0, i.e., the first element has index 0, the second has 1, and so on.
 
-Python Indexing
 When we use the index to access elements from the end of a list, it’s called reverse indexing. In reverse indexing, the indexing of elements starts
 from the last element with the index number ‘−1’. The second last element has index ‘−2’, and so on. These indexes used in reverse indexing are
 called negative indexes.
@@ -4572,9 +4765,19 @@ __split():__
 This method is used to split a given string into a list.
 
 ```python
-txt = "welcome to the jungle"
-x = txt.split()
-print(x)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    txt = "welcome to the jungle"
+    x = txt.split()
+    print(x)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# ['welcome', 'to', 'the', 'jungle']
 ```
 
 __sub():__
@@ -4582,18 +4785,36 @@ __sub():__
 This method is used to find a substring where a regex pattern matches, and then it replaces the matched substring with a different string.
 
 ```python
-# Importing re module
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import re
-# Given String
-s = "I am a human being."
-# Performing Sub() operation
-res_1 = re.sub('a', 'x', s)
-res_2 = re.sub('[a,I]','x',s)
-# Print Results
-print(res_1)
-print(res_2)
-# The original string remains unchanged
-print(s)
+
+def main():
+    # Given String
+    s = "I am a human being."
+    print(s)
+    # Performing Sub() operation
+    res_1 = re.sub('a', 'x', s)
+    res_2 = re.sub('[a,I]','x',s)
+    # Print Results
+    print(res_1)
+    print(res_2)
+    # The original string remains unchanged
+    print(s)
+    print("Done")
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+I am a human being.
+I xm x humxn being.
+x xm x humxn being.
+I am a human being.
+Done
+"""
 ```
 
 __subn():__
@@ -4601,12 +4822,28 @@ __subn():__
 This method is similar to the sub() method, but it returns the new string, along with the number of replacements.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import re
-print(re.subn('ov', '~*' , 'movie tickets booking in online'))
-t = re.subn('ov', '~*' , 'movie tickets booking in online', flags = re.IGNORECASE)
-print(t)
-print(len(t))
-print(t[0])
+
+def main():
+    print(re.subn('ov', '~*' , 'movie tickets booking in online'))
+    t = re.subn('ov', '~*' , 'movie tickets booking in online', flags = re.IGNORECASE)
+    print(t)
+    print(len(t))
+    print(t[0])
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+('m~*ie tickets booking in online', 1)
+('m~*ie tickets booking in online', 1)
+2
+m~*ie tickets booking in online
+"""
 ```
 
 ----
@@ -4629,9 +4866,20 @@ def main():
     numbers = (2, 3, 4, 5)
     result = map(calc_sequence, numbers)
     print(result)
+    for x in result:
+        print(x)
 
 if __name__ == '__main__':
     main()
+
+"""
+Output:
+<map object at 0x000001B6D51A9780>
+4
+9
+16
+25
+"""
 ```
 
 ----
@@ -4640,19 +4888,84 @@ if __name__ == '__main__':
 
 Generator refers to the function that returns an iterable set of items.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def fibonacci_generator(n):
+    a, b = 0, 1
+    count = 0
+    while count < n:
+        yield a
+        a, b = b, a + b
+        count += 1
+
+def main():
+    # Creating a generator object
+    fib_gen = fibonacci_generator(10)
+    # Iterating over the generator and printing the Fibonacci sequence
+    for num in fib_gen:
+        print(num, end=" ")
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+0 1 1 2 3 5 8 13 21 34
+"""
+```
+
 ----
 
 **What are python iterators?**
 
 These are the certain objects that are easily traversed and iterated when needed.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class SquaresIterator:
+    """Iterator that generates squares of numbers up to a given limit."""
+
+    def __init__(self, limit):
+        self.limit = limit
+        self.current = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current < self.limit:
+            square = self.current ** 2
+            self.current += 1
+            return square
+        else:
+            raise StopIteration
+
+def main():
+    # Creating an iterator object
+    squares_iter = SquaresIterator(5)
+
+    # Iterating over the iterator and printing the squares
+    for square in squares_iter:
+        print(square, end=" ")
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+0 1 4 9 16 
+"""
+```
+
 ----
 
 **Do we need to declare variables with data types in Python?**
 
 No. Python is a dynamically typed language, I.E., Python Interpreter automatically identifies the data type of a variable based on the type of value assigned to the variable.
-
-Certification in Full Stack Web Development
 
 ----
 
@@ -4671,11 +4984,18 @@ Comprehensions are beneficial in the following scenarios:
 For example:
 
 ```python
-my_list = [2, 3, 5, 7, 11]
-squared_list = [x**2 for x in my_list]    # list comprehension
-# output => [4 , 9 , 25 , 49 , 121]
-squared_dict = {x:x**2 for x in my_list}    # dict comprehension
-# output => {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    my_list = [2, 3, 5, 7, 11]
+    squared_list = [x**2 for x in my_list]    # list comprehension
+    # output => [4 , 9 , 25 , 49 , 121]
+    squared_dict = {x:x**2 for x in my_list}    # dict comprehension
+    # output => {11: 121, 2: 4 , 3: 9 , 5: 25 , 7: 49}
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4685,6 +5005,39 @@ squared_dict = {x:x**2 for x in my_list}    # dict comprehension
 Yes, unlike Java, Python provides users with a wide range of support in terms of inheritance and its usage. Multiple
 inheritance refers to a scenario where a class is instantiated from more than one individual parent class. This provides
 a lot of functionality and advantages to users.
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Mammal(Animal):
+    def speak(self):
+        return "Mammal: Roar!"
+
+class Bird(Animal):
+    def speak(self):
+        return "Bird: Chirp!"
+
+class Platypus(Mammal, Bird):
+    pass
+
+def main():
+    # Creating an instance of Platypus
+    perry = Platypus("Perry")
+
+    # Calling the speak() method on the Platypus instance
+    print(perry.speak())
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
@@ -4705,7 +5058,7 @@ it has a convention that can be used for data hiding, i.e., prefixing a data mem
 
 **Differentiate between NumPy and SciPy?**
 
-__NumPy !=SciPy__
+__NumPy != SciPy__
 
 NumPy stands for Numerical Python	SciPy stands for Scientific Python.
 
@@ -4763,6 +5116,7 @@ In this way, we can opt for not using the close() method.
 
 ```python
 with open("filename", "mode") as file_var:
+    ...
 ```
 
 ----
@@ -4772,8 +5126,15 @@ with open("filename", "mode") as file_var:
 To display the contents of a file in reverse, the following code can be used:
 
 ```python
-for line in reversed(list(open(filename.txt))):
-print(line.rstrip())
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    for line in reversed(list(open("filename.txt"))):
+        print(line.rstrip())
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4792,7 +5153,15 @@ x_y_z = 1,000,000
 Command:
 
 ```python
-f = open(“hello.txt”, “wt”)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    f = open("hello.txt", "wt")
+    print(f)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4802,8 +5171,18 @@ f = open(“hello.txt”, “wt”)
 len() is an inbuilt function used to calculate the length of sequences like list, python string, and array.
 
 ```python
-my _list=[1,2,3,4,5]
-print(len(my_list))
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    my_list=[1,2,3,4,5]
+    print(len(my_list))
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 5
 ```
 
 ----
@@ -4812,7 +5191,53 @@ print(len(my_list))
 
 __*args:__ It is used to pass multiple arguments in a function.
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def calculate_sum(*args):
+    """Calculate the sum of numbers passed as arguments."""
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+def main():
+    # Calculating the sum using *args
+    result = calculate_sum(1, 2, 3, 4, 5)
+    print(result)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 15
+```
+
 __**kwargs:__ It is used to pass multiple keyworded arguments in a function in python.
+
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def print_person_details(**kwargs):
+    """Print the details of a person."""
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+def main():
+    # Printing person details using **kwargs
+    print_person_details(name="John Doe", age=30, occupation="Engineer")
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# name: John Doe
+# age: 30
+# occupation: Engineer
+```
 
 ----
 
@@ -4823,9 +5248,20 @@ To remove duplicate elements from the list we use the set() function.
 Consider the below example:
 
 ```python
-demo_list=[5,4,4,6,8,12,12,1,5]
-unique_list = list(set(demo_list))
-output:[1,5,6,8,12]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    demo_list=[5,4,4,6,8,12,12,1,5]
+    print(demo_list)
+    unique_list = list(set(demo_list))
+    print(unique_list)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# [1,5,6,8,12]
 ```
 
 ----
@@ -4846,14 +5282,21 @@ os.remove("file_name.txt")
 
 We can read a random line in a file using the random module.
 
-For example:
-
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import random
+
 def read_random(fname):
-lines = open(fname).read().splitlines()
-return random.choice(lines)
-print(read_random (‘hello.txt’))
+    lines = open(fname).read().splitlines()
+    return random.choice(lines)
+
+def main():
+    print(read_random ("hello.txt"))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4882,9 +5325,18 @@ if __name__ == '__main__':
 **What would be the output if I run the following code block?**
 
 ```python
-list1 = [2, 33, 222, 14, 25]
-print(list1[-2])
-# Output: 14
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    list1 = [2, 33, 222, 14, 25]
+    print(list1[-2])
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 14
 ```
 
 ----
@@ -4893,9 +5345,9 @@ print(list1[-2])
 
 Operators are referred to as special functions that take one or more values(operands) and produce a corresponding result.
 
-is: returns the true value when both the operands are true  (Example: “x” is ‘x’)
-not: returns the inverse of the boolean value based upon the operands (example:”1” returns “0” and vice-versa.
-In: helps to check if the element is present in a given Sequence or not.
+__is__: returns the true value when both the operands are true  (Example: “x” is ‘x’)
+__not__: returns the inverse of the boolean value based upon the operands (example:”1” returns “0” and vice-versa.
+__in__: helps to check if the element is present in a given Sequence or not.
 
 ----
 
@@ -4913,13 +5365,22 @@ In python, adding elements in an array can be easily done with the help of exten
 Consider the following example:
 
 ```python
-x = arr.array('d', [11.1 , 2.1 ,3.1] )
-x.append(10.1)
-print(x) # [11.1,2.1,3.1,10.1]
-x.extend([8.3,1.3,5.3])
-print(x) # [11.1,2.1,3.1,10.1,8.3,1.3,5.3]
-x.insert(2,6.2)
-print(x) # [11.1,2.1,6.2,3.1,10.1,8.3,1.3,5.3]
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import array
+
+def main():
+    x = array.array('d', [11.1 , 2.1 ,3.1] )
+    x.append(10.1)
+    print(x) # [11.1,2.1,3.1,10.1]
+    x.extend([8.3,1.3,5.3])
+    print(x) # [11.1,2.1,3.1,10.1,8.3,1.3,5.3]
+    x.insert(2,6.2)
+    print(x) # [11.1,2.1,6.2,3.1,10.1,8.3,1.3,5.3]
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4935,15 +5396,29 @@ __remove():__ It will not return the removed element.
 Consider the below example :
 
 ```python
-x=arr.array('d', [8.1, 2.4, 6.8, 1.1, 7.7, 1.2, 3.6])
-print(x.pop())
-print(x.pop(3))
-x.remove(8.1)
-print(x)
-# Output:
-# 3.6
-# 1.1  # element popped at 3 rd  index
-array('d', [ 2.4, 6.8, 7.7, 1.2])
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import array
+
+def main():
+    x = array.array('d', [11.1 , 2.1 ,3.1] )
+    x.append(10.1)
+    print(x) # [11.1,2.1,3.1,10.1]
+    x.extend([8.3,1.3,5.3])
+    print(x) # [11.1,2.1,3.1,10.1,8.3,1.3,5.3]
+    x.insert(2,6.2)
+    print(x) # [11.1,2.1,6.2,3.1,10.1,8.3,1.3,5.3]
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+array('d', [11.1, 2.1, 3.1, 10.1])
+array('d', [11.1, 2.1, 3.1, 10.1, 8.3, 1.3, 5.3])
+array('d', [11.1, 2.1, 6.2, 3.1, 10.1, 8.3, 1.3, 5.3])
+"""
 ```
 
 ----
@@ -4953,14 +5428,23 @@ array('d', [ 2.4, 6.8, 7.7, 1.2])
 The following code can be used to sort a numerical list in Python:
 
 ```python
-list = ["2", "5", "7", "8", "1"]
-list = [int(i) for i in list]
-list.sort()
-print(list)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    list = ["2", "5", "7", "8", "1"]
+    list = [int(i) for i in list]
+    list.sort()
+    print(list)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# [1, 2, 5, 7, 8]
 ```
 
 ----
-
 
 **Can you write an efficient code to count the number of capital letters in a file?**
 
@@ -4969,14 +5453,21 @@ The normal solution for this problem statement would be as follows:
 with open(SOME_LARGE_FILE) as countletter:
 
 ```python
-count = 0
-text = countletter.read()
-for character in text:
-if character.isupper():
-count += 1
-# To make this code more efficient, the whole code block can be converted into a one-liner code using the
-# feature called generator expression. With this, the equivalent code line of the above code block would be as follows:
-count sum(1 for line in countletter for character in line if character.isupper())
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    count = 0
+    text = countletter.read()
+    for character in text:
+        if character.isupper():
+            count += 1
+        # To make this code more efficient, the whole code block can be converted into a one-liner code using the
+        # feature called generator expression. With this, the equivalent code line of the above code block would be as follows:
+        count(sum(1 for line in countletter for character in line if character.isupper()))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -4989,7 +5480,7 @@ The function list.reverse() reverses the objects of a list.
 
 **How will you remove the last object from a list in Python?**
 
-```
+```python
 list.pop(obj=list[-1]):
 # Here, −1 represents the last element of the list. Hence, the pop() function removes the last object (obj) from the list.
 ```
@@ -5000,12 +5491,12 @@ Get certified in Python from the top Python Course in Singapore now!
 
 **How can you generate random numbers in Python?**
 
-This achieved with importing the random module,it is the module that is used to generate random numbers.
+This achieved with importing the random module, it is the module that is used to generate random numbers.
 
-Syntax:
-
+```python
 import random
 random.random # returns the  floating point random number between the range of [0,1].
+```
 
 ----
 
@@ -5016,9 +5507,15 @@ lower() function is  used to convert a string to lowercase.
 For Example:
 
 ```python
-demo_string='ROSES'
-print(demo_string.lower())
-Learn the complete Python Training in Hyderabad in 24 hours!
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    demo_string='ROSES'
+    print(demo_string.lower())
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -5029,13 +5526,6 @@ NumPy arrays provide users with three main advantages as shown below:
 - NumPy arrays consume a lot less memory, thereby making the code more efficient.
 - NumPy arrays execute faster and do not add heavy processing to the runtime.
 - NumPy has a highly readable syntax, making it easy and convenient for programmers.
-
-----
-
-**What is Polymorphism in Python?**
-
-Polymorphism is the ability of the code to take multiple forms. Let’s say, if the parent class has a method named XYZ then the child class can
-also have a method with the same name XYZ having its own variables and parameters.
 
 ----
 
@@ -5067,7 +5557,7 @@ A lambda function is an anonymous function (a function that does not have a name
 
 For example:
 
-```
+```python
 l = lambda x,y : x*y
 print(a(5, 6))
 # Output:30
@@ -5084,7 +5574,7 @@ The self variable in the init method refers to the newly created object, while i
 
 Syntax:
 
-```
+```python
 Class A:
     def __init__(self):
         ...
@@ -5184,11 +5674,18 @@ from functools import reduce >>> reduce(lambda x,y:x-y,[1,2,3,4,5]) -13
 **Which one of the following is not the correct syntax for creating a set in Python?**
 
 ```python
-set([[1,2],[3,4],[4,5]])
-set([1,2,2,3,4,5])
-{1,2,3,4}
-set((1,2,3,4))
-set([[1,2],[3,4],[4,5]])
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    set([[1,2],[3,4],[4,5]])
+    set([1,2,2,3,4,5])
+    {1,2,3,4}
+    set((1,2,3,4))
+    set([[1,2],[3,4],[4,5]])
+
+if __name__ == '__main__':
+    main()
 ```
 
 Explanation: The argument given for the set must be iterable.
@@ -5203,25 +5700,31 @@ This can only be done as Python supports changes in the behavior of the program 
 The following is an example, denoting monkey patching in Python:
 
 ```python
-class X:
-    def __init__(self):
-        pass
-    
-    def func(self):
-        print "func() is being called"
-        
-# The above module (monkeyy) is used to change the behavior of a
-# function at the runtime as shown below:
-import monkeyy
-def monkey_f(self):
-    print "monkey_f() is being called"
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-# replacing address of “func” with “monkey_f”
-monkeyy.X.func = monkey_f
-obj = monk.X()
-# calling function “func” whose address got replaced
-# with function “monkey_f()”
-obj.func()
+class MyClass:
+    
+    def original_method(self):
+        return "Original method"
+ 
+def main():
+    # Creating an instance of MyClass
+    my_obj = MyClass()
+
+    # Defining a new method dynamically
+    def patched_method(self):
+        return "Patched method"
+
+    # Monkey patching the object with the patched_method
+    my_obj.patched_method = patched_method.__get__(my_obj, MyClass)
+
+    # Calling the original and patched methods
+    print(my_obj.original_method())
+    print(my_obj.patched_method())
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -5231,17 +5734,38 @@ obj.func()
 /: is a division operator and returns the Quotient value.
 
 ```python
-x = 10/3
-print(x)
-# Output: 3.33
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    x = 10/3
+    print(x)
+    # Output: 3.33
+
+if __name__ == '__main__':
+    main()
+
+"""
+Output:
+3.3333333333333335
+"""
 ```
 
 // : is known as floor division operator and used to return only the value of quotient before decimal
 
 ```python
-y = 10//3
-print(y)
-# Output: 3
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    y = 10//3
+    print(y)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 3
 ```
 
 ----
@@ -5349,9 +5873,27 @@ These are some of the classification algorithms used in Machine Learning:
 This can be achieved by using the scikit machine learning library and importing train_test_split function in python as shown below:
 
 ```python
-Import sklearn.model_selection.train_test_split
-# test size = 30% and train = 70 %
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=0).
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from sklearn.model_selection import train_test_split
+
+def main():
+    # Sample data
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+
+    # Splitting the data into training and test datasets
+    train_data, test_data, train_labels, test_labels = train_test_split(data, labels, test_size=0.2, random_state=42)
+
+    # Printing the split datasets
+    print("Training data:", train_data)
+    print("Training labels:", train_labels)
+    print("Test data:", test_data)
+    print("Test labels:", test_labels)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -5367,9 +5909,20 @@ _Support Vector Machine (SVM)_ is a supervised machine learning model that consi
 We can get the indices of N maximum values from a NumPy array using the below code:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
-ar = np.array([1, 3, 2, 4, 5, 6])
-print(ar.argsort()[-3:][::-1])
+
+def main():
+    ar = np.array([1, 3, 2, 4, 5, 6])
+    print(ar.argsort()[-3:][::-1])
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# [5 4 3]
 ```
 
 ----
@@ -5381,10 +5934,21 @@ The easiest and the most efficient way you can calculate percentiles in Python i
 Consider the following example:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
-a = np.array([1,2,3,4,5,6,7])
-p = np.percentile(a, 50)  #Returns the 50th percentile which is also the median
-print(p)
+
+def main():
+    a = np.array([1,2,3,4,5,6,7])
+    p = np.percentile(a, 50)  #Returns the 50th percentile which is also the median
+    print(p)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 40
 ```
 
 ----
@@ -5394,8 +5958,7 @@ print(p)
 A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam, nurses run, etc.
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def fun(string):
@@ -5418,8 +5981,7 @@ if __name__ == '__main__':
 **Write a Python program to calculate the sum of a list of numbers?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def sum_it_up(num):
@@ -5442,8 +6004,7 @@ if __name__ == '__main__':
 **Write a program in Python to produce Star triangle?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def star_triangle(n):
@@ -5459,35 +6020,32 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program to produce Fibonacci series in Python?**
-
-Fibonacci series refers to the series where the element is the sum of two elements prior to it.
-
-```python
-n = int(input("number of terms? "))
-n1, n2 = 0, 1
-count = 0
- 
-if n <= 0:
-print("Please enter a positive integer")
-elif n == 1:
-print("Fibonacci sequence upto",nterms,":")
-print(n1)
-else:
-print("Fibonacci sequence:")
-while count < n:
-print(n1)
-nth = n1 + n2
-n1 = n2
-n2 = nth
-count += 1
-```
-
-----
-
 **Write a program in Python to check if a number is prime?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def is_prime(num):
+    if num < 2:  # Numbers less than 2 are not prime
+        return False
+
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+def main():
+    # Test the function
+    number = int(input("Enter a number: "))
+    if is_prime(number):
+        print(number, "is a prime number.")
+    else:
+        print(number, "is not a prime number.")
+
+if __name__ == '__main__':
+    main()
 
 # Output: 13 is a prime number
 ```
@@ -5591,6 +6149,9 @@ excluding globals.
 For example, the counter generator can be rewritten to use this so that it looks more like the idioms of languages with closures.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def make_counter():
     count = 0
     def counter():
@@ -5598,6 +6159,12 @@ def make_counter():
         count += 1
         return count
     return counter
+
+def main():
+    make_counter()
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -5644,6 +6211,7 @@ OR
 
 ```python
 from contextlib import nested
+
 with nested(A(), B(), C()) as(X, Y, Z):
     do_something()
 ```
@@ -5777,15 +6345,29 @@ __banker’s rounding__, where all half values will be rounded to the closest ev
 
 What this code will print into console?
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class A:
     answer = 42
+    
     def __init__(self):
         self.answer = 21
         self.__add__ = lambda x, y: x.answer + y
-    def __add__(self, y):
-        return self.answer - y
-print(A() + 5)
-Answer: 16 (21 - 5)
+    
+    # def __add__(self, y): # another attribute hides this method
+    #     return self.answer - y
+
+def main():
+    print(A() + 5)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 16 (21 - 5)
+```
 
 In order to resolve an attribute name, Python will firstly search for it on an instance level, then on class level, then in parent classes.
 This hold true for everything but __dunder__ methodd. While searching for them, Python will skip an instance check and search directly in
@@ -5836,13 +6418,20 @@ all of them support real and imag attributes, returning real and imaginary parts
 What is the result of the execution of the following code:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 class A:
     def function(self):
         return A()
-a = A()
-A = int
-print(a.function())
-# Answer: 0
+
+def main():
+    # a = A() # using variable A before assignment
+    A = int
+    print(a.function())
+
+if __name__ == '__main__':
+    main()
 ```
 
 Code inside python functions will be executed only upon invocation, meaning that all NameErrors will be raised and variables will be bonded only
@@ -5857,8 +6446,15 @@ However, during the execution Python will bind the name A from the outer scope, 
 What is the result of the execution of the following code:
 
 ```python
-"this is a very long string" * (-1)
-# Answer: ‘’ (empty string)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    print("this is a very long string" * (-1))
+    # Answer: '' (empty string)
+
+if __name__ == '__main__':
+    main()
 ```
 
 From the python docs:
@@ -5874,7 +6470,7 @@ What is the result of the execution of the following code:
 
 ```python
 max(-0.0, 0.0)
-Answer: -0.0
+# Answer: -0.0
 ```
 
 Why is that happens? This occurs because of the two reasons.
@@ -5892,9 +6488,15 @@ Therefore max function returns the first occurrence of zero, which just happens 
 What is the result of the execution of the following code:
 
 ```python
-x = (1 << 53) + 1
-x + 1.0 > x
-# Answer: False
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    x = (1 << 53) + 1
+    x + 1.0 > x
+
+if __name__ == '__main__':
+    main()
 ```
 
 There are three things to blame for that counter-intuitive behavior: long arithmetic, float precision limits and numeric comparisons.
@@ -5902,7 +6504,18 @@ Python can support very large integers, switching a computation mode if the limi
 type in Python 2.*), but the float precision in Python is limited. The number is question:
 
 ```python
-2**5**3 + 1 = 9007199254740993
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    res = 2**5**3 + 1
+    print(res)
+
+if __name__ == '__main__':
+    main()
+
+# Output:
+# 42535295865117307932921825928971026433
 ```
 
 Is the smallest integer that cannot be fully represented as a Python float. Therefore, in order to perform x + 1.0 Python casts xto float,
@@ -6168,6 +6781,7 @@ Programmers like Django mostly for its convenient features like:
 - Thoroughly tested
 - Provides rapid development
 - Source: [https://data-flair.training/blogs/django-features/](https://data-flair.training/blogs/django-features/)
+
 ----
 
 **Can you name some companies that use Django?**
@@ -6356,7 +6970,7 @@ on the terminal and wait for the installation to finish.
 You can check the version by opening the command prompt and entering the command:
 
 ```cmd
-Python-m Django–version
+Python -m Django–version
 ```
 
 You can also visit the Django homepage https://www.djangoproject.com/ and look at the “Download latest release” button located on the right of the page.
@@ -6930,17 +7544,18 @@ Django Admin interface has its user authentication and offers advanced features 
 
 You can even perform the following tasks using Django admin as listed out in the table:
 
-Command	Task
-django-admin help	Displays the usage of the information and commands list provided by each application.
-django-admin help –command	Displays available commands
-django-admin help <command>	Displays the command description and its available options
-django-admin version	Determines Django’s version
-django-admin make migrations	Depending on the changes done in the model creates new migrations
-django-admin migrate	Synchronizes the database state with the present set of models and migrations
-django-admin runserver	Starts the development server
-django-admin sendtestemail	A test mail sent to confirm Django email working status
-django-admin shell	Starts the Python interactive interpreter
-django-admin showmigrations	Displays all the project’s migrations
+| Command | Task |
+| -------- | ----- |
+| `django-admin help` | Displays the usage of the information and commands list provided by each application. |
+| `django-admin help –command` | Displays available commands |
+| `django-admin help <command>` | Displays the command description and its available options |
+| `django-admin version` | Determines Django’s version |
+| `django-admin make migrations` | Depending on the changes done in the model creates new migrations |
+| `django-admin migrate` | Synchronizes the database state with the present set of models and migrations |
+| `django-admin runserver` | Starts the development server |
+| `django-admin sendtestemail` | A test mail sent to confirm Django email working status |
+| `django-admin shell` | Starts the Python interactive interpreter |
+| `django-admin showmigrations` | Displays all the project’s migrations |
 
 ----
 
@@ -6953,13 +7568,13 @@ $ django-admin startproject ABC
 ```
 
 That will create an "ABC" folder with the following structure −
-ABC/
-  manage.py
-  myproject/
-      __init__.py
-      settings.py
-      urls.py
-      wsgi.py
+- ABC/
+    - manage.py
+    - myproject/
+        - __init__.py
+        - settings.py
+        - urls.py
+        - wsgi.py
 
 Note: Here, "ABC" is the name of the project. You can mention any name you want.
 
@@ -7031,11 +7646,12 @@ Django supports a robust cache system to save web pages such that they don't hav
 
 They are few strategies to implement caching in Django, and the following table lists them:
 
-Strategy	Description 
-Memcached	The most efficient and faster memory-based cache server
-Filesystem caching	Cache files store in serial order in separate files.
-Local-memory caching	If you have not specified any other, this is the default cache. It’s per-process and threads safe as well.
-Database caching	Cache data will be stored in the database and works OK if you have a well-indexed database server.
+| Strategy | Description |
+| ---------- | ---------- |
+| Memcached | The most efficient and faster memory-based cache server |
+| Filesystem caching | Cache files store in serial order in separate files. |
+| Local-memory caching | If you have not specified any other, this is the default cache. It’s per-process and threads safe as well. |
+| Database caching | Cache data will be stored in the database and works OK if you have a well-indexed database server. |
 
 ----
 
@@ -7061,11 +7677,14 @@ Python 3 is the most recommended version for Django. Because it's faster, has mo
 
 A typical Django project consists of these four files:
 
+```python
 manage.py
 settings.py
 __init__.py
 urls.py
 wsgi.py
+```
+
 The final four files are inside a directory, which is at the same level as manage.py.
 
 manage.py is the command-line utility of your Django project and controls the Django project on the server.
@@ -7078,7 +7697,7 @@ The wsgi.py file is for the server format WSGI
 
 **Why is Django called a loosely coupled framework?**
 
-Django is known as a loosely coupled framework beca+use of its MVT architecture.
+Django is known as a loosely coupled framework because of its MVT architecture.
 
 Django's architecture is a variant of MVC architecture, and MVT is beneficial because it completely discards server code from the client's machine. Models and Views are present on the client machine, and templates only return to the client.
 
@@ -7138,10 +7757,11 @@ Finally, the render() returns the HttpResponse with the rendered text, the model
 
 Syntax:
 
+```python
 render(request, template_name, context=None, content_type=None, status=None, using=None)
-The request generates a response.
-
-The template name and other parameters pass the dictionary.
+# The request generates a response.
+# The template name and other parameters pass the dictionary.
+```
 
 For more control, specify the content type, the data status you passed, and the render you are returning. 
 
@@ -7205,13 +7825,12 @@ It involves a combination of a browser built-in XMLHttpRequest object, HTML DOM,
 **How to handle Ajax requests in Django?**
 
 To handle Ajax requests in the Django web framework, perform the following:
-
-Initialize Project 
-Create models
-Create views
-Write URLs
-Carry out requests with Jquery Ajax.
-Register models to admin 
+- Initialize Project 
+- Create models
+- Create views
+- Write URLs
+- Carry out requests with Jquery Ajax.
+- Register models to admin 
 
 ----
 
@@ -7256,11 +7875,10 @@ When a process starts, the Django server receives a request and checks for a mat
 **What do you use middleware for in Django?**
 
 For the following functions, you can use Middleware in Django:
-
-Cross-site request forgery protection
-Content Gzipping
-User authentication
-Session management
+- Cross-site request forgery protection
+- Content Gzipping
+- User authentication
+- Session management
 
 ----
 
@@ -7280,8 +7898,10 @@ In the context of Django, QuerySet is a set of SQL queries. To see the SQL query
 
 Make sure that the DEBUG setting is set to True, and type the following commands:
 
+```python
 from Django.db import connection
 connection.queries
+```
 
 ----
 
@@ -7311,11 +7931,11 @@ Django follows the MVT (Model View Template) pattern which is based on the Model
 
 **Explain the django project directory structure?**
 
-manage.py - A command-line utility that allows you to interact with your Django project
-__init__.py - An empty file that tells Python that the current directory should be considered as a Python package
-settings.py - Comprises the configurations of the current project like DB connections.
-urls.py - All the URLs of the project are present here
-wsgi.py - This is an entry point for your application which is used by the web servers to serve the project you have created.
+*manage.py* - A command-line utility that allows you to interact with your Django project
+*__init__.py* - An empty file that tells Python that the current directory should be considered as a Python package
+*settings.py* - Comprises the configurations of the current project like DB connections.
+*urls.py* - All the URLs of the project are present here
+*wsgi.py* - This is an entry point for your application which is used by the web servers to serve the project you have created.
 
 ----
 
@@ -7338,10 +7958,6 @@ The metaclass helps you set things like available permissions, singular and plur
 
 To get more information about models you can refer here: https://docs.djangoproject.com/en/3.1/topics/db/models/.
 
-You can download a PDF version of Django Interview Questions.
-
-Download PDF
-
 ----
 
 **What are templates in Django or Django template language?**
@@ -7351,11 +7967,11 @@ Templates are an integral part of the Django MVT architecture. They generally co
 A template is rendered with a context. Rendering just replaces variables with their values, present in the context, and processes tags. Everything else remains as it is.
 
 The syntax of the Django template language includes the following four constructs :
+- Variables
+- Tags
+- Filters
+- Comments
 
-Variables
-Tags
-Filters
-Comments
 To read more about templates you can refer to this: https://docs.djangoproject.com/en/3.1/topics/templates/
 
 **What are views in Django?**
@@ -7364,13 +7980,26 @@ A view function, or “view” for short, is simply a Python function that takes
 
 Example:
 
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from django.http import HttpResponse
+
 def sample_function(request):
- return HttpResponse(“Welcome to Django”)
+    return HttpResponse("Welcome to Django")
+
+def main():
+    sample_function("127.0.0.1")
+
+if __name__ == '__main__':
+    main()
+```
+
 There are two types of views:
 
-Function-Based Views: In this, we import our view as a function.
-Class-based Views: It’s an object-oriented approach.
+*Function-Based Views*: In this, we import our view as a function.
+*Class-based Views*: It’s an object-oriented approach.
 
 ----
 
@@ -7432,18 +8061,19 @@ django-admin clearsessions - Can be used to clean out expired sessions or as a c
 Jinja Templating is a very popular templating engine for Python, the latest version is Jinja2. 
 
 Some of its features are:
+*Sandbox Execution* - This is a sandbox (or a protected) framework for automating the testing process
+*HTML Escaping* - It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
 
-Sandbox Execution - This is a sandbox (or a protected) framework for automating the testing process
-HTML Escaping - It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
 Template Inheritance
-Generates HTML templates much faster than default engine
-Easier to debug as compared to the default engine.
+- Generates HTML templates much faster than default engine
+- Easier to debug as compared to the default engine.
 
 ----
 
 **What are Django URLs?**
 
 URLs are one of the most important parts of a web application and Django provides you with an elegant way to design your own custom URLs with help of its module known as URLconf (URL Configuration). The basic functionality of this python module is to 
+
 You can design your own URLs in Django in the way you like and then map them to the python function (View function). These URLs can be static as well as dynamic. These URLs as present in the urls.py where they are matched with the equivalent view function. 
 
 Basic Syntax:
@@ -7466,7 +8096,8 @@ For eg, payment system(app) in the eCommerce app(Project).
 
 ----
 
-**13. 
+**What sorts of inheritance do exist**
+
 Abstract Base Class Inheritance: Used when you only need the parent class to hold information that you don’t want to write for each child model.
 Multi-Table Model Inheritance:  Used when you are subclassing an existing model and need each model to have its own table in the database.
 Proxy Model Inheritance:  Used when you want to retain the model's field while altering the python level functioning of the model.
@@ -7481,15 +8112,16 @@ Django provides an elegant way to handle these in the form of signals. The signa
 
 List of built-in signals in the models:
 
-Signals	Description
-django.db.models.pre_init &
-django.db.models.post_init	Sent before or after a models’s _init_() method is called
-django.db.models.signals.pre_save & django.db.models.signals.post_save	Sent before or after a model’s save() method is called
-django.db.models.signals.pre_delete &
-django.db.models.signals.post_delete	Sent before or after a models’ delete() method or queryset delete() method is called
-django.db.models.signals.m2m_changed	Sent when a ManyToManyField is changed
-django.core.signals.request_started &
-django.core.signals.request_finished	Sent when an HTTP request is started or finished
+| Signals | Description |
+| ---------- | ---------- |
+| django.db.models.pre_init | & |
+| django.db.models.post_init | Sent before or after a models’s _init_() method is called |
+| django.db.models.signals.pre_save & django.db.models.signals.post_save | Sent before or after a model’s save() method is called |
+| django.db.models.signals.pre_delete | & |
+| django.db.models.signals.post_delete | Sent before or after a models’ delete() method or queryset delete() method is called |
+| django.db.models.signals.m2m_changed | Sent when a ManyToManyField is changed |
+| django.core.signals.request_started | & |
+| django.core.signals.request_finished | Sent when an HTTP request is started or finished |
 
 ----
 
@@ -7499,11 +8131,12 @@ Caching refers to the technique of storing the output results when they are proc
 
 Some of the caching strategies in Django are listed below:
 
-Strategy	Description
-Memcached	A memory-based cache server is the fastest and most efficient
-FileSystem Caching	Values of the cache are stored as separate files in a serialized order
-Local-memory Caching	This is used as the default cache strategy by Django if you haven’t set anything. It is per-process as well as thread-safe.
-Database Caching 	Cache data will be stored in the database and works very well if you have a fast and well-indexed DB server.
+| Strategy | Description |
+| ---------- | ---------- |
+| Memcached | A memory-based cache server is the fastest and most efficient |
+| FileSystem Caching | Values of the cache are stored as separate files in a serialized order |
+| Local-memory Caching | This is used as the default cache strategy by Django if you haven’t set anything. It is per-process as well as thread-safe. |
+| Database Caching | Cache data will be stored in the database and works very well if you have a fast and well-indexed DB server. |
 
 ----
 
@@ -7512,13 +8145,12 @@ Database Caching 	Cache data will be stored in the database and works very well 
 Django comes with a built-in user authentication system, which handles objects like users, groups, user-permissions, and few cookie-based user sessions. Django User authentication not only authenticates the user but also authorizes him.
 
 The system consists and operates on these objects:
-
-Users
-Permissions
-Groups
-Password Hashing System
-Forms Validation
-A pluggable backend system
+- Users
+- Permissions
+- Groups
+- Password Hashing System
+- Forms Validation
+- A pluggable backend system
 
 ----
 
@@ -7532,9 +8164,11 @@ STATIC_URL = '/static/'
 
 In your Django templates, use the static template tag to create the URL for the given relative path using the configured STATICFILES_STORAGE.
 
+```python
 {% load static %}
 <img src="{% static 'my_sample/abcxy.jpg' %}" alt="ABC image">
-Store your static files in a folder called static in your app. For example my_sample/static/my_sample/abcxy.jpg
+# Store your static files in a folder called static in your app. For example my_sample/static/my_sample/abcxy.jpg
+```
 
 ----
 
@@ -7650,7 +8284,9 @@ Note: If there are no results that match the query, get() will raise a DoesNotEx
 
 **How to obtain the SQL query from the queryset?**
 
+```python
 print(queryset.query)
+```
 
 ----
 
@@ -7664,23 +8300,30 @@ There are multiple ways to customize the functionality of the Django admin inter
 
 Though both the functions are used to fetch the related fields on a model but their functioning is bit different from each other. In simple words, select_related uses a foreign key relationship, i.e. using join on the query itself while on the prefetch_related there is a separate lookup and the joining on the python side. Let’s try to illustrate this via an example:
 
+```python
 from django.db import models
 class Country(models.Model):
     country_name = models.CharField(max_length=5)
 class State(models.Model):
     state_name = models.CharField(max_length=5)
     country = model.ForeignKey(Country)
->> states = State.objects.select_related(‘country’).all()
->> for state in states:
-…   print(state.state_name)
+states = State.objects.select_related(‘country’).all()
+for state in states:
+    print(state.state_name)
+```
 
 ```sql
 SELECT state_id, state_name, country_name FROM State INNER JOIN Country ON (State.country_id = Country.id)
 ```
->> country = Country.objects.prefetch_related(‘state’).get(id=1)
->> for state in country.state.all():
-…   print(state.state_name)
-```Query Executed
+
+```python
+country = Country.objects.prefetch_related(‘state’).get(id=1)
+for state in country.state.all():
+    print(state.state_name)
+# Query Executed
+```
+
+```sql
 SELECT id, country_name FROM country WHERE id=1;
 SELECT state_id, state_name WHERE State WHERE country_id IN (1);
 ```
@@ -7694,7 +8337,8 @@ Q objects are used to write complex queries, as in filter() functions just `AND`
 ```python
 from django.db import models
 from django.db.models import Q
->> objects = Models.objects.get(
+
+objects = Models.objects.get(
    Q(tag__startswith='Human'),
    Q(category=’Eyes’) | Q(category=’Nose’)
 )
@@ -7717,7 +8361,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 - Http404
 - DatabaseError
-- MyModel.DoesNotExist
+- MyModel.DoesNotExist (true)
 - IntegrityError
 
 ----
@@ -7727,13 +8371,13 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 - Postgres
 - Mysql
 - Sqlite
-- Mongodb
+- Mongodb (true)
 
 ----
 
 **Which file is responsible for the configurations of the Django applications?**
 
-- settings.py
+- settings.py (true)
 - manage.py
 - wsgi.py
 - app.py
@@ -7742,7 +8386,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 **Django is based on which architecture?**
 
-- MVT
+- MVT (true)
 - MVC
 - MVTT
 - MVP
@@ -7753,7 +8397,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 - 8080
 - 8081
-- 8000
+- 8000 (true)
 - 9000
 
 ----
@@ -7763,14 +8407,14 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 - Sent before a model’s save() method is called
 - Sent after a model’s save() method is called
 - Sent before a model’s delete() method is called
-- Sent after a model’s delete() method is called
+- Sent after a model’s delete() method is called (true)
 
 ----
 
 **Django is written in which programming language?**
 
 - PHP
-- Python
+- Python (true)
 - Java
 - C++
 
@@ -7781,8 +8425,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 **Write a program to reverse an integer in Python?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def reverse_integer(num):
@@ -7817,8 +8460,7 @@ if __name__ == '__main__':
 **Write a program in Python to check whether an integer is armstrong number or not?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def is_armstrong(number):
@@ -7920,7 +8562,7 @@ def is_palindrome(num):
             return is_palindrome(str(num)[1:-1])
         else:
             return False
- 
+
 num = int(input("Enter a number: "))
 if is_palindrome(num):
     print(num, "is a palindrome number")
@@ -8356,8 +8998,23 @@ print(gcd(48, 18)) # Output: 6
 **Python Program to find GCD of two numbers using recursion?**
 
 ```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
 
+# Example usage
+num1 = 48
+num2 = 60
+result = gcd(num1, num2)
+print("The GCD of", num1, "and", num2, "is", result)
 ```
+
+In this program, the gcd function takes two parameters a and b. It uses Euclidean algorithm to find the GCD of the two numbers. The base case is when b is equal to 0, in which case a is the GCD. Otherwise, it recursively calls the gcd function with b and a % b.
+
+You can modify the values of num1 and num2 to find the GCD of different numbers. The result is then printed to the console.
+
 
 ----
 
@@ -8538,7 +9195,6 @@ def replace_space(string, char):
         else:
             result += string[i]
     
-    # return the result string
     return result
 ```
 
@@ -8550,8 +9206,7 @@ def replace_space(string, char):
 def replace_space(string, char):
     # use the replace() method to replace spaces with the given character
     new_string = string.replace(' ', char)
-    
-    # return the new string
+
     return new_string
 ```
 
@@ -8572,7 +9227,6 @@ def convert_lowercase(string):
         else:
             result += char
     
-    # return the result string
     return result
 ```
 
@@ -8596,7 +9250,6 @@ def convert_vowels(string):
         else:
             result += char
     
-    # return the result string
     return result
 ```
 
@@ -8618,7 +9271,6 @@ def delete_vowels(string):
         if char.lower() not in vowels:
             result += char
     
-    # return the result string
     return result
 ```
 
@@ -8729,7 +9381,8 @@ def separate_string(input_string):
 **Python program to remove blank space from string?**
 
 ```python
-
+def rm_space(sample_str: str):
+    return sample_str.replace(" ", "")
 ```
 
 ----
@@ -8806,7 +9459,6 @@ def sum_of_integers(string):
     
     # return the total sum
     return total_sum
-
 ```
 
 ----
@@ -9049,6 +9701,9 @@ def remove_duplicates(arr):
 **Python program to find top two maximum number in array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def top_two_max(arr):
     max1 = max2 = float('-inf')
     for i in arr:
@@ -9057,12 +9712,17 @@ def top_two_max(arr):
             max1 = i
         elif i > max2:
             max2 = i
+    
     return max1, max2
 
-# Example usage
-arr = [5, 10, 3, 8, 20, 12]
-max1, max2 = top_two_max(arr)
-print("Top two maximum numbers in array:", max1, max2)
+def main():
+    # Example usage
+    arr = [5, 10, 3, 8, 20, 12]
+    max1, max2 = top_two_max(arr)
+    print("Top two maximum numbers in array:", max1, max2)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9070,15 +9730,22 @@ print("Top two maximum numbers in array:", max1, max2)
 **Python program to print array in reverse Order?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def print_reverse(arr):
     for i in range(len(arr) - 1, -1, -1):
         print(arr[i], end=' ')
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-print("Array printed in reverse order:", end=' ')
-print_reverse(arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    print("Array printed in reverse order:", end=' ')
+    print_reverse(arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9086,6 +9753,9 @@ print_reverse(arr)
 **Python program to reverse an Array in two ways?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def reverse_array(arr):
     # Method 1: Using a loop and swapping the first and last elements
     start_index = 0
@@ -9097,14 +9767,17 @@ def reverse_array(arr):
     
     # Method 2: Using slicing to reverse the array
     # arr = arr[::-1]  # Alternative method using slicing
-    
     return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-print("Reversed array using method 1:", reverse_array(arr))
-print("Reversed array using method 2:", reverse_array(arr[::-1]))
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    print("Reversed array using method 1:", reverse_array(arr))
+    print("Reversed array using method 2:", reverse_array(arr[::-1]))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9112,12 +9785,19 @@ print("Reversed array using method 2:", reverse_array(arr[::-1]))
 **Python Program to calculate length of an array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def array_length(arr):
     return len(arr)
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Length of array:", array_length(arr))
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Length of array:", array_length(arr))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9125,15 +9805,22 @@ print("Length of array:", array_length(arr))
 **Python program to insert an element at end of an Array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def insert_end(arr, elem):
     arr.append(elem)
     return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-arr = insert_end(arr, 6)
-print("Array after inserting element 6 at end:", arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    arr = insert_end(arr, 6)
+    print("Array after inserting element 6 at end:", arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9141,15 +9828,22 @@ print("Array after inserting element 6 at end:", arr)
 **Python program to insert element at a given location in Array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def insert_element(arr, elem, index):
     arr.insert(index, elem)
     return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-arr = insert_element(arr, 6, 2)
-print("Array after inserting element 6 at index 2:", arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    arr = insert_element(arr, 6, 2)
+    print("Array after inserting element 6 at index 2:", arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9157,15 +9851,22 @@ print("Array after inserting element 6 at index 2:", arr)
 **Python Program to delete element at end of Array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def delete_end(arr):
     arr.pop()
     return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-arr = delete_end(arr)
-print("Array after deleting element at end:", arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    arr = delete_end(arr)
+    print("Array after deleting element at end:", arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9173,15 +9874,22 @@ print("Array after deleting element at end:", arr)
 **Python Program to delete given element from Array?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def delete_element(arr, elem):
     arr = [x for x in arr if x != elem]
     return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5, 3]
-print("Original array:", arr)
-arr = delete_element(arr, 3)
-print("Array after deleting all occurrences of 3:", arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5, 3]
+    print("Original array:", arr)
+    arr = delete_element(arr, 3)
+    print("Array after deleting all occurrences of 3:", arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9189,6 +9897,9 @@ print("Array after deleting all occurrences of 3:", arr)
 **Python Program to delete element from array at given index?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def delete_element(arr, index):
     if index < 0 or index >= len(arr):
         print("Invalid index!")
@@ -9197,11 +9908,15 @@ def delete_element(arr, index):
         del arr[index]
         return arr
 
-# Example usage
-arr = [1, 2, 3, 4, 5]
-print("Original array:", arr)
-arr = delete_element(arr, 2)
-print("Array after deleting element at index 2:", arr)
+def main():
+    # Example usage
+    arr = [1, 2, 3, 4, 5]
+    print("Original array:", arr)
+    arr = delete_element(arr, 2)
+    print("Array after deleting element at index 2:", arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
@@ -9226,8 +9941,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Ouput:
-// The sum of the array elements is: 15
+#  Ouput:
+# The sum of the array elements is: 15
 ```
 
 ----
@@ -9340,9 +10055,9 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// The original array is [1, 2, 3, 4, 5]
-// The rotated array is [4, 5, 1, 2, 3]
+# Output:
+# The original array is [1, 2, 3, 4, 5]
+# The rotated array is [4, 5, 1, 2, 3]
 ```
 
 ----
@@ -9878,8 +10593,7 @@ if __name__ == '__main__':
 **Write a program in Python to find middle element of a linked list in single pass?**
 
 ```python
-#!/usr/bin/python3 // run with system Python
-#!/usr/bin/env python3 // run with dev version
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class Node:

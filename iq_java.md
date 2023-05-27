@@ -92,7 +92,7 @@ public class Employee {
     // This method prints the employee details.
     public void printEmp() {
         System.out.println("name  : " + name );
-        System.out.println("salary :" + salary);
+        System.out.println("salary : " + salary);
     }
 
     public static void main(String args[]) {
@@ -148,53 +148,58 @@ __Nested Class__
 
 // outer class
 class OuterClass {
-	// static member
-	static int outer_x = 10;
+    // static member
+    static int outer_x = 10;
 
-	// instance(non-static) member
-	int outer_y = 20;
+    // instance(non-static) member
+    int outer_y = 20;
 
-	// private member
-	private static int outer_private = 30;
+    // private member
+    private static int outer_private = 30;
 
-	// static nested class
-	static class StaticNestedClass {
-		void display()
-		{
-			// can access static member of outer class
-			System.out.println("outer_x = " + outer_x);
+    // static nested class
+    static class StaticNestedClass {
+        void display()
+        {
+            // can access static member of outer class
+            System.out.println("outer_x = " + outer_x);
 
-			// can access private static member of
-			// outer class
-			System.out.println("outer_private = "
-							+ outer_private);
+            // can access private static member of
+            // outer class
+            System.out.println("outer_private = "
+                    + outer_private);
 
-			// The following statement will give compilation
-			// error as static nested class cannot directly
-			// access non-static members
-			// System.out.println("outer_y = " + outer_y);
-		
-			// Therefore create object of the outer class
-			// to access the non-static member
-			OuterClass out = new OuterClass();
-			System.out.println("outer_y = " + out.outer_y);
-		
-		
-		}
-	}
+            // The following statement will give compilation
+            // error as static nested class cannot directly
+            // access non-static members
+            // System.out.println("outer_y = " + outer_y);
+
+            // Therefore create object of the outer class
+            // to access the non-static member
+            OuterClass out = new OuterClass();
+            System.out.println("outer_y = " + out.outer_y);
+
+
+        }
+    }
 }
 
 // Driver class
-public class StaticNestedClassDemo {
-	public static void main(String[] args)
-	{
-		// accessing a static nested class
-		OuterClass.StaticNestedClass nestedObject
-			= new OuterClass.StaticNestedClass();
+public class Main {
+    public static void main(String[] args)
+    {
+        // accessing a static nested class
+        OuterClass.StaticNestedClass nestedObject
+                = new OuterClass.StaticNestedClass();
 
-		nestedObject.display();
-	}
+        nestedObject.display();
+    }
 }
+
+// Output:
+// outer_x = 10
+// outer_private = 30
+// outer_y = 20
 ```
 
 __Nested Interface__
@@ -202,32 +207,32 @@ __Nested Interface__
 ```java
 // Java program to demonstrate working of
 // interface inside a class.
-import java.util.*;
+
 class Test
 {
-	interface Yes
-	{
-		void show();
-	}
+    interface Yes
+    {
+        void show();
+    }
 }
 
 class Testing implements Test.Yes
 {
-	public void show()
-	{
-		System.out.println("show method of interface");
-	}
+    public void show()
+    {
+        System.out.println("show method of interface");
+    }
 }
 
-class A
+class Main
 {
-	public static void main(String[] args)
-	{
-		Test.Yes obj;
-		Testing t = new Testing();
-		obj=t;
-		obj.show();
-	}
+    public static void main(String[] args)
+    {
+        Test.Yes obj;
+        Testing t = new Testing();
+        obj=t;
+        obj.show();
+    }
 }
 ```
 
@@ -257,14 +262,14 @@ and Cat can be white, black is its states.
 
 Objects have some characteristics :
 
-1). State : State Reflects the properties of Objects. Just like Cat can be white,
+1. State : State Reflects the properties of Objects. Just like Cat can be white,
 black or may be combination of both is its properties. State can be denoted by
 attributes.
 
-2). Behaviour : Behaviours shows that how object is responding to other objects.
+2. Behaviour : Behaviours shows that how object is responding to other objects.
 Behaviour can be denoted by Methods.
 
-3). Identity: Every objects should have unique identity. Like if we say cat
+3. Identity: Every objects should have unique identity. Like if we say cat
 then it may be a group of cat but If we talk about a particular cat then we
 need a identity for that particular cat.
 
@@ -272,16 +277,16 @@ need a identity for that particular cat.
 
 **Explain JDK, JVM and JRE?**
 
-JDK: JDK stands for Java Development Kit which contains JRE. It gives a
+__JDK:__ JDK stands for Java Development Kit which contains JRE. It gives a
 development environment for Java applications where developer can code and
 run java programs.
 
-JRE: JRE Stands for Java Runtime Environment that contains class libraries, loader class
+__JRE:__ JRE Stands for Java Runtime Environment that contains class libraries, loader class
 and JVM. Its main function is to run Java Program. If you don’t want to develop program
 then you don’t need JDK But, for only the purpose of execution of java program you only need
 JRE. JRE comes with JDK bundle you don’t need to download it separately.
 
-JVM: JVM stands for Java Virtual Machine that provide the runtime environment to java code
+__JVM:__ JVM stands for Java Virtual Machine that provide the runtime environment to java code
 where Java code is executed. JVM is a part of JRE that converts java byte code into
 machine code. In java, compiler produces code for JVM.
 
@@ -291,17 +296,17 @@ machine code. In java, compiler produces code for JVM.
 
 It is an entry point of any Java program from where Execution starts.
 
-Public: Public is a access modifier that define the accessibility of method. If any method have Public access modifier it means that it can access by any other class.
+__Public:__ Public is a access modifier that define the accessibility of method. If any method have Public access modifier it means that it can access by any other class.
 
-Static: static is a keyword in java that define class level member. It means that without
+__Static:__ static is a keyword in java that define class level member. It means that without
 creating any instance it can be accessible using class name.
 
-void: void is also a keyword that define the return type of any methods. If method have void
+__void:__ void is also a keyword that define the return type of any methods. If method have void
 keyword it means that method will not return any value.
 
-Main: It is a method from where execution starts. It is searched by JVM to start the execution.
+__Main:__ It is a method from where execution starts. It is searched by JVM to start the execution.
 
-String args[]: it is a main method argument.
+__String args[]:__ it is a main method argument.
 
 ---
 
@@ -324,19 +329,23 @@ finalize() method is used to perform cleanup operation just before destroying an
 
 Example:
 
+```java
 String str1=new String("prakash");
 String str2=new String("prakash");
 System.out.println(str1==str2);
-output: false
+// Output: false
+```
 
 equals() is used for content comparision.
 
 Example:
 
+```java
 String str1=new String("prakash");
 String Str2=new String("prakash");
 System.out.println(str1.equals(str2));
-output: true
+// Output: true
+```
 
 ----
 
@@ -363,10 +372,10 @@ variables exist throughout the class.
 We can define as constructor is a method or block which is use to initialise the objects. Constructor should have same name as a name
 of class which have no return type. It is automatically called by java at the time of object creation.
 
-There are 3 types of constructor
+__There are 3 types of constructor:__
 1. Default constructor: It is automatically inserted by Java when we not declared any constructor. It is not visible in your source code.
-1. Parameterised constructor : Constructor with arguments are known as Parameterised constructor.
-1. No-arg Constructor : it is very similar to default constructor. We declare it when we want to perform some operation at a time of object creation then we write that code in no-args constructor. For example some initialization of value.
+2. Parameterised constructor : Constructor with arguments are known as Parameterised constructor.
+3. No-arg Constructor : it is very similar to default constructor. We declare it when we want to perform some operation at a time of object creation then we write that code in no-args constructor. For example some initialization of value.
 
 ----
 
@@ -374,12 +383,11 @@ There are 3 types of constructor
 
 Access modifiers is a keywords in Java that define the accessibility of any class, methods and member variables.
 
-There are 4 types of access modifiers in Java:-
-
-Public
-Private
-Protected
-Default
+__There are 4 types of access modifiers in Java:__
+- Public
+- Private
+- Protected
+- Default
 
 | Modifier | Default | Private | Protected | Public |
 | -------- | ------- | ------- | --------- | ----- |
@@ -393,28 +401,196 @@ Default
 
 **Explain some features of oops?**
 
-Inheritance: Inheritance is process in which child objects of child class acquires the all properties and behaviour of its parent class. It improves the code reusability.
+__Inheritance:__ Inheritance is process in which child objects of child class acquires the all properties and behaviour of its parent class. It improves the code reusability.
+
+
+```java
+// Parent class
+class Vehicle {
+    protected String brand;
+
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    public void drive() {
+        System.out.println("Driving the vehicle");
+    }
+}
+
+// Child class inheriting from the parent class
+class Car extends Vehicle {
+    private int numberOfSeats;
+
+    public Car(String brand, int numberOfSeats) {
+        super(brand);
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Number of Seats: " + numberOfSeats);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 5);
+        car.displayInfo();
+        car.drive();
+    }
+}
+```
 
 __Abstraction:__ Abstraction means hide the complexity and show the functionality. For examples in education portal
 you just sign up and then login by giving credential and then access your dashboard but you won’t aware of
 how its happening in backend. It is known as abstraction.
 
 ```java
+// Abstract parent class
+abstract class Shape {
+    abstract double calculateArea(); // Abstract method
+    abstract double calculatePerimeter(); // Abstract method
+}
 
+// Concrete child class implementing the Shape abstract class
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+// Concrete child class implementing the Shape abstract class
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    double calculateArea() {
+        return length * width;
+    }
+
+    @Override
+    double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        System.out.println("Circle Area: " + circle.calculateArea());
+        System.out.println("Circle Perimeter: " + circle.calculatePerimeter());
+
+        Rectangle rectangle = new Rectangle(4, 6);
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+    }
+}
 ```
 
 __Encapsulation:__ Encapsulation is a process of binding the data and methods together in a single entity
 known as class for data safety.
 
 ```java
+// Encapsulated class
+class Person {
+    private String name;
+    private int age;
 
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    // Setter methods
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
+        }
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person();
+
+        // Accessing and setting private fields using public getter and setter methods
+        person.setName("John");
+        person.setAge(25);
+
+        // Accessing private fields using public getter methods
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
+}
 ```
 
 __Polymorphism:__ Polymorphism defines to perform single actions in multiple form. It is derived from two
 word Poly + morphs that means many forms.
 
 ```java
+// Parent class
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal is making a sound");
+    }
+}
 
+// Child class 1
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is barking");
+    }
+}
+
+// Child class 2
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        animal1.makeSound(); // Output: Dog is barking
+        animal2.makeSound(); // Output: Cat is meowing
+    }
+}
 ```
 
 It is of two types:
@@ -424,7 +600,34 @@ It is of two types:
 In method overloading a class have different methods with same name but different number of arguments. In Overloading case methods should have different signature. It is also known as compile time polymorphism.
 
 ```java
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
 
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        int sum1 = calculator.add(5, 10);
+        System.out.println("Sum 1: " + sum1);
+
+        double sum2 = calculator.add(3.5, 2.5);
+        System.out.println("Sum 2: " + sum2);
+
+        int sum3 = calculator.add(2, 4, 6);
+        System.out.println("Sum 3: " + sum3);
+    }
+}
 ```
 
 - Method Overriding
@@ -432,7 +635,28 @@ In method overloading a class have different methods with same name but differen
 In Method Overriding sub class have similar method as parent class. Similar mean name, return type, parameter of methods for both parent and sub class method.
 
 ```java
+// Parent class
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal is making a sound");
+    }
+}
 
+// Child class
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is barking");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog();
+        animal.makeSound(); // Output: Dog is barking
+    }
+}
 ```
 
 ----
@@ -442,13 +666,68 @@ In Method Overriding sub class have similar method as parent class. Similar mean
 __this:__ this is a keyword is use to access the member of present class.
 
 ```java
+class Person {
+    private String name;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public void printName() {
+        System.out.println("Name: " + this.name);
+    }
+
+    public void changeName(String newName) {
+        this.name = newName;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("John");
+        person.printName(); // Output: Name: John
+
+        person.changeName("David");
+        person.printName(); // Output: Name: David
+    }
+}
 ```
 
 __super:__ super keyword is used to access the member of parent class.
 
 ```java
+class Vehicle {
+    protected String brand;
 
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+    }
+}
+
+class Car extends Vehicle {
+    private int numberOfSeats;
+
+    public Car(String brand, int numberOfSeats) {
+        super(brand);
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Number of Seats: " + numberOfSeats);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", 5);
+        car.displayInfo();
+    }
+}
 ```
 
 ----
@@ -458,13 +737,56 @@ __super:__ super keyword is used to access the member of parent class.
 __Static method:__ static method is a class level method. We need not required any instance to access them we can access it directly using class. A static method can only access static variable.
 
 ```java
+class MathUtils {
+    public static int add(int a, int b) {
+        return a + b;
+    }
 
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int sum = MathUtils.add(5, 3);
+        System.out.println("Sum: " + sum); // Output: Sum: 8
+
+        double product = MathUtils.multiply(2.5, 4.0);
+        System.out.println("Product: " + product); // Output: Product: 10.0
+    }
+}
 ```
 
 __Non-static method:__ non-static method belongs to objects of the class. It can be accessible inside the static method with the help of class instance.
 
 ```java
+class Circle {
+    private double radius;
 
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public double calculateCircumference() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5.0);
+        double area = circle.calculateArea();
+        double circumference = circle.calculateCircumference();
+
+        System.out.println("Area: " + area); // Output: Area: 78.53981633974483
+        System.out.println("Circumference: " + circumference); // Output: Circumference: 31.41592653589793
+    }
+}
 ```
 
 ----
@@ -479,13 +801,71 @@ It is of two types:
 1. Compile time polymorphism
 
 ```java
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
 
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        // compiler chooses at runtime what method
+        // to use
+        int sum1 = calculator.add(5, 10);
+        System.out.println("Sum 1: " + sum1);
+
+        double sum2 = calculator.add(3.5, 2.5);
+        System.out.println("Sum 2: " + sum2);
+
+        int sum3 = calculator.add(2, 4, 6);
+        System.out.println("Sum 3: " + sum3);
+    }
+}
 ```
 
 1. Runtime Polymorphism
 
 ```java
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal is making a sound");
+    }
+}
 
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is barking");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        // at runtime method is chosen
+        animal1.makeSound(); // Output: Dog is barking
+        animal2.makeSound(); // Output: Cat is meowing
+    }
+}
 ```
 
 __NOTE: Compile time polymorphism is also known as method overloading and Runtime polymorphism is known as overriding.__
@@ -494,21 +874,21 @@ __NOTE: Compile time polymorphism is also known as method overloading and Runtim
 
 How many ways you can overload method?
 
-1) By number of passing parameters the valid case for overloading the method is
+1. By number of passing parameters the valid case for overloading the method is
 
 ```java
 add(int,int)
 add(int,int,int)
 ```
 
-2) By changing the data type of parameter
+2. By changing the data type of parameter
 
 ```java
 add(int,int)
 add(float,int)
 ```
 
-3) By changing the sequence of data type
+3. By changing the sequence of data type
 
 ```java
 add(int, float)
@@ -602,7 +982,7 @@ output:- prakash kumar
 
 Both StringBuffer and StringBuilder are mutable.
 
-StringBuffer:
+__StringBuffer:__
 
 All method of StringBuffer is synchronized. As it is synchronized, it is also thread-safe. Thread-Safe means two
 threads can’t call the StringBuffer method simultaneously. Its performance is low because every task is dependent on the other.
@@ -615,7 +995,7 @@ strbuffer.append("developer");
 System.out.println(strbuffer); 
 ```
 
-StringBuilder:
+__StringBuilder:__
 
 Methods are not synchronized so it is not thread-safe. It means two threads can call the string builder method simultaneously. Its performance is high because more than one thread can be allowed.
 
@@ -661,16 +1041,22 @@ __Performance__
 **Difference between Array and ArrayList?**
 
 __Arrays:__
+
 Array is fixed in size which is decided at a time of array declaration.
 Array can contain both primitives data and objects.
+
 Example:
+
+```java
 int arr[] = new int[3];
 arr[0]=10; 
 arr[1]=20; 
 arr[2]=70;
 Arrays.stream(arr).forEach(e->System.out.print(e + " "));
+```
 
 __ArrayList:__
+
 Size of ArrayList is dynamic.
 It is a part of the collection framework of java.
 ArrayList can contain the only object. After Java 5 It converts primitive data into object itself.
@@ -678,7 +1064,9 @@ ArrayList can contain the only object. After Java 5 It converts primitive data i
 ```java
 ArrayList<Integer> arrList = new ArrayList<Integer>(3);
 for (int i = 1; i <= 3; i++)
-  arrList.add(i);
+{
+    arrList.add(i);
+}
 arrList.stream().forEach(e->System.out.print(e + " ")); 
 ```
 
@@ -689,59 +1077,462 @@ arrList.stream().forEach(e->System.out.print(e + " "));
 Collection is a Java framework that have some predefined class and interfaces to store and manipulate the group of objects.
 
 __Interfaces comes with Collection framework:__
+
 - Set
 
 ```java
+import java.util.HashSet;
+import java.util.Set;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new set
+        Set<String> fruits = new HashSet<>();
+
+        // Add elements to the set
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Print the set
+        System.out.println("Set: " + fruits); // Output: Set: [Apple, Banana, Orange]
+
+        // Check if an element exists in the set
+        boolean containsBanana = fruits.contains("Banana");
+        System.out.println("Contains Banana? " + containsBanana); // Output: Contains Banana? true
+
+        // Remove an element from the set
+        boolean removedApple = fruits.remove("Apple");
+        System.out.println("Removed Apple? " + removedApple); // Output: Removed Apple? true
+
+        // Print the updated set
+        System.out.println("Set: " + fruits); // Output: Set: [Banana, Orange]
+
+        // Get the size of the set
+        int size = fruits.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the set
+        System.out.println("Elements:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        /* Output:
+           Elements:
+           Banana
+           Orange
+         */
+    }
+}
 ```
 
 - List
 
 ```java
+import java.util.ArrayList;
+import java.util.List;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new list
+        List<String> fruits = new ArrayList<>();
+
+        // Add elements to the list
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Print the list
+        System.out.println("List: " + fruits); // Output: List: [Apple, Banana, Orange]
+
+        // Access elements by index
+        String firstFruit = fruits.get(0);
+        System.out.println("First Fruit: " + firstFruit); // Output: First Fruit: Apple
+
+        // Update an element in the list
+        fruits.set(2, "Grapes");
+        System.out.println("Updated List: " + fruits); // Output: Updated List: [Apple, Banana, Grapes]
+
+        // Remove an element from the list
+        boolean removed = fruits.remove("Banana");
+        System.out.println("Removed Banana? " + removed); // Output: Removed Banana? true
+
+        // Check if an element exists in the list
+        boolean containsGrapes = fruits.contains("Grapes");
+        System.out.println("Contains Grapes? " + containsGrapes); // Output: Contains Grapes? true
+
+        // Get the size of the list
+        int size = fruits.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the list
+        System.out.println("Elements:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        /* Output:
+           Elements:
+           Apple
+           Grapes
+         */
+    }
+}
 ```
 
 - Queue
 
 ```java
+import java.util.LinkedList;
+import java.util.Queue;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new queue
+        Queue<String> queue = new LinkedList<>();
+
+        // Add elements to the queue
+        queue.offer("Apple");
+        queue.offer("Banana");
+        queue.offer("Orange");
+
+        // Print the queue
+        System.out.println("Queue: " + queue); // Output: Queue: [Apple, Banana, Orange]
+
+        // Access the element at the front of the queue
+        String frontElement = queue.peek();
+        System.out.println("Front Element: " + frontElement); // Output: Front Element: Apple
+
+        // Remove the element at the front of the queue
+        String removedElement = queue.poll();
+        System.out.println("Removed Element: " + removedElement); // Output: Removed Element: Apple
+
+        // Print the updated queue
+        System.out.println("Updated Queue: " + queue); // Output: Updated Queue: [Banana, Orange]
+
+        // Check if the queue contains an element
+        boolean containsBanana = queue.contains("Banana");
+        System.out.println("Contains Banana? " + containsBanana); // Output: Contains Banana? true
+
+        // Get the size of the queue
+        int size = queue.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the queue
+        System.out.println("Elements:");
+        for (String fruit : queue) {
+            System.out.println(fruit);
+        }
+        /* Output:
+           Elements:
+           Banana
+           Orange
+         */
+    }
+}
 ```
 
 - Dequeue
 
 ```java
+import java.util.Deque;
+import java.util.LinkedList;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new deque
+        Deque<String> deque = new LinkedList<>();
+
+        // Add elements to the front of the deque
+        deque.addFirst("Apple");
+        deque.addFirst("Banana");
+
+        // Add elements to the end of the deque
+        deque.addLast("Orange");
+        deque.addLast("Grapes");
+
+        // Print the deque
+        System.out.println("Deque: " + deque); // Output: Deque: [Banana, Apple, Orange, Grapes]
+
+        // Access the element at the front of the deque
+        String frontElement = deque.peekFirst();
+        System.out.println("Front Element: " + frontElement); // Output: Front Element: Banana
+
+        // Access the element at the end of the deque
+        String rearElement = deque.peekLast();
+        System.out.println("Rear Element: " + rearElement); // Output: Rear Element: Grapes
+
+        // Remove the element at the front of the deque
+        String removedFrontElement = deque.pollFirst();
+        System.out.println("Removed Front Element: " + removedFrontElement); // Output: Removed Front Element: Banana
+
+        // Remove the element at the end of the deque
+        String removedRearElement = deque.pollLast();
+        System.out.println("Removed Rear Element: " + removedRearElement); // Output: Removed Rear Element: Grapes
+
+        // Print the updated deque
+        System.out.println("Updated Deque: " + deque); // Output: Updated Deque: [Apple, Orange]
+
+        // Check if the deque contains an element
+        boolean containsOrange = deque.contains("Orange");
+        System.out.println("Contains Orange? " + containsOrange); // Output: Contains Orange? true
+
+        // Get the size of the deque
+        int size = deque.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the deque
+        System.out.println("Elements:");
+        for (String fruit : deque) {
+            System.out.println(fruit);
+        }
+        /* Output:
+           Elements:
+           Apple
+           Orange
+         */
+    }
+}
 ```
 
 __Classes comes with Collection framework:__
+
 - ArrayList
 
 ```java
+import java.util.ArrayList;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new ArrayList
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Print the ArrayList
+        System.out.println("ArrayList: " + fruits); // Output: ArrayList: [Apple, Banana, Orange]
+
+        // Access elements by index
+        String firstFruit = fruits.get(0);
+        System.out.println("First Fruit: " + firstFruit); // Output: First Fruit: Apple
+
+        // Update an element in the ArrayList
+        fruits.set(2, "Grapes");
+        System.out.println("Updated ArrayList: " + fruits); // Output: Updated ArrayList: [Apple, Banana, Grapes]
+
+        // Remove an element from the ArrayList
+        boolean removed = fruits.remove("Banana");
+        System.out.println("Removed Banana? " + removed); // Output: Removed Banana? true
+
+        // Check if an element exists in the ArrayList
+        boolean containsGrapes = fruits.contains("Grapes");
+        System.out.println("Contains Grapes? " + containsGrapes); // Output: Contains Grapes? true
+
+        // Get the size of the ArrayList
+        int size = fruits.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the ArrayList
+        System.out.println("Elements:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        /* Output:
+           Elements:
+           Apple
+           Grapes
+         */
+    }
+}
 ```
 
 - LinkedList
 
 ```java
+import java.util.LinkedList;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new LinkedList
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // Add elements to the LinkedList
+        linkedList.add("Apple");
+        linkedList.add("Banana");
+        linkedList.add("Orange");
+
+        // Print the LinkedList
+        System.out.println("LinkedList: " + linkedList); // Output: LinkedList: [Apple, Banana, Orange]
+
+        // Access elements by index
+        String firstElement = linkedList.get(0);
+        System.out.println("First Element: " + firstElement); // Output: First Element: Apple
+
+        // Update an element in the LinkedList
+        linkedList.set(2, "Grapes");
+        System.out.println("Updated LinkedList: " + linkedList); // Output: Updated LinkedList: [Apple, Banana, Grapes]
+
+        // Remove an element from the LinkedList
+        boolean removed = linkedList.remove("Banana");
+        System.out.println("Removed Banana? " + removed); // Output: Removed Banana? true
+
+        // Check if an element exists in the LinkedList
+        boolean containsGrapes = linkedList.contains("Grapes");
+        System.out.println("Contains Grapes? " + containsGrapes); // Output: Contains Grapes? true
+
+        // Get the size of the LinkedList
+        int size = linkedList.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the LinkedList
+        System.out.println("Elements:");
+        for (String element : linkedList) {
+            System.out.println(element);
+        }
+        /* Output:
+           Elements:
+           Apple
+           Grapes
+         */
+    }
+}
 ```
 
 - HashSet
 
 ```java
+import java.util.HashSet;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new HashSet
+        HashSet<String> set = new HashSet<>();
+
+        // Add elements to the HashSet
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+        set.add("Apple"); // Adding duplicate element
+
+        // Print the HashSet
+        System.out.println("HashSet: " + set); // Output: HashSet: [Orange, Apple, Banana]
+
+        // Check if an element exists in the HashSet
+        boolean containsBanana = set.contains("Banana");
+        System.out.println("Contains Banana? " + containsBanana); // Output: Contains Banana? true
+
+        // Remove an element from the HashSet
+        boolean removed = set.remove("Apple");
+        System.out.println("Removed Apple? " + removed); // Output: Removed Apple? true
+
+        // Get the size of the HashSet
+        int size = set.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the HashSet
+        System.out.println("Elements:");
+        for (String element : set) {
+            System.out.println(element);
+        }
+        /* Output:
+           Elements:
+           Orange
+           Banana
+         */
+    }
+}
 ```
 
 - TreeSet
 
 ```java
+import java.util.TreeSet;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new TreeSet
+        TreeSet<String> set = new TreeSet<>();
+
+        // Add elements to the TreeSet
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+        set.add("Apple"); // Adding duplicate element
+
+        // Print the TreeSet
+        System.out.println("TreeSet: " + set); // Output: TreeSet: [Apple, Banana, Orange]
+
+        // Check if an element exists in the TreeSet
+        boolean containsBanana = set.contains("Banana");
+        System.out.println("Contains Banana? " + containsBanana); // Output: Contains Banana? true
+
+        // Remove an element from the TreeSet
+        boolean removed = set.remove("Apple");
+        System.out.println("Removed Apple? " + removed); // Output: Removed Apple? true
+
+        // Get the size of the TreeSet
+        int size = set.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the TreeSet
+        System.out.println("Elements:");
+        for (String element : set) {
+            System.out.println(element);
+        }
+        /* Output:
+           Elements:
+           Banana
+           Orange
+         */
+    }
+}
 ```
 
 - LinkedHashSet
 
 ```java
+import java.util.LinkedHashSet;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new LinkedHashSet
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        // Add elements to the LinkedHashSet
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+        set.add("Apple"); // Adding duplicate element
+
+        // Print the LinkedHashSet
+        System.out.println("LinkedHashSet: " + set); // Output: LinkedHashSet: [Apple, Banana, Orange]
+
+        // Check if an element exists in the LinkedHashSet
+        boolean containsBanana = set.contains("Banana");
+        System.out.println("Contains Banana? " + containsBanana); // Output: Contains Banana? true
+
+        // Remove an element from the LinkedHashSet
+        boolean removed = set.remove("Apple");
+        System.out.println("Removed Apple? " + removed); // Output: Removed Apple? true
+
+        // Get the size of the LinkedHashSet
+        int size = set.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the LinkedHashSet
+        System.out.println("Elements:");
+        for (String element : set) {
+            System.out.println(element);
+        }
+        /* Output:
+           Elements:
+           Banana
+           Orange
+         */
+    }
+}
 ```
 
 ----
@@ -750,66 +1541,61 @@ __Classes comes with Collection framework:__
 
 Types of Lists are:
 
-1). ArrayList
-
-Fast iteration and fast Random Access. It is an ordered collection. It is not sorted collection.
-
-```java
-
-```
-
-2). Linked List
-
-Performance is slow than ArrayList. Maintain the Insertion Order. It can have duplicate values
-
-```java
-
-```
-
-3). Vector
+1. Vector
 
 Similar as ArrayList. Maintain the Insertion Order. It can have duplicate values. Its Methods are Synchronized.
 
 ```java
+import java.util.Vector;
 
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Vector
+        Vector<String> vector = new Vector<>();
+
+        // Add elements to the Vector
+        vector.add("Apple");
+        vector.add("Banana");
+        vector.add("Orange");
+
+        // Print the Vector
+        System.out.println("Vector: " + vector); // Output: Vector: [Apple, Banana, Orange]
+
+        // Access elements by index
+        String firstElement = vector.get(0);
+        System.out.println("First Element: " + firstElement); // Output: First Element: Apple
+
+        // Update an element in the Vector
+        vector.set(2, "Grapes");
+        System.out.println("Updated Vector: " + vector); // Output: Updated Vector: [Apple, Banana, Grapes]
+
+        // Remove an element from the Vector
+        boolean removed = vector.remove("Banana");
+        System.out.println("Removed Banana? " + removed); // Output: Removed Banana? true
+
+        // Check if an element exists in the Vector
+        boolean containsGrapes = vector.contains("Grapes");
+        System.out.println("Contains Grapes? " + containsGrapes); // Output: Contains Grapes? true
+
+        // Get the size of the Vector
+        int size = vector.size();
+        System.out.println("Size: " + size); // Output: Size: 2
+
+        // Iterate over the elements in the Vector
+        System.out.println("Elements:");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+        /* Output:
+           Elements:
+           Apple
+           Grapes
+         */
+    }
+}
 ```
 
 ----
-
-**Explain the Set and their types in a Java Collection?**
-
-Set cares of uniqueness, It means that it does not allow duplicate value.
-
-Types of Set in Java Collection are:
-
-1). Hash Set
-
-HashSet is unordered and unsorted.
-It uses the hash code of the object to insert the values.
-We can use Hash Set when order is not concerned and we want no duplicate value.
-
-```java
-
-```
-
-2). Linked Hash set
-
-It maintains the insertion order.
-Does not allows duplicate value.
-It can be used when iteration order is required.
-
-```java
-
-```
-
-3). Tree Set
-
-It sorts the elements in ascending order.
-It does not allow duplicate values.
-
-```java
-
-```
 
 **Difference between HashMap and HashTable?**
 
@@ -852,28 +1638,34 @@ Collections includes only static methods.
 
 **What are the differences between C++ and Java?**
 
-__Concept.__
+__Concept__
+
 C++ is not platform-independent; the principle behind C++ programming is “write once, compile anywhere.”
 In contrast, because the byte code generated by the Java compiler is platform-independent, it can run on any
 machine, Java programs are written once and run everywhere.
 
-__Languages Compatibility.__
+__Languages Compatibility__
+
 C++ is a programming language that is based on the C programming language. Most other high-level languages are
 compatible with C++. Most of the languages of Java are incompatible. Java is comparable to those of C and C++.
 
-__Interaction with the library.__
+__Interaction with the library__
+
 It can access the native system libraries directly in C++. As a result, it’s better for programming at the system level.
 Java’s native libraries do not provide direct call support. You can use Java Native Interface or access the libraries.
 
-__Characteristics.__
+__Characteristics__
+
 C++ distinguishes itself by having features that are similar to procedural and object-oriented languages.
 The characteristic that sets Java apart is automatic garbage collection. Java doesn’t support destructors
 at the moment.
 
-__The semantics of the type.__
+__The semantics of the type__
+
 Primitive and object types in C++ have the same kind of semantics. The primitive and object and classes of Java, on the other hand, are not consistent.
 
-__In the context of Compiler and Interpreter.__
+__In the context of Compiler and Interpreter__
+
 Java refers to a compiled and interpreted language. In contrast, C++ is only a compiled language.
 
 In Java, the source code is the compiled output is a platform-independent byte code.
@@ -885,17 +1677,15 @@ In C++, the source program is compiled into an object code that is further execu
 
 A few of the significant features of Java Programming Language are:
 
-Easy: Java is a language that is considered easy to learn. One fundamental concept of OOP Java has a
-catch to understand.
+__Easy:__ Java is a language that is considered easy to learn. One fundamental concept of OOP Java has a catch to understand.
 
-Secured Feature: Java has a secured feature that helps develop a virus-free and tamper-free system for the users.
+__Secured Feature:__ Java has a secured feature that helps develop a virus-free and tamper-free system for the users.
 
-OOP: OOP stands for Object-Oriented Programming language. OOP signifies that, in Java, everything is considered
-an object.
+__OOP:__ OOP stands for Object-Oriented Programming language. OOP signifies that, in Java, everything is considered an object.
 
-Independent Platform: Java is not compiled into a platform-specific machine; instead, it is compiled into
+__Independent Platform:__ Java is not compiled into a platform-specific machine; instead, it is compiled into
 
-platform-independent bytecode. This code is interpreted by the Virtual Machine on which the platform runs.
+__platform-independent bytecode:__ This code is interpreted by the Virtual Machine on which the platform runs.
 
 ----
 
@@ -950,11 +1740,9 @@ Native Method Stack Memory
 
 **What are the differences between Heap and Stack Memory in Java?**
 
-Stack memory in data structures is the amount of memory allocated to each individual programme. It is a
-fixed memory space.
+Stack memory in data structures is the amount of memory allocated to each individual programme. It is a fixed memory space.
 
-Heap memory, in contrast, is the portion that was not assigned to the Java code but
-will be available for use by the Java code when it is required, which is generally during the program's runtime.
+Heap memory, in contrast, is the portion that was not assigned to the Java code but will be available for use by the Java code when it is required, which is generally during the program's runtime.
 
 ----
 
@@ -975,17 +1763,17 @@ value stored in them.
 **Explain the expected output of the following code segment?**
 
 ```java
-public class Simplilearn   
-{  
-    public static void main (String args[])   
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(100 + 100 + "Simplilearn");
+        System.out.println("E-Learning Company" + 100 + 100);
+        // Output:
+        // 200Simplilearn
+        // E-Learning Company100100
+        // FIXME: Why? Missing instantiation of the class.
+    }
 }
-System.out.println(100 + 100 +“Simplilearn");   
-System.out.println(“E-Learning Company" + 100 + 100);
-
-// Output:
-// 200Simplilearn
-// E-Learning Company100100
-// FIXME: Why? Missing instantiation of the class. 
 ```
 
 ----
@@ -997,18 +1785,108 @@ For example, a person can be associated with multiple banks, and a bank can be r
 to various people, but no one can own the other.
 
 ```java
+class School {
+    private String name;
 
+    public School(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Student {
+    private String name;
+    private School school;
+
+    public Student(String name, School school) {
+        this.name = name;
+        this.school = school;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        School school = new School("ABC School");
+        Student student = new Student("John Doe", school);
+
+        System.out.println("Student: " + student.getName());
+        System.out.println("School: " + student.getSchool().getName());
+    }
+}
 ```
 
 ----
 
-**What do you mean by aggregation?*
+**What do you mean by aggregation?**
 
 The term aggregation refers to the relationship between two classes best described as a “whole/part” and “has-a” relationship. This kind is the
 most specialized version of an association relationship. It contains the reference to another class and is said to have ownership of that class.
 
 ```java
+class Address {
+    private String street;
+    private String city;
+    private String state;
 
+    public Address(String street, String city, String state) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getState() {
+        return state;
+    }
+}
+
+class Employee {
+    private String name;
+    private Address address;
+
+    public Employee(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Address address = new Address("123 Main Street", "Cityville", "State");
+        Employee employee = new Employee("John Doe", address);
+
+        System.out.println("Employee: " + employee.getName());
+        System.out.println("Address: " + employee.getAddress().getStreet() +
+                           ", " + employee.getAddress().getCity() +
+                           ", " + employee.getAddress().getState());
+    }
+}
 ```
 
 ----
@@ -1018,7 +1896,44 @@ most specialized version of an association relationship. It contains the referen
 A Copy Constructor in Java is a constructor that initializes an object through another object of the same class.
 
 ```java
+class Car {
+    private String make;
+    private String model;
+    private int year;
 
+    // Constructor with parameters
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Getter methods
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a new Car object using the constructor
+        Car myCar = new Car("Toyota", "Camry", 2021);
+
+        // Access the object's properties using getter methods
+        System.out.println("Make: " + myCar.getMake());
+        System.out.println("Model: " + myCar.getModel());
+        System.out.println("Year: " + myCar.getYear());
+    }
+}
 ```
 
 ----
@@ -1029,7 +1944,33 @@ An empty interface in Java is referred to as a Marker interface. Serializable an
 some famous examples of Marker Interface. 
 
 ```java
+interface Maker {
+    void make();
+}
 
+class Car implements Maker {
+    @Override
+    public void make() {
+        System.out.println("Making a car");
+    }
+}
+
+class Phone implements Maker {
+    @Override
+    public void make() {
+        System.out.println("Making a phone");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Maker carMaker = new Car();
+        carMaker.make(); // Output: Making a car
+
+        Maker phoneMaker = new Phone();
+        phoneMaker.make(); // Output: Making a phone
+    }
+}
 ```
 
 ----
@@ -1041,7 +1982,46 @@ Cloning in Java. Java provides a clone() method to clone a current object offeri
 functionality as the original object.
 
 ```java
+class Person implements Cloneable {
+    private String name;
+    private int age;
 
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Create an instance of Person
+            Person person1 = new Person("John", 30);
+
+            // Clone the person object
+            Person person2 = (Person) person1.clone();
+
+            // Print the details of both objects
+            System.out.println("Original Person: " + person1.getName() + ", " + person1.getAge());
+            System.out.println("Cloned Person: " + person2.getName() + ", " + person2.getAge());
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```
 
 ----
@@ -1067,7 +2047,35 @@ In Java, when you declare primitive datatypes, then Wrapper classes are responsi
 them into objects(Reference types). 
 
 ```java
+public class Main {
+    public static void main(String[] args) {
+        // Boxing: Converting int to Integer
+        int primitiveInt = 10;
+        Integer wrappedInt = Integer.valueOf(primitiveInt);
 
+        System.out.println("Primitive int: " + primitiveInt);
+        System.out.println("Wrapped Integer: " + wrappedInt);
+
+        // Unboxing: Converting Integer to int
+        Integer anotherWrappedInt = Integer.valueOf(20);
+        int unboxedInt = anotherWrappedInt.intValue();
+
+        System.out.println("Wrapped Integer: " + anotherWrappedInt);
+        System.out.println("Unboxed int: " + unboxedInt);
+
+        // Autoboxing: Implicit conversion of int to Integer
+        int autoboxedInt = 30;
+        Integer autoboxedWrapper = autoboxedInt;
+
+        System.out.println("Autoboxed Integer: " + autoboxedWrapper);
+
+        // Autounboxing: Implicit conversion of Integer to int
+        Integer autounboxedWrapper = Integer.valueOf(40);
+        int autounboxedInt = autounboxedWrapper;
+
+        System.out.println("Autounboxed int: " + autounboxedInt);
+    }
+}
 ```
 
 ----
@@ -1081,12 +2089,41 @@ class given steps are to be followed:
 * Give global access to that object
 
 ```java
+public class Singleton {
+    private static Singleton instance;
 
+    // Private constructor to prevent instantiation from outside the class
+    private Singleton() {
+    }
+
+    // Public static method to get the singleton instance
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // Other methods of the singleton class
+    public void doSomething() {
+        System.out.println("Singleton instance is doing something.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Get the singleton instance
+        Singleton singleton = Singleton.getInstance();
+
+        // Call methods on the singleton instance
+        singleton.doSomething();
+    }
+}
 ```
 
 ----
 
-**Define package in Java?*
+**Define package in Java?**
 
 The package is a collective bundle of classes and interfaces and the necessary libraries and JAR files.
 The use of packages helps in code reusability.
@@ -1107,14 +2144,44 @@ For instance, variables are declared inside a class, and the scope of variables 
 limited to only a specific object.
 
 ```java
+public class Circle {
+    private double radius; // Instance variable
 
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public static void main(String[] args) {
+        Circle circle1 = new Circle(3.5); // Creating an instance of Circle
+        double area1 = circle1.calculateArea();
+        System.out.println("Area of circle1: " + area1);
+
+        Circle circle2 = new Circle(5.2); // Creating another instance of Circle
+        double area2 = circle2.calculateArea();
+        System.out.println("Area of circle2: " + area2);
+    }
+}
 ```
 
 A local variable can be anywhere inside a method or a specific block of code. Also, the scope
 is limited to the code segment where the variable is declared. 
 
 ```java
+public class Rectangle {
+    public void calculateArea(double length, double width) {
+        double area = length * width; // Local variable
+        System.out.println("Area of the rectangle: " + area);
+    }
 
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle();
+        rectangle.calculateArea(4.5, 3.2);
+    }
+}
 ```
 
 ----
@@ -1133,7 +2200,36 @@ An Exception handling in Java is considered an unexpected event that can disrupt
 normal flow. These events can be fixed through the process of Exception Handling.
 
 ```java
+import java.util.Scanner;
 
+public class DivideByZeroExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a dividend: ");
+        int dividend = scanner.nextInt();
+
+        System.out.print("Enter a divisor: ");
+        int divisor = scanner.nextInt();
+
+        try {
+            int quotient = divide(dividend, divisor);
+            System.out.println("Quotient: " + quotient);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        scanner.close();
+    }
+
+    public static int divide(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        }
+
+        return dividend / divisor;
+    }
+}
 ```
 
 ----
@@ -1145,7 +2241,13 @@ When a value is declared using the final keyword, then the variable's value rema
 throughout the program's execution.
 
 ```java
-
+public class Example {
+    public static void main(String[] args) {
+        final int constantValue = 10; // Declaring a final variable
+        // constantValue = 20; // Error: Cannot modify final variable
+        System.out.println("Constant value: " + constantValue);
+    }
+}
 ```
 
 ----
@@ -1156,7 +2258,12 @@ When the main method is not declared as static, then the program may be compiled
 up with a severe ambiguity and throws a run time error that reads "NoSuchMethodError."
 
 ```java
-
+// Main class
+public class Main {
+    public void main(String[] args) {
+        System.out.println("Not a static method");
+    }
+}
 ```
 
 ----
@@ -1188,7 +2295,7 @@ space has access to the entire application and may be referred to from anywhere.
 
 ----
 
-**What is the difference between the program and the process?*
+**What is the difference between the program and the process?**
 
 A programme is a non-active entity that includes the collection of codes necessary to carry out a specific operation. When a programme is run,
 an active instance of the programme called a process is launched. A process is begun by a programme once it has been run. The process carries
@@ -1308,10 +2415,6 @@ the Object class. The ArrayList class in Java has three constructors. There are 
 and writeObject methods specific to it. The Object Array in an ArrayList is temporary. There are
 implemented and Serialization-capable versions of RandomAccess, Cloneable, and java.io (that are Marker Interface in Java).
 
-```java
-
-```
-
 ----
 
 **Although inheritance is a popular OOPs concept, it is less advantageous than composition? Explain.**
@@ -1324,7 +2427,39 @@ it suddenly becomes vulnerable. Sub-class functionality may be broken without an
 of the super-class when its behaviour changes.
 
 ```java
+public class Engine {
+    public void start() {
+        System.out.println("Engine started");
+    }
 
+    public void stop() {
+        System.out.println("Engine stopped");
+    }
+}
+
+public class Car {
+    private Engine engine; // Composition: Car has an Engine
+
+    public Car() {
+        engine = new Engine(); // Create an instance of Engine
+    }
+
+    public void startCar() {
+        engine.start(); // Delegate the start operation to the Engine
+    }
+
+    public void stopCar() {
+        engine.stop(); // Delegate the stop operation to the Engine
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.startCar(); // Start the car
+        car.stopCar(); // Stop the car
+    }
+}
 ```
 
 ----
@@ -1345,7 +2480,7 @@ if we build an object using the String literal syntax, such as "Baeldung," on th
 
 ----
 
-**How is the ‘new' operator different from the ‘newInstance()' operator in java?**
+**How is the ‘new' operator different from the 'newInstance()' operator in java?**
 
 Both the new operator and the newInstance() method are used to create objects in Java. If we already know the kind of object to create,
 we can use the new operator; however, if the type of object to create is supplied to us at runtime, we must use the newInstance() function.
@@ -1366,7 +2501,52 @@ been removed from the scope. When the amount of memory released is insufficient 
 Multiple threads trying to access the same resources in a multi-threaded software may frequently result in unexpected and incorrect outcomes. Therefore, it must be ensured through some form of synchronization that only one thread can access the resource at any given time. Java offers a method for setting up threads and synchronizing their operations with the aid of synchronized blocks. The synchronized keyword in Java is used to identify synchronized blocks. In Java, a synchronized block is one that is tied to an object. Only one thread can be running at a time inside synchronized blocks since they are all synchronized on the same object. Until the thread inside the synchronized block exits the block, all other threads trying to enter the block are blocked. 
 
 ```java
+public class Counter {
+    private int count;
 
+    public synchronized void increment() {
+        count++; // Increment the count
+    }
+
+    public synchronized void decrement() {
+        count--; // Decrement the count
+    }
+
+    public synchronized int getCount() {
+        return count; // Get the current count
+    }
+}
+
+public class CounterThread extends Thread {
+    private Counter counter;
+
+    public CounterThread(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            counter.increment(); // Increment the counter
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+
+        CounterThread thread1 = new CounterThread(counter);
+        CounterThread thread2 = new CounterThread(counter);
+
+        thread1.start();
+        thread2.start();
+
+        thread1.join();
+        thread2.join();
+
+        System.out.println("Count: " + counter.getCount());
+    }
+}
 ```
 
 ----
@@ -1374,10 +2554,6 @@ Multiple threads trying to access the same resources in a multi-threaded softwar
 **Define System.out.println()?**
 
 System.out.println() in Java outputs the argument that was supplied to it. On the monitor, the println() method displays the findings. An objectname is typically used to call a method.
-
-```java
-
-```
 
 ----
 
@@ -1398,7 +2574,62 @@ Timed waiting: When we use the sleep () method on a particular thread, we are ac
 Termination: A thread that has been terminated means it is no longer active in the system. In other words, the thread is inactive and cannot be revived (made active again after being killed).
 
 ```java
+public class ThreadLifecycleExample {
+    public static void main(String[] args) {
+        Thread thread = new Thread(new MyRunnable());
 
+        // New state: The thread is created but not started yet
+        System.out.println("Thread state: " + thread.getState());
+
+        thread.start();
+
+        // Runnable state: The thread is ready to run but may not be executing at this moment
+        System.out.println("Thread state: " + thread.getState());
+
+        try {
+            Thread.sleep(1000); // Sleep for 1 second
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Blocked state: The thread is blocked/waiting for a resource or lock
+        System.out.println("Thread state: " + thread.getState());
+
+        try {
+            Thread.sleep(2000); // Sleep for 2 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Waiting state: The thread is waiting for another thread to notify or for a specific condition
+        System.out.println("Thread state: " + thread.getState());
+
+        thread.interrupt(); // Interrupt the thread
+
+        // Timed Waiting state: The thread is waiting for a specified time period
+        System.out.println("Thread state: " + thread.getState());
+
+        try {
+            thread.join(); // Wait for the thread to terminate
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Terminated state: The thread has completed its execution
+        System.out.println("Thread state: " + thread.getState());
+    }
+}
+
+class MyRunnable implements Runnable {
+    public void run() {
+        try {
+            Thread.sleep(3000); // Sleep for 3 seconds
+        } catch (InterruptedException e) {
+            // Handle interrupt and exit the thread
+            return;
+        }
+    }
+}
 ```
 
 **What could be the tradeoff between the usage of an unordered array versus the usage of an ordered array?**
@@ -1493,7 +2724,8 @@ The three categories of Java design patterns are creational, structural, and beh
 
 ----
 
-**What is a Memory Leak? Discuss some common causes of it.**
+**What is a Memory Leak? Discuss some common causes of it?**
+
 A memory leak is the slow degradation of system performance over time brought on by the fragmentation of a computer's RAM as a result of shoddy application
 design or programming that fails to release memory chunks when they are no longer required. These memory leaks frequently result from session items in excess,
 insertion into Collection objects without deletion, infinite caches, excessive page switching on the operating system, listener methods that are not called,
@@ -1513,7 +2745,7 @@ No, the thread might release the locks using notify, notifyAll(), and wait() met
 // Java program to demonstrate working of
 // interface
 
-class FibonacciExample2{
+class Main{
     static int n1=0,n2=1,n3=0;
     static void printFibonacci(int count){
 
@@ -1591,7 +2823,29 @@ Tests:
 5! = 5*4*3*2*1 = 120  
 
 ```java
+import java.util.Scanner;
 
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        long factorial = calculateFactorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
+
+        scanner.close();
+    }
+
+    public static long calculateFactorial(int number) {
+        if (number == 0 || number == 1) {
+            return 1; // Base case: factorial of 0 and 1 is 1
+        } else {
+            return number * calculateFactorial(number - 1); // Recursive call to calculate factorial
+        }
+    }
+}
 ```
 
 ----
@@ -1602,7 +2856,22 @@ Input: arr[] = {1, 2, 4, 6, 3, 7, 8}, N = 8
 Explanation: The missing number between 1 to 8 is 5
 
 ```java
+public class MissingNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 6, 3, 7, 8};
+        int n = arr.length + 1; // Total number of elements in the sequence (including the missing number)
 
+        int expectedSum = (n * (n + 1)) / 2; // Calculate the sum of numbers from 1 to n
+        int actualSum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            actualSum += arr[i]; // Calculate the sum of the given array
+        }
+
+        int missingNumber = expectedSum - actualSum;
+        System.out.println("Missing number: " + missingNumber);
+    }
+}
 ```
 
 ----
@@ -1764,141 +3033,87 @@ public class Main
 
 **Write a java program to check if any number given as input is the sum of 2 prime numbers?**
 
-// C program to check if a prime number
+```c++
+// TestApplication.cpp : Program to check whether a number is prime or not.
+//
 
-// can be expressed as sum of
-
-// two Prime Numbers
-
+#include <iostream>
+#include <string>
 #include <stdio.h>
-
 #include <math.h>
-
 #include <stdbool.h>
 
-```c
+using namespace std;
+
 // Function to check whether a number
-
 // is prime or not
-
-bool isPrime(int n)
-
+bool isPrime(int x)
 {
+    if (x <= 1)
+        return false;
 
-            if (n <= 1)
+    for (int i = 2; i <= sqrt(x); i++)
+    {
+        if (x % i == 0)
+            return false;
+    }
 
-                           return false;
-
-            for (int i = 2; i <= sqrt(n); i++)
-
-            {
-
-                           if (n % i == 0)
-
-                                          return false;
-
-            }
-
-            return true;
-
+    return true;
 }
 
 // Function to check if a prime number
-
 // can be expressed as sum of
-
 // two Prime Numbers
-
 bool isPossible(int N)
-
 {
-
-            // if the number is prime,
-
-            // and number-2 is also prime
-
-            if (isPrime(N) && isPrime(N - 2))
-
-                           return true;
-
-            else
-
-                           return false;
-
+    // if the number is prime,
+    // and number-2 is also prime
+    if (isPrime(N) && isPrime(N - 2))
+        return true;
+    else
+        return false;
 }
 
-// Driver code
+int main() {
+    int a = 13;
+    if (isPossible(a))
+        printf("%s", "Yes");
+    else
+        printf("%s", "No");
 
-int main()
-
-{
-
-            int n = 13;
-
- 
-
-            if (isPossible(n))
-
-                           printf("%s", "Yes");
-
-            else
-
-                           printf("%s", "No");
-
- 
-
-            return 0;
-
+    return 0;
 }
+
 ```
 
 ----
 
 **Write a Java program for solving the Tower of Hanoi Problem?**
 
- // Java recursive program to solve tower of hanoi puzzle
+
 
 ```java
-class GFG
-
+class Main
 {
+    // Java recursive function to solve tower of hanoi puzzle
+    static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
+    {
+        if (n == 1)
+        {
+            System.out.println("Move disk 1 from rod " + from_rod + " to rod " +to_rod);
+            return;
+        }
+        towerOfHanoi(n-1, from_rod, aux_rod, to_rod);
+        System.out.println("Move disk " + n + " from rod " + from_rod + " to rod " +to_rod);
+        towerOfHanoi(n-1, aux_rod, to_rod, from_rod);
+    }
 
-            // Java recursive function to solve tower of hanoi puzzle
-
-            static void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
-
-            {
-
-                           if (n == 1)
-
-                           {
-
-                                          System.out.println("Move disk 1 from rod " + from_rod + " to rod " +to_rod);
-
-                                          return;
-
-                           }
-
-                           towerOfHanoi(n-1, from_rod, aux_rod, to_rod);
-
-                           System.out.println("Move disk " + n + " from rod " + from_rod + " to rod " +to_rod);
-
-                           towerOfHanoi(n-1, aux_rod, to_rod, from_rod);
-
-            }     
-
-            // Driver method
-
-            public static void main(String args[])
-
-            {
-
-                           int n = 4; // Number of disks
-
-                           towerOfHanoi(n, \'A\', \'C\', \'B\'); // A, B and C are names of rods
-
-            }
-
+    // Driver method
+    public static void main(String args[])
+    {
+        int n = 4; // Number of disks
+        towerOfHanoi(n, 'A', 'C', 'B'); // A, B and C are names of rods
+    }
 }
 ```
 
@@ -1909,124 +3124,69 @@ class GFG
 ```java
 // Java Program to Illustrate Recursive Binary Search
 
-// Importing required classes
-
-import java.util.*;
-
 // Main class
-
 class GFG {
+    // Method 1
+    // Recursive binary search
+    // Returns index of x if it is present
+    // in arr[l..r], else return -1
 
-            // Method 1
+    int binarySearch(int arr[], int l, int r, int x)
+    {
+        // Restrict the boundary of right index
+        // and the left index to prevent
+        // overflow of indices
+        if (r >= l && l <= arr.length - 1) {
+            int mid = l + (r - l) / 2;
 
-            // Recursive binary search
+            // If the element is present
+            // at the middle itself
+            if (arr[mid] == x)
+                return mid;
 
-            // Returns index of x if it is present
+            // If element is smaller than mid, then it can
+            // only be present in left subarray
+            if (arr[mid] > x)
+                return binarySearch(arr, l, mid - 1, x);
 
-            // in arr[l..r], else return -1
+            // Else the element can only be present
+            // in right subarray
+            return binarySearch(arr, mid + 1, r, x);
+        }
 
-            int binarySearch(int arr[], int l, int r, int x)
+        // We reach here when element is not present in
+        // array
+        return -1;
+    }
 
-            {
+    // Method 2
+    // Main driver method
+    public static void main(String args[])
+    {
+        // Creating object of above class
+        GFG ob = new GFG();
+        // Custom input array
+        int arr[] = { 2, 3, 4, 10, 40 };
 
-                           // Restrict the boundary of right index
+        // Length of array
+        int n = arr.length;
 
-                           // and the left index to prevent
+        // Custom element to be checked
+        // whether present or not
+        int x = 10;
 
-                           // overflow of indices
+        // Calling above method
+        int result = ob.binarySearch(arr, 0, n - 1, x);
 
-                           if (r >= l && l <= arr.length - 1) {
-
-                                          int mid = l + (r - l) / 2;
-
-                                          // If the element is present
-
-                                          // at the middle itself
-
-                                          if (arr[mid] == x)
-
-                                                         return mid;
-
-                                          // If element is smaller than mid, then it can
-
-                                          // only be present in left subarray
-
-                                          if (arr[mid] > x)
-
-                                                         return binarySearch(arr, l, mid - 1, x);
-
- 
-
-                                          // Else the element can only be present
-
-                                          // in right subarray
-
-                                          return binarySearch(arr, mid + 1, r, x);
-
-                           }
-
-                           // We reach here when element is not present in
-
-                           // array
-
-                           return -1;
-
-            }
-
-            // Method 2
-
-            // Main driver method
-
-            public static void main(String args[])
-
-            {
-
-                           // Creating object of above class
-
-                           GFG ob = new GFG();
-
-                           // Custom input array
-
-                           int arr[] = { 2, 3, 4, 10, 40 };
-
- 
-
-                           // Length of array
-
-                           int n = arr.length;
-
-                           // Custom element to be checked
-
-                           // whether present or not
-
-                           int x = 10;
-
-                           // Calling above method
-
-                           int result = ob.binarySearch(arr, 0, n - 1, x);
-
-                           // Element present
-
-                           if (result == -1)
-
-                                          // Print statement
-
-                                          System.out.println("Element not present");
-
- 
-
-                           // Element not present
-
-                           else
-
-                                        // Print statement
-
-                                          System.out.println("Element found at index "
-
-                                                                                                      + result);
-
-            }
-
+        // Element present
+        if (result == -1)
+            // Print statement
+            System.out.println("Element not present");
+            // Element not present
+        else
+            // Print statement
+            System.out.println("Element found at index " + result);
+    }
 }
 ```
 
@@ -2079,8 +3239,8 @@ Access specifiers are predefined keywords used to help JVM understand the scope 
 **How many types of constructors are used in Java?**
 
 There are two types of constructors in Java.
-- Parameterized Constructors: Parameterized constructor accepts the parameters with which users can initialize the instance variables. Users can initialize the class variables dynamically at the time of instantiating the class.
-- Default constructors: This type doesn’t accept any parameters; rather, it instantiates the class variables with their default values. It is used mainly for object creation.
+- __Parameterized Constructors:__ Parameterized constructor accepts the parameters with which users can initialize the instance variables. Users can initialize the class variables dynamically at the time of instantiating the class.
+- __Default constructors:__ This type doesn’t accept any parameters; rather, it instantiates the class variables with their default values. It is used mainly for object creation.
 
 ----
 
@@ -2118,10 +3278,41 @@ No, Java does not support the Overloading of a static method. The process would 
 
 **Define Late Binding?**
 
-Binding is a process of unifying the method call with the method's code segment. Late binding happens when the method's code segment is unknown until it is called during the runtime. 
+Binding is a process of unifying the method call with the method's code segment. Late binding (also known as dynamic binding or runtime polymorphism) happens when the method's code segment is unknown until it is called during the runtime. 
+
+Static Binding:
 
 ```java
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
 
+class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class LateBindingExample {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.makeSound(); // Calls the makeSound() method of Animal
+
+        Animal dog = new Dog();
+        dog.makeSound(); // Calls the makeSound() method of Dog
+
+        Animal cat = new Cat();
+        cat.makeSound(); // Calls the makeSound() method of Cat
+    }
+}
 ```
 
 ----
@@ -2132,6 +3323,36 @@ The Dynamic method dispatch is a process where the method call is executed durin
 the super-class. This process is also known as Run-Time Polymorphism.     
 
 ```java
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class LateBindingExample {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.makeSound(); // Calls the makeSound() method of Animal
+
+        Animal dog = new Dog();
+        dog.makeSound(); // Calls the makeSound() method of Dog
+
+        Animal cat = new Cat();
+        cat.makeSound(); // Calls the makeSound() method of Cat
+    }
+}
 
 ```
 
@@ -2140,10 +3361,6 @@ the super-class. This process is also known as Run-Time Polymorphism.
 **Why is the delete function faster in the linked list than an array?**
 
 Delete Function is faster in linked lists in Java as the user needs to make a minor update to the pointer value so that the node can point to the next successor in the list
-
-```java
-
-```
 
 ----
 
@@ -2197,7 +3414,28 @@ The Daemon thread can be defined as a thread with the least priority. This Daemo
 The setDaemon() method creates a Daemon thread in Java.
 
 ```java
+public class Main {
+    public static void main(String[] args) {
+        Thread daemonThread = new Thread(new MyDaemonRunnable());
+        daemonThread.setDaemon(true); // Set the thread as a daemon thread
+        daemonThread.start();
 
+        System.out.println("Main thread exiting...");
+    }
+}
+
+class MyDaemonRunnable implements Runnable {
+    public void run() {
+        while (true) {
+            System.out.println("Daemon thread running...");
+            try {
+                Thread.sleep(1000); // Sleep for 1 second
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```
 
 ----
@@ -2207,7 +3445,29 @@ The setDaemon() method creates a Daemon thread in Java.
 `Enumeration` or `enum` is an interface in Java. Enum allows the sequential access of the elements stored in a collection in Java.
 
 ```java
+public class EnumerationExample {
+    public static void main(String[] args) {
+        DayOfWeek day = DayOfWeek.MONDAY;
 
+        System.out.println("Today is " + day);
+
+        if (day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY) {
+            System.out.println("It's a weekend!");
+        } else {
+            System.out.println("It's a weekday.");
+        }
+    }
+}
+
+enum DayOfWeek {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
 ```
 
 ----
@@ -2237,24 +3497,15 @@ The finalize method is called the Garbage collector. For every object, the Garba
 No, "this" and "super" keywords should be used in the first statement in the class constructor. The following code gives you a brief idea.
 
 ```java
-public class baseClass {  
-
-     baseClass() {  
-
-         super();   
-
-         this();  
-
-         System.out.println(" baseClass object is created");  
-
-     }  
-
-     public static void main(String []args){  
-
-         baseClass bclass = new baseClass();  
-
-     }  
-
+public class Main {
+    void baseClass() {
+        // this(); // call to this must be first statement in constructor
+        // super(); // call to super must be first statement in constructor
+        System.out.println(" baseClass object is created");
+    }
+    public static void main(String []args){
+        Main bclass = new Main();
+    }
 }
 ```
 
@@ -2304,7 +3555,61 @@ After that, it notifies all the observers that there is a change of state.
 The Observer interface gets implemented by objects that observe Observable objects.
 
 ```java
+import java.util.Observable;
+import java.util.Observer;
 
+public class ObserverPatternExample {
+    public static void main(String[] args) {
+        // Create an observable object
+        MyObservable observable = new MyObservable();
+
+        // Create observer objects
+        MyObserver observer1 = new MyObserver("Observer 1");
+        MyObserver observer2 = new MyObserver("Observer 2");
+
+        // Register the observers
+        observable.addObserver(observer1);
+        observable.addObserver(observer2);
+
+        // Perform an update on the observable
+        observable.performUpdate("Hello, observers!");
+
+        // Remove observer1
+        observable.deleteObserver(observer1);
+
+        // Perform another update on the observable
+        observable.performUpdate("Goodbye, observer1!");
+
+        // Unregister all observers
+        observable.deleteObservers();
+    }
+}
+
+// Custom Observable class
+class MyObservable extends Observable {
+    public void performUpdate(Object data) {
+        setChanged();
+        notifyObservers(data);
+    }
+}
+
+// Custom Observer class
+class MyObserver implements Observer {
+    private String name;
+
+    public MyObserver(String name) {
+        this.name = name;
+    }
+
+    public void update(Observable observable, Object data) {
+        System.out.println(name + " received an update: " + data);
+    }
+}
+
+// Output:
+// Observer 1 received an update: Hello, observers!
+// Observer 2 received an update: Hello, observers!
+// Observer 2 received an update: Goodbye, observer1!
 ```
 
 ----
@@ -2352,18 +3657,19 @@ The Java Persistence API enables us to create the persistence layer for desktop 
 
 **Explain the different authentications in Java Servlets?**
 
-Authentication options are available in Servlets: There are four different options for authentication in servlet:
+*Authentication options are available in Servlets:*
+There are four different options for authentication in servlet:
 
-Basic Authentication: 
+*Basic Authentication:* 
 Usernames and passwords are given by the client to authenticate the user.
 
-Form-based authentication: 
+*Form-based authentication:* 
 In this, the login form is made by the programmer by using HTML.
 
-Digest Authentication: 
+*Digest Authentication:* 
 It is similar to basic authentication, but the passwords are encrypted using the Hash formula. Hash Formula makes digest more secure.
 
-Client certificate Authentication:
+*Client certificate Authentication:*
 It requires that each client accessing the resource has a certificate that it sends to authenticate itself. Client Authentication requires the SSL protocol.
 
 ----
@@ -2388,40 +3694,26 @@ Ex: CopyOnWriteArrayList
 The string can be reversed by using the following program.
 
 ```java
-package simplilearnJava;
+public class Main {
 
-public class StringReverse {
+    public static void main(String args[]) {
+        String str = "Simplilearn";
+        String reverse = new StringBuffer(str).reverse().toString();
+        System.out.printf("Actual Word: %s, Word after reversing %s", str, reverse);
+    }
 
-public static void main(String args[]) {
+    public static String reverse(String source) {
+        if (source == null || source.isEmpty()) {
+            return source;
+        }
 
-String str = "Simplilearn";
+        String reverse = "";
+        for (int i = source.length() - 1; i >= 0; i--) {
+            reverse = reverse + source.charAt(i);
+        }
 
-String reverse = new StringBuffer(str).reverse().toString();
-
-System.out.printf("Actual Word: %s, Word after reversing %s", str, reverse);
-
-}
-
-public static String reverse(String source) {
-
-if (source == null || source.isEmpty()) {
-
-return source;
-
-}
-
-String reverse = "";
-
-for (int i = source.length() - 1; i >= 0; i--) {
-
-reverse = reverse + source.charAt(i);
-
-}
-
-return reverse;
-
-}
-
+        return reverse;
+    }
 }
 
 // Expected Output:
@@ -2550,6 +3842,40 @@ public class Main {
 The following program can be used for word count:
 
 ```java
+import java.util.HashMap;
+
+public class WordCountExample {
+    public static void main(String[] args) {
+        String text = "The quick brown fox jumps over the lazy dog";
+        
+        HashMap<String, Integer> wordCountMap = new HashMap<>();
+        
+        // Split the string into words
+        String[] words = text.split(" ");
+        
+        // Iterate over each word
+        for (String word : words) {
+            // Remove any non-alphabetic characters from the word
+            word = word.replaceAll("[^a-zA-Z]", "").toLowerCase();
+            
+            // Check if the word exists in the map
+            if (wordCountMap.containsKey(word)) {
+                // If the word exists, increment its count
+                int count = wordCountMap.get(word);
+                wordCountMap.put(word, count + 1);
+            } else {
+                // If the word does not exist, add it to the map with count 1
+                wordCountMap.put(word, 1);
+            }
+        }
+        
+        // Print the word count
+        for (String word : wordCountMap.keySet()) {
+            int count = wordCountMap.get(word);
+            System.out.println(word + ": " + count);
+        }
+    }
+}
 
 // Expected Output:
 // {Hello=1, Simplilearn=1, Welcome=1, to=1, World,=1}
@@ -2606,9 +3932,9 @@ Up another level, there are HashMaps like:
 
 ```java
 hashmap {
-a (key) -> hashmap (key-aa , value (hashmap(key-aaa,value)
-b (key) -> hashmap (key-ba , value (hashmap(key-baa,value)
-z (key) -> hashmap (key-za , value (hashmap(key-zaa,value)
+    a (key) -> hashmap (key-aa , value (hashmap(key-aaa,value)
+    b (key) -> hashmap (key-ba , value (hashmap(key-baa,value)
+    z (key) -> hashmap (key-za , value (hashmap(key-zaa,value)
 }
 ```
 
@@ -2853,8 +4179,6 @@ whereas an interface has only abstract methods in it.
 
 There are two ways to define and implement a thread in Java. They are by implementing the runnable interface and extending the thread class.
 
-
-
 ```java
 // Extending the Thread class
 class Main extends Thread{
@@ -2926,16 +4250,32 @@ class Scaler extends IB{
 }
 ```
 
-The above code will throw the compilation error. It is because the super() is used to call the parent class constructor. But there is the
-condition that super() must be the first statement in the block. Now in this case, if we replace this() with super() then also it will
-throw the compilation error. Because this() also has to be the first statement in the block. So in conclusion, we can say that we
-__cannot use this() and super() keywords in the same block__.
+The above code will throw the compilation error. It is because the super() is used to call the parent class constructor. But there is the condition that super() must be the first statement in the block. Now in this case, if we replace this() with super() then also it will throw the compilation error. Because this() also has to be the first statement in the block. So in conclusion, we can say that we __cannot use this() and super() keywords in the same block__.
 
 ----
 
 **Java works as a “pass by value” or “pass by reference” phenomenon?**
 
-Java works as a __pass by value__ phenomenon, because __pass by reference__ needs the help of pointers. But there are no pointers in Java.
+Java works as a __pass by value__ phenomenon, because pass by reference needs the help of pointers. But there are no pointers in Java.
+
+```java
+public class PassByValueExample {
+    public static void main(String[] args) {
+        int number = 10;
+        System.out.println("Before method call: " + number);
+        
+        // Call the method
+        modifyNumber(number);
+        
+        System.out.println("After method call: " + number);
+    }
+    
+    public static void modifyNumber(int value) {
+        value = 20; // Modify the local copy of the value
+        System.out.println("Inside method: " + value);
+    }
+}
+```
 
 ----
 
@@ -2978,13 +4318,13 @@ Data encapsulation, also known as data hiding, is a fundamental principle of obj
 
 The concept of data encapsulation provides several benefits:
 
-Data Protection: Encapsulation helps protect the integrity of data by hiding the internal representation of an object. The data can only be accessed and modified through the defined public methods (getters and setters) of the object. This prevents direct manipulation or accidental modification of the object's internal state by external code, ensuring data consistency and preventing unauthorized access.
+*Data Protection:* Encapsulation helps protect the integrity of data by hiding the internal representation of an object. The data can only be accessed and modified through the defined public methods (getters and setters) of the object. This prevents direct manipulation or accidental modification of the object's internal state by external code, ensuring data consistency and preventing unauthorized access.
 
-Modularity: Encapsulation promotes modularity in software design. By encapsulating data and related methods into objects, the code can be organized into separate units that can be developed, tested, and maintained independently. This allows for better code organization and promotes code reuse.
+*Modularity:* Encapsulation promotes modularity in software design. By encapsulating data and related methods into objects, the code can be organized into separate units that can be developed, tested, and maintained independently. This allows for better code organization and promotes code reuse.
 
-Abstraction: Encapsulation provides an abstraction layer, where the complex internal details of an object are hidden behind a simplified public interface. Users of the object don't need to know how the data is stored or how the methods are implemented. They only need to know how to interact with the object through its public methods.
+*Abstraction:* Encapsulation provides an abstraction layer, where the complex internal details of an object are hidden behind a simplified public interface. Users of the object don't need to know how the data is stored or how the methods are implemented. They only need to know how to interact with the object through its public methods.
 
-Code Flexibility: Encapsulation allows the internal implementation of an object to be changed without affecting the external code that uses the object. By keeping the internal details hidden, the implementation can be modified or optimized as long as the public interface remains consistent. This provides flexibility in making changes to the codebase without impacting other parts of the program.
+*Code Flexibility:* Encapsulation allows the internal implementation of an object to be changed without affecting the external code that uses the object. By keeping the internal details hidden, the implementation can be modified or optimized as long as the public interface remains consistent. This provides flexibility in making changes to the codebase without impacting other parts of the program.
 
 In Java, data encapsulation is achieved through the use of access modifiers (e.g., public, private, protected) to control the visibility of fields and methods, and by providing public getter and setter methods (also known as accessor and mutator methods) to access and modify the object's data. By encapsulating data within objects and exposing a controlled interface, Java supports the principles of encapsulation and facilitates secure, modular, and flexible software development.
 
@@ -3130,19 +4470,19 @@ it will hide the super class method; this is known as method hiding. Similarly, 
 
 In a HashSet, the elements are unsorted and work faster than a Tree set.  It is implemented using a hash table.
 
-1. Ordering: HashSet does not maintain any particular order of its elements. The order in which elements are stored and retrieved is not guaranteed. It uses the hash code of the elements to determine their storage locations, resulting in efficient element retrieval but without any specific order.
+1. *Ordering:* HashSet does not maintain any particular order of its elements. The order in which elements are stored and retrieved is not guaranteed. It uses the hash code of the elements to determine their storage locations, resulting in efficient element retrieval but without any specific order.
 TreeSet, on the other hand, maintains the elements in sorted order. It uses a binary tree data structure (specifically, a self-balancing red-black tree) to store the elements in a sorted manner. This enables efficient element retrieval and also allows for operations like finding the minimum or maximum element or retrieving elements within a specified range.
 
-1. Sorting: HashSet does not provide any inherent sorting capability. If you need sorted elements, you would need to manually sort them using other mechanisms.
+2. *Sorting:* HashSet does not provide any inherent sorting capability. If you need sorted elements, you would need to manually sort them using other mechanisms.
 TreeSet automatically maintains the elements in sorted order according to their natural ordering (if they implement the Comparable interface) or a custom comparator provided during TreeSet creation.
 
-1. Performance: HashSet generally offers better performance for basic operations like adding, removing, and checking for the presence of an element (contains) because it relies on the hash code of elements for efficient storage and retrieval.
+3. *Performance:* HashSet generally offers better performance for basic operations like adding, removing, and checking for the presence of an element (contains) because it relies on the hash code of elements for efficient storage and retrieval.
 TreeSet has a slightly slower performance for basic operations compared to HashSet because it needs to maintain the sorted order of elements using a binary tree structure.
 
-1. Duplicates: HashSet does not allow duplicate elements. If you try to add a duplicate element, it will not be stored in the set.
+4. *Duplicates:* HashSet does not allow duplicate elements. If you try to add a duplicate element, it will not be stored in the set.
 TreeSet also does not allow duplicates. It maintains a distinct set of elements based on their natural ordering or the custom comparator.
 
-1. Navigational Operations: TreeSet provides additional navigational operations that are not available in HashSet. These operations include finding the first and last elements, finding elements less than or greater than a given element, and finding elements within a specific range.
+5. *Navigational Operations:* TreeSet provides additional navigational operations that are not available in HashSet. These operations include finding the first and last elements, finding elements less than or greater than a given element, and finding elements within a specific range.
 
 ----
 
@@ -3242,15 +4582,16 @@ Byte for byte
 Short for short
 Long for long
 Float for float
+
 Wrapper classes offer several useful functionalities:
 
-Object Representation: Wrapper classes allow primitive data types to be represented as objects. This enables them to be used in situations where objects are required, such as in collections (e.g., ArrayList) or when passing parameters to methods that expect objects.
+*Object Representation:* Wrapper classes allow primitive data types to be represented as objects. This enables them to be used in situations where objects are required, such as in collections (e.g., ArrayList) or when passing parameters to methods that expect objects.
 
-Conversion and Parsing: Wrapper classes provide methods for converting between primitive types and their corresponding wrapper class objects. For example, Integer class provides methods like parseInt() to parse a string into an int.
+*Conversion and Parsing:* Wrapper classes provide methods for converting between primitive types and their corresponding wrapper class objects. For example, Integer class provides methods like parseInt() to parse a string into an int.
 
-Methods and Utility Functions: Wrapper classes provide useful methods and utility functions specific to each data type. These include mathematical operations, comparison methods, conversion methods, and more. For example, the Double class provides methods like doubleValue(), compareTo(), isNaN(), etc.
+*Methods and Utility Functions:* Wrapper classes provide useful methods and utility functions specific to each data type. These include mathematical operations, comparison methods, conversion methods, and more. For example, the Double class provides methods like doubleValue(), compareTo(), isNaN(), etc.
 
-Autoboxing and Unboxing: Java also provides automatic conversion between primitive types and their corresponding wrapper classes through a process called autoboxing and unboxing. This allows you to assign primitive values to wrapper class variables and vice versa without explicit conversion.
+*Autoboxing and Unboxing:* Java also provides automatic conversion between primitive types and their corresponding wrapper classes through a process called autoboxing and unboxing. This allows you to assign primitive values to wrapper class variables and vice versa without explicit conversion.
 
 Wrapper classes are particularly useful in scenarios where you need to treat primitive types as objects, such as when working with collections, Java generics, or when utilizing Java libraries that expect objects rather than primitive types.
 
@@ -3260,11 +4601,11 @@ Wrapper classes are particularly useful in scenarios where you need to treat pri
 
 | ArrayList	| Vector |
 | ------- | -------- |
-| Array List is not synchronized.	| Vector is synchronized. |
-| Array List is fast as it’s non-synchronized.	| Vector is slow as it is thread safe. |
-| If an element is inserted into the Array List, it increases its Array size by 50%.	| Vector defaults to doubling size of its array. |
-| Array List does not define the increment size.	| Vector defines the increment size. |
-| Array List can only use Iterator for traversing an Array List.	| Vector can use both Enumeration and Iterator for traversing. |
+| Array List is not synchronized. | Vector is synchronized. |
+| Array List is fast as it’s non-synchronized. | Vector is slow as it is thread safe. |
+| If an element is inserted into the Array List, it increases its Array size by 50%. | Vector defaults to doubling size of its array. |
+| Array List does not define the increment size. | Vector defines the increment size. |
+| Array List can only use Iterator for traversing an Array List. | Vector can use both Enumeration and Iterator for traversing. |
 
 ----
 
@@ -3495,12 +4836,13 @@ to memory by the user,  pointers are discouraged in Java.
 
 **Differentiate between the constructors and methods in Java?**
 
-Methods	Constructors
-1. Used to represent the behavior of an object	1. Used to initialize the state of an object
-2. Must have a return type	2. Do not have any return type
-3. Needs to be invoked explicitly	3. Is invoked implicitly
-4. No default method is provided by the compiler	4. A default constructor is provided by the compiler if the class has none
-5. Method name may or may not be same as class name	5. Constructor name must always be the same as the class name
+| Methods | Constructors |
+| ---------- | ---------- |
+| 1. Used to represent the behavior of an object | 1. Used to initialize the state of an object |
+| 2. Must have a return type | 2. Do not have any return type |
+| 3. Needs to be invoked explicitly | 3. Is invoked implicitly |
+| 4. No default method is provided by the compiler | 4. A default constructor is provided by the compiler if the class has none |
+| 5. Method name may or may not be same as class name | 5. Constructor name must always be the same as the class name |
 
 ----
 
@@ -3513,7 +4855,21 @@ Map doesn’t contain duplicate keys.
 Each key can map at max one value.
 
 ```java
+import java.util.HashMap;
+import java.util.Map;
 
+public class Main {
+    public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+
+        map.put("apple", 1);
+        map.put("banana", 2);
+        map.put("cherry", 3);
+        map.put("apple", 4); // Trying to insert a duplicate key
+
+        System.out.println(map);
+    }
+}
 ```
 
 ----
@@ -3585,6 +4941,43 @@ java.lang.Cloneable: The Cloneable interface is a marker interface that indicate
 java.util.RandomAccess: The RandomAccess interface is a marker interface that indicates that a List implementation provides efficient random access to its elements, allowing constant-time access to any position.
 
 Marker interfaces are simple and lightweight, providing a way to add extra information or behavior to classes without adding any method requirements. They rely on conventions and the presence of the interface itself to convey meaning or trigger specific behavior.
+
+```java
+// Marker interface
+interface Printable {
+}
+
+// Class implementing the marker interface
+class Book implements Printable {
+    private String title;
+    
+    public Book(String title) {
+        this.title = title;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    
+    // Other methods and fields...
+}
+
+public class MarkerInterfaceExample {
+    public static void main(String[] args) {
+        Book book1 = new Book("Java Programming");
+        Book book2 = new Book("Design Patterns");
+        
+        // Check if the objects implement the Printable marker interface
+        if (book1 instanceof Printable) {
+            System.out.println(book1.getTitle() + " is printable");
+        }
+        
+        if (book2 instanceof Printable) {
+            System.out.println(book2.getTitle() + " is printable");
+        }
+    }
+}
+```
 
 ----
 
@@ -3716,7 +5109,6 @@ public class Servlet1 extends HttpServlet {
 }
 
 ```
-
 
 ```java
 // Serverlet2.java
@@ -3930,11 +5322,12 @@ Wikipedia defines the Spring framework as “an application framework and invers
 
 **What are the differences between constructor injection and setter injection?**
 
-No.	Constructor Injection	Setter Injection
- 1)	 No Partial Injection	 Partial Injection
- 2)	 Doesn’t override the setter property	 Overrides the constructor property if both are defined.
- 3)	Creates a new instance if any modification occurs	Doesn’t create a new instance if you change the property value
- 4) 	 Better for too many properties	 Better for a few properties.
+|No.	|  Constructor Injection	            |                     Setter Injection |
+| -------- | ---------------------------- | -------------------------------------- |
+|1	|  No Partial Injection	                       |          Partial Injection |
+|2	|  Doesn’t override the setter property	       |          Overrides the constructor property if both are defined. |
+|3	|  Creates a new instance if any modification occurs	|     Doesn’t create a new instance if you change the property value |
+|4 	|  Better for too many properties	               |          Better for a few properties. |
 
 ----
 
