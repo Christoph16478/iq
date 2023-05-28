@@ -5335,14 +5335,18 @@ Wikipedia defines the Spring framework as “an application framework and invers
 
 Autowiring enables the programmer to inject the bean automatically. We don’t need to write explicit injection logic. Let’s see the code to inject bean using dependency injection.
 
-<bean id=“emp” class=“com.javatpoint.Employee” autowire=“byName” />  
+```java
+<bean id="emp" class="com.javatpoint.Employee" autowire="byName" />  
+```
+
 The autowiring modes are given below:
 
-No.	Mode	Description
- 1)	 no	 this is the default mode, it means autowiring is not enabled.
- 2)	 byName	 Injects the bean based on the property name. It uses setter method.
- 3)	 byType	 Injects the bean based on the property type. It uses setter method.
- 4)	 constructor	 It injects the bean using constructor
+| No. | Mode | Description |
+| ----- | ----- | ------------ |
+| 1 | no | this is the default mode, it means autowiring is not enabled. |
+| 2 | byName | Injects the bean based on the property name. It uses setter method. |
+| 3 | byType | Injects the bean based on the property type. It uses setter method. |
+| 4 | constructor | It injects the bean using constructor |
 
 ----
 
@@ -5350,17 +5354,16 @@ No.	Mode	Description
 
 Spring MVC Framework provides the following ways to help us achieving robust exception handling.
 
-Controller Based:
+__Controller Based:__
 We can define exception handler methods in our controller classes. All we need is to annotate these methods with @ExceptionHandler annotation.
 
-Global Exception Handler:
+__Global Exception Handler:__
 Exception Handling is a cross-cutting concern and Spring provides @ControllerAdvice annotation that we can use with any class to define our global exception handler.
 
-HandlerExceptionResolver implementation: 
+__HandlerExceptionResolver implementation:__
 For generic exceptions, most of the times we serve static pages. Spring Framework provides HandlerExceptionResolver interface that we can implement to create global exception handler. The reason behind this additional way to define global exception handler is that Spring framework also provides default implementation classes that we can define in our spring bean configuration file to get spring framework exception handling benefits.
 
 ----
-
 
 **What are some of the important Spring annotations which you have used?**
 
@@ -5659,10 +5662,11 @@ The Hibernate architecture is categorized in four layers.
 The differences between get() and load() methods are given below.
 
 | No. | get() | load() |
-| 1) | Returns null if object is not found. | Throws ObjectNotFoundException if an object is not found. |
-| 2) | get() method always hit the database. | load() method doesn’t hit the database. |
-| 3) | It returns a real object, not a proxy. | It returns a proxy object. |
-| 4) | It should be used if you are not sure about the existence of instance. | It should be used if you are sure that the instance exists. |
+| --- | ------- | ------ |
+| 1 | Returns null if object is not found. | Throws ObjectNotFoundException if an object is not found. |
+| 2 | get() method always hit the database. | load() method doesn’t hit the database. |
+| 3 | It returns a real object, not a proxy. | It returns a proxy object. |
+| 4 | It should be used if you are not sure about the existence of instance. | It should be used if you are sure that the instance exists. |
 
 ----
 
@@ -5783,23 +5787,24 @@ This example demonstrates the basic JDBC workflow for executing a query and retr
 
 JSP provides 9 implicit objects by default. They are as follows:
 
-| Object | Type |
-| ----- | ----- |
-| 1) out | JspWriter |
-| 2) request | HttpServletRequest |
-| 3) response | HttpServletResponse |
-| 4) config | ServletConfig |
-| 5) session | HttpSession |
-| 6) application | ServletContext |
-| 7) pageContext |  PageContext |
-| 8) page | Object |
-| 9) exception | Throwable |
+| Nr | Object | Type |
+| ---- | ----- | ----- |
+| 1 | out | JspWriter |
+| 2 | request | HttpServletRequest |
+| 3 | response | HttpServletResponse |
+| 4 | config | ServletConfig |
+| 5 | session | HttpSession |
+| 6 | application | ServletContext |
+| 7 | pageContext |  PageContext |
+| 8 | page | Object |
+| 9 | exception | Throwable |
 
 ----
 
 **What are the differences between include directive and include action?**
 
 | include directive | include action |
+| ----------------- | -------------- |
 | The include directive includes the content at page translation time. | The include action includes the content at request time. |
 | The include directive includes the original content of the page so page size increases at runtime. | The include action doesn’t include the original content rather invokes the include() method of Vendor provided class. |
 | It’s better for static pages. | It’s better for dynamic pages. |
@@ -5824,8 +5829,8 @@ There are 5 type of JSTL tags.
 - core tags
 - sql tags
 - xml tags
-internationalization tags
-functions tags
+- internationalization tags
+- functions tags
 
 ----
 
@@ -5839,7 +5844,7 @@ functions tags
 
 **How to delete a Cookie in a JSP?**
 
-```jsp
+```java
 Cookie mycook = new Cookie("name1","value1");
 response.addCookie(mycook1);
 Cookie killmycook = new Cookie("mycook1","value1");
@@ -5850,7 +5855,7 @@ killmycook . addCookie ( killmycook 1 );
 
 OR
 
-```jsp
+```java
 <%
     Cookie[] cookies = request.getCookies();
     if (cookies != null) {
@@ -5875,6 +5880,22 @@ By setting the maximum age to 0, the browser will remove the cookie from its sto
 
 jspDestry() method is invoked from javax.servlet.jsp.JspPage interface whenever a JSP page is about to be destroyed. Servlets destroy methods can be easily
 overridden to perform cleanup, like when closing a database connection.
+
+```java
+<%@ page import="javax.servlet.jsp.JspException" %>
+
+<%
+public void jspDestroy() {
+    // Cleanup tasks
+    // Release database connections, close files, etc.
+    try {
+        // Release any resources here
+    } catch (Exception e) {
+        // Handle exceptions if necessary
+    }
+}
+%>
+```
 
 ----
 
@@ -5933,7 +5954,7 @@ Example: IOException, SQLException etc.
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileExample {
+public class Main {
     public static void main(String[] args) {
         FileReader fileReader = null;
         try {
@@ -6006,26 +6027,22 @@ If an exception is not caught, it is thrown from the top of the stack and falls 
 
 The java thread lifecycle has the following states-
 
-__New-__
-When a thread is created, and before the program starts the thread, it is in the new state. It is also referred to as a born thread.
+__New__ When a thread is created, and before the program starts the thread, it is in the new state. It is also referred to as a born thread.
 
-__Runnable__
-When a thread is started, it is in the Runnable state. In this state, the thread is executing its task.
+__Runnable__ When a thread is started, it is in the Runnable state. In this state, the thread is executing its task.
 
-__Waiting__
-Sometimes, a thread goes to the waiting state, where it remains idle because another thread is executing. When the other thread has finished, the waiting thread again comes into the running state.
+__Waiting__ Sometimes, a thread goes to the waiting state, where it remains idle because another thread is executing. When the other thread has finished, the waiting thread again comes into the running state.
 
-__Timed Waiting__
-In timed waiting, the thread goes to waiting state. But, it remains in waiting state for only a specified interval of time after which it starts executing.It remains waiting either till the time interval ends or till the other thread has finished.
+__Timed Waiting__ In timed waiting, the thread goes to waiting state. But, it remains in waiting state for only a specified interval of time after which it starts executing.It remains waiting either till the time interval ends or till the other thread has finished.
 
-__Terminated__
-A thread is said to be in this state once it terminates. It may be because the thread has completed its task or due to any other reason.
+__Terminated__ A thread is said to be in this state once it terminates. It may be because the thread has completed its task or due to any other reason.
 
 ----
 
 **What purpose do the keywords final, finally, and finalize fulfill?**
 
-__Final:__
+__Final__
+
 Final is used to apply restrictions on class, method, and variable. A final class can’t be inherited, final method can’t be overridden and final variable value can’t be changed. Let’s take a look at the example below to understand it better.
 
 ```java
@@ -6038,6 +6055,7 @@ class Main {
 ```
 
 __Finally__
+
 Finally is used to place important code, it will be executed whether the exception is handled or not. Let’s take a look at the example below to understand it better.
 
 ```java
@@ -6056,6 +6074,7 @@ class Main {
 ```
 
 __Finalize__
+
 Finalize is used to perform clean up processing just before the object is garbage collected. Let’s take a look at the example below to understand it better.
 
 ```java
@@ -6115,23 +6134,28 @@ class NewException extends NullPonterExcpetion { } // this will create UnChecked
 Exception and all of it’s subclasses doesn’t provide any specific methods and all of the methods are defined in the base class Throwable.
 
 __String getMessage()__ – This method returns the message String of Throwable and the message can be provided while creating the exception through it’s constructor.
+
 __String getLocalizedMessage()__ – This method is provided so that subclasses can override it to provide locale specific message to the calling program. Throwable class implementation of this method simply use __getMessage()__ - method to return the exception message.
+
 __Synchronized Throwable getCause()__ – This method returns the cause of the exception or null id the cause is unknown.
+
 __String toString()__ – This method returns the information about Throwable in String format, the returned String contains the name of Throwable class and localized message.
+
 __void printStackTrace()__ – This method prints the stack trace information to the standard error stream, this method is overloaded and we can pass PrintStream or PrintWriter as an argument to write the stack trace information to the file or stream.
 
 ----
 
 **What are the differences between processes and threads?**
 
-Process | Thread
-Definition  An executing instance of a program is called a process.	A thread is a subset of the process.
-Communication  Processes must use inter-process communication to communicate with sibling processes.	Threads can directly communicate with other threads of its process.
-Control  Processes can only exercise control over child processes.	Threads can exercise considerable control over threads of the same process.
-Changes  Any change in the parent process does not affect child processes.	Any change in the main thread may affect the behavior of the other threads of the process.
-Memory  Run in separate memory spaces.	Run in shared memory spaces.
-Controlled by	Process  is controlled by the operating system.	Threads are controlled by programmer in a program.
-Dependence  Processes are independent.	Threads are dependent.
+| Process | Thread |
+| -------- | -------- |
+| Definition | An executing instance of a program is called a process. A thread is a subset of the process. |
+| Communication | Processes must use inter-process communication to communicate with sibling processes. Threads can directly communicate with other threads of its process. |
+| Control | Processes can only exercise control over child processes. Threads can exercise considerable control over threads of the same process. |
+| Changes | Any change in the parent process does not affect child processes. Any change in the main thread may affect the behavior of the other threads of the process. |
+| Memory | Run in separate memory spaces.	Run in shared memory spaces. |
+| Controlled by	Process | Is controlled by the operating system. Threads are controlled by programmer in a program. |
+| Dependence | Processes are independent. Threads are dependent. |
 
 ----
 
@@ -6178,10 +6202,13 @@ public class MultipleCatchExample {
 Methods are defined in the base class Throwable. Some of the important methods of Java exception class are stated below. 
 
 String getMessage() – This method returns the message String about the exception. The message can be provided through its constructor.
+
 public StackTraceElement[] getStackTrace() – This method returns an array containing each element on the stack trace. The element at index 0 represents the top of the call stack whereas the last element in the array represents the method at the bottom of the call stack.
+
 Synchronized Throwable getCause() – This method returns the cause of the exception or null id as represented by a Throwable object.
 
 String toString() – This method returns the information in String format. The returned String contains the name of Throwable class and localized message.
+
 void printStackTrace() – This method prints the stack trace information to the standard error stream. 
 
 ----
@@ -6228,34 +6255,39 @@ Both [(==) and .equals()] primary functionalities are to compare the values, but
 
 So in order to understand this better, let’s consider this with the example -
 
+```java
 String str1 = "InterviewBit";
 String str2 = "InterviewBit";
- 
+```
+
 System.out.println(str1 == str2);
 This code will print true. We know that both strings are equals so it will print true. But here (==) Operators don’t compare each character in this case. It compares the memory location. And because the string uses the constant pool for storing the values in the memory, both str1 and str2 are stored at the same memory location. See the detailed Explanation in Question no 73: Link.
 
-
 Now, if we modify the program a little bit with -
 
+```java
 String str1 = new String("InterviewBit");
 String str2 = "InterviewBit";
- 
 System.out.println(str1 == str2);
+```
 
 Then in this case, it will print false. Because here no longer the constant pool concepts are used. Here, new memory is allocated. So here the memory address is different, therefore ( == ) Operator returns false. But the twist is that the values are the same in both strings. So how to compare the values? Here the .equals() method is used.
 
 .equals() method compares the values and returns the result accordingly.  If we modify the above code with - 
 
+```java
 System.out.println(str1.equals(str2));
+```
+
 Then it returns true.
 
-equals() 	==
-This is a method defined in the Object class. 	It is a binary operator in Java.
-The .equals() Method is present in the Object class, so we can override our custom .equals() method in the custom class, for objects comparison.	It cannot be modified. They always compare the HashCode.
-This method is used for checking the equality of contents between two objects as per the specified business logic.	This operator is used for comparing addresses (or references), i.e checks if both the objects are pointing to the same memory location.
-Note:
+| equals() | == |
+| ------ | ---- |
+| This is a method defined in the Object class. | It is a binary operator in Java. |
+| The .equals() Method is present in the Object class, so we can override our custom .equals() method in the custom class, for objects comparison. | It cannot be modified. They always compare the HashCode. |
+| This method is used for checking the equality of contents between two objects as per the specified business logic. | This operator is used for comparing addresses (or references), i.e checks if both the objects are pointing to the same memory location. |
 
-In the cases where the equals method is not overridden in a class, then the class uses the default implementation of the equals method that is closest to the parent class.
+Note: In the cases where the equals method is not overridden in a class, then the class uses the default implementation of the equals method that is closest to the parent class.
 Object class is considered as the parent class of all the java classes. The implementation of the equals method in the Object class uses the == operator to compare two objects. This default implementation can be overridden as per the business logic.
 
 ----
@@ -6325,7 +6357,7 @@ Collections: In the case of Hashtables and HashMaps, keys are String objects. If
 ```java
 int[] n1 = new int[0];
 boolean[] n2 = new boolean[-200];
-double[] n3 = new double[2241423798];
+double[] n3 = new double[2241423798]; // true, integer number too large
 char[] ch = new char[20];
 ```
 
@@ -6451,13 +6483,16 @@ The phenomenon mentioned here is popularly known as method hiding, and overridin
 The term reflection is used for describing the inspection capability of a code on other code either of itself or of its system and modify it during runtime.
 Consider an example where we have an object of unknown type and we have a method ‘fooBar()’ which we need to call on the object. The static typing system of Java doesn't allow this method invocation unless the type of the object is known beforehand. This can be achieved using reflection which allows the code to scan the object and identify if it has any method called “fooBar()” and only then call the method if needed.
 
+```java
 Method methodOfFoo = fooObject.getClass().getMethod("fooBar", null);
 methodOfFoo.invoke(fooObject, null);
+```
 
-__Using reflection has its own cons:__
-Speed — Method invocations due to reflection are about three times slower than the direct method calls.
-Type safety — When a method is invoked via its reference wrongly using reflection, invocation fails at runtime as it is not detected at compile/load time.
-Traceability — Whenever a reflective method fails, it is very difficult to find the root cause of this failure due to a huge stack trace. One has to deep dive into the invoke() and proxy() method logs to identify the root cause. Hence, it is advisable to follow solutions that don't involve reflection and use this method as a last resort.
+*Using reflection has its own cons:*
+
+*Speed* — Method invocations due to reflection are about three times slower than the direct method calls.
+*Type safety* — When a method is invoked via its reference wrongly using reflection, invocation fails at runtime as it is not detected at compile/load time.
+*Traceability* — Whenever a reflective method fails, it is very difficult to find the root cause of this failure due to a huge stack trace. One has to deep dive into the invoke() and proxy() method logs to identify the root cause. Hence, it is advisable to follow solutions that don't involve reflection and use this method as a last resort.
 
 Example:
 
@@ -6615,31 +6650,32 @@ For example:
 
 ```java
 class IBT{
-   int num;
-   IBT(int x){ 
-       num = x; 
-   }
-   IBT(){ 
-       num = 0; 
-   }
+    int num;
+    IBT(int x){
+        num = x;
+    }
+    IBT(){
+        num = 0;
+    }
 }
+
 class Driver {
-   public static void main(String[] args)
-   {
-       // create a reference
-       IBT ibTestObj = new IBT(20);
-       // Pass the reference to updateObject Method
-       updateObject(ibTestObj);
-       // After the updateObject is executed, check for the value of num in the object.
-       System.out.println(ibTestObj.num);
-   }
-   public static void updateObject(IBT ibObj)
-   {
-       // Point the object to new reference
-       ibObj = new InterviewBitTest();
-       // Update the value 
-       ibObj.num = 50;
-   }
+    public static void main(String[] args)
+    {
+        // create a reference
+        IBT ibTestObj = new IBT(20);
+        // Pass the reference to updateObject Method
+        updateObject(ibTestObj);
+        // After the updateObject is executed, check for the value of num in the object.
+        System.out.println(ibTestObj.num);
+    }
+    public static void updateObject(IBT ibObj)
+    {
+        // Point the object to new reference
+        ibObj = new IBT();
+        // Update the value
+        ibObj.num = 50;
+    }
 }
 
 // Output:
@@ -6835,20 +6871,29 @@ No, it is not necessary for a catch block to be present after a try block. - A t
 **Will the finally block get executed when the return statement is written at the end of try block and catch block as shown below?**
 
 ```java
-public int someMethod(int i){
-   try{
-       // some statement
-       return 1;
-   }catch(Exception e){
-       // some statement
-       return 999;
-   }finally{
-       // finally block statements
-   }
+class SomeClass {
+    public int someMethod(int i){
+        try{
+            return 1;
+        }catch(Exception e){
+            return 999;
+        }finally{
+            System.out.println("Gets executed!");
+        }
+    }
 }
-```
 
-finally block will be executed irrespective of the exception or not. The only case where finally block is not executed is when it encounters ‘System.exit()’ method anywhere in try/catch block.
+class Main {
+    public static void main(String[] args)
+    {
+        SomeClass someObj = new SomeClass();
+        someObj.someMethod(2);
+    }
+}
+
+// Answer
+// Yes, finally block will be executed irrespective of the exception or not. The only case where finally block is not executed is when it encounters ‘System.exit()’ method anywhere in try/catch block.
+```
 
 ----
 
@@ -6857,20 +6902,27 @@ finally block will be executed irrespective of the exception or not. The only ca
 Yes, the concept can be termed as constructor chaining and can be achieved using this().
 
 ```java
-public class Person {
-   private String name;
-   private int age;
-   
-   // Constructor with name and age parameters
-   public Person(String name, int age) {
-      this.name = name;
-      this.age = age;
-   }
+class Person {
+    private String name;
+    private int age;
 
-   // Constructor with only name parameter, which sets the age to a default value of 0
-   public Person(String name) {
-      this(name, 0);
-   }
+    // Constructor with name and age parameters
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Constructor with only name parameter, which sets the age to a default value of 0
+    public Person(String name) {
+        this(name, 0);
+    }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Person newP = new Person("John", 45);
+    }
 }
 ```
 
@@ -6884,36 +6936,19 @@ However, the same does not apply to the arrays. Object or primitive type values 
 
 ----
 
-**How many overloaded add() and addAll() methods are available in the List interface? Describe the need and uses.**
-
-There are a total of 4 overloaded methods for add() and addAll() methods available in List Interface. The below table states the description of all.
-
-Return Type	Method Description
-boolean	add(Element e): This method is used for adding the element at the end of the List. The Datatype of the element is of any type it has been initially assigned with. It returns the boolean indicating successfully inserted or not.
-void	add(int index, Element e): This method is the overloaded version of add() method. In this, along with the element, the index is also passed to the method for the specific index the value needs to be inserted. 
-boolean	addAll(Collection <extends ? Element > c): This method helps to add all elements at the end of collections from the list received in the parameter. It contains an iterator that helps to iterate the list and add the elements to the collection.
-boolean	addAll(int index, Collection <extends ? Element > c): This is the overloaded method for addAll() method. In this along with the list, we can pass the specified index from which the list elements need to be added.
-
-----
-
 **How does the size of ArrayList grow dynamically? And also state how it is implemented internally.**
 
 __ArrayList is implemented in such a way that it can grow dynamically. We don't need to specify the size of ArrayList. For adding the values in it, the methodology it uses is__
 
 1. Consider initially that there are 2 elements in the ArrayList. [2, 3].
-
 2. If we need to add the element into this. Then internally what will happen is-
-
-ArrayList will allocate the new ArrayList of Size (current size + half of the current size). And add the old elements into the new. Old - [2, 3],    New - [2, 3, null].
-
-Then the new value will be inserted into it. [2, 3, 4, null]. And for the next time, the extra space will be available for the value to be inserted.
-
+    1. ArrayList will allocate the new ArrayList of Size (current size + half of the current size). And add the old elements into the new. Old - [2, 3],    New - [2, 3, null].
+    2. Then the new value will be inserted into it. [2, 3, 4, null]. And for the next time, the extra space will be available for the value to be inserted.
 3. This process continues and the time taken to perform all of these is considered as the amortized constant time. 
 
 __This is how the ArrayList grows dynamically. And when we delete any entry from the ArrayList then the following steps are performed__
 
 1. It searches for the element index in the array. Searching takes some time. Typically it’s O(n) because it needs to search for the element in the entire array.
-
 2. After searching the element, it needs to shift the element from the right side to fill the index.
 
 So this is how the elements are deleted from the ArrayList internally. Similarly, the search operations are also implemented internally as defined in removing elements from the list (searching for elements to delete).
@@ -7121,8 +7156,9 @@ class Counting {
         return increase_counter;
     }
 }
-public class Main{
-    public static void main(String[] args){
+
+public class Main {
+    public static void main(String[] args) {
         Counting newCounting = new Counting();
         newCounting.increase();
     }
@@ -7144,8 +7180,8 @@ class Counting {
     }
 }
 
-public class Main{
-    public static void main(String[] args){
+public class Main {
+    public static void main(String[] args) {
         Counting newCounting = new Counting();
         newCounting.increase();
     }
@@ -7165,7 +7201,7 @@ For example, the fooBarMethod can be called in multiple ways and we can still ha
 ```java
 class FooBar {
     public void fooBarMethod(String... variables){
-        // method code
+        System.out.println("fooBarMethod");
     }
 }
 
@@ -7184,6 +7220,7 @@ class Main {
 More explanation:
 
 __1. Variable Arguments (Varargs):__
+
 The ... notation allows you to pass a variable number of arguments of the same type to a method. This provides flexibility and convenience when you need to handle methods with a varying number of arguments.
 
 ```java
@@ -7200,6 +7237,7 @@ public void printNumbers(int... numbers) {
 ```
 
 __2. Array Initialization:__
+
 The ... notation can also be used during array initialization to create an array with an unspecified number of elements.
 
 ```
@@ -7295,7 +7333,13 @@ This is how the java program gets executed.
 
 **Define System.out.println().**
 
-System.out.println() is used to print the message on the console. System - It is a class present in java.lang package. Out is the static variable of type PrintStream class present in the System class. println() is the method present in the PrintStream class.
+System.out.println() is used to print the message on the console.
+
+System - It is a class present in java.lang package.
+
+out - is the static variable of type PrintStream class present in the System class.
+
+println() - is the method present in the PrintStream class.
 
 So if we justify the statement, then we can say that if we want to print anything on the console then we need to call the println() method that was present in PrintStream class. And we can call this using the output object that is present in the System class.
 
@@ -7355,25 +7399,27 @@ This is a convenient means of initializing any collections in Java. Consider the
 ```java
 import java.util.HashSet;
 import java.util.Set;
- 
-public class IBDoubleBraceDemo{
-   public static void main(String[] args){
-       Set<String> stringSets = new HashSet<String>()
-       {
-           {
-               add("set1");
-               add("set2");
-               add("set3");
-           }
-       };
- 
-       doSomething(stringSets);
-   }
- 
-   private static void doSomething(Set<String> stringSets){
-       System.out.println(stringSets);
-   }
+
+class Main {
+    public static void main(String[] args){
+        Set<String> stringSets = new HashSet<String>()
+        {
+            {
+                add("set1");
+                add("set2");
+                add("set3");
+            }
+        };
+        doSomething(stringSets);
+    }
+
+    private static void doSomething(Set<String> stringSets){
+        System.out.println(stringSets);
+    }
 }
+
+// Output:
+// [set3, set2, set1]
 ```
 
 In the above example, we see that the stringSets were initialized by using double braces.
@@ -7461,7 +7507,7 @@ __Third Approach: Island of Isolation Approach: When 2 reference variables point
 ```java
 public class IBGarbageCollect {
    IBGarbageCollect ib;    
-   public static void main(String [] str){
+   public static void main(String [] str) {
        IBGarbageCollect ibgc1 = new IBGarbageCollect();
        IBGarbageCollect ibgc2 = new IBGarbageCollect();
        ibgc1.ib = ibgc2; //ibgc1 points to ibgc2
@@ -9975,18 +10021,25 @@ After swapping, a is 20 and b is 10
 
 The following example code shows how to use a regular expression to check whether the string contains vowels:
 
-public class StringContainsVowels {
+```java
+public class Main {
 
-	public static void main(String[] args) {
-		System.out.println(stringContainsVowels("Hello")); // true
-		System.out.println(stringContainsVowels("TV")); // false
-	}
+    public static void main(String[] args)
+    {
+        System.out.println(stringContainsVowels("Hello")); // true
+        System.out.println(stringContainsVowels("TV")); // false
+    }
 
-	public static boolean stringContainsVowels(String input) {
-		return input.toLowerCase().matches(".*[aeiou].*");
-	}
-
+    public static boolean stringContainsVowels(String input)
+    {
+        return input.toLowerCase().matches(".*[aeiou].*");
+    }
 }
+
+// Output:
+// true
+// false
+```
 
 ----
 
@@ -10029,57 +10082,60 @@ Although this program works, it’s not very memory and time-efficient. Consider
 
 A Fibonacci sequence is one in which each number is the sum of the two previous numbers. In this example, the sequence begins with 0 and 1. The following example code shows how to use a for loop to print a Fibonacci sequence:
 
-public class PrintFibonacci {
+```java
+public class Main {
+    public static void printFibonacciSequence(int count) {
+        int a = 0;
+        int b = 1;
+        int c = 1;
 
-	public static void printFibonacciSequence(int count) {
-		int a = 0;
-		int b = 1;
-		int c = 1;
-
-		for (int i = 1; i <= count; i++) {
-			System.out.print(a + ", ");
-
+        for (int i = 1; i <= count; i++) {
+            System.out.print(a + ", ");
             a = b;
-			b = c;
-			c = a + b;
-		}
-	}
+            b = c;
+            c = a + b;
+        }
+    }
 
-	public static void main(String[] args) {
-    	printFibonacciSequence(10);
-	}
-
+    public static void main(String[] args) {
+        printFibonacciSequence(10);
+    }
 }
-Output
-0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+
+// Output
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+```
+
 You can also use recursion to print a Fibonacci sequence, because the Fibonacci number is generated by adding the previous two numbers in the sequence:
 
 F(N) = F(N-1) + F(N-2)
+
 The following example class shows how to use recursion to calculate a Fibonacci sequence that is 10 numbers long:
 
-public class PrintFibonacciRecursive {
-
+```java
+public class Main {
     public static int fibonacci(int count) {
-		if (count <= 1)
-			return count;
+        if (count <= 1)
+            return count;
 
-		return fibonacci(count - 1) + fibonacci(count - 2);
-	}
+        return fibonacci(count - 1) + fibonacci(count - 2);
+    }
 
-	public static void main(String args[]) {
-    	int seqLength = 10;
+    public static void main(String args[]) {
+        int seqLength = 10;
 
-    	System.out.print("A Fibonacci sequence of " + seqLength + " numbers: ");
+        System.out.print("A Fibonacci sequence of " + seqLength + " numbers: ");
 
-    	for (int i = 0; i < seqLength; i++) {
-      	    System.out.print(fibonacci(i) + " ");
-    	}
-  	}
-
+        for (int i = 0; i < seqLength; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
 }
 
 // Output
 // A Fibonacci sequence of 10 numbers: 0 1 1 2 3 5 8 13 21 34
+```
+
 ----
 
 **How do you check if a list of integers contains only odd numbers in Java?**
@@ -10513,6 +10569,7 @@ private static int findSecondHighest(int[] array) {
 			secondHighest = i;
 		}
 	}
+
 	return secondHighest;
 }
 ```
@@ -10543,7 +10600,10 @@ public class Main {
 }
 ```
 
+```java
 System.out.println(Arrays.toString(array));
+```
+
 You can run the shuffling code inside another for loop to shuffle multiple rounds.
 
 ----
@@ -10676,9 +10736,12 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         String str1 = "abcdABCDabcdABCD";
         str1 = str1.replace("a", "");
-        System.out.println(str1); // bcdABCDbcdABCD
+        System.out.println(str1); 
     }
 }
+
+// Output:
+// bcdABCDbcdABCD
 ```
 
 String is immutable in Java. All the string manipulation methods return a new string, which is why you need to assign it to another variable. Learn more about removing characters from a string in Java.
@@ -10978,16 +11041,27 @@ public class Main {
 
 You can compile it using the following command in your terminal:
 
+```cmd
 javac Test.java
+```
+
 To run the class, use the following command in your terminal:
 
+```cmd
 java Test
+```
+
 For the recent releases, the java command will also compile the program if the class file is not present. If the class is in a package, such as com.example, then it should be inside the folder com/example. The command to compile and run is:
 
+```cmd
 java com/example/Test.java
+```
+
 If your class requires some additional JARs to compile and run, you can use the java -cp option. For example:
 
+```cmd
 java -cp .:~/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar  com/example/Test.java
+```
 
 ----
 
@@ -11013,18 +11087,23 @@ ThreadStates is the enum with fixed constants fields START, RUNNING, WAITING, an
 The forEach() method provides a shortcut to perform an action on all the elements of an iterable. The following example code shows how to iterate over the list elements and print them:
 
 ```java
-List<String> list = new ArrayList<>();
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-Iterator<String> it = list.iterator();
+public class Main {
+    public static void main(String args[]) {
+        List<String> list = new ArrayList<>();
+        Iterator<String> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 
-while (it.hasNext()) {
-	System.out.println(it.next());
+        // You can use the forEach() method with a lambda expression to reduce the code size, as shown in the following example code:
+        List<String> list1 = new ArrayList<>();
+        list1.forEach(System.out::print);
+    }
 }
-You can use the forEach() method with a lambda expression to reduce the code size, as shown in the following example code:
-
-List<String> list = new ArrayList<>();
-
-list.forEach(System.out::print);
 ```
 
 ----
@@ -11180,17 +11259,25 @@ public class Test {
    	}
 }
 Output
+```
 
-// 50. Find 5 mistakes in the following code snippet.
-package com.digitalocean.programming-interviews;
+----
 
-public class String Programs {
+**Find 5 mistakes in the following code snippet**
 
-	static void main(String[10] args) {
-		String s = "abc"
-		System.out.println(s);
-	}
+```java
+public class Main {
+    public static void main(String[] args) {
+        String s = args[10];
+        System.out.println("Argument 10: " + s);
+    }
 }
+
+// Output:
+// 1. Return type is not need in class
+// 2. AMpersend missing in line with String s = "abc";
+// 3. mainmethod must be public of course
+// 4. 
 ```
 
 # https://www.digitalocean.com/community/tutorials/java-programming-interview-questions
@@ -11441,6 +11528,7 @@ public class SynchronizationExample {
         System.out.println("Counter value: " + counter.getCount());
     }
 }
+```
 
 In this example, we have a Counter class that contains a count variable. The increment() method is marked as synchronized, which means only one thread can execute that method at a time. The getCount() method is also marked as synchronized for consistency, even though it doesn't modify any shared state.
 
@@ -11449,8 +11537,6 @@ We create two IncrementThread instances, each working on the same Counter object
 In the main method, we start both threads and then wait for them to complete using the join() method. Finally, we print the value of the counter.
 
 Due to synchronization, even though the increment() method is called concurrently by multiple threads, the shared count variable is incremented correctly and the final output will always be 2000 (1000 increments from each thread). Without synchronization, there would be a chance of data corruption or inconsistent results.
-
-```
 
 ----
 
@@ -11608,17 +11694,19 @@ That's all for today. Please mention in comments in case you have any questions 
 
 J2EE or Java Enterprise Edition is a Java-based platform that is a combination of services protocols and APIs (Application Programming Interfaces) that provides capabilities to develop multi-tier, secure, stable and fast enterprise-level applications. J2EE provides web, enterprise, web service and various other specifications for developing enterprise-level web applications.
 
-
 ----
 
 **What are the main advantages of J2EE?**
 
 Following are the advantages of the J2EE platform:
 
-Support for Web Services: J2EE provides a platform to develop and deploy web services. The JAX-RPC (Java API for XML based Remote Procedure Call) helps developers develop SOAP-based portable and interoperable web services, clients and endpoints.
-Faster Time to Market: J2EE uses the concept of containers for simplifying the development. This helps in business logic separation from lifecycle management and resources which aids developers to focus on business logic than on the infrastructure. For instance, the EJB (Enterprise JavaBeans) container takes care of threading, distributed communication, transaction management, scaling etc and provides a necessary abstraction to the developers.
-Compatibility: J2EE platform follows the principle of “Write Once, Run Anywhere”. It provides comprehensive standards and APIs that ensures compatibility among different application vendors resulting in the portability of applications.
-Simplified connectivity: J2EE helps in easier applications connectivity which allows utilizing the capabilities of different devices. It also provides JMS (Java Message Service) to integrate diverse applications in asynchronous and loosely coupled ways. It also provides CORBA (Common Object Request Broker Architecture) support for linking systems tightly via remote calls.
+*Support for Web Services:* J2EE provides a platform to develop and deploy web services. The JAX-RPC (Java API for XML based Remote Procedure Call) helps developers develop SOAP-based portable and interoperable web services, clients and endpoints.
+
+*Faster Time to Market:* J2EE uses the concept of containers for simplifying the development. This helps in business logic separation from lifecycle management and resources which aids developers to focus on business logic than on the infrastructure. For instance, the EJB (Enterprise JavaBeans) container takes care of threading, distributed communication, transaction management, scaling etc and provides a necessary abstraction to the developers.
+
+*Compatibility:* J2EE platform follows the principle of “Write Once, Run Anywhere”. It provides comprehensive standards and APIs that ensures compatibility among different application vendors resulting in the portability of applications.
+
+*Simplified connectivity:* J2EE helps in easier applications connectivity which allows utilizing the capabilities of different devices. It also provides JMS (Java Message Service) to integrate diverse applications in asynchronous and loosely coupled ways. It also provides CORBA (Common Object Request Broker Architecture) support for linking systems tightly via remote calls.
 Due to all the above benefits packed in one technology, it helps the developers to reduce the TCO (Total Cost of Ownership) and also focus more on actual business logic implementation.
 
 ----
@@ -11628,21 +11716,32 @@ Due to all the above benefits packed in one technology, it helps the developers 
 Some of the important technologies provided by J2EE are:
 
 Java API for XML-Based RPC (JAX-RPC): This is used to build web services and clients that make use of XML and Remote Procedure Calls.
+
 Java Server Pages (JSP): This is used for delivering XML and HTML documents. Apart from these, we can make use of OutputStream for delivering other data types as well.
+
 Java Servlets: Servlets are classes used for extending the server capabilities which hosts applications and can be accessed using the request-response model.
 
 Enterprise Java Beans (EJB): This is a server-side component that is used for encapsulating the application’s business logic by providing runtime environment, security, servlet lifecycle management, transaction management and other services.
+
 J2EE Connector Architecture: This defines standard architecture to connect J2EE platforms to different EIS (Enterprise Information Systems) such as mainframe processes, database systems and different legacy applications coded in another language.
+
 J2EE Deployment API: Provides specifications for web services deployment
+
 Java Management Extensions (JMX): They are used for supplying tools for monitoring and managing applications, objects, devices and networks.
+
 J2EE Authorization Contract for Containers (JACC): This is used to define security contracts between authorization policy modules and application servers.
+
 Java API for XML Registries (JAXR): This provides standard API to access different XML Registries to enable infrastructure for the building and deployment of web services.
+
 Java Message Service (JMS): This is a messaging standard for allowing different JEE components for creating, sending, receiving and reading messages by enabling communication in a distributed, loosely coupled, asynchronous and reliable manner.
+
 Java Naming and Directory Interface (JNDI): This is an API that provides naming and directory functionality for Java-based applications.
+
 Java Transaction API (JTA): This is used for specifying Java standard interfaces between transaction systems and managers.
+
 Common Object Request Broker Architecture (CORBA): This provides a standard for defining Object Management Group designed for facilitating system communication deployed on diverse platforms.
+
 JDBC data access API: This provides API for getting data from any data sources like flat files, spreadsheets, relational databases etc.
-You can download a PDF version of J2ee Interview Questions.
 
 ----
 
@@ -11652,7 +11751,9 @@ J2EE is made up of 3 main components (tiers) - Client tier, Middle tier, Enterpr
 
 
 Client Tier: This tier has programs and applications which interact with the user and they are generally located in different machines from the server. Here, different inputs are taken from the user and these requests are forwarded to the server for processing and the response will be sent back to the client.
+
 Middle Tier: This tier comprises of Web components and EJB containers. The web components are either servlet or JSP pages that process the request and generate the response. At the time of the application’s assembly, the client’s static HTML codes, programs and applets along with the server’s components are bundled within the web components. The EJB components are present for processing inputs from the user which are sent to the Enterprise Bean that is running in the business tier.
+
 Enterprise Data Tier: This tier includes database servers, resource planning systems and various other data sources that are located on a separate machine which are accessed by different components by the business tier. Technologies like JPA, JDBC, Java transaction API, Java Connector Architecture etc are used in this tier.
 
 ----
@@ -11774,7 +11875,7 @@ Java Servlets and Java Server Pages (JSP) components together constitute web com
 
 __Java Servlets dynamically process requests and responses:__
 
-```jsp
+```java
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -11842,7 +11943,7 @@ An example:
 
 First, create a JSF page named "example.xhtml" with the following code:
 
-```jsp
+```java
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
@@ -11901,7 +12002,7 @@ In this example, the managed bean class is annotated with @ManagedBean to indica
 
 Finally, you need to configure your JSF application in the "faces-config.xml" file:
 
-```jsp
+```java
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config xmlns="http://java.sun.com/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -11979,7 +12080,7 @@ Since the Java application uses a connection pool, it has active connections tha
 
 ----
 
- **How is a webserver different from an application server?**
+**How is a webserver different from an application server?**
 
 | Web Server | Application Server |
 | ------------- | ------------ |
@@ -12069,9 +12170,13 @@ The below image describes the different phases of the servlet lifecycle:
 There are five phases, are as follows:
 
 __Classloading phase:__ The first step is to load the servlet class file (.class extension) by the web container.
+
 __Instantiation phase:__ Next step is to instantiate the servlet by calling the default constructor.
+
 __Initialize phase:__ In this phase, the init() method of the servlet is run where the servlet configuration will be assigned to the servlet. This is a lifecycle method provided by the Servlet interface which is run only once in the servlet lifetime.
+
 __Request Handling phase:__ Here, the servlets provide services to different requests by making use of the service() method of the Servlet interface.
+
 __Removal phase:__ In this phase, the destroy() lifecycle method of the Servlet interface will be called that is used for clearing the configuration and closing resources before servlet destruction. Post this, the garbage collection will take place.
 
 ----
@@ -12284,7 +12389,7 @@ Java Persistence API based applications.
 
 ----
 
-**Describe ORM?*
+**Describe ORM?**E
 
 Object-Relational mapping (ORM) can be described as follows:
 
@@ -12309,7 +12414,7 @@ In hibernate, this method is used to stores an object into the database. There i
 
 ----
 
-**What is the use of method saveorupdate()?*
+**What is the use of method saveorupdate()?**
 
 In hibernate, method saveorupdate() is used to update an object using the identifier. When the value for the identifier is NULL then the method is directed to call save().
 
