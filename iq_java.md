@@ -19189,81 +19189,86 @@ Spring Boot comes with multiple starter dependencies for different Spring module
 
 **What is the starter dependency of the Spring boot module?**
 
-Ans:
-
 Some of Spring Boot Starter Dependencies are
 
-Spring Boot Starter web: Important features of spring-boot-starter-web are It is compatible for web development and Provides Auto configuration. This spring-boot-starter-web dependency pulls all dependencies which is used in the Spring Boot web development.
+Spring Boot Starter web:
+
+Important features of spring-boot-starter-web are It is compatible for web development and Provides Auto configuration. This spring-boot-starter-web dependency pulls all dependencies which is used in the Spring Boot web development.
 
 Below is the code to add Spring Boot Starter web in Spring Boot project using POM.xml.
 
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
-Spring Boot Starter Actuator : This dependency is used to monitor and manage the Spring Boot application. Below is the code to add Spring Boot Starter Actuator in Spring Boot project using POM.xml.
+```
 
+Spring Boot Starter Actuator:
+
+This dependency is used to monitor and manage the Spring Boot application. Below is the code to add Spring Boot Starter Actuator in Spring Boot project using POM.xml.
+
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency> 
-Spring Boot Starter Security: This dependency is used in Spring Boot application    to add the Security in Spring Boot Application.
+```
 
-Below is the code to add Spring Boot Starter Security in Spring Boot project using POM.xml.
+Spring Boot Starter Security:
 
+This dependency is used in Spring Boot application to add the Security in Spring Boot Application. Below is the code to add Spring Boot Starter Security in Spring Boot project using POM.xml.
+
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-security</artifactId>
 </dependency> 
-Spring Boot Starter ThymeLeaf : Spring Boot Starter ThymeLeaf Dependency  is used to create a web application. It provides a good support for serving a XHTML/HTML5 in web applications.
+```
 
-Below is the code to add Spring Boot Starter ThymeLeaf in Spring Boot project using POM.xml.
+Spring Boot Starter ThymeLeaf:
 
+Spring Boot Starter ThymeLeaf Dependency  is used to create a web application. It provides a good support for serving a XHTML/HTML5 in web applications. Below is the code to add Spring Boot Starter ThymeLeaf in Spring Boot project using POM.xml.
+
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-thymeleaf</artifactId>
 </dependency> 
-Spring Boot Starter Test: This dependency is used in Spring Boot Application to write the Unit Test cases of Java methods. Below is the code to add Spring Boot Starter Test in Spring Boot project using POM.xml.
+```
 
+Spring Boot Starter Test:
+
+This dependency is used in Spring Boot Application to write the Unit Test cases of Java methods. Below is the code to add Spring Boot Starter Test in Spring Boot project using POM.xml.
+
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-test</artifactId>
 </dependency>
+```
 
 ----
 
 **What is Spring Boot dependency management?**
 
-Ans: Spring Boot dependency management system manages dependencies and configuration automatically. We need not to specify the version of the dependencies in our configuration file. Spring Boot automatically upgrades all dependencies added in configuration file when we update the Spring Boot version.
+Spring Boot dependency management system manages dependencies and configuration automatically. We need not to specify the version of the dependencies in our configuration file. Spring Boot automatically upgrades all dependencies added in configuration file when we update the Spring Boot version.
 
 ----
 
 **How does Spring Boot works Internally?**
 
-Ans:
-
-When we Create Spring Boot Application we add the starter Dependencies in it. This Starter Dependencies automatically configures Spring Boot application based on the dependencies you have added to the project. We add @EnableAutoConfiguration annotation for the configuration.
-
-Suppose if you have not configured any database connection, Spring Boot auto-configures an in-memory database.
-
-The entry point of the spring boot application is the class contains @SpringBootApplication annotation and the main method.
-
-@ComponentScan annotation scans all the components included in the Spring Boot Application automatically.
+When we Create Spring Boot Application we add the starter Dependencies in it. This Starter Dependencies automatically configures Spring Boot application based on the dependencies you have added to the project. We add `@EnableAutoConfiguration` annotation for the configuration. Suppose if you have not configured any database connection, Spring Boot auto-configures an in-memory database. The entry point of the spring boot application is the class contains @SpringBootApplication annotation and the main method. `@ComponentScan` annotation scans all the components included in the Spring Boot Application automatically.
 
 ----
 
 **Explain Auto Configuration in Spring Boot?**
 
-Ans:
-
-Spring Boot Auto Configuration , configures Spring application based on the dependencies we have added in the project.
-
-For Autoconfiguration we will add @EnableAutoConfiguration
-
-annotation or @SpringBootApplication annotation in main class file. This annotation will automatically automatically configure Spring Boot application.
+Spring Boot Auto Configuration , configures Spring application based on the dependencies we have added in the project. For Autoconfiguration we will add `@EnableAutoConfiguration` annotation or @SpringBootApplication annotation in main class file. This annotation will automatically automatically configure Spring Boot application.
 
 Lets see the below example for better understanding.
 
+```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 @EnableAutoConfiguration
@@ -19272,40 +19277,49 @@ public class SpringBootApplicationDemo {
       SpringApplication.run(SpringBootApplicationDemo.class, args);
    }
 }
-Spring Boot Application
+```
+
+*Spring Boot Application*
 
 Class that  contains  @SpringBootApplication annotation denotes the entry point of the Spring Boot Application. This class should have the main method to run the Spring Boot application. @SpringBootApplication annotation includes Auto- Configuration, Component Scan, and Spring Boot Configuration.
 
-If we add @SpringBootApplication annotation in java class, we need not to add any other annotation like @EnableAutoConfiguration, @ComponentScan and @SpringBootConfiguration.
+If we add `@SpringBootApplication` annotation in java class, we need not to add any other annotation like `@EnableAutoConfiguration`, `@ComponentScan` and `@SpringBootConfiguration`.
 
 We can say SpringBootApplication  = EnableAutoConfiguration + ComponentScan + SpringBootConfiguration.
 
 Below example show how we can use SpringBootApplication annotations.
 
+```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 @SpringBootApplication
 public class SpringBootApplicationDemo {
    public static void main(String[] args) {
       SpringApplication.run(SpringBootApplicationDemo.class, args);
    }
 }
-Component Scan
+```
 
-In Spring Boot application @ComponentScan annotation scan all your components that is added in your project. This annotation scans all the beans and package declarations when the application initializes.
+*Component Scan*
 
-Without writing any explicit code, Spring will Scan our application for classes annotated with @Component, Instantiate them and inject any specified dependencies into them and Inject them wherever needed.
+In Spring Boot application `@ComponentScan` annotation scan all your components that is added in your project. This annotation scans all the beans and package declarations when the application initializes.
+
+Without writing any explicit code, Spring will Scan our application for classes annotated with `@Component`, Instantiate them and inject any specified dependencies into them and Inject them wherever needed.
 
 Below is the example of using component scan
 
+```java
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;
+
 @ComponentScan
 public class SpringBootApplicationDemo {
    public static void main(String[] args) {
       SpringApplication.run(SpringBootApplicationDemo.class, args);
    }
 }
+```
 
 ----
 
@@ -19326,68 +19340,61 @@ public class SpringBootApplicationDemo{
 
 **Tell some commonly used Spring Boot CLI commands?**
 
-Ans:
-
 Some commonly used Spring Boot CLI Commands Are:
+
 -run, -test, -install, -uninstall, -grap, -jar, -war, –init, -shell, -help etc
 
 ----
 
 **Tell Some Basic Annotations used in Spring Boot?**
 
-Ans:
-
 The Spring Boot annotations reside in its org.springframework.boot.autoconfigure package and its sub-packages.
 
 Some Common and Important Spring Boot Annotations are:
 
-@EnableAutoConfiguration – It makes Spring Boot look for auto-configuration beans on its classpath and automatically apply them.
+`@EnableAutoConfiguration` – It makes Spring Boot look for auto-configuration beans on its classpath and automatically apply them.
 
-@SpringBootApplication – This annotation is used to denote the main class of a Boot Application. This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
+`@SpringBootApplication` – This annotation is used to denote the main class of a Boot Application. This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
 
 Some More annotations of Spring Boot are:
 
 For Application Basic Setup
 
-@SpringBootApplication
+- @SpringBootApplication
 
-@ComponentScan
+- @ComponentScan
 
-@Configuration
+- @Configuration
 
-@EnableAutoConfiguration
+- @EnableAutoConfiguration
 
 For Request Response
 
-@GetMapping
+- @GetMapping
 
-@PostMapping
+- @PostMapping
 
-@RequestMapping
+- @RequestMapping
 
 For Component Types
 
-@Repository
+- @Repository
 
-@Service
+- @Service
 
-@Component
+- @Component
 
-@Controller
+- @Controller
 
 ----
 
 **What is Spring Boot dependency management?**
-
-Ans:
 
 Spring Boot manages dependencies and configuration automatically. We don’t need to mention the version of the dependencies in our configuration. We can say Dependency Management as it is a way to manage the dependencies efficiently in one place. When we update the Spring Boot version Spring Boot upgrades all dependencies automatically.
 
 ----
 
 **How you can change the port of embedded Tomcat server in Spring Boot?**
-
-Ans:
 
 There are two ways to change the default port of server in Spring Boot
 
@@ -19409,14 +19416,13 @@ Also you can change the port value from application.yaml by changing the default
 
 **How you can change the tomcat server to any other Server in Spring Boot?**
 
-Ans:
-
 To Replace the embedded tomcat server in Spring Boot first we have to exclude the default server from the pom.xml. And to  add new server we will add the new dependency.
 
 For example:
 
 To exclude tomcat from starter dependency add below code in pom.xml
 
+```xml
 <dependency>  
   <groupId>org.springframework.boot</groupId>  
   <artifactId>spring-boot-starter-web</artifactId>
@@ -19427,12 +19433,14 @@ To exclude tomcat from starter dependency add below code in pom.xml
    </exclusion>  
   </exclusions>
 </dependency>
-And to include new server add as a dependency. Below is the example to add jetty server.
+
+<!-- And to include new server add as a dependency. Below is the example to add jetty server. -->
 
 <dependency>  
   <groupId>org.springframework.boot</groupId>  
   <artifactId>spring-boot-starter-jetty</artifactId>
 </dependency>
+```
 
 ----
 
@@ -19471,26 +19479,27 @@ To enable the spring actuator feature, we need to add the dependency of “sprin
 
 Below is the xml snippet that can be added 
 
+```xml
 <dependency>
-<groupId> org.springframework.boot</groupId>
-<artifactId> spring-boot-starter-actuator </artifactId>
+    <groupId> org.springframework.boot</groupId>
+    <artifactId> spring-boot-starter-actuator </artifactId>
 </dependency>
+```
 
 ----
 
 **Tell some endpoint actuator-provide to monitor the Spring boot application?**
 
-Actuators provide below pre-defined endpoints to monitor our application –
-
-Health
-Info
-Beans
-Mappings
-Configprops
-Httptrace
-Heapdump
-Threaddump
-Shutdown
+Actuators provide below pre-defined endpoints to monitor our application:
+- Health
+- Info
+- Beans
+- Mappings
+- Configprops
+- Httptrace
+- Heapdump
+- Threaddump
+- Shutdown
 
 ----
 
@@ -19506,10 +19515,6 @@ and the ones in profile-specific property files only for the specified profile.
 
 ----
 
-**spring boot interview question**
-
-----
-
 **What is dependency Injection in Spring Boot?**
 
 The process of injecting dependent objects into target class is called dependency injection. Suppose our one class is dependent on the another class object. In that case we will provide the other class object to our class. This process is known as dependency injections.
@@ -19518,6 +19523,8 @@ There are multiple ways to inject the dependencies.
 
 Setter Injection: The IOC container will inject the dependent bean object into the target bean object by calling the setter method.
 Constructor Injection: Here IOC container will pass the dependent object via constructor of the class.
+
+```java
 Class Student(private val school:School){
     Fun markAttendence(){
         school.mark();
@@ -19530,18 +19537,17 @@ Class Student {
     school.mark();
   }
 }
+```
 
 ----
 
 **What is an IOC container?**
 
-Ans: IoC Container is a framework for implementing automatic dependency injection. It manages object creation and its life-time and also injects dependencies into the class.
+IoC Container is a framework for implementing automatic dependency injection. It manages object creation and its life-time and also injects dependencies into the class.
 
 ----
 
 **Tell the steps how you will create spring boot project using Spring Initializer?**
-
-Ans:
 
 Spring Initializr is a web tool provided by Spring. Using this tool we can create Spring boot projects by providing project details and giving the jar dependencies details needed for our project.
 
@@ -19619,43 +19625,31 @@ Output will be xyz
 And for Url http://localhost:8080/optional/
 Ouput will be null
 
-Q26). Tell something about Spring @GetMapping, @PostMapping, @PutMapping, @DeleteMapping and @PatchMapping
-Ans:
+----
 
-@GetMapping – It is a shortcut for @RequestMapping(method = RequestMethod.GET)
+**Tell something about Spring @GetMapping, @PostMapping, @PutMapping, @DeleteMapping and @PatchMapping?**
 
+@GetMapping – It is a shortcut for @RequestMapping(method = RequestMethod.GET). It is used to get single or all values from the database in Spring Application.
 
-It is used to get single or all values from the database in Spring Application.
+@PostMapping – It is a shortcut for @RequestMapping(method = RequestMethod.POST). Method that has @PostMapping annotation is responsible to Create single or multiple entries in the database. It is used to create single or multiple value in the database in Spring Application.
 
-@PostMapping – It is a shortcut for @RequestMapping(method = RequestMethod.POST)
-
-Method that has @PostMapping annotation is responsible to Create single or multiple entries in the database.
-
-It is used to create single or multiple value in the database in Spring Application.
-
-@PutMapping – It is a shortcut for @RequestMapping(method = RequestMethod.PUT)
-
-Method that has @PutMapping annotation is responsible to update the data in the database.
+@PutMapping – It is a shortcut for @RequestMapping(method = RequestMethod.PUT). Method that has @PutMapping annotation is responsible to update the data in the database.
 
 @PatchMapping – It is a shortcut for @RequestMapping(method = RequestMethod.PATCH)
 
 @PatchMapping  annotation is used when we want to apply a partial update on the database.
 
-@DeleteMapping – It is a shortcut for @RequestMapping(method =RequestMethod.DELETE)
-
-It is used to Delete single or multiple value from the database in the Spring Application.
+@DeleteMapping – It is a shortcut for @RequestMapping(method =RequestMethod.DELETE). It is used to Delete single or multiple value from the database in the Spring Application.
 
 ----
 
 **What is Thymeleaf in Spring Boot?**
 
-Ans:Thymeleaf is a server-side Java-based template engine. It is used for both web and standalone environments. It is capable of processing HTML, XML, JavaScript, CSS and even plain text. 
+Thymeleaf is a server-side Java-based template engine. It is used for both web and standalone environments. It is capable of processing HTML, XML, JavaScript, CSS and even plain text. 
 
 ----
 
 **Tell some embedded containers supported by Spring Boot?**
-
-Ans:
 
 There are three embedded containers supported by Spring Boot are :
 
@@ -19666,17 +19660,18 @@ Jetty
 ----
 
 **Are exit () and return statements same in function definition?**
-Ans:No, both are different as we used exit() to immediately exit from the program, where as return is used to return the control of programs execution from the called function to calling function.
+
+No, both are different as we used exit() to immediately exit from the program, where as return is used to return the control of programs execution from the called function to calling function.
 
 ----
 
-***When is the “void” keyword used in a function?**
-Ans:When we declare the function we have to decide whether we want some return value from the function or not, if we only want to print some value or statements on the screen we use void on the left side of function name otherwise we place the data type of the value on the left side of function name.
+**When is the “void” keyword used in a function?**
+
+When we declare the function we have to decide whether we want some return value from the function or not, if we only want to print some value or statements on the screen we use void on the left side of function name otherwise we place the data type of the value on the left side of function name.
 
 ----
 
 **Differentiate between call by value and call by reference?**
-Ans:
 
 Factor
 
@@ -19707,15 +19702,12 @@ In this actual parameters are passed.
 
 **Explain rand() function in c. Write a program in c to generate a random number?**
 
-Ans: The rand() function in c is used to generate a random number.
+The rand() function in c is used to generate a random number.
 
 # https://quescol.com/interview-preparation/spring-boot-interview-questions
 
 # https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html#axzz80dfcO0nd
 
-**Multithreading, Concurrency and Thread basics Questions**
-
-----
 
 **Can we make array volatile in Java?**
 
@@ -19752,12 +19744,16 @@ In terms of writing code, both will be of same complexity because synchronizatio
 **How do you call wait() method? using if block or loop? Why?**
 
 wait() method should always be called in loop because it's possible that until thread gets CPU to start running again the condition might not hold, so it's always better to check condition in loop before proceeding. Here is the standard idiom of using wait and notify method in Java:
+
+```java
 // The standard idiom for using the wait method
 synchronized (obj) {
    while (condition does not hold)
       obj.wait(); // (Releases lock, and reacquires on wakeup)
       ... // Perform action appropriate to condition
 }
+```
+
 See Effective Java Item 69 to learn more about why wait method should call in the loop.
 
 ----
@@ -19777,16 +19773,13 @@ False sharing is very hard to detect because the thread may be accessing complet
 
 Busy spin is one of the technique to wait for events without releasing CPU. It's often done to avoid losing data in CPU cached which is lost if the thread is paused and resumed in some other core. So, if you are working on low latency system where your order processing thread currently doesn't have any order, instead of sleeping or calling wait(), you can just loop and then again check the queue for new messages. It's only beneficial if you need to wait for a very small amount of time e.g. in micro seconds or nano seconds. LMAX Disrupter framework, a high-performance inter-thread messaging library has a BusySpinWaitStrategy which is based on this concept and uses a busy spin loop for EventProcessors waiting on the barrier.
 
-
 ----
 
 **How do you take thread dump in Java?**
 
 You can take a thread dump of Java application in Linux by using kill -3 PID, where PID is the process id of Java process. In Windows, you can press Ctrl + Break. This will instruct JVM to print thread dump in standard out or err and it could go to console or log file depending upon your application configuration. If you have used Tomcat then when
 
-
 ----
-
 
 **is Swing thread-safe?**
 
@@ -19804,7 +19797,6 @@ Thread-local variables are variables confined to a thread, its like thread's own
 
 Please see the answer for a code example. Just remember to call wait() and notify() method from synchronized block and test waiting for condition on the loop instead of if block.
 
-
 ----
 
 **Write code for thread-safe Singleton in Java?**
@@ -19812,7 +19804,6 @@ Please see the answer for a code example. Just remember to call wait() and notif
 Please see the answer for a code example and step by step guide to creating thread-safe singleton class in Java. When we say thread-safe, which means Singleton should remain singleton even if initialization occurs in the case of multiple threads. Using Java enum as Singleton class is one of the easiest ways to create a thread-safe singleton in Java.
 
 ----
-
 
 **The difference between sleep and wait in Java?**
 
@@ -19825,7 +19816,6 @@ Though both are used to pause currently running thread, sleep() is actually mean
 Immutable objects are those whose state cannot be changed once created. Any modification will result in a new object e.g. String, Integer, and other wrapper class. Please see the answer for step by step guide to creating Immutable class in Java.
 
 ----
-
 
 **Can we create an Immutable object, which contains a mutable object?**
 
@@ -19841,13 +19831,11 @@ Yes, its possible to create an Immutable object which may contain a mutable obje
 
 BigDecimal if memory is not a concern and Performance is not critical, otherwise double with predefined precision.
 
-
 ----
 
 **How do you convert bytes to String?**
 
 you can convert bytes to the string using string constructor which accepts byte[], just make sure that right character encoding otherwise platform's default character encoding will be used which may or may not be same.
-
 
 ----
 
@@ -19856,23 +19844,19 @@ This questions if for you to answer :-)
 
 ----
 
-
 **Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?**
 
 Yes, we can cast but int is 32 bit long in java while byte is 8 bit long in java so when you cast an int to byte higher 24 bits are lost and a byte can only hold a value from -128 to 128.
 
 ----
 
-
 **There are two classes B extends A and C extends B, Can we cast B into C e.g. C = (C) B**
 
 ----
 
-
 **Which class contains clone method? Cloneable or Object?**
 
 java.lang.Cloneable is marker interface and doesn't contain any method clone method is defined in the object class. It is also knowing that clone() is a native method means it's implemented in C or C++ or any other native language.
-
 
 ----
 
@@ -19881,7 +19865,6 @@ java.lang.Cloneable is marker interface and doesn't contain any method clone met
  No it's not a thread safe operator because its involve multiple instructions like reading a value, incriminating it and storing it back into memory which can be overlapped between multiple threads.
 
 ----
-
 
 **Difference between a = a + b and a += b ?**
 
@@ -19893,11 +19876,9 @@ b += a; // ok
 
 ----
 
-
 **Can I store a double value in a long variable without casting?**
 
 No, you cannot store a double value into a long variable without casting because the range of double is more  that long and you we need to type cast. It's not dificult to answer this question but many develoepr get it wrong due to confusion on which one is bigger between double and long in Java.
-
 
 ----
 
@@ -19907,13 +19888,11 @@ This is one of the really tricky questions. Out of 100, only 5 developers answer
 
 ----
 
-
 **Which one will take more memory, an int or Integer?**
 
 An Integer object will take more memory an Integer is the an object and it  store meta data overhead about the object and int is primitive type so its takes less space.
 
 ----
-
 
 **Why is String Immutable in Java?**
 
@@ -19977,7 +19956,6 @@ When you go migrate your Java application from 32-bit to 64-bit JVM, the heap re
 
 ----
 
-
 **How do you find if JVM is 32-bit or 64-bit from Java Program?**
 
 You can find that by checking some system properties like sun.arch.data.model or os.arch
@@ -19990,7 +19968,6 @@ You can find that by checking some system properties like sun.arch.data.model or
 Theoretically, the maximum heap memory you can assign to a 32-bit JVM is 2^32 which is 4GB but practically the limit is much smaller. It also varies between operating systems e.g. form 1.5GB in Windows to almost 3GB in Solaris. 64-bit JVM allows you to specify larger heap size, theoretically 2^64 which is quite large but practically you can specify heap space up to 100GBs. There are even JVM e.g. Azul where heap space of 1000 gigs is also possible.
 
 ----
-
 
 **What is the difference between JRE, JDK, JVM and JIT?**
 
@@ -20011,13 +19988,11 @@ When a Java process is started using java command, memory is allocated to it. Pa
 
 No, you cannot guarantee the garbage collection, though you can make a request using System.gc() or Runtime.gc() method.
 
-
 ----
 
 **How do you find memory usage from Java program? How much percent of the heap is used?**
 
 You can use memory related methods from java.lang.Runtime class to get the free memory, total memory and maximum heap memory in Java.  By using these methods, you can find out how many percents of the heap is used and how much heap space is remaining. Runtime.freeMemory() return amount of free memory in bytes, Runtime.totalMemory() returns total memory in bytes and Runtime.maxMemory() returns maximum memory in bytes.
-
 
 ----
 
@@ -20038,7 +20013,6 @@ The a = b does object reference matching if both a and b are an object and only 
 
 hashCode() method returns an int hash value corresponding to an object. It's used in hash based collection classes e.g Hashtable, HashMap, LinkedHashMap and so on. It's very tightly related to equals() method. According to Java specification, two objects which are equal to each other using equals() method must have same hash code.
 
-
 ----
 
 **Difference between final, finalize and finally?**
@@ -20046,7 +20020,6 @@ hashCode() method returns an int hash value corresponding to an object. It's use
 The final is a modifier which you can apply to variable, methods and classes. If you make a variable final it means its value cannot be changed once initialized. finalize is a method, which is called just before an object is a garbage collected, giving it last chance to resurrect itself, but the call to finalize is not guaranteed. finally is a keyword which is used in exception handling along with try and catch. the finally block is always executed irrespective of whether an exception is thrown from try block or not.
 
 ----
-
 
 **What is a compile time constant in Java? What is the risk of using it?**
 
@@ -20060,13 +20033,11 @@ The list is an ordered collection which allows duplicate. It also has an impleme
 
 ----
 
-
 **Difference between poll() and remove() method?**
 
 Both poll() and remove() take out the object from the Queue but if poll() fails then it returns null but if remove fails it throws Exception.
 
 ----
-
 
 **The difference between LinkedHashMap and PriorityQueue in Java?**
 
@@ -20078,24 +20049,29 @@ PriorityQueue guarantees that lowest or highest priority element always remain a
 
 The obvious difference between them is that ArrrayList is backed by array data structure, supprots random access and LinkedList is backed by linked list data structure and doesn't supprot random access. Accessing an element with the index is O(1) in ArrayList but its O(n) in LinkedList. See the answer for more detailed discussion.
 
+----
 
 **What is a couple of ways that you could sort a collection?**
 
 You can either use the Sorted collection like TreeSet or TreeMap or you can sort using the ordered collection like a list and using Collections.sort() method.
 
+----
 
 **How do you print Array in Java?**
 
 You can print an array by using the Arrays.toString() and Arrays.deepToString() method. Since array doesn't implement toString() by itself, just passing an array to System.out.println() will not print its contents but Arrays.toString() will print each element.
 
+----
+
 **LinkedList in Java is doubly or singly linked list?**
 
 It's a doubly linked list, you can check the code in JDK. In Eclipse, you can use the shortcut, Ctrl + T to directly open this class in Editor.
 
+----
+
 **Which kind of tree is used to implement TreeMap in Java?**
 
 A Red Black tree is used to implement TreeMap in Java.
-
 
 ----
 
@@ -20107,7 +20083,6 @@ b) Hashtable is synchronized and slower but HashMap is not synchronized and fast
 c) Hashtable doesn't allow null keys but HashMap allows one null key.
 See the answer for more differences between HashMap and Hashtable in Java.
 
-
 ----
 
 **How HashSet works internally in Java?**
@@ -20115,7 +20090,6 @@ See the answer for more differences between HashMap and Hashtable in Java.
 HashSet is internally implemented using an HashMap. Since a Map needs key and value, a default value is used for all keys. Similar to HashMap, HashSet doesn't allow duplicate keys and only one null key, I mean you can only store one null object in HashSet.
 
 ----
-
 
 **Write code to remove elements from ArrayList while iterating?**
 
@@ -20127,17 +20101,19 @@ HashSet is internally implemented using an HashMap. Since a Map needs key and va
 
 Yes, you can write your own container class. You need to implement the Iterable interface if you want to loop over advanced for loop in Java, though. If you implement Collection then you by default get that property.
 
-
 ----
 
 **What is default size of ArrayList and HashMap in Java?**
 
 As of Java 7 now, default size of ArrayList is 10 and default capacity of HashMap is 16, it must be power of 2. Here is code snippet from ArrayList  and HashMap class :
+
+```java
 // from ArrayList.java JDK 1.7
 private static final int DEFAULT_CAPACITY = 10;  
 
 //from HashMap.java JDK 7
 static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
+```
 
 ----
 
@@ -20169,15 +20145,9 @@ The Comparable interface is used to define the  natural order of object while Co
 
 **Why you need to override hashcode, when you override equals in Java?**
 
- Because equals have code contract mandates to override equals and hashcode together .since many container class like HashMap or HashSet depends on hashcode and equals contract.
+Because equals have code contract mandates to override equals and hashcode together .since many container class like HashMap or HashSet depends on hashcode and equals contract.
 
 ----
-
-**Java IO and NIO Interview questions**
-
-----
-
-IO is very important from Java interview point of view. You should have a good knowledge of old Java IO, NIO, and NIO2 alsong with some operating system and disk IO fundamentals.
 
 **In my Java program, I have three sockets? How many threads I will need to handle that**
 
@@ -20694,10 +20664,6 @@ public class StringToDateExample {
 
 ----
 
-**Unit testing JUnit Interview questions**
-
-----
-
 **How do you test static method?**
 
 You can use PowerMock library to test static methods in Java.
@@ -21185,7 +21151,8 @@ This is one of the toughest questions I have asked in Java interviews. Out of 50
 
 ----
 
-107) What is Law of Demeter violation? Why it matters? (answer)
+**What is Law of Demeter violation? Why it matters?**
+
 Believe it or not, Java is all about application programming and structuring code. If  you have good knowledge of common coding best practices, patterns and what not to do than only you can write quality code.  Law of Demeter suggests you "talk to friends and not stranger", hence used to reduce coupling between classes.
 
 ----
@@ -21198,6 +21165,26 @@ Another frequently asked Java design pattern questions. It provides interface co
 ----
 
 **What is "dependency injection" and "inversion of control"? Why would someone use it?**
+
+"Dependency injection" and "inversion of control" are closely related concepts in software development.
+
+Dependency Injection (DI) is a design pattern that allows objects to depend on interfaces or abstractions rather than concrete implementations. It is a technique where the dependencies of a class are provided from the outside, typically through constructor parameters or setter methods, instead of the class creating or managing its dependencies internally. The main idea behind DI is to decouple classes and promote loose coupling, making code more modular, reusable, and testable.
+
+Inversion of Control (IoC) is a broader concept and refers to the overall architectural pattern where the control flow of a program is inverted or handed over to a framework or container. Instead of a class controlling the creation and management of its dependencies, IoC containers or frameworks take charge of creating and managing object instances. IoC containers handle the instantiation and wiring of objects, resolving dependencies, and managing the overall lifecycle of the objects.
+
+The main benefits of using DI and IoC are:
+
+Loose Coupling: DI promotes loose coupling between classes by removing direct dependencies on concrete implementations. This makes the code more flexible and maintainable.
+
+Testability: With DI, it becomes easier to write unit tests for individual classes. Dependencies can be easily mocked or replaced with test doubles, allowing for isolated testing.
+
+Reusability: By depending on abstractions, classes become more reusable as they can work with different implementations of the same interface.
+
+Modular and Extensible Design: DI and IoC promote modular design by breaking down systems into smaller, independent components. New functionality can be easily added by creating new implementations of existing interfaces and configuring the container to use them.
+
+Separation of Concerns: DI and IoC help in separating the concerns of object creation and object usage. This improves code organization and maintainability.
+
+Overall, DI and IoC are used to achieve better software design, maintainability, testability, and flexibility in large-scale applications. They are commonly used in frameworks like Spring and Java EE to manage dependencies and provide a foundation for building scalable and maintainable applications.
 
 ----
 
@@ -21365,31 +21352,10 @@ If you think, I have missed any popular Java question here and you think it shou
 
 In case you don't know, I  have also written a book for Java interviews, Grokking the Java Interview, and Grokking the Spring Boot Interview, where I have shared tips, tricks and frequently asked Java questions from different topics. You can read the book to better prepare for your Java interviews. You can also use the code - friends20 to get a 20% discount because you are already my reader. 
 
-**Related Java EE Interview Questions**
-For my Java EE friends, here are web development specific questions, which you can use to prepare for JEE part:
-Top 10 Spring Framework Interview Questions with Answers (see here)
-10 Great XML Interview Questions for Java Programmers (read here)
-20 Great Java Design Pattern Questions asked on Interviews (see here)
-10 popular Struts Interview Questions for Java developers (list)
-20 Tibco Rendezvous and EMS Interview Questions (read more)
-10 frequently asked Servlet Interview Questions with Answers (see here)
-20 jQuery Interview Questions for Java Web Developers (list)
-10 Great Oracle Interview Questions for Java developers (see here)
-Top 10 JSP Questions  from J2EE Interviews (read here)
-12 Good RESTful Web Services Questions from Interviews (read here)
-Top 10 EJB Interview Questions and Answers (see here)
-Top 10 JMS and MQ Series Interview Questions and Answers (list)
-10 Great Hibernate Interview Questions for Java EE developers (see here)
-10 Great JDBC Interview Questions for Java Programmers (questions)
-15 Java NIO and Networking Interview Questions with Answers (see here)
-Top 10 XSLT Interview Questions with Answers (read more)
-15 Data Structure and Algorithm Questions from Java Interviews (read here)
-Top 10 Trick Java Interview Questions and Answers (see here)
-Top 40 Core Java Phone Interview Questions with Answers (list)
-
 ----
 
 **Recommended Books for Java Programmers**
+
 If you are looking for some goods to prepare for your Java Interviews, You can take a look at the following books to cover both theory and coding questions:
 9 Must-Read Books for Java Developers (see book)
 5 Java Performance Tuning Books for Experienced Programmers (see book)
@@ -21731,6 +21697,7 @@ All updates to GUI components have to be done on the AWT thread, and Swing provi
 ----
 
 **What is the difference between invokeAndWait and invokeLater in Java?**
+
 These are two methods Swing API provides Java developers for updating GUI components from threads other than the Event dispatcher thread. InvokeAndWait() synchronously update GUI component, for example, a progress bar, once progress is made, the bar should also be updated to reflect that change. 
 
 If progress is tracked in a different thread, it has to call invokeAndWait() to schedule an update of that component by the Event dispatcher thread. On another hand, invokeLater() is an asynchronous call to update components. You can also refer to this answer for more points.
@@ -21752,6 +21719,7 @@ Unfortunately, there is no @Immutable annotation in Java, which can make your ob
 ----
 
 **What is ReadWriteLock in Java?**
+
 In general, the read-write lock is the result of the lock stripping technique to improve the performance of concurrent applications. In Java, ReadWriteLock is an interface that was added in Java 5 release. 
 
 A ReadWriteLock maintains a pair of associated locks, one for read-only operations and one for writing. The read lock may be held simultaneously by multiple reader threads, so long as there are no writers. 
@@ -22170,12 +22138,13 @@ Due to this reason, former is slow and later is fast. BTW, correlated subquery h
 
 Assume it's a question of using the bitwise operator as soon as you hear restriction about not allowed to use arithmetic operator. If that restriction is not in place then you can easily check if a number is a power of two by using modulus and division operator. By the using bitwise operator, there is a nice trick to do this.  You can use following code to check if a number if power of two or not
 
+```java
 public static boolean powerOfTwo(int x) {
         return (x & (x - 1)) == 0;
 }
 
-x & (x-1) is a nice trick to convert right most bit to zero if it's on, I learned from hackers delight book.
-
+// x & (x-1) is a nice trick to convert right most bit to zero if it's on, I learned from hackers delight book.
+```
 
 ----
 
