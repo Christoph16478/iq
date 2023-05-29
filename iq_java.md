@@ -70,7 +70,7 @@ public class Main {
 __Members__
 
 ```java
-import java.io.*;
+import java.io?*;
 public class Employee {
 
     // this instance (member) variable is visible for any child class.
@@ -2387,7 +2387,7 @@ Only references in adjacent items need to update when a new item is added in the
 
 ----
 
-**How many overloaded add() and addAll() methods are available in the List interface? Describe the need and uses.**
+**How many overloaded add() and addAll() methods are available in the List interface? Describe the need and uses?**
 
 List is an interface in the Java Collections Framework. The add() and addAll() methods are the main methods at the List interface.
 
@@ -2417,7 +2417,7 @@ implemented and Serialization-capable versions of RandomAccess, Cloneable, and j
 
 ----
 
-**Although inheritance is a popular OOPs concept, it is less advantageous than composition? Explain.**
+**Although inheritance is a popular OOPs concept, it is less advantageous than composition? Explain?**
 
 A class's testability is improved through composition over inheritance. If a class is comprised of another class,
 it is simple to create a mock object to simulate the combined class for testing purposes. This privilege is not
@@ -2647,7 +2647,7 @@ The same package or class may be imported more than once. Neither the JVM nor th
 
 ----
 
-**In case a package has sub packages, will it suffice to import only the main package? e.g. Does importing of com.myMainPackage.* also import com.myMainPackage.mySubPackage.*?**
+**In case a package has sub packages, will it suffice to import only the main package? e.g. Does importing of com.myMainPackage?* also import com.myMainPackage.mySubPackage?*?**
 
 Sub-packages won't be imported when a package is imported. When you import a package, all of its classes and interfaces—with the exception of those from its sub-packages—are imported.
 
@@ -4060,7 +4060,7 @@ class Main {
 
 ----
 
-**A single try block and multiple catch blocks can co-exist in a Java Program? Explain.**
+**A single try block and multiple catch blocks can co-exist in a Java Program? Explain?**
 
 One or more catch blocks can follow a try block. Each catch block must have a unique exception handler. So, if you want
 to perform multiple tasks in response to various exceptions, use the Java multi-catch block.
@@ -4301,7 +4301,7 @@ public class MyClass implements Serializable {
 // It's important to note that the transient keyword only affects the serialization process. When an object is deserialized, the transien
 // attributes will be initialized with their default values (e.g., null for reference types, 0 for numeric types) unless you explicitly provide custom deserialization logic.
 
-// Keep in mind that the transient keyword should be used with caution and applied only to attributes that are not essential or should not be persisted during serialization.**
+// Keep in mind that the transient keyword should be used with caution and applied only to attributes that are not essential or should not be persisted during serialization?**
 ```
 
 ----
@@ -4396,7 +4396,7 @@ out to be a constant, the method cannot be inherited and the class cannot be ove
 
 ----
 
-**Is it possible that the ‘finally' block will not be executed? If yes then list the case.**
+**Is it possible that the ‘finally' block will not be executed? If yes then list the case?**
 
 Yes, there is a possibility that the ‘finally’ block cannot get executed. Here are some of the cases where the above situation occurs.
 
@@ -4715,7 +4715,7 @@ public class Person {
 
 ----
 
-**Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain.**
+**Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain?**
 
 An array generally contains elements of the primitive data types such as int, float, etc. In such cases, the array directly stores these elements at contiguous
 memory locations. While an ArrayList does not contain primitive data types. An arrayList contains the reference of the objects at different memory locations instead
@@ -4729,7 +4729,7 @@ When we create a string using new(), a new object is created. Whereas, if we cre
 
 ----
 
-**Why is synchronization necessary? Explain with the help of a relevant example.**
+**Why is synchronization necessary? Explain with the help of a relevant example?**
 
 Java allows multiple threads to execute. They may be accessing the same variable or object. Synchronization helps to execute threads one after another.
 It is important as it helps to execute all concurrent threads while being in sync. It prevents memory consistency errors due to access to shared memory. An example of synchronization code is-
@@ -5091,8 +5091,8 @@ Suppose we have two servlets, Servlet1 and Servlet2, and we want to forward a re
 
 ```java
 // Serverlet1.java
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet?*;
+import javax.servlet.http?*;
 import java.io.IOException;
 
 public class Servlet1 extends HttpServlet {
@@ -5112,8 +5112,8 @@ public class Servlet1 extends HttpServlet {
 
 ```java
 // Serverlet2.java
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet?*;
+import javax.servlet.http?*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -5504,7 +5504,7 @@ Note that this example is a simplified representation to demonstrate the integra
 
 ----
 
-**Name the types of transaction management that Spring supports.**
+**Name the types of transaction management that Spring supports?**
 
 Two types of transaction management are supported by Spring. They are:
 
@@ -5540,7 +5540,7 @@ Set up the project:
 2. Create a Java class that represents a table in your database. Annotate the class and its attributes with Hibernate annotations to define the object-relational mapping (ORM) metadata.
 
 ```java
-import javax.persistence.*;
+import javax.persistence?*;
 
 @Entity
 @Table(name = "employees")
@@ -5579,7 +5579,7 @@ public class Employee {
 4. Perform CRUD operations: Use the Hibernate API to perform CRUD (Create, Read, Update, Delete) operations on the database.
 
 ```java
-import org.hibernate.*;
+import org.hibernate?*;
 import org.hibernate.cfg.Configuration;
 
 public class MainApp {
@@ -5645,7 +5645,7 @@ Overall Hibernate is the best choice in current market for ORM tool, it contains
 
 ----
 
-**Explain Hibernate architecture.**
+**Explain Hibernate architecture?**
 
 Hibernate has a layered architecture which helps the user to operate without having to know the underlying APIs. Hibernate makes use of the database and configuration data to provide persistence services (and persistent objects) to the application. It includes many objects such as persistent object, session factory, transaction factory, connection factory, session, transaction etc.HibernateArchitecture - Java Interview Questions - Edureka
 
@@ -5711,7 +5711,7 @@ JDBC is widely used in Java applications to interact with relational databases, 
 Example:
 
 ```java
-import java.sql.*;
+import java.sql?*;
 
 public class JdbcExample {
     public static void main(String[] args) {
@@ -5876,7 +5876,7 @@ By setting the maximum age to 0, the browser will remove the cookie from its sto
 
 ----
 
-**Explain the jspDestroy() method.**
+**Explain the jspDestroy() method?**
 
 jspDestry() method is invoked from javax.servlet.jsp.JspPage interface whenever a JSP page is about to be destroyed. Servlets destroy methods can be easily
 overridden to perform cleanup, like when closing a database connection.
@@ -6313,7 +6313,7 @@ Overriding or dynamic polymorphism occurs during the runtime, but the static met
 
 ----
 
-**Difference between static methods, static variables, and static classes in java.**
+**Difference between static methods, static variables, and static classes in java?**
 
 Static Methods and Static variables are those methods and variables that belong to the class of the java program, not to the object of the class. This gets memory where the class is loaded. And these can directly be called with the help of class names.
 For example - We have used mathematical functions in the java program like - max(), min(), sqrt(), pow(), etc. And if we notice that, then we will find that we call it directly with the class name. Like - Math.max(), Math.min(), etc. So that is a static method.  And Similarly static variables we have used like (length) for the array to get the length. So that is the static method.
@@ -6352,7 +6352,7 @@ Collections: In the case of Hashtables and HashMaps, keys are String objects. If
 
 ----
 
-**Which of the below generates a compile-time error? State the reason.**
+**Which of the below generates a compile-time error? State the reason?**
 
 ```java
 int[] n1 = new int[0];
@@ -6369,7 +6369,7 @@ Here what will happen is - At the time when JVM will allocate the required memor
 
 ----
 
-**Is this program giving a compile-time error? If Yes then state the reason and number of errors it will give. If not then state the reason.**
+**Is this program giving a compile-time error? If Yes then state the reason and number of errors it will give. If not then state the reason?**
 
 ```java
 abstract final class IB{
@@ -6470,7 +6470,7 @@ public class ComparatorExample {
 
 ----
 
-**In Java, static as well as private method overriding is possible. Comment on the statement.**
+**In Java, static as well as private method overriding is possible. Comment on the statement?**
 
 The statement in the context is completely False. The static methods have no relevance with the objects, and these methods are of the class level. In the case of a child class, a static method with a method signature exactly like that of the parent class can exist without even throwing any compilation error.
 
@@ -6612,7 +6612,7 @@ Final variable instantiations are possible inside a constructor and the scope of
 
 ----
 
-**Identify the output of the below java program and Justify your answer.**
+**Identify the output of the below java program and Justify your answer?**
 
 ```java
 class Main {
@@ -6744,7 +6744,7 @@ There wouldn't be any compilation error. But then the program is run, since the 
 
 ----
 
-**Consider the below program, identify the output, and also state the reason for that.**
+**Consider the below program, identify the output, and also state the reason for that?**
 
 ```java
 public class Main{
@@ -6928,7 +6928,7 @@ public class Main {
 
 ----
 
-**Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain.**
+**Contiguous memory locations are usually used for storing actual values in an array but not in ArrayList. Explain?**
 
 In the case of ArrayList, data storing in the form of primitive data types (like int, float, etc.) is not possible. The data members/objects present in the ArrayList have references to the objects which are located at various sites in the memory. Thus, storing of actual objects or non-primitive data types (like Integer, Double, etc.) takes place in various memory locations.
 
@@ -6936,7 +6936,7 @@ However, the same does not apply to the arrays. Object or primitive type values 
 
 ----
 
-**How does the size of ArrayList grow dynamically? And also state how it is implemented internally.**
+**How does the size of ArrayList grow dynamically? And also state how it is implemented internally?**
 
 __ArrayList is implemented in such a way that it can grow dynamically. We don't need to specify the size of ArrayList. For adding the values in it, the methodology it uses is__
 
@@ -7002,7 +7002,7 @@ public class ArrayListExample {
 
 ----
 
-**Although inheritance is a popular OOPs concept, it is less advantageous than composition. Explain.**
+**Although inheritance is a popular OOPs concept, it is less advantageous than composition. Explain?**
 
 Inheritance lags behind composition in the following scenarios:
 
@@ -7049,7 +7049,7 @@ class Bottom {
 
 ----
 
-**What are Composition and Aggregation? State the difference.**
+**What are Composition and Aggregation? State the difference?**
 
 Composition, and Aggregation help to build (Has - A - Relationship) between classes and objects. But both are not the same in the end. Let’s understand with the help of an example. 
 
@@ -7140,7 +7140,7 @@ public class Main{
 
 ----
 
-**Why is synchronization necessary? Explain with the help of a relevant example.**
+**Why is synchronization necessary? Explain with the help of a relevant example?**
 
 Concurrent execution of different processes is made possible by synchronization. When a particular resource is shared between many threads, situations may arise in which multiple threads require the same shared resource.
 
@@ -7331,7 +7331,7 @@ This is how the java program gets executed.
 
 ----
 
-**Define System.out.println().**
+**Define System.out.println()?**
 
 System.out.println() is used to print the message on the console.
 
@@ -7374,7 +7374,7 @@ It is possible to import a class or package more than once, however, it is redun
 
 ----
 
-**In case a package has subpackages, will it suffice to import only the main package? E.g. does importing of com.myMainPackage.* also import com.myMainPackage.mySubPackage.*?**
+**In case a package has subpackages, will it suffice to import only the main package? E.g. does importing of com.myMainPackage?* also import com.myMainPackage.mySubPackage?*?**
 
 This is a big NO. We need to understand that the importing of the sub-packages of a package needs to be done explicitly. Importing the parent package only results in the import of the classes within it and not the contents of its child/sub-packages.
 
@@ -7550,7 +7550,7 @@ In the above figure on line 3, we can see that on each array index we are declar
 
 ----
 
-**What is the best way to inject dependency? Also, state the reason.**
+**What is the best way to inject dependency? Also, state the reason?**
 
 There is no boundation for using a particular dependency injection. But the recommended approach is - 
 
@@ -9465,7 +9465,7 @@ public class Main {
 
 ----
 
-**What is a Memory Leak? Discuss some common causes of it.**
+**What is a Memory Leak? Discuss some common causes of it?**
 
 The Java Garbage Collector (GC) typically removes unused objects when they are no longer required, but when they are still referenced, the unused objects cannot be removed. So this causes the memory leak problem. Example - Consider a linked list like the structure below -
 
@@ -9521,13 +9521,13 @@ A thread that has a lock won't be released even after it calls sleep(). Despite 
 
 ----
 
-**Check if a given string is palindrome using recursion.**
+**Check if a given string is palindrome using recursion?**
 
 ```java
 /*
 * Java program to check if a given inputted string is palindrome or not using recursion.
 */
-import java.util.*;
+import java.util?*;
 public class InterviewBit { 
    public static void main(String args[]) { 
        Scanner s = new Scanner(System.in);
@@ -9555,7 +9555,7 @@ public class InterviewBit {
 
 ----
 
-**Write a Java Program to print Fibonacci Series using Recursion.**
+**Write a Java Program to print Fibonacci Series using Recursion?**
 
 ```java
 class InterviewBit {
@@ -9586,7 +9586,7 @@ In the above code, we are printing the base 2 Fibonacci values 0 and 1. And then
 
 ----
 
-**Write a Java program to check if the two strings are anagrams.**
+**Write a Java program to check if the two strings are anagrams?**
 
 The main idea is to validate the length of strings and then if found equal, convert the string to char array and then sort the arrays and check if both are equal.
 
@@ -9622,7 +9622,7 @@ public class Main {
 
 ----
 
-**Write a Java Program to find the factorial of a given number.**
+**Write a Java Program to find the factorial of a given number?**
 
 ```java
 class FindFactorial {
@@ -9648,7 +9648,7 @@ public class Main {
 
 ----
 
-**Given an array of non-duplicating numbers from 1 to n where one number is missing, write an efficient java program to find that missing number.**
+**Given an array of non-duplicating numbers from 1 to n where one number is missing, write an efficient java program to find that missing number?**
 
 Idea is to find the sum of n natural numbers using the formula and then finding the sum of numbers in the given array. Subtracting these two sums results
 in the number that is the actual missing number. This results in O(n) time complexity and O(1) space complexity.
@@ -9676,7 +9676,7 @@ public class IBMissingNumberProblem {
 
 ----
 
-**Write a Java Program to check if any number is a magic number or not. A number is said to be a magic number if after doing sum of digits in each step and inturn doing sum of digits of that sum, the ultimate result (when there is only one digit left) is 1.**
+**Write a Java Program to check if any number is a magic number or not. A number is said to be a magic number if after doing sum of digits in each step and inturn doing sum of digits of that sum, the ultimate result (when there is only one digit left) is 1?**
 
 Example, consider the number:
 
@@ -9712,7 +9712,7 @@ public class IBMagicNumber{
 
 ----
 
-**Write a Java program to create and throw custom exceptions.**
+**Write a Java program to create and throw custom exceptions?**
 
 ```java
 class Main {
@@ -9736,7 +9736,7 @@ And to avoid handling exceptions in the main method, we have used the throws key
 
 ----
 
-**Write a Java program to reverse a string.**
+**Write a Java program to reverse a string?**
 
 ```java
 class Main{
@@ -9767,7 +9767,7 @@ In the above code, we are storing the last character from the string to the firs
 
 ----
 
-**Write a Java program to rotate arrays 90 degree clockwise by taking matrices from user input.**
+**Write a Java program to rotate arrays 90 degree clockwise by taking matrices from user input?**
 
 ```java
 import java.util.Scanner;
@@ -9836,7 +9836,7 @@ In the above code, for rotating the matrix to  90 degrees we are first transposi
 
 ----
 
-**Write a java program to check if any number given as input is the sum of 2 prime numbers.**
+**Write a java program to check if any number given as input is the sum of 2 prime numbers?**
 
 Example :
 
@@ -9882,7 +9882,7 @@ In the above code, for any number n, we find all the 2 pairs of numbers that are
 
 ----
 
-**Write a Java program for solving the Tower of Hanoi Problem.**
+**Write a Java program for solving the Tower of Hanoi Problem?**
 
 ```java
 public class Main
@@ -9905,7 +9905,7 @@ In the above code we are first moving the n-1 disk from Tower A to Tower B, then
 
 ----
 
-**Implement Binary Search in Java using recursion.**
+**Implement Binary Search in Java using recursion?**
 
 ```java
 public class Main
@@ -10017,7 +10017,7 @@ After swapping, a is 20 and b is 10
 
 ----
 
-**Write a Java program to check if a vowel is present in a string.**
+**Write a Java program to check if a vowel is present in a string?**
 
 The following example code shows how to use a regular expression to check whether the string contains vowels:
 
@@ -10032,7 +10032,7 @@ public class Main {
 
     public static boolean stringContainsVowels(String input)
     {
-        return input.toLowerCase().matches(".*[aeiou].*");
+        return input.toLowerCase().matches("?*[aeiou]?*");
     }
 }
 
@@ -10043,7 +10043,7 @@ public class Main {
 
 ----
 
-**Write a Java program to check if the given number is a prime number.**
+**Write a Java program to check if the given number is a prime number?**
 
 You can write a program to divide the given number n, by a number from 2 to n/2 and check the remainder. If the remainder is 0, then it’s not a prime number. The following example code shows one way to check if a given number is a Prime number:
 
@@ -10078,7 +10078,7 @@ Although this program works, it’s not very memory and time-efficient. Consider
 
 ----
 
-**Write a Java program to print a Fibonacci sequence using recursion.**
+**Write a Java program to print a Fibonacci sequence using recursion?**
 
 A Fibonacci sequence is one in which each number is the sum of the two previous numbers. In this example, the sequence begins with 0 and 1. The following example code shows how to use a for loop to print a Fibonacci sequence:
 
@@ -10401,7 +10401,7 @@ public class Main {
 
 ----
 
-**Write a Java program that illustrates merge sort.**
+**Write a Java program that illustrates merge sort?**
 
 Merge sort is one of the most efficient sorting algorithms. It works on the principle of “divide and conquer”. It is based on the idea of breaking down a list into several sub-lists until each sub-list consists of a single element, and then merging those sub-lists in a manner that results in a sorted list. The following example code shows one way to use merge sort:
 
@@ -10906,7 +10906,7 @@ public class Main {
 
 ----
 
-**Write a Java program to show a NullPointerException.**
+**Write a Java program to show a NullPointerException?**
 
 If you are calling a function on null, it will throw a NullPointerException, as shown in the following example code:
 
@@ -10979,7 +10979,7 @@ It’s the same as creating a string, such as Hi\\nHello\\nYes.
 
 ----
 
-**Show an example of switch expressions and multi-label case statements in Java.**
+**Show an example of switch expressions and multi-label case statements in Java?**
 
 The switch expressions were added as a standard feature in Java 14. The following examples show switch expressions as well as multi-label case statements:
 
@@ -11145,7 +11145,7 @@ interface Foo {
 
 ----
 
-**Show an example of using lambda expressions in Java.**
+**Show an example of using lambda expressions in Java?**
 
 Runnable is an excellent example of a functional interface. You can use lambda expressions to create a runnable, as shown in the following example code:
 
@@ -11155,7 +11155,7 @@ Runnable r1 = () -> System.out.println("My Runnable");
 
 ----
 
-**Show examples of overloading and overriding in Java.**
+**Show examples of overloading and overriding in Java?**
 
 When a class has two or more methods with the same name, they are called overloaded methods. The following example code shows as overloaded method called print:
 
@@ -11391,7 +11391,7 @@ You can find the answer in detail here.
 
 ----
 
-**What is the difference between Collection and Collections.**
+**What is the difference between Collection and Collections?**
 
 The difference between Collection and Collections you can find it in detail here.
 
@@ -11876,8 +11876,8 @@ Java Servlets and Java Server Pages (JSP) components together constitute web com
 __Java Servlets dynamically process requests and responses:__
 
 ```java
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet?*;
+import javax.servlet.http?*;
 import java.io.IOException;
 
 public class MyServlet extends HttpServlet {
@@ -11906,8 +11906,8 @@ public class MyServlet extends HttpServlet {
 __JSP pages are used for executing servlets that allow a natural approach to creating static content.__
 
 ```java
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet?*;
+import javax.servlet.http?*;
 import java.io.IOException;
 
 public class MyServlet extends HttpServlet {
@@ -12739,7 +12739,9 @@ The technology establishes an encrypted link between two parties and this link i
 
 URL stands for __Uniform Resource Locator__ and it is the textual reference writing standard to an arbitrary piece of data in the World Wide Web (www). The general structure of the URL is as follows:
 
+```cmd
 protocol://host/local info
+```
 
 protocol – Protocol is for fetching the object (example: HTTP, FTP)
 host – Internet name of the targeted host.
@@ -12755,13 +12757,12 @@ URN stands for the Uniform Resource Name. It is a unique identifier that identif
 
 **What are the steps associated with the servlet life cycle?**
 
-Answer: The following steps are associated with the servlet life cycle:
-
-Loading of the servlet class.
-Instantiation of Servlet.
-Execution of the init method.
-Request handling phase. In this phase, service methods are called.
-Removal from the service phase. In this phase, the destroy method is called.
+The following steps are associated with the servlet life cycle:
+1. Loading of the servlet class.
+2. Instantiation of Servlet.
+3. Execution of the init method.
+4. Request handling phase. In this phase, service methods are called.
+5. Removal from the service phase. In this phase, the destroy method is called.
 
 ----
 
@@ -12977,6 +12978,86 @@ A thin client is a light-weight interface to the application that does not suppo
 
 JavaServer Faces is a user interface (UI) designing framework which is used for Java-based web applications. JavaServer Faces provides a set of reusable UI components- a standard for web applications. JSF is based on the MVC design pattern. It automatically saves the form data to the server and populates the form dates when display on the client side.
 
+1. Create a new Java project in your preferred IDE.
+
+2. Add the JSF library to your project's classpath. The specific steps may vary depending on your IDE.
+
+3. Create a new JavaServer Faces Managed Bean called "HelloBean.java" in your project's source folder:
+
+```java
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean
+@RequestScoped
+public class HelloBean {
+    private String name;
+    private String message;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void sayHello() {
+        message = "Hello, " + name + "!";
+    }
+}
+```
+
+4. Create a JSF XHTML file called "hello.xhtml" in the web content folder of your project:
+
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+    <title>Hello JSF</title>
+</head>
+<body>
+    <h:form>
+        <h:inputText value="#{helloBean.name}" />
+        <h:commandButton value="Say Hello" action="#{helloBean.sayHello}" />
+    </h:form>
+
+    <h:outputText value="#{helloBean.message}" rendered="#{not empty helloBean.message}" />
+</body>
+</html>
+```
+
+5. Configure the JSF servlet mapping in the web.xml file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>JSFExample</display-name>
+
+    <servlet>
+        <servlet-name>FacesServlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FacesServlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+6. Run the application on a servlet container (e.g., Apache Tomcat).
+7. Access the application using the following URL: http://localhost:8080/your-project-name/hello.xhtml.
+
 ----
 
 **What is an EJB platform?**
@@ -12995,13 +13076,13 @@ A deployment descriptor is based on XML (Extensible Markup Language) that suppor
 
 Struts is an application development framework based on MVC (Model-View-Controller) architecture. It is a combination of Java Servlets, JSP, Custom tags, and messages. It is used to design applications for large enterprises. It can be described as:
 
-Model
+*Model*
 The model defines the internal state of a system. It can be either single or a cluster of Java Beans based on app architecture.
 
-View
+*View*
 JSP technology is used to design a view of any enterprise application.
 
-Controller
+*Controller*
 A controller is used to manage the actions of users. It processes the client request and responds based on the request. The main component in the framework is a servlet of class ActionServlet. This servlet is configured by defining a set of ActionMappings.
 
 ----
@@ -13021,10 +13102,9 @@ Hibernate is an object-relational mapping and query service. In hibernate, we ca
 **What are the limitations of Hibernate?**
 
 Following are some limitations of hibernate:
-
-Slower execution of queries.
-Only HQL support is available for composite keys.
-No shared references are available to the value type.
+- Slower execution of queries.
+- Only HQL support is available for composite keys.
+- No shared references are available to the value type.
 
 ----
 
@@ -13058,17 +13138,17 @@ An authorization rule which determines who is permitted to access Web resource c
 
 **How will you explain save() and saveorupdate() methods in hibernate?**
 
-The Save() method in hibernate is used to store an object in the database. It creates a new entry if the record doesn't exist.
+The *Save()* method in hibernate is used to store an object in the database. It creates a new entry if the record doesn't exist.
 
-The Saveorupdate() method in hibernate is used for updating the object using the identifier. If the identifier is unavailable, this method calls save(). If the identifier is available, it will call the update method.
+The *Saveorupdate()* method in hibernate is used for updating the object using the identifier. If the identifier is unavailable, this method calls save(). If the identifier is available, it will call the update method.
 
 ----
 
 **How will you explain load() and get() methods?**
 
-Load(): If an object is missing in the Cache or database, Load() method will throw an exception. Load() method never returns null.
+__Load()__: If an object is missing in the Cache or database, Load() method will throw an exception. Load() method never returns null.
 
-Get(): If an object is missing in the Cache or database, Get() method returns a null value, not the exception.
+__Get()__: If an object is missing in the Cache or database, Get() method returns a null value, not the exception.
 
 ----
 
@@ -13109,22 +13189,373 @@ The code is well tested and generated by the ORM, and only a developer can under
 
 __Session Interface__
 
+In Java, the HttpSession interface is a part of the Java Servlet API and provides a way to store information about a user session on the server-side. It allows you to maintain stateful information across multiple HTTP requests and responses.
+
+Here's an example that demonstrates the usage of HttpSession:
+
+```java
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+
+public class SessionExampleServlet extends HttpServlet {
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get the HttpSession object associated with the request
+        HttpSession session = request.getSession();
+
+        // Store a value in the session
+        session.setAttribute("username", "JohnDoe");
+
+        // Retrieve the value from the session
+        String username = (String) session.getAttribute("username");
+
+        response.getWriter().println("Username from session: " + username);
+    }
+}
+
+```
 
 
 __SessionFactory Interface__
 
+In Java, the SessionFactory interface is part of the Hibernate framework, which is an Object-Relational Mapping (ORM) tool. The SessionFactory is responsible for creating and managing Hibernate Session objects, which are used to interact with the database.
 
+Here's an example that demonstrates the usage of the SessionFactory interface:
+
+```java
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateExample {
+
+    public static void main(String[] args) {
+        // Create the Hibernate configuration
+        Configuration configuration = new Configuration();
+        configuration.configure("hibernate.cfg.xml");
+
+        // Build the SessionFactory
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+        // Open a new session
+        Session session = sessionFactory.openSession();
+
+        // Perform database operations using the session
+        // ...
+
+        // Close the session and the SessionFactory
+        session.close();
+        sessionFactory.close();
+    }
+}
+```
 
 __Configuration Interface__
 
+In Java, the Configuration interface is part of the Hibernate framework and is used to configure Hibernate and specify various settings for the persistence layer. It allows you to customize Hibernate's behavior and define the mappings between Java classes and database tables.
 
+Here's an example that demonstrates the usage of the Configuration interface:
+
+```java
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateExample {
+
+    public static void main(String[] args) {
+        // Create the Hibernate configuration
+        Configuration configuration = new Configuration();
+        configuration.configure("hibernate.cfg.xml");
+
+        // Build the SessionFactory
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+        // Open a new session
+        Session session = sessionFactory.openSession();
+
+        // Perform database operations using the session
+        // ...
+
+        // Close the session and the SessionFactory
+        session.close();
+        sessionFactory.close();
+    }
+}
+```
+
+In this example, we create and use a Configuration object to configure Hibernate. Here's a breakdown of the code:
+
+Configuration configuration = new Configuration();: We create a new Configuration object, which is used to configure Hibernate.
+
+configuration.configure("hibernate.cfg.xml");: We load the configuration from a specific XML file. In this example, the file is named hibernate.cfg.xml. The configuration file typically includes properties like database connection details, Hibernate dialect, mapping files, etc.
+
+SessionFactory sessionFactory = configuration.buildSessionFactory();: We build the SessionFactory using the configuration. This step creates the SessionFactory object based on the provided configuration. The SessionFactory is an expensive object to create and should typically be created once during the application's startup.
+
+Session session = sessionFactory.openSession();: We open a new Session from the SessionFactory. The Session represents a single unit of work with the database and provides methods for querying, inserting, updating, and deleting entities.
+
+Perform database operations using the Session: Once you have a Session, you can use it to perform database operations, such as querying data, saving new entities, updating existing entities, or deleting records.
+
+session.close();: After you are done with the Session, you should close it to release resources and ensure proper cleanup.
+
+sessionFactory.close();: Finally, you should close the SessionFactory when you are done using it, typically during the application shutdown.
+
+The Configuration interface allows you to set up and customize Hibernate's behavior by specifying properties and mappings. It serves as a central point to configure Hibernate before building the SessionFactory and starting database interactions with the help of Session objects.
 
 __Transaction Interface__
 
+In Java, the Transaction interface is part of the Java Persistence API (JPA) and is used to manage transactions in a database environment. It provides methods to control the transaction boundaries, commit or roll back the transaction, and set other transaction-related properties.
 
+The Transaction interface is typically obtained from the EntityManager object, which represents the persistence context and is responsible for managing entities and database operations.
+
+Here's an example that demonstrates the usage of the Transaction interface:
+
+```java
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class JpaExample {
+
+    public static void main(String[] args) {
+        // Create the EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");
+
+        // Create the EntityManager
+        EntityManager em = emf.createEntityManager();
+
+        // Get the EntityTransaction
+        EntityTransaction transaction = em.getTransaction();
+
+        try {
+            // Begin the transaction
+            transaction.begin();
+
+            // Perform database operations using the EntityManager
+            // ...
+
+            // Commit the transaction
+            transaction.commit();
+        } catch (Exception e) {
+            // Roll back the transaction in case of an exception
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+        } finally {
+            // Close the EntityManager
+            em.close();
+        }
+
+        // Close the EntityManagerFactory
+        emf.close();
+    }
+}
+```
+
+In this example, we obtain a Transaction object from the EntityManager. Here's a breakdown of the code:
+
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");: We create an EntityManagerFactory using a persistence unit name. The persistence unit is defined in the persistence.xml file, which specifies the database connection details and other JPA configurations.
+
+EntityManager em = emf.createEntityManager();: We create an EntityManager from the EntityManagerFactory. The EntityManager represents the persistence context and is used to perform database operations and manage entities.
+
+EntityTransaction transaction = em.getTransaction();: We obtain the Transaction object from the EntityManager. The Transaction interface allows us to manage the transaction boundaries and perform commit or rollback operations.
+
+transaction.begin();: We begin the transaction by calling the begin() method. This marks the starting point of the transaction.
+
+Perform database operations using the EntityManager: Within the try block, you can perform various database operations using the EntityManager, such as querying data, saving new entities, updating existing entities, or deleting records.
+
+transaction.commit();: If all the database operations within the transaction are successful, we commit the transaction using the commit() method. This saves the changes to the database permanently.
+
+Catch exceptions and roll back the transaction: If an exception occurs during the transaction, we catch the exception, roll back the transaction using the rollback() method, and handle any necessary error handling or logging.
+
+em.close();: Finally, we close the EntityManager to release resources and ensure proper cleanup.
+
+emf.close();: We close the EntityManagerFactory when we are done using it, typically during the application shutdown.
+
+The Transaction interface allows you to control the boundaries of a transaction, perform commit or rollback operations, and handle any exceptions or errors that occur during the transaction. It ensures that database operations are executed atomically and consistently.
 
 __Query and Criteria Interface__
 
+In Java, the Query and Criteria interfaces are part of the Java Persistence API (JPA) and provide different approaches to perform database queries.
+
+Query Interface:
+The Query interface allows you to create and execute dynamic queries against the database. It provides methods to define the query structure, set parameters, and retrieve the results.
+
+Here's an example that demonstrates the usage of the Query interface:
+
+```java
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import java.util.List;
+
+public class JpaQueryExample {
+
+    public static void main(String[] args) {
+        // Create the EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");
+
+        // Create the EntityManager
+        EntityManager em = emf.createEntityManager();
+
+        try {
+            // Create and execute the query
+            String jpql = "SELECT e FROM Employee e WHERE e.department = :dept";
+            Query query = em.createQuery(jpql);
+            query.setParameter("dept", "IT");
+
+            List<Employee> resultList = query.getResultList();
+
+            // Process the query results
+            for (Employee employee : resultList) {
+                System.out.println(employee.getName());
+            }
+        } finally {
+            // Close the EntityManager
+            em.close();
+        }
+
+        // Close the EntityManagerFactory
+        emf.close();
+    }
+}
+```
+
+
+In Java, the Query and Criteria interfaces are part of the Java Persistence API (JPA) and provide different approaches to perform database queries.
+
+Query Interface:
+The Query interface allows you to create and execute dynamic queries against the database. It provides methods to define the query structure, set parameters, and retrieve the results.
+Here's an example that demonstrates the usage of the Query interface:
+
+java
+Copy code
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import java.util.List;
+
+public class JpaQueryExample {
+
+    public static void main(String[] args) {
+        // Create the EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");
+
+        // Create the EntityManager
+        EntityManager em = emf.createEntityManager();
+
+        try {
+            // Create and execute the query
+            String jpql = "SELECT e FROM Employee e WHERE e.department = :dept";
+            Query query = em.createQuery(jpql);
+            query.setParameter("dept", "IT");
+
+            List<Employee> resultList = query.getResultList();
+
+            // Process the query results
+            for (Employee employee : resultList) {
+                System.out.println(employee.getName());
+            }
+        } finally {
+            // Close the EntityManager
+            em.close();
+        }
+
+        // Close the EntityManagerFactory
+        emf.close();
+    }
+}
+In this example, we use the Query interface to execute a JPQL (Java Persistence Query Language) query. Here's a breakdown of the code:
+
+String jpql = "SELECT e FROM Employee e WHERE e.department = :dept";: We define a JPQL query string. In this example, we select employees from the "Employee" entity where the department is specified as a parameter.
+
+Query query = em.createQuery(jpql);: We create a Query object by passing the JPQL query string to the createQuery() method of the EntityManager.
+
+query.setParameter("dept", "IT");: We set the value of the named parameter ":dept" to "IT" using the setParameter() method.
+
+List<Employee> resultList = query.getResultList();: We execute the query and retrieve the results as a list of Employee objects using the getResultList() method.
+
+Process the query results: We iterate over the list of Employee objects and perform the necessary operations.
+
+Criteria Interface:
+The Criteria interface provides a type-safe and object-oriented way to construct queries dynamically. It allows you to define query criteria using a fluent API without writing any SQL or JPQL statements directly.
+
+Here's an example that demonstrates the usage of the Criteria interface:
+
+```java
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import java.util.List;
+
+public class JpaCriteriaExample {
+
+    public static void main(String[] args) {
+        // Create the EntityManagerFactory
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myPersistenceUnit");
+
+        // Create the EntityManager
+        EntityManager em = emf.createEntityManager();
+
+        try {
+            // Create CriteriaBuilder and CriteriaQuery
+            CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+            CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
+            Root<Employee> root = criteriaQuery.from(Employee.class);
+
+            // Define query criteria
+            Predicate departmentPredicate = criteriaBuilder.equal(root.get("department"), "IT");
+            Predicate salaryPredicate = criteriaBuilder.greaterThan(root.get("salary"), 50000);
+            criteriaQuery.where(criteriaBuilder.and(departmentPredicate, salaryPredicate));
+
+            // Execute the query
+            List<Employee> resultList = em.createQuery(criteriaQuery).getResultList();
+
+            // Process the query results
+            for (Employee employee : resultList) {
+                System.out.println(employee.getName());
+            }
+        } finally {
+            // Close the EntityManager
+            em.close();
+        }
+
+        // Close the EntityManagerFactory
+        emf.close();
+    }
+}
+```
+
+In this example, we use the Criteria interface to construct a dynamic query. Here's a breakdown of the code:
+
+CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();: We obtain a CriteriaBuilder instance from the EntityManager.
+
+CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);: We create a CriteriaQuery object, specifying the result type as Employee.
+
+Root<Employee> root = criteriaQuery.from(Employee.class);: We create a Root object that represents the entity type on which the query is based. In this case, we use the Employee entity.
+
+Predicate departmentPredicate = criteriaBuilder.equal(root.get("department"), "IT");: We create a predicate to specify the department criterion, comparing the "department" attribute of the Employee entity with the value "IT".
+
+Predicate salaryPredicate = criteriaBuilder.greaterThan(root.get("salary"), 50000);: We create a predicate to specify the salary criterion, checking if the "salary" attribute of the Employee entity is greater than 50000.
+
+criteriaQuery.where(criteriaBuilder.and(departmentPredicate, salaryPredicate));: We combine the predicates using the and() method of the CriteriaBuilder to define the overall query criteria.
+
+List<Employee> resultList = em.createQuery(criteriaQuery).getResultList();: We execute the query by passing the CriteriaQuery object to the createQuery() method of the EntityManager and retrieve the results as a list of Employee objects.
+
+Process the query results: We iterate over the list of Employee objects and perform the necessary operations.
+
+Both the Query and Criteria interfaces provide different approaches to construct and execute dynamic queries in JPA. The choice between them depends on the specific requirements and coding preferences of your application.
 
 ----
 
@@ -13167,7 +13598,7 @@ The component existing in this tier is used to provide business logic for the sy
 
 ----
 
-**Explain JTA, JNDI, and JMS.**
+**Explain JTA, JNDI, and JMS?**
 
 JTA represents JAVA Transaction API, which is used for coordinating and managing transactions across the enterprise information system.
 
@@ -13177,23 +13608,23 @@ JMS represents the Java Messaging Service, which is used for receiving and sendi
 
 ----
 
-**Explain the J2EE tiers.**
+**Explain the J2EE tiers?**
 
 J2EE has the following tiers:
 
-Client Tier
+*Client Tier*
 It indicates to the browser from which request is processed to the server. The interfaces that are available in this tier are HTML browser, Java application, an applet, or a non-java application.
 
 
-Middle Tier
+*Middle Tier*
 It comprises of a presentation tier and integration tier. The UI (User Interface) is created in the presentation tier using JavaServer Pages. The business logic is written inside the business tier with the help of Enterprise Java Bean. The objects of the database are created in the integration tier.
 
-Backend
+*Backend*
 It constitutes the Enterprise Information System (EIS) which is used to store the data.
 
 ----
 
-**Describe the EAR, WAR, and JAR.**
+**Describe the EAR, WAR, and JAR?**
 
 EAR stands for Enterprise Archive file. It consists of the components of the web, EJB, and client. All the components of the EAR are packed in a compressed file with the extension .ear.
 
@@ -13232,6 +13663,7 @@ In action mapping, a user specifies action class for a particular URL, i.e., pat
 ----
 
 **What do you understand by ActionForm?**
+
 ActionForm is a Java bean which may associate one or more ActionMappings. A java bean changes to FormBean when a user extends a class org.apache.struts.action.ActionForm. ActionForm object is generally populated on the server side automatically, and the client enters data from UI. ActionForm manages the session state for a web application.
 
 ----
@@ -13272,7 +13704,7 @@ List of services that every container must provide for its components.
 
 ----
 
-**What do you understand by Connector? Explain Connector Architecture.**
+**What do you understand by Connector? Explain Connector Architecture?**
 
 A connector is a standard extension mechanism for containers, which provides connectivity to enterprise information systems. It is specific to an enterprise information system and contains a resource adapter and application development tools for enterprise information system connectivity. The resource adapter is plugged into a container through its support for system-level contracts, defined in the Connector architecture.
 
@@ -13306,7 +13738,7 @@ JDK is a kit providing an environment to execute and develop the Java program. O
 
 ----
 
-**Define Locale.**
+**Define Locale?**
 
 A locale object shows a specific political, cultural, or geographical region. An operation that requires locale is called locale-sensitive.
 
@@ -13334,7 +13766,7 @@ Mentioned below are a few advanced level Java and J2EE programming interview que
 
 ----
 
-**Define HQL.**
+**Define HQL?**
 
 HQL (Hibernate Query Language) is an object-oriented query language. Unlike SQL, which works on tables and columns, HQL works on persistent objects and properties. HQL is a superset of Java Persistence Query Language (JPQL). This means that all JPQL queries are valid HQL queries, but all HQL queries are not JPQL queries
 
@@ -13395,13 +13827,12 @@ The presentation tier, Resource tier, and Business tier are the components of mu
 **What are the different modules in Spring?**
 
 The list of spring modules is
-
-Aspect-oriented programming
-DAO module
-O/R mapping module
-Core container module
-Web module
-Application context module.
+- Aspect-oriented programming
+- DAO module
+- O/R mapping module
+- Core container module
+- Web module
+- Application context module.
 
 ----
 
@@ -13411,22 +13842,24 @@ A servlet is a server-side component that provides development mechanisms for se
 
 ----
 
-**Define the various phases in the life cycle of a servlet.**
+**Define the various phases in the life cycle of a servlet?**
 
 The different phases are:
-
-Servlet instantiation
-Servlet class loading
-The init method
-Removal from the service
-Request handling
+- Servlet instantiation
+- Servlet class loading
+- The init method
+- Removal from the service
+- Request handling
 
 ----
 
-**Define JMS, JNDI, and JTA.**
-JNDI: It is Java Naming Directory Interface. It helps access information from the directory services.
-JMS: It is a Java Messaging Service. It is responsible for receiving and sending messages through various messaging systems.
-JTA: It is a Java Transaction API. It coordinates and manages the transaction in an enterprise information system.
+**Define JMS, JNDI, and JTA?**
+
+*JNDI*: It is Java Naming Directory Interface. It helps access information from the directory services.
+
+*JMS*: It is a Java Messaging Service. It is responsible for receiving and sending messages through various messaging systems.
+
+*JTA*: It is a Java Transaction API. It coordinates and manages the transaction in an enterprise information system.
 
 ----
 
@@ -13436,7 +13869,7 @@ Connection pooling is a practice generally used to extract already existing conn
 
 ----
 
-**Define hibernate proxy.**
+**Define hibernate proxy?**
 
 It is an object proxy that includes the process of retrieving the objects until and unless you require them.
 
@@ -13448,26 +13881,19 @@ Configuration cfg = new Configuration(); cfg.addResource("dir/hibernate.hbm.xml"
 
 ----
 
-**Mention the collection types in hibernate.**
+**Mention the collection types in hibernate?**
 
 List, array, map, bag, set are the collection types in hibernate.
 
 ----
 
-**Mention the JSP tag types.**
+**Mention the JSP tag types?**
 
 JSP tags are divided into four categories:
-
-Declarations
-Directives
-Expressions
-Scriptlets
-
-----
-
-**How much does a Java developer earn in the US?**
-
-The average annual salary of a Java developer is around $106,019 in the US.
+- Declarations
+- Directives
+- Expressions
+- Scriptlets
 
 ----
 
@@ -13560,11 +13986,11 @@ No shared references to value types.
 
 **What are the advantages of hibernate?**
 
- Hibernate is portable i mean database independent, Vendor independence.
- Standard ORM also supports JPA
- Mapping of the Domain object to the relational database.
- Hibernate is better than plain JDBC.
- JPA provider in JPA based applications.
+Hibernate is portable i mean database independent, Vendor independence.
+Standard ORM also supports JPA
+Mapping of the Domain object to the relational database.
+Hibernate is better than plain JDBC.
+JPA provider in JPA based applications.
 10) What is ORM?
 Java 2 Platform Enterprise Edition (J2EE)
 Java 2 Platform Enterprise Edition (J2EE)
@@ -13590,6 +14016,63 @@ get() method returns null if the object can’t be found. The load() method may 
 
 { ? = call thisISTheProcedure() }
 
+To invoke a stored procedure in Hibernate, you can use the org.hibernate.procedure.ProcedureCall interface. Here's an example of how to invoke a stored procedure using Hibernate:
+
+```java
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.procedure.ProcedureCall;
+import org.hibernate.procedure.ProcedureOutputs;
+
+public class HibernateStoredProcedureExample {
+
+    public static void main(String[] args) {
+        // Create the Hibernate configuration
+        Configuration configuration = new Configuration();
+        configuration.configure("hibernate.cfg.xml");
+
+        // Build the SessionFactory
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+        // Open a new session
+        Session session = sessionFactory.openSession();
+
+        try {
+            // Create a ProcedureCall instance for the stored procedure
+            ProcedureCall procedureCall = session.createStoredProcedureCall("your_stored_procedure_name");
+
+            // Bind input parameters if necessary
+            procedureCall.registerParameter("param1", String.class, ParameterMode.IN).bindValue("value1");
+            procedureCall.registerParameter("param2", Integer.class, ParameterMode.IN).bindValue(123);
+
+            // Execute the stored procedure
+            ProcedureOutputs procedureOutputs = procedureCall.getOutputs();
+
+            // Process the procedure outputs if necessary
+            // ...
+
+        } finally {
+            // Close the session and the SessionFactory
+            session.close();
+            sessionFactory.close();
+        }
+    }
+}
+```
+
+In this example, we invoke a stored procedure using Hibernate's ProcedureCall interface. Here's a breakdown of the code:
+
+ProcedureCall procedureCall = session.createStoredProcedureCall("your_stored_procedure_name");: We create a ProcedureCall instance by calling the createStoredProcedureCall() method on the Hibernate Session. Replace "your_stored_procedure_name" with the name of your stored procedure.
+
+procedureCall.registerParameter("param1", String.class, ParameterMode.IN).bindValue("value1");: If your stored procedure has input parameters, you can bind them using the registerParameter() method. Provide the parameter name, its Java type, and the parameter mode (IN, OUT, or INOUT). You can then set the parameter value using the bindValue() method.
+
+ProcedureOutputs procedureOutputs = procedureCall.getOutputs();: We execute the stored procedure by calling the getOutputs() method on the ProcedureCall. This will execute the stored procedure and retrieve the outputs.
+
+Process the procedure outputs if necessary: You can use the ProcedureOutputs object to access the outputs of the stored procedure and process them according to your requirements.
+
+Make sure to configure your Hibernate mapping files or annotations properly to map the stored procedure and its parameters. Additionally, ensure that your database and the JDBC driver support stored procedures. The specific configuration may vary depending on your Hibernate version, database, and ORM setup.
+
 ----
 
 **What are the benefits of ORM?**
@@ -13613,13 +14096,13 @@ Query and Criteria Interface
 
 **What is the file extension used for hibernate mapping file?**
 
-The name of the file should be like this: filename.hbm.xml
+The name of the file should be like this: `filename.hbm.xml`
 
 ----
 
 **What is the file name of hibernate configuration file?**
 
-The name of the file should be like this: hibernate.cfg.xml
+The name of the file should be like this: `hibernate.cfg.xml`
 
 ----
 
@@ -13627,9 +14110,8 @@ The name of the file should be like this: hibernate.cfg.xml
 
 Only changing the full property full database can be replaced.
 
-```java
+```xml
 <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property> and
-
 <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 ```
 
@@ -13638,7 +14120,7 @@ Only changing the full property full database can be replaced.
 **How to add Hibernate mapping file in hibernate configuration file?**
 
 ```java
-By <mapping resource=” filename.hbm.xml”/>
+By <mapping resource="filename.hbm.xml"/>
 ```
 
 ----
@@ -13679,7 +14161,7 @@ A thin client is a program interface to the application that does not have any o
 
 ----
 
-**Differentiate between .ear,  .jar and .war files.**
+**Differentiate between .ear,  .jar and .war files?**
 
 .jar files: These files are with the .jar extension. The .jar files contain the libraries, resources and accessories files like property files.
 .war files: These files are with the .war extension. The .war file contains JSP, HTML, javascript and other files necessary for the development of web applications.
@@ -13701,18 +14183,24 @@ Expressions
 **How to access web.xml init parameters from JSP page?**
 
 For example, if you have:
+
+```xml
 <context-param> <param-name>Id</param-name> <param-value>this is the value</param-value></context-param>
+```
+
 You can access this parameter
 
-Id: <h:outputText value="#{initParam['Id']}"/>
+```xml
+<h:outputText value="#{initParam['Id']}"/>
+```
 
 ----
 
 **What are JSP Directives?**
 
-1.page Directives <%@page language=”java” %>
-2. include Directives: <%@ include file=”/header.jsp” %>
-3. taglib Directives <%@ taglib uri=”tlds/taglib.tld” prefix=”html” %>
+1.page Directives `<%@page language=”java” %>`
+2. include Directives: `<%@ include file=”/header.jsp” %>`
+3. taglib Directives `<%@ taglib uri=”tlds/taglib.tld” prefix=”html” %>`
 
 ----
 
@@ -13724,7 +14212,19 @@ An EAR file is a JAR file with an .ear extension. A J2EE application with all of
 
 **What will happen when you compile and run the following code?**
 
-public class MyClass { public static void main(String argv[]){ int array[]=new int[]{1,2,3}; System.out.println(array [1]); } } Answer: Compiled and shows output : 2
+```java
+public class Main
+{
+    public static void main(String argv[])
+    {
+        int array[]=new int[]{1,2,3};
+        System.out.println(array [1]);
+    }
+}
+
+// Output:
+// 2
+```
 
 ----
 
@@ -13732,11 +14232,139 @@ public class MyClass { public static void main(String argv[]){ int array[]=new i
 
 Struts framework is a Model-View-Controller(MVC) architecture for designing large-scale applications. It is a combination of Java Servlets, JSP, Custom tags, and message. Struts help you to create an extensible development environment for your application, based on published standards and proven design patterns. Model in many applications represents the internal state of the system as a set of one or more JavaBeans.The View is most often constructed using JavaServer Pages (JSP) technology.The Controller is focused on receiving requests from the client and producing the next phase of the user interface to an appropriate View component. The primary component of the Controller in the framework is a servlet of class ActionServlet. This servlet is configured by defining a set of ActionMappings.
 
+Sure! Here's a simple example of a Struts application in Java:
+
+Create a new Java project in your preferred IDE.
+
+Add the necessary Struts dependencies to your project. You can use a build tool like Maven or Gradle, or manually download the JAR files and add them to your project's classpath. The core Struts library and its dependencies include:
+
+struts-core.jar
+struts-taglib.jar
+struts-tiles.jar (optional, for tile-based layouts)
+Create a struts.xml configuration file in the src directory of your project. This file will define the mapping between URLs, actions, and result pages. Here's a sample struts.xml configuration:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <package name="default" namespace="/" extends="struts-default">
+    <action name="hello" class="com.example.HelloAction">
+      <result>/hello.jsp</result>
+    </action>
+  </package>
+</struts>
+```
+
+Create a Java class called HelloAction in the com.example package. This class will define the logic for handling the "hello" action. Here's an example:
+
+```java
+package com.example;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloAction extends ActionSupport {
+    private String message;
+
+    public String execute() {
+        message = "Hello, Struts!";
+        return SUCCESS;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+}
+```
+
+Create a JSP file called hello.jsp in the WebContent directory. This file will display the message from the action class. Here's an example:
+
+```html
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Hello Struts</title>
+</head>
+<body>
+    <h1>${message}</h1>
+</body>
+</html>
+```
+
+Configure your web application deployment descriptor (web.xml) in the WEB-INF directory. Add the following servlet mapping to route requests to Struts:
+
+```xml
+<servlet>
+    <servlet-name>struts2</servlet-name>
+    <servlet-class>org.apache.struts2.dispatcher.ng.servlet.StrutsServlet</servlet-class>
+    <init-param>
+        <param-name>config</param-name>
+        <param-value>/WEB-INF/struts.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>struts2</servlet-name>
+    <url-pattern>/*</url-pattern>
+</servlet-mapping>
+```
+
+Deploy your application to a web server (e.g., Tomcat) and access the following URL in your browser: http://localhost:8080/your-app-context/hello. You should see the "Hello, Struts!" message displayed on the page.
+
+This example demonstrates the basic structure of a Struts application, where requests are mapped to actions defined in the struts.xml configuration file. The actions handle the request and forward the user to a result page, such as a JSP.
+
 ----
 
 **What is ActionErrors?**
 
 ActionErrors object that encapsulates any validation errors that have been found. If no errors are found, return null or an ActionErrors object with no recorded error messages.The default implementation attempts to forward to the HTTP version of this method. Holding request parameters  mapping and request  and returns set of validation errors, if validation failed; an empty set or null
+
+```java
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MyAction extends ActionSupport {
+    private String username;
+    private String password;
+
+    public String execute() {
+        // Validate the username and password
+        if (username == null || username.isEmpty()) {
+            addActionError("Username is required");
+        }
+        if (password == null || password.isEmpty()) {
+            addActionError("Password is required");
+        }
+
+        // Handle any errors
+        if (hasErrors()) {
+            return INPUT;
+        }
+
+        // Process the login logic
+        // ...
+
+        return SUCCESS;
+    }
+
+    // Getters and setters for username and password
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
+```
 
 ----
 
@@ -13744,11 +14372,146 @@ ActionErrors object that encapsulates any validation errors that have been found
 
 ActionForm is a Java bean that associates one or more ActionMappings. A java bean become FormBean when extend org.apache.struts.action.ActionForm class. ActionForm object is automatically populated on the server side which data has been entered by the client from UI. ActionForm maintains the session state for a web application.
 
+
+In Struts 1.x, the ActionForm class is used to encapsulate and validate the user input from HTML forms. Here's an example of how to create and use an ActionForm in a Java class:
+
+Create a Java class that extends org.apache.struts.action.ActionForm:
+
+```java
+import org.apache.struts.action.ActionForm;
+
+public class LoginForm extends ActionForm {
+    private String username;
+    private String password;
+
+    // Default constructor
+    public LoginForm() {
+    }
+
+    // Getters and setters for the form fields
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Additional validation or business logic methods
+    // ...
+}
+```
+
+In this example, the LoginForm class extends ActionForm and defines two fields: username and password. It also provides the corresponding getters and setters for these fields.
+
+Configure the ActionForm in your struts-config.xml file:
+
+```xml
+<struts-config>
+    <form-beans>
+        <form-bean name="loginForm" type="com.example.LoginForm" />
+    </form-beans>
+    <action-mappings>
+        <action path="/login" type="com.example.LoginAction" name="loginForm" scope="request">
+            <forward name="success" path="/success.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+    </action-mappings>
+</struts-config>
+```
+
+In this example, we define a form bean with the name "loginForm" and the corresponding class "com.example.LoginForm".
+
+Create an action class to handle the form submission and process the input:
+
+```java
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginAction extends Action {
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        LoginForm loginForm = (LoginForm) form;
+
+        // Get the username and password from the form
+        String username = loginForm.getUsername();
+        String password = loginForm.getPassword();
+
+        // Perform validation or business logic
+        if (username.equals("admin") && password.equals("password")) {
+            return mapping.findForward("success");
+        } else {
+            return mapping.findForward("failure");
+        }
+    }
+}
+```
+
+In this example, the LoginAction class extends Action and overrides the execute() method. Inside the method, we cast the ActionForm parameter to our specific LoginForm class and retrieve the username and password from the form.
+
+We can perform validation or business logic on the form data and return an appropriate ActionForward. In this case, if the username is "admin" and the password is "password", we return the "success" forward, which will redirect the user to the success.jsp page. Otherwise, we return the "failure" forward, redirecting the user to the failure.jsp page.
+
+Create the JSP files for success and failure pages (success.jsp and failure.jsp) in the appropriate location.
+Note that this example is specific to Struts 1.x. Struts 2.x uses a different approach for handling forms.
+
 ----
 
 **What is action mapping?**
 
 In action mapping, we specify action class for particular URL ie path and different target view ie forwards on to which request response will be forwarded.The ActionMapping represents the information that the ActionServlet knows about the mapping of a particular request to an instance of a particular Action class. The mapping is passed to the execute() method of the Action class, enabling access to this information directly.
+
+Sure! In Struts 1.x, the ActionMapping class is used to map a URL pattern to an action class. Here's an example of how to define and use an action mapping in a Java class:
+
+Configure the action mapping in your struts-config.xml file:
+
+```xml
+<struts-config>
+    <action-mappings>
+        <action path="/hello" type="com.example.HelloAction" name="helloForm" scope="request" validate="true">
+            <forward name="success" path="/success.jsp" />
+        </action>
+    </action-mappings>
+</struts-config>
+```
+
+In this example, we define an action mapping for the URL pattern "/hello". The type attribute specifies the fully qualified class name of the action class that will handle this URL pattern. The name attribute specifies the form bean name associated with this action. The scope attribute indicates the scope in which the form bean should be stored (e.g., request, session). The validate attribute specifies whether to perform form validation. The forward element defines the result forward for a successful execution of the action.
+
+Create an action class to handle the action mapping:
+
+```java
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloAction extends Action {
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // Perform any necessary logic or processing
+
+        return mapping.findForward("success");
+    }
+}
+```
+
+In this example, the HelloAction class extends Action and overrides the execute() method. Inside the method, you can perform any necessary logic or processing for the action. The ActionMapping parameter provides access to the configuration defined in struts-config.xml. In this case, we simply return the "success" forward defined in the action mapping.
+
+Create the JSP file for the success page (success.jsp) in the appropriate location.
+When a user accesses the URL pattern "/hello" in the application, Struts will look for the corresponding action mapping defined in struts-config.xml. It will then instantiate the associated action class (HelloAction in this example) and call its execute() method. The action class can perform any necessary logic or processing and return the appropriate forward, which will determine the next page to display.
+
+Note that this example is specific to Struts 1.x. Struts 2.x uses a different approach for action mappings.
 
 ----
 
@@ -13767,14 +14530,13 @@ Controller: The Controller is focused on receiving requests from the client and 
 **What are different modules in spring?**
 
 There are seven core modules in spring
-
-The Core container module
-O/R mapping module (Object/Relational)
-DAO module
-Application context module
-Aspect Oriented Programming
-Web module
-MVC module
+- The Core container module
+- O/R mapping module (Object/Relational)
+- DAO module
+- Application context module
+- Aspect Oriented Programming
+- Web module
+- MVC module
 
 ----
 
@@ -13800,7 +14562,7 @@ Provide extension points
 
 ----
 
-**ActionServlet, RequestProcessor, and Action classes are the components of ...**
+**ActionServlet, RequestProcessor, and Action classes are the components of ..?**
 
 Controller
 
@@ -13890,7 +14652,7 @@ Simplified Connectivity: J2EE facilitates applications' connectivity, enabling t
 
 ----
 
-**Name various components of J2EE application architecture.**
+**Name various components of J2EE application architecture?**
 
 J2EE is made up of 3 main components (tiers) - Client tier, Middle tier, Enterprise data tier:
 
@@ -13904,22 +14666,20 @@ Enterprise Data Tier: Database servers, resource management programmes, and seve
 
 Given below are the important technologies provided to J2EE platform:
 
-Java Server Pages (JSP): Delivering XML and HTML documents makes use of this. In addition to these, we may use other sorts of data using OutputStream.
-Java API for XML Based RPC (JAX-RPC): This is used to create web applications and clients that employ Remote Procedure Calls and XML.
-Java Servlets: The request-response approach can be used to access applications hosted by servers, which are extended by classes known as servlets.
-Enterprise Java Beans: This is a server-side component that provides runtime environment, security, servlet lifecycle management, transaction management, and other services in order to encapsulate the business logic of the application.
-J2EE Deployment API: It offers specifications for web services deployment.
-J2EE Connector Architecture: This establishes a common framework for linking J2EE platforms with other EIS (Enterprise Information Systems), including mainframe operations, database systems, and many legacy applications written in other languages.
-J2EE Authorization Contract for Containers: This is used to specify security agreements between application servers and authorization policy modules.
-Java Management Extensions (JMX): They are used to provide tools for managing and monitoring networks, objects, devices, and applications.
-Java API for XML Registries: This gives users a consistent API to access several XML Registries, enabling the infrastructure needed to create and deploy web services.
-Java Message Service (JMS): This messaging standard enables distributed, loosely coupled, asynchronous, and reliable communication across various J2EE components so that they can create, send, receive, and read messages.
-Java Transaction API (JTA): This is used to specify the Java standard interfaces for managers and transaction systems.
-Java Naming and Directory Interface (JNDI): For Java-based applications, this API offers name and directory functionality.
-JDBC Data Access API: This offers APIs for obtaining data from several data sources, including relational databases, flat files, and spreadsheets.
-Common Object Request Broker Architecture (CORBA): In order to facilitate system communication implemented on many platforms, this standard for establishing Object Management Groups is provided.
-Get Access to 200+ Hiring Partners in Our Bootcamp
-Full Stack Java Developer Career BootcampEXPLORE COURSEGet Access to 200+ Hiring Partners in Our Bootcamp
+*Java Server Pages (JSP)*: Delivering XML and HTML documents makes use of this. In addition to these, we may use other sorts of data using OutputStream.
+*Java API for XML Based RPC (JAX-RPC)*: This is used to create web applications and clients that employ Remote Procedure Calls and XML.
+*Java Servlets*: The request-response approach can be used to access applications hosted by servers, which are extended by classes known as servlets.
+*Enterprise Java Beans*: This is a server-side component that provides runtime environment, security, servlet lifecycle management, transaction management, and other services in order to encapsulate the business logic of the application.
+*J2EE Deployment API*: It offers specifications for web services deployment.
+*J2EE Connector Architecture*: This establishes a common framework for linking J2EE platforms with other EIS (Enterprise Information Systems), including mainframe operations, database systems, and many legacy applications written in other languages.
+*J2EE Authorization Contract for Containers*: This is used to specify security agreements between application servers and authorization policy modules.
+*Java Management Extensions (JMX)*: They are used to provide tools for managing and monitoring networks, objects, devices, and applications.
+*Java API for XML Registries*: This gives users a consistent API to access several XML Registries, enabling the infrastructure needed to create and deploy web services.
+*Java Message Service (JMS)*: This messaging standard enables distributed, loosely coupled, asynchronous, and reliable communication across various J2EE components so that they can create, send, receive, and read messages.
+*Java Transaction API (JTA)*: This is used to specify the Java standard interfaces for managers and transaction systems.
+*Java Naming and Directory Interface (JNDI)*: For Java-based applications, this API offers name and directory functionality.
+*JDBC Data Access API*: This offers APIs for obtaining data from several data sources, including relational databases, flat files, and spreadsheets.
+*Common Object Request Broker Architecture (CORBA)*: In order to facilitate system communication implemented on many platforms, this standard for establishing Object Management Groups is provided.
 
 ----
 
@@ -14022,7 +14782,7 @@ Legal Differences: Every government has its own set of customary laws, privacy l
 
 ----
 
-**What are Connectors? Describe the Connector Architecture.**
+**What are Connectors? Describe the Connector Architecture?**
 
 Connectors are used to offer connectivity to various enterprise information systems through standard extension protocols. Resource adapters and system-level contracts, both of which are unique to enterprise information systems, make up a connector architecture. Plugging the resource adapters into the container. For a resource adapter to be plugged into J2EE applications, it must satisfy certain contracts that the connector architecture prescribes, such as security, transaction, resource management, etc.
 
@@ -14130,7 +14890,7 @@ An XML file with one or more asant targets is referred to as a build file. A tar
 
 ----
 
-**Explain business logic.**
+**Explain business logic?**
 
 The code that contains an application's functionality is known as business logic. This logic is implemented in the EJB (Enterprise JavaBeans) architecture by the enterprise bean's methods.
 
@@ -14355,7 +15115,7 @@ Top level containers – The containers at the top of any swing component hierar
 Applet
 Dialog
 Frame
-. General purpose containers – The intermediate containers are
+General purpose containers – The intermediate containers are
 Panel
 Scroll pane
 Split pane
@@ -14421,66 +15181,265 @@ modal – True for modal type, false for modeless type.
 
 # https://quescol.com/interview-preparation/core-java-coding-questions
 
-**Write a program to reverse an integer in Java.**
+**Write a program to reverse an integer in Java?**
 
 ```java
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+public class HelloAction extends Action {
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // Perform any necessary logic or processing
+
+        return mapping.findForward("success");
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to check whether an integer is Armstrong number or not.**
+**Write a program in Java to check whether an integer is Armstrong number or not?**
 
 ```java
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        int number = 153;
+        boolean isArmstrong = isArmstrongNumber(number);
 
+        if (isArmstrong) {
+            System.out.println(number + " is an Armstrong number.");
+        } else {
+            System.out.println(number + " is not an Armstrong number.");
+        }
+    }
+
+    public static boolean isArmstrongNumber(int number) {
+        int originalNumber = number;
+        int result = 0;
+        int digits = countDigits(number);
+
+        while (number != 0) {
+            int digit = number % 10;
+            result += Math.pow(digit, digits);
+            number /= 10;
+        }
+
+        return result == originalNumber;
+    }
+
+    public static int countDigits(int number) {
+        int count = 0;
+
+        while (number != 0) {
+            number /= 10;
+            count++;
+        }
+
+        return count;
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to check given number is prime or not.**
+**Write a program in Java to check given number is prime or not?**
 
 ```java
+public class PrimeNumber {
+    public static void main(String[] args) {
+        int number = 29;
+        boolean isPrime = isPrimeNumber(number);
 
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+
+    public static boolean isPrimeNumber(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to print the Fibonacci series using iteration.**
+**Write a program in Java to print the Fibonacci series using iteration?**
 
 ```java
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10; // Number of Fibonacci numbers to print
 
+        System.out.println("Fibonacci Series:");
+        printFibonacciSeries(n);
+    }
+
+    public static void printFibonacciSeries(int n) {
+        int first = 0;
+        int second = 1;
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(first + " ");
+
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to print the Fibonacci series using recursion.**
+**Write a program in Java to print the Fibonacci series using recursion?**
 
 ```java
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10; // Number of Fibonacci numbers to print
 
+        System.out.println("Fibonacci Series:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to check whether a number is Palindrome or not using iteration.**
+**Write a program in Java to check whether a number is Palindrome or not using iteration?**
 
 ```java
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        int number = 12321;
+        
+        if (isPalindrome(number)) {
+            System.out.println(number + " is a palindrome number.");
+        } else {
+            System.out.println(number + " is not a palindrome number.");
+        }
+    }
 
+    public static boolean isPalindrome(int number) {
+        int originalNumber = number;
+        int reversedNumber = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            number /= 10;
+        }
+
+        return originalNumber == reversedNumber;
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to check whether a number is Palindrome or not using recursion.**
+**Write a program in Java to check whether a number is Palindrome or not using recursion?**
 
 ```java
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        int number = 12321;
+        
+        if (isPalindrome(number)) {
+            System.out.println(number + " is a palindrome number.");
+        } else {
+            System.out.println(number + " is not a palindrome number.");
+        }
+    }
 
+    public static boolean isPalindrome(int number) {
+        int originalNumber = number;
+        int reversedNumber = reverseNumber(number);
+
+        return originalNumber == reversedNumber;
+    }
+
+    public static int reverseNumber(int number) {
+        if (number < 10) {
+            return number;
+        }
+
+        int lastDigit = number % 10;
+        int remainingDigits = number / 10;
+        int reversedNumber = reverseNumber(remainingDigits);
+
+        return concatenateDigits(reversedNumber, lastDigit);
+    }
+
+    public static int concatenateDigits(int number, int digit) {
+        int placeValue = 1;
+        int temp = number;
+
+        while (temp >= 10) {
+            temp /= 10;
+            placeValue *= 10;
+        }
+
+        return (number * 10) + (digit * placeValue);
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to find greatest among three integers.**
+**Write a program in Java to find greatest among three integers?**
 
 ```java
+public class GreatestNumber {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 15;
 
+        int greatest = findGreatestNumber(num1, num2, num3);
+
+        System.out.println("The greatest number among " + num1 + ", " + num2 + ", and " + num3 + " is: " + greatest);
+    }
+
+    public static int findGreatestNumber(int num1, int num2, int num3) {
+        int greatest = num1;
+
+        if (num2 > greatest) {
+            greatest = num2;
+        }
+
+        if (num3 > greatest) {
+            greatest = num3;
+        }
+
+        return greatest;
+    }
+}
 ```
 
 ----
@@ -14488,7 +15447,22 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to find sum of digits of a number using recursion?**
 
 ```java
+public class SumOfDigits {
+    public static void main(String[] args) {
+        int number = 12345;
+        int sum = sumOfDigits(number);
 
+        System.out.println("Sum of digits of " + number + " is: " + sum);
+    }
+
+    public static int sumOfDigits(int number) {
+        if (number == 0) {
+            return 0;
+        } else {
+            return number % 10 + sumOfDigits(number / 10);
+        }
+    }
+}
 ```
 
 ----
@@ -14496,7 +15470,28 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to swap two numbers without using third variable?**
 
 ```java
+public class SwapNumbers {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
 
+        System.out.println("Before swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+
+        swapNumbers(num1, num2);
+
+        System.out.println("After swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+    }
+
+    public static void swapNumbers(int num1, int num2) {
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
+    }
+}
 ```
 
 ----
@@ -14504,15 +15499,60 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to swap two numbers using third variable?**
 
 ```java
+public class SwapNumbers {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
 
+        System.out.println("Before swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+
+        swapNumbers(num1, num2);
+
+        System.out.println("After swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+    }
+
+    public static void swapNumbers(int num1, int num2) {
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to find prime factors of a given integer.**
+**Write a program in Java to find prime factors of a given integer?**
 
 ```java
+public class PrimeFactors {
+    public static void main(String[] args) {
+        int number = 84;
 
+        System.out.println("Prime factors of " + number + ":");
+        findPrimeFactors(number);
+    }
+
+    public static void findPrimeFactors(int number) {
+        for (int i = 2; i <= number; i++) {
+            if (number % i == 0) {
+                boolean isPrime = true;
+                for (int j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}
 ```
 
 ----
@@ -14520,7 +15560,26 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to add two integer without using arithmetic operator?**
 
 ```java
+public class AddWithoutOperator {
+    public static void main(String[] args) {
+        int num1 = 15;
+        int num2 = 27;
 
+        int sum = addWithoutOperator(num1, num2);
+
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+    }
+
+    public static int addWithoutOperator(int num1, int num2) {
+        while (num2 != 0) {
+            int carry = num1 & num2;
+            num1 = num1 ^ num2;
+            num2 = carry << 1;
+        }
+
+        return num1;
+    }
+}
 ```
 
 ----
@@ -14528,167 +15587,571 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to find given number is perfect or not?**
 
 ```java
+public class PerfectNumber {
+    public static void main(String[] args) {
+        int number = 28;
 
+        if (isPerfectNumber(number)) {
+            System.out.println(number + " is a perfect number.");
+        } else {
+            System.out.println(number + " is not a perfect number.");
+        }
+    }
+
+    public static boolean isPerfectNumber(int number) {
+        int sum = 0;
+
+        for (int i = 1; i <= number / 2; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+
+        return sum == number;
+    }
+}
 ```
 
 ----
 
-**Java Program to Calculate the Average of Integer Array.**
+**Java Program to Calculate the Average of Integer Array?**
 
 ```java
+public class AverageOfArray {
+    public static void main(String[] args) {
+        int[] numbers = {5, 10, 15, 20, 25};
 
+        double average = calculateAverage(numbers);
+
+        System.out.println("Average: " + average);
+    }
+
+    public static double calculateAverage(int[] array) {
+        int sum = 0;
+
+        for (int number : array) {
+            sum += number;
+        }
+
+        return (double) sum / array.length;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate the Average of number taken from user.**
+**Java Program to calculate the Average of number taken from user?**
 
 ```java
+import java.util.Scanner;
 
+public class AverageOfNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+
+        int[] numbers = new int[n];
+
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        double average = calculateAverage(numbers);
+
+        System.out.println("Average: " + average);
+
+        scanner.close();
+    }
+
+    public static double calculateAverage(int[] array) {
+        int sum = 0;
+
+        for (int number : array) {
+            sum += number;
+        }
+
+        return (double) sum / array.length;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate factorial using iterative method.**
+**Java Program to calculate factorial using iterative method?**
 
 ```java
+public class Factorial {
+    public static void main(String[] args) {
+        int number = 5;
 
+        long factorial = calculateFactorial(number);
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+
+    public static long calculateFactorial(int number) {
+        long factorial = 1;
+
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+
+        return factorial;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate factorial using recursion.**
+**Java Program to calculate factorial using recursion?**
 
 ```java
+public class Factorial {
+    public static void main(String[] args) {
+        int number = 5;
 
+        long factorial = calculateFactorial(number);
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+
+    public static long calculateFactorial(int number) {
+        if (number == 0) {
+            return 1;
+        } else {
+            return number * calculateFactorial(number - 1);
+        }
+    }
+}
 ```
 
 ----
 
-**Java Program to check a given number is even or odd.**
+**Java Program to check a given number is even or odd?**
 
 ```java
+public class EvenOdd {
+    public static void main(String[] args) {
+        int number = 7;
 
+        if (isEven(number)) {
+            System.out.println(number + " is an even number.");
+        } else {
+            System.out.println(number + " is an odd number.");
+        }
+    }
+
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+}
 ```
 
 ----
 
-**Java program to print first n Prime Number with explanation.**
+**Java program to print first n Prime Number with explanation?**
 
 ```java
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        int n = 10; // Number of prime numbers to print
+        int count = 0; // Counter for prime numbers
+        int number = 2; // Starting number to check for primality
 
+        System.out.println("First " + n + " prime numbers:");
+
+        // Iterate until the desired number of prime numbers are found
+        while (count < n) {
+            if (isPrime(number)) {
+                System.out.print(number + " ");
+                count++;
+            }
+            number++;
+        }
+    }
+
+    // Method to check whether a number is prime or not
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        // Check divisibility from 2 to square root of the number
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false; // Number is divisible, hence not prime
+            }
+        }
+
+        return true; // Number is prime
+    }
+}
 ```
 
 ----
 
-**Java Program to print Prime Number in a given range.**
+**Java Program to print Prime Number in a given range?**
 
 ```java
+public class PrimeNumbersInRange {
+    public static void main(String[] args) {
+        int start = 10; // Starting number of the range
+        int end = 50; // Ending number of the range
 
+        System.out.println("Prime numbers between " + start + " and " + end + ":");
+        printPrimeNumbersInRange(start, end);
+    }
+
+    public static void printPrimeNumbersInRange(int start, int end) {
+        for (int number = start; number <= end; number++) {
+            if (isPrime(number)) {
+                System.out.print(number + " ");
+            }
+        }
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
 ```
 
 ----
 
-**Java Program to find Smallest number among three.**
+**Java Program to find Smallest number among three?**
 
 ```java
+public class SmallestNumber {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 5;
+        int num3 = 8;
 
+        int smallest = findSmallestNumber(num1, num2, num3);
+
+        System.out.println("The smallest number is: " + smallest);
+    }
+
+    public static int findSmallestNumber(int num1, int num2, int num3) {
+        int smallest = num1;
+
+        if (num2 < smallest) {
+            smallest = num2;
+        }
+
+        if (num3 < smallest) {
+            smallest = num3;
+        }
+
+        return smallest;
+    }
+}
 ```
 
 ----
 
-**Java program to calculate the power using the POW method.**
+**Java program to calculate the power using the POW method?**
 
 ```java
+public class PowerCalculation {
+    public static void main(String[] args) {
+        double base = 2.5;
+        double exponent = 3.0;
 
+        double result = Math.pow(base, exponent);
+
+        System.out.println(base + " raised to the power of " + exponent + " is: " + result);
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate the power without using POW function.**
+**Java Program to calculate the power without using POW function?**
 
 ```java
+public class PowerCalculation {
+    public static void main(String[] args) {
+        double base = 2.5;
+        int exponent = 3;
 
+        double result = calculatePower(base, exponent);
+
+        System.out.println(base + " raised to the power of " + exponent + " is: " + result);
+    }
+
+    public static double calculatePower(double base, int exponent) {
+        double result = 1.0;
+
+        if (exponent >= 0) {
+            for (int i = 1; i <= exponent; i++) {
+                result *= base;
+            }
+        } else {
+            // Negative exponent
+            for (int i = 1; i <= Math.abs(exponent); i++) {
+                result /= base;
+            }
+        }
+
+        return result;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate the square of a given number.**
+**Java Program to calculate the square of a given number?**
 
 ```java
+public class SquareCalculation {
+    public static void main(String[] args) {
+        int number = 5;
 
+        int square = calculateSquare(number);
+
+        System.out.println("The square of " + number + " is: " + square);
+    }
+
+    public static int calculateSquare(int number) {
+        return number * number;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate the cube of a given number.**
+**Java Program to calculate the cube of a given number?**
 
 ```java
+public class CubeCalculation {
+    public static void main(String[] args) {
+        int number = 3;
 
+        int cube = calculateCube(number);
+
+        System.out.println("The cube of " + number + " is: " + cube);
+    }
+
+    public static int calculateCube(int number) {
+        return number * number * number;
+    }
+}
 ```
 
 ----
 
-**Java Program to calculate the square root of a given number.**
+**Java Program to calculate the square root of a given number?**
 
 ```java
+public class SquareRootCalculation {
+    public static void main(String[] args) {
+        double number = 25;
 
+        double squareRoot = calculateSquareRoot(number);
+
+        System.out.println("The square root of " + number + " is: " + squareRoot);
+    }
+
+    public static double calculateSquareRoot(double number) {
+        return Math.sqrt(number);
+    }
+}
 ```
 
 ----
 
-**Java program to calculate LCM of given two numbers.**
+**Java program to calculate LCM of given two numbers?**
 
 ```java
+public class LCMCalculation {
+    public static void main(String[] args) {
+        int number1 = 12;
+        int number2 = 18;
 
+        int lcm = calculateLCM(number1, number2);
+
+        System.out.println("The LCM of " + number1 + " and " + number2 + " is: " + lcm);
+    }
+
+    public static int calculateLCM(int number1, int number2) {
+        int max = Math.max(number1, number2);
+        int lcm = max;
+
+        while (true) {
+            if (lcm % number1 == 0 && lcm % number2 == 0) {
+                break;
+            }
+            lcm += max;
+        }
+
+        return lcm;
+    }
+}
 ```
 
 ----
 
-**Java Program to find GCD or HCF of two numbers.**
+**Java Program to find GCD or HCF of two numbers?**
 
 ```java
+public class GCDHCF {
+    public static void main(String[] args) {
+        int number1 = 24;
+        int number2 = 36;
 
+        int gcd = calculateGCD(number1, number2);
+
+        System.out.println("The GCD of " + number1 + " and " + number2 + " is: " + gcd);
+    }
+
+    public static int calculateGCD(int number1, int number2) {
+        while (number2 != 0) {
+            int temp = number2;
+            number2 = number1 % number2;
+            number1 = temp;
+        }
+
+        return number1;
+    }
+}
 ```
 
 ----
 
-**Java Program to find GCD of two numbers using recursion.**
+**Java Program to find GCD of two numbers using recursion?**
 
 ```java
+public class GCDRecursion {
+    public static void main(String[] args) {
+        int number1 = 24;
+        int number2 = 36;
 
+        int gcd = calculateGCD(number1, number2);
+
+        System.out.println("The GCD of " + number1 + " and " + number2 + " is: " + gcd);
+    }
+
+    public static int calculateGCD(int number1, int number2) {
+        if (number2 == 0) {
+            return number1;
+        }
+
+        return calculateGCD(number2, number1 % number2);
+    }
+}
 ```
 
 ----
 
-**Java Program to check the given year is a leap year or not.**
+**Java Program to check the given year is a leap year or not?**
 
 ```java
+public class LeapYear {
+    public static void main(String[] args) {
+        int year = 2024;
 
+        boolean isLeapYear = checkLeapYear(year);
+
+        if (isLeapYear) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+
+    public static boolean checkLeapYear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return true;  // Divisible by 400, so it is a leap year
+                }
+                return false;  // Divisible by 100 but not by 400, so it is not a leap year
+            }
+            return true;  // Divisible by 4 but not by 100, so it is a leap year
+        }
+        return false;  // Not divisible by 4, so it is not a leap year
+    }
+}
 ```
 
 ----
 
-**Java Program to convert Celsius to Fahrenheit.**
+**Java Program to convert Celsius to Fahrenheit?**
 
 ```java
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        double celsius = 25.0;
+        double fahrenheit = convertCelsiusToFahrenheit(celsius);
 
+        System.out.println(celsius + " degrees Celsius is equal to " + fahrenheit + " degrees Fahrenheit.");
+    }
+
+    public static double convertCelsiusToFahrenheit(double celsius) {
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        return fahrenheit;
+    }
+}
 ```
 
 ----
 
-**Java Program to convert Fahrenheit to Celsius.**
+**Java Program to convert Fahrenheit to Celsius?**
 
 ```java
+public class FahrenheitToCelsius {
+    public static void main(String[] args) {
+        double fahrenheit = 77.0;
+        double celsius = convertFahrenheitToCelsius(fahrenheit);
 
+        System.out.println(fahrenheit + " degrees Fahrenheit is equal to " + celsius + " degrees Celsius.");
+    }
+
+    public static double convertFahrenheitToCelsius(double fahrenheit) {
+        double celsius = (fahrenheit - 32) * 5 / 9;
+        return celsius;
+    }
+}
 ```
 
 ----
 
-**Java program to calculate Simple Interest with explanation.**
+**Java program to calculate Simple Interest with explanation?**
 
 ```java
+public class SimpleInterestCalculation {
+    public static void main(String[] args) {
+        double principal = 1000.0;
+        double rate = 5.0;
+        double time = 2.0;
 
+        double simpleInterest = calculateSimpleInterest(principal, rate, time);
+
+        System.out.println("Principal: $" + principal);
+        System.out.println("Rate of Interest: " + rate + "%");
+        System.out.println("Time: " + time + " years");
+        System.out.println("Simple Interest: $" + simpleInterest);
+    }
+
+    public static double calculateSimpleInterest(double principal, double rate, double time) {
+        double interest = (principal * rate * time) / 100;
+        return interest;
+    }
+}
 ```
 
 ----
@@ -14696,15 +16159,57 @@ modal – True for modal type, false for modeless type.
 **Java Coding Questions on String**
 
 ```java
+public class SimpleInterestCalculation {
+    public static void main(String[] args) {
+        double principal = 1000.0;
+        double rate = 5.0;
+        double time = 2.0;
 
+        double simpleInterest = calculateSimpleInterest(principal, rate, time);
+
+        System.out.println("Principal: $" + principal);
+        System.out.println("Rate of Interest: " + rate + "%");
+        System.out.println("Time: " + time + " years");
+        System.out.println("Simple Interest: $" + simpleInterest);
+    }
+
+    public static double calculateSimpleInterest(double principal, double rate, double time) {
+        double interest = (principal * rate * time) / 100;
+        return interest;
+    }
+}
 ```
 
 ----
 
-**Write a method in Java which will remove any given character from a String.**
+**Write a method in Java which will remove any given character from a String?**
 
 ```java
+public class StringCharacterRemoval {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        char charToRemove = 'l';
 
+        String result = removeCharacter(str, charToRemove);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Modified string: " + result);
+    }
+
+    public static String removeCharacter(String str, char charToRemove) {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+
+            if (currentChar != charToRemove) {
+                builder.append(currentChar);
+            }
+        }
+
+        return builder.toString();
+    }
+}
 ```
 
 ----
@@ -14712,12 +16217,1322 @@ modal – True for modal type, false for modeless type.
 **Write a program in Java to count occurrence of a given character in a String?**
 
 ```java
+public class CharacterCount {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        char target = 'l';
 
+        int count = countOccurrences(str, target);
+
+        System.out.println("The character '" + target + "' occurs " + count + " times in the string.");
+    }
+
+    public static int countOccurrences(String str, char target) {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == target) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
 ```
 
 ----
 
-**Write a program in Java to check if two String are Anagram.**
+**Write a program in Java to check if two String are Anagram?**
+
+```java
+import java.util.Arrays;
+
+public class AnagramCheck {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+
+        boolean isAnagram = checkAnagram(str1, str2);
+
+        if (isAnagram) {
+            System.out.println(str1 + " and " + str2 + " are anagrams.");
+        } else {
+            System.out.println(str1 + " and " + str2 + " are not anagrams.");
+        }
+    }
+
+    public static boolean checkAnagram(String str1, String str2) {
+        // Remove spaces and convert to lowercase for case-insensitive comparison
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        // Check if the lengths of the strings are equal
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        // Convert strings to character arrays and sort them
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Compare the sorted character arrays
+        return Arrays.equals(charArray1, charArray2);
+    }
+}
+```
+
+----
+
+**Write a program in Java to check a String is palindrome or not?**
+
+```java
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        String str = "madam";
+
+        boolean isPalindrome = checkPalindrome(str);
+
+        if (isPalindrome) {
+            System.out.println(str + " is a palindrome.");
+        } else {
+            System.out.println(str + " is not a palindrome.");
+        }
+    }
+
+    public static boolean checkPalindrome(String str) {
+        int length = str.length();
+
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+```
+
+----
+
+**Java program to check given character is vowel or consonant?**
+
+```java
+public class VowelConsonantCheck {
+    public static void main(String[] args) {
+        char ch = 'a';
+
+        if (isVowel(ch)) {
+            System.out.println(ch + " is a vowel.");
+        } else {
+            System.out.println(ch + " is a consonant.");
+        }
+    }
+
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            return true;
+        }
+
+        return false;
+    }
+}
+```
+
+----
+
+**Java program to check given character is digit or not?**
+
+```java
+public class DigitCheck {
+    public static void main(String[] args) {
+        char ch = '7';
+
+        if (isDigit(ch)) {
+            System.out.println(ch + " is a digit.");
+        } else {
+            System.out.println(ch + " is not a digit.");
+        }
+    }
+
+    public static boolean isDigit(char ch) {
+        return Character.isDigit(ch);
+    }
+}
+```
+
+----
+
+**Java program to replace the string space with a given character?**
+
+```java
+public class ReplaceSpaces {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char replacementChar = '-';
+
+        String replacedString = replaceSpaces(str, replacementChar);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Replaced string: " + replacedString);
+    }
+
+    public static String replaceSpaces(String str, char replacementChar) {
+        StringBuilder replaced = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
+                replaced.append(replacementChar);
+            } else {
+                replaced.append(str.charAt(i));
+            }
+        }
+
+        return replaced.toString();
+    }
+}
+```
+
+----
+
+**Java program to convert lowercase char to uppercase of string?**
+
+```java
+public class ConvertToLowercase {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+
+        String convertedString = convertToLowercase(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Converted string: " + convertedString);
+    }
+
+    public static String convertToLowercase(String str) {
+        StringBuilder converted = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isLowerCase(ch)) {
+                ch = Character.toUpperCase(ch);
+            }
+
+            converted.append(ch);
+        }
+
+        return converted.toString();
+    }
+}
+```
+
+----
+
+**Java program to convert lowercase vowel to uppercase in string?**
+
+```java
+public class ConvertLowercaseVowels {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+
+        String convertedString = convertLowercaseVowels(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Converted string: " + convertedString);
+    }
+
+    public static String convertLowercaseVowels(String str) {
+        StringBuilder converted = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (isLowercaseVowel(ch)) {
+                ch = Character.toUpperCase(ch);
+            }
+
+            converted.append(ch);
+        }
+
+        return converted.toString();
+    }
+
+    public static boolean isLowercaseVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
+```
+
+----
+
+**Java program to delete vowels in a given string?**
+
+```java
+public class DeleteVowels {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+
+        String deletedVowelsString = deleteVowels(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after deleting vowels: " + deletedVowelsString);
+    }
+
+    public static String deleteVowels(String str) {
+        StringBuilder deletedVowels = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (!isVowel(ch)) {
+                deletedVowels.append(ch);
+            }
+        }
+
+        return deletedVowels.toString();
+    }
+
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
+```
+
+----
+
+**Java program to count Occurrence Of Vowels & Consonants in a String?**
+
+```java
+public class CountVowelsConsonants {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        
+        int vowelCount = countVowels(str);
+        int consonantCount = countConsonants(str);
+        
+        System.out.println("Original string: " + str);
+        System.out.println("Vowel count: " + vowelCount);
+        System.out.println("Consonant count: " + consonantCount);
+    }
+    
+    public static int countVowels(String str) {
+        int count = 0;
+        str = str.toLowerCase();
+        
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    
+    public static int countConsonants(String str) {
+        int count = 0;
+        str = str.toLowerCase();
+        
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            
+            if (ch >= 'a' && ch <= 'z' && !isVowel(ch)) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    
+    public static boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
+```
+
+----
+
+**Java program to print the highest frequency character in a String?**
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+public class HighestFrequencyCharacter {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        char highestFreqChar = getHighestFrequencyChar(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Highest frequency character: " + highestFreqChar);
+    }
+
+    public static char getHighestFrequencyChar(String str) {
+        Map<Character, Integer> charFrequencyMap = new HashMap<>();
+
+        // Calculate the frequency of each character in the string
+        for (char ch : str.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                ch = Character.toLowerCase(ch);
+                charFrequencyMap.put(ch, charFrequencyMap.getOrDefault(ch, 0) + 1);
+            }
+        }
+
+        char highestFreqChar = ' ';
+        int highestFrequency = 0;
+
+        // Find the character with the highest frequency
+        for (Map.Entry<Character, Integer> entry : charFrequencyMap.entrySet()) {
+            if (entry.getValue() > highestFrequency) {
+                highestFreqChar = entry.getKey();
+                highestFrequency = entry.getValue();
+            }
+        }
+
+        return highestFreqChar;
+    }
+}
+```
+
+----
+
+**Java program to Replace First Occurrence Of Vowel With ‘-‘ in String?**
+
+```java
+public class ReplaceFirstVowel {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String replacedString = replaceFirstVowel(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after replacing first vowel: " + replacedString);
+    }
+
+    public static String replaceFirstVowel(String str) {
+        StringBuilder replaced = new StringBuilder();
+
+        boolean foundVowel = false;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (!foundVowel && isVowel(ch)) {
+                replaced.append('-');
+                foundVowel = true;
+            } else {
+                replaced.append(ch);
+            }
+        }
+
+        return replaced.toString();
+    }
+
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+}
+```
+
+----
+
+**Java program to count alphabets, digits and special characters?**
+
+```java
+public class CountCharacters {
+    public static void main(String[] args) {
+        String str = "Hello,123!";
+
+        int alphabetCount = countAlphabets(str);
+        int digitCount = countDigits(str);
+        int specialCharCount = countSpecialCharacters(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Alphabet count: " + alphabetCount);
+        System.out.println("Digit count: " + digitCount);
+        System.out.println("Special character count: " + specialCharCount);
+    }
+
+    public static int countAlphabets(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isLetter(ch)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static int countDigits(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isDigit(ch)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static int countSpecialCharacters(String str) {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (!Character.isLetter(ch) && !Character.isDigit(ch)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+```
+
+----
+
+**Java program to remove blank space from string?**
+
+```java
+public class RemoveSpaces {
+    public static void main(String[] args) {
+        String str = "  Hello,   World!  ";
+        String trimmedString = removeSpaces(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after removing spaces: " + trimmedString);
+    }
+
+    public static String removeSpaces(String str) {
+        return str.replaceAll("\\s+", "");
+    }
+}
+```
+
+----
+
+**Java program to Concatenate two strings?**
+
+```java
+public class ConcatenateStrings {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+
+        String concatenatedString = concatenateStrings(str1, str2);
+
+        System.out.println("String 1: " + str1);
+        System.out.println("String 2: " + str2);
+        System.out.println("Concatenated string: " + concatenatedString);
+    }
+
+    public static String concatenateStrings(String str1, String str2) {
+        return str1 + str2;
+    }
+}
+```
+
+----
+
+**Java Program to remove repeated character from string?**
+
+```java
+import java.util.LinkedHashSet;
+
+public class RemoveRepeatedCharacters {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String withoutRepeatedChars = removeRepeatedCharacters(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after removing repeated characters: " + withoutRepeatedChars);
+    }
+
+    public static String removeRepeatedCharacters(String str) {
+        LinkedHashSet<Character> uniqueChars = new LinkedHashSet<>();
+
+        for (int i = 0; i < str.length(); i++) {
+            uniqueChars.add(str.charAt(i));
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (Character ch : uniqueChars) {
+            result.append(ch);
+        }
+
+        return result.toString();
+    }
+}
+```
+
+----
+
+**Java program to calculate sum of integers in string?**
+
+```java
+public class SumOfIntegersInString {
+    public static void main(String[] args) {
+        String str = "I have 5 apples and 3 oranges.";
+        int sum = calculateSumOfIntegers(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Sum of integers in the string: " + sum);
+    }
+
+    public static int calculateSumOfIntegers(String str) {
+        int sum = 0;
+        StringBuilder currentNumber = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isDigit(ch)) {
+                currentNumber.append(ch);
+            } else {
+                if (currentNumber.length() > 0) {
+                    sum += Integer.parseInt(currentNumber.toString());
+                    currentNumber.setLength(0);
+                }
+            }
+        }
+
+        if (currentNumber.length() > 0) {
+            sum += Integer.parseInt(currentNumber.toString());
+        }
+
+        return sum;
+    }
+}
+```
+
+----
+
+**Java program to print all non repeating character in string?**
+
+```java
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class NonRepeatingCharacters {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String nonRepeatingChars = findNonRepeatingCharacters(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("Non-repeating characters: " + nonRepeatingChars);
+    }
+
+    public static String findNonRepeatingCharacters(String str) {
+        Map<Character, Integer> charCountMap = new LinkedHashMap<>();
+
+        // Count the occurrence of each character
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        StringBuilder result = new StringBuilder();
+        // Append non-repeating characters to the result string
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            if (entry.getValue() == 1) {
+                result.append(entry.getKey());
+            }
+        }
+
+        return result.toString();
+    }
+}
+```
+
+----
+
+**Java Program to sort characters of string in Ascending Order?**
+
+```java
+import java.util.Arrays;
+
+public class SortCharacters {
+    public static void main(String[] args) {
+        String str = "hello world";
+        String sortedString = sortCharacters(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after sorting characters in ascending order: " + sortedString);
+    }
+
+    public static String sortCharacters(String str) {
+        // Convert the string to a character array
+        char[] charArray = str.toCharArray();
+
+        // Sort the character array in ascending order
+        Arrays.sort(charArray);
+
+        // Convert the sorted character array back to a string
+        return new String(charArray);
+    }
+}
+```
+
+----
+
+**Java Program to sort character of string in descending order?**
+
+```java
+import java.util.Arrays;
+import java.util.Collections;
+
+public class SortCharactersDescending {
+    public static void main(String[] args) {
+        String str = "hello world";
+        String sortedString = sortCharactersDescending(str);
+
+        System.out.println("Original string: " + str);
+        System.out.println("String after sorting characters in descending order: " + sortedString);
+    }
+
+    public static String sortCharactersDescending(String str) {
+        // Convert the string to a character array
+        Character[] charArray = new Character[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            charArray[i] = str.charAt(i);
+        }
+
+        // Sort the character array in descending order
+        Arrays.sort(charArray, Collections.reverseOrder());
+
+        // Convert the sorted character array back to a string
+        StringBuilder sortedString = new StringBuilder(charArray.length);
+        for (Character ch : charArray) {
+            sortedString.append(ch);
+        }
+
+        return sortedString.toString();
+    }
+}
+```
+
+----
+
+**Write a program in Java for, In array 1-100 numbers are stored, one number is missing how do you find it?**
+
+```java
+public class FindMissingNumber {
+    public static void main(String[] args) {
+        // Create the array with 99 elements (missing one number)
+        int[] array = new int[99];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+
+        // Choose a random number from 1 to 100 and remove it from the array
+        int missingNumber = (int) (Math.random() * 100) + 1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == missingNumber) {
+                array[i] = 0;
+                break;
+            }
+        }
+
+        // Find the missing number
+        int missing = findMissingNumber(array);
+        System.out.println("Missing number: " + missing);
+    }
+
+    public static int findMissingNumber(int[] array) {
+        int expectedSum = 0;
+        int actualSum = 0;
+
+        // Calculate the sum of all numbers from 1 to 100
+        for (int i = 1; i <= 100; i++) {
+            expectedSum += i;
+        }
+
+        // Calculate the sum of the given array
+        for (int num : array) {
+            actualSum += num;
+        }
+
+        // Find the missing number
+        return expectedSum - actualSum;
+    }
+}
+```
+
+----
+
+**Write a program in Java for, In a array 1-100 multiple numbers are duplicates, how do you find it?**
+
+```java
+public class FindMissingNumber {
+    public static void main(String[] args) {
+        // Create the array with 99 elements (missing one number)
+        int[] array = new int[99];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+
+        // Choose a random number from 1 to 100 and remove it from the array
+        int missingNumber = (int) (Math.random() * 100) + 1;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == missingNumber) {
+                array[i] = 0;
+                break;
+            }
+        }
+
+        // Find the missing number
+        int missing = findMissingNumber(array);
+        System.out.println("Missing number: " + missing);
+    }
+
+    public static int findMissingNumber(int[] array) {
+        int expectedSum = 0;
+        int actualSum = 0;
+
+        // Calculate the sum of all numbers from 1 to 100
+        for (int i = 1; i <= 100; i++) {
+            expectedSum += i;
+        }
+
+        // Calculate the sum of the given array
+        for (int num : array) {
+            actualSum += num;
+        }
+
+        // Find the missing number
+        return expectedSum - actualSum;
+    }
+}
+```
+
+----
+
+**Write a program in Java for, How to find all pairs in array of integers whose sum is equal to given number?**
+
+```java
+import java.util.Arrays;
+
+public class FindPairs {
+    public static void main(String[] args) {
+        int[] array = {2, 4, 6, 8, 9, 3, 5};
+        int targetSum = 10;
+
+        System.out.println("Pairs with sum " + targetSum + ":");
+        findPairs(array, targetSum);
+    }
+
+    public static void findPairs(int[] array, int targetSum) {
+        Arrays.sort(array); // Sort the array in ascending order
+
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left < right) {
+            int currentSum = array[left] + array[right];
+            if (currentSum == targetSum) {
+                System.out.println(array[left] + ", " + array[right]);
+                left++;
+                right--;
+            } else if (currentSum < targetSum) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+    }
+}
+```
+
+----
+
+**Write a program in Java for, In a array 1-100 exactly one number is duplicate how do you find it?**
+
+```java
+public class FindDuplicateNumber {
+    public static void main(String[] args) {
+        // Create the array with duplicate number
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 20, 21, 22, 23, 24, 25};
+
+        // Find the duplicate number
+        int duplicate = findDuplicateNumber(array);
+        System.out.println("Duplicate number: " + duplicate);
+    }
+
+    public static int findDuplicateNumber(int[] array) {
+        int expectedSum = 0;
+        int actualSum = 0;
+
+        // Calculate the sum of numbers from 1 to 100
+        for (int i = 1; i <= 100; i++) {
+            expectedSum += i;
+        }
+
+        // Calculate the sum of the given array
+        for (int num : array) {
+            actualSum += num;
+        }
+
+        // The difference between the expected sum and actual sum is the duplicate number
+        return actualSum - expectedSum;
+    }
+}
+```
+
+----
+
+**Write a program in Java for, Given two arrays 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array?**
+
+```java
+import java.util.HashSet;
+
+public class FindMissingNumber {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {2, 3, 1, 0, 5};
+
+        int missingNumber = findMissingNumber(array1, array2);
+        System.out.println("Missing number: " + missingNumber);
+    }
+
+    public static int findMissingNumber(int[] array1, int[] array2) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // Add all elements of array2 to the set
+        for (int num : array2) {
+            set.add(num);
+        }
+
+        // Iterate over array1 to find the missing number
+        for (int num : array1) {
+            if (!set.contains(num)) {
+                return num;
+            }
+        }
+
+        return -1; // Return -1 if no missing number is found
+    }
+}
+```
+
+----
+
+**Write a program in Java for, How to compare two array is equal in size or not?**
+
+```java
+public class CompareArrays {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {2, 3, 1, 0, 5};
+        int[] array3 = {1, 2, 3, 4, 5, 6};
+
+        boolean equalSize1 = compareArraySize(array1, array2);
+        System.out.println("Array1 and Array2 are equal in size: " + equalSize1);
+
+        boolean equalSize2 = compareArraySize(array1, array3);
+        System.out.println("Array1 and Array3 are equal in size: " + equalSize2);
+    }
+
+    public static boolean compareArraySize(int[] array1, int[] array2) {
+        return array1.length == array2.length;
+    }
+}
+```
+
+----
+
+**Write a program in Java to find largest and smallest number in array?**
+
+```java
+public class FindMinMax {
+    public static void main(String[] args) {
+        int[] array = {5, 8, 2, 10, 3, 1};
+
+        int largest = findLargestNumber(array);
+        int smallest = findSmallestNumber(array);
+
+        System.out.println("Largest number: " + largest);
+        System.out.println("Smallest number: " + smallest);
+    }
+
+    public static int findLargestNumber(int[] array) {
+        int largest = Integer.MIN_VALUE;
+
+        for (int num : array) {
+            if (num > largest) {
+                largest = num;
+            }
+        }
+
+        return largest;
+    }
+
+    public static int findSmallestNumber(int[] array) {
+        int smallest = Integer.MAX_VALUE;
+
+        for (int num : array) {
+            if (num < smallest) {
+                smallest = num;
+            }
+        }
+
+        return smallest;
+    }
+}
+```
+
+----
+
+**Write a program in Java to find second highest number in an integer array?**
+
+```java
+public class FindSecondHighest {
+    public static void main(String[] args) {
+        int[] array = {5, 8, 2, 10, 3, 1};
+
+        int secondHighest = findSecondHighestNumber(array);
+
+        System.out.println("Second highest number: " + secondHighest);
+    }
+
+    public static int findSecondHighestNumber(int[] array) {
+        int highest = Integer.MIN_VALUE;
+        int secondHighest = Integer.MIN_VALUE;
+
+        for (int num : array) {
+            if (num > highest) {
+                secondHighest = highest;
+                highest = num;
+            } else if (num > secondHighest && num < highest) {
+                secondHighest = num;
+            }
+        }
+
+        return secondHighest;
+    }
+}
+```
+
+----
+
+**Write a program in Java to find top two maximum number in array?**
+
+```java
+public class FindTopTwoMax {
+    public static void main(String[] args) {
+        int[] array = {5, 8, 2, 10, 3, 1};
+
+        int[] topTwoMax = findTopTwoMaximumNumbers(array);
+
+        System.out.println("Top two maximum numbers: " + topTwoMax[0] + " and " + topTwoMax[1]);
+    }
+
+    public static int[] findTopTwoMaximumNumbers(int[] array) {
+        int max1 = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+
+        for (int num : array) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2 && num != max1) {
+                max2 = num;
+            }
+        }
+
+        int[] result = {max1, max2};
+        return result;
+    }
+}
+```
+
+----
+
+**Java program to print array in reverse Order?**
+
+```java
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        System.out.println("\nArray in Reverse Order:");
+        printArrayInReverse(array);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void printArrayInReverse(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
+```
+
+----
+
+**Java program to reverse array without using second array?**
+
+```java
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        System.out.println("\nArray in Reverse Order:");
+        reverseArray(array);
+
+        System.out.println("\nReversed Array:");
+        printArray(array);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void reverseArray(int[] array) {
+        int start = 0;
+        int end = array.length - 1;
+
+        while (start < end) {
+            int temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+```
+
+----
+
+**Java Program to calculate length of an array?**
+
+```java
+public class ArrayLength {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        int length = calculateArrayLength(array);
+
+        System.out.println("Length of the array: " + length);
+    }
+
+    public static int calculateArrayLength(int[] array) {
+        return array.length;
+    }
+}
+```
+
+----
+
+**Java program to insert an element at end of an Array?**
+
+```java
+public class InsertAtEnd {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int elementToInsert = 6;
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] newArray = insertAtEnd(array, elementToInsert);
+
+        System.out.println("\nArray after inserting element at the end:");
+        printArray(newArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] insertAtEnd(int[] array, int element) {
+        int[] newArray = new int[array.length + 1];
+
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+
+        newArray[newArray.length - 1] = element;
+
+        return newArray;
+    }
+}
+```
+
+----
+
+**Java program to insert element at a given location in Array?**
+
+```java
+public class InsertAtLocation {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int elementToInsert = 10;
+        int insertIndex = 2;
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] newArray = insertAtLocation(array, elementToInsert, insertIndex);
+
+        System.out.println("\nArray after inserting element at index " + insertIndex + ":");
+        printArray(newArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] insertAtLocation(int[] array, int element, int index) {
+        int[] newArray = new int[array.length + 1];
+
+        for (int i = 0; i < index; i++) {
+            newArray[i] = array[i];
+        }
+
+        newArray[index] = element;
+
+        for (int i = index + 1; i < newArray.length; i++) {
+            newArray[i] = array[i - 1];
+        }
+
+        return newArray;
+    }
+}
+```
+
+----
+
+**Java Program to delete element at end of Array?**
+
+```java
+public class DeleteAtEnd {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] newArray = deleteAtEnd(array);
+
+        System.out.println("\nArray after deleting element from the end:");
+        printArray(newArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] deleteAtEnd(int[] array) {
+        int[] newArray = new int[array.length - 1];
+
+        for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = array[i];
+        }
+
+        return newArray;
+    }
+}
+```
+
+----
+
+**Java Program to delete given element from Array?**
+
+```java
+public class DeleteElementFromArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int elementToDelete = 3;
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] newArray = deleteElement(array, elementToDelete);
+
+        System.out.println("\nArray after deleting " + elementToDelete + ":");
+        printArray(newArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] deleteElement(int[] array, int element) {
+        int indexToDelete = -1;
+
+        // Find the index of the element to delete
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                indexToDelete = i;
+                break;
+            }
+        }
+
+        if (indexToDelete == -1) {
+            // Element not found, return the original array
+            return array;
+        }
+
+        int[] newArray = new int[array.length - 1];
+        int newIndex = 0;
+
+        // Copy elements to the new array, except the one to be deleted
+        for (int i = 0; i < array.length; i++) {
+            if (i != indexToDelete) {
+                newArray[newIndex] = array[i];
+                newIndex++;
+            }
+        }
+
+        return newArray;
+    }
+}
+```
+
+----
+
+**Java Program to delete element from array at given index?**
 
 ```java
 
@@ -14725,7 +17540,196 @@ modal – True for modal type, false for modeless type.
 
 ----
 
-**Write a program in Java to check a String is palindrome or not.**
+**Java Program to find sum of array elements?**
+
+```java
+public class DeleteElementAtIndex {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int indexToDelete = 2;
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] newArray = deleteAtIndex(array, indexToDelete);
+
+        System.out.println("\nArray after deleting element at index " + indexToDelete + ":");
+        printArray(newArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] deleteAtIndex(int[] array, int index) {
+        if (index < 0 || index >= array.length) {
+            // Index is out of range, return the original array
+            return array;
+        }
+
+        int[] newArray = new int[array.length - 1];
+        int newIndex = 0;
+
+        // Copy elements to the new array, except the one at the given index
+        for (int i = 0; i < array.length; i++) {
+            if (i != index) {
+                newArray[newIndex] = array[i];
+                newIndex++;
+            }
+        }
+
+        return newArray;
+    }
+}
+```
+
+----
+
+**Java Program to print all even numbers in array?**
+
+```java
+public class PrintEvenNumbers {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        System.out.println("\nEven Numbers in the Array:");
+        printEvenNumbers(array);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void printEvenNumbers(int[] array) {
+        for (int num : array) {
+            if (num % 2 == 0) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
+```
+
+----
+
+**Java Program to print all odd numbers in array?**
+
+```java
+public class PrintOddNumbers {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        System.out.println("\nOdd Numbers in the Array:");
+        printOddNumbers(array);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void printOddNumbers(int[] array) {
+        for (int num : array) {
+            if (num % 2 != 0) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
+```
+
+----
+
+**Java program to perform left rotation of array elements by two positions?**
+
+```java
+public class LeftRotateArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] rotatedArray = leftRotateByTwo(array);
+
+        System.out.println("\nArray after left rotation by two positions:");
+        printArray(rotatedArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] leftRotateByTwo(int[] array) {
+        int[] rotatedArray = new int[array.length];
+
+        for (int i = 0; i < array.length - 2; i++) {
+            rotatedArray[i] = array[i + 2];
+        }
+
+        rotatedArray[array.length - 2] = array[0];
+        rotatedArray[array.length - 1] = array[1];
+
+        return rotatedArray;
+    }
+}
+```
+
+----
+
+**Java program to perform right rotation in array by 2 positions?**
+
+```java
+public class RightRotateArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(array);
+
+        int[] rotatedArray = rightRotateByTwo(array);
+
+        System.out.println("\nArray after right rotation by two positions:");
+        printArray(rotatedArray);
+    }
+
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static int[] rightRotateByTwo(int[] array) {
+        int[] rotatedArray = new int[array.length];
+
+        rotatedArray[0] = array[array.length - 2];
+        rotatedArray[1] = array[array.length - 1];
+
+        for (int i = 2; i < array.length; i++) {
+            rotatedArray[i] = array[i - 2];
+        }
+
+        return rotatedArray;
+    }
+}
+```
+
+----
+
+**Java program to find all pairs in array of integers whose sum is equal to given number?**
 
 ```java
 
@@ -14733,330 +17737,54 @@ modal – True for modal type, false for modeless type.
 
 ----
 
-**Java program to check given character is vowel or consonant.**
+**Java Program to remove duplicate elements form array?**
 
 ```java
-
-```
-
-----
-
-**Java program to check given character is digit or not.**
-
-```java
-
-```
-
-----
-
-**Java program to replace the string space with a given character.**
-
-```java
-
-```
-
-----
-
-**Java program to convert lowercase char to uppercase of string.**
-
-```java
-
-```
-
-----
-
-**Java program to convert lowercase vowel to uppercase in string.**
-
-```java
-
-```
-
-----
-
-**Java program to delete vowels in a given string.**
-
-```java
-
-```
-
-----
-
-**Java program to count Occurrence Of Vowels & Consonants in a String.**
-
-```java
-
-```
-
-----
-
-**Java program to print the highest frequency character in a String.**
-
-```java
-
-```
-
-----
-
-**Java program to Replace First Occurrence Of Vowel With ‘-‘ in String.**
-
-```java
-
-```
-
-----
-
-**Java program to count alphabets, digits and special characters.**
-
-```java
-
-```
-
-----
-
-**Java program to remove blank space from string.**
-
-```java
-
-```
-
-----
-
-**Java program to Concatenate two strings.**
-
-```java
-
-```
-
-----
-
-**Java Program to remove repeated character from string.**
-
-```java
-
-```
-
-----
-
-**Java program to calculate sum of integers in string.**
-
-```java
-
-```
-
-----
-
-**Java program to print all non repeating character in string.**
-
-```java
-
-```
-
-----
-
-**Java Program to sort characters of string in Ascending Order.**
-
-```java
-
-```
-
-----
-
-**Java Program to sort character of string in descending order.**
-
-```java
-
-```
-
-----
-
-Write a program in Java for, In array 1-100 numbers are stored, one number is missing how do you find it.
-
-```java
-
-```
-
-----
-
-Write a program in Java for, In a array 1-100 multiple numbers are duplicates, how do you find it.
-
-```java
-
-```
-
-----
-
-Write a program in Java for, How to find all pairs in array of integers whose sum is equal to given number.
-
-```java
-
-```
-
-----
-
-Write a program in Java for, In a array 1-100 exactly one number is duplicate how do you find it.
-
-```java
-
-```
-
-----
-
-Write a program in Java for, Given two arrays 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
-
-```java
-
-```
-
-----
-
-Write a program in Java for, How to compare two array is equal in size or not.
-
-```java
-
-```
-
-----
-
-Write a program in Java to find largest and smallest number in array.
-
-```java
-
-```
-
-----
-
-Write a program in Java to find second highest number in an integer array.
-
-```java
-
-```
-
-----
-
-Write a program in Java to find top two maximum number in array?
-
-```java
-
-```
-
-----
-
-Java program to print array in reverse Order.
-
-```java
-
-```
-
-----
-
-Java program to reverse array without using second array.
-
-```java
-
-```
-
-----
-
-Java Program to calculate length of an array.
-
-```java
-
-```
-
-----
-
-Java program to insert an element at end of an Array.
-
-```java
-
-```
-
-----
-
-Java program to insert element at a given location in Array.
-
-```java
-
-```
-
-----
-
-Java Program to delete element at end of Array.
-
-```java
-
-```
-
-----
-
-Java Program to delete given element from Array.
-
-```java
-
-```
-
-----
-
-Java Program to delete element from array at given index.
-
-```java
-
-```
-
-----
-
-Java Program to find sum of array elements.
-
-```java
-
-```
-
-----
-
-Java Program to print all even numbers in array.
-
-```java
-
-```
-
-----
-
-Java Program to print all odd numbers in array.
-
-```java
-
-```
-
-----
-
-Java program to perform left rotation of array elements by two positions.
-
-```java
-
-```
-
-----
-
-Java program to perform right rotation in array by 2 positions.
-
-```java
-
-```
-
-----
-
-Java program to find all pairs in array of integers whose sum is equal to given number.
-
-```java
-
-```
-
-----
-
-Java Program to remove duplicate elements form array.
-
-```java
-
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindPairs {
+    public static void main(String[] args) {
+        int[] array = {2, 4, 5, 7, 8, 9};
+        int targetSum = 9;
+
+        List<Pair> pairs = findPairs(array, targetSum);
+
+        System.out.println("Pairs with sum " + targetSum + ":");
+        for (Pair pair : pairs) {
+            System.out.println(pair.toString());
+        }
+    }
+
+    public static List<Pair> findPairs(int[] array, int targetSum) {
+        List<Pair> pairs = new ArrayList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] + array[j] == targetSum) {
+                    pairs.add(new Pair(array[i], array[j]));
+                }
+            }
+        }
+
+        return pairs;
+    }
+
+    static class Pair {
+        int first;
+        int second;
+
+        public Pair(int first, int second) {
+            this.first = first;
+            this.second = second;
+        }
+
+        @Override
+        public String toString() {
+            return "(" + first + ", " + second + ")";
+        }
+    }
+}
 ```
 
 ----
@@ -15068,149 +17796,383 @@ Java Program to remove duplicate elements form array.
 
 **Different Types of Pyramid Patterns**
 
-half pyramid pattern programquescol
+*Half pyramid pattern programquescol*
 
 ```java
+public class HalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-Half Pyramid Pattern Using *
+*Half Pyramid Pattern using **
 
 ```java
+public class HalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-right inverted half pyramid program in c quescol
+*Right inverted half pyramid program in c quescol*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows = 5;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= rows - i + 1; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Right Inverted Half Pyramid Pattern
+*Right Inverted Half Pyramid Pattern*
 
 ```java
+public class RightInvertedHalfPyramid {
+    public static void main(String[] args) {
+        int rows = 5;
 
-```
-
-----
-
-
-half pyramid using number in C
-
-```java
-
-```
-
-----
-
-Half Pyramid Pattern
-
-```java
-
-```
-
-----
-
-inverted half pyramid program quescol
-
-```java
-
-```
-
-----
-
-Inverted Half Pyramid Pattern
-
-```java
-
-```
-
-----
-
-full pyramid pattern program in c using star quescol
-
-```java
-
-```
-
-----
-
-Full Pyramid Pattern
-
-```java
-
-```
-
-----
-
-inverted half pyramid using number program in c
-
-```java
-
-```
-
-----
-
-Inverted Half Pyramid Pattern
-
-```java
-
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i + 1; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
 
-right half pyramid program quescol
+*Half pyramid using number in C*
+
+```c
+#include <stdio.h>
+
+int main() {
+    int rows = 5;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+----
+
+*Half Pyramid Pattern*
 
 ```java
+public class HalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+----
+
+*Inverted half pyramid program quescol*
+
+```java
+public class InvertedHalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+----
+
+*Inverted Half Pyramid Pattern*
+
+```java
+public class InvertedHalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+----
+
+*Full pyramid pattern program in c using star quescol*
+
+```c
+#include <stdio.h>
+
+int main() {
+    int rows = 5;
+    int space, i, j;
+
+    for (i = 1; i <= rows; i++) {
+        for (space = 1; space <= rows - i; space++) {
+            printf(" ");
+        }
+        for (j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+----
+
+*Full Pyramid Pattern*
+
+```java
+public class FullPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 
 ```
 
 ----
 
-Right Half Pyramid Pattern
+*Inverted half pyramid using number program in c*
+
+```c
+#include <stdio.h>
+
+int main() {
+    int rows = 5;
+
+    for (int i = rows; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+----
+
+*Inverted Half Pyramid Pattern*
 
 ```java
+public class InvertedHalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
 
-inverted full pyramid pattern program in c using star
+*Right half pyramid program quescol*
 
 ```java
+public class RightHalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-Inverted Full Pyramid Pattern
+*Right Half Pyramid Pattern*
 
 ```java
+public class RightHalfPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-full pyramid using number program in c
 
-```java
+*Inverted full pyramid pattern program in c using star*
 
+```c
+#include <stdio.h>
+
+int main() {
+    int rows = 5;
+
+    for (int i = rows; i >= 1; i--) {
+        for (int j = 1; j <= rows - i; j++) {
+            printf("  ");
+        }
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Full Pyramid Pattern
+*Inverted Full Pyramid Pattern*
 
 ```java
+public class InvertedFullPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = rows; i >= 1; i--) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+----
+
+*Full pyramid using number program in c*
+
+```c
+#include <stdio.h>
+
+int main() {
+    int rows = 5;
+    int number = 1;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= rows - i; j++) {
+            printf("  ");
+        }
+        for (int k = 1; k <= i; k++) {
+            printf("%d ", number++);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+----
+
+*Full Pyramid Pattern*
+
+```java
+public class FullPyramidPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
@@ -15218,233 +18180,868 @@ Full Pyramid Pattern
 
 **Different Types of Diamond Patterns**
 
-solid right half diamond pattern program in C
+*Solid right half diamond pattern program in C*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows = 5;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = rows - 1; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Right Half Diamond Pattern
+*Right Half Diamond Pattern*
 
 ```java
+public class RightHalfDiamondPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
 
-solid left half diamond pattern program in c
+*solid left half diamond pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows = 5;
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int i = rows - 1; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Left Half Diamond Pattern
+*Left Half Diamond Pattern*
 
 ```java
+public class LeftHalfDiamondPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-solid diamond using star program in c
+*Solid diamond using star program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows = 5;
+    int i, j, k;
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        for (k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for (i = rows - 1; i >= 1; i--) {
+        for (j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        for (k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Full Diamond Pattern
+*Full Diamond Pattern*
 
 ```java
+public class FullDiamondPattern {
+    public static void main(String[] args) {
+        int rows = 5;
 
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 ----
 
-pascal triangle pattern program in c
+*Pascal triangle pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, coefficient = 1;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (int i = 0; i < rows; i++) {
+        for (int space = 1; space <= rows - i; space++) {
+            printf("  ");
+        }
+
+        for (int j = 0; j <= i; j++) {
+            if (j == 0 || i == 0) {
+                coefficient = 1;
+            } else {
+                coefficient = coefficient * (i - j + 1) / j;
+            }
+            printf("%4d", coefficient);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Pascal’s Traingle
+*Pascal’s Traingle*
 
 ```java
+import java.util.Scanner;
 
+public class PascalTriangle {
+    public static void main(String[] args) {
+        int rows, coefficient = 1;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 0; i < rows; i++) {
+            for (int space = 1; space <= rows - i; space++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || i == 0) {
+                    coefficient = 1;
+                } else {
+                    coefficient = coefficient * (i - j + 1) / j;
+                }
+                System.out.printf("%4d", coefficient);
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-floyd triangle pattern program in c
+*Floyd triangle pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, number = 1;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", number);
+            number++;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Print Floyd’s Triangle
+*Print Floyd's Triangle*
 
 ```java
+import java.util.Scanner;
 
+public class FloydTriangle {
+    public static void main(String[] args) {
+        int rows, number = 1;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(number + " ");
+                number++;
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
 **Different Types of Rhombus Patterns**
 
-solid rhombus right inclined pattern program in c
+*Solid rhombus right inclined pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        for (j = 1; j <= rows; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Solid Rhombus Right Inclined
+*Solid Rhombus Right Inclined*
 
 ```java
+import java.util.Scanner;
 
+public class SolidRhombusRightInclined {
+    public static void main(String[] args) {
+        int rows;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= rows; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-solid rhombus left inclined pattern program in C
+*Solid rhombus left inclined pattern program in C*
 
-```java
+```c
+import java.util.Scanner;
 
+public class SolidRhombusRightInclined {
+    public static void main(String[] args) {
+        int rows;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= rows; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-Solid Rhombus Left Inclined
+*Solid Rhombus Left Inclined*
 
 ```java
+import java.util.Scanner;
 
+public class SolidRhombusLeftInclined {
+    public static void main(String[] args) {
+        int rows;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= rows; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
 **Different Types of Rectangle Patterns**
 
-solid rectangle pattern program in C
+*Solid rectangle pattern program in C*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, columns, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &columns);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= columns; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Solid Rectangle
+*Solid Rectangle*
 
 ```java
+import java.util.Scanner;
 
+public class SolidRectanglePattern {
+    public static void main(String[] args) {
+        int rows, columns;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        columns = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-hollow rectangle pattern program in C
+*Hollow rectangle pattern program in C*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, columns, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &columns);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= columns; j++) {
+            if (i == 1 || i == rows || j == 1 || j == columns) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Hollow Rectangle
+*Hollow Rectangle*
 
 ```java
+import java.util.Scanner;
 
+public class HollowRectanglePattern {
+    public static void main(String[] args) {
+        int rows, columns;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+        System.out.print("Enter the number of columns: ");
+        columns = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
+                if (i == 1 || i == rows || j == 1 || j == columns) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
 **Different Types of Patterns Using Star And Hyphen**
 
-star hyphen combination pattern program in c
+*Star hyphen combination pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-star hyphen combination pattern 1
+*Star hyphen combination pattern 1*
 
 ```java
+import java.util.Scanner;
 
+public class StarHyphenPattern {
+    public static void main(String[] args) {
+        int rows;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j % 2 == 0) {
+                    System.out.print("-");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-star hyphen combination 3 pattern program in C
+*Star hyphen combination 3 pattern program in C*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    for (i = rows - 1; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Triangle Using Star Hyphen
+*Triangle Using Star Hyphen*
 
 ```java
+import java.util.Scanner;
 
+public class TrianglePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("-");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+                if (j < i) {
+                    System.out.print("-");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-star hyphen combination pattern program in c
+*Star hyphen combination pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-star hyphen combination pattern 2
+*Star hyphen combination pattern 2*
 
 ```java
+import java.util.Scanner;
 
+public class StarHyphenPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j % 2 == 0) {
+                    System.out.print("-");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
 
-inverted Triangle Using Star Hyphen pattern program in C
+*Inverted Triangle Using Star Hyphen pattern program in C*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = rows; i >= 1; i--) {
+        for (j = 1; j <= rows - i; j++) {
+            printf("-");
+        }
+        for (j = 1; j <= 2 * i - 1; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Inverted Triangle Using Star Hyphen
+*Inverted Triangle Using Star Hyphen*
 
 ```java
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (i = rows; i >= 1; i--) {
+        for (j = 1; j <= rows - i; j++) {
+            printf("-");
+        }
+        for (j = 1; j <= 2 * i - 1; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-star hyphen combination full pattern program in c
+*Star hyphen combination full pattern program in c*
 
-```java
+```c
+#include <stdio.h>
 
+int main() {
+    int rows, i, j;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    // Upper half of the pattern
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    // Lower half of the pattern
+    for (i = rows - 1; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                printf("-");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 ```
 
 ----
 
-Daimond Using Star Hyphen
+*Diamond Using Star Hyphen*
 
 ```java
+import java.util.Scanner;
 
+public class DiamondPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        // Upper half of the diamond
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("-");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Lower half of the diamond
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print("-");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ----
@@ -15460,7 +19057,6 @@ Daimond Using Star Hyphen
 
 **What is Java Spring Boot?**
 
-What is Spring Boot?
 Java Spring Boot is an open-source tool that makes it easier to use Java-based frameworks to create microservices and web apps.
 For any definition of Spring Boot, the conversation has to start with Java—one of the most popular and widely used development
 languages and computing platforms for app development. Developers all over the world start their coding journey learning Java.
@@ -15472,22 +19068,20 @@ apps to networking and enterprise applications.
 **Explain the Spring Boot key components?**
 
 There are four important key components of spring-boot are
-
-Spring Boot auto-configuration.
-Spring Boot CLI.
-Spring Boot starter POMs.
-Spring Boot Actuators.
+- Spring Boot auto-configuration.
+- Spring Boot CLI.
+- Spring Boot starter POMs.
+- Spring Boot Actuators.
 
 There are two more Spring Boot components
+- Spring initializr: To quick start new Spring Boot projects
+- Spring Boot IDEs: We have multiple Spring Boot IDEs for example : Eclipse IDE, IntelliJ IDEA, Spring STS Suite etc
 
-Spring initializr: To quick start new Spring Boot projects
-Spring Boot IDEs: We have multiple Spring Boot IDEs for example : Eclipse IDE, IntelliJ IDEA, Spring STS Suite etc
-Now we will discuss these Spring Boot four components one by one in detail.
+Now we will discuss these Spring Boot four components one by one in detail:
 
-Spring Boot AutoConfigurator
+*Spring Boot AutoConfigurator*
 
 Spring Boot AutoConfigurator is an important key component of Spring Boot. Spring-based application requires a lot of configuration in development of the project. For example XML Configuration and Annotation Configuration.
-
 
 To Minimize this configuration problem and save the time, Spring Boot bring with AutoConfiguraton. The main responsibility of the Spring Boot AutoConfigurator is to reduce the Spring XML Configuration and Annotation Configuration. In Development of any Spring Boot, We need to do some minimal Annotation configuration and no any single XML configuration.
 
@@ -15530,7 +19124,7 @@ When we add “spring-boot-starter-web” jar file dependency to our build file,
 
 That’s it about Spring Boot Starter component.
 
-Spring Boot CLI
+*Spring Boot CLI*
 
 Spring Boot CLI also known as Spring Boot Command Line Interface. It is a Spring Boot tool that allow to run and test Spring Boot applications using command prompt.
 
@@ -15540,7 +19134,7 @@ We can run even Spring Web Applications with simple Spring Boot CLI Commands.
 
 Spring Boot CLI basically run the Groovy scripts. It allows you to quickly develop Spring Framework applications. Groovy scripts is very similar to Java but without boilerplate code.
 
-Spring Boot Actuator
+*Spring Boot Actuator*
 
 Spring Boot Actuator is also a very important Component of the Spring Boot. It helps to monitor the sprint boot applications health , understand traffics, knowing the state of the database, operational information about the running application like metrics, info, dump, env. Spring Boot Actuator also Provides production-grade tools without having to actually implement these features ourselves.
 
@@ -15555,14 +19149,15 @@ Whenever we run  the Spring Boot Web Application, Spring Boot Actuator provides 
 
 **Tell some List of Sprint Boot Actuator EndPoints**
 
-Ans: Some of Spring Boot Actuator End Point are:
+Some of Spring Boot Actuator End Point are:
 
-auditevents: This endpoint Exposes the audit events information for the current application.
-beans: Displays the list of all the Spring beans of application.
-health: Display the health information of spring boot application.
-caches: Exposes the all available caches.
-env: Exposes the  all properties from Spring’s ConfigurableEnvironment.
-metrics: It Shows the ‘metrics’ information for the current application.
+*auditevents*: This endpoint Exposes the audit events information for the current application.
+*beans*: Displays the list of all the Spring beans of application.
+*health*: Display the health information of spring boot application.
+*caches*: Exposes the all available caches.
+*env*: Exposes the  all properties from Spring’s ConfigurableEnvironment.
+*metrics*: It Shows the ‘metrics’ information for the current application.
+
 There are some more Spring Actuator endpoints are loggers, mappings, sessions, shutdown, flyway, conditions, etc
 
 ----
@@ -15573,27 +19168,26 @@ Ans: Spring boot framework is the extension of spring framework to help develope
 
 Spring Boot comes with multiple starter dependencies for different Spring modules. 
 
-Some of the most commonly used dependencies are :
+*Some of the most commonly used dependencies are:*
+- spring-boot-starter-web
+- spring-boot-starter-data-jpa
+- spring-boot-starter-security
+- spring-boot-starter-test
+- spring-boot-starter-thymeleaf
+- spring-boot-starter-actuator
 
-spring-boot-starter-web
-spring-boot-starter-data-jpa
-spring-boot-starter-security
-spring-boot-starter-test
-spring-boot-starter-thymeleaf
-spring-boot-starter-actuator
-Below are the features provided by spring boot but spring doesn’t
-
-Starter POM
-Auto Configuration
-Component Scanning
-Embedded server
-InMemory DB
-Actuators
-Version Management
+*Below are the features provided by spring boot but spring doesn't:*
+- Starter POM
+- Auto Configuration
+- Component Scanning
+- Embedded server
+- InMemory DB
+- Actuators
+- Version Management
 
 ----
 
-***What is the starter dependency of the Spring boot module?**
+**What is the starter dependency of the Spring boot module?**
 
 Ans:
 
@@ -15638,7 +19232,7 @@ Spring Boot Starter Test: This dependency is used in Spring Boot Application to 
 
 ----
 
-**What is Spring Boot dependency management.**
+**What is Spring Boot dependency management?**
 
 Ans: Spring Boot dependency management system manages dependencies and configuration automatically. We need not to specify the version of the dependencies in our configuration file. Spring Boot automatically upgrades all dependencies added in configuration file when we update the Spring Boot version.
 
@@ -15658,7 +19252,7 @@ The entry point of the spring boot application is the class contains @SpringBoot
 
 ----
 
-**Explain Auto Configuration in Spring Boot.**
+**Explain Auto Configuration in Spring Boot?**
 
 Ans:
 
@@ -15945,7 +19539,7 @@ Ans: IoC Container is a framework for implementing automatic dependency injectio
 
 ----
 
-**Tell the steps how you will create spring boot project using Spring Initializer.**
+**Tell the steps how you will create spring boot project using Spring Initializer?**
 
 Ans:
 
@@ -15964,7 +19558,7 @@ Ans:The advantage of the YAML file over the properties file in Spring Boot is, t
 
 ----
 
-**Tell some difference between @RequestParam vs @PathVariable Annotations.**
+**Tell some difference between @RequestParam vs @PathVariable Annotations?**
 
 1). @RequestParams extract values from the query string and @PathVariables extract values from the URI path.
 
@@ -16059,7 +19653,7 @@ Ans:Thymeleaf is a server-side Java-based template engine. It is used for both w
 
 ----
 
-**Tell some embedded containers supported by Spring Boot.**
+**Tell some embedded containers supported by Spring Boot?**
 
 Ans:
 
@@ -16081,7 +19675,7 @@ Ans:When we declare the function we have to decide whether we want some return v
 
 ----
 
-**Differentiate between call by value and call by reference.**
+**Differentiate between call by value and call by reference?**
 Ans:
 
 Factor
@@ -16111,7 +19705,7 @@ In this actual parameters are passed.
 
 ----
 
-**Explain rand() function in c. Write a program in c to generate a random number.**
+**Explain rand() function in c. Write a program in c to generate a random number?**
 
 Ans: The rand() function in c is used to generate a random number.
 
