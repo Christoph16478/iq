@@ -6767,77 +6767,390 @@ int main() {
 __Inheritance__
 
 ```c++
+#include <iostream>
 
+// Base class
+class Shape {
+public:
+    void setColor(const std::string& color) {
+        this->color = color;
+    }
+
+    void printColor() {
+        std::cout << "Color: " << color << std::endl;
+    }
+
+private:
+    std::string color;
+};
+
+// Derived class (inherits from Shape)
+class Circle : public Shape {
+public:
+    void setRadius(double radius) {
+        this->radius = radius;
+    }
+
+    double getArea() {
+        return 3.14159 * radius * radius;
+    }
+
+private:
+    double radius;
+};
+
+int main() {
+    Circle circle;
+    circle.setColor("Red");
+    circle.setRadius(5.0);
+    circle.printColor();
+    std::cout << "Area: " << circle.getArea() << std::endl;
+
+    return 0;
+}
 ```
 
 __Abstraction__
 
 ```c++
+#include <iostream>
 
+// Abstract base class
+class Animal {
+public:
+    virtual void makeSound() const = 0; // Pure virtual function
+
+    virtual ~Animal() {} // Virtual destructor
+};
+
+// Derived classes (implementing the abstract base class)
+class Dog : public Animal {
+public:
+    void makeSound() const override {
+        std::cout << "Dog: Woof!" << std::endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void makeSound() const override {
+        std::cout << "Cat: Meow!" << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal1 = new Dog();
+    Animal* animal2 = new Cat();
+
+    animal1->makeSound();
+    animal2->makeSound();
+
+    delete animal1;
+    delete animal2;
+
+    return 0;
+}
 ```
 
 __Encapsulation__
 
 ```c++
+#include <iostream>
 
+class Rectangle {
+public:
+    void setLength(double length) {
+        this->length = length;
+    }
+
+    void setWidth(double width) {
+        this->width = width;
+    }
+
+    double getArea() const {
+        return length * width;
+    }
+
+private:
+    double length;
+    double width;
+};
+
+int main() {
+    Rectangle rectangle;
+    rectangle.setLength(5.0);
+    rectangle.setWidth(3.0);
+
+    // rectangle.length and rectangle.width cannot be accessed directly
+    std::cout << "Area: " << rectangle.getArea() << std::endl;
+
+    return 0;
+}
 ```
 
 __Polymorphism__
 
 ```c++
+#include <iostream>
 
+// Base class
+class Shape {
+public:
+    virtual void draw() const {
+        std::cout << "Drawing a generic shape." << std::endl;
+    }
+};
+
+// Derived classes (specialized shapes)
+class Circle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+class Square : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a square." << std::endl;
+    }
+};
+
+int main() {
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+
+    shape1->draw();
+    shape2->draw();
+
+    delete shape1;
+    delete shape2;
+
+    return 0;
+}
 ```
 
 __Friend Function__
 
 ```c++
+#include <iostream>
 
+class MyClass {
+private:
+    int data;
+
+public:
+    MyClass(int data) : data(data) {}
+
+    // Declaration of the friend function
+    friend void printData(const MyClass& obj);
+};
+
+// Definition of the friend function
+void printData(const MyClass& obj) {
+    std::cout << "Data: " << obj.data << std::endl;
+}
+
+int main() {
+    MyClass obj(42);
+
+    // Calling the friend function
+    printData(obj);
+
+    return 0;
+}
 ```
 
 __Data Binding__
 
 ```c++
+#include <iostream>
 
+class Book {
+public:
+    std::string title;
+    std::string author;
+    int year;
+};
+
+int main() {
+    Book book;
+
+    // Data binding
+    book.title = "The Great Gatsby";
+    book.author = "F. Scott Fitzgerald";
+    book.year = 1925;
+
+    // Accessing the bound data
+    std::cout << "Title: " << book.title << std::endl;
+    std::cout << "Author: " << book.author << std::endl;
+    std::cout << "Year: " << book.year << std::endl;
+
+    return 0;
+}
 ```
 
 __Virtual Function__
 
 ```c++
+#include <iostream>
 
+// Base class
+class Shape {
+public:
+    virtual void draw() const {
+        std::cout << "Drawing a generic shape." << std::endl;
+    }
+};
+
+// Derived classes (specialized shapes)
+class Circle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+class Square : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a square." << std::endl;
+    }
+};
+
+int main() {
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+
+    shape1->draw();
+    shape2->draw();
+
+    delete shape1;
+    delete shape2;
+
+    return 0;
+}
 ```
 
 __Access Specifiers__
 
 ```c++
+#include <iostream>
 
+class MyClass {
+public:
+    int publicVar;
+
+private:
+    int privateVar;
+
+protected:
+    int protectedVar;
+
+public:
+    void publicMethod() {
+        std::cout << "Public method called." << std::endl;
+    }
+
+private:
+    void privateMethod() {
+        std::cout << "Private method called." << std::endl;
+    }
+
+protected:
+    void protectedMethod() {
+        std::cout << "Protected method called." << std::endl;
+    }
+};
+
+int main() {
+    MyClass obj;
+    obj.publicVar = 42;
+    obj.publicMethod();
+
+    // obj.privateVar = 10;  // Error: privateVar is private and cannot be accessed
+    // obj.privateMethod();  // Error: privateMethod is private and cannot be accessed
+
+    // obj.protectedVar = 20;  // Error: protectedVar is protected and cannot be accessed
+    // obj.protectedMethod();  // Error: protectedMethod is protected and cannot be accessed
+
+    return 0;
+}
 ```
 
 __Overloading__
 
 ```c++
+#include <iostream>
 
+// Function with one integer parameter
+void printNumber(int num) {
+    std::cout << "Integer Number: " << num << std::endl;
+}
+
+// Function with one float parameter
+void printNumber(float num) {
+    std::cout << "Float Number: " << num << std::endl;
+}
+
+// Function with two integer parameters
+void printNumber(int num1, int num2) {
+    std::cout << "Integer Numbers: " << num1 << ", " << num2 << std::endl;
+}
+
+int main() {
+    int integerNumber = 42;
+    float floatNumber = 3.14;
+
+    printNumber(integerNumber);           // Calls printNumber(int)
+    printNumber(floatNumber);             // Calls printNumber(float)
+    printNumber(integerNumber, floatNumber); // Calls printNumber(int, int)
+
+    return 0;
+}
 ```
 
 ----
 
-__Destructor__
-
-```c++
-
-```
-
-
-__Constructor__
-
-```c++
-
-```
-
-
 **Write a program in C++ to print the first non-repeated character in the given string.**
 
 ```c++
+#include <iostream>
+#include <unordered_map>
 
+char findFirstNonRepeatedChar(const std::string& str) {
+    std::unordered_map<char, int> charCount;
+
+    // Count the frequency of each character
+    for (char ch : str) {
+        charCount[ch]++;
+    }
+
+    // Find the first non-repeated character
+    for (char ch : str) {
+        if (charCount[ch] == 1) {
+            return ch;
+        }
+    }
+
+    return '\0'; // Return null character if no non-repeated character is found
+}
+
+int main() {
+    std::string input;
+    std::cout << "Enter a string: ";
+    std::cin >> input;
+
+    char firstNonRepeatedChar = findFirstNonRepeatedChar(input);
+
+    if (firstNonRepeatedChar != '\0') {
+        std::cout << "First non-repeated character: " << firstNonRepeatedChar << std::endl;
+    } else {
+        std::cout << "No non-repeated character found." << std::endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
@@ -6845,7 +7158,46 @@ __Constructor__
 **Write a program in C++ to find duplicate numbers in a given array that contains multiple duplicates.**
 
 ```c++
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 
+std::vector<int> findDuplicateNumbers(const std::vector<int>& nums) {
+    std::unordered_map<int, int> numCount;
+
+    // Count the frequency of each number
+    for (int num : nums) {
+        numCount[num]++;
+    }
+
+    std::vector<int> duplicates;
+
+    // Find numbers with frequency greater than 1 (duplicates)
+    for (const auto& pair : numCount) {
+        if (pair.second > 1) {
+            duplicates.push_back(pair.first);
+        }
+    }
+
+    return duplicates;
+}
+
+int main() {
+    std::vector<int> numbers = {1, 2, 3, 4, 2, 6, 7, 3, 1, 8, 9, 9, 4};
+    std::vector<int> duplicateNumbers = findDuplicateNumbers(numbers);
+
+    if (!duplicateNumbers.empty()) {
+        std::cout << "Duplicate numbers found: ";
+        for (int num : duplicateNumbers) {
+            std::cout << num << " ";
+        }
+        std::cout << std::endl;
+    } else {
+        std::cout << "No duplicate numbers found." << std::endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
@@ -6853,7 +7205,24 @@ __Constructor__
 **Write a program to print the date in dd/mm/yy format.**
 
 ```c++
+#include <iostream>
+#include <ctime>
 
+int main() {
+    // Get the current time
+    std::time_t currentTime = std::time(nullptr);
+    std::tm* localTime = std::localtime(&currentTime);
+
+    // Extract the day, month, and year
+    int day = localTime->tm_mday;
+    int month = localTime->tm_mon + 1;
+    int year = localTime->tm_year + 1900;
+
+    // Print the date in dd/mm/yy format
+    std::cout << "Current date: " << day << "/" << month << "/" << (year % 100) << std::endl;
+
+    return 0;
+}
 ```
 
 ---
