@@ -38,7 +38,8 @@ You define objects as an instance of a class. Once it creates the object, then i
 
 using namespace std;
 
-class MyClass { // The class
+class MyClass
+{ // The class
 public: // Access specifier
     int myNum; // Attribute (int variable)
     string myString; // Attribute (string variable)
@@ -71,7 +72,8 @@ There are three types of access modifiers:
 // C++ program to demonstrate private
 // access modifier
 
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
 class Circle
@@ -82,8 +84,8 @@ class Circle
 	
 	// public member function
 	public:
-		double compute_area()
-		{ // member function can access private
+		double compute_area() // member function can access private
+		{ 
 			// data member radius
 			return 3.14*radius*radius;
 		}
@@ -164,12 +166,9 @@ class Child : public Parent
 	public:
 	void setId(int id)
 	{
-		
 		// Child class is able to access the inherited
 		// protected data members of base class
-		
 		id_protected = id;
-		
 	}
 	
 	void displayId()
@@ -179,16 +178,16 @@ class Child : public Parent
 };
 
 // main function
-int main() {
-	
+int main()
+{
 	Child obj1;
 	
 	// member function of the derived class can
 	// access the protected data members of the base class
-	
 	obj1.setId(81);
 	obj1.displayId();
-	return 0;
+	
+    return 0;
 }
 ```
 
@@ -232,12 +231,15 @@ int main()
 {
     int a = 3, b = 2;
 
-    if (a < b) {
+    if (a < b)
+    {
         cout << a << " is less than " << b;
     }
-    else if (a > b) {
+    else if (a > b)
+    {
         cout << a << " is greater than " << b;
     }
+    
     return 0;
 }
 
@@ -321,29 +323,36 @@ int main()
 
 using namespace std;
 
-class Box {
+class Box
+{
     double length; // Length of a box
     double breadth; // Breadth of a box
     double height; // Height of a box
+
 public:
-    double getVolume(void) {
+    double getVolume(void)
+    {
         return length * breadth * height;
     }
 
-    void setLength(double len) {
+    void setLength(double len)
+    {
         length = len;
     }
 
-    void setBreadth(double bre) {
+    void setBreadth(double bre)
+    {
         breadth = bre;
     }
 
-    void setHeight(double hei) {
+    void setHeight(double hei)
+    {
         height = hei;
     }
 
     // Overload + operator to add two Box objects.
-    Box operator+(const Box& b) {
+    Box operator+(const Box& b)
+    {
         Box box;
         box.length = this->length + b.length;
         box.breadth = this->breadth + b.breadth;
@@ -556,12 +565,14 @@ The default access specifiers are private when deriving a class.
 
 using namespace std;
 
-class Test1 {
+class Test1
+{
     // x is private
     int x1;
 };
 
-struct Test2 {
+struct Test2
+{
     // x is public
     int x2;
 };
@@ -598,9 +609,11 @@ the function, a different function will be executed.
 using namespace std;
 
 // Base class
-class Animal {
+class Animal
+{
 public:
-    void animalSound() {
+    void animalSound()
+    {
         cout << "The animal makes a sound \n";
     }
 };
@@ -611,7 +624,7 @@ class Pig : public Animal
 public:
     // animalSound method gets overwritten
     void animalSound()
-       {
+    {
         cout << "The pig says: wee wee \n";
     }
 };
@@ -672,15 +685,18 @@ Here are two common mechanisms for achieving compile-time polymorphism in C++:
 Function overloading enables you to define multiple functions with the same name but different parameter lists. The compiler determines the appropriate function to call based on the types and/or number of arguments provided. The function signature (name and parameter list) is used to differentiate between the overloaded functions.
 
 ```c++
-void print(int num) {
+void print(int num)
+{
     std::cout << "Integer: " << num << std::endl;
 }
 
-void print(double num) {
+void print(double num)
+{
     std::cout << "Double: " << num << std::endl;
 }
 
-int main() {
+int main()
+{
     print(10);       // Calls print(int)
     print(3.14);     // Calls print(double)
     return 0;
@@ -695,11 +711,13 @@ Templates allow you to write generic code that can be used with different types.
 
 ```c++
 template <typename T>
-void print(T num) {
+void print(T num)
+{
     std::cout << "Value: " << num << std::endl;
 }
 
-int main() {
+int main()
+{
     print(10);       // Instantiates print<int>(int)
     print(3.14);     // Instantiates print<double>(double)
     print("Hello");  // Instantiates print<const char*>(const char*)
@@ -721,28 +739,35 @@ Here's how you can achieve runtime polymorphism in C++:
 Inheritance allows you to define a base class and derive multiple classes from it. The derived classes inherit the properties and behaviors of the base class. In the context of runtime polymorphism, the base class typically contains virtual functions that can be overridden by the derived classes.
 
 ```c++
-class Shape {
+class Shape
+{
 public:
-    virtual void draw() {
+    virtual void draw()
+    {
         // Default implementation or do nothing
     }
 };
 
-class Circle : public Shape {
+class Circle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a circle." << std::endl;
     }
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a rectangle." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Shape* shape1 = new Circle();
     Shape* shape2 = new Rectangle();
 
@@ -751,6 +776,7 @@ int main() {
 
     delete shape1;
     delete shape2;
+    
     return 0;
 }
 ```
@@ -761,11 +787,13 @@ In this example, the Shape class is the base class, and the Circle and Rectangle
 Polymorphic pointers or references are used to refer to objects of derived classes through a pointer or reference of their base class type. This allows for dynamic dispatch of virtual functions based on the actual type of the object being pointed to or referenced.
 
 ```c++
-void processShape(Shape* shape) {
+void processShape(Shape* shape)
+{
     shape->draw();   // Calls the appropriate draw() function based on the actual object type
 }
 
-int main() {
+int main()
+{
     Circle circle;
     Rectangle rectangle;
 
@@ -796,7 +824,8 @@ used to initialize specific values to an object's data members.
 
 using namespace std;
 
-class student {
+class student
+{
     int no;
 public:
     student()
@@ -816,6 +845,7 @@ int main()
     student s; // constructor gets called automatically when
                // we create the object of the class
     s.display();
+    
     return 0;
 }
 ```
@@ -835,16 +865,32 @@ reference/pointer used for the function call. Virtual functions are mainly used 
 #include <iostream>
 using namespace std;
 
-class base {
+class base
+{
 public:
-	virtual void print() { cout << "print base class\n"; }
-	void show() { cout << "show base class\n"; }
+	virtual void print()
+    {
+        cout << "print base class\n";
+    }
+
+	void show()
+    {
+        cout << "show base class\n";
+    }
 };
 
-class derived : public base {
+class derived : public base
+{
 public:
-	void print() { cout << "print derived class\n"; }
-	void show() { cout << "show derived class\n"; }
+	void print()
+    {
+        cout << "print derived class\n";
+    }
+
+	void show()
+    {
+        cout << "show derived class\n";
+    }
 };
 
 int main()
@@ -879,7 +925,8 @@ friends to another class are friend functions for the friend class.
 
 using namespace std;
 
-class Node {
+class Node
+{
 private:
     int key;
     Node* next;
@@ -890,8 +937,7 @@ private:
 };
 
 int main()
-{
-    
+{ 
 }
 ```
 
@@ -918,7 +964,8 @@ details that you don’t want to show to a user. It is of two types:
 #include <iostream>
 using namespace std;
 
-class implementAbstraction {
+class implementAbstraction
+{
 private:
 	int a, b;
 
@@ -962,7 +1009,8 @@ A destructor member function is instantly called when an object exits its scope 
 
 using namespace std;
 
-class X {
+class X
+{
 public:
     // Constructor for class X
     X();
@@ -971,8 +1019,7 @@ public:
 };
 
 int main()
-{
-    
+{ 
 }
 ```
 
@@ -1044,7 +1091,8 @@ A static member function can be called even if no class objects exist. It is acc
 
 using namespace std;
 
-class Student {
+class Student
+{
 public:
     // static member
     static int total;
@@ -1130,7 +1178,8 @@ using namespace std;
 void swap(int x, int y);
 
 // function definition to swap the values.
-void swap(int x, int y) {
+void swap(int x, int y)
+{
    int temp;
 
    temp = x; /* save the value of x */
@@ -1140,7 +1189,8 @@ void swap(int x, int y) {
    return;
 }
 
-int main () {
+int main()
+{
    // local variable declaration:
    int a = 100;
    int b = 200;
@@ -1172,7 +1222,8 @@ This means any change in values inside the function will be reflected in the act
 void swap(int &x, int &y);
 
 // function definition to swap the values.
-void swap(int &x, int &y) {
+void swap(int &x, int &y)
+{
    int temp;
    temp = x; /* save the value at address x */
    x = y; /* put y into x */
@@ -1183,7 +1234,8 @@ void swap(int &x, int &y) {
 
 // For now, let us call the function swap() by passing values by reference as in the following example −
 
-int main () {
+int main()
+{
    // local variable declaration:
    int a = 100;
    int b = 200;
@@ -1217,9 +1269,13 @@ An inline function when called expands in line. When you call this function, the
 
 using namespace std;
 
-inline int cube(int s) { return s * s * s; }
+inline int cube(int s)
+{
+    return s * s * s;
+}
 
-int main() {
+int main()
+{
 	cout << "The cube of 3 is: " << cube(3) << "\n";
 	return 0;
 }
@@ -1286,18 +1342,24 @@ The scope operator is used for the following purposes:
 using namespace std;
 
 // Define a namespace
-namespace MyNamespace {
+namespace MyNamespace
+{
     int value = 5;
-    void printValue() {
+    
+    void printValue()
+    {
         std::cout << "Value from MyNamespace: " << value << std::endl;
     }
 }
 
 // Define a class
-class MyClass {
+class MyClass
+{
 public:
     static int value;
-    static void printValue() {
+
+    static void printValue()
+    {
         std::cout << "Value from MyClass: " << value << std::endl;
     }
 };
@@ -1305,7 +1367,8 @@ public:
 // Define the static member variable outside the class
 int MyClass::value = 10;
 
-int main() {
+int main()
+{
     // Accessing namespace member using scope resolution operator
     std::cout << "Value from namespace: " << MyNamespace::value << std::endl;
     MyNamespace::printValue();
@@ -1343,9 +1406,11 @@ There are two types of constructors:
 
 using namespace std;
 
-class MyClass { // The class
+class MyClass
+{ // The class
 public: // Access specifier
-    MyClass() { // Constructor
+    MyClass()
+    { // Constructor
         cout << "Hello World!";
     }
 };
@@ -1381,7 +1446,6 @@ using namespace std;
 
 class A
 {
-
 };
 
 int main()
@@ -1406,7 +1470,8 @@ int main()
 
 using namespace std;
 
-int main() {
+int main()
+{
     std::string input;
 
     std::cout << "Enter a sentence: ";
@@ -1457,7 +1522,8 @@ friend function with the help of the friend keyword. You declare this function i
  
 using namespace std;
  
-class Box {
+class Box
+{
    double width;
    
    public:
@@ -1466,19 +1532,22 @@ class Box {
 };
 
 // Member function definition
-void Box::setWidth( double wid ) {
+void Box::setWidth( double wid )
+{
    width = wid;
 }
 
 // Note: printWidth() is not a member function of any class.
-void printWidth( Box box ) {
+void printWidth( Box box )
+{
    /* Because printWidth() is a friend of Box, it can
    directly access any member of this class */
    cout << "Width of box : " << box.width <<endl;
 }
  
 // Main function for the program
-int main() {
+int main()
+{
    Box box;
  
    // set box width without member function
@@ -1523,7 +1592,8 @@ STL components are containers, algorithms, iterators, and function objects.
 
 using namespace std;
 
-bool is_palindrome(int num) {
+bool is_palindrome(int num)
+{
     int reversed_num = 0;
     int temp_num = num;
     while (temp_num > 0) {
@@ -1531,10 +1601,12 @@ bool is_palindrome(int num) {
         reversed_num = (reversed_num * 10) + digit;
         temp_num /= 10;
     }
+
     return (reversed_num == num);
 }
 
-int main() {
+int main()
+{
     int num;
     cout << "Enter a number: ";
     cin >> num;
@@ -1543,6 +1615,7 @@ int main() {
     } else {
         cout << num << " is not a palindrome" << endl;
     }
+
     return 0;
 }
 ```
@@ -1554,34 +1627,39 @@ function is, to put it simply, a function that produces an object by initializin
 same class that has already been constructed.
 
 ```c++
+// TestApplication.cpp : Copy constructor example.
+//
+
 #include <iostream>  
 
-using namespace std;  
+using namespace std;
 
-class A  
-{  
-   Public:  
-
-    int x;  
+class A
+{
+public:
+    int x;
 
     A(int a) // parameterized constructor.  
-    {  
-      x=a;  
-    }  
-    
-    A(A &i) // copy constructor  
-    {  
-        x = i.x;  
-    }  
-};  
+    {
+        x = a;
+    }
 
-int main()  
-{  
+    A(A& i) // copy constructor  
+    {
+        x = i.x;
+    }
+};
+
+int main()
+{
     A a1(20); // Calling the parameterized constructor.  
     A a2(a1); // Calling the copy constructor.  
-    cout<<a2.x;  
-    return 0;  
+    cout << a2.x;
+    return 0;
 }
+
+// Output:
+// 20
 ```
 
 ----
@@ -1593,15 +1671,20 @@ int main()
 
 using namespace std;
 
-int factorial(int n) {
-    if (n == 0 || n == 1) {
+int factorial(int n)
+{
+    if (n == 0 || n == 1)
+    {
         return 1;
-    } else {
+    }
+    else
+    {
         return n * factorial(n-1);
     }
 }
 
-int main() {
+int main()
+{
     int n;
     cout << "Enter a number: ";
     cin >> n;
@@ -1633,17 +1716,22 @@ user i.e., the details that you want the user to see, hiding the internal detail
 
 using namespace std;
 
-int frequency(int arr[], int n, int x) {
+int frequency(int arr[], int n, int x)
+{
     int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == x) {
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == x)
+        {
             count++;
         }
     }
+    
     return count;
 }
 
-int main() {
+int main()
+{
     int arr[] = {1, 2, 3, 4, 5, 2, 3, 2};
     int n = sizeof(arr) / sizeof(arr[0]);
     int x = 2;
@@ -1685,9 +1773,91 @@ It doesn’t reflect changes made to the new/copied object in the original objec
 A virtual function is a base class member function that a derived class can modify. A member function of a base class that
 is a pure virtual function must be defined in the derived type; otherwise, the derived class will become abstract as well.
 
-```c++
+*Virtual Function:*
 
+A virtual function is a member function of a class that can be overridden in derived classes.
+It is declared using the virtual keyword in the base class.
+The base class provides a default implementation for the virtual function, which can be overridden by derived classes to provide their specific implementation.
+A virtual function can have an implementation in the base class, and it can also be declared as = 0 to make it a pure virtual function.
+A virtual function in the base class can be called using a pointer or reference to the base class, and the derived class's implementation will be invoked dynamically at runtime.
+Here's an example that demonstrates the usage of a virtual function:
+
+```c++
+#include <iostream>
+
+class Shape
+{
+public:
+    virtual void draw()
+    {
+        std::cout << "Drawing a shape." << std::endl;
+    }
+};
+
+class Circle : public Shape
+{
+public:
+    void draw() override
+    {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+int main()
+{
+    Shape* shape = new Circle();
+    shape->draw();  // Output: Drawing a circle.
+    delete shape;
+    
+    return 0;
+}
 ```
+
+In this example, the Shape class has a virtual function draw(), which provides a default implementation for drawing a shape. The Circle class derives from Shape and overrides the draw() function to provide its specific implementation for drawing a circle.
+
+In the main() function, we create a pointer of type Shape* that points to a Circle object. When we call the draw() function through the base class pointer, the derived class's implementation is invoked dynamically at runtime, and the output is "Drawing a circle."
+
+*Pure Virtual Function:*
+
+A pure virtual function is a virtual function that is declared in the base class but does not have any implementation in the base class.
+It is declared using the virtual keyword and followed by = 0 in the base class.
+The base class cannot be instantiated because it contains a pure virtual function, making it an abstract class.
+Derived classes must override the pure virtual function and provide their specific implementation.
+Pure virtual functions define an interface that derived classes must adhere to.
+
+```c++
+#include <iostream>
+
+class Animal {
+public:
+    virtual void makeSound() const = 0;  // Pure virtual function
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() const override {
+        std::cout << "Woof!" << std::endl;
+    }
+};
+
+int main() {
+    // Animal* animal = new Animal();  // Error: Cannot instantiate abstract class
+
+    Animal* dog = new Dog();
+    dog->makeSound();  // Output: Woof!
+
+    delete dog;
+    return 0;
+}
+```
+
+In this example, the Animal class has a pure virtual function makeSound(), which does not provide any implementation. The Dog class derives from Animal and overrides the makeSound() function to provide its specific implementation for making the sound of a dog.
+
+Since the Animal class contains a pure virtual function, it cannot be instantiated. However, we can create a pointer of type Animal* that points to a Dog object. When we call the makeSound() function through the base class pointer, the derived class's implementation is invoked, and the output is "Woof!"
+
+Pure virtual functions allow for defining an interface or base behavior
+
+----
 
 **Class D is derived from a base class B. If creating an object of type D, what order will the constructors of these classes get called?**
 
@@ -1702,32 +1872,38 @@ most-child class. Thus, first, the Constructor of class B will be called, and th
 A virtual process may be called a function Object, but exercise caution. It might perform differently than expected. The virtual call mechanism in a function Object is disabled since overriding from derived classes hasn't happened yet. Building blocks are used to create objects, "base before derived."
 
 ```c++
-class Animal {
+class Animal
+{
 public:
     virtual void makeSound() const = 0;  // Pure virtual function
 
-    void eat() {
+    void eat()
+    {
         std::cout << "The animal is eating." << std::endl;
     }
 };
 
-class Dog : public Animal {
+class Dog : public Animal
+{
 public:
-    void makeSound() const override {
+    void makeSound() const override
+    {
         std::cout << "The dog barks." << std::endl;
     }
 };
 
-class Cat : public Animal {
+class Cat : public Animal
+{
 public:
-    void makeSound() const override {
+    void makeSound() const override
+    {
         std::cout << "The cat meows." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     // Animal animal;   // Error: Cannot instantiate an abstract class
-
     Dog dog;
     Cat cat;
 
@@ -1744,6 +1920,8 @@ int main() {
 
 In this example, the Animal class is an abstract class because it contains a pure virtual function makeSound(). The makeSound() function is declared with = 0 at the end, indicating that it has no implementation in the base class. The derived classes, Dog and Cat, must provide their own implementations for the makeSound() function to become concrete classes.
 
+----
+
 **What are void pointers?**
 
 In C, a void pointer has no connection to any particular data type. It designates a location for specific data within the storage.
@@ -1758,7 +1936,8 @@ This indicates that it is pointing to a variable's address. It also goes by the 
 
 using namespace std;
 
-int main() {
+int main()
+{
     int a = 10;
     char b = 'x';
     void* p = &a; // void pointer holds address of int 'a'
@@ -1784,7 +1963,8 @@ A class, struct, or union form only has access to this pointer within non-static
 
 using namespace std;
 
-int main() {
+int main()
+{
 	string food = "Pizza"; // A food variable of type string
 	string* ptr = &food; // A pointer variable, with the name ptr, that stores the address of food
 	// Output the value of food (Pizza)
@@ -1817,7 +1997,8 @@ two important dynamic memory operations (). The size of the desired memory area 
 
 using namespace std;
 
-int main() {
+int main()
+{
 	char* user;
 	user = (char*)malloc(25);
 	strcpy(user, "Jane_Eyre");
@@ -1874,7 +2055,8 @@ int main()
 
 using namespace std;
 
-int main() {
+int main()
+{
 	int a = 1;
 	int x = (a++)++;
 	cout << x << endl;
@@ -1899,59 +2081,66 @@ which is a concept of keeping implementation details separate from associated da
 #include <iostream>
  
 using namespace std;
- 
+
 // Base class
-class Shape {
-   public:
-      // pure virtual function providing interface framework.
-      virtual int getArea() = 0;
-      void setWidth(int w) {
-         width = w;
-      }
-   
-      void setHeight(int h) {
-         height = h;
-      }
-   
-   protected:
-      int width;
-      int height;
+class Shape
+{
+public:
+    // pure virtual function providing interface framework.
+    virtual int getArea() = 0;
+    void setWidth(int w)
+    {
+        width = w;
+    }
+
+    void setHeight(int h)
+    {
+        height = h;
+    }
+
+protected:
+    int width;
+    int height;
 };
- 
+
 // Derived classes
-class Rectangle: public Shape {
-   public:
-      int getArea() { 
-         return (width * height); 
-      }
+class Rectangle : public Shape
+{
+public:
+    int getArea()
+    {
+        return (width * height);
+    }
 };
 
-class Triangle: public Shape {
-   public:
-      int getArea() { 
-         return (width * height)/2; 
-      }
+class Triangle : public Shape
+{
+public:
+    int getArea()
+    {
+        return (width * height) / 2;
+    }
 };
- 
-int main(void) {
-   Rectangle Rect;
-   Triangle  Tri;
- 
-   Rect.setWidth(5);
-   Rect.setHeight(7);
-   
-   // Print the area of the object.
-   cout << "Total Rectangle area: " << Rect.getArea() << endl;
 
-   Tri.setWidth(5);
-   Tri.setHeight(7);
-   
-   // Print the area of the object.
-   cout << "Total Triangle area: " << Tri.getArea() << endl; 
+int main(void)
+{
+    Rectangle Rect;
+    Triangle  Tri;
 
-   return 0;
+    Rect.setWidth(5);
+    Rect.setHeight(7);
+
+    // Print the area of the object.
+    cout << "Total Rectangle area: " << Rect.getArea() << endl;
+
+    Tri.setWidth(5);
+    Tri.setHeight(7);
+
+    // Print the area of the object.
+    cout << "Total Triangle area: " << Tri.getArea() << endl;
+
+    return 0;
 }
-
 ```
 
 ----
@@ -1965,19 +2154,25 @@ Compile-time error
 None of the above
 
 ```c++
-#include<iostream>
+#include <iostream>
+
 using namespace std;
-class A {
+
+class A
+{
 public:
 	virtual void a() = 0;
-	A() {
+	A()
+	{
 		cout << "A ";
 	}
 };
+
 class B : public A
 {
 public:
-	B() {
+	B()
+	{
 		cout << "B ";
 	}
 };
@@ -1988,7 +2183,7 @@ int main() {
 }
 
 // Output
-// 
+// Compile-time error
 ```
 
 ----
@@ -2042,7 +2237,7 @@ Syntax of namespace:
 ```cmd
 namespace namespace_name  
 {
-    //body of namespace;  
+    // body of namespace;  
 }
 ```
 
@@ -2072,13 +2267,15 @@ namespace addition
 {
     int a = 5;
     int b = 5;
+    
     int add()
     {
         return(a + b);
     }
 }
 
-int main() {
+int main()
+{
     int result;
     result = addition::add();
     cout << result;
@@ -2098,7 +2295,8 @@ A token in C++ can be a keyword, identifier, literal, constant and symbol.
 
 Examples: 
 
-1. Identifiers:
+__1. Identifiers:__
+
 Identifiers are names given to variables, functions, classes, or other entities in a program. They consist of a sequence of letters, digits, and underscores. They must begin with a letter or an underscore. Examples of 
 
 ```c++
@@ -2107,7 +2305,8 @@ double pi;
 class MyClass;
 ```
 
-2. Keywords:
+__2. Keywords:__
+
 Keywords are reserved words in C++ that have a specific meaning and cannot be used as identifiers. Examples of keywords:
 
 ```c++
@@ -2119,7 +2318,8 @@ else
 
 ```
 
-3. Constants:
+__3. Constants:__
+
 Constants represent fixed values that do not change during the execution of a program. They can be of various types, such as integer, floating-point, character, or string constants. Examples of constants:
 
 ```c++
@@ -2130,7 +2330,8 @@ Constants represent fixed values that do not change during the execution of a pr
 
 ```
 
-4. Operators:
+__4. Operators:__
+
 Operators perform operations on operands and produce a result. Examples of operators:
 
 ```c++
@@ -2141,7 +2342,8 @@ Operators perform operations on operands and produce a result. Examples of opera
 =   // Assignment operator
 ```
 
-5. Punctuation Symbols:
+__5. Punctuation Symbols:__
+
 Punctuation symbols are used for grouping, separating, and terminating statements or expressions. Examples of punctuation symbols:
 
 ```c++
@@ -2240,7 +2442,8 @@ C++ was discovered in order to cope with the disadvantages of C.
 
 Delete is used to release a unit of memory, delete[] is used to release an array.
 
-1. delete:
+*1. delete:*
+
 The delete operator is used to deallocate memory that was allocated for a single object using the new operator. It calls the destructor of the object being deleted and frees the memory occupied by that object.
 
 ```c++
@@ -2249,7 +2452,8 @@ int* singleNumber = new int;
 delete singleNumber;  // Deallocate memory for a single integer
 ```
 
-2. delete[]:
+*2. delete[]:*
+
 The delete[] operator is used to deallocate memory that was allocated for an array of objects using the new[] operator. It calls the destructors of all the objects in the array (in reverse order) and frees the memory occupied by the entire array.
 
 ```c++
@@ -2299,32 +2503,38 @@ i.e., public, private and protected.
 #include <iostream>
 #include <string>
 
-class Person {
+class Person
+{
 private:
     std::string name;
     int age;
 
 public:
     // Setter methods
-    void setName(const std::string& newName) {
+    void setName(const std::string& newName)
+    {
         name = newName;
     }
 
-    void setAge(int newAge) {
+    void setAge(int newAge)
+    {
         age = newAge;
     }
 
     // Getter methods
-    std::string getName() const {
+    std::string getName() const
+    {
         return name;
     }
 
-    int getAge() const {
+    int getAge() const
+    {
         return age;
     }
 };
 
-int main() {
+int main()
+{
     Person person;
 
     person.setName("John");
@@ -2346,50 +2556,63 @@ Some people confused about Encapsulation and abstraction, but they both are diff
 #include <iostream>
 
 // Abstract class
-class Shape {
+class Shape
+{
 public:
     virtual double getArea() const = 0;  // Pure virtual function
 
-    virtual void print() const {
+    virtual void print() const
+    {
         std::cout << "This is a shape." << std::endl;
     }
 };
 
 // Concrete classes derived from the Shape class
-class Circle : public Shape {
+class Circle : public Shape
+{
 private:
     double radius;
 
 public:
-    Circle(double radius) : radius(radius) {}
+    Circle(double radius) : radius(radius)
+    {
+    }
 
-    double getArea() const override {
+    double getArea() const override
+    {
         return 3.14 * radius * radius;
     }
 
-    void print() const override {
+    void print() const override
+    {
         std::cout << "This is a circle." << std::endl;
     }
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 private:
     double length;
     double width;
 
 public:
-    Rectangle(double length, double width) : length(length), width(width) {}
+    Rectangle(double length, double width) : length(length), width(width)
+    {
+    }
 
-    double getArea() const override {
+    double getArea() const override
+    {
         return length * width;
     }
 
-    void print() const override {
+    void print() const override
+    {
         std::cout << "This is a rectangle." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Circle circle(5.0);
     Rectangle rectangle(4.0, 6.0);
 
@@ -2414,40 +2637,52 @@ int main() {
 #include <string>
 
 // Base class
-class Vehicle {
+class Vehicle
+{
 protected:
     std::string brand;
 
 public:
-    Vehicle(const std::string& brand) : brand(brand) {}
+    Vehicle(const std::string& brand) : brand(brand)
+    {
+    }
 
-    void honk() {
+    void honk()
+    {
         std::cout << "Beep beep!" << std::endl;
     }
 };
 
 // Derived class
-class Car : public Vehicle {
+class Car : public Vehicle
+{
 private:
     int numWheels;
 
 public:
-    Car(const std::string& brand, int numWheels) : Vehicle(brand), numWheels(numWheels) {}
+    Car(const std::string& brand, int numWheels) : Vehicle(brand), numWheels(numWheels)
+    {
+    }
 
-    void drive() {
+    void drive()
+    {
         std::cout << "Driving a car with " << numWheels << " wheels." << std::endl;
     }
 };
 
 // Derived class
-class Bicycle : public Vehicle {
+class Bicycle : public Vehicle
+{
 private:
     int numGears;
 
 public:
-    Bicycle(const std::string& brand, int numGears) : Vehicle(brand), numGears(numGears) {}
+    Bicycle(const std::string& brand, int numGears) : Vehicle(brand), numGears(numGears)
+    {
+    }
 
-    void pedal() {
+    void pedal()
+    {
         std::cout << "Pedaling a bicycle with " << numGears << " gears." << std::endl;
     }
 };
@@ -2533,6 +2768,7 @@ class Addition
     int a=5;  
     int b=6;  
     public:  
+    
     friend int add(Addition a1)  
     {
         return(a1.a+a1.b);  
@@ -2560,38 +2796,47 @@ Virtual inheritance facilitates you to create only one copy of each object even 
 #include <iostream>
 
 // Base class
-class Animal {
+class Animal
+{
 public:
-    void eat() {
+    void eat()
+    {
         std::cout << "Animal is eating." << std::endl;
     }
 };
 
 // Intermediate base class with virtual inheritance
-class Mammal : public virtual Animal {
+class Mammal : public virtual Animal
+{
 public:
-    void walk() {
+    void walk()
+    {
         std::cout << "Mammal is walking." << std::endl;
     }
 };
 
 // Intermediate base class with virtual inheritance
-class Bird : public virtual Animal {
+class Bird : public virtual Animal
+{
 public:
-    void fly() {
+    void fly()
+    {
         std::cout << "Bird is flying." << std::endl;
     }
 };
 
 // Derived class inheriting from Mammal and Bird
-class Bat : public Mammal, public Bird {
+class Bat : public Mammal, public Bird
+{
 public:
-    void feedYoungOnMilk() {
+    void feedYoungOnMilk()
+    {
         std::cout << "Bat is feeding its young on milk." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Bat bat;
 
     bat.eat();            // Resolves ambiguity by using virtual inheritance from Animal
@@ -2637,17 +2882,34 @@ Function Overloading: When there are multiple functions with the same name but d
 
 ```c++
 // same name different arguments
-int GFG() { }
-int GFG(int a) { }
-float GFG(double a) { }
-int GFG(int a, double b) { }
-Operator Overloading: It is basically giving practice of giving a special meaning to the existing meaning of an operator or in simple terms redefining the pre-redefined meaning
+int GFG()
+{  
+}
 
-class GFG {
+int GFG(int a)
+{
+}
+
+float GFG(double a)
+{
+}
+
+int GFG(int a, double b)
+{
+}
+
+Operator Overloading:
+
+It is basically giving practice of giving a special meaning to the existing meaning of an operator or in simple terms redefining the pre-redefined meaning
+
+class GFG
+{
     // private and other modes
     statements
-    public
-        returnType operator symbol (arguments) {
+
+    public:
+        returnType operator symbol (arguments)
+        {
             statements
         }
     statements
@@ -2658,7 +2920,9 @@ __Run-Time Polymorphism or Late Binding__
 
 Run-time polymorphism takes place when functions are invoked during run time. 
  
-Function Overriding: Function overriding occurs when a base class member function is redefined in a derived class with the same arguments and return type.
+Function Overriding:
+
+Function overriding occurs when a base class member function is redefined in a derived class with the same arguments and return type.
 
 ```c++
 // C++ program to demonstrate 
@@ -2668,21 +2932,26 @@ Function Overriding: Function overriding occurs when a base class member functio
 
 using namespace std;
 
-class GFG {
+class GFG
+{
     public:
-    virtual void display() {
+    virtual void display()
+    {
         cout<<"Function of base class"<<endl;
     }
 };
 
-class derived_GFG : public GFG {
+class derived_GFG : public GFG
+{
     public:
-    void show() {
+    void show()
+    {
         cout<<"Function of derived class"<<endl;
     }
 };
 
-int main() {
+int main()
+{
     derived_GFG dg;
     dg.show();
     return 0;
@@ -2696,16 +2965,12 @@ int main() {
 
 **Compare compile-time polymorphism and Runtime polymorphism?**
 
-Compile-Time Polymorphism
-Runtime Polymorphism
-
-It is also termed static binding and early binding.	It is also termed Dynamic binding and Late binding.
-
-It is fast because execution is known early at compile time.	It is slow as compared to compile-time because execution is known at runtime.
-
-It is achieved by function overloading and operator overloading.	It is achieved by virtual functions and function overriding.
-
-For more information, refer to Compile-time polymorphism and Runtime polymorphism
+| Compile-Time | Polymorphism Runtime Polymorphism |
+| ------------ | --------------------------- |
+| It is also termed static binding and early binding. | It is also termed Dynamic binding and Late binding. |
+| It is fast because execution is known early at compile time. | It is slow as compared to compile-time because execution is known at runtime. |
+| It is achieved by function overloading and operator overloading. | It is achieved by virtual functions and function overriding. |
+| For more information | refer to Compile-time polymorphism and Runtime polymorphism |
 
 ----
 
@@ -2729,7 +2994,7 @@ class Class_name
 public:
     Class_name()
     {
-        cout<<"I am a default constructor";
+        cout << "I am a default constructor" << endl;
     }
 };
 ```
@@ -2747,10 +3012,14 @@ Example:
 // CPP program to demonstrate
 // parameterized constructors
 #include <iostream>
+
 using namespace std;
-class GFG {
+
+class GFG
+{
 private:
     int x, y;
+
 public:
     // Parameterized Constructor
     GFG(int x1, int y1)
@@ -2794,7 +3063,6 @@ Sample(Sample& t)
 **Which operations are permitted on pointers?**
 
 Pointers are the variables that are used to store the address location of another variable. Operations that are permitted to a pointer are:
-
 - Increment/Decrement of a Pointer
 - Addition and Subtraction of integer to a pointer
 - Comparison of pointers of the same type
@@ -2846,51 +3114,64 @@ to provide implementation details to your children but don’t want to allow an 
 #include <iostream>
 
 // Abstract base class
-class Shape {
+class Shape
+{
 public:
     virtual double getArea() const = 0;  // Pure virtual function
 
-    void print() const {
+    void print() const
+    {
         std::cout << "This is a shape." << std::endl;
     }
 };
 
 // Derived class
-class Circle : public Shape {
+class Circle : public Shape
+{
 private:
     double radius;
 
 public:
-    Circle(double radius) : radius(radius) {}
+    Circle(double radius) : radius(radius)
+    {
+    }
 
-    double getArea() const override {
+    double getArea() const override
+    {
         return 3.14 * radius * radius;
     }
 
-    void print() const override {
+    void print() const override
+    {
         std::cout << "This is a circle." << std::endl;
     }
 };
 
 // Derived class
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 private:
     double length;
     double width;
 
 public:
-    Rectangle(double length, double width) : length(length), width(width) {}
+    Rectangle(double length, double width) : length(length), width(width)
+    {
+    }
 
-    double getArea() const override {
+    double getArea() const override
+    {
         return length * width;
     }
 
-    void print() const override {
+    void print() const override
+    {
         std::cout << "This is a rectangle." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Circle circle(5.0);
     Rectangle rectangle(4.0, 6.0);
 
@@ -2925,10 +3206,12 @@ For more information, refer to this Volatile
 ```c++
 #include <iostream>
 
-int main() {
+int main()
+{
     volatile int counter = 0;
 
-    while (counter < 10) {
+    while (counter < 10)
+    {
         std::cout << "Counter: " << counter << std::endl;
         counter++;
     }
@@ -2962,7 +3245,8 @@ Examples of storage class
 ```c++
 #include <iostream>
 
-void incrementCount() {
+void incrementCount()
+{
     static int count = 0;  // Static variable
 
     count++;
@@ -2970,7 +3254,8 @@ void incrementCount() {
 }
 
 int main() {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++)
+    {
         incrementCount();
     }
 
@@ -3074,7 +3359,9 @@ Solution:
 
 using namespace std;
 
-struct my_struct_t {};
+struct my_struct_t
+{
+};
 
 int main()
 {	
@@ -3143,7 +3430,8 @@ int main()
 // Option 1:
 vector vec;
 /* ... .. ... */
-for (auto itr = vec.begin(); itr != vec.end(); itr++) {
+for (auto itr = vec.begin(); itr != vec.end(); itr++)
+{
 	itr->print();
 }
 ```
@@ -3152,7 +3440,8 @@ for (auto itr = vec.begin(); itr != vec.end(); itr++) {
 // Option 2:
 vector vec;
 /* ... .. ... */
-for (auto itr = vec.begin(); itr != vec.end(); ++itr) {
+for (auto itr = vec.begin(); itr != vec.end(); ++itr)
+{
 	itr->print();
 }
 ```
@@ -3165,21 +3454,27 @@ for (auto itr = vec.begin(); itr != vec.end(); ++itr) {
 #include <iostream>
 
 // Base class
-class P {};
+class P
+{
+};
 
 // Derived class
-class C : public P {};
+class C : public P
+{
+};
 
 // Template function to check if C is derived from P
 template<typename C, typename P>
-bool IsDerivedFrom() {
+bool IsDerivedFrom()
+{
     return std::is_base_of<P, C>::value;
 }
 
-int main() {
+int main()
+{
     std::cout << std::boolalpha;
-    std::cout << "Is C derived from P? " << IsDerivedFrom<C, P>() << std::endl;  // true
-    std::cout << "Is P derived from C? " << IsDerivedFrom<P, C>() << std::endl;  // false
+    std::cout << "Is C derived from P? " << IsDerivedFrom<C, P>() << std::endl; // true
+    std::cout << "Is P derived from C? " << IsDerivedFrom<P, C>() << std::endl; // false
 
     return 0;
 }
@@ -3198,11 +3493,13 @@ In the main() function, we demonstrate the usage of IsDerivedFrom() by checking 
 
 // Template function to check if A and B are the same class
 template<typename A, typename B>
-bool IsSameClass() {
+bool IsSameClass()
+{
     return std::is_same<A, B>::value;
 }
 
-int main() {
+int main()
+{
     std::cout << std::boolalpha;
     std::cout << "Is A the same class as B? " << IsSameClass<A, B>() << std::endl;  // false
     std::cout << "Is A the same class as A? " << IsSameClass<A, A>() << std::endl;  // true
@@ -3234,20 +3531,27 @@ If you need to implement recursion, you should use a regular (non-inline) functi
 
 using namespace std;
 
-class A {
+class A
+{
 public:
-    A() {}
-    ~A() {
+    A()
+    {
+    }
+    ~A()
+    {
         throw 42;
     }
 };
 
-int main(int argc, const char* argv[]) {
-    try {
+int main(int argc, const char* argv[])
+{
+    try
+    {
         A a;
         throw 32;
     }
-    catch (int a) {
+    catch (int a)
+    {
         std::cout << a;
     }
 }
@@ -3261,14 +3565,18 @@ int main(int argc, const char* argv[]) {
 **You are given library class Something as follows:**
 
 ```c++
-class Something {
+class Something
+{
 public:
-    Something() {
+    Something()
+    {
         topSecretValue = 42;
     }
+
     bool somePublicBool;
     int somePublicInt;
     std::string somePublicString;
+
 private:
     int topSecretValue;
 };
@@ -3283,7 +3591,8 @@ private:
 #include <string>
 
 // Base class
-class Something {
+class Something
+{
 public:
     virtual ~Something() {}  // Virtual destructor for proper cleanup
 
@@ -3291,28 +3600,32 @@ public:
 };
 
 // Derived class
-class ConcreteSomething : public Something {
+class ConcreteSomething : public Something
+{
 private:
     std::string topSecretValue;
 
 public:
-    explicit ConcreteSomething(const std::string& value) : topSecretValue(value) {}
+    explicit ConcreteSomething(const std::string& value) : topSecretValue(value)
+    {
+    }
 
-    std::string getTopSecretValue() const override {
+    std::string getTopSecretValue() const override
+    {
         return topSecretValue;
     }
 };
 
 // Function to get the topSecretValue for any Something* object
-std::string getTopSecretValue(const Something* something) {
+std::string getTopSecretValue(const Something* something)
+{
     return something->getTopSecretValue();
 }
 
-int main() {
+int main()
+{
     Something* something = new ConcreteSomething("This is a top secret value");
-
     std::cout << "Top Secret Value: " << getTopSecretValue(something) << std::endl;
-
     delete something;  // Cleanup
 
     return 0;
@@ -3328,30 +3641,35 @@ For example: If A = {2, 1, 5, 9}, then B would be {45, 90, 18, 10}.
 ```c++
 #include <iostream>
 
-void F(const int* A, int* B, int N) {
+void F(const int* A, int* B, int N)
+{
     // Calculate the product of all elements in A
     int product = 1;
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         product *= A[i];
     }
 
     // Populate B such that B[i] is the product of all A[j] where j != i
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         B[i] = product / A[i];
     }
 }
 
-int main() {
+int main()
+{
     const int N = 5;
     int A[N] = {2, 3, 4, 5, 6};
     int B[N] = {0};
-
     F(A, B, N);
 
     // Print the resulting array B
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         std::cout << B[i] << " ";
     }
+
     std::cout << std::endl;
 
     return 0;
@@ -3405,7 +3723,8 @@ and maintain. It should only be used when it is necessary to avoid problems with
 
 using namespace std;
 
-int main(int argc, const char* argv[]) {
+int main(int argc, const char* argv[])
+{
     int a[] = { 1, 2, 3, 4, 5, 6 };
     std::cout << (1 + 3)[a] - a[0] + (a + 1)[2];
 }
@@ -3421,20 +3740,41 @@ int main(int argc, const char* argv[]) {
 ```c++
 #include <iostream>
 
-class Base {
-    virtual void method() {std::cout << "from Base" << std::endl;}
+class Base
+{
+    virtual void method()
+    {
+        std::cout << "from Base" << std::endl;
+    }
+
 public:
-    virtual ~Base() {method();}
-    void baseMethod() {method();}
+    virtual ~Base()
+    {
+        method();
+    }
+
+    void baseMethod()
+    {
+        method();
+    }
 };
 
-class A : public Base {
-    void method() {std::cout << "from A" << std::endl;}
+class A : public Base
+{
+    void method()
+    {
+        std::cout << "from A" << std::endl;
+    }
+
 public:
-    ~A() {method();}
+    ~A()
+    {
+        method();
+    }
 };
 
-int main(void) {
+int main(void)
+{
     Base* base = new A;
     base->baseMethod();
     delete base;
@@ -3510,15 +3850,25 @@ using namespace std;
 class A
 {
 public:
-	A() {}
-	~A() {}
+	A()
+    {
+    }
+	
+    ~A()
+    {
+    }
 };
 
 class B : public A
 {
 public:
-	B() :A() {}
-	~B() {}
+	B() :A()
+    {
+    }
+	
+    ~B()
+    {
+    }
 };
 
 int main(void)
@@ -3564,13 +3914,15 @@ int globalVar = 5;
 static int staticGlobalVar = 10;
 
 // Function with static local variable
-void countCalls() {
+void countCalls()
+{
     static int counter = 0;  // static local variable
     counter++;
     std::cout << "Function calls: " << counter << std::endl;
 }
 
-int main() {
+int main()
+{
     // Automatic storage class (default)
     int localVar = 15;
 
@@ -3611,9 +3963,7 @@ In this example, we have used various storage classes:
 
 
 *Global variables (globalVar and staticGlobalVar):*
-
-globalVar is a regular global variable accessible throughout the program.
-staticGlobalVar is a global variable with the static storage class. It limits the variable's visibility to the current file.
+globalVar is a regular global variable accessible throughout the program. staticGlobalVar is a global variable with the static storage class. It limits the variable's visibility to the current file.
 
 *Local variable (localVar):*
 localVar is an automatic variable declared within the main() function. It is allocated and deallocated automatically when the function is called.
@@ -3645,7 +3995,8 @@ int add(int a, int b);
 // mylibrary.c
 #include "mylibrary.h"
 
-int add(int a, int b) {
+int add(int a, int b)
+{
     return a + b;
 }
 ```
@@ -3656,7 +4007,8 @@ extern "C" {
 #include "mylibrary.h"
 }
 
-int main() {
+int main()
+{
     int result = add(5, 3);
     std::cout << "Result: " << result << std::endl;
 
@@ -3687,8 +4039,13 @@ This demonstrates how you can call a C function from a C++ program by using the 
 struct A
 {
     int data[2];
-    A(int x, int y) : data{x, y} {}
-    virtual void f() {}
+    A(int x, int y) : data{x, y}
+    {
+    }
+
+    virtual void f()
+    {
+    }
 };
 
 int main(int argc, char **argv)
@@ -3734,8 +4091,10 @@ Example:
 ```c++
 volatile int externalVar;
 
-int main() {
-    while (externalVar == 0) {
+int main()
+{
+    while (externalVar == 0)
+    {
         // Code to handle the case when the variable changes unexpectedly
     }
 
@@ -3750,17 +4109,20 @@ The mutable keyword is used in the context of class member variables to allow mo
 Example:
 
 ```c++
-class MyClass {
+class MyClass
+{
 public:
     mutable int mutableVar;
 
-    void printValue() const {
+    void printValue() const
+    {
         mutableVar = 10;  // Modifying a mutable member variable in a const member function
         std::cout << "Value: " << mutableVar << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     MyClass obj;
     obj.printValue();
 
@@ -3786,35 +4148,43 @@ Let's consider an example to understand the diamond problem:
 ```c++
 #include <iostream>
 
-class Base {
+class Base
+{
 public:
-    void display() {
+    void display()
+    {
         std::cout << "Base class" << std::endl;
     }
 };
 
-class DerivedA : public Base {
+class DerivedA : public Base
+{
 public:
     void display() {
         std::cout << "DerivedA class" << std::endl;
     }
 };
 
-class DerivedB : public Base {
+class DerivedB : public Base
+{
 public:
-    void display() {
+    void display()
+    {
         std::cout << "DerivedB class" << std::endl;
     }
 };
 
-class DerivedAB : public DerivedA, public DerivedB {
+class DerivedAB : public DerivedA, public DerivedB
+{
 public:
-    void display() {
+    void display()
+    {
         std::cout << "DerivedAB class" << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     DerivedAB obj;
     obj.display();
 
@@ -3831,9 +4201,11 @@ When we create an object of DerivedAB and call the display() function, it leads 
 To resolve this ambiguity, we can use scope resolution to specify which version of display() to call:
 
 ```c++
-class DerivedAB : public DerivedA, public DerivedB {
+class DerivedAB : public DerivedA, public DerivedB
+{
 public:
-    void display() {
+    void display()
+    {
         DerivedA::display();
     }
 };
@@ -3871,6 +4243,7 @@ public:
     {
         cout << "living being is eating" << endl;
     }
+    
     void running()
     {
         cout << "living being is running" << endl;
@@ -3921,23 +4294,27 @@ An object is an instance of the class. An object can have fields, methods, and c
 #include <iostream>
 
 // Class definition
-class Circle {
+class Circle
+{
 private:
     double radius;
 
 public:
     // Constructor
-    Circle(double r) {
+    Circle(double r)
+    {
         radius = r;
     }
 
     // Member function
-    double calculateArea() {
+    double calculateArea()
+    {
         return 3.14159 * radius * radius;
     }
 };
 
-int main() {
+int main()
+{
     // Create objects of class Circle
     Circle circle1(2.5);
     Circle circle2(3.8);
@@ -3967,21 +4344,25 @@ Encapsulation is the process of binding together the data and functions in a cla
 ```c++
 #include <iostream>
 
-class Circle {
+class Circle
+{
 private:
     double radius;
 
 public:
-    void setRadius(double r) {
+    void setRadius(double r)
+    {
         radius = r;
     }
 
-    double getArea() const {
+    double getArea() const
+    {
         return 3.14159 * radius * radius;
     }
 };
 
-int main() {
+int main()
+{
     Circle circle;
     circle.setRadius(2.5);
     double area = circle.getArea();
@@ -4003,27 +4384,33 @@ For example, when you send an important message through email, at that time, onl
 #include <iostream>
 
 // Abstract class
-class Shape {
+class Shape
+{
 public:
     // Pure virtual function
     virtual double calculateArea() const = 0;
 };
 
 // Concrete class implementing Shape
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 private:
     double length;
     double width;
 
 public:
-    Rectangle(double l, double w) : length(l), width(w) {}
+    Rectangle(double l, double w) : length(l), width(w)
+    {
+    }
 
-    double calculateArea() const override {
+    double calculateArea() const override
+    {
         return length * width;
     }
 };
 
-int main() {
+int main()
+{
     // Create objects of the concrete class
     Rectangle rectangle(5.0, 3.0);
 
@@ -4045,22 +4432,27 @@ C++ allows classes to inherit some of the commonly used state and behavior from 
 #include <iostream>
 
 // Base class
-class Animal {
+class Animal
+{
 public:
-    void eat() {
+    void eat()
+    {
         std::cout << "Animal is eating." << std::endl;
     }
 };
 
 // Derived class
-class Dog : public Animal {
+class Dog : public Animal
+{
 public:
-    void bark() {
+    void bark()
+    {
         std::cout << "Dog is barking." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     // Create an object of the derived class
     Dog dog;
 
@@ -4080,20 +4472,25 @@ A namespace is used for resolving the name conflict of the identifier, which is 
 #include <iostream>
 
 // First namespace
-namespace FirstNamespace {
-    void greet() {
+namespace FirstNamespace
+{
+    void greet()
+    {
         std::cout << "Hello from FirstNamespace!" << std::endl;
     }
 }
 
 // Second namespace
-namespace SecondNamespace {
-    void greet() {
+namespace SecondNamespace
+{
+    void greet()
+    {
         std::cout << "Hello from SecondNamespace!" << std::endl;
     }
 }
 
-int main() {
+int main()
+{
     FirstNamespace::greet();   // Call greet() from FirstNamespace
     SecondNamespace::greet();  // Call greet() from SecondNamespace
 
@@ -4115,28 +4512,39 @@ Here's an example of a class template that represents a generic stack:
 
 ```c++
 template <typename T>
-class Stack {
+class Stack
+{
 private:
     static const int MAX_SIZE = 100;
     T elements[MAX_SIZE];
     int top;
 
 public:
-    Stack() : top(-1) {}
+    Stack() : top(-1)
+    {
+    }
 
-    void push(const T& item) {
-        if (top >= MAX_SIZE - 1) {
+    void push(const T& item)
+    {
+        if (top >= MAX_SIZE - 1)
+        {
             std::cout << "Stack overflow!" << std::endl;
-        } else {
+        }
+        else
+        {
             elements[++top] = item;
         }
     }
 
-    T pop() {
-        if (top < 0) {
+    T pop()
+    {
+        if (top < 0)
+        {
             std::cout << "Stack is empty!" << std::endl;
             return T(); // Return a default-constructed value
-        } else {
+        }
+        else
+        {
             return elements[top--];
         }
     }
@@ -4150,7 +4558,8 @@ Inside the Stack class template, you can see how the template parameter T is use
 You can then use the class template to create stack objects for different data types. Here's an example of using the Stack class template with integers and strings:
 
 ```c++
-int main() {
+int main()
+{
     Stack<int> intStack;
     intStack.push(10);
     intStack.push(20);
@@ -4183,8 +4592,10 @@ Class templates provide a powerful mechanism for creating reusable code that can
 ```c++
 volatile int sensorValue;
 
-void readSensor() {
-    while (true) {
+void readSensor()
+{
+    while (true)
+    {
         // Read sensor value from hardware
         int value = /* read value from hardware */;
 
@@ -4193,8 +4604,10 @@ void readSensor() {
     }
 }
 
-void processSensor() {
-    while (true) {
+void processSensor()
+{
+    while (true)
+    {
         // Read the volatile variable
         int value = sensorValue;
 
@@ -4233,7 +4646,8 @@ Here's an example that demonstrates the usage of different storage classes in C+
 
 int globalVariable;  // Static storage duration, external linkage
 
-void function() {
+void function()
+{
     static int staticVariable;  // Static storage duration, internal linkage
     int localVariable;           // Automatic storage duration
 
@@ -4247,10 +4661,12 @@ void function() {
     std::cout << "Local Variable: " << localVariable << std::endl;
 }
 
-int main() {
+int main()
+{
     globalVariable = 10;
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
+    {
         function();
     }
 
@@ -4350,28 +4766,35 @@ Polymorphism is the ability of a variable, function, or object to take on multip
 ```c++
 #include <iostream>
 
-class Shape {
+class Shape
+{
 public:
-    virtual void draw() {
+    virtual void draw()
+    {
         std::cout << "Drawing a shape." << std::endl;
     }
 };
 
-class Circle : public Shape {
+class Circle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a circle." << std::endl;
     }
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a rectangle." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Shape* shape1 = new Circle();
     Shape* shape2 = new Rectangle();
 
@@ -4399,16 +4822,20 @@ Code with the polymorphic functional call – At every location where a polymorp
 ```c++
 #include <iostream>
 
-class Shape {
+class Shape
+{
 public:
-    virtual void draw() {
+    virtual void draw()
+    {
         std::cout << "Drawing a shape." << std::endl;
     }
 };
 
-class Circle : public Shape {
+class Circle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a circle." << std::endl;
     }
 };
@@ -4467,24 +4894,29 @@ Here's an example to illustrate the differences between function overloading and
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 public:
-    void process(int value) {
+    void process(int value)
+    {
         std::cout << "Processing integer: " << value << std::endl;
     }
 
-    void process(double value) {
+    void process(double value)
+    {
         std::cout << "Processing double: " << value << std::endl;
     }
 
-    MyClass operator+(const MyClass& other) {
+    MyClass operator+(const MyClass& other)
+    {
         MyClass result;
         // Perform addition logic
         return result;
     }
 };
 
-int main() {
+int main()
+{
     MyClass obj;
     obj.process(10); // Invokes process(int)
     obj.process(3.14); // Invokes process(double)
@@ -4519,18 +4951,22 @@ A destructor is the member function of the class. It has the same name as the cl
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 public:
-    MyClass() {
+    MyClass()
+    {
         std::cout << "Constructor called." << std::endl;
     }
 
-    ~MyClass() {
+    ~MyClass()
+    {
         std::cout << "Destructor called." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     MyClass obj;  // Constructor called
 
     // Other code...
@@ -4560,7 +4996,8 @@ The compiler provides a constructor to every class in case the provider does not
 // concept of Constructors
 #include <iostream>
 using namespace std;
-class construct {
+class construct
+{
 public:
    int a, b;
    // Default Constructor
@@ -4598,12 +5035,14 @@ The keyword struct is used for resembling public members by default, while the k
 // struct example
 #include <iostream>
 
-struct Person {
+struct Person
+{
     std::string name;
     int age;
 };
 
-int main() {
+int main()
+{
     Person person;
 
     person.name = "John Doe";
@@ -4620,27 +5059,33 @@ int main() {
 // class example
 #include <iostream>
 
-class Rectangle {
+class Rectangle
+{
 private:
     double length;
     double width;
 
 public:
     // Constructor
-    Rectangle(double len, double wid) : length(len), width(wid) {}
+    Rectangle(double len, double wid) : length(len), width(wid)
+    {
+    }
 
     // Member function to calculate area
-    double calculateArea() {
+    double calculateArea()
+    {
         return length * width;
     }
 
     // Member function to print dimensions
-    void printDimensions() {
+    void printDimensions()
+    {
         std::cout << "Length: " << length << ", Width: " << width << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     // Create an object of class Rectangle
     Rectangle rect(5.0, 3.0);
 
@@ -4701,17 +5146,26 @@ In simple terms, virtual functions resolve at runtime, not anytime sooner. Use o
 
 using namespace std;
 
-class Base {
+class Base
+{
 public:
-	virtual void show() { cout << " In Base \n"; }
+	virtual void show()
+    {
+        cout << " In Base \n";
+    }
 };
 
-class Derived : public Base {
+class Derived : public Base
+{
 public:
-	void show() { cout << "In Derived \n"; }
+	void show()
+    {
+        cout << "In Derived \n";
+    }
 };
 
-int main(void) {
+int main(void)
+{
 	Base* bp = new Derived;
 	bp->show(); // <- Runtime Polymorphism in Action
 	return 0;
@@ -4746,7 +5200,7 @@ The const, const volatile, and volatile declaration aren’t available for stati
 The reference variable in C++ is the name given to the existing variables. The variable name and reference variable point share the same memory location in C++, which helps in updating the original variable using the reference variable. The code can be displayed in the following example.
 
 ```c++
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -4779,8 +5233,18 @@ The general function prototype for the Copy Constructor is:
 
 ```c++
 ClassName (const ClassName &old_obj);
-Point(int x1, int y1) { x=x1; y=y1;}
-Point(const Point &p2) { x=p2.x; y=p2.y; }
+
+Point(int x1, int y1)
+{
+    x=x1;
+    y=y1;
+}
+
+Point(const Point &p2)
+{
+    x=p2.x;
+    y=p2.y;
+}
 ```
 
 ----
@@ -4790,7 +5254,8 @@ Point(const Point &p2) { x=p2.x; y=p2.y; }
 ```c++
 vector vec;
 /* ... .. ... */
-for (auto itr = vec.begin(); itr != vec.end(); itr++) {
+for (auto itr = vec.begin(); itr != vec.end(); itr++)
+{
     itr->print();
 }
 ```
@@ -4799,7 +5264,8 @@ for (auto itr = vec.begin(); itr != vec.end(); itr++) {
 // Sample Code 2:
 vector vec;
 /* ... .. ... */
-for (auto itr = vec.begin(); itr != vec.end(); ++itr) {
+for (auto itr = vec.begin(); itr != vec.end(); ++itr)
+{
     itr->print();
 }
 ```
@@ -4831,7 +5297,8 @@ int main()
 		cin >> *(ptr + i);
 	}
 	cout << "\nDisplaying GPA of students." << endl;
-	for (int i = 0; i < num; ++i) {
+	for (int i = 0; i < num; ++i)
+    {
 		cout << "Student" << i + 1 << " :" << *(ptr + i) << endl;
 	}
 	delete[] ptr;
@@ -4872,9 +5339,9 @@ class Test
 {
 // Data members of class
 public:
-// Pure Virtual Function
-virtual void show() = 0;
-/* Other members */
+    // Pure Virtual Function
+    virtual void show() = 0;
+    /* Other members */
 };
 ```
 
@@ -4895,7 +5362,8 @@ using namespace std;
 
 int my_var = 0;
 
-int main(void) {
+int main(void)
+{
 	int my_var = 0;
 	::my_var = 1; // set global my_var to 1
 	my_var = 2; // setlocal my_var to 2
@@ -4929,13 +5397,15 @@ To resolve the diamond problem, C++ provides the concept of "virtual inheritance
 To address the diamond problem in the above example, the inheritance declaration for classes B and C would be modified as follows:
 
 ```c++
-class B : virtual public A {
+class B : virtual public A
+{
     // B class definition
 };
 ```
 
 ```c++
-class C : virtual public A {
+class C : virtual public A
+{
     // C class definition
 };
 ```
@@ -4943,7 +5413,8 @@ class C : virtual public A {
 By using virtual inheritance, class D will have a single instance of class A, avoiding conflicts and resolving the diamond problem.
 
 ```c++
-class D : public B, public C {
+class D : public B, public C
+{
     // D class definition
 };
 ```
@@ -5037,7 +5508,8 @@ It's important to note that the C++ programming language has evolved over time, 
 1. Example of auto storage class:
 
 ```c++
-void exampleFunction() {
+void exampleFunction()
+{
     auto x = 10; // 'x' is automatically assigned the 'auto' storage class
     // ...
 }
@@ -5046,7 +5518,8 @@ void exampleFunction() {
 2. Example of static storage class:
 
 ```c++
-void exampleFunction() {
+void exampleFunction()
+{
     static int counter = 0; // 'counter' is a static variable
     counter++;
     cout << "Counter: " << counter << endl;
@@ -5074,7 +5547,8 @@ In another source file (source2.cpp):
 ```c++
 #include "shared.h"
 
-void exampleFunction() {
+void exampleFunction()
+{
     cout << "Shared Variable: " << sharedVariable << endl;
 }
 ```
@@ -5082,13 +5556,16 @@ void exampleFunction() {
 4. Example of mutable storage class:
 
 ```c++
-class ExampleClass {
+class ExampleClass
+{
 public:
-    void setValue(int value) const {
+    void setValue(int value) const
+    {
         mutableValue = value; // 'mutableValue' can be modified within a const member function
     }
 
-    int getValue() const {
+    int getValue() const
+    {
         return mutableValue;
     }
 
@@ -5102,7 +5579,8 @@ private:
 ```c++
 thread_local int globalCounter = 0; // Each thread has its own copy of 'globalCounter'
 
-void exampleFunction() {
+void exampleFunction()
+{
     globalCounter++;
     cout << "Counter: " << globalCounter << endl;
 }
@@ -5134,33 +5612,39 @@ Shallow copy does memory dumping bit-by-bit from one object to another.
 ```c++
 #include <iostream>
 
-class ShallowCopyExample {
+class ShallowCopyExample
+{
 private:
     int* data;
 
 public:
     // Constructor
-    ShallowCopyExample(int value) {
+    ShallowCopyExample(int value)
+    {
         data = new int(value);
     }
 
     // Destructor
-    ~ShallowCopyExample() {
+    ~ShallowCopyExample()
+    {
         delete data;
     }
 
     // Shallow copy constructor
-    ShallowCopyExample(const ShallowCopyExample& other) {
+    ShallowCopyExample(const ShallowCopyExample& other)
+    {
         data = other.data;
     }
 
     // Getter function
-    int getData() const {
+    int getData() const
+    {
         return *data;
     }
 };
 
-int main() {
+int main()
+{
     // Create an object with value 10
     ShallowCopyExample obj1(10);
 
@@ -5187,33 +5671,39 @@ Deep copy is copy field by field from object to another. Deep copy is achieved u
 ```c++
 #include <iostream>
 
-class DeepCopyExample {
+class DeepCopyExample
+{
 private:
     int* data;
 
 public:
     // Constructor
-    DeepCopyExample(int value) {
+    DeepCopyExample(int value)
+    {
         data = new int(value);
     }
 
     // Destructor
-    ~DeepCopyExample() {
+    ~DeepCopyExample()
+    {
         delete data;
     }
 
     // Deep copy constructor
-    DeepCopyExample(const DeepCopyExample& other) {
+    DeepCopyExample(const DeepCopyExample& other)
+    {
         data = new int(*other.data);
     }
 
     // Getter function
-    int getData() const {
+    int getData() const
+    {
         return *data;
     }
 };
 
-int main() {
+int main()
+{
     // Create an object with value 10
     DeepCopyExample obj1(10);
 
@@ -5244,45 +5734,56 @@ A virtual function with no function body and assigned with a value zero is calle
 ```c++
 #include <iostream>
 
-class Shape {
+class Shape
+{
 public:
     // Pure virtual function
     virtual double calculateArea() const = 0;
 
     // Non-pure virtual function
-    void printArea() const {
+    void printArea() const
+    {
         std::cout << "Area: " << calculateArea() << std::endl;
     }
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 private:
     double length;
     double width;
 
 public:
-    Rectangle(double l, double w) : length(l), width(w) {}
+    Rectangle(double l, double w) : length(l), width(w)
+    {
+    }
 
     // Implementing the pure virtual function
-    double calculateArea() const override {
+    double calculateArea() const override
+    {
         return length * width;
     }
 };
 
-class Circle : public Shape {
+class Circle : public Shape
+{
 private:
     double radius;
 
 public:
-    Circle(double r) : radius(r) {}
+    Circle(double r) : radius(r)
+    {
+    }
 
     // Implementing the pure virtual function
-    double calculateArea() const override {
+    double calculateArea() const override
+    {
         return 3.14159 * radius * radius;
     }
 };
 
-int main() {
+int main()
+{
     Rectangle rectangle(5.0, 3.0);
     Circle circle(2.5);
 
@@ -5302,18 +5803,21 @@ A class with at least one pure virtual function is called as abstract class. We 
 ```c++
 #include <iostream>
 
-class Shape {
+class Shape
+{
 public:
     // Pure virtual function
     virtual double calculateArea() const = 0;
 
     // Non-pure virtual function
-    void printArea() const {
+    void printArea() const
+    {
         std::cout << "Area: " << calculateArea() << std::endl;
     }
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 private:
     double length;
     double width;
@@ -5322,7 +5826,8 @@ public:
     Rectangle(double l, double w) : length(l), width(w) {}
 
     // Implementing the pure virtual function
-    double calculateArea() const override {
+    double calculateArea() const override
+    {
         return length * width;
     }
 };
@@ -5332,20 +5837,24 @@ private:
     double radius;
 
 public:
-    Circle(double r) : radius(r) {}
+    Circle(double r) : radius(r)
+    {
+    }
 
     // Implementing the pure virtual function
-    double calculateArea() const override {
+    double calculateArea() const override
+    {
         return 3.14159 * radius * radius;
     }
 };
 
-int main() {
+int main()
+{
     Rectangle rectangle(5.0, 3.0);
     Circle circle(2.5);
 
     rectangle.printArea(); // Output: Area: 15
-    circle.printArea();    // Output: Area: 19.6349
+    circle.printArea(); // Output: Area: 19.6349
 
     return 0;
 }
@@ -5360,7 +5869,8 @@ A reference variable is an alias name for the existing variable. Which mean both
 ```c++
 #include <iostream>
 
-int main() {
+int main()
+{
     int num = 42;
     int& ref = num;  // Reference variable "ref" bound to "num"
 
@@ -5389,23 +5899,27 @@ A static member function can be invoked using the class name as it exits before 
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     static int count; // Static member variable
 
 public:
-    static void incrementCount() { // Static member function
+    static void incrementCount() // Static member function
+    { 
         count++;
     }
 
-    static int getCount() {
+    static int getCount()
+    {
         return count;
     }
 };
 
 int MyClass::count = 0; // Initialize static member variable
 
-int main() {
+int main()
+{
     std::cout << "Initial count: " << MyClass::getCount() << std::endl; // Output: Initial count: 0
 
     MyClass::incrementCount(); // Calling static member function
@@ -5449,24 +5963,28 @@ Defining several functions with the same name with unique list of parameters is 
 #include <iostream>
 
 // Function with two integer parameters
-void add(int a, int b) {
+void add(int a, int b)
+{
     int result = a + b;
     std::cout << "Sum of integers: " << result << std::endl;
 }
 
 // Function with two double parameters
-void add(double a, double b) {
+void add(double a, double b)
+{
     double result = a + b;
     std::cout << "Sum of doubles: " << result << std::endl;
 }
 
 // Function with a string parameter
-void add(const std::string& a, const std::string& b) {
+void add(const std::string& a, const std::string& b)
+{
     std::string result = a + b;
     std::cout << "Concatenated strings: " << result << std::endl;
 }
 
-int main() {
+int main()
+{
     add(3, 4);                  // Calls the function with two integer parameters
     add(2.5, 3.7);              // Calls the function with two double parameters
     add("Hello, ", "world!");   // Calls the function with two string parameters
@@ -5484,37 +6002,45 @@ Defining a new job for the existing operator w.r.t the class objects is called a
 ```c++
 #include <iostream>
 
-class Complex {
+class Complex
+{
 private:
     double real;
     double imag;
 
 public:
-    Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) {}
+    Complex(double r = 0.0, double i = 0.0) : real(r), imag(i)
+    {
+    }
 
     // Overloading the + operator
-    Complex operator+(const Complex& other) const {
+    Complex operator+(const Complex& other) const
+    {
         return Complex(real + other.real, imag + other.imag);
     }
 
     // Overloading the - operator
-    Complex operator-(const Complex& other) const {
+    Complex operator-(const Complex& other) const
+    {
         return Complex(real - other.real, imag - other.imag);
     }
 
     // Overloading the * operator
-    Complex operator*(const Complex& other) const {
+    Complex operator*(const Complex& other) const
+    {
         return Complex(real * other.real - imag * other.imag, real * other.imag + imag * other.real);
     }
 
     // Overloading the << operator for output
-    friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
+    friend std::ostream& operator<<(std::ostream& os, const Complex& c)
+    {
         os << "(" << c.real << " + " << c.imag << "i)";
         return os;
     }
 };
 
-int main() {
+int main()
+{
     Complex a(2.0, 3.0);
     Complex b(1.0, 4.0);
 
@@ -5563,23 +6089,27 @@ A destructor is the member function of the class which is having the same name a
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int* data;
 
 public:
-    MyClass() {
+    MyClass()
+    {
         data = new int[10]; // Allocate memory
         std::cout << "Constructor called" << std::endl;
     }
 
-    ~MyClass() {
+    ~MyClass()
+    {
         delete[] data; // Deallocate memory
         std::cout << "Destructor called" << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     {
         MyClass obj; // Create an object of MyClass
 
@@ -5603,31 +6133,35 @@ A constructor is the member function of the class which is having the same as th
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int value;
 
 public:
     // Constructor with a parameter
-    MyClass(int v) {
+    MyClass(int v)
+    {
         value = v;
         std::cout << "Constructor called with value: " << value << std::endl;
     }
 
     // Default constructor (constructor with no parameters)
-    MyClass() {
+    MyClass()
+    {
         value = 0;
         std::cout << "Default constructor called" << std::endl;
     }
 
-    int getValue() {
+    int getValue()
+    {
         return value;
     }
 };
 
 int main() {
-    MyClass obj1(42);    // Create an object using the constructor with a parameter
-    MyClass obj2;       // Create an object using the default constructor
+    MyClass obj1(42); // Create an object using the constructor with a parameter
+    MyClass obj2; // Create an object using the default constructor
 
     std::cout << "Value of obj1: " << obj1.getValue() << std::endl;
     std::cout << "Value of obj2: " << obj2.getValue() << std::endl;
@@ -5645,31 +6179,36 @@ Every class does have a constructor provided by the compiler if the programmer d
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int value;
 
 public:
     // Constructor with a parameter
-    MyClass(int v) {
+    MyClass(int v)
+    {
         value = v;
         std::cout << "Constructor called with value: " << value << std::endl;
     }
 
     // Default constructor (constructor with no parameters)
-    MyClass() {
+    MyClass()
+    {
         value = 0;
         std::cout << "Default constructor called" << std::endl;
     }
 
-    int getValue() {
+    int getValue()
+    {
         return value;
     }
 };
 
-int main() {
-    MyClass obj1(42);    // Create an object using the constructor with a parameter
-    MyClass obj2;       // Create an object using the default constructor
+int main()
+{
+    MyClass obj1(42); // Create an object using the constructor with a parameter
+    MyClass obj2; // Create an object using the default constructor
 
     std::cout << "Value of obj1: " << obj1.getValue() << std::endl;
     std::cout << "Value of obj2: " << obj2.getValue() << std::endl;
@@ -5687,17 +6226,17 @@ int main() {
 1. Allocating a single object:
 
 ```c++
-int* ptr = new int;  // Allocate memory for a single integer
-*ptr = 42;          // Assign a value to the allocated integer
-delete ptr;         // Deallocate the memory when no longer needed
+int* ptr = new int; // Allocate memory for a single integer
+*ptr = 42; // Assign a value to the allocated integer
+delete ptr; // Deallocate the memory when no longer needed
 ```
 
 2. Allocating an array of objects:
 
 ```c++
-int* ptr = new int;  // Allocate memory for a single integer
-*ptr = 42;          // Assign a value to the allocated integer
-delete ptr;         // Deallocate the memory when no longer needed
+int* ptr = new int; // Allocate memory for a single integer
+*ptr = 42; // Assign a value to the allocated integer
+delete ptr; // Deallocate the memory when no longer needed
 ```
 
 3. Allocating an object using a custom constructor:
@@ -5705,7 +6244,8 @@ delete ptr;         // Deallocate the memory when no longer needed
 ```c++
 class MyClass {
 public:
-    MyClass(int value) {
+    MyClass(int value)
+    {
         // Constructor implementation
     }
 };
@@ -5727,10 +6267,10 @@ Note that when using new, you are responsible for managing the allocated memory 
 ```c++
 #include <iostream>
 
-int main() {
+int main()
+{
     int* ptr = new int(42);  // Allocate memory for an integer and assign a value
     std::cout << "Value: " << *ptr << std::endl;
-
     delete ptr;  // Deallocate the memory
 
     return 0;
@@ -5747,13 +6287,14 @@ Yes, as C is the subset of C++, we can all the functions of C in C++ too.
 #include <iostream>
 #include <cstdlib>
 
-int main() {
+int main()
+{
     int* ptr = static_cast<int*>(malloc(sizeof(int)));  // Allocate memory using malloc
 
-    if (ptr != nullptr) {
+    if (ptr != nullptr)
+    {
         *ptr = 42;  // Assign a value to the allocated memory
         std::cout << "Value: " << *ptr << std::endl;
-
         free(ptr);  // Deallocate the memory using free
     }
 
@@ -5771,10 +6312,12 @@ No, we need to use free() of C language for the same.
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
     int* ptr = (int*)malloc(sizeof(int));  // Allocate memory using malloc
 
-    if (ptr != NULL) {
+    if (ptr != NULL)
+    {
         *ptr = 42;  // Assign a value to the allocated memory
         printf("Value: %d\n", *ptr);
 
@@ -5794,21 +6337,26 @@ A function which is not a member of the class but still can access all the membe
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int value;
 
 public:
-    MyClass(int v) : value(v) {}
+    MyClass(int v) : value(v)
+    {
+    }
 
-    friend void printValue(const MyClass& obj);  // Declaration of friend function
+    friend void printValue(const MyClass& obj); // Declaration of friend function
 };
 
-void printValue(const MyClass& obj) {
+void printValue(const MyClass& obj)
+{
     std::cout << "Value: " << obj.value << std::endl;  // Accessing private member
 }
 
-int main() {
+int main()
+{
     MyClass obj(42);
     printValue(obj);  // Calling the friend function
 
@@ -5825,29 +6373,33 @@ A copy constructor is the constructor which take same class object reference as 
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int value;
 
 public:
-    MyClass(int v) : value(v) {
+    MyClass(int v) : value(v)
+    {
         std::cout << "Constructor called: " << value << std::endl;
     }
 
     // Copy constructor
-    MyClass(const MyClass& other) : value(other.value) {
+    MyClass(const MyClass& other) : value(other.value)
+    {
         std::cout << "Copy constructor called: " << value << std::endl;
     }
 
-    int getValue() {
+    int getValue()
+    {
         return value;
     }
 };
 
-int main() {
-    MyClass obj1(42);          // Create an object using the constructor
-
-    MyClass obj2 = obj1;       // Create a new object using the copy constructor
+int main()
+{
+    MyClass obj1(42); // Create an object using the constructor
+    MyClass obj2 = obj1; // Create a new object using the copy constructor
 
     std::cout << "Value of obj1: " << obj1.getValue() << std::endl;
     std::cout << "Value of obj2: " << obj2.getValue() << std::endl;
@@ -5865,23 +6417,29 @@ C++ does supports exception handling. Try, catch & throw are keyword used for th
 ```c++
 #include <iostream>
 
-int divideNumbers(int numerator, int denominator) {
-    if (denominator == 0) {
+int divideNumbers(int numerator, int denominator)
+{
+    if (denominator == 0)
+    {
         throw std::runtime_error("Division by zero is not allowed.");
     }
 
     return numerator / denominator;
 }
 
-int main() {
+int main()
+{
     int result;
     int num = 10;
     int den = 0;
 
-    try {
+    try
+    {
         result = divideNumbers(num, den);
         std::cout << "Result: " << result << std::endl;
-    } catch (const std::exception& e) {
+    }
+    catch (const std::exception& e)
+    {
         std::cout << "Exception occurred: " << e.what() << std::endl;
     }
 
@@ -5898,21 +6456,25 @@ This, is the pointer variable of the compiler which always holds the current act
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int value;
 
 public:
-    void setValue(int newValue) {
+    void setValue(int newValue)
+    {
         this->value = newValue;  // Accessing member variable using 'this' pointer
     }
 
-    int getValue() {
+    int getValue()
+    {
         return this->value;  // Accessing member variable using 'this' pointer
     }
 };
 
-int main() {
+int main()
+{
     MyClass obj;
     obj.setValue(42);
 
@@ -5947,7 +6509,8 @@ If the file already exists, its content will be truncated before opening the fil
 ```c++
 #include <iostream>
 
-int main() {
+int main()
+{
     int x = 5;  // Block scope variable
 
     {
@@ -5978,15 +6541,18 @@ The scope resolution operator is used to
 ```c++
 #include <iostream>
 
-namespace MyNamespace {
+namespace MyNamespace
+{
     int x = 5;
 
-    void myFunction() {
+    void myFunction()
+    {
         std::cout << "Inside MyNamespace::myFunction()" << std::endl;
     }
 }
 
-int main() {
+int main()
+{
     int x = 10;
 
     std::cout << "Local x = " << x << std::endl;                   // Accessing local x
@@ -6014,11 +6580,13 @@ The arguments/parameters which are sent to the main() function while executing f
 ```c++
 #include <iostream>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[])
+{
     std::cout << "Number of command-line arguments: " << argc << std::endl;
 
     // Print each command-line argument
-    for (int i = 0; i < argc; ++i) {
+    for (int i = 0; i < argc; ++i)
+    {
         std::cout << "Argument " << i << ": " << argv[i] << std::endl;
     }
 
@@ -6037,24 +6605,30 @@ A template class is a generic class. The keyword template can be used to define 
 
 // Class template for a generic Pair
 template <typename T1, typename T2>
-class Pair {
+class Pair
+{
 private:
     T1 first;
     T2 second;
 
 public:
-    Pair(const T1& a, const T2& b) : first(a), second(b) {}
+    Pair(const T1& a, const T2& b) : first(a), second(b)
+    {
+    }
 
-    T1 getFirst() const {
+    T1 getFirst() const
+    {
         return first;
     }
 
-    T2 getSecond() const {
+    T2 getSecond() const
+    {
         return second;
     }
 };
 
-int main() {
+int main()
+{
     // Creating objects of Pair with different types
     Pair<int, double> pair1(10, 3.14);
     Pair<std::string, bool> pair2("Hello", true);
@@ -6074,7 +6648,7 @@ int main() {
 The catch block with ellipses as follows
 
 ```c++
-catch(…) 
+catch() 
 {
     // code example to do here
 }
@@ -6123,7 +6697,8 @@ Used to resolve the scope of global symbol
 #include <iostream>
 
 using namespace std;	
-main() {
+main()
+{
    extern int i;
       
    cout<<i<<endl;
@@ -6189,12 +6764,14 @@ __Call by value__ − We send only values to the function as parameters. We choo
 #include <iostream>
 
 // Function to increment a value by 1
-void increment(int num) {
+void increment(int num)
+{
     num++;
     std::cout << "Inside increment function: " << num << std::endl;
 }
 
-int main() {
+int main()
+{
     int value = 5;
 
     std::cout << "Before calling increment: " << value << std::endl;
@@ -6211,12 +6788,14 @@ __Call by address__ − We send address of the actual parameters instead of valu
 #include <iostream>
 
 // Function to increment a value by 1 using call-by-address
-void incrementByAddress(int* numPtr) {
+void incrementByAddress(int* numPtr)
+{
     (*numPtr)++;
     std::cout << "Inside incrementByAddress function: " << *numPtr << std::endl;
 }
 
-int main() {
+int main()
+{
     int value = 5;
 
     std::cout << "Before calling incrementByAddress: " << value << std::endl;
@@ -6233,12 +6812,14 @@ __Call by reference__ − The actual parameters are received with the C++ new re
 #include <iostream>
 
 // Function to increment a value by 1 using call-by-address
-void incrementByAddress(int* numPtr) {
+void incrementByAddress(int* numPtr)
+{
     (*numPtr)++;
     std::cout << "Inside incrementByAddress function: " << *numPtr << std::endl;
 }
 
-int main() {
+int main()
+{
     int value = 5;
 
     std::cout << "Before calling incrementByAddress: " << value << std::endl;
@@ -6265,7 +6846,8 @@ Error, It is invalid that either of the operands for the modulus operator (%) is
 
 using namespace std;
 
-int main() {
+int main()
+{
     // float result = 5.0 % 2; // expression must have integral or unscoped enum type
     float result = 5 % 2;
     cout << "The result is : " << result << endl;
@@ -6293,8 +6875,31 @@ No, there is no such provision available.
 sizeof
 
 ```c++
+#include <iostream>
 
+int main()
+{
+    int num = 10;
+    std::cout << "Size of int: " << sizeof(int) << " bytes" << std::endl;
+    std::cout << "Size of num: " << sizeof(num) << " bytes" << std::endl;
+
+    double pi = 3.14159;
+    std::cout << "Size of double: " << sizeof(double) << " bytes" << std::endl;
+    std::cout << "Size of pi: " << sizeof(pi) << " bytes" << std::endl;
+
+    char ch = 'A';
+    std::cout << "Size of char: " << sizeof(char) << " byte" << std::endl;
+    std::cout << "Size of ch: " << sizeof(ch) << " byte" << std::endl;
+
+    return 0;
+}
 ```
+
+In this example, we use the sizeof operator to determine the size of different data types. We first declare an int variable num and use sizeof(int) and sizeof(num) to get the size of int and num.
+
+Similarly, we do the same for a double variable pi and a char variable ch. The output will vary depending on the platform and the size of the data types on your system.
+
+This example demonstrates how the sizeof operator can be used to determine the size of data types in C++. Note that the size may vary depending on the system architecture and the compiler being used.
 
 ----
 
@@ -6302,9 +6907,33 @@ sizeof
 
 We can apply scope resolution operator (::) to the for the scope of global variable.
 
-```c++
+In C++, if you have a local variable with the same name as a global variable, you can use the scope resolution operator :: to explicitly refer to the global variable.
 
+Here's an example to illustrate how to refer to a global variable when there is a local variable with the same name:
+
+```c++
+#include <iostream>
+
+int num = 10; // Global variable
+
+int main()
+{
+    int num = 20; // Local variable with the same name
+
+    std::cout << "Local num: " << num << std::endl;      // Output: Local num: 20
+    std::cout << "Global num: " << ::num << std::endl;   // Output: Global num: 10
+
+    return 0;
+}
 ```
+
+In this example, we have a global variable num declared outside the main() function with a value of 10. Inside the main() function, we declare a local variable num with a value of 20.
+
+When we use the variable num without any qualification, it refers to the local variable because local variables take precedence over global variables within the same scope. So, num outputs the value of the local variable, which is 20.
+
+To refer to the global variable explicitly, we use the scope resolution operator :: followed by the variable name. In this case, ::num refers to the global variable num outside the main() function, and it outputs the value 10.
+
+By using the scope resolution operator, we can differentiate between local and global variables with the same name and access the desired variable based on the scope we specify.
 
 ----
 
@@ -6323,19 +6952,22 @@ Function calling itself is called as recursion.
 ```c++
 #include <iostream>
 
-unsigned long long factorial(int n) {
-    if (n == 0 || n == 1) {
+unsigned long long factorial(int n)
+{
+    if (n == 0 || n == 1)
+    {
         return 1;
-    } else {
+    }
+    else
+    {
         return n * factorial(n - 1);
     }
 }
 
-int main() {
+int main()
+{
     int number = 5;
-
     unsigned long long result = factorial(number);
-
     std::cout << "Factorial of " << number << " is: " << result << std::endl;
 
     return 0;
@@ -6655,35 +7287,41 @@ Yes, you can call a virtual function from a constructor. However, the behavior d
 ```c++
 #include <iostream>
 
-class MyClass {
+class MyClass
+{
 private:
     int data;
 
 public:
     // Default constructor
-    MyClass() {
+    MyClass()
+    {
         data = 0;
         std::cout << "Default constructor called" << std::endl;
     }
 
     // Parameterized constructor
-    MyClass(int value) {
+    MyClass(int value)
+    {
         data = value;
         std::cout << "Parameterized constructor called" << std::endl;
     }
 
     // Copy constructor
-    MyClass(const MyClass& other) {
+    MyClass(const MyClass& other)
+    {
         data = other.data;
         std::cout << "Copy constructor called" << std::endl;
     }
 
-    int getData() const {
+    int getData() const
+    {
         return data;
     }
 };
 
-int main() {
+int main()
+{
     // Create an object using the parameterized constructor
     MyClass obj1(10);
 
@@ -6808,6 +7446,43 @@ __Inheritance__
 ```c++
 #include <iostream>
 
+// Base class
+class Shape
+{
+protected:
+    int width;
+    int height;
+
+public:
+    Shape(int w, int h) : width(w), height(h) {}
+
+    void display() {
+        std::cout << "Width: " << width << ", Height: " << height << std::endl;
+    }
+};
+
+// Derived class
+class Rectangle : public Shape
+{
+public:
+    Rectangle(int w, int h) : Shape(w, h) {}
+
+    int getArea() {
+        return width * height;
+    }
+};
+
+int main()
+{
+    Rectangle rect(5, 3);
+
+    rect.display();         // Output: Width: 5, Height: 3
+    int area = rect.getArea();
+    std::cout << "Area: " << area << std::endl;   // Output: Area: 15
+
+    return 0;
+}
+
 ```
 
 __Abstraction__
@@ -6815,6 +7490,50 @@ __Abstraction__
 ```c++
 #include <iostream>
 
+// Abstract base class
+class Shape
+{
+public:
+    virtual void draw() = 0;  // Pure virtual function
+
+    virtual ~Shape()
+    { 
+    }  // Virtual destructor
+};
+
+// Concrete derived class
+class Circle : public Shape
+{
+public:
+    void draw() override
+    {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+// Concrete derived class
+class Square : public Shape
+{
+public:
+    void draw() override
+    {
+        std::cout << "Drawing a square." << std::endl;
+    }
+};
+
+int main()
+{
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+
+    shape1->draw();  // Output: Drawing a circle.
+    shape2->draw();  // Output: Drawing a square.
+
+    delete shape1;
+    delete shape2;
+
+    return 0;
+}
 ```
 
 __Encapsulation__
@@ -6822,6 +7541,52 @@ __Encapsulation__
 ```c++
 #include <iostream>
 
+class Person
+{
+private:
+    std::string name;
+    int age;
+
+public:
+    // Getter functions
+    std::string getName() const
+    {
+        return name;
+    }
+
+    int getAge() const
+    {
+        return age;
+    }
+
+    // Setter functions
+    void setName(const std::string& newName)
+    {
+        name = newName;
+    }
+
+    void setAge(int newAge)
+    {
+        if (newAge >= 0)
+        {
+            age = newAge;
+        }
+    }
+};
+
+int main()
+{
+    Person person;
+
+    // Accessing private data through public member functions
+    person.setName("John Doe");
+    person.setAge(25);
+
+    std::cout << "Name: " << person.getName() << std::endl;
+    std::cout << "Age: " << person.getAge() << std::endl;
+
+    return 0;
+}
 ```
 
 __Polymorphism__
@@ -6829,6 +7594,45 @@ __Polymorphism__
 ```c++
 #include <iostream>
 
+// Base class
+class Shape {
+public:
+    virtual void draw() {
+        std::cout << "Drawing a shape." << std::endl;
+    }
+};
+
+// Derived class
+class Circle : public Shape {
+public:
+    void draw() override {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+// Derived class
+class Square : public Shape
+{
+public:
+    void draw() override
+    {
+        std::cout << "Drawing a square." << std::endl;
+    }
+};
+
+int main()
+{
+    Shape* shape1 = new Circle();
+    Shape* shape2 = new Square();
+
+    shape1->draw();  // Output: Drawing a circle.
+    shape2->draw();  // Output: Drawing a square.
+
+    delete shape1;
+    delete shape2;
+
+    return 0;
+}
 ```
 
 __Friend Function__
@@ -6836,42 +7640,379 @@ __Friend Function__
 ```c++
 #include <iostream>
 
+class MyClass {
+private:
+    int data;
+
+public:
+    MyClass(int d) : data(d)
+    {
+    }
+
+    friend void displayData(const MyClass& obj);
+};
+
+void displayData(const MyClass& obj)
+{
+    std::cout << "Data: " << obj.data << std::endl;
+}
+
+int main()
+{
+    MyClass obj(42);
+    displayData(obj);  // Output: Data: 42
+
+    return 0;
+}
 ```
 
 __Data Binding__
 
+In C++, data binding is not a language feature like in some other programming languages. However, you can achieve data binding-like behavior through various techniques and libraries.
+
+One popular approach is to use the Model-View-Controller (MVC) or Model-View-ViewModel (MVVM) architectural patterns, along with frameworks such as Qt or libraries like Boost.Property.
+
+Here's a simple example using the Boost.Property library to demonstrate data binding-like behavior:
+
 ```c++
 #include <iostream>
+#include <boost/property/property_map.hpp>
 
+// Model class
+class Person {
+private:
+    boost::property<std::string> name;
+    boost::property<int> age;
+
+public:
+    // Getter and setter for the name property
+    std::string getName() const {
+        return name;
+    }
+
+    void setName(const std::string& newName) {
+        name = newName;
+    }
+
+    // Getter and setter for the age property
+    int getAge() const {
+        return age;
+    }
+
+    void setAge(int newAge) {
+        age = newAge;
+    }
+};
+
+// View class
+class PersonView {
+public:
+    void display(const Person& person) {
+        std::cout << "Name: " << person.getName() << std::endl;
+        std::cout << "Age: " << person.getAge() << std::endl;
+    }
+};
+
+int main() {
+    Person person;
+    PersonView view;
+
+    // Binding the view to the model
+    boost::property_map<Person> properties(person);
+    properties["name"].bind(view, &PersonView::display);
+    properties["age"].bind(view, &PersonView::display);
+
+    // Modifying the model
+    person.setName("John Doe");
+    person.setAge(25);
+
+    // The view is automatically updated
+    // due to the binding with the model
+
+    return 0;
+}
 ```
+
+In this example, we have a Person class representing the model. It has two properties, name and age, which are implemented using the boost::property class from the Boost.Property library. The properties provide automatic notification when their values change.
+
+The PersonView class represents the view and has a display() function to display the person's name and age.
+
+In the main() function, we create an instance of Person and PersonView. We then use the boost::property_map to bind the properties of the Person object to the display() function of the PersonView. This establishes a data binding-like relationship between the model and the view.
+
+When we modify the properties of the Person object, such as setting the name and age, the view is automatically updated due to the binding. This allows for synchronization of the model and view without explicitly calling display functions.
+
+Note that this example uses the Boost.Property library for demonstration purposes, but in real-world scenarios, you might use more comprehensive frameworks or libraries that provide extensive support for data binding and automatic view updates, such as Qt or other UI frameworks.
+
+Remember that data binding is not a built-in feature of C++, so achieving data binding-like behavior typically involves using external libraries or implementing custom mechanisms based on the desired architectural pattern or framework.
 
 __Virtual Function__
 
 ```c++
 #include <iostream>
 
+// Base class
+class Animal
+{
+public:
+    virtual void makeSound() 
+    {
+        std::cout << "The animal makes a sound." << std::endl;
+    }
+};
+
+// Derived class
+class Dog : public Animal
+{
+public:
+    void makeSound() override
+    {
+        std::cout << "The dog barks." << std::endl;
+    }
+};
+
+// Derived class
+class Cat : public Animal
+{
+public:
+    void makeSound() override
+    {
+        std::cout << "The cat meows." << std::endl;
+    }
+};
+
+int main()
+{
+    Animal* animal1 = new Dog();
+    Animal* animal2 = new Cat();
+
+    animal1->makeSound();  // Output: The dog barks.
+    animal2->makeSound();  // Output: The cat meows.
+
+    delete animal1;
+    delete animal2;
+
+    return 0;
+}
 ```
+
+In this example, we have a base class called Animal that defines a virtual function makeSound(). The makeSound() function is marked as virtual, indicating that it can be overridden by derived classes.
+
+We then have two derived classes, Dog and Cat, which inherit from the Animal base class. Both derived classes override the makeSound() function with their specific implementation.
+
+In the main() function, we create two pointers of type Animal* that point to objects of the Dog and Cat classes. Since the pointers are of the base class type, they can hold objects of both the base class and derived classes.
+
+When we call the makeSound() function through the base class pointers, the appropriate implementation based on the actual object being referred to is invoked dynamically at runtime. This is known as dynamic binding or runtime polymorphism.
+
+In this case, when animal1->makeSound() is called, the makeSound() function of the Dog class is invoked, and "The dog barks." is printed. Similarly, when animal2->makeSound() is called, the makeSound() function of the Cat class is invoked, and "The cat meows." is printed.
+
+This example demonstrates how virtual functions allow us to treat objects of derived classes as objects of the base class, enabling the selection of the appropriate function implementation at runtime based on the actual object being referred to.
 
 __Access Specifiers__
 
 ```c++
 #include <iostream>
 
+class MyClass
+{
+public:
+    int publicVar; // Public variable
+
+    void publicFunc()  // Public function
+    {
+        std::cout << "Public function called." << std::endl;
+    }
+
+private:
+    int privateVar; // Private variable
+
+    void privateFunc() // Private function
+    {
+        std::cout << "Private function called." << std::endl;
+    }
+
+protected:
+    int protectedVar; // Protected variable
+
+    void protectedFunc() // Protected function
+    {
+        std::cout << "Protected function called." << std::endl;
+    }
+};
+
+int main()
+{
+    MyClass obj;
+    
+    obj.publicVar = 42;     // Accessible
+    obj.publicFunc();       // Accessible
+
+    // obj.privateVar = 42;  // Not accessible - private
+    // obj.privateFunc();    // Not accessible - private
+
+    // obj.protectedVar = 42;  // Not accessible - protected
+    // obj.protectedFunc();    // Not accessible - protected
+
+    return 0;
+}
 ```
+
+In this example, we have a class named MyClass that contains various class members with different access specifiers.
+
+publicVar and publicFunc() are declared as public. They can be accessed from anywhere in the program, including the main() function. In the main() function, we can directly access and modify publicVar and call publicFunc().
+
+privateVar and privateFunc() are declared as private. They are only accessible from within the class itself. Attempting to access them from outside the class or from the main() function will result in a compilation error.
+
+protectedVar and protectedFunc() are declared as protected. They are accessible within the class itself and by derived classes. In this example, since there are no derived classes, attempting to access them from the main() function will result in a compilation error.
+
+By using access specifiers, you can control the visibility and accessibility of class members, ensuring proper encapsulation and preventing unwanted modifications or access from outside the class.
 
 __Overloading__
 
 ```c++
 #include <iostream>
 
+// Function with int parameter
+void printNumber(int num)
+{
+    std::cout << "Integer number: " << num << std::endl;
+}
+
+// Function with double parameter
+void printNumber(double num)
+{
+    std::cout << "Double number: " << num << std::endl;
+}
+
+// Function with string parameter
+void printNumber(const std::string& str)
+{
+    std::cout << "String: " << str << std::endl;
+}
+
+int main()
+{
+    int intValue = 42;
+    double doubleValue = 3.14;
+    std::string stringValue = "Hello, world!";
+
+    printNumber(intValue);        // Output: Integer number: 42
+    printNumber(doubleValue);     // Output: Double number: 3.14
+    printNumber(stringValue);     // Output: String: Hello, world!
+
+    return 0;
+}
 ```
+
+In this example, we have three functions named printNumber that are overloaded based on the type of the parameter.
+
+The first printNumber function takes an int parameter.
+The second printNumber function takes a double parameter.
+The third printNumber function takes a const std::string& parameter.
+Inside the main() function, we have variables of different types: intValue (int), doubleValue (double), and stringValue (std::string).
+
+When we call the printNumber function with these variables as arguments, the appropriate overloaded function is selected based on the parameter type. The matching function is then executed, and the corresponding output is printed.
 
 ----
 
 __Destructor__
 
 ```c++
+#include <iostream>
 
+class MyClass
+{
+public:
+    // Constructor
+    MyClass()
+    {
+        std::cout << "Constructor called." << std::endl;
+    }
+
+    // Destructor
+    ~MyClass()
+    {
+        std::cout << "Destructor called." << std::endl;
+    }
+};
+
+int main()
+{
+    MyClass obj;  // Object creation
+
+    // Other statements...
+
+    return 0;
+}
+
+```
+
+In this example, we have a class called MyClass that contains a constructor and a destructor.
+
+The constructor is invoked when an object of the class is created. In the main() function, we create an object named obj of type MyClass. This triggers the constructor, and "Constructor called." is printed.
+
+The destructor is a special member function that is automatically called when an object of the class goes out of scope or is explicitly destroyed. In this example, when the main() function ends, the obj object goes out of scope, and the destructor is called automatically. The destructor prints "Destructor called." before the object is destroyed.
+
+When you run this program, the output will be:
+
+```cmd
+Constructor called.
+Destructor called.
+```
+
+The destructor is useful for performing cleanup tasks, releasing resources, or finalizing operations before an object is destroyed. It is automatically called and cannot be explicitly invoked like a regular member function. The destructor name is the same as the class name, preceded by a tilde (~).
+
+It's important to note that if you allocate an object dynamically using the new operator, you must manually deallocate it using the delete operator to ensure that the destructor is called before the object is destroyed.
+
+----
+
+**Write a program in C++ to print the first non-repeated character in the given string.**
+
+```c++
+#include <iostream>
+#include <unordered_map>
+
+char findFirstNonRepeatedChar(const std::string& str)
+{
+    std::unordered_map<char, int> charCount;
+
+    // Count the occurrences of each character
+    for (char c : str)
+    {
+        charCount[c]++;
+    }
+
+    // Find the first non-repeated character
+    for (char c : str)
+    {
+        if (charCount[c] == 1)
+        {
+            return c;
+        }
+    }
+
+    // Return '\0' if no non-repeated character found
+    return '\0';
+}
+
+int main()
+{
+    std::string str;
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, str);
+
+    char result = findFirstNonRepeatedChar(str);
+
+    if (result != '\0')
+    {
+        std::cout << "First non-repeated character: " << result << std::endl;
+    }
+    else
+    {
+        std::cout << "No non-repeated character found." << std::endl;
+    }
+
+    return 0;
+}
 ```
 
 ----
@@ -6882,14 +8023,48 @@ __Destructor__
 #include <iostream>
 #include <unordered_map>
 
-```
+char findFirstNonRepeatedChar(const std::string& str)
+{
+    std::unordered_map<char, int> charCount;
 
+    // Count the occurrences of each character
+    for (char c : str)
+    {
+        charCount[c]++;
+    }
 
-**Write a program in C++ to print the first non-repeated character in the given string.**
+    // Find the first non-repeated character
+    for (char c : str)
+    {
+        if (charCount[c] == 1)
+        {
+            return c;
+        }
+    }
 
-    return '\0'; // Return null character if no non-repeated character is found
+    // Return '\0' if no non-repeated character found
+    return '\0';
 }
 
+int main()
+{
+    std::string str;
+    std::cout << "Enter a string: ";
+    std::cin >> str;
+
+    char result = findFirstNonRepeatedChar(str);
+
+    if (result != '\0')
+    {
+        std::cout << "First non-repeated character: " << result << std::endl;
+    }
+    else
+    {
+        std::cout << "No non-repeated character found." << std::endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
@@ -6901,6 +8076,43 @@ __Destructor__
 #include <unordered_map>
 #include <vector>
 
+void findDuplicateNumbers(const std::vector<int>& arr)
+{
+    std::unordered_map<int, int> numCount;
+
+    // Count the occurrences of each number
+    for (int num : arr)
+    {
+        numCount[num]++;
+    }
+
+    // Find and print the duplicate numbers
+    bool duplicatesFound = false;
+    std::cout << "Duplicate numbers: ";
+    for (const auto& pair : numCount)
+    {
+        if (pair.second > 1)
+        {
+            std::cout << pair.first << " ";
+            duplicatesFound = true;
+        }
+    }
+
+    if (!duplicatesFound)
+    {
+        std::cout << "None";
+    }
+    std::cout << std::endl;
+}
+
+int main()
+{
+    std::vector<int> arr = {1, 2, 3, 4, 5, 2, 4, 6, 4, 3};
+
+    findDuplicateNumbers(arr);
+
+    return 0;
+}
 ```
 
 ---
@@ -6911,7 +8123,46 @@ __Destructor__
 #include <iostream>
 #include <ctime>
 
+int main()
+{
+    // Get the current time
+    std::time_t currentTime = std::time(nullptr);
+
+    // Convert the time to a string representation
+    std::tm* localTime = std::localtime(&currentTime);
+    int day = localTime->tm_mday;
+    int month = localTime->tm_mon + 1;
+    int year = localTime->tm_year + 1900;
+
+    // Print the date in the desired format
+    std::cout << "Current date: ";
+    if (day < 10)
+    {
+        std::cout << "0";
+    }
+    std::cout << day << "/";
+    if (month < 10)
+    {
+        std::cout << "0";
+    }
+    std::cout << month << "/";
+    std::cout << year % 100 << std::endl;
+
+    return 0;
+}
 ```
+
+In this program, we use the <ctime> library to work with dates and times. The std::time_t data type represents the current time.
+
+We get the current time using std::time(nullptr), which returns the number of seconds since the Unix epoch. We then convert this time to a std::tm structure using std::localtime(&currentTime).
+
+The std::tm structure contains various members such as tm_mday (day of the month), tm_mon (month), and tm_year (years since 1900).
+
+We extract the day, month, and year components from the std::tm structure and print them in the desired format: "dd/mm/yy".
+
+When you run this program, it will print the current date in the "dd/mm/yy" format.
+
+Note that the program assumes the local time zone. If you need to work with a different time zone or customize the date format further, you may need to use additional libraries or modify the code accordingly.
 
 ---
 
