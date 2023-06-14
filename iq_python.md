@@ -180,11 +180,13 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// sara
-// sara
-// sara
-// ansh
+"""
+Output:
+sara
+sara
+sara
+ansh
+"""
 ```
 
 ----
@@ -214,10 +216,10 @@ There are three distinct numeric types:
 
 | Class Name | Description | Example |
 | ---------- | ----------- | ------- |
-| int | Stores integer literals including hex, octal and binary numbers as integers. | ```print(443) ``` |
-| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```print(34.89) ``` |
-| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```print(complex(3)), Output: (3+0j) ``` |
-| bool | Stores boolean value (True or False). | ```print(1 == 1), Output: True ``` |
+| int | Stores integer literals including hex, octal and binary numbers as integers. | ```print(443)``` |
+| float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```print(34.89)``` |
+| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```print(complex(3)), Output: (3+0j)``` |
+| bool | Stores boolean value (True or False). | ```print(1 == 1), Output: True``` |
 
 Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal
 to store floating-point numbers with user-defined precision.
@@ -243,9 +245,8 @@ Note: The standard library also includes additional types for processing:
 1. Binary data such as
    * bytearray - ```array1 = bytearray(str, 'utf-8') # encoding the string with utf-8.```
    * bytes - ```b'\xf0\xf1\xf2'.hex() # Return a string object containing two hexadecimal digits for each byte in the instance.```
-   * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```memoryview(b'abcefg')```
- , and ...
-3. Text strings such as str.
+   * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```memoryview(b'abcefg')```, and ...
+2. Text strings such as str.
 
 __Mapping Types:__
 
@@ -257,16 +258,14 @@ A mapping object can map hashable values to random objects in Python. Mappings o
 
 __Set Types:__
 
-Currently, Python has two built-in set types - set and frozenset. set type is mutable and supports methods like add() and remove().
-frozenset type is immutable and can't be modified after creation.
+Currently, Python has two built-in set types - set and frozenset. Set type is mutable and supports methods like add() and remove(). Frozenset type is immutable and can't be modified after creation.
 
 | Class Name | Description | Examples |
 | ---------- | ----------- | -------- |
 | set | Mutable unordered collection of distinct hashable objects. | ```myset = {"apple", "banana", "cherry"}``` |
 | frozenset | Immutable collection of distinct hashable objects. | ```frozenset(["apple", "banana", "cherry"])``` |
 
-Note: set is mutable and thus cannot be used as key for a dictionary.
-On the other hand, frozenset is immutable and thus, hashable, and can be used as a dictionary key or as an element of another set.
+NOTE: set is mutable and thus cannot be used as key for a dictionary. On the other hand, frozenset is immutable and thus, hashable, and can be used as a dictionary key or as an element of another set.
 
 __Modules:__
 
@@ -281,9 +280,7 @@ very special attribute of the module __dict__, but direct assignment to this mod
 
 __Callable Types:__
 
-Callable types are the types to which function call can be applied. They can be user-defined functions, instance methods, generator
-functions, and some other built-in functions, methods and classes.
-Refer to the documentation at docs.python.org for a detailed view of the callable types.
+Callable types are the types to which function call can be applied. They can be user-defined functions, instance methods, generator functions, and some other built-in functions, methods and classes. Refer to the documentation at docs.python.org for a detailed view of the callable types.
 
 ----
 
@@ -365,11 +362,13 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-# Output:
-# Python is Python is awesome
-# None
-# Python is awesome
+
+"""
+Output:
+Python is Python is awesome
+None
+Python is awesome
+"""
 ```
 
 **Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
@@ -394,9 +393,11 @@ def main():
 if __name__ == '__main__':
     main()
 
-// Output:
-// Jack
-// John
+"""
+Output:
+Jack
+John
+"""
 ```
 
 **Private attributes** are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified
@@ -422,7 +423,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
+ 
 # Output:
 # None
 ```
@@ -431,9 +432,7 @@ if __name__ == '__main__':
 
 **What is the use of 'self' in Python?**
 
-Used to represent the instance of the class. With this keyword, you can access the attributes and methods of
-the class in python. It binds the attributes with the given arguments. self is used in different places and
-often thought to be a keyword. But unlike in C++, self is not a keyword in Python.
+Used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python.
 
 ```python
 #!/usr/bin/python3
@@ -463,11 +462,13 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-# Output:
-# My car is a Toyota Corolla.
-# The Toyota Corolla's engine is starting.
-# The Toyota Corolla is driving for 50 kilometers.
+
+"""
+Output:
+My car is a Toyota Corolla.
+The Toyota Corolla's engine is starting.
+The Toyota Corolla is driving for 50 kilometers.
+"""
 ```
 ----
 
@@ -516,6 +517,7 @@ Java, C++, Javascript, etc.
 # -*- coding: utf-8 -*-
 
 def main():
+    """main program"""
     pat = [1, 3, 2, 1, 2, 3, 1, 0, 1, 3]
     for p in pat:
         if (p == 0):
@@ -565,7 +567,6 @@ import random
 import unittest
 
 class Test(unittest.TestCase):
-    
     def test_upper(self):
         self.assertEqual("test1".upper(), 'TEST1')
 
@@ -604,7 +605,7 @@ be read like a history in the program.
 
 class Calculator:
     """A simple calculator class."""
-
+    
     def add(self, a, b):
         """
         Add two numbers.
@@ -895,8 +896,7 @@ if __name__ == '__main__':
 
 **What is Scope Resolution in Python?**
 
-Sometimes objects within the same scope have the same name but function differently. In such cases,
-__scope resolution__ comes into play in Python automatically.
+Sometimes objects within the same scope have the same name but function differently. In such cases, __scope resolution__ comes into play in Python automatically.
 
 An example of such behavior are:
 
