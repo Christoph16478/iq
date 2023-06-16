@@ -1,6 +1,6 @@
 # https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions 
 
-**What are widely used applications of C++?**
+## **What are widely used applications of C++?**
 
 1. *Systems Programming:* C++ was designed with systems programming in mind. It provides low-level control over hardware resources and memory management, making it an ideal choice for developing operating systems, device drivers, embedded systems, and other performance-critical applications.
 
@@ -20,7 +20,36 @@
 
 ----
 
-**What is the difference between C and C++?**
+## **What are useful resources?**
+
+* [History of C++](https://en.cppreference.com/w/cpp/language/history)
+
+* [Current status](https://isocpp.org/std/status)
+
+* [JTC1/SC22/WG21 - The C++ Standards Committee - ISOCPP](https://www.open-std.org/jtc1/sc22/wg21/)
+* [News, Status & Discussion about Standard C++](https://isocpp.org/)
+
+* [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
+
+* [C++ Reference](https://en.cppreference.com/w/cpp)
+
+* [C++ StdLib](http://www.cppstdlib.com/)
+
+* [C++ Standard Library Headers](https://en.cppreference.com/w/cpp/header)
+
+* [Cplusplus conference](https://cppcon.org/)
+
+* C++ detailed infos on certain topics
+  * [Declaring namespaces and namespace members](https://learn.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-170)
+  * [Enumerationsklasse (C++/CLI und C++/CX)](https://learn.microsoft.com/de-de/cpp/extensions/enum-class-cpp-component-extensions?view=msvc-170)
+  * [Function templates](https://cplusplus.com/doc/oldtutorial/templates/#:~:text=Function%20templates%20are%20special%20functions,be%20achieved%20using%20template%20parameters.)
+  * [Predefined macros](https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=msvc-170)
+  * [Source code organization (C++ Templates)](https://learn.microsoft.com/en-us/cpp/cpp/source-code-organization-cpp-templates?view=msvc-170)
+  * [Writing OS Independent Code in C/C++](https://www.geeksforgeeks.org/writing-os-independent-code-cc/)
+
+----
+
+## **What is the difference between C and C++?**
 
 | C | C++ |
 | ----- | ------ |
@@ -32,7 +61,7 @@
 
 ----
 
-**What is the bottom-up approach mentioned in connection with C++?**
+## **What is the bottom-up approach mentioned in connection with C++?**
 
 When we say that C++ follows a "bottom-up" approach, we are referring to the language's design philosophy and the way it handles program execution.
 
@@ -52,7 +81,7 @@ It is important to note that while C++ provides low-level control, it also offer
 
 ----
 
-**What are classes and objects in C++?**
+## **What are classes and objects in C++?**
 
 A class is like a blueprint of an object. It is a user-defined data type with data members and member
 functions and is defined with the keyword class.
@@ -90,7 +119,9 @@ int main()
 }
 ```
 
-**What are access modifiers?**
+----
+
+## **What are access modifiers?**
 
 You use access modifiers to define accessibility for the class members. It defines how to access the members of the class outside the class scope.
 
@@ -221,7 +252,7 @@ int main()
 }
 ```
 
-**Difference between equal to (==) and assignment operator(=)?**
+## **Difference between equal to (==) and assignment operator(=)?**
 
 The equal to operator == checks whether two values are equal or not. If equal, then it’s true; otherwise, it will return false.
 
@@ -279,7 +310,7 @@ int main()
 
 ----
 
-**What is the difference between a while loop and a do-while loop?**
+## **What is the difference between a while loop and a do-while loop?**
 
 while
 do-while
@@ -311,7 +342,7 @@ If the condition in a do-while loop is false, then the body will also execute on
 
 ----
 
-**What is the size of the int data type?**
+## **What is the size of the int data type?**
 
 - 4 bytes (true, int)
 - 1 byte
@@ -337,7 +368,7 @@ int main()
 
 ----
 
-**Which among the following operators cannot be overloaded?**
+## **Which among the following operators cannot be overloaded?**
 
 - -:
 - +:
@@ -434,7 +465,7 @@ int main()
 
 ----
 
-**What among these is used to return the number of characters in the string?**
+## **What among these is used to return the number of characters in the string?**
 
 - Size
 - Length
@@ -469,7 +500,7 @@ int main()
 
 ----
 
-**Discuss the difference between prefix and postfix?**
+## **Discuss the difference between prefix and postfix?**
 
 In prefix (++i), first, it increments the value, and then it assigns the value to the expression.
 
@@ -496,16 +527,17 @@ int main()
 // Output:
 // 5, 3, 5
 ```
+
 ----
 
-**Can you compile a program without the main function?**
+## **Can you compile a program without the main function?**
 
 Yes, you can compile a program without the main function, but you cannot run or execute the program because the `main()` function is the entry
 point, from where all the execution begins. And without the entry point, then you can execute the program.
 
 ----
 
-**What is std in C++?**
+## **What is std in C++?**
 
 - std is a standard class in C++ (true)
 - std is a standard file reading header
@@ -566,7 +598,7 @@ int main()
 
 ----
 
-**What are the four different data types in C++?**
+## **What are the four different data types in C++?**
 
 - __Primitive/Basic:__ `Char`, `int`, `short`, `float`, `double`, `long`, `bool`, etc.
 - __Derived:__ `Array`, `pointer`, etc.
@@ -575,7 +607,7 @@ int main()
 
 ----
 
-**How is [struct different from class?](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)**
+## **How is [struct different from class?](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)**
 
 Structure
 Class
@@ -623,7 +655,7 @@ int main()
 
 ----
 
-**What do you understand about polymorphism in C++?**
+## **What do you understand about polymorphism in C++?**
 
 The term polymorphism refers to the presence of multiple forms. Polymorphism usually occurs when there is a hierarchy
 of classes that are linked by inheritance. C++ polymorphism means that depending on the type of object that invokes
@@ -690,7 +722,7 @@ int main()
 
 ----
 
-**Compare compile time and runtime polymorphism?**
+## **Compare compile time and runtime polymorphism?**
 
 Compile-time Polymorphism
 Runtime Polymorphism
@@ -840,7 +872,7 @@ Runtime polymorphism in C++ allows for dynamic dispatch of virtual functions, en
 
 ----
 
-**What is a constructor in C++?**
+## **What is a constructor in C++?**
 
 In C++, a function Object is a particular "MEMBER FUNCTION" that shares the same title as the class it belongs to and is
 used to initialize specific values to an object's data members. 
@@ -882,7 +914,7 @@ int main()
 
 ----
 
-**What is a virtual function?**
+## **What is a virtual function?**
 
 A member function in the base class redefined in a derived class is a virtual function. It is declared using
 the virtual keyword. It ensures that the correct function is called for an object, irrespective of the type of
@@ -941,7 +973,7 @@ int main()
 
 ----
 
-**What do you understand about friend class and friend function?**
+## **What do you understand about friend class and friend function?**
 
 Like a friend function, a friend class can access personal and guarded variables of the type in which it is declared. All member functions for classes specified as
 friends to another class are friend functions for the friend class.
@@ -973,7 +1005,7 @@ int main()
 
 ----
 
-**What are the three different types of C++ access specifiers?**
+## **What are the three different types of C++ access specifiers?**
 
 - Public: All member functions and data members are accessible outside the class.
 - Protected: All member functions and data members are accessible within the class and to the derived class.
@@ -981,7 +1013,7 @@ int main()
 
 ----
 
-**What is an abstraction in C++?**
+## **What is an abstraction in C++?**
 
 Abstraction means displaying the essential details to the user while hiding the irrelevant or particular
 details that you don’t want to show to a user. It is of two types:
@@ -1026,7 +1058,7 @@ int main()
 
 ----
 
-**What are destructors in C++?**
+## **What are destructors in C++?**
 
 A destructor member function is instantly called when an object exits its scope or is specifically deleted by a call to delete.
 
@@ -1055,19 +1087,19 @@ int main()
 
 ----
 
-**Is it possible to overload a deconstructor? Give reasons for your answer?**
+## **Is it possible to overload a deconstructor? Give reasons for your answer?**
 
 No, it is impossible as destructors do not take arguments or return anything. There has to be only one empty destructor per class. It should have a void parameter list.  
 
 ----
 
-**What is an abstract class? When is it used?**
+## **What is an abstract class? When is it used?**
 
 An abstract class is a class whose objects cannot be created. It serves as a parent for the derived classes. Placing a pure virtual function in the class makes it an abstract class. 
 
 ----
 
-**What do you understand about static members and static member functions?**
+## **What do you understand about static members and static member functions?**
 
 A variable in a class declared as static has its space allocated for the lifetime of the program. Regardless of the number of objects of that class
 created, there is only a single copy of the static member. The same static member is accessible to all the objects of that class.
@@ -1107,7 +1139,7 @@ int main()
 }
 ```
 
-A static member function can be called even if no class objects exist. It is accessed using only the class name and the scope resolution operator (::).  
+A static member function can be called even if no class objects exist. It is accessed using only the class name and the scope resolution operator ```::```.  
 
 ```c++
 // TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -1152,7 +1184,7 @@ int main()
 
 ----
 
-**What is the C++ OOPs concept?**
+## **What is the C++ OOPs concept?**
 
 __OOPs concept in C++:__                                                                               
 
@@ -1165,7 +1197,7 @@ __OOPs concept in C++:__
 
 ----
 
-**When is void() return type used?**
+## **When is void() return type used?**
 
 You use the void() return type when you don’t want to return any value. It specifies that the function doesn’t return a value.
 A function with a void return type completes its task and then returns the control to the caller.
@@ -1195,13 +1227,14 @@ int main()
 
 ----
 
-**What is call by value and call by reference in C++?**
+## **What is call by value and call by reference in C++?**
 
 In the call by value method, you pass the copies of actual parameters to the function's formal parameters. This means
 if there is any change in the values inside the function, then that change will not affect the actual values.
 
 ```c++
 #include <iostream>
+
 using namespace std;
  
 // function declaration
@@ -1286,7 +1319,7 @@ int main()
 
 ----
 
-**What is an [inline function?](https://www.geeksforgeeks.org/inline-functions-cpp/)**
+## **What is an [inline function?](https://www.geeksforgeeks.org/inline-functions-cpp/)**
 
 An inline function when called expands in line. When you call this function, the whole code of the inline function gets inserted or substituted at the inline function call.
 
@@ -1313,7 +1346,7 @@ int main()
 
 ----
 
-**What are pointers in C++?**
+## **What are pointers in C++?**
 
 Pointers are the variables that store the memory address of another variable. The type of the variable must correspond with the type of pointer.
 
@@ -1351,7 +1384,7 @@ int main()
 
 ----
 
-**What is a scope resolution operator?**
+## **What is a scope resolution operator?**
 
 A scope resolution operator is represented as `::`
 
@@ -1419,7 +1452,7 @@ int main()
 
 ----
 
-**What is a constructor?**
+## **What is a constructor?**
 
 A constructor is defined as a member function that is invoked whenever you create an object; it has the same name as that of the class.
 
@@ -1457,7 +1490,7 @@ int main()
 
 ----
 
-**Define operator overloading and function overloading?**
+## **Define operator overloading and function overloading?**
 
 An example of compile-time polymorphism is operator overloading.
 It is the concept of modifying an existing C++ operator without
@@ -1488,7 +1521,7 @@ int main()
 
 ----
 
-**How to input strings in C++ with spaces?**
+## **How to input strings in C++ with spaces?**
 
 ```c++
 // TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -1515,7 +1548,7 @@ int main()
 
 ----
 
-**Discuss the difference between new and malloc?**
+## **Discuss the difference between new and malloc?**
 
 new
 malloc
@@ -1534,7 +1567,7 @@ malloc() can never be overloaded
 
 ----
 
-**What is operator overloading?**
+## **What is operator overloading?**
 
 Operator overloading is a mechanism in which a special meaning is given to an operator.
 
@@ -1542,7 +1575,7 @@ For example, you can overload the `+`-operator in a class-like string to concate
 
 ----
 
-**What is a friend function?**
+## **What is a friend function?**
 
 You can define a friend function as a function that can access private, public and protect members of the class. You declare the
 friend function with the help of the friend keyword. You declare this function inside the class.
@@ -1590,13 +1623,15 @@ int main()
 }
 ```
 
-**Which of the following will give the size of object or type?**
+----
+
+## **Which of the following will give the size of object or type?**
 
 The sizeof operator is used to give the size of object or type.
 
 ----
 
-**Which of the following is not a member of a class?**
+## **Which of the following is not a member of a class?**
 
 - Static function
 - Virtual function
@@ -1607,7 +1642,7 @@ Among the following, friend function is not a member of the class
 
 ----
 
-**What is STL?**
+## **What is STL?**
 
 STL stands for standard template library. It is a library of container templates that provide generic classes and functions.
 
@@ -1615,7 +1650,7 @@ STL components are containers, algorithms, iterators, and function objects.
 
 ----
 
-**How to write a program to check if a number is a palindrome or not?**
+## **How to write a program to check if a number is a palindrome or not?**
 
 ```c++
 #include <iostream>
@@ -1650,7 +1685,9 @@ int main()
 }
 ```
 
-**What is a copy constructor?**
+----
+
+## **What is a copy constructor?**
 
 A copy function is a member function that uses another object from the same class to initialize a new thing. A copy
 function is, to put it simply, a function that produces an object by initializing it with a different object of the
@@ -1694,7 +1731,7 @@ int main()
 
 ----
 
-**Write a program to find the factorial of a number?**
+## **Write a program to find the factorial of a number?**
 
 ```c++
 #include <iostream>
@@ -1725,21 +1762,21 @@ int main()
 
 ----
 
-**What is inheritance?**
+## **What is inheritance?**
 
 Inheritance is the mechanism in which you can create a new class i.e. child class from the existing class
 i.e. parent class. This child class is also known as a derived class and the parent class is also called Base class. 
 
 ----
 
-**What is Abstraction?**
+## **What is Abstraction?**
 
 Abstraction can be defined as a technique in which you only show functionality to the
 user i.e., the details that you want the user to see, hiding the internal details or implementation details.
 
 ----
 
-**How to find the frequency of a number in C++?**
+## **How to find the frequency of a number in C++?**
 
 ```c++
 #include <iostream>
@@ -1773,7 +1810,7 @@ int main()
 
 ----
 
-**What should be the correct statement about string objects in C++?**
+## **What should be the correct statement about string objects in C++?**
 
 - String objects should necessarily be terminated by a null character
 - String objects have a static size
@@ -1782,7 +1819,7 @@ int main()
 
 ----
 
-**How is a shallow copy different from a deep copy?**
+## **How is a shallow copy different from a deep copy?**
 
 Shallow Copy
 Deep Copy
@@ -1796,9 +1833,9 @@ Comparatively slower
 It reflects changes made to the new/copied object in the original object.
 It doesn’t reflect changes made to the new/copied object in the original object.
 
----
+----
 
-**How are virtual functions different from pure virtual functions?**
+## **How are virtual functions different from pure virtual functions?**
 
 A virtual function is a base class member function that a derived class can modify. A member function of a base class that
 is a pure virtual function must be defined in the derived type; otherwise, the derived class will become abstract as well.
@@ -1889,7 +1926,7 @@ Pure virtual functions allow for defining an interface or base behavior
 
 ----
 
-**Class D is derived from a base class B. If creating an object of type D, what order will the constructors of these classes get called?**
+## **Class D is derived from a base class B. If creating an object of type D, what order will the constructors of these classes get called?**
 
 The derived class consists of two parts: the base part and the derived part. C++ constructs derived objects in phases. The process begins with
 constructing the most-base class (at the top of the inheritance tree), followed by each child class construction in order, and then the
@@ -1897,7 +1934,7 @@ most-child class. Thus, first, the Constructor of class B will be called, and th
 
 ----
 
-**Can a virtual function be called from a constructor?**
+## **Can a virtual function be called from a constructor?**
 
 A virtual process may be called a function Object, but exercise caution. It might perform differently than expected. The virtual call mechanism in a function Object is disabled since overriding from derived classes hasn't happened yet. Building blocks are used to create objects, "base before derived."
 
@@ -1946,13 +1983,14 @@ int main()
     return 0;
 }
 ```
+
 ----
 
 In this example, the Animal class is an abstract class because it contains a pure virtual function makeSound(). The makeSound() function is declared with = 0 at the end, indicating that it has no implementation in the base class. The derived classes, Dog and Cat, must provide their own implementations for the makeSound() function to become concrete classes.
 
 ----
 
-**What are void pointers?**
+## **What are void pointers?**
 
 In C, a void pointer has no connection to any particular data type. It designates a location for specific data within the storage.
 This indicates that it is pointing to a variable's address. It also goes by the name "general purpose pointer."
@@ -1977,7 +2015,7 @@ int main()
 
 ----
 
-**What is this pointer in C++?**
+## **What is this pointer in C++?**
 
 A class, struct, or union form only has access to this pointer within non-static member variables. The arrow shows the object for which the member function is called. 
 
@@ -2008,7 +2046,7 @@ int main()
 
 ----
 
-**How would you deallocate and allocate memory in C++?**
+## **How would you deallocate and allocate memory in C++?**
 
 The heap is used in C to allocate dynamic memory, and these functions are part of the standard library. Malloc() and free are the
 two important dynamic memory operations (). The size of the desired memory area in bytes is the only parameter accepted by the malloc() function. 
@@ -2041,7 +2079,7 @@ int main()
 
 # https://www.interviewbit.com/cpp-interview-questions
 
-**What are the different data types present in C++?**
+## **What are the different data types present in C++?**
 
 The 4 data types in C++ are given below:
 
@@ -2050,7 +2088,7 @@ The 4 data types in C++ are given below:
 - Enumeration. Example- enum
 - User-defined data types. Example- structure, class, etc.
 
-**What will be the output of the following C++ program:**
+## **What will be the output of the following C++ program:**
 
 ```c++
 // TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -2074,7 +2112,7 @@ int main()
 
 ----
 
-**What will be the value of x in the following C++ program?**
+## **What will be the value of x in the following C++ program?**
 
 ```c++
 // TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -2100,7 +2138,7 @@ int main()
 
 ----
 
-**What is an abstract class?**
+## **What is an abstract class?**
 
 An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.
 
@@ -2175,7 +2213,7 @@ int main(void)
 
 ----
 
-**Consider the following C++ program?**
+## **Consider the following C++ program?**
 
 What will be output?
 A B
@@ -2218,7 +2256,7 @@ int main() {
 
 ----
 
-**What is the size of void in C++?**
+## **What is the size of void in C++?**
 
 The size of void pointer varies system to system. If the system is 16-bit, size of void pointer is 2 bytes.
 If the system is 32-bit, size of void pointer is 4 bytes. If the system is 64-bit, size of void pointer is 8 bytes.
@@ -2243,7 +2281,7 @@ int main()
 
 ----
 
-**Which of the following statement is correct?**
+## **Which of the following statement is correct?**
 
 - An object is an instance of the class (true)
 - A friend function can access private members of a class (true)
@@ -2254,7 +2292,7 @@ int main()
 
 # https://www.javatpoint.com/cpp-interview-questions
 
-**Define namespace in C++?**
+## **Define namespace in C++?**
 
 The namespace is a logical division of the code which is designed to stop the naming conflict.
 The namespace defines the scope where the identifiers such as variables, class, functions are declared.
@@ -2264,7 +2302,7 @@ C++ consists of a standard namespace, i.e., std which contains inbuilt classes a
 
 Syntax of namespace:
 
-```cmd
+```c++
 namespace namespace_name  
 {
     // body of namespace;  
@@ -2273,8 +2311,8 @@ namespace namespace_name
 
 Syntax of accessing the namespace variable:
 
-```cmd
-namespace_name::member_name;  
+```c++
+namespace_name::member_name;
 ```
 
 Let's understand this through an example:
@@ -2312,14 +2350,13 @@ int main()
     return 0;
 }
 
-
 // Output:
 // 10
 ```
 
 ----
     
-**Define token in C++?**
+## **Define token in C++?**
 
 A token in C++ can be a keyword, identifier, literal, constant and symbol.
 
@@ -2386,13 +2423,13 @@ Punctuation symbols are used for grouping, separating, and terminating statement
 
 ----
 
-**Who was the creator of C++?**
+## **Who was the creator of C++?**
 
 Bjarne Stroustrup.
 
 ----
 
-**hich operations are permitted on pointers?**
+## **hich operations are permitted on pointers?**
 
 Following are the operations that can be performed on pointers:
 
@@ -2456,19 +2493,19 @@ int main()
 
 ----
 
-**Define 'std'?**
+## **Define 'std'?**
 
 Std is the default namespace standard used in C++.
 
 ----
 
-**Which programming language's unsatisfactory performance led to the discovery of C++?**
+## **Which programming language's unsatisfactory performance led to the discovery of C++?**
 
 C++ was discovered in order to cope with the disadvantages of C.
 
 ----
 
-**How delete[] is different from delete?**
+## **How delete[] is different from delete?**
 
 Delete is used to release a unit of memory, delete[] is used to release an array.
 
@@ -2496,20 +2533,20 @@ It is important to note that using delete instead of delete[] (or vice versa) fo
 
 ----
 
-**What is the full form of STL in C++?**
+## **What is the full form of STL in C++?**
 
 STL stands for Standard Template Library.
 
 ----
 
-**What is an object?**
+## **What is an object?**
 
 The Object is the instance of a class. A class provides a blueprint for objects. So you can create an object from a class. The objects of
 a class are declared with the same sort of declaration that we declare variables of basic types.
 
 ----
 
-**What are the C++ access specifiers?**
+## **What are the C++ access specifiers?**
 
 The access specifiers are used to define how to functions and variables can be accessed outside the class.
 
@@ -2518,7 +2555,9 @@ There are three types of access specifiers:
 - Public: Functions and variables declared under public can be accessed from anywhere.
 - Protected: Functions and variables declared as protected cannot be accessed outside the class except a child class. This specifier is generally used in inheritance.
 
-**What is Object Oriented Programming (OOP)?**
+----
+
+## **What is Object Oriented Programming (OOP)?**
 
 OOP is a methodology or paradigm that provides many concepts. The basic concepts of Object Oriented Programming are given below:
 
@@ -2733,7 +2772,7 @@ int main() {
 
 ----
 
-**What is the difference between an array and a list?**
+## **What is the difference between an array and a list?**
 
 An Array is a collection of homogeneous elements while a list is a collection of heterogeneous elements.
 Array memory allocation is static and continuous while List memory allocation is dynamic and random.
@@ -2741,7 +2780,7 @@ In Array, users don't need to keep in track of next memory allocation while In t
 
 ----
 
-**What is the difference between new() and malloc()?**
+## **What is the difference between new() and malloc()?**
 
 new() is a preprocessor while malloc() is a function.
 
@@ -2755,7 +2794,7 @@ The new() operator is faster than the malloc() function as operator is faster th
 
 ----
 
-**What are the methods of exporting a function from a DLL?**
+## **What are the methods of exporting a function from a DLL?**
 
 There are two ways:
 - By using the DLL's type library.
@@ -2763,7 +2802,7 @@ There are two ways:
 
 ----
 
-**Define friend function?**
+## **Define friend function?**
 
 Friend function acts as a friend of the class. It can access the private and protected members of the class. The friend function is not a member of the class,
 but it must be listed in the class definition. The non-member function cannot access the private data of the class. Sometimes, it is necessary for the non-member
@@ -2818,7 +2857,9 @@ int main()
 // 11
 ```
 
-**What is virtual inheritance?**
+----
+
+## **What is virtual inheritance?**
 
 Virtual inheritance facilitates you to create only one copy of each object even if the object appears more than one in the hierarchy.
 
@@ -2880,7 +2921,7 @@ int main()
 
 ----
 
-**What is polymorphism in C++?**
+## **What is polymorphism in C++?**
 
 Polymorphism is known as many forms of the same thing. In simple terms, we can say that Polymorphism is the ability to display a member
 function in multiple forms depending on the type of object that calls them. 
@@ -2900,7 +2941,7 @@ Examples are provided above in this document
 
 ----
 
-**What are the different types of polymorphism in C++?**
+## **What are the different types of polymorphism in C++?**
 
 There is 2 type of polymorphism:
 
@@ -2993,7 +3034,7 @@ int main()
 
 ----
 
-**Compare compile-time polymorphism and Runtime polymorphism?**
+## **Compare compile-time polymorphism and Runtime polymorphism?**
 
 | Compile-Time | Polymorphism Runtime Polymorphism |
 | ------------ | --------------------------- |
@@ -3004,7 +3045,7 @@ int main()
 
 ----
 
-**Explain the constructor in C++?**
+## **Explain the constructor in C++?**
 
 A constructor is a special type of member function of a class, whose name is the same as that of the class by whom it is invoked and initializes
 value to the object of a class. 
@@ -3090,7 +3131,7 @@ Sample(Sample& t)
 
 ----
 
-**Which operations are permitted on pointers?**
+## **Which operations are permitted on pointers?**
 
 Pointers are the variables that are used to store the address location of another variable. Operations that are permitted to a pointer are:
 - Increment/Decrement of a Pointer
@@ -3099,7 +3140,7 @@ Pointers are the variables that are used to store the address location of anothe
 
 ----
 
-**Define inline function. Can we have a recursive inline function in C++?**
+## **Define inline function. Can we have a recursive inline function in C++?**
 
 An inline function is a form of request not an order to a compiler which results in the inlining of our function to the main function
 body. An inline function can become overhead if the execution time of the function is less than the switching time from the caller function
@@ -3128,7 +3169,7 @@ For more information, refer to Inline Function
 
 ----
 
-**What is an abstract class and when do you use it?**
+## **What is an abstract class and when do you use it?**
 
 An abstract class is a class that is specifically designed to be used as a base class. An abstract class contains at least one pure virtual function. You declare a pure virtual
 function by using a pure specifier(= 0) in the declaration of a virtual member function in the class declaration
@@ -3225,7 +3266,7 @@ Note that attempting to instantiate an object of the abstract class Shape direct
 
 ----
 
-**What is the main use of the keyword "Volatile"?**
+## **What is the main use of the keyword "Volatile"?**
 
 Just like its name, things can change suddenly and unexpectantly; So it is used to inform the compiler that the value may change anytime. Also, the volatile
 keyword prevents the compiler from performing optimization on the code. It was intended to be used when interfacing with memory-mapped hardware, signal
@@ -3258,7 +3299,7 @@ It's worth noting that the volatile keyword should be used carefully and only wh
 
 ----
 
-**Define storage class in C++ and name some**
+## **Define storage class in C++ and name some**
 
 Storage class is used to define the features(lifetime and visibility) of a variable or function. These features usually help in tracing the existence of a variable during the runtime of a program.
 
@@ -3306,7 +3347,7 @@ In the example above, the count variable is incremented and printed on each func
 
 ----
 
-**What is a mutable storage class specifier? How can they be used?**
+## **What is a mutable storage class specifier? How can they be used?**
 
 Just like its name, the mutable storage class specifier is used only on a class data member to make it modifiable even though
 the member is part of an object declared as const. Static or const, or reference members cannot use the mutable specifier.
@@ -3314,7 +3355,7 @@ When we declare a function as const, this pointer passed to the function becomes
 
 ----
 
-**Define the Block scope variable?**
+## **Define the Block scope variable?**
 
 So the scope of a variable is a region where a variable is accessible. There are two scope regions, A global and block or local. 
 
@@ -3326,19 +3367,19 @@ For more information, refer to Scope of a variable
 
 ----
 
-**What is the function of the keyword “Auto”?**
+## **What is the function of the keyword “Auto”?**
 
 The auto keyword may be used to declare a variable with a complex type in a straightforward fashion. You can use auto to declare a variable if the initialization phrase contains templates, pointers to functions, references to members, etc. With type inference capabilities, we can spend less time having to write out things the compiler already knows. As all the types are deduced in the compiler phase only, the time for compilation increases slightly but it does not affect the runtime of the program. 
 
 ----
 
-**Can we call a virtual function from a constructor?**
+## **Can we call a virtual function from a constructor?**
 
 Yes, we can call a virtual function from a constructor. But it can throw an exception of overriding.
 
 ----
 
-**What are void pointers?**
+## **What are void pointers?**
 
 Just like its name a void pointer is a pointer that is not associated with anything or with any data type. Nevertheless,
 a void pointer can hold the address value of any type and can be converted from one data type to another.
@@ -3347,7 +3388,7 @@ a void pointer can hold the address value of any type and can be converted from 
 
 # https://www.toptal.com/c-plus-plus/interview-questions
 
-**What will the line of code below print out and why?**
+## **What will the line of code below print out and why?**
 
 ```c++
 // TestApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -3369,7 +3410,9 @@ int main(int argc, char** argv)
 // 4294967271
 ```
 
-**What is the error in the code below and how should it be corrected?**
+----
+
+## **What is the error in the code below and how should it be corrected?**
 
 ```c++
 my_struct_t *bar;
@@ -3403,7 +3446,7 @@ int main()
 
 ----
 
-**What will i and j equal after the code below is executed? Explain your answer?**
+## **What will i and j equal after the code below is executed? Explain your answer?**
 
 ```c++
 int i = 5;
@@ -3418,7 +3461,7 @@ std::out << j << std::endl;
 
 ----
 
-**Assuming buf is a valid pointer, what is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?**
+## **Assuming buf is a valid pointer, what is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?**
 
 ```c++
 size_t sz = buf->size();
@@ -3454,7 +3497,7 @@ int main()
 
 ----
 
-**Consider the two code snippets below for printing a vector. Is there any advantage of one vs. the other? Explain?**
+## **Consider the two code snippets below for printing a vector. Is there any advantage of one vs. the other? Explain?**
 
 ```c++
 // Option 1:
@@ -3478,7 +3521,7 @@ for (auto itr = vec.begin(); itr != vec.end(); ++itr)
 
 ----
 
-**Implement a template function IsDerivedFrom() that takes class C and class P as template parameters. It should return true when class C is derived from class P and false otherwise.**
+## **Implement a template function IsDerivedFrom() that takes class C and class P as template parameters. It should return true when class C is derived from class P and false otherwise.**
 
 ```c++
 #include <iostream>
@@ -3516,7 +3559,7 @@ In the main() function, we demonstrate the usage of IsDerivedFrom() by checking 
 
 ----
 
-**Implement a template boolean IsSameClass() that takes class A and B as template parameters. It should compare class A and B and return false when they are different classes and true if they are the same class.**
+## **Implement a template boolean IsSameClass() that takes class A and B as template parameters. It should compare class A and B and return false when they are different classes and true if they are the same class.**
 
 ```c++
 #include <iostream>
@@ -3544,7 +3587,7 @@ In the main() function, we demonstrate the usage of IsSameClass() by comparing A
 
 ----
 
-**Is it possible to have a recursive inline function?**
+## **Is it possible to have a recursive inline function?**
 
 No, it is not possible to have a recursive inline function in C++.
 
@@ -3554,7 +3597,7 @@ If you need to implement recursion, you should use a regular (non-inline) functi
 
 ----
 
-**What is the output of the following code:**
+## **What is the output of the following code:**
 
 ```c++
 #include <iostream>
@@ -3592,7 +3635,7 @@ int main(int argc, const char* argv[])
 
 ----
 
-**You are given library class Something as follows:**
+## **You are given library class Something as follows:**
 
 ```c++
 class Something
@@ -3614,7 +3657,7 @@ private:
 
 ----
 
-**Implement a method to get topSecretValue for any given Something* object. The method should be cross-platform compatible and not depend on sizeof (int, bool, string).**
+## **Implement a method to get topSecretValue for any given Something* object. The method should be cross-platform compatible and not depend on sizeof (int, bool, string).**
 
 ```c++
 #include <iostream>
@@ -3664,7 +3707,7 @@ int main()
 
 ----
 
-**Implement a void function F that takes pointers to two arrays of integers (A and B) and a size N as parameters. It then populates B where B[i] is the product of all A[j] where j != i.**
+## **Implement a void function F that takes pointers to two arrays of integers (A and B) and a size N as parameters. It then populates B where B[i] is the product of all A[j] where j != i.**
 
 For example: If A = {2, 1, 5, 9}, then B would be {45, 90, 18, 10}.
 
@@ -3708,36 +3751,25 @@ int main()
 
 ----
 
-**When you should use virtual inheritance?**
+## **When you should use virtual inheritance?**
 
-Virtual inheritance is a feature in C++ that allows multiple base classes to share a common base class, but with only a single copy of the common
-base class being inherited by the derived class. It is typically used in situations where the same base class is inherited by multiple paths in
-an inheritance hierarchy, which can cause problems with ambiguous base classes.
+Virtual inheritance is a feature in C++ that allows multiple base classes to share a common base class, but with only a single copy of the common base class being inherited by the derived class. It is typically used in situations where the same base class is inherited by multiple paths in an inheritance hierarchy, which can cause problems with ambiguous base classes.
 
 Here are some scenarios where virtual inheritance can be useful:
 
-Diamond inheritance: This is a situation where a class inherits from two base classes that both inherit from a common base class. Without
-virtual inheritance, the derived class will have two copies of the common base class, which can lead to ambiguity when accessing members
-of the common base class. Virtual inheritance ensures that there is only one copy of the common base class, avoiding the ambiguity.
+Diamond inheritance: This is a situation where a class inherits from two base classes that both inherit from a common base class. Without virtual inheritance, the derived class will have two copies of the common base class, which can lead to ambiguity when accessing members of the common base class. Virtual inheritance ensures that there is only one copy of the common base class, avoiding the ambiguity.
 
-Base classes with overlapping member functions: If two or more base classes have member functions with the same name and signature, it can
-cause ambiguity when the derived class tries to call the function. Virtual inheritance ensures that there is only one copy of the function
-in the derived class, avoiding the ambiguity.
+Base classes with overlapping member functions: If two or more base classes have member functions with the same name and signature, it can cause ambiguity when the derived class tries to call the function. Virtual inheritance ensures that there is only one copy of the function in the derived class, avoiding the ambiguity.
 
-Separation of interface and implementation: Virtual inheritance can be used to separate the interface and implementation of a base class.
-The interface can be defined in a non-virtual base class, while the implementation can be defined in a virtual base class. This can make
-it easier to reuse the interface in different implementations without duplicating the interface code.
+Separation of interface and implementation: Virtual inheritance can be used to separate the interface and implementation of a base class. The interface can be defined in a non-virtual base class, while the implementation can be defined in a virtual base class. This can make it easier to reuse the interface in different implementations without duplicating the interface code.
 
-Shared resources: Virtual inheritance can be useful in situations where multiple base classes need to share a common resource, such as a mutex
-or a file handle. By using virtual inheritance to share a common base class, the derived class can ensure that there is only one copy of the
-shared resource, avoiding conflicts and reducing memory usage.
+Shared resources: Virtual inheritance can be useful in situations where multiple base classes need to share a common resource, such as a mutex or a file handle. By using virtual inheritance to share a common base class, the derived class can ensure that there is only one copy of the shared resource, avoiding conflicts and reducing memory usage.
 
-In general, virtual inheritance should be used sparingly, as it can add complexity to the inheritance hierarchy and make the code harder to understand
-and maintain. It should only be used when it is necessary to avoid problems with ambiguity or to share a common resource.
+In general, virtual inheritance should be used sparingly, as it can add complexity to the inheritance hierarchy and make the code harder to understand and maintain. It should only be used when it is necessary to avoid problems with ambiguity or to share a common resource.
 
 ----
 
-**What is the output of the following code?**
+## **What is the output of the following code?**
 
 ```c++
 // TestApplication.cpp.
@@ -3765,7 +3797,7 @@ int main(int argc, const char* argv[])
 
 ----
 
-**What is the output of the following code?**
+## **What is the output of the following code?**
 
 ```c++
 #include <iostream>
@@ -3814,7 +3846,7 @@ int main(void)
 
 ----
 
-**How many times will this loop execute? Explain your answer?**
+## **How many times will this loop execute? Explain your answer?**
 
 ```c++
 unsigned char half_limit = 150;
@@ -3836,7 +3868,7 @@ for (unsigned char i = 0; i < 2 * half_limit; ++i)
 
 ----
 
-**How can you make sure a C++ function can be called as e.g. void foo(int, int) but not as any other type like void foo(long, long)?**
+## **How can you make sure a C++ function can be called as e.g. void foo(int, int) but not as any other type like void foo(long, long)?**
 
 One way to make sure that a C++ function can only be called with a specific set of argument types is to use template specialization. Here's an example:
 
@@ -3857,22 +3889,15 @@ void foo(int, int)
 }
 ```
 
-In this example, we define a generic function template foo() that takes two template parameters of arbitrary types.
-The static_assert statement ensures that the size of the template arguments is equal to the size of an int, which
-restricts the function to only accept arguments of type int. We then define a specialization of the foo() template
-for arguments of type int, which can provide specific behavior for this case.
+In this example, we define a generic function template foo() that takes two template parameters of arbitrary types. The static_assert statement ensures that the size of the template arguments is equal to the size of an int, which restricts the function to only accept arguments of type int. We then define a specialization of the foo() template for arguments of type int, which can provide specific behavior for this case.
 
-When foo() is called with two arguments of type int, the specialization will be used, and any other types will result in
-a compile-time error due to the static_assert statement. This ensures that foo() can only be called with the specified
-argument types.
+When foo() is called with two arguments of type int, the specialization will be used, and any other types will result in a compile-time error due to the static_assert statement. This ensures that foo() can only be called with the specified argument types.
 
-Note that this approach relies on the size of the argument types being a specific value, which may not always be the case.
-In general, it is better to use more robust type-checking techniques, such as std::enable_if or concept constraints, to
-ensure that a function can only be called with specific argument types.
+Note that this approach relies on the size of the argument types being a specific value, which may not always be the case. In general, it is better to use more robust type-checking techniques, such as std::enable_if or concept constraints, to ensure that a function can only be called with specific argument types.
 
 ----
 
-**What is the problem with the following code?**
+## **What is the problem with the following code?**
 
 ```c++
 using namespace std;
@@ -3910,29 +3935,29 @@ int main(void)
 
 ----
 
-**What is a storage class?**
+## **What is a storage class?**
 
 In C++, a storage class defines the scope, lifetime, and visibility of variables or functions within a program. It specifies how the memory is allocated and managed for these entities. C++ provides several storage classes that determine the characteristics of variables or functions.
 
 Here are the different storage classes in C++:
 
-auto: This is the default storage class for local variables. It is automatically assigned to variables declared within a block or function. The auto keyword is rarely used explicitly since it is the default behavior.
+__auto:__ This is the default storage class for local variables. It is automatically assigned to variables declared within a block or function. The auto keyword is rarely used explicitly since it is the default behavior.
 
-register: This storage class is used to declare local variables that should be stored in a register instead of memory. It suggests the compiler to optimize access to these variables by keeping them in registers, but the decision ultimately lies with the compiler.
+__register:__ This storage class is used to declare local variables that should be stored in a register instead of memory. It suggests the compiler to optimize access to these variables by keeping them in registers, but the decision ultimately lies with the compiler.
 
-static: The static storage class has different meanings depending on where it is used:
+__static:__ The static storage class has different meanings depending on where it is used:
 
-For local variables: It preserves the value of a variable between function calls. The variable is initialized only once and retains its value throughout the program's execution.
+__For local variables:__ It preserves the value of a variable between function calls. The variable is initialized only once and retains its value throughout the program's execution.
 
-For global variables: It limits the scope of the variable to the file where it is declared. The variable is accessible only within that file, even if it is declared as extern in other files.
+__For global variables:__ It limits the scope of the variable to the file where it is declared. The variable is accessible only within that file, even if it is declared as extern in other files.
 
-For functions: It limits the visibility of the function to the file where it is declared. The function cannot be accessed from other files using the extern keyword.
+__For functions:__ It limits the visibility of the function to the file where it is declared. The function cannot be accessed from other files using the extern keyword.
 
-extern: The extern storage class is used to declare variables or functions that are defined in other files. It is typically used to provide access to variables or functions that are defined in one file and used in other files of a program.
+__extern:__ The extern storage class is used to declare variables or functions that are defined in other files. It is typically used to provide access to variables or functions that are defined in one file and used in other files of a program.
 
-mutable: This storage class is applicable only to class member variables. It allows modifying a member variable even within a const member function.
+__mutable:__ This storage class is applicable only to class member variables. It allows modifying a member variable even within a const member function.
 
-thread_local: Introduced in C++11, this storage class is used to declare variables that have a different instance for each thread. Each thread has its own copy of the variable, and the variable retains its value across function calls within the same thread.
+__thread_local:__ Introduced in C++11, this storage class is used to declare variables that have a different instance for each thread. Each thread has its own copy of the variable, and the variable retains its value across function calls within the same thread.
 
 Understanding storage classes helps you control the behavior, scope, and lifetime of variables and functions in your C++ programs, allowing for efficient memory management and controlling variable visibility across different parts of your code.
 
@@ -3991,7 +4016,6 @@ int externalVar = 25;
 
 In this example, we have used various storage classes:
 
-
 *Global variables (globalVar and staticGlobalVar):*
 globalVar is a regular global variable accessible throughout the program. staticGlobalVar is a global variable with the static storage class. It limits the variable's visibility to the current file.
 
@@ -4009,7 +4033,7 @@ The countCalls() function contains a static local variable counter. It retains i
 
 ----
 
-**How can a C function be called in a C++ program?**
+## **How can a C function be called in a C++ program?**
 
 In C++, you can call a C function in a C++ program by using the extern "C" declaration to specify the C linkage for the function. The extern "C" declaration informs the C++ compiler to treat the enclosed code as C code, allowing you to call C functions from within a C++ program. Here's an example:
 
@@ -4033,7 +4057,9 @@ int add(int a, int b)
 
 ```c++
 #include <iostream>
-extern "C" {
+
+extern "C"
+{
 #include "mylibrary.h"
 }
 
@@ -4053,7 +4079,6 @@ To call the add() function in a C++ program, we include mylibrary.h and use the 
 In the main() function of the C++ code, we call the add() function as if it were a regular C++ function. The C++ compiler will recognize the extern "C" declaration and treat the function as a C function.
 
 When you run this program, it will output:
-
 makefile
 Copy code
 Result: 8
@@ -4061,7 +4086,7 @@ This demonstrates how you can call a C function from a C++ program by using the 
 
 ----
 
-**What will be the output of the following program?**
+## **What will be the output of the following program?**
 
 ```c++
 #include <iostream>
@@ -4093,7 +4118,7 @@ int main(int argc, char **argv)
 
 ----
 
-**Are you allowed to have a static const member function? Explain your answer?**
+## **Are you allowed to have a static const member function? Explain your answer?**
 
 No, it is not possible to have a static const member function in C++. The const qualifier is not applicable to member functions marked as static because static member functions are not associated with any particular object instance. The const qualifier is used to indicate that a member function does not modify the state of the object on which it is invoked. However, since static member functions are not tied to any specific object, the concept of constness does not apply to them.
 
@@ -4103,13 +4128,14 @@ If you need a function to be both static and const in behavior, you can achieve 
 
 ----
 
-**Explain the volatile and mutable keywords.**
+## **Explain the volatile and mutable keywords.**
 
 In C++, the volatile and mutable keywords are used to modify the behavior of variables. Here's an explanation of each keyword:
 
 Volatile:
 
 The volatile keyword is used to indicate that a variable may be modified by external entities that are not under the control of the program. It informs the compiler that the variable's value may change unexpectedly, and therefore, the compiler should not optimize or make assumptions about the variable.
+
 When a variable is declared as volatile, the compiler generates code that always reads the variable from memory, even if it appears to be redundant. Similarly, any write to a volatile variable is guaranteed to be performed and not optimized away.
 
 Common use cases for volatile variables include:
@@ -4169,7 +4195,7 @@ mutable is used to allow modification of a member variable within a const member
 
 ----
 
-**C++ supports multiple inheritance. What is the “diamond problem” that can occur with multiple inheritance? Give an example.**
+## **C++ supports multiple inheritance. What is the "diamond problem" that can occur with multiple inheritance? Give an example.**
 
 The "diamond problem" is a specific issue that can occur in languages that support multiple inheritance, including C++. It arises when a class inherits from two or more base classes that have a common base class themselves. This situation creates ambiguity and confusion for the derived class, leading to the diamond problem.
 
@@ -4249,19 +4275,19 @@ The diamond problem in multiple inheritance occurs due to the potential ambiguit
 
 # https://hackr.io/blog/cpp-interview-questions
 
-**What is C++?**
+## **What is C++?**
 
 C++ is a computer programming language that is a superset of C, with additional features. 
 
 ----
 
-**Does C++ make use of OOPS?**
+## **Does C++ make use of OOPS?**
 
 Yes, it does. An Object-Oriented Programming System is a paradigm that includes concepts such as data binding, polymorphism, and inheritance, among others.
 
 ----
 
-**What is a Class?**
+## **What is a Class?**
 
 A class is a user-defined data type that is at the center of OOP. It reflects different entities, attributes, and actions.
 
@@ -4316,7 +4342,7 @@ private:
 
 ----
 
-**What is an object?**
+## **What is an object?**
 
 An object is an instance of the class. An object can have fields, methods, and constructors.
 
@@ -4367,7 +4393,7 @@ int main()
 
 ----
 
-**What is encapsulation?**
+## **What is encapsulation?**
 
 Encapsulation is the process of binding together the data and functions in a class. It is applied to prevent direct access to the data for security reasons. The functions of a class are applied for this purpose.
 
@@ -4404,7 +4430,7 @@ int main()
 
 ----
 
-**What is abstraction?**
+## **What is abstraction?**
 
 An abstraction in C++ is hiding the internal implementations and displaying only the required details.
 
@@ -4454,7 +4480,7 @@ int main()
 
 ----
 
-**What is inheritance?**
+## **What is inheritance?**
 
 C++ allows classes to inherit some of the commonly used state and behavior from other classes. This process is known as inheritance.
 
@@ -4494,7 +4520,7 @@ int main()
 }
 ```
 
-**What is a namespace?**
+## **What is a namespace?**
 
 A namespace is used for resolving the name conflict of the identifier, which is accomplished by placing them under various namespaces.
 
@@ -4530,7 +4556,7 @@ int main()
 
 ----
 
-**What is a class template?**
+## **What is a class template?**
 
 A class template is a name given to the generic class. The use of the keyword template is made for defining a class template.
 
@@ -4615,7 +4641,7 @@ Class templates provide a powerful mechanism for creating reusable code that can
 
 ----
 
-**What is the function of the keyword "Volatile"?**
+## **What is the function of the keyword "Volatile"?**
 
 "Volatile" is a function that helps in declaring that the particular variable is volatile and thereby directs the compiler to change the variable externally- this way, the compiler optimization on the variable reference can be avoided.
 
@@ -4649,7 +4675,7 @@ void processSensor()
 
 ----
 
-**What is a storage class?**
+## **What is a storage class?**
 
 A storage class in C++ specifically resembles the scope of symbols, including the variables, functions, etc. Some of the storage class names in C++ include mutable, auto, static, extern, register, etc.
 
@@ -4663,7 +4689,7 @@ __register:__ This storage class suggests the compiler to store the variable in 
 
 __static:__ The static storage class is used to declare variables that are allocated memory once and persist throughout the program's execution. They retain their values between function calls. Static variables are initialized only once, and their memory is not deallocated when they go out of scope. Static variables have file scope if defined outside any function or block, and they have block scope if defined inside a function or block.
 
-e__xtern:__ The extern storage class is used to declare variables or functions that are defined in another translation unit (source file). It is used to provide a declaration without allocating memory. When using extern, the actual definition of the variable or function is assumed to be elsewhere.
+__extern:__ The extern storage class is used to declare variables or functions that are defined in another translation unit (source file). It is used to provide a declaration without allocating memory. When using extern, the actual definition of the variable or function is assumed to be elsewhere.
 
 __mutable:__ This storage class is applicable only to non-static class members. It allows modifying a member variable of a const object. The mutable keyword is used to specify that a member variable can be changed even within a const member function.
 
@@ -4724,7 +4750,7 @@ When running this program, the output will be:
 
 ----
 
-**What is an Inline Function? Is it possible to ignore inlining?**
+## **What is an Inline Function? Is it possible to ignore inlining?**
 
 In order to reduce the function call overhead, C++ offers inline functions. As the name suggests, an inline function is expanded in line when it is called.
 
@@ -4743,7 +4769,7 @@ As the inlining is a request, not a command, the compiler can ignore it.
 
 ----
 
-**Can we have a recursive inline function in C++?**
+## **Can we have a recursive inline function in C++?**
 
 Even though it is possible to call an inline function from within itself in C++, the compiler may not generate the inline code. This is so because the compiler won’t determine the depth of the recursion at the compile time.
 
@@ -4751,25 +4777,27 @@ Nonetheless, a compiler with a good optimizer is able to inline recursive calls 
 
 ----
 
-**What is the ‘this’ pointer?**
+## **What is the ‘this’ pointer?**
 
 The 'this' pointer is a constant pointer, and it holds the memory address of the current object. It passes as a hidden argument to all the nonstatic member function calls. It is available as a local variable within the body of all the nonstatic functions.
 
-As static member functions can be called even without any object, i.e., with the class name, the ‘this’ pointer is not available for them.
+As static member functions can be called even without any object, i.e., with the class name, the 'this' pointer is not available for them.
 
 ----
 
-**What are the most important differences between C and C++?**
+## **What are the most important differences between C and C++?**
 
-C++ supports references while C doesn’t.
-Features like friend functions, function overloading, inheritance, templates, and virtual functions are inherent to C++. These are not available in the C programming language.
+C++ supports references while C doesn’t. Features like friend functions, function overloading, inheritance, templates, and virtual functions are inherent to C++. These are not available in the C programming language.
+
 In C, exception handling is taken care of in the traditional if-else style. On the other hand, C++ offers support for exception handling at the language level.
+
 Mainly used input and output in C are scanf() and printf(), respectively. In C++, cin is the standard input stream while cout serves as the standard output stream.
+
 While C is a procedural programming language, C++ provides support for both procedural and object-oriented programming approaches.
 
 ----
 
-**Why do we need the Friend class and function?**
+## **Why do we need the Friend class and function?**
 
 Sometimes, there is a need for allowing a particular class to access private or protected members of a class. The solution is a friend class, which can access the protected and private members of the class in which it is declared as a friend.
 
@@ -4783,13 +4811,13 @@ The total number of friend classes and friend functions should be limited in a p
 
 ----
 
-**What is Operator Overloading?**
+## **What is Operator Overloading?**
 
 Operating overloading is when operators have different implementations depending on the arguments passed. It is a type of polymorphism.
 
 ----
 
-**What is Polymorphism?**
+## **What is Polymorphism?**
 
 Polymorphism is the ability of a variable, function, or object to take on multiple forms.
 
@@ -4840,7 +4868,7 @@ int main()
 
 ----
 
-**Explain vTable and vptr?**
+## **Explain vTable and vptr?**
 
 vTable is a table containing function pointers. Every class has a vTable. vptr is a pointer to vTable. Each object has a vptr. In order to maintain and use vptr and vTable, the C++ compiler adds additional code at two places:
 
@@ -4890,7 +4918,7 @@ It's important to note that the usage of vtable and vptr is implementation-depen
 
 ----
 
-**How is function overloading different from operator overloading?**
+## **How is function overloading different from operator overloading?**
 
 Function overloading and operator overloading are two distinct features in C++ that allow multiple definitions of functions or operators with different parameters or behaviors. Here are the differences between the two:
 
@@ -4966,7 +4994,7 @@ Function overloading and operator overloading provide flexibility and convenienc
 
 ----
 
-**Is it possible for a C++ program to be compiled without the main() function?**
+## **Is it possible for a C++ program to be compiled without the main() function?**
 
 Yes, it is possible. However, as the main() function is essential for the execution of the program, the program will stop after compiling and will not execute.
 
@@ -4974,7 +5002,7 @@ No, it is not possible for a C++ program to be compiled without the main() funct
 
 ----
 
-**What is a destructor?**
+## **What is a destructor?**
 
 A destructor is the member function of the class. It has the same name as the class name and is also prefixed with a tilde symbol. It can be executed automatically whenever an object loses its scope. A destructor cannot be overloaded, and it has the only form without the parameters.
 
@@ -5017,7 +5045,7 @@ Also, if a class inherits from other classes, the destructors of the base classe
 
 ----
 
-**What is the default constructor?**
+## **What is the default constructor?**
 
 The compiler provides a constructor to every class in case the provider does not offer the same. This is when the programmer provides the constructor with no specific parameters - this is called a default constructor. The code for default constructor can be displayed in the following example.
 
@@ -5051,13 +5079,13 @@ int main()
 
 ----
 
-**Can we provide one default constructor for our class?**
+## **Can we provide one default constructor for our class?**
 
 No, we cannot provide one default constructor for our class. When a variable in the class type is set to null, it means that it was never initialized and the outcomes will be zero.
 
 ----
 
-**What is the main difference between the keyword struct and class?**
+## **What is the main difference between the keyword struct and class?**
 
 The keyword struct is used for resembling public members by default, while the keyword class is used for resembling private members by default.
 
@@ -5129,7 +5157,7 @@ int main()
 
 ----
 
-**What is the output of the following program?**
+## **What is the output of the following program?**
 
 ```c++
 #include <iostream>
@@ -5160,7 +5188,7 @@ int main()
 
 ----
 
-**Explain Virtual Functions and Runtime Polymorphism in C++ with an example.**
+## **Explain Virtual Functions and Runtime Polymorphism in C++ with an example.**
 
 Any function when accompanying the virtual keyword exhibits the behavior of a virtual function. Unlike normal functions that are called in accordance with the type of pointer or reference used, virtual functions are called as per the type of the object pointed or referred.
 
@@ -5206,7 +5234,7 @@ In the aforementioned program bp is a pointer of type Base. A call to bp->show()
 
 ----
 
-**What differences separate structure from a class in C++?**
+## **What differences separate structure from a class in C++?**
 
 There are two important distinctions between a class and a structure in C++. These are:
 
@@ -5215,7 +5243,7 @@ While the members of a structure are public by default, the members of a class a
 
 ----
 
-**What is a static member?**
+## **What is a static member?**
 
 Denoted by the static keyword, a static member is allocated storage, in the static storage area, only once during the program lifetime. Some important facts pertaining to the static members are:
 
@@ -5225,7 +5253,7 @@ The const, const volatile, and volatile declaration aren’t available for stati
 
 ----
 
-**What is the Reference variable?**
+## **What is the Reference variable?**
 
 The reference variable in C++ is the name given to the existing variables. The variable name and reference variable point share the same memory location in C++, which helps in updating the original variable using the reference variable. The code can be displayed in the following example.
 
@@ -5251,7 +5279,7 @@ int main()
 
 ----
 
-**Explain the Copy Constructor?**
+## **Explain the Copy Constructor?**
 
 A member function that initializes an object using another object of the same class is known as a copy constructor in C++. They can also be made private. A call to the copy constructor can happen in any of the following 4 scenarios when:
 
@@ -5279,7 +5307,7 @@ Point(const Point &p2)
 
 ----
 
-**Take a look at the following two code examples for printing a vector. Is there any advantage of using one over the other?**
+## **Take a look at the following two code examples for printing a vector. Is there any advantage of using one over the other?**
 
 ```c++
 vector vec;
@@ -5306,7 +5334,7 @@ The post-increment operator generates a copy of the element before proceeding wi
 
 ----
 
-**Write a program that stores and displays the GPA (Grade Point Average) of a certain number of students, and you need to store and display it using C++.**
+## **Write a program that stores and displays the GPA (Grade Point Average) of a certain number of students, and you need to store and display it using C++.**
 
 ```c++
 #include<iostream>
@@ -5338,13 +5366,13 @@ int main()
 
 ----
 
-**What is a mutable storage class specifier? How can they be used?**
+## **What is a mutable storage class specifier? How can they be used?**
 
 A mutable storage class specifier is applied only to the class's non-static and non-constant member variable. It is used for altering the constant class object's member by declaring it. This can be done by using a storage class specifier.
 
 ----
 
-**What are the differences between a shallow copy and a deep copy?**
+## **What are the differences between a shallow copy and a deep copy?**
 
 The differences between a shallow copy and a deep copy are:
 
@@ -5359,7 +5387,7 @@ Doesn't reflect changes made to the new/copied object in the original object.
 
 ----
 
-**What is an Abstract class?**
+## **What is an Abstract class?**
 
 An abstract class in C++ is referred to as the base class, which has at least one pure virtual function. In such a function, a person cannot instantiate an abstract class. This way, a pure virtual function is defined by using a pure specifier which is equal to zero during the declaration of the virtual member function in the class declaration. The code sample can be displayed as follows in example.
 
@@ -5377,7 +5405,7 @@ public:
 
 ----
 
-**What are the functions of the scope resolution operator?**
+## **What are the functions of the scope resolution operator?**
 
 The functions of the scope resolution operator include the following.
 
@@ -5404,7 +5432,7 @@ int main(void)
 
 ----
 
-**What is the 'diamond problem' that occurs with multiple inheritance in C++?**
+## **What is the 'diamond problem' that occurs with multiple inheritance in C++?**
 
 The "diamond problem" is a term used to describe a particular issue that can occur in multiple inheritance scenarios in C++ (and other languages that support multiple inheritance). It arises when a class inherits from two or more classes that share a common base class.
 
@@ -5455,67 +5483,67 @@ In summary, the diamond problem occurs in C++ when multiple inheritance is used,
 
 # https://www.tutorialspoint.com/cplusplus/cpp_interview_questions.htm
 
-**What is the full form of OOPS?**
+## **What is the full form of OOPS?**
 
 Object Oriented Programming System.
 
 ----
 
-**What is a class?**
+## **What is a class?**
 
 Class is a blue print which reflects the entities attributes and actions. Technically defining a class is designing an user defined data type.
 
 ----
 
-**What is an object?**
+## **What is an object?**
 
 An instance of the class is called as object.
 
 ----
 
-**List the types of inheritance supported in C++.**
+## **List the types of inheritance supported in C++.**
 
 Single, Multilevel, Multiple, Hierarchical and Hybrid.
 
 ----
 
-**What is the role of protected access specifier?**
+## **What is the role of protected access specifier?**
 
 If a class member is protected then it is accessible in the inherited class. However, outside the both the private and protected members are not accessible.
 
 ----
 
-**What is encapsulation?**
+## **What is encapsulation?**
 
 The process of binding the data and the functions acting on the data together in an entity (class) called as encapsulation.
 
 ----
 
-**What is abstraction?**
+## **What is abstraction?**
 
 Abstraction refers to hiding the internal implementation and exhibiting only the necessary details.
 
 ----
 
-**What is inheritance?**
+## **What is inheritance?**
 
 Inheritance is the process of acquiring the properties of the exiting class into the new class. The existing class is called as base/parent class and the inherited class is called as derived/child class.
 
 ----
 
-**Explain the purpose of the keyword volatile.**
+## **Explain the purpose of the keyword volatile.**
 
 Declaring a variable volatile directs the compiler that the variable can be changed externally. Hence avoiding compiler optimization on the variable reference.
 
 ----
 
-**What is an inline function?**
+## **What is an inline function?**
 
 A function prefixed with the keyword inline before the function definition is called as inline function. The inline functions are faster in execution when compared to normal functions as the compiler treats inline functions as macros.
 
 ----
 
-**What is a storage class?**
+## **What is a storage class?**
 
 In C++, a storage class is used to define the scope, lifetime, and initialization of variables or functions within a program. C++ provides several storage classes that determine where and how variables or functions are stored in memory. The storage classes in C++ are:
 
@@ -5618,7 +5646,7 @@ void exampleFunction()
 
 ----
 
-**Mention the storage classes names in C++.**
+## **Mention the storage classes names in C++.**
 
 The following are storage classes supported in C++
 - auto,
@@ -5629,13 +5657,13 @@ The following are storage classes supported in C++
 
 ----
 
-**What is the role of mutable storage class specifier?**
+## **What is the role of mutable storage class specifier?**
 
 A constant class object’s member variable can be altered by declaring it using mutable storage class specifier. Applicable only for non-static and non-constant member variable of the class.
 
 ----
 
-**Distinguish between shallow copy and deep copy.**
+## **Distinguish between shallow copy and deep copy.**
 
 Shallow copy does memory dumping bit-by-bit from one object to another.
 
@@ -5757,7 +5785,7 @@ int main()
 
 ----
 
-**What is a pure virtual function?**
+## **What is a pure virtual function?**
 
 A virtual function with no function body and assigned with a value zero is called as pure virtual function.
 
@@ -5826,7 +5854,7 @@ int main()
 
 ----
 
-**What is an abstract class in C++?**
+## **What is an abstract class in C++?**
 
 A class with at least one pure virtual function is called as abstract class. We cannot instantiate an abstract class.
 
@@ -5892,7 +5920,7 @@ int main()
 
 ----
 
-**What is a reference variable in C++?**
+## **What is a reference variable in C++?**
 
 A reference variable is an alias name for the existing variable. Which mean both the variable name and reference variable point to the same memory location. Therefore updation on the original variable can be achieved using reference variable too.
 
@@ -5918,11 +5946,11 @@ int main()
 
 ----
 
-**What is role of static keyword on class member variable?**
+## **What is role of static keyword on class member variable?**
 
 A static variable does exit though the objects for the respective class are not created. Static member variable share a common memory across all the objects created for the respective class. A static member variable can be referred using the class name itself.
 
-**Explain the static member function?**
+## **Explain the static member function?**
 
 A static member function can be invoked using the class name as it exits before class objects comes into existence. It can access only static members of the class.
 
@@ -5961,31 +5989,31 @@ int main()
 }
 ```
 
-**Name the data type which can be used to store wide characters in C++?**
+## **Name the data type which can be used to store wide characters in C++?**
 
 wchar_t
 
 ----
 
-**What are/is the operator/operators used to access the class members?**
+## **What are/is the operator/operators used to access the class members?**
 
 Dot (.) and Arrow ( -> )
 
 ----
 
-**Can we initialize a class/structure member variable as soon as the same is defined?**
+## **Can we initialize a class/structure member variable as soon as the same is defined?**
 
 No, Defining a class/structure is just a type definition and will not allocated memory for the same.
 
 ----
 
-**What is the data type to store the Boolean value?**
+## **What is the data type to store the Boolean value?**
 
 bool, is the new primitive data type introduced in C++ language.
 
 ----
 
-**What is function overloading?**
+## **What is function overloading?**
 
 Defining several functions with the same name with unique list of parameters is called as function overloading.
 
@@ -6025,7 +6053,7 @@ int main()
 
 ----
 
-**What is operator overloading?**
+## **What is operator overloading?**
 
 Defining a new job for the existing operator w.r.t the class objects is called as operator overloading.
 
@@ -6088,31 +6116,31 @@ int main()
 
 ----
 
-**Do we have a String primitive data type in C++?**
+## **Do we have a String primitive data type in C++?**
 
 No, it’s a class from STL (Standard template library).
 
 ----
 
-**Name the default standard streams in C++?**
+## **Name the default standard streams in C++?**
 
 cin, cout, cerr and clog.
 
 ----
 
-**Which access specifier/s can help to achive data hiding in C++?**
+## **Which access specifier/s can help to achive data hiding in C++?**
 
 Private & Protected.
 
 ----
 
-**When a class member is defined outside the class, which operator can be used to associate the function definition to a particular class?**
+## **When a class member is defined outside the class, which operator can be used to associate the function definition to a particular class?**
 
 Scope resolution operator (::)
 
 ----
 
-**What is a destructor? Can it be overloaded?**
+## **What is a destructor? Can it be overloaded?**
 
 A destructor is the member function of the class which is having the same name as the class name and prefixed with tilde (~) symbol. It gets executed automatically w.r.t the object as soon as the object loses its scope. It cannot be overloaded and the only form is without the parameters.
 
@@ -6156,7 +6184,7 @@ int main()
 
 ----
 
-**What is a constructor?**
+## **What is a constructor?**
 
 A constructor is the member function of the class which is having the same as the class name and gets executed automatically as soon as the object for the respective class is created.
 
@@ -6202,7 +6230,7 @@ int main() {
 
 ----
 
-**What is a default constructor? Can we provide one for our class?**
+## **What is a default constructor? Can we provide one for our class?**
 
 Every class does have a constructor provided by the compiler if the programmer doesn’t provides one and known as default constructor. A programmer provided constructor with no parameters is called as default constructor. In such case compiler doesn’t provides the constructor.
 
@@ -6249,7 +6277,7 @@ int main()
 
 ----
 
-**Which operator can be used in C++ to allocate dynamic memory?**
+## **Which operator can be used in C++ to allocate dynamic memory?**
 
 'new' is the operator can be used for the same.
 
@@ -6290,7 +6318,7 @@ Note that when using new, you are responsible for managing the allocated memory 
 
 ----
 
-**What is the purpose of 'delete' operator?**
+## **What is the purpose of 'delete' operator?**
 
 'delete' operator is used to release the dynamic memory which was created using 'new' operator.
 
@@ -6309,7 +6337,7 @@ int main()
 
 ----
 
-**Can I use malloc() function of C language to allocate dynamic memory in C++?**
+## **Can I use malloc() function of C language to allocate dynamic memory in C++?**
 
 Yes, as C is the subset of C++, we can all the functions of C in C++ too.
 
@@ -6334,7 +6362,7 @@ int main()
 
 ----
 
-**Can I use 'delete' operator to release the memory which was allocated using malloc() function of C language?**
+## **Can I use 'delete' operator to release the memory which was allocated using malloc() function of C language?**
 
 No, we need to use free() of C language for the same.
 
@@ -6360,7 +6388,7 @@ int main()
 
 ----
 
-**What is a friend function?**
+## **What is a friend function?**
 
 A function which is not a member of the class but still can access all the member of the class is called so. To make it happen we need to declare within the required class following the keyword 'friend'.
 
@@ -6396,7 +6424,7 @@ int main()
 
 ----
 
-**What is a copy constructor?**
+## **What is a copy constructor?**
 
 A copy constructor is the constructor which take same class object reference as the parameter. It gets automatically invoked as soon as the object is initialized with another object of the same class at the time of its creation.
 
@@ -6440,7 +6468,7 @@ int main()
 
 ----
 
-**Does C++ supports exception handling? If so what are the keywords involved in achieving the same?**
+## **Does C++ supports exception handling? If so what are the keywords involved in achieving the same?**
 
 C++ does supports exception handling. Try, catch & throw are keyword used for the same.
 
@@ -6479,7 +6507,7 @@ int main()
 
 ----
 
-**Explain the pointer – this?**
+## **Explain the pointer – this?**
 
 This, is the pointer variable of the compiler which always holds the current active object’s address.
 
@@ -6514,25 +6542,25 @@ int main()
 }
 ```
 
-**What is the difference between the keywords struct and class in C++?**
+## **What is the difference between the keywords struct and class in C++?**
 
 By default the members of struct are public and by default the members of the class are private.
 
 ----
 
-**Can we implement all the concepts of OOPS using the keyword struct?**
+## **Can we implement all the concepts of OOPS using the keyword struct?**
 
 Yes.
 
 ----
 
-**What is the block scope variable in C++?**
+## **What is the block scope variable in C++?**
 
 A variable whose scope is applicable only within a block is said so. Also a variable in C++ can be declared anywhere within the block.
 
 ----
 
-**What is the role of the file opening mode ios::trunk?**
+## **What is the role of the file opening mode ios::trunk?**
 
 If the file already exists, its content will be truncated before opening the file.
 
@@ -6562,7 +6590,7 @@ int main()
 
 ----
 
-**What is the scope resolution operator?**
+## **What is the scope resolution operator?**
 
 The scope resolution operator is used to
 - Resolve the scope of global variables.
@@ -6597,13 +6625,13 @@ int main()
 
 ----
 
-**What is a namespace?**
+## **What is a namespace?**
 
 A namespace is the logical division of the code which can be used to resolve the name conflict of the identifiers by placing them under different name space.
 
 ----
 
-**What are command line arguments?**
+## **What are command line arguments?**
 
 The arguments/parameters which are sent to the main() function while executing from the command line/console are called so. All the arguments sent are the strings only.
 
@@ -6626,7 +6654,7 @@ int main(int argc, char* argv[])
 
 ----
 
-**What is a class template?**
+## **What is a class template?**
 
 A template class is a generic class. The keyword template can be used to define a class template.
 
@@ -6673,7 +6701,7 @@ int main()
 
 ----
 
-**How can we catch all kind of exceptions in a single catch block?**
+## **How can we catch all kind of exceptions in a single catch block?**
 
 The catch block with ellipses as follows
 
@@ -6686,7 +6714,7 @@ catch()
 
 ----
 
-**What is keyword 'auto' for?**
+## **What is keyword 'auto' for?**
 
 By default every local variable of the function is automatic (auto). In the below function both the variables ‘i’ and ‘j’ are automatic variables.
 
@@ -6702,7 +6730,7 @@ NOTE − A global variable can’t be an automatic variable.
 
 ----
 
-**What is a static variable?**
+## **What is a static variable?**
 
 A static local variables retains its value between the function call and the default value is 0. The following function will print 1 2 3 if called thrice.
 
@@ -6719,7 +6747,7 @@ If a global variable is static then its visibility is limited to the same source
 
 ----
 
-**What is the purpose of extern storage specifier?**
+## **What is the purpose of extern storage specifier?**
 
 Used to resolve the scope of global symbol
 
@@ -6738,55 +6766,55 @@ int i = 20;
 
 ----
 
-**What is the meaning of base address of the array?**
+## **What is the meaning of base address of the array?**
 
 The starting address of the array is called as the base address of the array.
 
 ----
 
-**When should we use the register storage specifier?**
+## **When should we use the register storage specifier?**
 
 If a variable is used most frequently then it should be declared using register storage specifier, then possibly the compiler gives CPU register for its storage to speed up the look up of the variable.
 
 ----
 
-**Can a program be compiled without main() function?**
+## **Can a program be compiled without main() function?**
 
 Yes, it can be but cannot be executed, as the execution requires `main()` function definition.
 
 ----
 
-**Where an automatic variable is stored?**
+## **Where an automatic variable is stored?**
 
 Every local variable by default being an auto variable is stored in stack memory
 
 ----
 
-**What is a container class?**
+## **What is a container class?**
 
 A class containing at least one member variable of another class type in it is called so.
 
 ----
 
-**What is a token?**
+## **What is a token?**
 
 A C++ program consists of various tokens and a token is either a keyword, an identifier, a constant, a string literal, or a symbol.
 
 ----
 
-**What is a preprocessor?**
+## **What is a preprocessor?**
 
 Preprocessor is a directive to the compiler to perform certain things before the actual compilation process begins.
 
 ----
 
-**What are command line arguments?**
+## **What are command line arguments?**
 
 The arguments which we pass to the main() function while executing the program are called as command line arguments. The parameters are always strings held in the second argument (below in args) of the function which is array of character pointers. First argument represents the count of arguments (below in count) and updated automatically by operating system.
 
 ----
 
-**What are the different ways of passing parameters to the functions? Which to use when?**
+## **What are the different ways of passing parameters to the functions? Which to use when?**
 
 __Call by value__ − We send only values to the function as parameters. We choose this if we do not want the actual parameters to be modified with formal parameters but just used.
 
@@ -6862,7 +6890,7 @@ int main()
 
 ----
 
-**What is reminder for 5.0 % 2?**
+## **What is reminder for 5.0 % 2?**
 
 Error, It is invalid that either of the operands for the modulus operator (%) is a real number.
 
@@ -6888,19 +6916,19 @@ int main()
 
 ----
 
-**Which compiler switch to be used for compiling the programs using math library with g++ compiler?**
+## **Which compiler switch to be used for compiling the programs using math library with g++ compiler?**
 
 Option `–lm` to be used as `g++ –lm <file.cpp>`.
 
 ----
 
-**Can we resize the allocated memory which was allocated using ‘new’ operator?**
+## **Can we resize the allocated memory which was allocated using ‘new’ operator?**
 
 No, there is no such provision available.
 
 ----
 
-**Which operator can be used to determine the size of a data type/class or variable/object?**
+## **Which operator can be used to determine the size of a data type/class or variable/object?**
 
 sizeof
 
@@ -6933,7 +6961,7 @@ This example demonstrates how the sizeof operator can be used to determine the s
 
 ----
 
-**How can we refer to the global variable if the local and the global variable names are same?**
+## **How can we refer to the global variable if the local and the global variable names are same?**
 
 We can apply scope resolution operator (::) to the for the scope of global variable.
 
@@ -6967,7 +6995,7 @@ By using the scope resolution operator, we can differentiate between local and g
 
 ----
 
-**What are valid operations on pointers?**
+## **What are valid operations on pointers?**
 
 The only two permitted operations on pointers are
 1. Comparision
@@ -6975,7 +7003,7 @@ The only two permitted operations on pointers are
 
 ----
 
-**What is recursion?**
+## **What is recursion?**
 
 Function calling itself is called as recursion.
 
@@ -7006,37 +7034,37 @@ int main()
 
 ----
 
-**What is the first string in the argument vector w.r.t command line arguments?**
+## **What is the first string in the argument vector w.r.t command line arguments?**
 
 Program name.
 
 ----
 
-**What is the maximum length of an identifier?**
+## **What is the maximum length of an identifier?**
 
 Ideally it is 32 characters and also implementation dependent.
 
 ----
 
-**What is the default function call method?**
+## **What is the default function call method?**
 
 By default the functions are `called by value`.
 
 ----
 
-**What are available mode of inheritance to inherit one class from another?**
+## **What are available mode of inheritance to inherit one class from another?**
 
 Public, private & protected
 
 ----
 
-**What is the difference between delete and delete[]?**
+## **What is the difference between delete and delete[]?**
 
 Delete[] is used to release the array allocated memory which was allocated using new[] and delete is used to release one chunk of memory which was allocated using new.
 
 ----
 
-**Does an abstract class in C++ need to hold all pure virtual functions?**
+## **Does an abstract class in C++ need to hold all pure virtual functions?**
 
 Not necessarily, a class having at least one pure virtual function is abstract class too.
 
@@ -7060,115 +7088,115 @@ seekp()
 
 ----
 
-**Are class functions taken into consideration as part of the object size?**
+## **Are class functions taken into consideration as part of the object size?**
 
 No, only the class member variables determines the size of the respective class object.
 
 ----
 
-**Can we create and empty class? If so what would be the size of such object.**
+## **Can we create and empty class? If so what would be the size of such object.**
 
 We can create an empty class and the object size will be 1.
 
 ----
 
-**What is 'std'?**
+## **What is 'std'?**
 
 Default namespace defined by C++.
 
 ----
 
-**What is the full form of STL?**
+## **What is the full form of STL?**
 
 Standard template library
 
 ----
 
-**What is 'cout'?**
+## **What is 'cout'?**
 
 cout is the object of ostream class. The stream ‘cout’ is by default connected to console output device.
 
 ----
 
-**What is 'cin'?**
+## **What is 'cin'?**
 
 cin is the object of istream class. The stream ‘cin’ is by default connected to console input device.
 
 ----
 
-**What is the use of the keyword ‘using’?**
+## **What is the use of the keyword ‘using’?**
 
 It is used to specify the namespace being used in.
 
 ----
 
-**If a pointer declared for a class, which operator can be used to access its class members?**
+## **If a pointer declared for a class, which operator can be used to access its class members?**
 
 Arrow `->` operator can be used for the same.
 
 ----
 
-**What is difference between including the header file with-in angular braces and double quotes?**
+## **What is difference between including the header file with-in angular braces and double quotes?**
 
 If a header file is included with in < > then the compiler searches for the particular header file only with in the built in include path. If a header file is included with in “ “, then the compiler searches for the particular header file first in the current working directory, if not found then in the built in include path
 
 ----
 
-**S++ or S = S+1, which can be recommended to increment the value by 1 and why?**
+## **S++ or S = S+1, which can be recommended to increment the value by 1 and why?**
 
 S++, as it is single machine instruction (INC) internally.
 
 ----
 
-**What is the difference between actual and formal parameters?**
+## **What is the difference between actual and formal parameters?**
 
 The parameters sent to the function at calling end are called as actual parameters while at the receiving of the function definition called as formal parameters.
 
 ----
 
-**What is the difference between variable declaration and variable definition?**
+## **What is the difference between variable declaration and variable definition?**
 
 Declaration associates type to the variable whereas definition gives the value to the variable.
 
 ----
 
-**Which key word is used to perform unconditional branching?**
+## **Which key word is used to perform unconditional branching?**
 
 goto.
 
 ----
 
-**Is 068 a valid octal number?**
+## **Is 068 a valid octal number?**
 
 No, it contains invalid octal digits.
 
 ---
 
-**What is the purpose of #undef preprocessor?**
+## **What is the purpose of #undef preprocessor?**
 
 It will be used to undefine an existing macro definition.
 
 ----
 
-**Can we nest multi line comments in a C++ code?**
+## **Can we nest multi line comments in a C++ code?**
 
 No, we cannot.
 
 ----
 
-**What is a virtual destructor?**
+## **What is a virtual destructor?**
 
 A virtual destructor ensures that the objects resources are released in the reverse order of the object being constructed w.r.t inherited object.
 
 ----
 
-**What is the order of objects destroyed in the memory?**
+## **What is the order of objects destroyed in the memory?**
 
 The objects are destroyed in the reverse order of their creation.
 
 ----
 
-**What is a friend class?**
+## **What is a friend class?**
 
 A class members can gain accessibility over other class member by placing the class declaration prefixed with the keyword ‘friend’ in the destination class.
 
@@ -7176,7 +7204,7 @@ A class members can gain accessibility over other class member by placing the cl
 
 # https://www.interviewkickstart.com/interview-questions/cpp-interview-questions-for-experienced-developers
  
-**Why would you choose C++ over other programming languages?**
+*## *Why would you choose C++ over other programming languages?**
 
 The following prominent advantages of C++ make it software developers' choice:
 - It is a portable language and can allow developers to run it on any platform and operating system.
@@ -7187,7 +7215,7 @@ The following prominent advantages of C++ make it software developers' choice:
 
 ----
 
-**What do you understand about scopes in C++?**
+## **What do you understand about scopes in C++?**
 
 This is one of the most commonly asked C++ interview questions and answers. The area wherein the variable is active is referred to as scope. Thus, you can declare, define, and use the variable in scope. C++ has the following two types of scopes:
 
@@ -7196,7 +7224,7 @@ __Global scope:__ When a variable is declared at the top of the program, it is i
 
 ---
 
-**What tokens does the C++ language support?**
+## **What tokens does the C++ language support?**
 
 C++ supports the following types of tokens:
 - Keyword
@@ -7207,14 +7235,14 @@ C++ supports the following types of tokens:
 
 ----
 
-**How is the assignment operator ( = ) different from the equal to operator ( == )?**
+## **How is the assignment operator ( = ) different from the equal to operator ( == )?**
 
 The assignment operator ( = ) assigns the value to the variable and is sometimes used in complex equations.
 The 'equal to' operator ( == ) is an equality operator used to compare two values. It returns true if they are equal; else, it returns false.
 
 ----
 
-**Explain comments in context with C++?**
+## **Explain comments in context with C++?**
 
 Comments are the source code that the compiler ignores, and they are not a part of programs. The purpose of comments is to inform the programmer about additional information. It provides details about the source code. There are two types of comments in C++:
 
@@ -7224,25 +7252,25 @@ __Multiline comment or block comment:__ It uses “ /* ” “ */ “ for commen
 
 ----
 
-**What is containership?**
+## **What is containership?**
 
 It is one of the most important C++ interview questions and answers concepts. You can contain an object of one class into another, and that object will be a member of the other class. This relationship between classes wherein one class contains the object of another class is referred to as containership. 
 
 ----
 
-**What is data hiding?**
+## **What is data hiding?**
 
 The process of hiding elements of a program's code from object members is called data hiding. It ensures controlled data access and objects integrity. It also prevents unintentional or intended changes to the program.
 
 ----
 
-**What is the use of getline in C++?**
+## **What is the use of getline in C++?**
 
 The C++ getline() is a standard library in-built function and it is defined in the <string.h> header file. It allows accepting and reading single and multiple lines. 
 
 ----
 
-**What is a singleton design pattern?**
+## **What is a singleton design pattern?**
 
 Design patterns are reusable solutions that you can apply to recurring Object-Oriented Design problems. Singleton design patterns fall under the category of Creational Design Patterns. This pattern helps design a class with a maximum of a single instance at any time. It cannot be instantiated further. 
 
@@ -7250,7 +7278,7 @@ The concept of a singleton design pattern can be applied to creating a logger or
 
 ----
 
-**What operators cannot be overloaded?**
+## **What operators cannot be overloaded?**
 
 The following operators cannot be overloaded:
 
@@ -7268,19 +7296,19 @@ The following operators cannot be overloaded:
 
 ----
 
-**What do you understand about RTTI?**
+## **What do you understand about RTTI?**
 
 RTTI stands for Run-time type information. This mechanism gives information about an object's data type at runtime. It is available only for classes that have at least one virtual function. You can determine the type of an object during program runtime execution.
 
 ----
 
-**What is the sparse matrix?**
+## **What is the sparse matrix?**
 
 An array of elements wherein many elements have a value of zero is called a sparse matrix. For instance, if you are given a matrix with several elements and the number of zeroes is more than half the elements of the matrix, then it is a sparse matrix.
 
 ----
 
-**What do you understand about smart pointers in C++?**
+## **What do you understand about smart pointers in C++?**
 
 Smart pointers are employed in garbage collection to ensure no memory leaks. If you use smart pointers, you need not call delete for any memory allocated dynamically as it is automatically deallocated. You can implement smart pointers in C++11 and higher versions. C++11 has the following four kinds of smart pointers:
 - auto_ptr
@@ -7290,7 +7318,7 @@ Smart pointers are employed in garbage collection to ensure no memory leaks. If 
 
 ----
 
-**What is the role of this pointer and void pointer?**
+## **What is the role of this pointer and void pointer?**
 
 __This pointer:__ The 'this pointer' is present in the member functions of every object. It points to the object itself and can be used to access the object's data. 
 
@@ -7302,17 +7330,17 @@ str=(char*) ptr;.
 
 ----
 
-**What do you understand about pure virtual functions?**
+## **What do you understand about pure virtual functions?**
 
 A virtual function is a member function in the base class that can be redefined in a derived class. It can be declared using the virtual keyword. On the contrary, a pure virtual function has no implementation. It has no body and is declared by assigning 0. 
 
 ----
 
-**Is it possible to call a virtual function from a constructor?**
+## **Is it possible to call a virtual function from a constructor?**
 
 Yes, you can call a virtual function from a constructor. However, the behavior differs in that case. When you call a virtual function, the virtual call is resolved at runtime. The virtual machine does not work within the constructor.
 
-**What is a copy constructor in C++?**
+## **What is a copy constructor in C++?**
 
 ```c++
 #include <iostream>
@@ -7367,7 +7395,7 @@ int main()
 
 ----
 
-**How is modularity introduced in C++?**
+## **How is modularity introduced in C++?**
 
 ```c++
 // Module1.cpp
@@ -7422,7 +7450,7 @@ int main()
 
 ----
 
-**What is the difference between method overloading and method overriding?**
+## **What is the difference between method overloading and method overriding?**
 
 *Method Overloading:*
 
@@ -7451,7 +7479,7 @@ Key points about method overriding in C++:
 
 The base class pointer or reference can be used to invoke the overridden method, and the appropriate derived class implementation is executed.
 
-**What is the size of an empty class in C++?**
+## **What is the size of an empty class in C++?**
 
 ```c++
 #include <iostream>
@@ -7469,7 +7497,7 @@ int main()
 
 ----
 
-**Explain the following concepts in C++?**
+## **Explain the following concepts in C++?**
 
 __Inheritance__
 
@@ -7995,7 +8023,7 @@ It's important to note that if you allocate an object dynamically using the new 
 
 ----
 
-**Write a program in C++ to print the first non-repeated character in the given string.**
+## **Write a program in C++ to print the first non-repeated character in the given string.**
 
 ```c++
 #include <iostream>
@@ -8047,7 +8075,7 @@ int main()
 
 ----
 
-**Write a program in C++ to print the first non-repeated character in the given string.**
+## **Write a program in C++ to print the first non-repeated character in the given string.**
 
 ```c++
 #include <iostream>
@@ -8099,7 +8127,7 @@ int main()
 
 ---
 
-**Write a program in C++ to find duplicate numbers in a given array that contains multiple duplicates.**
+## **Write a program in C++ to find duplicate numbers in a given array that contains multiple duplicates.**
 
 ```c++
 #include <iostream>
@@ -8145,9 +8173,9 @@ int main()
 }
 ```
 
----
+----
 
-**Write a program to print the date in dd/mm/yy format.**
+## **Write a program to print the date in dd/mm/yy format.**
 
 ```c++
 #include <iostream>
@@ -8194,9 +8222,9 @@ When you run this program, it will print the current date in the "dd/mm/yy" form
 
 Note that the program assumes the local time zone. If you need to work with a different time zone or customize the date format further, you may need to use additional libraries or modify the code accordingly.
 
----
+----
 
-**How would you check if a given linked list contains a cycle? Also, find the initial node of the cycle.**
+## **How would you check if a given linked list contains a cycle? Also, find the initial node of the cycle.**
 
 ```c++
 struct ListNode
@@ -8241,9 +8269,9 @@ ListNode* detectCycle(ListNode* head)
 }
 ```
 
----
+----
 
-**Write a program to reverse a singly linked list without recursion.**
+## **Write a program to reverse a singly linked list without recursion.**
 
 ```c++
 #include <iostream>
@@ -8313,9 +8341,9 @@ int main()
 }
 ```
 
----
+----
 
-**How would you implement a binary search tree?**
+## **How would you implement a binary search tree?**
 
 ```c++
 #include <iostream>
@@ -8385,9 +8413,9 @@ int main()
 }
 ```
 
----
+----
 
-**Write a program to traverse a given binary tree in preorder without recursion.**
+## **Write a program to traverse a given binary tree in preorder without recursion.**
 
 ```c++
 #include <iostream>
@@ -8450,9 +8478,9 @@ int main()
 }
 ```
 
----
+----
 
-**How would you implement a merge sort algorithm?**
+## **How would you implement a merge sort algorithm?**
 
 ```c++
 #include <iostream>
@@ -8556,41 +8584,41 @@ int main()
 }
 ```
 
----
+----
 
-**How do I prepare for C++ interview questions and answers?**
+## **How do I prepare for C++ interview questions and answers?**
 
 You should begin your preparation by brushing up on core programming concepts and move on to practicing programming problems. You can also enroll in mock interviews and practice mocks with hiring managers who are closely acquainted with the FAANG companies' interview process. Learn important tips on how to prepare for C++ interviews here.
 
----
+----
 
-**What topics are important for C++ interview questions and answers?**
+## **What topics are important for C++ interview questions and answers?**
 
 You should be prepared for questions on crucial C++ concepts, including methods, events in C++, lists, inheritance, polymorphism, abstraction, data binding, and commands to crack the most challenging C++ interview questions and answers.
 
----
+----
 
-**Can I use C++ for the FAANG company's coding interviews?**
+## **Can I use C++ for the FAANG company's coding interviews?**
 
 Yes, you can use C++ in coding interview rounds. Top tech companies, including Microsoft, LinkedIn, PayPal, and Amazon, list C++ as one of their main programming languages for coding interviews. C++ has become one of the most sought-after skills in modern developers at FAANG+ companies. 
 
----
+----
 
-**What positions am I eligible for with C++ programming skills?**
+## **What positions am I eligible for with C++ programming skills?**
 
 You can make a career in the following roles with C++ programming skills: Junior/Senior Programmer, Software Developer, Quality Analyst, Game Programmer, Software Developer Engineer, C++ Analyst, and Programming Architect.
 
----
+----
 
-**What is the average salary of C++ developers in the US?**
+## **What is the average salary of C++ developers in the US?**
 
 The average base salary of a C++ developer is $116,987 per annum in the United States. You can expect a higher salary in US cities like Orlando, New York, and San Francisco (Source: Indeed.com). The salary increases according to your experience and based on your performance. The higher the experience, the higher the salary will be.
 
-‍# https://www.interviewkickstart.com/interview-questions/cpp-interview-questions-for-experienced-developers
+‍# https://www.interviewkickstart.com/interview-questions/cpp-interview-questions-for-experienced-developers/
 
 # https://www.softwaretestinghelp.com/cpp-interview-questions/
 
-**What is the basic structure of a C++ program?**
+## **What is the basic structure of a C++ program?**
 
 The basic structure of a C++ program is shown below:
 
@@ -8618,7 +8646,7 @@ Every C++ program will have a basic structure as shown above with a preprocessor
 
 ----
 
-**What are the Comments in C++?**
+## **What are the Comments in C++?**
 
 Comments in C++ are simply a piece of source code ignored by the compiler. They are only helpful for a programmer to add a description or additional information about their source code.
 
@@ -8636,7 +8664,7 @@ The first type will discard everything after the compiler encounters “//”. I
 
 ----
 
-**Difference between Declaration and Definition of a variable?**
+## **Difference between Declaration and Definition of a variable?**
 
 The declaration of a variable is merely specifying the data type of a variable and the variable name. As a result of the declaration, we tell the compiler to reserve the space for a variable in the memory according to the data type specified.
 
@@ -8663,7 +8691,7 @@ These are valid definitions.
 
 ----
 
-**Comment on the Local and Global scope of a variable?**
+## **Comment on the Local and Global scope of a variable?**
 
 Answer: The scope of a variable is defined as the extent of the program code within which the variable remains active i.e. it can be declared, defined, or worked with.
 
@@ -8688,7 +8716,7 @@ int main()
 
 ----
 
-**What is the precedence when there are a Global variable and a Local variable in the program with the same name?**
+## **What is the precedence when there are a Global variable and a Local variable in the program with the same name?**
 
 Whenever there is a local variable with the same name as that of a global variable, the compiler gives precedence to the local variable.
 
@@ -8708,7 +8736,7 @@ The output of the above code is 5. This is because, although both the variables 
 
 ----
 
-**When there are a Global variable and a Local variable with the same name, how will you access the global variable?**
+## **When there are a Global variable and a Local variable with the same name, how will you access the global variable?**
 
 When there are two variables with the same name but different scopes, i.e. one is a local variable and the other is a global variable, the compiler will give preference to a local variable.
 
@@ -8735,7 +8763,7 @@ int main()
 
 ----
 
-**How many ways are there to initialize an int with a Constant?**
+## **How many ways are there to initialize an int with a Constant?**
 
 There are two ways:
 
@@ -8753,7 +8781,7 @@ int result (10);
 
 ----
 
-**What is a Constant? Explain with an example?**
+## **What is a Constant? Explain with an example?**
 
 A constant is an expression that has a fixed value. They can be divided into integer, decimal, floating-point, character, or string constants depending on their data type.
 
@@ -8774,7 +8802,7 @@ Note: When we have to represent a single character, we use single quotes and whe
 
 ----
 
-**How do you define/declare constants in C++?**
+## **How do you define/declare constants in C++?**
 
 In C++, we can define our own constants using the #define preprocessor directive.
 
@@ -8810,7 +8838,7 @@ In the above examples, whenever the type of a constant is not specified, the C++
 
 ----
 
-**Comment on Assignment Operator in C++?**
+## **Comment on Assignment Operator in C++?**
 
 The assignment operator in C++ is used to assign a value to another variable.
 
@@ -8850,7 +8878,7 @@ assign 5 to variables a, b and c.
 
 ----
 
-**What is the difference between equal to (==) and Assignment Operator (=)?**
+## **What is the difference between equal to (==) and Assignment Operator (=)?**
 
 In C++, equal to (==) and assignment operator (=) are two completely different operators.
 
@@ -8862,7 +8890,7 @@ is used to assign a value to a variable. Hence, we can have a complex assignment
 
 ----
 
-**What are the various Arithmetic Operators in C++?**
+## **What are the various Arithmetic Operators in C++?**
 
 C++ supports the following arithmetic operators:
 
@@ -8901,7 +8929,7 @@ As shown above, all the other operations are straightforward and the same as act
 
 ----
 
-**What are the various Compound Assignment Operators in C++?**
+## **What are the various Compound Assignment Operators in C++?**
 
 Following are the Compound assignation operators in C++:
 
@@ -8924,7 +8952,7 @@ base_salary *= 5; #base_salary = base_salary * 5;
 
 ----
 
-**State the difference between Pre and Post Increment/Decrement Operations?**
+## **State the difference between Pre and Post Increment/Decrement Operations?**
 
 C++ allows two operators i.e ++ (increment) and –(decrement), that allow you to add 1 to the existing value of a variable and subtract 1 from the variable respectively. These operators are in turn, called increment (++) and decrement (–).
 
@@ -8972,7 +9000,9 @@ b–; // b=6
 b++; // #6
 ```
 
-**What are the Extraction and Insertion operators in C++? Explain with examples?**
+----
+
+## **What are the Extraction and Insertion operators in C++? Explain with examples?**
 
 In the iostream.h library of C++, cin, and cout is the two data streams that are used for input and output respectively. Cout is normally directed to the screen and cin is assigned to the keyboard.
 
@@ -8998,7 +9028,7 @@ cout << 123;
 
 ----
 
-**What is the difference between a while and a do while loop? Explain with examples?**
+## **What is the difference between a while and a do while loop? Explain with examples?**
 
 The format of the while loop in C++ is:
 
@@ -9066,7 +9096,7 @@ In the case of the while loop, we can directly exit the loop at the beginning, i
 
 ----
 
-**What do you mean by 'void' return type?**
+## **What do you mean by 'void' return type?**
 
 All functions should return a value as per the general syntax.
 
@@ -9089,7 +9119,7 @@ int main()
 
 ----
 
-**Explain Pass by Value and Pass by Reference?**
+## **Explain Pass by Value and Pass by Reference?**
 
 While passing parameters to the function using “Pass by Value”, we pass a copy of the parameters to the function.
 
@@ -9149,7 +9179,7 @@ As shown above, the modifications done to the parameters in the called functions
 
 ----
 
-**What are Default Parameters? How are they evaluated in the C++ function?**
+## **What are Default Parameters? How are they evaluated in the C++ function?**
 
 A default Parameter is a value that is assigned to each parameter while declaring a function.
 
@@ -9183,7 +9213,7 @@ As shown in the above code, there are two calls to the multiply function. In the
 
 ----
 
-**What is an Inline function in C++?**
+## **What is an Inline function in C++?**
 
 Inline function is a function that is compiled by the compiler as the point of calling the function and the code is substituted at that point. This makes compiling faster. This function is defined by prefixing the function prototype with the keyword “inline”.
 
@@ -9194,7 +9224,7 @@ Arrays
 
 ----
 
-**Why are arrays usually processed with for loop?**
+## **Why are arrays usually processed with for loop?**
 
 Array uses the index to traverse each of its elements.
 
@@ -9204,13 +9234,13 @@ This is exactly what a loop does and this is the reason why we process arrays us
 
 ----
 
-**State the difference between delete and delete[]?**
+## **State the difference between delete and delete[]?**
 
 “delete[]” is used to release the memory allocated to an array that was allocated using new[]. “delete” is used to release one chunk of memory which was allocated using new.
 
 ----
 
-**What is wrong with this code?**
+## **What is wrong with this code?**
 
 ```c++
 T *p = new T[10];
@@ -9223,7 +9253,7 @@ The only problem is that it will just delete the first element of the array. Tho
 
 ----
 
-**What's the order in which the objects in an array are destructed?**
+## **What's the order in which the objects in an array are destructed?**
 
 Objects in an array are destructed in the reverse order of construction: First constructed, last destructed.
 
@@ -9239,7 +9269,7 @@ voiduserCode()
 
 ----
 
-**What is wrong with this code?**
+## **What is wrong with this code?**
 
 ```c++
 T *p = 0;
@@ -9250,7 +9280,7 @@ In the above code, the pointer is a null pointer. Per the C++ 03 standard, it’
 
 ----
 
-**What is a Reference Variable in C++?**
+## **What is a Reference Variable in C++?**
 
 A reference variable is an alias name for the existing variable. This means that both the variable name and the reference variable point to the same memory location. Hence, whenever the variable is updated, the reference is updated too.
 
@@ -9265,9 +9295,9 @@ Here, b is the reference of a.
 
 Suggested reading =>> Most Common Data Structure Interview Questions
 
----
+----
 
-**What is a Storage Class? Mention the Storage Classes in C++?**
+## **What is a Storage Class? Mention the Storage Classes in C++?**
 
 Storage class determines the life or scope of symbols such as variables or functions.
 
@@ -9280,13 +9310,13 @@ C++ supports the following storage classes:
 
 ----
 
-**Explain the Mutable Storage class specifier?**
+## **Explain the Mutable Storage class specifier?**
 
 The variable of a constant class object’s member cannot be changed. However, by declaring the variables as “mutable”, we can change the values of these variables.
 
 ----
 
-**What is the keyword auto for?**
+## **What is the keyword auto for?**
 
 By default, every local variable of the function is automatic i.e. auto. In the below function both the variables ‘i’ and ‘j’ are automatic variables.
 
@@ -9302,7 +9332,7 @@ NOTE: A global variable is not an automatic variable.
 
 ----
 
-**What is a Static Variable?**
+## **What is a Static Variable?**
 
 A static variable is a local variable that retains its value across the function calls. Static variables are declared using the keyword “static”. Numeric variables which are static have the default value as zero.
 
@@ -9326,7 +9356,7 @@ If a global variable is static, then its visibility is limited to the same sourc
 
 ----
 
-**What is the purpose of the Extern Storage Specifier?**
+## **What is the purpose of the Extern Storage Specifier?**
 
 "Extern" specifier is used to resolve the scope of a global symbol.
 
@@ -9347,13 +9377,13 @@ In the above code, "i" can be visible outside the file where it is defined.
 
 ----
 
-**Explain Register Storage Specifier?**
+## **Explain Register Storage Specifier?**
 
 "Register" variable should be used whenever the variable is used. When a variable is declared with a “register” specifier, then the compiler gives a CPU register for its storage to speed up the lookup of the variable.
 
 ----
 
-**When to use "const" reference arguments in a function?**
+## **When to use "const" reference arguments in a function?**
 
 Using "const" reference arguments in a function is beneficial in several ways:
 
@@ -9393,7 +9423,7 @@ int main()
 
 ----
 
-**What is a Class?**
+## **What is a Class?**
 
 Class is a user-defined data type in C++. It can be created to solve a particular kind of problem. After creation, the user is not required to know the details of the working of a class.
 
@@ -9458,7 +9488,7 @@ int main()
 
 ----
 
-**Difference between Class and Structure?**
+## **Difference between Class and Structure?**
 
 __Structure:__ In C language, the structure is used to bundle different types of data types together. The variables inside a structure are called the members of the structure. These members are by default public and can be accessed by using the structure name followed by a dot operator and then the member name.
 
@@ -9534,7 +9564,7 @@ public:
 
 ----
 
-**What is Namespace?**
+## **What is Namespace?**
 
 Namespace allows us to group a set of global classes, objects, and/or functions under a specific name.
 
@@ -9567,13 +9597,13 @@ int main()
 
 ----
 
-**What is the use of a 'using' declaration?**
+## **What is the use of a 'using' declaration?**
 
 Answer: Using Declaration is used to refer to a name from the namespace without the scope resolution operator.
 
 ----
 
-**What is Name Mangling?**
+## **What is Name Mangling?**
 
 C++ compiler encodes the parameter types with function/method into a unique name. This process is called name mangling. The inverse process is called demangling.
 
@@ -9585,7 +9615,7 @@ That is A:: A(int, long) const is mangled as ‘C3Ail’.
 
 ----
 
-**What is the difference between an Object and a Class?**
+## **What is the difference between an Object and a Class?**
 
 Class is a blueprint of a project or problem to be solved and consists of variables and methods. These are called the members of the class. We cannot access methods or variables of the class on its own unless they are declared static.
 
@@ -9617,7 +9647,7 @@ int main()
 
 ----
 
-**What are the various Access Specifiers in C++?**
+## **What are the various Access Specifiers in C++?**
 
 ++ supports the following access specifiers:
 
@@ -9652,7 +9682,7 @@ main()
 
 ----
 
-**What is a Constructor and what is it called?**
+## **What is a Constructor and what is it called?**
 
 Constructor is a member function of the class having the same name as the class. It is mainly used for initializing the members of the class. By default constructors are public.
 
@@ -9681,7 +9711,7 @@ main()
 
 ----
 
-**What is a COPY CONSTRUCTOR and when is it called?**
+## **What is a COPY CONSTRUCTOR and when is it called?**
 
 A copy constructor is a constructor that accepts an object of the same class as its parameter and copies its data members to the object on the left part of the assignment. It is useful when we need to construct a new object of the same class.
 
@@ -9713,7 +9743,7 @@ main()
 
 ----
 
-**What is a Default Constructor?**
+## **What is a Default Constructor?**
 
 A default constructor is a constructor that either has no arguments or if there are any, then all of them are default arguments.
 
@@ -9738,7 +9768,7 @@ int main(int argc, char* argv[])
 
 ----
  
-**What is a Conversion Constructor?**
+*## *What is a Conversion Constructor?**
 
 It is a constructor that accepts one argument of a different type. Conversion constructors are mainly used for converting from one type to another.
 
@@ -9788,7 +9818,7 @@ int main() {
 
 ----
 
-**What is an Explicit Constructor?**
+## **What is an Explicit Constructor?**
 
 A conversion constructor is declared with the explicit keyword. The compiler does not use an explicit constructor to implement an implied conversion of types. Its purpose is reserved explicitly for construction.
 
@@ -9831,13 +9861,13 @@ int main()
 
 ----
 
-**What is the role of the Static keyword for a class member variable?**
+## **What is the role of the Static keyword for a class member variable?**
 
 The static member variable shares a common memory across all the objects created for the respective class. We need not refer to the static member variable using an object. However, it can be accessed using the class name itself.
 
 ----
 
-**Explain the Static Member Function?**
+## **Explain the Static Member Function?**
 
 A static member function can access only the static member variable of the class. Same as the static member variables, a static member function can also be accessed using the class name.
 
@@ -9868,7 +9898,7 @@ int main()
 
 ----
 
-**What’s the order in which the local objects are destructed?**
+## **What’s the order in which the local objects are destructed?**
 
 Consider following a piece of code:
 
@@ -9893,7 +9923,7 @@ Hence, the destructor of b will be called first followed by a. Even if we have a
 
 ----
 
-**Explain Function Overloading and Operator Overloading?**
+## **Explain Function Overloading and Operator Overloading?**
 
 C++ supports OOPs concept Polymorphism which means “many forms”.
 
@@ -9915,7 +9945,7 @@ For Example, an Addition operator (+) that operates on numerical data types can 
 
 ----
 
-**What is the difference between Method Overloading and Method Overriding in C++?**
+## **What is the difference between Method Overloading and Method Overriding in C++?**
 
 *Method overloading* is having functions with the same name but different argument lists. This is a form of compile-time polymorphism.
 
@@ -10001,7 +10031,7 @@ int main()
 
 ----
 
-**What is the difference between a Copy Constructor and an Overloaded Assignment Operator?**
+## **What is the difference between a Copy Constructor and an Overloaded Assignment Operator?**
 
 A copy constructor and an overloaded assignment operator basically serve the same purpose i.e. assigning the content of one object to another. But still, there is a difference between the two.
 
@@ -10021,7 +10051,7 @@ Next statement, complex c3 = c2 is an example of the copy constructor. Here, the
 
 ----
 
-**Name the Operators that cannot be Overloaded?**
+## **Name the Operators that cannot be Overloaded?**
 
 ```c++
 sizeof – sizeof operator
@@ -10034,13 +10064,13 @@ sizeof – sizeof operator
 
 ----
 
-**Function can be overloaded based on the parameter which is a value or a reference. Explain if the statement is true?**
+## **Function can be overloaded based on the parameter which is a value or a reference. Explain if the statement is true?**
 
 False. Both, Passing by value and Passing by reference look identical to the caller.
 
 ----
 
-**What are the benefits of Operator Overloading?**
+## **What are the benefits of Operator Overloading?**
 
 By overloading standard operators on a class, we can extend the meaning of these operators, so that they can also operate on the other user-defined objects.
 
@@ -10048,7 +10078,7 @@ Function overloading allows us to reduce the complexity of the code and make it 
 
 ----
 
-**What is Inheritance?**
+## **What is Inheritance?**
 
 Inheritance is a process by which we can acquire the characteristics of an existing entity and form a new entity by adding more features to it.
 
@@ -10056,7 +10086,7 @@ In terms of C++, inheritance is creating a new class by deriving it from an exis
 
 ----
 
-**What are the advantages of Inheritance?**
+## **What are the advantages of Inheritance?**
 
 Inheritance allows code re-usability, thereby saving time on code development.
 
@@ -10064,13 +10094,13 @@ By inheriting, we make use of bug-free high-quality software that reduces future
 
 ----
 
-**Does C++ support Multilevel and Multiple Inheritances?**
+## **Does C++ support Multilevel and Multiple Inheritances?**
 
 Yes.
 
 ----
 
-**What are Multiple Inheritances (virtual inheritance)? What are its advantages and disadvantages?**
+## **What are Multiple Inheritances (virtual inheritance)? What are its advantages and disadvantages?**
 
 In multiple inheritances, we have more than one base classes from which a derived class can inherit. Hence, a derived class takes the features and properties of more than one base class.
 
@@ -10080,7 +10110,7 @@ But in the case of an employee and a person, the class will have some properties
 
 ----
 
-**Explain the ISA and HASA class relationships. How would you implement each?**
+## **Explain the ISA and HASA class relationships. How would you implement each?**
 
 "ISA" relationship usually exhibits inheritance as it implies that a class “ISA” specialized version of another class. For Example, An employee ISA person. That means an Employee class is inherited from the Person class.
 
@@ -10090,7 +10120,7 @@ So taking the same example of an Employee class, the way in which we associate t
 
 ----
 
-**Does a derived class inherit or doesn’t inherit?**
+## **Does a derived class inherit or doesn’t inherit?**
 
 When a derived class is constructed from a particular base class, it basically inherits all the features and ordinary members of the base class. But there are some exceptions to this rule. For instance, a derived class does not inherit the base class’s constructors and destructors.
 
@@ -10098,7 +10128,7 @@ Each class has its own constructors and destructors. The derived class also does
 
 ----
 
-**What is Polymorphism?**
+## **What is Polymorphism?**
 
 The basic idea behind polymorphism is in many forms. In C++, we have two types of Polymorphism:
 
@@ -10114,7 +10144,7 @@ This means, that an object reacts differently to the same function call. This ty
 
 ----
 
-**What are Virtual Functions?**
+## **What are Virtual Functions?**
 
 A virtual function allows the derived classes to replace the implementation provided by the base class.
 
@@ -10126,30 +10156,37 @@ To correct this ambiguity we use the keyword “virtual” before the function p
 #include <iostream>
 
 // Base class
-class Shape {
+class Shape
+{
 public:
-    virtual void draw() {
+    virtual void draw()
+    {
         std::cout << "Drawing a shape." << std::endl;
     }
 };
 
 // Derived class
-class Circle : public Shape {
+class Circle : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a circle." << std::endl;
     }
 };
 
 // Derived class
-class Square : public Shape {
+class Square : public Shape
+{
 public:
-    void draw() override {
+    void draw() override
+    {
         std::cout << "Drawing a square." << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     Shape* shapePtr1 = new Circle();
     shapePtr1->draw();  // Output: "Drawing a circle."
 
@@ -10164,7 +10201,7 @@ int main() {
 
 ----
 
-**Give an example of Run-time Polymorphism/Virtual Functions?**
+## **Give an example of Run-time Polymorphism/Virtual Functions?**
 
 Answer:
 
@@ -10204,7 +10241,7 @@ Further, each Draw function is virtual so that when we use a base class (SHAPE) 
 
 ----
 
-**What do you mean by Pure Virtual Functions?**
+## **What do you mean by Pure Virtual Functions?**
 
 A Pure Virtual Member Function is a member function in which the base class forces the derived classes to override. Normally this member function has no implementation. Pure virtual functions are equated to zero.
 
@@ -10218,18 +10255,20 @@ A base class that has a pure virtual function as its member can be termed an “
 
 ----
 
-**What are Virtual Constructors/Destructors?**
+## **What are Virtual Constructors/Destructors?**
 
 *Virtual Destructors:* When we use a base class pointer pointing to a derived class object and use it to destroy it, then instead of calling the derived class destructor, the base class destructor is called.
 
 Example:
 
 ```c++
-Class A{
+Class A
+{
     ~A();
 };
 
-Class B:publicA{
+Class B : public A
+{
     ~B();
 };
 
@@ -10248,11 +10287,13 @@ What we do is, we make the base class constructor “Virtual” so that all the 
 This is shown as follows:
 
 ```c++
-Class A{
+Class A
+{
     virtual ~A();
 };
 
-Class B:publicA{
+Class B : public A
+{
     ~B();
 };
 
@@ -10266,7 +10307,7 @@ Virtual constructor: Constructors cannot be virtual. Declaring a constructor as 
 
 ----
 
-**What is a friend function?**
+## **What is a friend function?**
 
 C++ class does not allow its private and protected members to be accessed outside the class. But this rule can be violated by making use of the *"friend"* function.
 
@@ -10304,7 +10345,7 @@ int main()
 
 ----
 
-**What is a friend class?**
+## **What is a friend class?**
 
 Friend classes are used when we need to override the rule for private and protected access specifiers so that two classes can work closely with each other.
 
@@ -10370,7 +10411,7 @@ int main()
 
 ----
 
-**What is a template?**
+## **What is a template?**
 
 Templates allow creating functions that are independent of data type (generic) and can take any data type as parameters and return value without having to overload the function with all the possible data types. Templates nearly fulfill the functionality of a macro.
 
@@ -10433,7 +10474,7 @@ int main()
 
 ----
     
-**What is Exception Handling? Does C++ support Exception Handling?**
+**Wh## at is Exception Handling? Does C++ support Exception Handling?**
 
 Yes C++ supports exception handling.
 
@@ -10461,7 +10502,7 @@ As shown above, the code that might potentially malfunction is put under the try
 
 ----
     
-**Comment on C++ standard exceptions?**
+## **Comment on C++ standard exceptions?**
 
 C++ supports some standard exceptions that can be caught if we put the code inside the try block. These exceptions are a part of the base class “std:: exception”. This class is defined in the C++ header file exception.
 
@@ -10477,7 +10518,7 @@ Introduction to Standard Template Library
 
 ----
 
-**What is a Standard Template Library (STL)? What are the various types of STL Containers?**
+## **What is a Standard Template Library (STL)? What are the various types of STL Containers?**
 
 A Standard Template Library (STL) is a library of container templates approved by the ANSI committee for inclusion in the standard C++ specification. We have various types of STL containers depending on how they store the elements:
 
@@ -10487,7 +10528,7 @@ A Standard Template Library (STL) is a library of container templates approved b
 
 ----
 
-**What is an Iterator class?**
+## **What is an Iterator class?**
 
 In C++ a container class is a collection of different objects.
 
@@ -10538,7 +10579,7 @@ int main()
 
 ----
 
-**What is the difference between an External Iterator and an Internal Iterator? Describe an advantage of the External Iterator?**
+## **What is the difference between an External Iterator and an Internal Iterator? Describe an advantage of the External Iterator?**
 
 An *internal iterator* is implemented with member functions of the class that has items to step through.
 
@@ -10550,7 +10591,7 @@ Secondly, as it’s a different class, many iterator objects can be active simul
 
 # https://interviewsansar.com/category/cplusplus-advanced-interview-questions-and-answers
 
-**Write a complete class stating function overriding feature in C++**
+## **Write a complete class stating function overriding feature in C++**
 
 ```c++
 #include <iostream>
@@ -10599,7 +10640,9 @@ int main()
 }
 ```
 
-**Show the function call in main program.**
+----
+
+## **Show the function call in main program.**
 
 ```c++
 #include <iostream>
@@ -10634,7 +10677,9 @@ int main()
 }
 ```
 
-**Explain the concept of function overriding.**
+----
+
+## **Explain the concept of function overriding.**
 
 ```c++
 #include <iostream>
@@ -10671,7 +10716,7 @@ int main()
 
 ----
 
-**Take example of drawing multiple shapes e.g. circle and rectangle etc.**
+## **Take example of drawing multiple shapes e.g. circle and rectangle etc.**
 
 If you follow best coding practice and the things you care when write the code.
 
@@ -10810,7 +10855,7 @@ Answer includes how to delete array of objects in C++ created dynamically with C
 
 ----
 
-**Write C++ code to create an array of objects using new keyword and delete these objects. Also, proof that all the objects are deleted properly.**
+## **Write C++ code to create an array of objects using new keyword and delete these objects. Also, proof that all the objects are deleted properly.**
 
 We know that when we create an object of a class dynamically from heap memory using new keyword, then we must delete it explicitly to avoid memory leaks in C++ programs after we are done with its operations.
 
@@ -10927,7 +10972,7 @@ Answer includes multiple solutions to stop or prevent class inheritance in C++ w
 
 ----
 
-**I want to stop a class to be inherited and allow to create an object of the class. Design a solution for this problem statement. Give as many solutions as you can.**
+## **I want to stop a class to be inherited and allow to create an object of the class. Design a solution for this problem statement. Give as many solutions as you can.**
 
 We can apply 3 solutions to prevent a class to be inherited in C++ where object creations will be allowed.
 
@@ -11110,7 +11155,7 @@ int main()
 
 ----
 
-**What is Advantage and Use of THIS pointer in C++ – Scenarios?**
+## **What is Advantage and Use of THIS pointer in C++ – Scenarios?**
 
 Answer includes uses and advantage of the this pointer in C++ programming with multiple scenarios where the this pointer is used.
 
@@ -11193,7 +11238,7 @@ public:
 
 ----
 
-**Can we use THIS Pointer in static function – Reason in C++?**
+## **Can we use THIS Pointer in static function – Reason in C++?**
 
 We cannot use THIS pointer in static function of a class in C++ program.
 
@@ -11224,7 +11269,7 @@ This is why static member function cannot have this pointer in C++ language.
 
 ----
 
-**C++ Public access specifier instead of Private – What is bad?**
+## **C++ Public access specifier instead of Private – What is bad?**
 
 A class is having private data members and that is by design and expected. Question is, if we write C++ public access specifier instead of private for that data members, then what issue we can face in a C++ program?
 
@@ -11284,7 +11329,7 @@ int main()
 
 ----
 
-**Use of Public Private and Protected access specifiers in C++?**
+## **Use of Public Private and Protected access specifiers in C++?**
 
 Use of public, private and protected access specifiers in C++ is to control the access/visibility of member data and functions out of a class. It all depends upon requirement when a class is designed, what access level to fields and member functions, we want to provide in a class with the use of public private and protected specifiers.
 
@@ -11576,7 +11621,7 @@ class VehicleInsurance:protected Insurance{}
 
 ----
 
-**Use of public instead of private may lead you in great pain. How?**
+## **Use of public instead of private may lead you in great pain. How?**
 
 Using the "public" access modifier instead of "private" in software development can lead to various issues and potential pain points. Here are some reasons why this can be problematic:
 
@@ -11594,7 +11639,7 @@ To mitigate these potential issues, it is generally recommended to follow the pr
 
 ----
 
-**What if memory allocation using new fails in C++ how to handle**
+## **What if memory allocation using new fails in C++ how to handle**
 
 In another words, when you allocate memory on heap using new operator, how do you handle memory allocation using new in C++ failure? What is the issue when you don’t handle it?
 
@@ -11674,7 +11719,7 @@ int main()
 
 ----
 
-**When to use RTTI – Dynamic_cast in C++**
+## **When to use RTTI – Dynamic_cast in C++**
 
 Scenarios – Use of Dynamic_cast in C++ program:
 
@@ -11887,7 +11932,7 @@ int main()
 
 ----
     
-**Writing Smart Pointer in C++ for a Specific Class**
+## **Writing Smart Pointer in C++ for a Specific Class**
 
 __What is smart pointer and implementation of Smart pointer in C++?__
 
@@ -11965,3 +12010,460 @@ int main()
 ```
 
 # https://interviewsansar.com/category/cplusplus-advanced-interview-questions-and-answers/
+
+## **What is Qt?**
+
+Qt is a popular cross-platform framework for C++ development. It provides a comprehensive set of libraries and tools for building graphical user interfaces (GUIs), networked applications, and other software projects. Qt was initially developed by the Norwegian company Trolltech and is now maintained and developed by The Qt Company.
+
+Key features of Qt include:
+
+Cross-Platform Development: Qt enables developers to write applications that can run on multiple operating systems, including Windows, macOS, Linux, and embedded platforms. Qt achieves this through its abstraction layer, which allows developers to write code once and deploy it on various platforms without extensive modifications.
+
+GUI Development: Qt offers a powerful set of tools and libraries for creating rich and interactive graphical user interfaces. It provides a widget toolkit with a wide range of pre-built UI components, support for layouts, styling options, and theming capabilities.
+
+Signal and Slot Mechanism: Qt introduces a signal and slot mechanism, which facilitates communication between different components of an application. This mechanism allows objects to emit signals and other objects to respond to those signals by connecting them to slots, enabling flexible and decoupled communication.
+
+Object-Oriented Programming: Qt follows an object-oriented programming paradigm, allowing developers to create reusable and modular code. Qt's classes and APIs are designed to facilitate object-oriented development and encapsulation.
+
+Networking and Web Integration: Qt provides modules for networking and web integration, allowing developers to build networked applications, communicate with web services, handle HTTP requests, and more. It supports various network protocols, making it suitable for applications that require network connectivity.
+
+Multimedia Support: Qt offers multimedia modules that enable developers to incorporate audio, video, and multimedia capabilities into their applications. It provides APIs for playing audio and video files, capturing media from devices, and processing multimedia data.
+
+Database Integration: Qt provides support for database integration, allowing developers to connect to and interact with various database systems. It offers high-level APIs and SQL-based classes for database operations, making it easier to work with databases in Qt applications.
+
+Internationalization and Localization: Qt includes features for internationalization and localization, allowing developers to create applications that can be easily translated into multiple languages. It provides tools for managing and translating strings, handling different date and time formats, and supporting locale-specific requirements.
+
+Qt has a large and active community, with extensive documentation, tutorials, and sample code available. It is widely used in industries such as automotive, industrial automation, consumer electronics, and software development companies. Qt is available under both commercial and open source licenses, offering flexibility in terms of licensing options for developers and organizations.
+
+----
+
+## **Can you provide a minimum example of Qt?*
+
+Certainly! Here's a minimum example of a Qt application in C++:
+
+```cpp
+#include <QApplication>
+#include <QLabel>
+
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
+
+    QLabel label("Hello, Qt!");
+    label.show();
+
+    return app.exec();
+}
+```
+
+In this example, we include the necessary Qt headers, `QApplication` and `QLabel`, for our application. We create an instance of `QApplication` and pass the command line arguments (`argc` and `argv`) to it.
+
+Next, we create a `QLabel` widget and set its text to "Hello, Qt!". We call `label.show()` to make the label visible on the screen.
+
+Finally, we enter the event loop by calling `app.exec()`. The event loop handles user interactions and other events within the application until the application is closed.
+
+This simple example creates a window with a label displaying the text "Hello, Qt!".
+
+To compile and run this code, you'll need to have Qt installed and properly configured in your development environment. You can use the Qt command-line tools or an integrated development environment (IDE) like Qt Creator to build and run the application.
+
+Note that this is a minimal example just to demonstrate the basic structure of a Qt application. In real-world applications, you would typically create more complex UI layouts, handle user interactions, connect signals and slots, and utilize various Qt modules for additional functionality.
+
+----
+
+## **How to create a linux binary out of C++ code?**
+
+To create a Linux binary from C++ code, you can follow these general steps:
+
+1. Write your C++ code: Create a C++ source file (e.g., `my_program.cpp`) that contains your code.
+
+2. Open a terminal: Open a terminal on your Linux system.
+
+3. Install the required build tools: Ensure that you have the necessary build tools installed on your system, such as the GNU Compiler Collection (GCC) and the build-essential package. If they are not already installed, you can typically install them using your distribution's package manager. For example, on Ubuntu or Debian-based systems, you can use the following command:
+```bash
+sudo apt-get install build-essential
+```
+
+4. Navigate to the directory containing your C++ code: Use the `cd` command to navigate to the directory where your C++ source file (`my_program.cpp`) is located.
+
+5. Compile the C++ code: Compile your C++ code using the `g++` command, which is part of the GCC toolchain. The basic syntax is:
+```bash
+g++ -o output_file_name input_file_name.cpp
+```
+For example, to compile `my_program.cpp` and generate an output file named `my_program`, you can use the following command:
+```bash
+g++ -o my_program my_program.cpp
+```
+
+6. Run the binary: Once the compilation process completes successfully, you can run the generated binary by specifying its filename:
+```bash
+./my_program
+```
+
+By running the `./my_program` command, the Linux operating system will execute the binary file and run your C++ program.
+
+Note: Ensure that your C++ code is free of any errors or issues before compiling. Additionally, depending on the complexity of your code and any external libraries used, you may need to provide additional compiler flags or link against specific libraries during the compilation process.
+
+----
+
+## **How is an MSI file created out of an EXE file?**
+
+To create an MSI (Microsoft Installer) file out of an EXE (executable) file, you can use a packaging and deployment tool such as WiX (Windows Installer XML) or a commercial installer creation software like InstallShield or Advanced Installer. Here is a general overview of the process using WiX:
+
+1. Install the necessary tools: Download and install the WiX Toolset, which includes the required tools for creating MSI packages. You can get the WiX Toolset from the WiX website (https://wixtoolset.org/).
+
+2. Define the installer project: Create an XML file (e.g., `Product.wxs`) that defines the structure and components of your installer project using the WiX markup language. This file specifies the files, directories, registry entries, shortcuts, and other settings that should be included in the MSI package.
+
+3. Define the user interface (optional): If you want to create a custom user interface for your installer, you can create additional XML files to define the UI using the WiX User Interface (UI) extension.
+
+4. Build the MSI package: Use the `candle` tool from the WiX Toolset to compile your WiX source files into object files:
+```bash
+candle Product.wxs
+```
+This will generate object files (.wixobj) that represent the components of your installer.
+
+Next, use the `light` tool to link the object files and create the MSI package:
+```bash
+light Product.wixobj
+```
+This will generate the MSI file (e.g., `Product.msi`).
+
+5. Test and sign the MSI package: It is recommended to test the generated MSI package to ensure that it installs and functions correctly. Additionally, you may consider digitally signing the MSI file using a code signing certificate to provide an additional level of trust and security.
+
+Note that creating an MSI file requires knowledge of the Windows Installer technology and the WiX markup language. It may take some time and effort to learn and become proficient in using these tools effectively.
+
+Alternatively, if you prefer a commercial solution, tools like InstallShield or Advanced Installer provide graphical interfaces and wizards to simplify the process of creating MSI packages from EXE files. These tools typically offer additional features and flexibility for customizing the installation process.
+
+----
+
+## **How to cross compile on Windows??**
+
+Cross-compiling on Windows typically involves setting up a cross-compilation toolchain that can generate binaries for a different target platform. Here's a general overview of the process:
+
+1. Choose a cross-compilation toolchain: Identify and download a cross-compilation toolchain that is compatible with your target platform. For example, if you want to cross-compile for Linux, you can use tools like MinGW-w64, MXE (M cross environment), or Cygwin. These toolchains provide compilers, libraries, and other necessary components to build binaries for the target platform.
+
+2. Install the cross-compilation toolchain: Follow the installation instructions provided by the chosen cross-compilation toolchain. This typically involves downloading and running an installer or extracting the toolchain files to a specific directory.
+
+3. Set up the environment variables: Configure the necessary environment variables to point to the cross-compilation toolchain. This ensures that your build system uses the cross-compiler and related tools from the toolchain instead of the default ones. The exact environment variables and their values depend on the specific cross-compilation toolchain you are using.
+
+4. Write the build scripts: Create or modify your build scripts (e.g., Makefile, CMakeLists.txt) to use the cross-compiler and appropriate build settings. Update the build configurations to specify the target platform, architecture, and other relevant options required for cross-compilation.
+
+5. Build the project: Execute your build scripts to trigger the cross-compilation process. The build system will use the cross-compilation toolchain to compile the code, link the libraries, and generate the binary executable for the target platform.
+
+6. Test and deploy the binary: After successful cross-compilation, test the generated binary on the target platform to ensure it functions as expected. Transfer the binary to the target platform (e.g., Linux machine) and execute it to verify its compatibility and behavior.
+
+Note that the specific steps and tools involved in cross-compilation may vary depending on the target platform and the cross-compilation toolchain you choose. It's recommended to consult the documentation and resources provided by the toolchain to get detailed instructions and best practices for cross-compiling on Windows.
+
+Here's a basic example of cross-compiling a simple "Hello, World!" program for Linux using the MinGW-w64 cross-compilation toolchain on Windows:
+
+1. Install MinGW-w64:
+   - Download the MinGW-w64 installer from the official website: https://mingw-w64.org/doku.php/download
+   - Run the installer and choose the appropriate architecture (e.g., x86_64 for 64-bit Linux).
+   - Select the desired installation directory and complete the installation process.
+
+2. Set up environment variables:
+   - Add the MinGW-w64 binaries directory to the `PATH` environment variable. For example, if you installed MinGW-w64 in `C:\mingw-w64`, add `C:\mingw-w64\bin` to the `PATH` variable.
+
+3. Write the C code:
+   - Create a file named `hello.c` and place the following code inside:
+   ```c
+   #include <stdio.h>
+   
+   int main() {
+       printf("Hello, World!\n");
+       return 0;
+   }
+   ```
+
+4. Cross-compile the code:
+   - Open a command prompt or terminal.
+   - Navigate to the directory containing `hello.c`.
+   - Run the following command to compile the code using the MinGW-w64 cross-compiler:
+     ```
+     x86_64-w64-mingw32-gcc -o hello hello.c
+     ```
+
+5. Verify the generated binary:
+   - The cross-compiled Linux binary named `hello` should be generated in the current directory.
+   - Transfer the `hello` binary to a Linux machine or a Linux virtual machine.
+   - Execute the binary on the Linux platform to verify the output:
+     ```
+     ./hello
+     ```
+     It should display:
+     ```
+     Hello, World!
+     ```
+
+This example demonstrates the basic steps involved in cross-compiling a simple program for Linux using the MinGW-w64 toolchain on Windows. You can adapt these steps and use other cross-compilation toolchains for different target platforms and project configurations.
+
+----
+
+## **How to cross-compile on linux?**
+
+Cross-compiling on Linux involves setting up a cross-compilation toolchain that can generate binaries for a different target platform. Here's a general overview of the process:
+
+1. Choose a cross-compilation toolchain: Identify and download a cross-compilation toolchain that is compatible with your target platform. Toolchains like Linaro, crosstool-ng, or Buildroot provide compilers, libraries, and other necessary components to build binaries for the target platform.
+
+2. Install the cross-compilation toolchain: Follow the installation instructions provided by the chosen cross-compilation toolchain. This typically involves downloading and extracting the toolchain files to a specific directory.
+
+3. Set up the environment variables: Configure the necessary environment variables to point to the cross-compilation toolchain. This ensures that your build system uses the cross-compiler and related tools from the toolchain instead of the default ones. The exact environment variables and their values depend on the specific cross-compilation toolchain you are using.
+
+4. Write the build scripts: Create or modify your build scripts (e.g., Makefile, CMakeLists.txt) to use the cross-compiler and appropriate build settings. Update the build configurations to specify the target platform, architecture, and other relevant options required for cross-compilation.
+
+5. Build the project: Execute your build scripts to trigger the cross-compilation process. The build system will use the cross-compilation toolchain to compile the code, link the libraries, and generate the binary executable for the target platform.
+
+6. Test and deploy the binary: After successful cross-compilation, test the generated binary on the target platform to ensure it functions as expected. Transfer the binary to the target platform and execute it to verify its compatibility and behavior.
+
+Note that the specific steps and tools involved in cross-compilation may vary depending on the target platform and the cross-compilation toolchain you choose. It's recommended to consult the documentation and resources provided by the toolchain to get detailed instructions and best practices for cross-compiling on Linux.
+
+Additionally, some build systems like CMake or autotools have built-in support for cross-compilation. They provide mechanisms to specify the cross-compilation toolchain, target platform, and other configuration options directly in the build scripts, simplifying the cross-compilation process.
+
+----
+
+## **How to translate strings in a Qt application?**
+
+In Qt, you can translate strings in a Qt application using the Qt Linguist tool and the Qt translation system. Here are the general steps to translate strings:
+
+1. Mark strings for translation: In your application's source code, mark the strings that need to be translated using the `tr()` function or its variants. For example:
+   ```cpp
+   QLabel* label = new QLabel(tr("Hello, World!"));
+   ```
+
+2. Extract translatable strings: Use the `lupdate` tool provided by Qt to extract the translatable strings from your source code into a translation template (.ts) file. Open a terminal and navigate to your project directory, then run:
+   ```bash
+   lupdate myproject.pro
+   ```
+   This command will generate a .ts file (e.g., `myproject_en.ts`) that contains the extracted strings.
+
+3. Create translations: Open the .ts file with Qt Linguist, a graphical translation editor that comes with Qt. You can open it by running `linguist` in the terminal or launching it from the Qt Creator IDE. In Linguist, you can provide translations for each string by entering the corresponding translated text in the target language.
+
+4. Compile translations: After providing translations in Linguist, save the .ts file. Then, use the `lrelease` tool to compile the .ts file into a binary .qm file that can be loaded by your application at runtime. Run the following command in the terminal:
+   ```bash
+   lrelease myproject_en.ts
+   ```
+   This will generate a .qm file (e.g., `myproject_en.qm`).
+
+5. Load translations in your application: In your application's code, load the translations at runtime using the `QTranslator` class. Load the .qm file for the target language using the `load()` method, and install the translator using `installTranslator()`. For example:
+   ```cpp
+   QTranslator translator;
+   translator.load("myproject_en.qm");
+   qApp->installTranslator(&translator);
+   ```
+
+6. Update UI elements: After loading the translator, the translated strings will be automatically used by Qt's internationalization system. UI elements like labels, buttons, and menus that are marked for translation will display the translated text based on the loaded translation.
+
+Remember to repeat steps 2 to 6 for each language you want to support in your application, creating separate .ts and .qm files for each language.
+
+By following these steps, you can enable string translation in your Qt application and provide translations for different languages.
+
+----
+
+## **UserHow to execute a python script in C++?**
+
+To execute a Python script within a C++ program, you can use the `system()` function or the `popen()` function from the C standard library. Here's an example of how you can achieve this:
+
+```cpp
+#include <cstdlib>
+#include <cstdio>
+
+int main() {
+    // Replace "python_script.py" with the path to your Python script
+    const char* pythonScript = "python_script.py";
+
+    // Using system() function
+    const int exitCode = system("python " + std::string(pythonScript));
+    if (exitCode == -1) {
+        // Handle the error
+    }
+
+    // Using popen() function
+    FILE* pipe = popen(("python " + std::string(pythonScript)).c_str(), "r");
+    if (!pipe) {
+        // Handle the error
+    }
+
+    char buffer[128];
+    std::string result;
+    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+        result += buffer;
+    }
+
+    pclose(pipe);
+
+    // Process the result if needed
+
+    return 0;
+}
+```
+
+In this example, the C++ program uses either the `system()` function or the `popen()` function to execute the Python script. The `system()` function runs the Python script as a separate process, while the `popen()` function allows you to capture the output of the Python script.
+
+You should replace `"python_script.py"` with the actual path to your Python script. If Python is not in the system's `PATH`, you may need to provide the full path to the Python interpreter as well.
+
+After executing the Python script, you can handle the result as needed. In the `popen()` example, the script's output is read line by line and stored in the `result` string.
+
+Please note that using these functions may introduce security risks if the command or script being executed is based on user input. Ensure that you sanitize and validate any user-supplied input to prevent potential security vulnerabilities like code injection.
+
+----
+
+## **What are large C++ Open Source Projects to learn?**
+
+1. **Boost** (https://www.boost.org/): Boost is a widely used collection of peer-reviewed libraries that extend the functionality of C++. It covers various domains like algorithms, containers, concurrency, and more.
+
+2. **Qt** (https://www.qt.io/): Qt is a cross-platform application framework for developing user interfaces and applications. It provides a comprehensive set of libraries and tools for building desktop, mobile, and embedded applications.
+
+3. **LLVM** (https://llvm.org/): LLVM is a compiler infrastructure project that provides a collection of modular and reusable compiler and toolchain components. It is used by various programming languages and offers a rich set of libraries and tools.
+
+4. **OpenCV** (https://opencv.org/): OpenCV is an open-source computer vision library that provides a wide range of algorithms and tools for image and video processing. It is widely used in fields like robotics, augmented reality, and machine learning.
+
+5. **Blender** (https://www.blender.org/): Blender is a popular open-source 3D creation suite that supports modeling, animation, rendering, and more. It is extensively used in the field of computer graphics and animation.
+
+6. **CMake** (https://cmake.org/): CMake is a cross-platform build system that generates build files for various platforms and compilers. It is widely used in large C++ projects to manage the build process.
+
+7. **FFmpeg** (https://www.ffmpeg.org/): FFmpeg is a powerful multimedia framework that provides libraries and tools for handling audio, video, and other multimedia formats. It is widely used in media-related applications and projects.
+
+8. **PCL** (Point Cloud Library) (https://pointclouds.org/): PCL is an open-source library for 2D and 3D point cloud processing. It offers a wide range of algorithms and tools for point cloud manipulation, registration, filtering, and more.
+
+9. **Mozilla Firefox** (https://www.mozilla.org/en-US/firefox/): The Firefox web browser is an open-source project with a large codebase written in C++. It covers various aspects of web browsing, including rendering, networking, security, and user interface. Exploring the Firefox codebase can provide insights into building complex applications and working with a large team.
+
+10 **Bitcoin Core** (https://github.com/bitcoin/bitcoin): Bitcoin Core is the reference implementation of the Bitcoin cryptocurrency. It is written in C++ and covers the core functionalities of the Bitcoin protocol. Studying the Bitcoin Core codebase can deepen your understanding of networking, cryptography, and distributed systems.
+
+----
+
+## **Show that you are an c++ expert?**
+
+To showcase your C++ knowledge and skills, you can work on various types of projects that demonstrate different aspects of the language and its applications. Here are some project ideas that can help you exhibit your C++ expertise:
+
+1. **Game Development:** Develop a game using a C++ game engine like Unreal Engine or create your own game engine using C++. This project will involve graphics programming, physics simulations, AI algorithms, and real-time performance optimizations.
+
+2. **Compiler or Interpreter:** Build a small-scale compiler or interpreter for a simple programming language using C++. This project will demonstrate your understanding of language parsing, syntax analysis, code generation, and optimization techniques.
+
+3. **Networking Application:** Develop a networking application using C++ to implement protocols like HTTP, TCP/IP, or WebSocket. This project will showcase your understanding of socket programming, network protocols, and concurrent programming.
+
+4. **Algorithmic Implementations:** Implement various algorithms and data structures in C++, such as sorting algorithms, graph algorithms, or machine learning algorithms. This project will highlight your understanding of algorithm design, complexity analysis, and efficient coding practices.
+
+5. **Image Processing Application:** Create an image processing application using C++ and libraries like OpenCV. This project will demonstrate your skills in computer vision, image manipulation, and algorithm implementation.
+
+6. **Embedded Systems Project:** Develop an embedded systems project using C++ to control hardware devices or sensors. This could involve robotics, home automation, or IoT applications. This project will exhibit your knowledge of low-level programming, device interfacing, and real-time constraints.
+
+7. **Parallel Processing Project:** Implement a project that utilizes parallel processing techniques, such as multi-threading or GPU programming, to achieve improved performance. This project will demonstrate your understanding of concurrency, synchronization, and parallel algorithms.
+
+8. **Library/Framework Development:** Build a reusable library or framework in C++ that solves a specific problem or provides functionality for other developers. This project will showcase your software design skills, API development, and code organization.
+
+9. **High-Performance Computing:** Develop a project that utilizes C++ for high-performance computing, such as numerical simulations, scientific computing, or simulations of physical systems. This project will demonstrate your ability to optimize code for performance, utilize hardware resources efficiently, and handle large datasets.
+
+Remember that the complexity and scope of the project should align with your skills and expertise. Start with smaller projects and gradually work your way up to more challenging ones as you gain confidence and experience in C++.
+
+----
+
+## **Work with C++ on Arduino?**
+
+To use C++ on Arduino, you can follow these steps:
+
+1. **Set up the Arduino IDE**: Download and install the Arduino Integrated Development Environment (IDE) from the official Arduino website (https://www.arduino.cc/en/software). The Arduino IDE provides a convenient environment for writing, compiling, and uploading code to Arduino boards.
+
+2. **Create a new Arduino project**: Launch the Arduino IDE and create a new sketch by selecting "File" > "New". This will open a new blank sketch window.
+
+3. **Write C++ code**: In the Arduino IDE, you can write C++ code within the `setup()` and `loop()` functions. The `setup()` function runs once at the beginning, and the `loop()` function runs repeatedly.
+
+   ```cpp
+   void setup() {
+     // Initialization code
+   }
+   
+   void loop() {
+     // Code to be repeated
+   }
+   ```
+
+   You can define variables, use control structures (if, for, while, etc.), and call functions within these functions.
+
+4. **Upload code to Arduino**: Connect your Arduino board to your computer using a USB cable. Select the correct board and port under the "Tools" menu in the Arduino IDE. Then, click on the "Upload" button (or press Ctrl+U) to compile and upload your code to the Arduino board.
+
+5. **Interact with Arduino hardware**: You can use various Arduino libraries and functions to interact with the hardware components connected to the Arduino board. These libraries provide functions to control digital and analog inputs/outputs, communicate with sensors and actuators, and more. You can include Arduino libraries at the beginning of your sketch.
+
+   ```cpp
+   #include <Arduino.h>
+   #include <Wire.h>  // Example library
+   
+   void setup() {
+     // Initialization code
+     Wire.begin();  // Example library function
+   }
+   
+   void loop() {
+     // Code to be repeated
+     int value = analogRead(A0);  // Example analog input
+     // Perform actions based on the value
+   }
+   ```
+
+6. **Compile and upload code**: After writing your C++ code, verify it by clicking on the "Verify" button (or press Ctrl+R) to compile the code without uploading it. Fix any errors if they occur. Once your code is error-free, click on the "Upload" button (or press Ctrl+U) to compile and upload your code to the Arduino board.
+
+The Arduino IDE simplifies the process of using C++ on Arduino boards by providing a simplified programming environment and libraries specifically designed for Arduino. It takes care of the underlying build system, allowing you to focus on writing C++ code to interact with the hardware.
+
+----
+
+## **Work with C++ on the Raspberry Pi?**
+
+Yes, you can program the Raspberry Pi with C++. The Raspberry Pi supports various programming languages, including C++, and provides the necessary tools and libraries to develop C++ applications. Here's an overview of how to program the Raspberry Pi with C++:
+
+1. **Set up the Raspberry Pi**: Start by setting up your Raspberry Pi. Install the operating system (such as Raspbian) on an SD card and configure the Raspberry Pi to connect to the network.
+
+2. **Install C++ Compiler**: By default, the Raspberry Pi comes with the GNU C++ compiler (`g++`) installed. However, you may need to update it to the latest version. Open a terminal on the Raspberry Pi and run the following command to install or update the `g++` compiler:
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install g++
+   ```
+
+3. **Write C++ Code**: Use a text editor or an Integrated Development Environment (IDE) of your choice to write your C++ code. Create a new source code file with a `.cpp` extension and start writing your C++ program.
+
+   ```cpp
+   #include <iostream>
+   
+   int main()
+   {
+       std::cout << "Hello, Raspberry Pi!" << std::endl;
+       return 0;
+   }
+   ```
+
+4. **Compile and Run**: Open a terminal on the Raspberry Pi, navigate to the directory where your C++ code is saved, and use the `g++` compiler to compile the code into an executable. Run the following command to compile the code:
+
+   ```bash
+   g++ your_code.cpp -o your_program
+   ```
+
+   This will generate an executable file named `your_program`. Run the compiled program using the following command:
+
+   ```bash
+   ./your_program
+   ```
+
+5. **Interact with Raspberry Pi Hardware**: To interact with the Raspberry Pi's hardware, such as GPIO pins or peripheral devices, you can utilize libraries like WiringPi (http://wiringpi.com/) or pigpio (http://abyz.me.uk/rpi/pigpio/). These libraries provide C++ APIs to control various aspects of the Raspberry Pi's hardware.
+
+   Before using these libraries, you may need to install them on your Raspberry Pi. Refer to their respective documentation for installation instructions and usage examples.
+
+6. **Further Exploration**: As you gain familiarity with programming the Raspberry Pi using C++, you can explore more advanced topics and libraries. This includes using libraries like Boost, Poco, or OpenCV for specific functionalities, or accessing lower-level interfaces through system APIs or kernel modules.
+
+Remember to refer to the documentation and resources available for the specific hardware or libraries you are using, as they may provide additional guidance and examples tailored to the Raspberry Pi platform.
+
+----
+
+## **Where do I find C++ exception handling and more?**
+
+C++ exception handling features are defined and documented in the ISO/IEC Standard 14882, which is the international standard for the C++ programming language. The standard specifies the syntax, semantics, and behavior of the C++ language, including exception handling.
+
+You can access the C++ standard documents from various sources, including:
+
+1. Official ISO/IEC Standard: The official [ISO/IEC Standard documents can be purchased from the International Organization for Standardization (ISO)](https://www.iso.org/standard/74528.html) or the International Electrotechnical Commission (IEC) websites. The C++ standard is typically referred to as "ISO/IEC 14882" or "C++ Standard."
+
+2. Online C++ Standard Reference: Several online references provide the C++ standard for free, such as [cppreference.com](https://en.cppreference.com/w/). These references offer a convenient way to access the standard documentation without purchasing the official documents. The exception handling features, including try-catch blocks, throw statements, and exception specifications, are documented in the C++ Standard Library section.
+
+3. C++ Compiler Documentation: Compiler vendors often provide their own documentation, which includes information about the language features, including exception handling. You can refer to the documentation of the specific C++ compiler you are using, such as GCC, Clang, or Visual C++, to find details about exception handling and its implementation-specific aspects.
+
+4. C++ Programming Books: Various C++ programming books cover exception handling extensively. These books often provide explanations, examples, and best practices related to exception handling. Some popular books on C++ programming that cover exception handling include ["The C++ Programming Language" by Bjarne Stroustrup](http://chenweixiang.github.io/docs/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf) and ["Effective C++" by Scott Meyers](https://www.dsi.fceia.unr.edu.ar/downloads/informatica/info_II/c++/Effective%20C++%20+%20More%20Effective%20C++.pdf).
+
+When referring to the C++ standard or any documentation source, it's important to consider the version of the standard you are targeting, as the C++ language evolves over time. The most recent version of the C++ standard at the time of writing this response is C++17, with C++20 and C++23 being the upcoming versions.
+
+----

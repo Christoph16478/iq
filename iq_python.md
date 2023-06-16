@@ -1,26 +1,26 @@
-# https://www.interviewbit.com/python-interview-questions/
+### https://www.interviewbit.com/python-interview-questions/
 
-**What to know to be considered an expert in python?**
+## **What to know to be considered an expert in python?**
 
 To be considered an expert in Python, it's important to have a deep understanding of the language and its ecosystem. Here are some key areas of knowledge and skills that are typically expected from Python experts:
 
-1. Core Python Concepts: Gain a solid understanding of Python's syntax, data types, control structures (loops and conditionals), functions, classes, and modules. Be familiar with concepts like generators, decorators, context managers, and comprehensions.
+1. *Core Python Concepts*: Gain a solid understanding of Python's syntax, data types, control structures (loops and conditionals), functions, classes, and modules. Be familiar with concepts like generators, decorators, context managers, and comprehensions.
 
-2. Object-Oriented Programming (OOP): Master the principles of OOP in Python, including encapsulation, inheritance, and polymorphism. Understand how to design and implement classes, use inheritance effectively, and apply OOP concepts to solve problems.
+2. *Object-Oriented Programming (OOP)*: Master the principles of OOP in Python, including encapsulation, inheritance, and polymorphism. Understand how to design and implement classes, use inheritance effectively, and apply OOP concepts to solve problems.
 
-3. Libraries and Frameworks: Familiarize yourself with popular Python libraries and frameworks such as NumPy, pandas, Matplotlib, TensorFlow, Django, Flask, and others depending on your areas of interest. Understand their features, capabilities, and how to effectively utilize them in real-world scenarios.
+3. *Libraries and Frameworks*: Familiarize yourself with popular Python libraries and frameworks such as NumPy, pandas, Matplotlib, TensorFlow, Django, Flask, and others depending on your areas of interest. Understand their features, capabilities, and how to effectively utilize them in real-world scenarios.
 
-4. Data Manipulation and Analysis: Learn how to work with data using Python. Become proficient in tasks like data cleaning, manipulation, aggregation, filtering, and analysis. Understanding libraries like pandas and NumPy will be valuable in this area.
+4. *Data Manipulation and Analysis*: Learn how to work with data using Python. Become proficient in tasks like data cleaning, manipulation, aggregation, filtering, and analysis. Understanding libraries like pandas and NumPy will be valuable in this area.
 
-5. Web Development: Gain knowledge of web development using Python. Understand web frameworks like Django and Flask, and be familiar with concepts like routing, templating, form handling, and database integration.
+5. *Web Development*: Gain knowledge of web development using Python. Understand web frameworks like Django and Flask, and be familiar with concepts like routing, templating, form handling, and database integration.
 
-6. Data Science and Machine Learning: Acquire skills related to data science and machine learning using Python. Learn about libraries like scikit-learn, TensorFlow, Keras, and PyTorch. Understand common machine learning algorithms, data preprocessing techniques, model evaluation, and how to build and deploy models.
+6. *Data Science and Machine Learning*: Acquire skills related to data science and machine learning using Python. Learn about libraries like scikit-learn, TensorFlow, Keras, and PyTorch. Understand common machine learning algorithms, data preprocessing techniques, model evaluation, and how to build and deploy models.
 
-7. Testing and Debugging: Learn how to write unit tests and perform effective debugging in Python. Be familiar with testing frameworks like unittest and pytest. Understand debugging techniques and tools like pdb and logging.
+7. *Testing and Debugging*: Learn how to write unit tests and perform effective debugging in Python. Be familiar with testing frameworks like unittest and pytest. Understand debugging techniques and tools like pdb and logging.
 
-8. Performance Optimization: Gain knowledge of techniques to optimize Python code for improved performance. Learn about profiling, optimizing algorithms, memory management, and utilizing Python's built-in optimization tools.
+8. *Performance Optimization*: Gain knowledge of techniques to optimize Python code for improved performance. Learn about profiling, optimizing algorithms, memory management, and utilizing Python's built-in optimization tools.
 
-9. Best Practices and Design Patterns: Follow Python best practices and adhere to PEP 8 (Python Enhancement Proposal) guidelines for code style and organization. Understand common design patterns and apply them appropriately to improve code maintainability and readability.
+9. *Best Practices and Design Patterns*: Follow Python best practices and adhere to PEP 8 (Python Enhancement Proposal) guidelines for code style and organization. Understand common design patterns and apply them appropriately to improve code maintainability and readability.
 
 10. Community and Ecosystem: Stay updated with the Python community, attend meetups, participate in online forums, and contribute to open-source projects. Explore the vast ecosystem of Python libraries and tools, and understand how they can be leveraged in different domains.
 
@@ -28,21 +28,21 @@ Remember that expertise is a continuous learning process, and staying updated wi
 
 ----
 
-**Python job interview questions?**
+## **Python job interview questions?**
 
 To find free high-quality Python job interview questions, you can explore various online resources that offer interview preparation materials specifically for Python. Here are some platforms and websites where you can find a collection of Python interview questions:
 
-LeetCode: LeetCode offers a collection of coding interview questions, including Python-specific questions. They provide a platform to practice coding problems and improve your problem-solving skills.
+*LeetCode:* LeetCode offers a collection of coding interview questions, including Python-specific questions. They provide a platform to practice coding problems and improve your problem-solving skills.
 
-HackerRank: HackerRank is another popular platform that offers coding challenges and interview questions. They have a specific section dedicated to Python where you can find Python-related questions for interview preparation.
+*HackerRank:* HackerRank is another popular platform that offers coding challenges and interview questions. They have a specific section dedicated to Python where you can find Python-related questions for interview preparation.
 
-GeeksforGeeks: GeeksforGeeks is a well-known website for computer science resources and programming interview preparation. They have a comprehensive collection of Python interview questions categorized by topics and difficulty levels.
+*GeeksforGeeks:* GeeksforGeeks is a well-known website for computer science resources and programming interview preparation. They have a comprehensive collection of Python interview questions categorized by topics and difficulty levels.
 
-GitHub repositories: There are several open-source GitHub repositories that curate interview questions and resources for Python. You can search for repositories like "Python interview questions" or "Python coding interview preparation" to find relevant materials.
+*GitHub repositories:* There are several open-source GitHub repositories that curate interview questions and resources for Python. You can search for repositories like "Python interview questions" or "Python coding interview preparation" to find relevant materials.
 
-Online tutorials and blogs: Many programming tutorial websites and tech blogs publish Python interview questions and solutions. Some popular ones include Real Python, Towards Data Science, and Python.org.
+*Online tutorials and blogs:* Many programming tutorial websites and tech blogs publish Python interview questions and solutions. Some popular ones include Real Python, Towards Data Science, and Python.org.
 
-Online forums and communities: Participating in online communities like Stack Overflow or Reddit's r/learnpython can provide valuable insights into common Python interview questions. Users often share their experiences and discuss interview-related topics.
+*Online forums and communities:* Participating in online communities like Stack Overflow or Reddit's r/learnpython can provide valuable insights into common Python interview questions. Users often share their experiences and discuss interview-related topics.
 
 Additionally, you can also refer to Python-specific interview preparation books and courses that are available online. Many of them include a wide range of interview questions and detailed explanations. Examples include "Cracking the Coding Interview" by Gayle Laakmann McDowell and "Python for Data Analysis" by Wes McKinney.
 
@@ -50,83 +50,80 @@ Remember to practice solving the questions and understand the underlying concept
 
 ----
 
-**What are great resources to stay up-to-date on python?**
+## **What are great resources to stay up-to-date on python?**
 
 To stay up-to-date on Python 3 and the latest trends in the Python ecosystem, you can explore the following resources:
 
-1. Python.org: The official website of the Python programming language, python.org, provides news, updates, and announcements about the Python language and its development. It offers information on new releases, features, and upcoming events. Visit: https://www.python.org/
+1. Python.org: The official website of the Python programming language, python.org, provides news, updates, and announcements about the Python language and its development. It offers information on new releases, features, and upcoming events. Visit: [https://www.python.org/](https://www.python.org/)
 
-2. Python Weekly: Python Weekly is a curated newsletter that delivers the latest Python news, articles, tutorials, libraries, and tools directly to your inbox every week. It covers a wide range of Python-related topics and keeps you informed about the latest developments. You can subscribe at: https://www.pythonweekly.com/
+2. Python Weekly: Python Weekly is a curated newsletter that delivers the latest Python news, articles, tutorials, libraries, and tools directly to your inbox every week. It covers a wide range of Python-related topics and keeps you informed about the latest developments. You can subscribe at: [https://www.pythonweekly.com/](https://www.pythonweekly.com/)
 
-3. Real Python: Real Python is an online platform that offers tutorials, articles, and resources for Python developers of all levels. It covers various Python topics, including new features, best practices, libraries, and frameworks. Explore it at: https://realpython.com/
+3. Real Python: Real Python is an online platform that offers tutorials, articles, and resources for Python developers of all levels. It covers various Python topics, including new features, best practices, libraries, and frameworks. Explore it at: [https://realpython.com/](https://realpython.com/)
 
-4. Python subreddit (r/python): The Python subreddit (r/python) is a vibrant community where Python enthusiasts share news, projects, articles, and discussions related to Python. It is an excellent resource to stay updated, ask questions, and engage with the Python community. Access it here: https://www.reddit.com/r/python/
+4. Python subreddit (r/python): The Python subreddit (r/python) is a vibrant community where Python enthusiasts share news, projects, articles, and discussions related to Python. It is an excellent resource to stay updated, ask questions, and engage with the Python community. Access it here: [https://www.reddit.com/r/python/](https://www.reddit.com/r/python/)
 
-5. Python Software Foundation (PSF) Blog: The Python Software Foundation's official blog provides updates and news about Python, including new releases, events, conferences, and community initiatives. Stay updated by visiting: https://pyfound.blogspot.com/
+5. Python Software Foundation (PSF) Blog: The Python Software Foundation's official blog provides updates and news about Python, including new releases, events, conferences, and community initiatives. Stay updated by visiting: [https://pyfound.blogspot.com/](https://pyfound.blogspot.com/)
 
-6. Python Bytes Podcast: Python Bytes is a podcast that discusses the latest news, developments, and trends in the Python ecosystem. Hosted by Michael Kennedy and Brian Okken, it provides insightful discussions and recommendations. You can listen to episodes at: https://pythonbytes.fm/
+6. Python Bytes Podcast: Python Bytes is a podcast that discusses the latest news, developments, and trends in the Python ecosystem. Hosted by Michael Kennedy and Brian Okken, it provides insightful discussions and recommendations. You can listen to episodes at: [https://pythonbytes.fm/](https://pythonbytes.fm/)
 
-7. PyCon Videos: PyCon is a conference for the Python community, and they make their recorded talks and presentations available on their website. You can find a wide range of videos covering various Python topics and stay up-to-date with the latest trends. Access it here: https://www.youtube.com/user/PyConTV
+7. PyCon Videos: PyCon is a conference for the Python community, and they make their recorded talks and presentations available on their website. You can find a wide range of videos covering various Python topics and stay up-to-date with the latest trends. Access it here: [https://www.youtube.com/user/PyConTV](https://www.youtube.com/user/PyConTV)
 
-8. Towards Data Science - Python: Towards Data Science is a popular platform for data science and machine learning articles. Their Python section covers tutorials, best practices, and updates related to Python in the context of data science and machine learning. Explore it at: https://towardsdatascience.com/tagged/python
+8. Towards Data Science - Python: Towards Data Science is a popular platform for data science and machine learning articles. Their Python section covers tutorials, best practices, and updates related to Python in the context of data science and machine learning. Explore it at: [https://towardsdatascience.com/tagged/python](https://towardsdatascience.com/tagged/python)
 
 By regularly following these resources, you can stay informed about Python 3, new features, best practices, libraries, and emerging trends in the Python community.
 
 ----
 
-**What is Python? What are the benefits of using Python?**
+## **What is Python? What are the benefits of using Python?**
 
-Python is a high-level, interpreted, general-purpose programming language. Being a general-purpose language,
-it can be used to build almost any type of application with the right tools/libraries. Additionally, python
-supports objects, modules, threads, exception-handling, and automatic memory management which help in
-modelling real-world problems and building applications to solve these problems.
+Python is a high-level, interpreted, general-purpose programming language. Being a general-purpose language, it can be used to build almost any type of application with the right tools/libraries.
+
+Additionally, python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.
 
 Benefits of using Python:
-Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes
-readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of
-scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
-Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community
-of developers for Rapid Application Development and deployment.
+- Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes.
+- Readability and therefore reduces the cost of program maintenance.
+- Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
+- Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.
 
 ----
 
-**What is a dynamically typed language?**
+## **What is a dynamically typed language?**
 
-Before we understand a dynamically typed language, we should learn about what typing is. Typing refers to
-type-checking in programming languages. In a strongly-typed language, such as Python, "1" + 2 will result
-in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types).
+Before we understand a dynamically typed language, we should learn about what typing is. Typing refers to type-checking in programming languages. In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types).
+
 On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as result.
-Type-checking can be done at two stages -
-Static - Data Types are checked before execution.
-Dynamic - Data Types are checked during execution.
+
+Type-checking can be done at two stages:
+
+## **Static** - Data Types are checked before execution.
+
+## **Dynamic** - Data Types are checked during execution.
+
 Python is an interpreted language, executes each statement line by line and thus type-checking is
 done on the fly, during execution. Hence, Python is a Dynamically Typed Language.
 
 ----
 
-**What is an Interpreted language?**
+## **What is an Interpreted language?**
 
-An Interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and
-Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from
-the source code, with no intermediary compilation step.
+An Interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.
 
 ----
 
-**What is PEP 8 and why is it important?**
+## **What is PEP 8 and why is it important?**
 
-PEP stands for Python Enhancement Proposal. A PEP is an official design document providing information to the
-Python community, or describing a new feature for Python or its processes. PEP 8 is especially important since
-it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community
-requires you to follow these style guidelines sincerely and strictly.
+PEP stands for Python Enhancement Proposal. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes.
+
+PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.
 
 ----
 
-**What is Scope in Python?**
+## **What is Scope in Python?**
 
-Every object in Python functions within a scope. A scope is a block of code where an object in Python remains
-relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have
-a scope defined for them where you could use their objects without any prefix. A few examples of scope created
-during code execution in Python are as follows:
+Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix.
+
+A few examples of scope created during code execution in Python are as follows:
 - A local scope refers to the local objects available in the current function.
 - A global scope refers to the objects available throughout the code execution since their inception.
 - A module-level scope refers to the global objects of the current module accessible in the program.
@@ -136,10 +133,9 @@ Note: Local scope objects can be synced with global scope objects using keywords
 
 ----
 
-**What are lists and tuples? What is the key difference between the two?**
+## **What are lists and tuples? What is the key difference between the two?**
 
-Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects
-stored in both sequences can have different data types.
+Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects stored in both sequences can have different data types.
 
 Lists are represented with square brackets:
 
@@ -153,50 +149,43 @@ while tuples are represented with parantheses:
 ('ansh', 5, 0.97).
 ```
 
-But what is the real difference between the two?
-The key difference between the two is that while lists are mutable, tuples on the other hand are immutable
-objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and
-cannot be modified in any manner. You can run the following example on Python IDLE to confirm the difference:
+*But what is the real difference between the two?*
+
+The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner. You can run the following example on Python IDLE to confirm the difference:
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
+    """Main function that demonstrates the difference between tuples and lists.
+    It accesses and modifies elements of a tuple and a list to illustrate their behavior.
+    """    
     example_tuple = ('sara', 6, 5, 0.97)
     example_list = ['sara', 6, 5, 0.97]
 
-    print(example_tuple[0]) # output => 'sara'
-    print(example_list[0]) # output => 'sara'
+    print(example_tuple[0]) # 'sara'
+    print(example_list[0]) # 'sara'
 
     # my_tuple[0] = 'ansh' # modifying tuple => throws an error
     # Exception has occurred: TypeError
     # 'tuple' object does not support item assignment
 
-    example_list[0] = 'ansh' # modifying list => list modified
-    print(example_tuple[0]) # output => 'sara'
-    print(example_list[0]) # output => 'ansh'
+    example_list[0] = 'ansh' # moifying list
+    print(example_tuple[0]) # 'sara'
+    print(example_list[0]) # 'ansh'
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-sara
-sara
-sara
-ansh
-"""
 ```
 
 ----
 
-**What are the common built-in data types in Python?**
+## **What are the common built-in data types in Python?**
 
-There are several built-in data types in Python. Although, Python doesn't require data types to be defined
-explicitly during variable declarations type errors are likely to occur if the knowledge of data types
-and their compatibility with each other are neglected. Python provides type() and isinstance() functions
-to check the type of these variables. These data types can be grouped into the following categories-
+There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected.
+
+Python provides type() and isinstance() functions to check the type of these variables. These data types can be grouped into the following categories:
 
 __None Type__
 
@@ -204,7 +193,7 @@ None keyword represents the null values in Python. Boolean equality operation ca
 
 | Class Name | Description | Example |
 | --------- | ------------ | ------- |
-| NoneType | Represents the NULL values in Python. | ```python print(type(None)) ``` |
+| NoneType | Represents the NULL values in Python. | ```python print(type(None))``` |
 
 __Numeric Types__
 
@@ -218,11 +207,10 @@ There are three distinct numeric types:
 | ---------- | ----------- | ------- |
 | int | Stores integer literals including hex, octal and binary numbers as integers. | ```print(443)``` |
 | float | Stores literals containing decimal values and/or exponent signs as floating-point numbers. | ```print(34.89)``` |
-| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```print(complex(3)), Output: (3+0j)``` |
-| bool | Stores boolean value (True or False). | ```print(1 == 1), Output: True``` |
+| complex | Stores complex numbers in the form (A + Bj) and has attributes: real and image. | ```print(complex(3)), output: (3+0j)``` |
+| bool | Stores boolean value (True or False). | ```print(1 == 1), output: True``` |
 
-Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal
-to store floating-point numbers with user-defined precision.
+Note: The standard library also includes [fractions](https://docs.python.org/3/library/fractions.html) to store rational numbers and decimal to store floating-point numbers with user-defined precision.
 
 __Sequence Types:__
 
@@ -231,21 +219,24 @@ According to Python Docs, there are three basic Sequence Types:
 - tuples
 - range objects.
 
-Sequence types have the in and not in operators defined for their traversing their elements. These operators share the same priority as
-the comparison operations.
+Sequence types have the in and not in operators defined for their traversing their elements. These operators share the same priority as the comparison operations.
 
 | Class Name | Description | Example |
 | ---------- | ----------- | ------- |
-| list | Mutable sequence used to store collection of items. | ```python print([1,2,3,4]) ``` |
-| tuple | Immutable sequence used to store collection of items. | ```python print(("mouse", [8, 4, 6], (1, 2, 3))) ``` |
-| range | Represents an immutable sequence of numbers generated during execution. | ```python range(3, 6) ``` |
-| str | Immutable sequence of Unicode code points to store textual data. | ```python print("This is an example string") ``` |
+| list | Mutable sequence used to store collection of items. | ```python print([1,2,3,4])``` |
+| tuple | Immutable sequence used to store collection of items. | ```python print(("mouse", [8, 4, 6], (1, 2, 3)))``` |
+| range | Represents an immutable sequence of numbers generated during execution. | ```python range(3, 6)``` |
+| str | Immutable sequence of Unicode code points to store textual data. | ```python print("This is an example string")``` |
 
-Note: The standard library also includes additional types for processing:
+*Note:*
+
+The standard library also includes additional types for processing:
+
 1. Binary data such as
    * bytearray - ```array1 = bytearray(str, 'utf-8') # encoding the string with utf-8.```
    * bytes - ```b'\xf0\xf1\xf2'.hex() # Return a string object containing two hexadecimal digits for each byte in the instance.```
    * [memoryview](https://www.geeksforgeeks.org/memoryview-in-python/) - ```memoryview(b'abcefg')```, and ...
+
 2. Text strings such as str.
 
 __Mapping Types:__
@@ -275,8 +266,7 @@ Module is an additional built-in type supported by the Python Interpreter. It su
 mymod.myobj
 ```
 
-where mymod is a module and myobj references a name defined in m's symbol table. The module's symbol table resides in a
-very special attribute of the module __dict__, but direct assignment to this module is neither possible nor recommended.
+where mymod is a module and myobj references a name defined in m's symbol table. The module's symbol table resides in a very special attribute of the module __dict__, but direct assignment to this module is neither possible nor recommended.
 
 __Callable Types:__
 
@@ -284,26 +274,29 @@ Callable types are the types to which function call can be applied. They can be 
 
 ----
 
-**What is 'pass' in Python?**
+## **What is 'pass' in Python?**
 
-The pass keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may
-execute during runtime but has yet to be written. Without the pass statement in the following code, we may run into some errors during code execution.
+The pass keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written. Without the pass statement in the following code, we may run into some errors during code execution.
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def empty_func_with_pass():
-    """Do nothing here."""
+    """
+    Do nothing here.
+    """
     pass
 
 def empty_func_without_pass():
-    """Do othing here without using
-    pass statement.
+    """
+    Do othing here without using pass statement.
     """
 
 def main():
-    """Running code."""
+    """
+    Running code.
+    """
     # nothing happens
     empty_func_with_pass()
     # no pass statement in python 3 needed
@@ -315,7 +308,7 @@ if __name__ == '__main__':
 
 ----
 
-**What are modules and packages in Python?**
+## **What are modules and packages in Python?**
 
 Python packages and Python modules are two mechanisms that allow for modular programming in Python. Modularizing has several advantages:
 
@@ -328,9 +321,9 @@ __Reusability:__ Functions defined in a module can be easily reused by other par
 
 __Scoping:__ Modules typically define a separate namespace, which helps avoid confusion between identifiers from other parts of the program.
 
-**Modules**, in general, are **simply Python files** with a **.py** extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the import statement. If partial functionality is needed, import the requisite classes or functions using from foo import bar.
+## **Modules**, in general, are **simply Python files** with a **.py** extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the import statement. If partial functionality is needed, import the requisite classes or functions using from foo import bar.
 
-**Packages** allow for **hierarchial structuring** of the module namespace using dot notation. As, modules help
+## **Packages** allow for **hierarchial structuring** of the module namespace using dot notation. As, modules help
 avoid clashes between global variable names, in a similar manner, packages help avoid clashes between
 module names. Creating a package is easy since it makes use of the system's inherent file structure.
 So just stuff the modules into a folder and there you have it, the folder name as the package name.
@@ -342,9 +335,9 @@ package to the local namespace, thus, it is practically useless.
 
 ----
 
-**What are global, protected and private attributes in Python?**
+## **What are global, protected and private attributes in Python?**
 
-**Global variables** are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we
+## **Global variables** are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we
 use the global keyword.
 
 ```python
@@ -352,26 +345,28 @@ use the global keyword.
 # -*- coding: utf-8 -*-
 
 def print_string(input_string):
-  x = input_string
-  print(f"Python is {x}")
+    """
+    Prints a formatted string by concatenating the input_string with "Python is".
+    
+    Args:
+        input_string (str): The string to be concatenated with "Python is".
+    """
+    x = input_string
+    print(f"Python is {x}")
 
 def main():
+    """
+    Main function that demonstrates the usage of the print_string function.
+    """    
     x = "awesome"
-    print(print_string("Python is " + x))
-    print("Python is " + x)
+    print(print_string("Python is " + x)) # output: Python is Python is awesome
+    print("Python is " + x) # output: Python is awesome
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-Python is Python is awesome
-None
-Python is awesome
-"""
 ```
 
-**Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
+## **Protected attributes** are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and
 modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
 ```python
@@ -379,28 +374,37 @@ modified from outside the class they are defined in but a responsible developer 
 # -*- coding: utf-8 -*-
 
 class Student:
+    """
+    A class representing a student with protected attributes.
+    """
+
     _schoolName = 'XYZ School' # protected class attribute
+
     def __init__(self, name, age):
+        """
+        Initializes a Student object.
+
+        Args:
+            name (str): The name of the student.
+            age (int): The age of the student.
+        """
         self._name = name # protected instance attribute
         self._age = age # protected instance attribute
 
 def main():
+    """
+    Main function that demonstrates usage of Student class.
+    """ 
     student_1 = Student("Jack", 25)
-    print(student_1._name)
+    print(student_1._name) # Jack
     student_1._name = "John"
-    print(student_1._name)
+    print(student_1._name) # John
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-Jack
-John
-"""
 ```
 
-**Private attributes** are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified
+## **Private attributes** are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified
 from the outside directly and will result in an AttributeError if such an attempt is made.
 
 ```python
@@ -408,18 +412,36 @@ from the outside directly and will result in an AttributeError if such an attemp
 # -*- coding: utf-8 -*-
 
 class Geek:
+    """
+    A class representing a geek with single and double underscore methods.
+    """
+
     def _single_method(self):
+        """
+        A single underscore method.
+        """
         pass
     
-    def __double_method(self): # for mangling
+    def __double_method(self):
+        """
+        A double underscore method (mangled).
+        """
         pass
 
 class Pyth(Geek):
-    def __double_method(self): # for mangling
+
+    def __double_method(self):
+        """
+        Overridden double underscore method in the Pyth class (mangled).
+        """
         pass
 
 def main():
+    """
+    Main function.
+    """
     pass
+
 
 if __name__ == '__main__':
     main()
@@ -430,7 +452,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is the use of 'self' in Python?**
+## **What is the use of 'self' in Python?**
 
 Used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python.
 
@@ -472,7 +494,7 @@ The Toyota Corolla is driving for 50 kilometers.
 ```
 ----
 
-**What is '__init__'?**
+## **What is '__init__'?**
 
 python **__init__** is a constructor method in Python and is **automatically called to allocate memory when a new object/instance is created**. All classes have such a __method associated with them__. It helps in distinguishing methods and attributes of a class from local variables.
 
@@ -481,36 +503,49 @@ python **__init__** is a constructor method in Python and is **automatically cal
 # -*- coding: utf-8 -*-
 
 class Student:
+    """
+    A class representing a student.
+
+    Attributes:
+        firstname (str): The first name of the student.
+        lastname (str): The last name of the student.
+        age (int): The age of the student.
+        section (str): The section the student belongs to.
+    """
+
     def __init__(self, fname, lname, age, section):
+        """
+        Initializes a new instance of the Student class.
+
+        Args:
+            fname (str): The first name of the student.
+            lname (str): The last name of the student.
+            age (int): The age of the student.
+            section (str): The section the student belongs to.
+        """
         self.firstname = fname
         self.lastname = lname
         self.age = age
         self.section = section
 
+
 def main():
     stu_1 = Student("Sara", "Ansh", 22, "A2")
-    print(stu_1)
+    print(stu_1) # <__main__.Student object at 0x000001DC979A53C0>
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# <__main__.Student object at 0x000001DC979A53C0>
 ```
 
 ----
 
-**What is 'break', 'continue' and 'pass' in Python?**
+## **What is 'break', 'continue' and 'pass' in Python?**
 
-__break__ - The break statement terminates the loop immediately and the control flows to the statement after
-the body of the loop.
+__break__ - The break statement terminates the loop immediately and the control flows to the statement after the body of the loop.
 
-__continue__ - The continue statement terminates the current iteration of the statement, skips the rest of
-the code in the current iteration and the control flows to the next iteration of the loop.
+__continue__ - The continue statement terminates the current iteration of the statement, skips the rest of the code in the current iteration and the control flows to the next iteration of the loop.
 
-__pass__ - As explained above, the pass keyword in Python is generally used to fill up empty blocks and
-is similar to an empty statement represented by a semi-colon in languages such as
-Java, C++, Javascript, etc.
+__pass__ - As explained above, the pass keyword in Python is generally used to fill up empty blocks and is similar to an empty statement represented by a semi-colon in languages such as Java, C++, Javascript, etc.
 
 ```python
 #!/usr/bin/python3
@@ -525,24 +560,16 @@ def main():
             break
         elif (p % 2 == 0):
             continue
-        print(p) # output => 1 3 1 3 1
-    print(current) # output => 0
+        print(p) # 1 3 1 3 1
+    print(current) # 0
 
 if __name__ == '__main__':
     main()
-    
-# Output:
-# 1
-# 3
-# 1
-# 3
-# 1
-# 0
 ```
 
 ----
 
-**What are unit tests in Python?**
+## **What are unit tests in Python?**
 
 Unit test is a unit testing framework of Python.
 
@@ -550,10 +577,7 @@ Unit testing means testing different components of software separately.
 
 __Can you think about why unit testing is important?__
 
-Imagine a scenario, you are building software that uses three components namely A, B, and C.
-Now, suppose your software breaks at a point time. How will you find which component was
-responsible for breaking the software? Maybe it was component A that failed, which in turn
-failed component B, and this actually failed the software. There can be many such combinations.
+Imagine a scenario, you are building software that uses three components namely A, B, and C. Now, suppose your software breaks at a point time. How will you find which component was responsible for breaking the software? Maybe it was component A that failed, which in turn failed component B, and this actually failed the software. There can be many such combinations.
 
 This is why it is necessary to test each and every component properly so that we know which component might be highly responsible for the failure of the software.
 
@@ -566,38 +590,64 @@ Example can be viewed here:
 import random
 import unittest
 
+import unittest
+
 class Test(unittest.TestCase):
+    """
+    A class that contains test cases for the functionality of certain methods.
+
+    Inherits from unittest.TestCase.
+
+    Test methods:
+        - test_upper
+        - test_isupper
+        - test_split
+    """
+
     def test_upper(self):
+        """
+        Test case to check the upper() method of strings.
+
+        It asserts that calling the upper() method on the string "test1" returns 'TEST1'.
+        """
         self.assertEqual("test1".upper(), 'TEST1')
 
     def test_isupper(self):
+        """
+        Test case to check the isupper() method of strings.
+
+        It asserts that the string 'TEST1' is considered uppercase by the isupper() method,
+        and that the string "test2" is not considered uppercase.
+        """
         self.assertTrue('TEST1'.isupper())
         self.assertFalse("test2".isupper())
 
     def test_split(self):
+        """
+        Test case to check the split() method of strings.
+
+        It asserts that calling the split() method on the string 'hello world' returns
+        the list ['hello', 'world'].
+
+        Additionally, it checks that calling split() with a non-string separator (2 in this case)
+        raises a TypeError.
+        """
         s = 'hello world'
         self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
+        # Check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
 
+
 if __name__ == '__main__':
     unittest.main()
-
-# Output:
-# ----------------------------------------------------------------------
-# Ran 3 tests in 0.001s
-# 
-# OK
 ```
 
 ----
 
-**What are 'docstrings' in Python?**
+## **What are 'docstrings' in Python?**
 
-Documentation string or docstring is a multiline string used to document a specific code segment.
-The docstring should describe what the function or method does. The ensemble of docstrings should
-be read like a history in the program.
+Documentation string or docstring is a multiline string used to document a specific code segment. The docstring should describe what the function or method does. The ensemble of docstrings should be read like a history in the program.
 
 ```python
 #!/usr/bin/python3
@@ -665,7 +715,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is slicing in Python?**
+## **What is slicing in Python?**
 
 As the name suggests, slicing is taking parts of.
 
@@ -705,7 +755,7 @@ if __name__ == '__main__':
 
 ----
 
-**Explain how can you make a Python Script executable on Unix?**
+## **Explain how can you make a Python Script executable on Unix?**
 
 Script file must begin with:
 
@@ -726,10 +776,9 @@ if __name__ == '__main__':
 
 ----
 
-**What is the difference between python arrays and lists?**
+## **What is the difference between python arrays and lists?**
 
-*Arrays* in python can only contain __elements of same data types__ i.e., data type of array should be homogeneous.
-It is a thin wrapper around C language arrays and consumes far less memory than lists.
+*Arrays* in python can only contain __elements of same data types__ i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
 
 ```python
 #!/usr/bin/python3
@@ -775,9 +824,7 @@ itemsize -- the length in bytes of one array item
 """
 ```
 
-*Lists* in python can contain elements of different data types i.e., data
-type of lists can be heterogeneous.
-It has the disadvantage of consuming large memory.
+*Lists* in python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.
 
 ```python
 #!/usr/bin/python3
@@ -807,13 +854,16 @@ if __name__ == '__main__':
 import array
 
 def main():
+    """
+    Main program.
+    """
     a = array.array('i', [1, 2, 3])
     for i in a:
-        print(i, end=' ') # OUTPUT: 1 2 3
+        print(i, end=' ') # 1 2 3
     # a = array.array('i', [1, 2, 'string']) #OUTPUT: TypeError: an integer is required (got type str)
     a = [1, 2, 'string']
     for i in a:
-        print(i, end=' ') # OUTPUT: 1 2 string
+        print(i, end=' ') # 1 2 string
 
 if __name__ == '__main__':
     main()
@@ -821,23 +871,19 @@ if __name__ == '__main__':
 
 ----
 
-**How is memory managed in Python?**
+## **How is memory managed in Python?**
 
-Memory management in Python is handled by the **Python Memory Manager**. The memory allocated by the manager is
-in form of a **private heap space dedicated to Python**. All Python objects are stored in this heap and being
-private, it is **inaccessible to the programmer**. Though, python does provide some core API functions to work
-upon the private heap space.
+Memory management in Python is handled by the **Python Memory Manager**. The memory allocated by the manager is in form of a **private heap space dedicated to Python**. All Python objects are stored in this heap and being private, it is **inaccessible to the programmer**. Though, python does provide some core API functions to work upon the private heap space.
 
 Additionally, Python has an **in-built garbage collection** to recycle the unused memory for the private heap space.
 
 ----
 
-**What are Python namespaces? Why are they used?**
+## **What are Python namespaces? Why are they used?**
 
 A namespace in Python ensures that object names in a program are unique and can be used without any conflict.
 
-Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding *object as value*.
-This allows for multiple namespaces to use the same name and map it to a separate object.
+Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding *object as value*. This allows for multiple namespaces to use the same name and map it to a separate object.
 
 A few examples of namespaces are as follows:
 
@@ -848,9 +894,7 @@ a function call and gets cleared when the function returns.
 current project. This namespace is created when the package is imported in the script and lasts
 until the execution of the script.
 
-*Built-in Namespace* includes built-in functions of core Python and built-in names for various types of exceptions.
-The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of
-that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
+*Built-in Namespace* includes built-in functions of core Python and built-in names for various types of exceptions. The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
 
 ```python
 #!/usr/bin/python3
@@ -894,20 +938,15 @@ if __name__ == '__main__':
     main()
 ```
 
-**What is Scope Resolution in Python?**
+## **What is Scope Resolution in Python?**
 
 Sometimes objects within the same scope have the same name but function differently. In such cases, __scope resolution__ comes into play in Python automatically.
 
 An example of such behavior are:
 
-Python modules namely 'math' and 'cmath' have a lot of functions that are common to both of them - log10(), acos(), exp() etc.
-To resolve this ambiguity, it is necessary to prefix them with their respective module, like math.exp() and cmath.exp().
+Python modules namely 'math' and 'cmath' have a lot of functions that are common to both of them - log10(), acos(), exp() etc. To resolve this ambiguity, it is necessary to prefix them with their respective module, like math.exp() and cmath.exp().
 
-Consider the code below, an object temp has been initialized to 10 globally and
-then to 20 on function call. 
-However, the function call didn't change the value of the temp globally. Here, we
-can observe that Python draws a clear line between global and local variables,
-treating their namespaces as separate identities.
+Consider the code below, an object temp has been initialized to 10 globally and then to 20 on function call. However, the function call didn't change the value of the temp globally. Here, we can observe that Python draws a clear line between global and local variables, treating their namespaces as separate identities.
 
 ```python
 #!/usr/bin/python3
@@ -948,10 +987,9 @@ if __name__ == '__main__':
 
 ----
 
-**What are decorators in Python?**
+## **What are decorators in Python?**
 
-Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure
-of the function itself. They are represented the @decorator_name in Python and are called in a bottom-up fashion.
+Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the @decorator_name in Python and are called in a bottom-up fashion.
 
 For example:
 
@@ -986,10 +1024,9 @@ if __name__ == '__main__':
     main()    
 ```
 
-The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even
-accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner
-nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus,
-keep itself hidden from the global scope.
+The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself.
+
+The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.
 
 ```python
 #!/usr/bin/python3
@@ -1016,7 +1053,7 @@ if __name__ == '__main__':
 
 ----
 
-**What are Dict and List comprehensions?**
+## **What are Dict and List comprehensions?**
 
 Python comprehensions, like decorators, are syntactic sugar constructs that help build altered and filtered lists, dictionaries, or sets
 from a given list, dictionary, or set. Using comprehensions saves a lot of time and code that might be considerably more verbose
@@ -1071,7 +1108,7 @@ They follow the mathematical set builder notation rather than map and filter fun
 
 ----
 
-**What is lambda in Python? Why is it used?**
+## **What is lambda in Python? Why is it used?**
 
 Lambda is an anonymous function in Python, that can accept any number of arguments, but can only have a single expression.
 It is generally used in situations requiring an anonymous function for a short time period. Lambda functions can be used
@@ -1091,21 +1128,15 @@ def my_wrapper(n):
 
 def main():
     mul_five = my_wrapper(5)
-    print(mul_five(2)) # Output: 10
+    print(mul_five(2)) # output: 10
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-10
-10
-"""
 ```
 
 ----
 
-**How do you copy an object in Python?**
+## **How do you copy an object in Python?**
 
 In Python, the assignment statement ('='-operator) does not copy objects. Instead, it creates a binding between
 the existing object and the target variable name. To create copies of an object in Python, we need to use the
@@ -1141,30 +1172,19 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-[1, 2, [3, 5, 6], 7]
-[1, 2, [3, 5, 6], 4]
-[1, 2, [3, 5, 6, 7], 8]
-[1, 2, [3, 5, 6], 4]
-"""
 ```
 
 ----
 
-**What is the difference between xrange and range in Python?**
+## **What is the difference between xrange and range in Python?**
 
-*xrange() and range()* are quite similar in terms of functionality. They both generate a sequence of integers,
-with the only difference that range() returns a Python list, whereas, xrange() returns an xrange object.
+*xrange() and range()* are quite similar in terms of functionality. They both generate a sequence of integers, with the only difference that range() returns a Python list, whereas, xrange() returns an xrange object.
 
 *So how does that make a difference?*
 
-It sure does, because unlike range(), xrange() doesn't generate a static list, it creates the value on the go. This technique is
-commonly used with an object-type generator and has been termed as "yielding".
+It sure does, because unlike range(), xrange() doesn't generate a static list, it creates the value on the go. This technique is commonly used with an object-type generator and has been termed as "yielding".
 
-Yielding is crucial in applications where memory is a constraint. Creating a static list as in range() can lead to a Memory Error in such
-conditions, while, xrange() can handle it optimally by using just enough memory for the generator (significantly less in comparison).
+Yielding is crucial in applications where memory is a constraint. Creating a static list as in range() can lead to a Memory Error in such conditions, while, xrange() can handle it optimally by using just enough memory for the generator (significantly less in comparison).
 
 ```python
 #!/usr/bin/python3
@@ -1172,39 +1192,37 @@ conditions, while, xrange() can handle it optimally by using just enough memory 
 
 def main():
     for i in range(10): # numbers from 0 to 9
-        print(i) # output => 0 1 2 3 4 5 6 7 8 9
+        print(i) # output: 0 1 2 3 4 5 6 7 8 9
     for i in range(1,10): # numbers from 1 to 9
-        print(i) # output => 1 2 3 4 5 6 7 8 9
+        print(i) # output: 1 2 3 4 5 6 7 8 9
     for i in range(1, 10, 2): # skip by two for next
-        print(i) # output => 1 3 5 7 9
+        print(i) # output: 1 3 5 7 9
 
 if __name__ == '__main__':
     main()
 ```
 
-Note: xrange has been deprecated as of Python 3.x. Now range does exactly the same as what xrange used to
-do in Python 2.x, since it was way better to use xrange() than the original range() function in Python 2.x.
+Note: xrange has been deprecated as of Python 3.x. Now range does exactly the same as what xrange used to do in Python 2.x, since it was way better to use xrange() than the original range() function in Python 2.x.
 
 ----
 
-**What is pickling and unpickling?**
+## **What is pickling and unpickling?**
 
 Python library offers a feature - *serialization out of the box*.
 
 Serializing an object refers to transforming it into a format that can be stored, so as to be able to
 deserialize it, later on, to obtain the original object. Here, the pickle module comes into play.
 
-*Pickling:*
+### *Pickling:*
 
-Pickling is the name of the serialization process in Python. Any object in Python can be serialized into a byte stream and dumped as a file in the memory.
-The process of pickling is compact but pickle objects can be compressed further. Moreover, pickle keeps track of the objects it has serialized and the
+Pickling is the name of the serialization process in Python. Any object in Python can be serialized into a byte stream and dumped as a file in the memory. The process of pickling is compact but pickle objects can be compressed further. Moreover, pickle keeps track of the objects it has serialized and the
 serialization is portable across versions. The function used for the above process is:
 
 ```python
 pickle.dump()
 ```
 
-*Unpickling:*
+### *Unpickling:*
 
 Unpickling is the complete inverse of pickling. It deserializes the byte stream to recreate the objects stored in the file and loads the object to memory.
 The function used for the above process is:
@@ -1217,7 +1235,7 @@ Note: Python has another, more primitive, serialization module called marshall, 
 
 ----
 
-**What are generators in Python?**
+## **What are generators in Python?**
 
 Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of
 yield keyword rather than return to return a generator object.
@@ -1253,22 +1271,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-0
-1
-1
-2
-3
-5
-8
-"""
 ```
 
 ----
 
-**What is PYTHONPATH in Python?**
+## **What is PYTHONPATH in Python?**
 
 PYTHONPATH is an environment variable which you can set to add additional directories where Python will
 look for modules and packages.
@@ -1277,9 +1284,9 @@ This is especially useful in maintaining Python libraries that you do not wish t
 
 ----
 
-**What is the use of help() and dir() functions?**
+## **What is the use of help() and dir() functions?**
 
-__help()__
+### __help()__
 
 help() function in Python is used to display the documentation of modules, classes, functions, keywords,
 etc.
@@ -1299,7 +1306,7 @@ if __name__ == '__main__':
 
 If no parameter is passed to the help() function, then an interactive help utility is launched on the console.
 
-__dir()__
+### __dir()__
 
 dir() function tries to return a valid list of attributes and methods of the object it is called upon. It behaves differently with different objects, as it aims to produce the most relevant data, rather than the complete information.
 
@@ -1332,7 +1339,7 @@ With no arguments passed, it returns a list of attributes in the current scope.
 
 ----
 
-**What is the difference between .py and .pyc files?**
+## **What is the difference between .py and .pyc files?**
 
 .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program.
 We get bytecode after compilation of .py file (source code).
@@ -1341,12 +1348,11 @@ We get bytecode after compilation of .py file (source code).
 
 Before executing a python program python interpreter checks for the compiled files. If the file is
 present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles
-it to .pyc file and then python virtual machine executes it.
-Having .pyc file saves you the compilation time.
+it to .pyc file and then python virtual machine executes it. Having .pyc file saves you the compilation time.
 
 ----
 
-**How Python is interpreted?**
+## **How Python is interpreted?**
 
 Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation.
 
@@ -1362,7 +1368,7 @@ by the official CPython or JIT(Just in Time compiler) compiled by PyPy.
 
 ----
 
-**How are arguments passed by value or by reference in python?**
+## **How are arguments passed by value or by reference in python?**
 
 *Pass by value:* Copy of the actual object is passed. Changing the value of the copy of the object
 will not change the value of the original object.
@@ -1391,7 +1397,7 @@ if __name__ == '__main__':
 
 ----
 
-**What are iterators in Python?**
+## **What are iterators in Python?**
 
 An iterator is an object.
 
@@ -1425,8 +1431,8 @@ class ArrayList:
 def main():
     array_obj = ArrayList([1, 2, 3])
     it = iter(array_obj)
-    print(next(it)) #output: 2
-    print(next(it)) #output: 3
+    print(next(it)) # output: 2
+    print(next(it)) # output: 3
     print(next(it))
     # Throws Exception
     # Traceback (most recent call last):
@@ -1435,18 +1441,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-"""
-Output:
-1
-2
-3
-"""
 ```
 
 ----
 
-**Explain how to delete a file in Python?**
+## **Explain how to delete a file in Python?**
 
 Use command:
 
@@ -1462,20 +1461,32 @@ print("File Removed!")
 
 ----
 
-**Explain split() and join() functions in Python?**
+## **Explain split() and join() functions in Python?**
 
 You can use split() function to split a string based on a delimiter to a list of strings.
 You can use join() function to join a list of strings based on a delimiter to give a single string.
-string = "This is a string."
-string_list = string.split(' ') # delimiter is ‘space’ character or ‘ ‘
-print(string_list) #output: ['This', 'is', 'a', 'string.']
-print(' '.join(string_list)) # output: This is a string.
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    string = "This is a string."
+    string_list = string.split(' ') # delimiter is 'space' character or ' '
+    print(string_list) # output: ['This', 'is', 'a', 'string.']
+    print(' '.join(string_list)) # output: This is a string.
+
+if __name__ == '__main__':
+    main()
+```
 
 ----
 
-**What does *args and **kwargs mean?**
+## **What does *args and **kwargs mean?**
 
-__*args__
+### __*args__
 
 is a special syntax used in the function definition to pass variable-length arguments.
 
@@ -1492,74 +1503,93 @@ def multiply(a, b, *argv):
     return mul
 
 def main():
-    print(multiply(1, 2, 3, 4, 5)) #output: 120
+    print(multiply(1, 2, 3, 4, 5)) # output: 120
 
 if __name__ == '__main__':
     main()
-    
-"""
-Output:
-120
-"""
 ```
 
 __**kwargs__
 
-is a special syntax used in the function definition to pass variable-length keyworded arguments.
-Here, also, “kwargs” is used just by convention. You can use any other name.
-Keyworded argument means a variable that has a name when passed to a function.
-It is actually a dictionary of the variable names and its value.
+is a special syntax used in the function definition to pass variable-length keyworded arguments. Here, also, “kwargs” is used just by convention. You can use any other name. Keyworded argument means a variable that has a name when passed to a function. It is actually a dictionary of the variable names and its value.
 
 ```python
-def tellArguments(**kwargs):
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def tell_arguments(**kwargs):
+   """Print key and value in console
+   """
    for key, value in kwargs.items():
        print(key + ": " + value)
-tellArguments(arg1 = "argument 1", arg2 = "argument 2", arg3 = "argument 3")
-# output:
-# arg1: argument 1
-# arg2: argument 2
-# arg3: argument 3
+
+def main():
+    """main program
+    """
+    tell_arguments(arg1 = "argument 1", arg2 = "argument 2", arg3 = "argument 3")
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**What are negative indexes and why are they used?**
+## **What are negative indexes and why are they used?**
 
 Negative indexes are the indexes from the end of the list or tuple or string.
 
 arr[-1] means the last element of array arr[]
 
 ```python
-arr = [1, 2, 3, 4, 5, 6]
-# get the last element
-print(arr[-1]) # output 6
-#get the second last element
-print(arr[-2]) # output 5
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    arr = [1, 2, 3, 4, 5, 6]
+    # get the last element
+    print(arr[-1]) # output 6
+    # get the second last element
+    print(arr[-2]) # output 5
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**How do you create a class in Python?**
+## **How do you create a class in Python?**
 
 To create a class in python, we use the keyword 'class' as shown in the example below:
 
 ```python
-class InterviewbitEmployee:
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-   def __init__(self, emp_name):
-       self.emp_name = emp_name
+class Employee:
 
-# To instantiate or create an object from the class created above, we do the following:
-emp_1=InterviewbitEmployee("Mr. Employee")
+    def __init__(self, emp_name):
+        self.emp_name = emp_name
 
-# To access the name attribute, we just call the attribute using the dot operator as shown below:
-print(emp_1.emp_name) # output: Mr. Employee
+def main():
+    """main program
+    """
+    # To instantiate or create an object from the class created above, we do the following:
+    emp_1 = Employee("Mr. Employee")
+
+    # To access the name attribute, we just call the attribute using the dot operator as shown below:
+    print(emp_1.emp_name) # output: Mr. Employee
+
+if __name__ == '__main__':
+    main()
 ```
 
 To create methods inside the class, we include the methods under the scope of the class as shown below:
 
 ```python
-class InterviewbitEmployee:
+class Employee:
+
    def __init__(self, emp_name):
        self.emp_name = emp_name
        
@@ -1567,10 +1597,7 @@ class InterviewbitEmployee:
        print(f"Hello I am {self.emp_name}")
 ```
 
-The self parameter in the init and introduce functions represent the reference to the current class
-instance which is used for accessing attributes and methods of that class. The self parameter has to
-be the first parameter of any method defined inside the class. The method of the class
-InterviewbitEmployee can be accessed as shown below:
+The self parameter in the init and introduce functions represent the reference to the current class instance which is used for accessing attributes and methods of that class. The self parameter has to be the first parameter of any method defined inside the class. The method of the class Employee can be accessed as shown below:
 
 ```python
 emp_1.introduce()
@@ -1595,16 +1622,13 @@ print(emp_1.emp_name) # print employee name
 
 ----
 
-**How does inheritance work in python? Explain it with an example?**
+## **How does inheritance work in python? Explain it with an example?**
 
-Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code
-reusability and helps the developer to maintain applications without redundant code. The class inheriting from
-another class is a child class or also called a derived class. The class from which a child class derives the
-members are called parent class or superclass.
+Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code reusability and helps the developer to maintain applications without redundant code. The class inheriting from another class is a child class or also called a derived class. The class from which a child class derives the members are called parent class or superclass.
 
 Python supports different kinds of inheritance, they are:
 
-__Single Inheritance:__
+### __Single Inheritance:__
 
 Child class derives members of one parent class.
 
@@ -1627,7 +1651,7 @@ print(obj1.par_func())
 print(obj1.child_func())
 ```
 
-__Multi-level Inheritance:__
+### __Multi-level Inheritance:__
 
 The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features
 of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.
@@ -1663,7 +1687,7 @@ print(obj1.a_name)
 obj1.display_names()
 ```
 
-__Multiple Inheritance:__
+### __Multiple Inheritance:__
 
 This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.
 
@@ -1689,7 +1713,7 @@ obj1 = Child()
 obj1.child_func()
 ```
 
-__Hierarchical Inheritance:__
+### __Hierarchical Inheritance:__
 
 When a parent class is derived by more than one child class, it is called hierarchical inheritance.
 
@@ -1713,18 +1737,16 @@ class C(A):
 obj1 = B()
 obj2 = C()
 obj1.a_func()
-obj1.b_func()    #child 1 method
+obj1.b_func() # child 1 method
 obj2.a_func()
-obj2.c_func()    #child 2 method
+obj2.c_func() # child 2 method
 ```
 
 ----
 
-**How do you access parent members in the child class?**
+## **How do you access parent members in the child class?**
 
 Following are the ways using which you can access parent class members within a child class:
-
-
 
 ```python
 # ----
@@ -1777,7 +1799,7 @@ obj.display()
 
 ----
 
-**Are access specifiers used in python?**
+## **Are access specifiers used in python?**
 
 Python does not make use of access specifiers specifically like private, public, protected, etc. However,
 it does not derive this from any variables. It has the concept of imitating the behaviour of variables by
@@ -1810,14 +1832,14 @@ class InterviewbitEmployee:
 
 ----
 
-**Is it possible to call parent class without its instance creation?**
+## **Is it possible to call parent class without its instance creation?**
 
 Yes, it is possible if the base class is instantiated by other child classes or if the base class is a
 static method.
 
 ----
 
-**How is an empty class created in python?**
+## **How is an empty class created in python?**
 
 An empty class does not have any members defined in it. It is created by using the pass keyword (the
 pass command does nothing in python). We can create objects for this class outside the class.
@@ -1835,7 +1857,7 @@ print("Name created = ",obj.name)
 
 ----
 
-**Differentiate between new and override modifiers?**
+## **Differentiate between new and override modifiers?**
 
 The new modifier is used to instruct the compiler to use the new implementation and not the base
 class function. The Override modifier is useful for overriding a base class function inside the
@@ -1843,14 +1865,14 @@ child class.
 
 ----
 
-**Why is finalize used?**
+## **Why is finalize used?**
 
 Finalize method is used for freeing up the unmanaged resources and clean up before the garbage collection method is invoked.
 This helps in performing memory management tasks.
 
 ----
 
-**What is init method in python?**
+## **What is init method in python?**
 
 The init method works similarly to the constructors in Java.
 
@@ -1876,7 +1898,7 @@ emp.introduce()
 
 ----
 
-**How will you check if a class is a child of another class?**
+## **How will you check if a class is a child of another class?**
 
 This is done by using a method called issubclass() provided by python. The method tells us if any
 class is a child of another class by returning true or false accordingly.
@@ -1902,7 +1924,7 @@ Python Pandas Interview Questions
 
 ----
 
-**What do you know about pandas?**
+## **What do you know about pandas?**
 
 Pandas is an open-source, python-based library used in data manipulation applications requiring high performance.
 
@@ -1919,7 +1941,7 @@ Pandas are useful in performing 5 major steps of data analysis:
 
 ----
 
-**Define pandas dataframe?**
+## **Define pandas dataframe?**
 
 A dataframe is a 2D mutable and tabular structure for representing data labelled with axes - rows
 and columns.
@@ -1937,7 +1959,7 @@ dataframe = pd.DataFrame( data, index, columns, dtype)
 
 ----
 
-**How will you combine different pandas dataframes?**
+## **How will you combine different pandas dataframes?**
 
 The dataframes can be combines using the below approaches:
 
@@ -1967,7 +1989,7 @@ f1c.join(df2)
 
 ----
 
-**Can you create a series from the dictionary object in pandas?**
+## **Can you create a series from the dictionary object in pandas?**
 
 One dimensional array capable of storing different data types is called a series.
 We can create pandas series from a dictionary object as shown below:
@@ -1984,18 +2006,16 @@ print(series_obj)
 # dtype: float64
 ```
 
-If an index is not specified in the input method, then the keys of the dictionaries are sorted in ascending
-order for constructing the index. In case the index is passed, then values of the index label will be
-extracted from the dictionary.
+If an index is not specified in the input method, then the keys of the dictionaries are sorted in ascending order for constructing the index. In case the index is passed, then values of the index label will be extracted from the dictionary.
 
 ----
 
-**How will you identify and deal with missing values in a dataframe?**
+## **How will you identify and deal with missing values in a dataframe?**
 
 We can identify if a dataframe has missing values by using the isnull() and isna() methods.
 
 ```python
-missing_data_count=df.isnull().sum()
+missing_data_count = df.isnull().sum()
 ```
 
 We can handle missing values by either replacing the values in the column with 0 as follows ...
@@ -2011,17 +2031,15 @@ df['column_name'] = df['column_name'].fillna((df['column_name'].mean()))
 
 ----
 
-**What do you understand by reindexing in pandas?**
+## **What do you understand by reindexing in pandas?**
 
-Reindexing is the process of conforming a dataframe to a new index with optional filling logic. If the values
-are missing in the previous index, then NaN/NA is placed in the location.
+Reindexing is the process of conforming a dataframe to a new index with optional filling logic. If the values are missing in the previous index, then NaN/NA is placed in the location.
 
-A new object is returned unless a new index is produced that is equivalent to the current one. The copy value
-is set to False. This is also used for changing the index of rows and columns in the dataframe.
+A new object is returned unless a new index is produced that is equivalent to the current one. The copy value is set to False. This is also used for changing the index of rows and columns in the dataframe.
 
 ----
 
-**How to add new column to pandas dataframe?**
+## **How to add new column to pandas dataframe?**
 
 A new column can be added to a pandas dataframe as follows:
 
@@ -2044,7 +2062,7 @@ print(df)
 
 ----
 
-**How will you delete indices, rows and columns from a dataframe?**
+## **How will you delete indices, rows and columns from a dataframe?**
 
 To delete an Index:
 
@@ -2091,32 +2109,37 @@ To delete row/column from dataframe:
 The axis argument is passed to the drop method where if the value is 0, it indicates to drop/delete a
 row and if 1 it has to drop the column.
 
-Additionally, we can try to delete the rows/columns in place by setting the value of inplace to True. This makes
-sure that the job is done without the need for reassignment.
+Additionally, we can try to delete the rows/columns in place by setting the value of inplace to True. This makes sure that the job is done without the need for reassignment.
 
 The duplicate values from the row/column can be deleted by using the drop_duplicates() method.
 
 ----
 
-**Can you get items of series A that are not available in another series B?**
+## **Can you get items of series A that are not available in another series B?**
 
 This can be achieved by using the *~ (not/negation symbol)* and *isin()* method as shown below.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import pandas as pd
-df1 = pd.Series([2, 4, 8, 10, 12])
-df2 = pd.Series([8, 12, 10, 15, 16])
-df1=df1[~df1.isin(df2)]
-print(df1)
-"""
-Output:
-0    2
-1    4
-dtype: int64
-"""
+
+def main():
+    """main program
+    """
+    df1 = pd.Series([2, 4, 8, 10, 12])
+    df2 = pd.Series([8, 12, 10, 15, 16])
+    df1=df1[~df1.isin(df2)]
+    print(df1)
+
+if __name__ == '__main__':
+    main()
 ```
 
-**How will you get the items that are not common to both the given series A and B?**
+----
+
+## **How will you get the items that are not common to both the given series A and B?**
 
 We can achieve this by first performing the union of both series, then taking the intersection of both series.
 Then we follow the approach of getting items of union that are not there in the list of the intersection.
@@ -2124,160 +2147,181 @@ Then we follow the approach of getting items of union that are not there in the 
 The following code demonstrates this:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import pandas as pd
 import numpy as np
-df1 = pd.Series([2, 4, 5, 8, 10])
-df2 = pd.Series([8, 10, 13, 15, 17])
-p_union = pd.Series(np.union1d(df1, df2))  # union of series
-p_intersect = pd.Series(np.intersect1d(df1, df2))  # intersection of series
-unique_elements = p_union[~p_union.isin(p_intersect)]
-print(unique_elements)
-"""
-Output:
-0     2
-1     4
-2     5
-5    13
-6    15
-7    17
-dtype: int64
-"""
-```
 
-**While importing data from different sources, can the pandas library recognize dates?**
+def main():
+    """main program
+    """
+    df1 = pd.Series([2, 4, 5, 8, 10])
+    df2 = pd.Series([8, 10, 13, 15, 17])
+    p_union = pd.Series(np.union1d(df1, df2))  # union of series
+    p_intersect = pd.Series(np.intersect1d(df1, df2))  # intersection of series
+    unique_elements = p_union[~p_union.isin(p_intersect)]
+    print(unique_elements)
 
-Yes, they can, but with some bit of help. We need to add the parse_dates argument while we are reading data
-from the sources. Consider an example where we read data from a CSV file, we may encounter different date-time
-formats that are not readable by the pandas library. In this case, pandas provide flexibility to build our
-custom date parser with the help of lambda functions as shown below:
-
-```python
-import pandas as pd
-from datetime import datetime
-dateparser = lambda date_val: datetime.strptime(date_val, '%Y-%m-%d %H:%M:%S')
-df = pd.read_csv("some_file.csv", parse_dates=['datetime_column'], date_parser=dateparser)
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**What do you understand by NumPy?**
+## **While importing data from different sources, can the pandas library recognize dates?**
 
-NumPy is one of the most popular, easy-to-use, versatile, open-source, python-based, general-purpose package
-that is used for processing arrays.
+Yes, they can, but with some bit of help. We need to add the parse_dates argument while we are reading data from the sources. Consider an example where we read data from a CSV file, we may encounter different date-time formats that are not readable by the pandas library. In this case, pandas provide flexibility to build our custom date parser with the help of lambda functions as shown below:
+
+```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import pandas as pd
+from datetime import datetime
+
+def main():
+    """main program
+    """
+    dateparser = lambda date_val: datetime.strptime(date_val, '%Y-%m-%d %H:%M:%S')
+    df = pd.read_csv("some_file.csv", parse_dates=['datetime_column'], date_parser=dateparser)
+
+if __name__ == '__main__':
+    main()
+```
+
+----
+
+## **What do you understand by NumPy?**
+
+NumPy is one of the most popular, easy-to-use, versatile, open-source, python-based, general-purpose package that is used for processing arrays.
 
 NumPy is short for NUMerical PYthon.
 
-This is very famous for its highly optimized tools that result in high performance and powerful N-Dimensional array processing feature that is
-designed explicitly to work on complex arrays.
+This is very famous for its highly optimized tools that result in high performance and powerful N-Dimensional array processing feature that is designed explicitly to work on complex arrays.
 
-Due to its popularity and powerful performance and its flexibility to perform various operations like trigonometric operations,
-algebraic and statistical computations, it is most commonly used in performing scientific computations and various broadcasting functions.
+Due to its popularity and powerful performance and its flexibility to perform various operations like trigonometric operations, algebraic and statistical computations, it is most commonly used in performing scientific computations and various broadcasting functions.
 
 The NumPy API is used extensively in Pandas, SciPy, Matplotlib, scikit-learn, scikit-image and most other data science and scientific Python packages.
 
 ----
 
-**How are NumPy arrays advantageous over python lists?**
+## **How are NumPy arrays advantageous over python lists?**
 
-The list data structure of python is very highly efficient and is capable of performing various functions.
-But, they have severe limitations when it comes to the computation of vectorized operations which deals
-with element-wise multiplication and addition.
+The list data structure of python is very highly efficient and is capable of performing various functions. But, they have severe limitations when it comes to the computation of vectorized operations which deals with element-wise multiplication and addition.
 
-The python lists also require the information regarding the type of every element which results in overhead as
-type dispatching code gets executes every time any operation is performed on any element. This is where the
-NumPy arrays come into the picture as all the limitations of python lists are handled in NumPy arrays.
+The python lists also require the information regarding the type of every element which results in overhead as type dispatching code gets executes every time any operation is performed on any element.This is where the NumPy arrays come into the picture as all the limitations of python lists are handled in NumPy arrays.
 
-Additionally, as the size of the NumPy arrays increases, NumPy becomes around 30x times faster than the Python List. This is
-because the Numpy arrays are densely packed in the memory due to their homogenous nature. This ensures the memory free up is also faster.
+Additionally, as the size of the NumPy arrays increases, NumPy becomes around 30x times faster than the Python List. This is because the Numpy arrays are densely packed in the memory due to their homogenous nature. This ensures the memory free up is also faster.
 
-**What are the steps to create 1D, 2D and 3D arrays?**
+----
+
+## **What are the steps to create 1D, 2D and 3D arrays?**
 
 ```python
-# 1D array creation:
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
-one_dimensional_list = [1,2,4]
-one_dimensional_arr = np.array(one_dimensional_list)
-print("1D array is : ",one_dimensional_arr) 
-# 2D array creation:
-two_dimensional_list=[[1,2,3],[4,5,6]]
-two_dimensional_arr = np.array(two_dimensional_list)
-print("2D array is : ",two_dimensional_arr)
-# 3D array creation:
-three_dimensional_list=[[[1,2,3],[4,5,6],[7,8,9]]]
-three_dimensional_arr = np.array(three_dimensional_list)
-print("3D array is : ",three_dimensional_arr) 
-# ND array creation: This can be achieved by giving the ndmin attribute. The below example
-# demonstrates the creation of a 6D array:
-ndArray = np.array([1, 2, 3, 4], ndmin=6)
-print(ndArray)
-print('Dimensions of array:', ndArray.ndim)
+
+def main():
+    # 1D array creation:
+    one_dimensional_list = [1,2,4]
+    one_dimensional_arr = np.array(one_dimensional_list)
+    print("1D array is : ",one_dimensional_arr) 
+    # 2D array creation:
+    two_dimensional_list=[[1,2,3],[4,5,6]]
+    two_dimensional_arr = np.array(two_dimensional_list)
+    print("2D array is : ",two_dimensional_arr)
+    # 3D array creation:
+    three_dimensional_list=[[[1,2,3],[4,5,6],[7,8,9]]]
+    three_dimensional_arr = np.array(three_dimensional_list)
+    print("3D array is : ",three_dimensional_arr) 
+    # ND array creation: This can be achieved by giving the ndmin attribute. The below example
+    # demonstrates the creation of a 6D array:
+    ndArray = np.array([1, 2, 3, 4], ndmin=6)
+    print(ndArray)
+    print('Dimensions of array:', ndArray.ndim)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**You are given a numpy array and a new column as inputs. How will you delete the second column and replace the column with a new column value?**
+## **You are given a numpy array and a new column as inputs. How will you delete the second column and replace the column with a new column value?**
 
 ```python
-# Example:
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-# Given array:
-example_array = [[35 53 63]
-                [72 12 22]
-                [43 84 56]]
-New Column values:
-[  
-   20,
-   30,
-   40
-]
-
-# Solution:
 import numpy as np
-#inputs
-inputArray = np.array([[35,53,63],[72,12,22],[43,84,56]])
-new_col = np.array([[20,30,40]])
-# delete 2nd column
-arr = np.delete(inputArray , 1, axis = 1)
-#insert new_col to array
-arr = np.insert(arr , 1, new_col, axis = 1)
-print(arr)
+
+def main():
+    example_array = [[35, 53, 63],
+                     [72, 12, 22],
+                     [43, 84, 56]]
+
+    # New Column values:
+    # [ 
+    #     20,
+    #     30,
+    #     40
+    # ]
+    #inputs
+    inputArray = np.array([[35,53,63],[72,12,22],[43,84,56]])
+    new_col = np.array([[20,30,40]])
+    # delete 2nd column
+    arr = np.delete(inputArray , 1, axis = 1)
+    #insert new_col to array
+    arr = np.insert(arr , 1, new_col, axis = 1)
+    print(arr)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**How will you efficiently load data from a text file?**
+## **How will you efficiently load data from a text file?**
 
-We can use the method numpy.loadtxt() which can automatically read the file’s header and footer lines and
-the comments if any.
+We can use the method numpy.loadtxt() which can automatically read the file’s header and footer lines and the comments if any.
 
-This method is highly efficient and even if this method feels less efficient, then the data should be
-represented in a more efficient format such as CSV etc. Various alternatives can be considered depending
-on the version of NumPy used.
+This method is highly efficient and even if this method feels less efficient, then the data should be represented in a more efficient format such as CSV etc. Various alternatives can be considered depending on the version of NumPy used.
 
 Following are the file formats that are supported:
 
-*Text files:* These files are generally very slow, huge but portable and are human-readable.
+*Text files*: These files are generally very slow, huge but portable and are human-readable.
 
 *Raw binary*: This file does not have any metadata and is not portable. But they are fast.
 
-*Pickle:* These are borderline slow and portable but depends on the NumPy versions.
+*Pickle*: These are borderline slow and portable but depends on the NumPy versions.
 
-*HDF5:* This is known as the High-Powered Kitchen Sink format which supports both PyTables and h5py format.
+*HDF5*: This is known as the High-Powered Kitchen Sink format which supports both PyTables and h5py format.
 
-*.npy:* This is NumPy's native binary data format which is extremely simple, efficient and portable.
+*.npy*: This is NumPy's native binary data format which is extremely simple, efficient and portable.
 
-**How will you read CSV data into an array in NumPy?**
+## **How will you read CSV data into an array in NumPy?**
 
 This can be achieved by using the genfromtxt() method by setting the delimiter as a comma.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from numpy import genfromtxt
-csv_data = genfromtxt('sample_file.csv', delimiter=',')
+
+def main():
+    csv_data = genfromtxt('sample_file.csv', delimiter=',')
+    print(csv_data)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**How will you sort the array based on the Nth column?**
+## **How will you sort the array based on the Nth column?**
 
 For example, consider an array arr.
 
@@ -2308,25 +2352,35 @@ arr.view('i8,i8,i8').sort(order=['f1'], axis=0)
 
 ----
 
-**How will you find the nearest value in a given numpy array?**
+## **How will you find the nearest value in a given numpy array?**
 
 We can use the argmin() method of numpy as shown below:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
+
 def find_nearest_value(arr, value):
-   arr = np.asarray(arr)
-   idx = (np.abs(arr - value)).argmin()
-   return arr[idx]
-# driver code
-arr = np.array([ 0.21169,  0.61391, 0.6341, 0.0131, 0.16541,  0.5645,  0.5742])
-value = 0.52
-print(find_nearest_value(arr, value)) # Prints 0.5645
+    arr = np.asarray(arr)
+    idx = (np.abs(arr - value)).argmin()
+    return arr[idx]
+
+def main():
+    """main program
+    """
+    arr = np.array([ 0.21169,  0.61391, 0.6341, 0.0131, 0.16541,  0.5645,  0.5742])
+    value = 0.52
+    print(find_nearest_value(arr, value)) # Prints 0.5645
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**How will you reverse the numpy array using one line of code?**
+## **How will you reverse the numpy array using one line of code?**
 
 This can be done as shown in the following:
 
@@ -2338,29 +2392,32 @@ where arr = original given array, reverse_array is the resultant after reversing
 
 ----
 
-**How will you find the shape of any given NumPy array?**
+## **How will you find the shape of any given NumPy array?**
 
-We can use the shape attribute of the numpy array to find the shape. It returns the shape of the array in
-terms of row count and column count of the array.
+We can use the shape attribute of the numpy array to find the shape. It returns the shape of the array in terms of row count and column count of the array.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import numpy as np
-arr_two_dim = np.array([("x1","x2", "x3","x4"),
-             ("x5","x6", "x7","x8" )])
-arr_one_dim = np.array([3,2,4,5,6])
-# find and print shape
-print("2-D Array Shape: ", arr_two_dim.shape)
-print("1-D Array Shape: ", arr_one_dim.shape)
-"""
-Output:
-2-D Array Shape:  (2, 4)
-1-D Array Shape:  (5,)
-"""
+
+def main():
+    """main program
+    """
+    arr_two_dim = np.array([("x1","x2", "x3","x4"), ("x5","x6", "x7","x8" )])
+    arr_one_dim = np.array([3,2,4,5,6])
+    # find and print shape
+    print("2-D Array Shape: ", arr_two_dim.shape)
+    print("1-D Array Shape: ", arr_one_dim.shape)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Differentiate between a package and a module in python?**
+## **Differentiate between a package and a module in python?**
 
 The module is a single python file. A module can import other modules (other python files) as objects.
 Whereas, a package is the folder/directory where different sub-packages and the modules reside.
@@ -2375,7 +2432,7 @@ A python package is created by following the below steps:
 
 ----
 
-**What are some of the most commonly used built-in modules in Python?**
+## **What are some of the most commonly used built-in modules in Python?**
 
 Python modules are the files having python code which can be functions, variables or classes.
 These go by *.py* extension. The most commonly available built-in modules are:
@@ -2390,21 +2447,29 @@ import datetime
 import JSON
 ```
 
-**What are lambda functions?**
+----
 
-Lambda functions are generally inline, anonymous functions represented by a single expression. They are used
-for creating function objects during runtime. They can accept any number of parameters. They are usually used
-where functions are required only for a short period. They can be used as:
+## **What are lambda functions?**
+
+Lambda functions are generally inline, anonymous functions represented by a single expression. They are used for creating function objects during runtime. They can accept any number of parameters. They are usually used where functions are required only for a short period. They can be used as:
 
 ```python
-mul_func = lambda x,y : x*y
-print(mul_func(6, 4))
-# Output: 24
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    mul_func = lambda x,y : x*y
+    print(mul_func(6, 4))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**How can you generate random numbers?**
+## **How can you generate random numbers?**
 
 Python provides a module called random using which we can generate random numbers.
 
@@ -2412,46 +2477,85 @@ We have to import a random module and call the random() method as shown below:
 The random() method generates float values lying between 0 and 1 randomly.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import random
-print(random.random())
+
+def main():
+    """main program
+    """
+    print(random.random())
+
+if __name__ == '__main__':
+    main()
 ```
 
 To generate customised random numbers between specified ranges, we can use the randrange() method
 Syntax:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import random
-# randrange(beginning, end, step)
-print(random.randrange(5,100,2))
+
+def main():
+    """main program
+    """
+    # randrange(beginning, end, step)
+    print(random.randrange(5,100,2))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Can you easily check if all characters in the given string is alphanumeric?**
+## **Can you easily check if all characters in the given string is alphanumeric?**
 
 This can be easily done by making use of the isalnum() method that returns true in case the string has only alphanumeric characters.
 
 ```python
-xample_1: str = "abdc1321"
-xample_2: str = "xyz@123$"
-print(xample_1.isalnum()) # Output: True
-print(xample_2.isalnum()) # Output: False
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    # randrange(beginning, end, step)
+    xample_1: str = "abdc1321"
+    xample_2: str = "xyz@123$"
+    print(xample_1.isalnum()) # Output: True
+    print(xample_2.isalnum()) # Output: False
+
+if __name__ == '__main__':
+    main()
 ```
 
 Another way is to use match() method from the re (regex) module as shown:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 import re
-print(bool(re.match('[A-Za-z0-9]+$','abdc1321'))) # Output: True
-print(bool(re.match('[A-Za-z0-9]+$','xyz@123$'))) # Output: False
+
+def main():
+    """main program
+    """
+    print(bool(re.match('[A-Za-z0-9]+$','abdc1321'))) # Output: True
+    print(bool(re.match('[A-Za-z0-9]+$','xyz@123$'))) # Output: False
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**What are the differences between pickling and unpickling?**
+## **What are the differences between pickling and unpickling?**
 
-*Pickling* is the conversion of python objects to binary form. Whereas, *unpickling* is the conversion of binary
-form data to python objects.
+*Pickling* is the conversion of python objects to binary form. Whereas, *unpickling* is the conversion of binary form data to python objects.
 
 *The pickled objects* are used for storing in disks or external memory locations. 
 
@@ -2461,7 +2565,7 @@ Python provides a pickle module for achieving this. Pickling uses the pickle.dum
 
 ----
 
-**Define GIL?**
+## **Define GIL?**
 
 GIL stands for *Global Interpreter Lock*. This is a mutex used for limiting access to python objects and aids
 in effective thread synchronization by avoiding deadlocks. GIL helps in achieving multitasking (and not
@@ -2470,92 +2574,88 @@ parallel computing).
 There are three threads:
 - First Thread acquires the GIL first and starts the I/O execution.
 - When the I/O operations are done, thread 1 releases the acquired GIL which is then taken up by the second thread.
-- The process repeats and the GIL are used by different threads alternatively until the threads have completed
-their execution. The threads not having the GIL lock goes into the waiting state and resumes execution only when it
-acquires the lock.
+- The process repeats and the GIL are used by different threads alternatively until the threads have completed their execution. The threads not having the GIL lock goes into the waiting state and resumes execution only when it acquires the lock.
 
 ----
 
-**Define PYTHONPATH?**
+## **Define PYTHONPATH?**
 
-It is an environment variable used for incorporating additional directories during the import of a module or a
-package. PYTHONPATH is used for checking if the imported packages or modules are available in the existing
-directories. Not just that, the interpreter uses this environment variable to identify which module needs to be
-loaded.
+It is an environment variable used for incorporating additional directories during the import of a module or a package. PYTHONPATH is used for checking if the imported packages or modules are available in the existing directories. Not just that, the interpreter uses this environment variable to identify which module needs to be loaded.
 
 ----
 
-**Define PIP?**
+## **Define PIP?**
 
-PIP stands for Python Installer Package. As the name indicates, it is used for installing different python modules.
-It is a command-line tool providing a seamless interface for installing different python modules. It searches over
-the internet for the package and installs them into the working directory without the need for any interaction with
-the user. The syntax for this is:
+PIP stands for Python Installer Package. As the name indicates, it is used for installing different python modules. It is a command-line tool providing a seamless interface for installing different python modules. It searches over the internet for the package and installs them into the working directory without the need for any interaction with the user. The syntax for this is:
 
-```python
+```cmd
 pip install <package_name>
 ```
 
 ----
 
-**Are there any tools for identifying bugs and performing static analysis in python?**
+## **Are there any tools for identifying bugs and performing static analysis in python?**
 
-Yes, there are tools like PyChecker and Pylint which are used as static analysis and linting tools respectively.
-PyChecker helps find bugs in python source code files and raises alerts for code issues and their complexity.
-Pylint checks for the module's coding standards and supports different plugins to enable custom features to meet
-this requirement.
+Yes, there are tools like PyChecker and Pylint which are used as static analysis and linting tools respectively. PyChecker helps find bugs in python source code files and raises alerts for code issues and their complexity. Pylint checks for the module's coding standards and supports different plugins to enable custom features to meet this requirement.
 
 ----
 
-**Differentiate between deep and shallow copies?**
+## **Differentiate between deep and shallow copies?**
 
-Shallow copy does the task of creating new objects storing references of original elements. This does not undergo recursion
-to create copies of nested objects. It just copies the reference details of nested objects.
+Shallow copy does the task of creating new objects storing references of original elements. This does not undergo recursion to create copies of nested objects. It just copies the reference details of nested objects.
 
 Deep copy creates an independent and new copy of an object and even copies all the nested objects of the original element recursively.
 
 ----
 
-**What is a main function in python? How do you invoke it?**
+## **What is a main function in python? How do you invoke it?**
 
-In the world of programming languages, the main is considered as an entry point of execution for a program.
-But in python, it is known that the interpreter serially interprets the file line-by-line. This means that
-python does not provide main() function explicitly. But this doesn't mean that we cannot simulate the execution
-of main. This can be done by defining user-defined main() function and by using the __name__ property of
-python file. This __name__ variable is a special built-in variable that points to the name of the current
-module. This can be done as shown below:
+In the world of programming languages, the main is considered as an entry point of execution for a program. But in python, it is known that the interpreter serially interprets the file line-by-line. This means that python does not provide main() function explicitly. But this doesn't mean that we cannot simulate the execution of main. This can be done by defining user-defined main() function and by using the __name__ property of python file. This __name__ variable is a special built-in variable that points to the name of the current module. This can be done as shown below:
 
 ```python
 def main():
-   print("Hello world!")
+    """main program
+    """
+    print("Hello world!")
 
 if __name__=="__main__": # oints to the name of the current module
-   main()
+    main()
 ```
 
 ----
 
-**Write python function which takes a variable number of arguments?**
+## **Write python function which takes a variable number of arguments?**
 
 A function that takes variable arguments is called a function prototype. Syntax:
 
 ```python
-def function_name(*arg_list)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def function_name(*arg_list):
     # For example:
     def func(*var):
         for i in var:
             print(i)
-func(1)
-func(20,1,6)
-# The * in the function argument represents variable arguments in the function.
+    
+    func(1)
+    func(20,1,6)
+    # The * in the function argument represents variable arguments in the function.
+
+def main():
+    """main program
+    """
+    function_name()
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**WAP (Write a program) which takes a sequence of numbers and check if all numbers are unique?**
+## **WAP (Write a program) which takes a sequence of numbers and check if all numbers are unique?**
 
-You can do this by converting the list to set by using set() method and comparing the length of this set with
-the length of the original list. If found equal, return True.
+You can do this by converting the list to set by using set() method and comparing the length of this set with the length of the original list. If found equal, return True.
 
 ```python
 #!/usr/bin/python3
@@ -2577,7 +2677,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program for counting the number of every character of a given text file?**
+## **Write a program for counting the number of every character of a given text file?**
 
 The idea is to use collections and pprint module as shown below:
 
@@ -2606,7 +2706,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program to check and return the pairs of a given array A whose sum value is equal to a target value N?**
+## **Write a program to check and return the pairs of a given array A whose sum value is equal to a target value N?**
 
 This can be done easily by using the phenomenon of hashing. We can use a hash map to check for the current value of the array, x. If the map has the value of (N-x), then there is our pair.
 
@@ -2635,7 +2735,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to add two integers > 0 without using the plus operator?**
+## **Write a Program to add two integers > 0 without using the plus operator?**
 
 We can use bitwise operators to achieve this.
 
@@ -2663,7 +2763,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to solve the given equation assuming that a,b,c,m,n,o are constants:**
+## **Write a Program to solve the given equation assuming that a,b,c,m,n,o are constants:**
 
 ```python
 #!/usr/bin/python3
@@ -2688,7 +2788,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to match a string that has the letter 'a' followed by 4 to 8 'b’s?**
+## **Write a Program to match a string that has the letter 'a' followed by 4 to 8 'b’s?**
 
 We can use the re module of python to perform regex pattern comparison here.
 
@@ -2715,7 +2815,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to convert date from yyyy-mm-dd format to dd-mm-yyyy format?**
+## **Write a Program to convert date from yyyy-mm-dd format to dd-mm-yyyy format?**
 
 We can again use the re module to convert the date string as shown below:
 
@@ -2737,7 +2837,7 @@ print(new_data)
 
 ----
 
-**Write a Program to combine two different dictionaries. While combining, if you find the same keys, you can add the values of these same keys. Output the new dictionary**
+## **Write a Program to combine two different dictionaries. While combining, if you find the same keys, you can add the values of these same keys. Output the new dictionary**
 
 We can use the Counter method from the collections module
 
@@ -2753,23 +2853,33 @@ print(new_dict)
 
 ----
 
-**How will you access the dataset of a publicly shared spreadsheet in CSV format stored in Google Drive?**
+## **How will you access the dataset of a publicly shared spreadsheet in CSV format stored in Google Drive?**
 
-We can use the StringIO module from the io module to read from the Google Drive link and then we can use the
-pandas library using the obtained data source.
+We can use the StringIO module from the io module to read from the Google Drive link and then we can use the pandas library using the obtained data source.
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from io import StringIO
-import pandas
-csv_link = "https://docs.google.com/spreadsheets/d/..."
-data_source = StringIO.StringIO(requests.get(csv_link).content))
-dataframe = pd.read_csv(data_source)
-print(dataframe.head())
+import pandas as pd
+import requests
+
+def main():
+    """main program
+    """
+    csv_link = "https://docs.google.com/spreadsheets/d/..."
+    data_source = StringIO(str(requests.get(csv_link).content))
+    dataframe = pd.read_csv(data_source)
+    print(dataframe.head())
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Suppose list1 = [3,4,5,2,1,0], what is list1 after list1.pop(1)?**
+## **Suppose list1 = [3,4,5,2,1,0], what is list1 after list1.pop(1)?**
 
 ```python
 list_1 = [3,4,5,2,1]
@@ -2780,7 +2890,7 @@ list_4 = [3,4,5,2]
 
 ----
 
-**What is the output of the following statement "Hello World"[::-1]?**
+## **What is the output of the following statement "Hello World"[::-1]?**
 
 - "Hello World"
 - "World Hello"
@@ -2789,16 +2899,16 @@ list_4 = [3,4,5,2]
 
 ----
 
-**What is the difference between lists and tuples?**
+## **What is the difference between lists and tuples?**
 
-- List is a sequence data type, while tuple is not. (false)
-- Tuples are mutable but lists are immutable. (false)
-- Tuple is a sequence data type, while lists is not. (false)
+- List is a sequence data type, while tuple is not.
+- Tuples are mutable but lists are immutable.
+- Tuple is a sequence data type, while lists is not.
 - Lists are mutable but tuples are immutable. (true)
 
 ----
 
-**Let func = lambda a, b : (a ** b), what is the output of func(float(10),20)?**
+## **Let func = lambda a, b : (a ** b), what is the output of func(float(10),20)?**
 
 - 100000000000000000000
 - 1e+20 (true)
@@ -2816,9 +2926,10 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
 ----
 
-**Which statement is false for __init__?**
+## **Which statement is false for __init__?**
 
 - __init__ is called manually on object creation. (false)
 - __init__ is a constructor method in Python. (true)
@@ -2827,7 +2938,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which of the following is the function responsible for pickling?**
+## **Which of the following is the function responsible for pickling?**
 
 - pickle.save() (false)
 - pickle.store() (false)
@@ -2836,7 +2947,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which of the following is a protected attribute?**
+## **Which of the following is a protected attribute?**
 
 - __sara__ (false, built-in function)
 - _ansh (true, protected)
@@ -2845,7 +2956,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which of the following is untrue for Python namespaces?**
+## **Which of the following is untrue for Python namespaces?**
 
 - Python namespaces are implemented as a dictionary in Python.
 - Python namespaces have keys as addresses of the objects.
@@ -2854,7 +2965,7 @@ if __name__ == '__main__':
 
 ----
 
-**Let list1 = ['s','r','a','s'] and list2 = ['a','a','n','h'], what is the output of ["".join([i, j]) for i, j in zip(list1, list2)]?**
+## **Let list1 = ['s','r','a','s'] and list2 = ['a','a','n','h'], what is the output of ["".join([i, j]) for i, j in zip(list1, list2)]?**
 
 - ['s', 'a', 'r', 'a', 'a', 'n', 's', 'h']
 - ['s', 'r', 'a', 's', 'a', 'a', 'n', 'h']
@@ -2876,7 +2987,7 @@ if __name__ == '__main__':
 
 ----
 
-**time.time() in Python returns?**
+## **time.time() in Python returns?**
 
 - Current time.
 - Current time in milliseconds.
@@ -2898,7 +3009,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is the output of the following program?**
+## **What is the output of the following program?**
 
 ```python
 #!/usr/bin/python3
@@ -2941,14 +3052,13 @@ if __name__ == '__main__':
 
 ----
 
-**What is the output of the below program?**
+## **What is the output of the below program?**
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class Human(object):
-
    def __init__(self, name):
        self.human_name = name
          
@@ -2959,7 +3069,6 @@ class Human(object):
        return False
  
 class IBEmployee(Human):
-
    def __init__(self, name, emp_id): 
        super(IBEmployee, self).__init__(name)
        self.emp_id = emp_id
@@ -2985,7 +3094,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which among the below options will correct the below error obtained while reading “sample_file.csv” in pandas?**
+## **Which among the below options will correct the below error obtained while reading “sample_file.csv” in pandas?**
 
 __Traceback (most recent call last): File "input", line 10, in module UnicodeEncodeError: 'ascii' codec can't encode character.__
   
@@ -2995,37 +3104,47 @@ __Traceback (most recent call last): File "input", line 10, in module UnicodeEnc
 
 ----
 
-**Which among the following options helps us to check whether a pandas dataframe is empty?**
+## **Which among the following options helps us to check whether a pandas dataframe is empty?**
 
 - df.emptyframe
 - df.blank
 - df.isempty
 - df.empty (true)
 
-**How will you find the location of numbers which are multiples of 5 in a series?**
+----
 
-- import pandas as pd
-- import numpy as np
-- series_data = pd.Series(np.random.randint(1, 20, 7))
+## **How will you find the location of numbers which are multiples of 5 in a series?**
 
 ```python
-# insert code here
-np.search(series_data % 5)
-np.find(series_data % 5 ==0)
-np.argwhere(series_data % 5==0)
-np.locate(series_data % 5)
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import numpy as np
+import pandas as pd
+
+def main():
+    """main program
+    """
+    series_data = pd.Series(np.random.randint(1, 20, 7))
+    # insert code here
+    np.search(series_data % 5)
+    np.find(series_data % 5 ==0)
+    np.argwhere(series_data % 5==0)
+    np.locate(series_data % 5)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**What is the output of the below code?**
+## **What is the output of the below code?**
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class Person:
-
    def __init__(self, first_name, last_name):
        self.first_name = first_name
        self.last_name = last_name
@@ -3048,7 +3167,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which among the below options picks out negative numbers from the given list?**
+## **Which among the below options picks out negative numbers from the given list?**
 
 - [num for num < 0 in list]
 - [num<0 in list]
@@ -3057,14 +3176,13 @@ if __name__ == '__main__':
 
 ----
 
-**What is the output of the below code?**
+## **What is the output of the below code?**
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 def main():
-    
     main_dict={}
 
     def insert_item(item):
@@ -3091,14 +3209,13 @@ if __name__ == '__main__':
 
 ----
 
-**What is the output of the below code?**
+## **What is the output of the below code?**
 
 ```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 class X:
-
     def __init__(self):
         self.__num1 = 5
         self.num2 = 2
@@ -3107,7 +3224,6 @@ class X:
         print(self.__num1, self.num2)
 
 class Y(X):
-
     def __init__(self):
         super().__init__()
         self.__num1 = 1
@@ -3116,7 +3232,6 @@ class Y(X):
 def main():
     obj = Y()
     print(obj.display_values())
-
 
 if __name__ == '__main__':
     main()
@@ -3131,17 +3246,12 @@ if __name__ == '__main__':
 
 # https://www.edureka.co/blog/interview-questions/python-interview-questions/
 
-**What is the difference between list and tuples in Python?**
+## **What is the difference between list and tuples in Python?**
 
-LIST vs TUPLES
-
-Lists are mutable i.e. they can be edited.
-
-Tuples are immutable (tuples are lists which can’t be edited).
-
-Lists are slower than tuples.
-
-Tuples are faster than list.
+| LIST | TUPLES |
+| ------- | ------- |
+| Lists are mutable i.e. they can be edited. | Tuples are immutable (tuples are lists which can’t be edited). |
+| Lists are slower than tuples. | Tuples are faster than list. |
 
 ```python
 # Syntax:
@@ -3153,46 +3263,42 @@ tup_1 = (10, ‘Chelsea’ , 20)
 
 ----
 
-**What are the key features of Python?**
+## **What are the key features of Python?**
 
-Python is an *interpreted language*. That means that, unlike languages like C and its variants, Python does
-not need to be compiled before it is run. Other interpreted languages include PHP and Ruby.
+Python is an *interpreted language*. That means that, unlike languages like C and its variants, Python does not need to be compiled before it is run. Other interpreted languages include PHP and Ruby.
 
 Python is *dynamically typed*, this means that you don’t need to state the types of variables when you declare them or anything like that. You can do things like x=111 and then x="I'm a string" without error
 
-Python is well suited to *object orientated programming* in that it allows the definition of classes along
-with composition and inheritance. Python does not have access specifiers (like C++’s public, private).
+Python is well suited to *object orientated programming* in that it allows the definition of classes along with composition and inheritance. Python does not have access specifiers (like C++’s public, private).
 
 In Python, *functions* are *first-class objects*. This means that they can be assigned to variables, returned from other functions and passed into functions.
 
 *Classes* are also *first class objects*.
 
-Writing Python code is quick but running it is often slower than compiled languages. Fortunately，Python allows the inclusion of C-based extensions so bottlenecks can be optimized away and often are. The numpy package is a good example of this, it’s really quite quick because a lot of the number-crunching it does isn’t actually done by Python
-Python finds use in many spheres – web applications, automation, scientific modeling, big data applications and many more. It’s also often used as “glue” code to get other languages and components to play nice. Learn more about Big Data and its applications from the Azure Data Engineering Training Course.
+Writing Python code is quick but running it is often slower than compiled languages. Fortunately，Python allows the inclusion of C-based extensions so bottlenecks can be optimized away and often are. The numpy package is a good example of this, it’s really quite quick because a lot of the number-crunching it does isn’t actually done by Python Python finds use in many spheres – web applications, automation, scientific modeling, big data applications and many more. It’s also often used as “glue” code to get other languages and components to play nice. Learn more about Big Data and its applications from the Azure Data Engineering Training Course.
 
 ----
 
-**What type of language is python? Programming or scripting?**
+## **What type of language is python? Programming or scripting?**
 
 Python is capable of scripting, but in general sense, it is considered as a general-purpose programming language.
 
 ----
 
-**Python an interpreted language? Explain?**
+## **Python an interpreted language? Explain?**
 
 An interpreted language is any programming language which is not in machine-level code before runtime.
 Therefore, Python is an interpreted language.
 
 ----
 
-**What is PEP 8?**
+## **What is PEP 8?**
 
-PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code
-for maximum readability.
+PEP stands for __Python Enhancement Proposal__. It is a set of rules that specify how to format Python code for maximum readability.
 
 ----
 
-**What are the benefits of using Python?**
+## **What are the benefits of using Python?**
 
 The benefits of using python are:
 
@@ -3208,17 +3314,13 @@ _Free and open-source_ – Python is free to use and distribute. It is open sour
 _Extensive support for libraries_ – Python has vast libraries that contain almost any function needed.
 It also further provides the facility to import other packages using Python Package Manager(pip).
 
-_Portable_ – Python programs can run on any platform without requiring any change. The data structures used in
-python are user friendly. It provides more functionality with less coding. Find out our Python Training in Top Cities/Countries
+_Portable_ – Python programs can run on any platform without requiring any change. The data structures used in python are user friendly. It provides more functionality with less coding. Find out our Python Training in Top Cities/Countries
 
 ----
 
-**What are Python namespaces?**
+## **What are Python namespaces?**
 
-A _namespace_ in python refers to the name which is assigned to each object in python. The objects are variables
-and functions. As each object is created, its name along with space(the address of the outer function in which the
-object is), gets created. The namespaces are maintained in python like a dictionary where the key is the namespace
-and value is the address of the object.
+A _namespace_ in python refers to the name which is assigned to each object in python. The objects are variables and functions. As each object is created, its name along with space(the address of the outer function in which the object is), gets created. The namespaces are maintained in python like a dictionary where the key is the namespace and value is the address of the object.
 
 _There 4 types of namespace:_
 
@@ -3229,7 +3331,7 @@ _There 4 types of namespace:_
 
 ----
 
-**What are Dict and List comprehensions?**
+## **What are Dict and List comprehensions?**
 
 Dictionary and list comprehensions are just another concise way to define dictionaries and lists.
 
@@ -3252,7 +3354,7 @@ x=[i : i+2 for i in range(5)]
 
 ----
 
-**What are the common built-in data types in Python?**
+## **What are the common built-in data types in Python?**
 
 _The common built-in data types in python are:_
 
@@ -3272,7 +3374,7 @@ _The common built-in data types in python are:_
 
 ----
 
-**What is the difference between .py and .pyc files?**
+## **What is the difference between .py and .pyc files?**
 
 The .py files are the python source code files. While the .pyc files contain the bytecode of the python files. .pyc files are created when
 the code is imported from some other source. The interpreter converts the source .py files to .pyc files which helps by saving time. You
@@ -3280,7 +3382,7 @@ can get a better understanding with the Data Engineering Course in Washington.
 
 ----
 
-**What is slicing in python?**
+## **What is slicing in python?**
 
 Slicing is used to access parts of sequences like lists, tuples, and strings. The syntax of slicing is-[start:end:step]. The step can be omitted
 as well. When we write [start:end] this returns all the elements of the sequence from the start (inclusive) till the end-1 element. If the start
@@ -3290,7 +3392,7 @@ every second element.i.e. [8,6,4].
 
 ----
 
-**What are Keywords in python?**
+## **What are Keywords in python?**
 
 Keywords in python are reserved words that have special meaning.They are generally used to define type of variables. Keywords cannot be used
 for variable or function names. There are following 33 keywords in python:
@@ -3331,7 +3433,7 @@ Yield
 
 ----
 
-**What are Literals in Python and explain about different Literals?**
+## **What are Literals in Python and explain about different Literals?**
 
 A literal in python source code represents a fixed value for primitive data types.
 
@@ -3355,7 +3457,7 @@ Special literal:  Python has 1 special literal None which is used to return a nu
 
 ----
 
-**How to combine dataframes in pandas?**
+## **How to combine dataframes in pandas?**
 
 The dataframes in python can be combined in the following ways:
 
@@ -3375,13 +3477,13 @@ pd.concat([dataframe1, dataframe2], axis='axis', join=’type_of_join)
 
 ----
 
-**Is python case sensitive?**
+## **Is python case sensitive?**
 
 Yes. Python is a case sensitive language.
 
 ----
 
-**What is type conversion in Python?**
+## **What is type conversion in Python?**
 
 Type conversion refers to the conversion of one data type into another.
 
@@ -3399,7 +3501,7 @@ Type conversion refers to the conversion of one data type into another.
 
 ----
 
-**How to install Python on Windows and set path variable?**
+## **How to install Python on Windows and set path variable?**
 
 To install Python on Windows, follow the below steps:
 
@@ -3412,15 +3514,13 @@ To install Python on Windows, follow the below steps:
 
 ----
 
-**Is indentation required in python?**
+## **Is indentation required in python?**
 
-Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an
-indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately
-and will throw errors as well.
+Indentation is necessary for Python. It specifies a block of code. All code within loops, classes, functions, etc is specified within an indented block. It is usually done using four space characters. If your code is not indented necessarily, it will not execute accurately and will throw errors as well.
 
 ----
 
-**What is the difference between Python Arrays and lists?**
+## **What is the difference between Python Arrays and lists?**
 
 Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
 
@@ -3438,33 +3538,29 @@ def main():
 
 if __name__ == '__main__':
     main()
-# Output:
-# array(‘i’, [1, 2, 3, 4]) [1, ‘abc’, 1.2]
 ```
 
 ----
 
-**What are functions in Python?**
+## **What are functions in Python?**
 
 A function is a block of code which is executed only when it is called. To define a Python function, the 'def' keyword is used.
 
 ----
 
-**What is self in Python?**
+## **What is self in Python?**
 
-Self is an instance or an object of a class. In Python, this is explicitly included as the first parameter. However, this is not the
-case in Java where it’s optional.  It helps to differentiate between the methods and attributes of a class with local variables.
+Self is an instance or an object of a class. In Python, this is explicitly included as the first parameter. However, this is not the case in Java where it’s optional.  It helps to differentiate between the methods and attributes of a class with local variables.
 
-The self variable in the init method refers to the newly created object while in other methods, it refers to the object whose method
-was called.
+The self variable in the init method refers to the newly created object while in other methods, it refers to the object whose method was called.
 
 ----
 
-**How can you randomize the items of a list in place in Python?**
+## **How can you randomize the items of a list in place in Python?**
 
 Consider the example shown below:
 
-```
+```python
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
@@ -3477,19 +3573,17 @@ def main():
 
 if __name__ == '__main__':
     main()
-# Output:
-# ['Flying', 'Keep', 'Blue', 'High', 'The', 'Flag']
 ```
 
 ----
 
-**What are python iterators?**
+## **What are python iterators?**
 
 Iterators are objects which can be traversed though or iterated upon.
 
 ----
 
-**How can you generate random numbers in Python?**
+## **How can you generate random numbers in Python?**
 
 Random module is the standard module that is used to generate a random number. The method is defined as:
 
@@ -3498,14 +3592,11 @@ import random
 import random.random
 ```
 
-The statement random.random() method return the floating-point number that is in the range of [0, 1]. The function generates random float numbers.
-The methods that are used with the random class are the bound methods of the hidden instances. The instances of the Random can be done to show
-the multi-threading programs that creates a different instance of individual threads. The other random generators that are used in this are:
+The statement random.random() method return the floating-point number that is in the range of [0, 1]. The function generates random float numbers. The methods that are used with the random class are the bound methods of the hidden instances. The instances of the Random can be done to show the multi-threading programs that creates a different instance of individual threads. The other random generators that are used in this are:
 
 ```python
 randrange(a, b)
-# It chooses an integer and define the range in-between [a, b). It returns the elements by selecting it randomly
-# from the range that is specified. It doesn’t build a range object.
+# It chooses an integer and define the range in-between [a, b). It returns the elements by selecting it randomly from the range that is specified. It doesn’t build a range object.
 ```
 
 ```python
@@ -3523,7 +3614,7 @@ normalvariate(mean, sdev)
 
 ----
 
-**How do you write comments in python?**
+## **How do you write comments in python?**
 
 Comments in Python start with a # character. However, alternatively at times, commenting is done using docstrings(strings enclosed within
 triple quotes).
@@ -3541,7 +3632,7 @@ triple quotes).
 
 ----
 
-**What are the generators in python?**
+## **What are the generators in python?**
 
 Introduced with PEP 255, generator functions are a special kind of function that return a lazy iterator.
 These are objects that you can loop over like a list. However, unlike lists, lazy iterators do not store
@@ -3575,7 +3666,7 @@ def infinite_sequence():
 
 ----
 
-**How will you capitalize the first letter of string?**
+## **How will you capitalize the first letter of string?**
 
 In Python, the capitalize() method capitalizes the first letter of a string. If the string already consists of a capital letter
 at the beginning, then, it returns the original string.
@@ -3588,7 +3679,7 @@ print("The resultant string is:", output)
 
 ----
 
-**How will you convert a string to all lowercase?**
+## **How will you convert a string to all lowercase?**
 
 To convert a string to lowercase, lower() function can be used.
 
@@ -3603,19 +3694,15 @@ print(stg.lower())
 
 ----
 
-**How to comment multiple lines in python?**
+## **How to comment multiple lines in python?**
 
-Multi-line comments appear in more than one line. All the lines to be commented are to be prefixed by a #. You can
-also a very good shortcut method to comment multiple lines. All you need to do is hold the ctrl key and left click
-in every place wherever you want to include a # character and type a # just once. This will comment all the lines
-where you introduced your cursor.
+Multi-line comments appear in more than one line. All the lines to be commented are to be prefixed by a #. You can also a very good shortcut method to comment multiple lines. All you need to do is hold the ctrl key and left click in every place wherever you want to include a # character and type a # just once. This will comment all the lines where you introduced your cursor.
 
 ----
 
-**What are docstrings in Python?**
+## **What are docstrings in Python?**
 
-Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple
-quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well.
+Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well.
 
 ```python
 """
@@ -3631,7 +3718,7 @@ print(z)
 
 ----
 
-**What is the purpose of 'is', 'not' and 'in' operators?**
+## **What is the purpose of 'is', 'not' and 'in' operators?**
 
 Operators are special functions. They take one or more values and produce a corresponding result.
 
@@ -3643,7 +3730,7 @@ _in_ : checks if some element is present in some sequence
 
 ----
 
-**What is the usage of help() and dir() function in Python?**
+## **What is the usage of help() and dir() function in Python?**
 
 Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions. 
 
@@ -3653,23 +3740,20 @@ _Dir() function:_ The dir() function is used to display the defined symbols.
 
 ----
 
-**Whenever Python exits, why isn’t all the memory de-allocated?**
+## **Whenever Python exits, why isn’t all the memory de-allocated?**
 
-Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from
-the global namespaces are not always de-allocated or freed. It is impossible to de-allocate those portions of memory that are reserved by the C library.
-On exit, because of having its own efficient clean up mechanism, Python would try to de-allocate/destroy every other object.
+Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed. It is impossible to de-allocate those portions of memory that are reserved by the C library.
+On exit, because of having its own efficient clean up mechanism, Python would try to de-allocate destroy every other object.
 
 ----
 
-**What is a dictionary in Python?**
+## **What is a dictionary in Python?**
 
-The built-in datatypes in Python is called dictionary. It defines one-to-one relationship between keys and values. Dictionaries
-contain pair of keys and their corresponding values. Dictionaries are indexed by keys.
+The built-in datatypes in Python is called dictionary. It defines one-to-one relationship between keys and values. Dictionaries contain pair of keys and their corresponding values. Dictionaries are indexed by keys.
 
 Let’s take an example:
 
-The following example contains some keys. Country, Capital & PM. Their corresponding values
-are India, Delhi and Modi respectively.
+The following example contains some keys. Country, Capital & PM. Their corresponding values are India, Delhi and Modi respectively.
 
 ```python
 dict={'Country':'India','Capital':'Delhi','PM':'Modi'}
@@ -3683,7 +3767,7 @@ print dict[PM]
 
 ----
 
-**How can the ternary operators be used in python?**
+## **How can the ternary operators be used in python?**
 
 The Ternary operator is the operator that is used to show the conditional statements. This consists of the true
 or false values with a statement that has to be evaluated for it.
@@ -3704,16 +3788,13 @@ print(min)
 
 ----
 
-**What does this mean: *args, **kwargs? And why would we use it?**
+## __What does this mean: *args, **kwargs? And why would we use it?__
 
-We use *args when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a
-stored list or tuple of arguments to a function. __**kwargs__ is used when we don’t know how many keyword arguments will
-be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers
-args and kwargs are a convention, you could also use *bob and __**billy__ but that would not be wise.
+We use *args when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. __**kwargs__ is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use *bob and __**billy__ but that would not be wise.
 
 ----
 
-**What does len() do?**
+## **What does len() do?**
 
 It is used to determine the length of a string, a list, an array, etc.
 
@@ -3725,7 +3806,7 @@ len(stg)
 
 ----
 
-**Explain split(), sub(), subn() methods of “re” module in Python?**
+## **Explain split(), sub(), subn() methods of “re” module in Python?**
 
 To modify the strings, Python’s “re” module is providing 3 methods:
 
@@ -3737,27 +3818,23 @@ _subn()_ : It is similar to sub() and also returns the new string along with the
 
 ----
 
-**What are negative indexes and why are they used?**
+## **What are negative indexes and why are they used?**
 
-The sequences in Python are indexed and it consists of the positive as well as negative numbers. The numbers that
-are positive uses ‘0’ that is uses as first index and ‘1’ as the second index and the process goes on like that.
+The sequences in Python are indexed and it consists of the positive as well as negative numbers. The numbers that are positive uses ‘0’ that is uses as first index and ‘1’ as the second index and the process goes on like that.
 
-The index for the negative number starts from ‘-1’ that represents the last index in the sequence and '-2' as the
-penultimate index and the sequence carries forward like the positive number.
+The index for the negative number starts from ‘-1’ that represents the last index in the sequence and '-2' as the penultimate index and the sequence carries forward like the positive number.
 
-The negative index is used to remove any new-line spaces from the string and allow the string to except the last
-character that is given as S[:-1]. The negative index is also used to show the index to represent the string in
-correct order.
+The negative index is used to remove any new-line spaces from the string and allow the string to except the last character that is given as S[:-1]. The negative index is also used to show the index to represent the string in correct order.
 
 ----
 
-**What are Python packages?**
+## **What are Python packages?**
 
 Python packages are namespaces containing multiple modules.
 
 ----
 
-**How can files be deleted in Python?**
+## **How can files be deleted in Python?**
 
 To delete a file in Python, you need to import the OS Module. After that, you need to use the os.remove() function.
 
@@ -3768,7 +3845,7 @@ os.remove("xyz.txt")
 
 ----
 
-**What are the built-in types of python?**
+## **What are the built-in types of python?**
 
 Built-in types in Python are as follows:
 
@@ -3781,21 +3858,18 @@ Built-in types in Python are as follows:
 
 ----
 
-**What advantages do NumPy arrays offer over (nested) Python lists?**
+## **What advantages do NumPy arrays offer over (nested) Python lists?**
 
 Python's lists are efficient general-purpose containers. They support (fairly) efficient insertion, deletion, appending, and concatenation, and Python's list
 comprehensions make them easy to construct and manipulate.
 
-They have certain limitations: they don’t support “vectorized” operations like elementwise addition and multiplication, and the fact that they can contain
-objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
+They have certain limitations: they don’t support “vectorized” operations like elementwise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
 
-NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work.
-And they are also efficiently implemented. NumPy array is faster and You get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra,
-histograms, etc. 
+NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work. And they are also efficiently implemented. NumPy array is faster and You get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc. 
 
----
+----
 
-**How to add values to a python array?**
+## **How to add values to a python array?**
 
 Elements can be added to an array using the append(), extend() and the insert (i,x) functions.
 
@@ -3815,7 +3889,7 @@ array('d', [1.1, 2.1, 3.8, 3.1, 3.4, 4.5, 6.3, 6.8])
 
 ----
 
-**How to remove values to a python array?**
+## **How to remove values to a python array?**
 
 Array elements can be removed using pop() or remove() method. The difference between these two functions is that the former
 returns the deleted value whereas the latter does not.
@@ -3833,14 +3907,13 @@ array('d', [2.2, 3.8, 3.7, 1.2])
 
 ----
 
-**Does Python have OOps concepts?**
+## **Does Python have OOps concepts?**
 
-Python is an object-oriented programming language. This means that any program can be solved in python by creating an object model.
-However, Python can be treated as a procedural as well as structural language.
+Python is an object-oriented programming language. This means that any program can be solved in python by creating an object model. However, Python can be treated as a procedural as well as structural language.
 
 ----
 
-**What is the difference between deep and shallow copy?**
+## **What is the difference between deep and shallow copy?**
 
 _Shallow copy_ is used when a new instance type gets created and it keeps the values that are copied in the new instance. Shallow copy
 is used to copy the reference pointers just like it copies the values. These references point to the original objects and the changes
@@ -3875,7 +3948,7 @@ print("li3 ID: ", id(li3), "Value: ", li3)
 
 ----
 
-**How is Multithreading achieved in Python?**
+## **How is Multithreading achieved in Python?**
 
 Python has a multi-threading package but if you want to multi-thread to speed your code up, then it’s usually not a good idea to use it.
 Python has a construct called the Global Interpreter Lock (GIL).
@@ -3888,7 +3961,7 @@ All this GIL passing adds overhead to execution. This means that if you want to 
 
 ----
 
-**What is the process of compilation and linking in python?**
+## **What is the process of compilation and linking in python?**
 
 The compiling and linking allow the new extensions to be compiled properly without any error and the linking can be done only when
 it passes the compiled procedure. If the dynamic loading is used then it depends on the style that is being provided with the system.
@@ -3905,14 +3978,14 @@ The steps that are required in this as:
 
 ----
 
-**What are Python libraries? Name a few of them?**
+## **What are Python libraries? Name a few of them?**
 
 Python libraries are a collection of Python packages. Some of the majorly used python libraries are – Numpy, Pandas, Matplotlib,
 Scikit-learn and many more.
 
 ----
 
-**What is split used for?**
+## **What is split used for?**
 
 The split() method is used to separate a given String in Python.
 
@@ -3924,7 +3997,7 @@ print(a.split())
 
 ----
 
-**How to import modules in python?**
+## **How to import modules in python?**
 
 Modules can be imported using the import keyword.  You can import modules in three ways-
 
@@ -3936,7 +4009,7 @@ from array import * # imports everything present in the array module
 
 ----
 
-**Explain Inheritance in Python with an example?**
+## **Explain Inheritance in Python with an example?**
 
 Inheritance allows One class to gain all the members(say attributes and methods) of another class. Inheritance provides code
 reusability, makes it easier to create and maintain an application. The class from which we are inheriting is called super-class
@@ -4068,13 +4141,11 @@ class Student3(Student1, School):
 object = Student3()
 object.func1()
 object.func2()
-
 ```
-
 
 ----
 
-**How are classes created in Python?**
+## **How are classes created in Python?**
 
 Class in Python is created using the class keyword.
 
@@ -4090,7 +4161,7 @@ print(E1.name)
 
 ----
 
-**What is monkey patching in Python?**
+## **What is monkey patching in Python?**
 
 In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.
 
@@ -4116,17 +4187,15 @@ obj.f()
 
 ----
 
-**Does python support multiple inheritance?**
+## **Does python support multiple inheritance?**
 
 Multiple inheritance means that a class can be derived from more than one parent classes. Python does support multiple inheritance, unlike Java.
 
 ----
 
-**What is Polymorphism in Python?**
+## **What is Polymorphism in Python?**
 
-Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named
-ABC then the child class also can have a method with the same name ABC having its own parameters and variables.
-Python allows polymorphism.
+Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.
 
 ```python
 # Polymorphism with class methods:
@@ -4163,7 +4232,7 @@ for country in (obj_ind, obj_usa):
 
 ----
 
-**Define encapsulation in Python?**
+## **Define encapsulation in Python?**
 
 Encapsulation means binding the code and the data together. A Python class in an example of encapsulation.
 
@@ -4224,7 +4293,7 @@ However, it's worth noting that in Python, encapsulation is not strictly enforce
 
 ----
 
-**How do you do data abstraction in Python?**
+## **How do you do data abstraction in Python?**
 
 Data Abstraction is providing only the required details and hiding the implementation from the world.
 It can be achieved in Python by using interfaces and abstract classes.
@@ -4283,11 +4352,9 @@ if __name__ == '__main__':
 
 ----
 
-**Does python make use of access specifiers?**
+## **Does python make use of access specifiers?**
 
-Python does not deprive access to an instance variable or function. Python lays down the concept of prefixing
-the name of the variable, function or method with a single or double underscore to imitate the behavior of
-protected and private access specifiers.  
+Python does not deprive access to an instance variable or function. Python lays down the concept of prefixing the name of the variable, function or method with a single or double underscore to imitate the behavior of protected and private access specifiers.  
 
 ```python
 #!/usr/bin/python3
@@ -4327,7 +4394,7 @@ if __name__ == '__main__':
 
 ----
 
-**How to create an empty class in Python?**
+## **How to create an empty class in Python?**
 
 An empty class is a class that does not have any code defined within its block. It can be created using the
 pass keyword. However, you can create objects of this class outside the class itself. IN PYTHON THE
@@ -4353,7 +4420,7 @@ if __name__ == '__main__':
 
 ----
 
-**What does an object() do?**
+## **What does an object() do?**
 
 It returns a featureless object that is a base for all classes. Also, it does not take any parameters.
 
@@ -4368,7 +4435,7 @@ print(type(my_object))
 
 ----
 
-**Write a program in Python to execute the Bubble sort algorithm?**
+## **Write a program in Python to execute the Bubble sort algorithm?**
 
 ```python
 #!/usr/bin/python3
@@ -4406,7 +4473,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to produce Star triangle?**
+## **Write a program in Python to produce Star triangle?**
 
 ```python
 #!/usr/bin/python3
@@ -4425,7 +4492,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program to produce Fibonacci series in Python?**
+## **Write a program to produce Fibonacci series in Python?**
 
 ```python
 # Enter number of terms needednbsp;#0,1,1,2,3,5....
@@ -4440,14 +4507,11 @@ else:
          print(next,end=" ")
          f=s
          s=next
-
-# Output:
-# Enter the terms 5 0 1 1 2 3
 ```
 
 ----
 
-**Write a program in Python to check if a number is prime?**
+## **Write a program in Python to check if a number is prime?**
 
 ```python
 a=int(input("enter number"))
@@ -4460,15 +4524,11 @@ if a=1:
       print("Prime")
 else:
    print("not prime")
-
-# Output:
-# enter number 3
-# Prime
 ```
 
 ----
 
-**Write a program in Python to check if a sequence is a Palindrome?**
+## **Write a program in Python to check if a sequence is a Palindrome?**
 
 ```python
 a=input("enter sequence")
@@ -4478,14 +4538,11 @@ if a==b:
   print("palindrome")
 else:
   print("Not a Palindrome")
-
-# Output:
-# enter sequence 323 palindrome
 ```
 
 ----
 
-**Write a one-liner that will count the number of capital letters in a file. Your code should work even if the file is too big to fit in memory?**
+## **Write a one-liner that will count the number of capital letters in a file. Your code should work even if the file is too big to fit in memory?**
 
 Let us first write a multiple line solution and then convert it to one-liner code.
 
@@ -4505,7 +4562,7 @@ count sum(1 for line in fh for character in line if character.isupper())
 
 # https://intellipaat.com/blog/interview-question/python-interview-questions/
 
-**What is Python?**
+## **What is Python?**
 
 Python is a high-level, interpreted, interactive, and object-oriented scripting language. It uses English keywords frequently. Whereas, other languages use punctuation, Python has fewer syntactic constructions.
 Python is designed to be highly readable and compatible with different platforms such as Mac, Windows, Linux, Raspberry Pi, etc.
@@ -4513,13 +4570,13 @@ Python is one of the most demanding skills right now in the market. Enroll in ou
 
 ----
 
-**Python is an interpreted language. Explain?**
+## **Python is an interpreted language. Explain?**
 
 An interpreted language is any programming language that executes its statements line by line. Programs written in Python run directly from the source code, with no intermediary compilation step.
 
 ----
 
-**What is the difference between lists and tuples?**
+## **What is the difference between lists and tuples?**
 
 Lists	Tuples
 Lists are mutable, i.e., they can be edited	Tuples are immutable (they are lists that cannot be edited)
@@ -4542,13 +4599,13 @@ tup_1 = (10, ‘Intellipaat’ , 20)
 
 ----
 
-**What is PEP 8?**
+## **What is PEP 8?**
 
 PEP in Python stands for Python Enhancement Proposal. It is a set of rules that specify how to write and design Python code for maximum readability.
 
 ----
 
-**What are the common built-in data types in Python?**
+## **What are the common built-in data types in Python?**
 
 Python supports the below-mentioned built-in data types:
 
@@ -4563,7 +4620,7 @@ Python supports the below-mentioned built-in data types:
 
 ----
 
-**What are local variables and global variables in Python?**
+## **What are local variables and global variables in Python?**
 
 __Local variable__: Any variable declared inside a function is known as Local variable and it’s accessibility remains inside that function only.
 
@@ -4592,19 +4649,19 @@ if __name__ == '__main__':
 
 ----
 
-**What is type conversion in Python?**
+## **What is type conversion in Python?**
 
 Python provides you with a much-needed functionality of converting one form of data type into the needed one and this is known as type conversion.
 
 ----
 
-**Implicit Type Conversion: In this form of type conversion python interpreter helps in automatically converting the data type?**
+## **Implicit Type Conversion: In this form of type conversion python interpreter helps in automatically converting the data type?**
 
 Into another data type without any user involvement.
 
 ----
 
-**Explicit Type Conversion: In this form of Type conversion the data type inn changed into a required type by the user?**
+## **Explicit Type Conversion: In this form of Type conversion the data type inn changed into a required type by the user?**
 
 Various Functions of explicit conversion are shown below:
 
@@ -4632,7 +4689,7 @@ complex(real,imag) – function used to convert real numbers to complex(real,ima
 
 ----
 
-**What does [::-1] do?**
+## **What does [::-1] do?**
 
 [::-1] ,this is an example of slice notation and helps to reverse the sequence with the help of indexing.
 
@@ -4653,20 +4710,17 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 5,4,3,2,1
 ```
 
 ----
 
-**What are Python packages?**
+## **What are Python packages?**
 
 A Python package refers to the collection of different sub-packages and modules based on the similarities of the function.
 
 ----
 
-**What are decorators?**
+## **What are decorators?**
 
 In Python, decorators are necessary functions that help add functionality to an existing function without changing the structure of
 the function at all. These are represented by @decorator_name in Python and are called in a bottom-up format.
@@ -4692,24 +4746,20 @@ def main():
     print(intro()) # 0. calling main method
 
 if __name__ == '__main__':
-    main() # 7. at the end of the progarm jump here
-    
-# Output:
-# "hello,i am sam"    
+    main() # 7. at the end of the progarm jump here   
 ```
 
 ----
 
-**Is indentation required in Python?**
+## **Is indentation required in Python?**
 
 Indentation in Python is compulsory and is part of its syntax.
 
-All programming languages have some way of defining the scope and extent of the block of codes. In Python, it is indentation.
-Indentation provides better readability to the code, which is probably why Python has made it compulsory.
+All programming languages have some way of defining the scope and extent of the block of codes. In Python, it is indentation. Indentation provides better readability to the code, which is probably why Python has made it compulsory.
 
 ----
 
-**How does break, continue, and pass work?**
+## **How does break, continue, and pass work?**
 
 These statements help to change the phase of execution from the normal flow that is why they are termed loop control statements.
 
@@ -4771,7 +4821,7 @@ if __name__ == '__main__':
 
 ----
 
-**How can you randomize the items of a list in place in Python?**
+## **How can you randomize the items of a list in place in Python?**
 
 This can be easily achieved by using the Shuffle() function from the random library as shown below:
 
@@ -4793,7 +4843,7 @@ if __name__ == '__main__':
 
 ----
 
-**How to comment with multiple lines in Python?**
+## **How to comment with multiple lines in Python?**
 
 To add a multiple lines comment in python, all the line should be prefixed by #.
 
@@ -4813,13 +4863,13 @@ print("Hello, World!")
 
 ----
 
-**What type of language is python? Programming or scripting?**
+## **What type of language is python? Programming or scripting?**
 
 Generally, Python is an all purpose Programming Language, in addition to that Python is also capable to perform scripting.
 
 ----
 
-**What are negative indexes and why are they used?**
+## **What are negative indexes and why are they used?**
 
 To access an element from ordered sequences, we simply use the index of the element, which is the position number of that particular element.
 The index usually starts from 0, i.e., the first element has index 0, the second has 1, and so on.
@@ -4830,7 +4880,7 @@ called negative indexes.
 
 ----
 
-**Explain split(), sub(), subn() methods of re module in Python?**
+## **Explain split(), sub(), subn() methods of re module in Python?**
 
 These methods belong to the Python RegEx or ‘re’ module and are used to modify strings.
 
@@ -4849,9 +4899,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# ['welcome', 'to', 'the', 'jungle']
 ```
 
 __sub():__
@@ -4880,15 +4927,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-I am a human being.
-I xm x humxn being.
-x xm x humxn being.
-I am a human being.
-Done
-"""
 ```
 
 __subn():__
@@ -4910,19 +4948,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-('m~*ie tickets booking in online', 1)
-('m~*ie tickets booking in online', 1)
-2
-m~*ie tickets booking in online
-"""
 ```
 
 ----
 
-**What is a map function in Python?**
+## **What is a map function in Python?**
 
 The map() function in Python has two parameters, function and iterable. The map() function takes a function as an argument and then
 applies that function to all the elements of an iterable, passed to it as another argument. It returns an object list of results.
@@ -4945,20 +4975,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-<map object at 0x000001B6D51A9780>
-4
-9
-16
-25
-"""
 ```
 
 ----
 
-**What are the generators in python?**
+## **What are the generators in python?**
 
 Generator refers to the function that returns an iterable set of items.
 
@@ -4983,16 +5004,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-0 1 1 2 3 5 8 13 21 34
-"""
 ```
 
 ----
 
-**What are python iterators?**
+## **What are python iterators?**
 
 These are the certain objects that are easily traversed and iterated when needed.
 
@@ -5028,22 +5044,17 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-0 1 4 9 16 
-"""
 ```
 
 ----
 
-**Do we need to declare variables with data types in Python?**
+## **Do we need to declare variables with data types in Python?**
 
 No. Python is a dynamically typed language, I.E., Python Interpreter automatically identifies the data type of a variable based on the type of value assigned to the variable.
 
 ----
 
-**What are Dict and List comprehensions?**
+## **What are Dict and List comprehensions?**
 
 Python comprehensions are like decorators, that help to build altered and filtered lists, dictionaries, or sets from a given list, dictionary, or set.
 Comprehension saves a lot of time and code that might be considerably more complex and time-consuming.
@@ -5074,7 +5085,7 @@ if __name__ == '__main__':
 
 ----
 
-**Is multiple inheritance supported in Python?**
+## **Is multiple inheritance supported in Python?**
 
 Yes, unlike Java, Python provides users with a wide range of support in terms of inheritance and its usage. Multiple
 inheritance refers to a scenario where a class is instantiated from more than one individual parent class. This provides
@@ -5115,14 +5126,14 @@ if __name__ == '__main__':
 
 ----
 
-**What do you understand by Tkinter?**
+## **What do you understand by Tkinter?**
 
 Tkinter is a built-in Python module that is used to create GUI applications. It is Python’s standard toolkit for GUI development.
 Tkinter comes with Python, so there is no separate installation needed. You can start using it by importing it in your script.
 
 ----
 
-**Is Python fully object oriented?**
+## **Is Python fully object oriented?**
 
 Python does follow an object-oriented programming paradigm and has all the basic OOPs concepts such as inheritance, polymorphism, and more,
 with the exception of access specifiers. Python doesn’t support strong encapsulation (adding a private keyword before data members). Although,
@@ -5130,7 +5141,7 @@ it has a convention that can be used for data hiding, i.e., prefixing a data mem
 
 ----
 
-**Differentiate between NumPy and SciPy?**
+## **Differentiate between NumPy and SciPy?**
 
 __NumPy != SciPy__
 
@@ -5144,7 +5155,7 @@ There are some linear algebraic functions available in this module, but they are
 
 ----
 
-**Explain all file processing modes supported in Python?**
+## **Explain all file processing modes supported in Python?**
 
 Python has various file processing modes.
 
@@ -5168,22 +5179,20 @@ read–write mode (rwb)
 
 __To append the content in the files, we can use the append mode (a):__
 
-For text files, the mode would be ‘at’
-For binary files, it would be ‘ab’
+For text files, the mode would be 'at'
+For binary files, it would be 'ab'
 
 ----
 
-**What do file-related modules in Python do? Can you name some file-related modules in Python?**
+## **What do file-related modules in Python do? Can you name some file-related modules in Python?**
 
-Python comes with some file-related modules that have functions to manipulate text files and binary files in a file system. These modules
-can be used to create text or binary files, update their content, copy, delete, and more.
+Python comes with some file-related modules that have functions to manipulate text files and binary files in a file system. These modules can be used to create text or binary files, update their content, copy, delete, and more.
 
-Some file-related modules are os, os.path, and shutil.os. The os.path module has functions to access the file system, while the shutil.os
-module can be used to copy or delete files.
+Some file-related modules are os, os.path, and shutil.os. The os.path module has functions to access the file system, while the shutil.os module can be used to copy or delete files.
 
 ----
 
-**Explain the use of the 'with' statement and its syntax?**
+## **Explain the use of the 'with' statement and its syntax?**
 
 In Python, using the `with` statement, we can open a file and close it as soon as the block of code, where with is used, exits.
 In this way, we can opt for not using the close() method.
@@ -5195,7 +5204,7 @@ with open("filename", "mode") as file_var:
 
 ----
 
-**Write a code to display the contents of a file in reverse?**
+## **Write a code to display the contents of a file in reverse?**
 
 To display the contents of a file in reverse, the following code can be used:
 
@@ -5213,7 +5222,7 @@ if __name__ == '__main__':
 
 ----
 
-**Which of the following is an invalid statement?**
+## **Which of the following is an invalid statement?**
 
 xyz = 1,000,000
 x y z = 1000 2000 3000 (invalid)
@@ -5222,7 +5231,7 @@ x_y_z = 1,000,000
 
 ----
 
-**Write a command to open the file c:\hello.txt for writing?**
+## **Write a command to open the file c:\hello.txt for writing?**
 
 Command:
 
@@ -5240,7 +5249,7 @@ if __name__ == '__main__':
 
 ----
 
-**What does len() do?**
+## **What does len() do?**
 
 len() is an inbuilt function used to calculate the length of sequences like list, python string, and array.
 
@@ -5254,14 +5263,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 5
 ```
 
 ----
 
-**What does *args and **kwargs mean?**
+## **What does *args and **kwargs mean?**
 
 __*args:__ It is used to pass multiple arguments in a function.
 
@@ -5283,9 +5289,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 15
 ```
 
 __**kwargs:__ It is used to pass multiple keyworded arguments in a function in python.
@@ -5306,16 +5309,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# name: John Doe
-# age: 30
-# occupation: Engineer
 ```
 
 ----
 
-**How will you remove duplicate elements from a list?**
+## **How will you remove duplicate elements from a list?**
 
 To remove duplicate elements from the list we use the set() function.
 
@@ -5333,14 +5331,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# [1,5,6,8,12]
 ```
 
 ----
 
-**How can files be deleted in Python?**
+## **How can files be deleted in Python?**
 
 You need to import the OS Module and use os.remove() function for deleting a file in python.
 consider the code below:
@@ -5352,7 +5347,7 @@ os.remove("file_name.txt")
 
 ----
 
-**How will you read a random line in a file?**
+## **How will you read a random line in a file?**
 
 We can read a random line in a file using the random module.
 
@@ -5375,7 +5370,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Python program to count the total number of lines in a text file?**
+## **Write a Python program to count the total number of lines in a text file?**
 
 ```python
 #!/usr/bin/python3
@@ -5396,7 +5391,7 @@ if __name__ == '__main__':
 
 ----
 
-**What would be the output if I run the following code block?**
+## **What would be the output if I run the following code block?**
 
 ```python
 #!/usr/bin/python3
@@ -5408,14 +5403,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 14
 ```
 
 ----
 
-**What is the purpose of is, not and in operators?**
+## **What is the purpose of is, not and in operators?**
 
 Operators are referred to as special functions that take one or more values(operands) and produce a corresponding result.
 
@@ -5425,7 +5417,7 @@ __in__: helps to check if the element is present in a given Sequence or not.
 
 ----
 
-**Whenever Python exits, why isn’t all the memory de-allocated?**
+## **Whenever Python exits, why isn’t all the memory de-allocated?**
 
 Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed.
 It is not possible to de-allocate those portions of memory that are reserved by the C library.
@@ -5433,7 +5425,7 @@ On exit, because of having its own efficient clean up mechanism, Python would tr
 
 ----
 
-**How to add values to a python array?**
+## **How to add values to a python array?**
 
 In python, adding elements in an array can be easily done with the help of extend(),append() and insert() functions.
 Consider the following example:
@@ -5459,7 +5451,7 @@ if __name__ == '__main__':
 
 ----
 
-**How to remove values to a python array?**
+## **How to remove values to a python array?**
 
 Elements can be removed from the python array using pop() or remove() methods.
 
@@ -5486,18 +5478,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-array('d', [11.1, 2.1, 3.1, 10.1])
-array('d', [11.1, 2.1, 3.1, 10.1, 8.3, 1.3, 5.3])
-array('d', [11.1, 2.1, 6.2, 3.1, 10.1, 8.3, 1.3, 5.3])
-"""
 ```
 
 ----
 
-**Write a code to sort a numerical list in Python?**
+## **Write a code to sort a numerical list in Python?**
 
 The following code can be used to sort a numerical list in Python:
 
@@ -5513,14 +5498,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# [1, 2, 5, 7, 8]
 ```
 
 ----
 
-**Can you write an efficient code to count the number of capital letters in a file?**
+## **Can you write an efficient code to count the number of capital letters in a file?**
 
 The normal solution for this problem statement would be as follows:
 
@@ -5546,13 +5528,13 @@ if __name__ == '__main__':
 
 ----
 
-**How will you reverse a list in Python?**
+## **How will you reverse a list in Python?**
 
 The function list.reverse() reverses the objects of a list.
 
 ----
 
-**How will you remove the last object from a list in Python?**
+## **How will you remove the last object from a list in Python?**
 
 ```python
 list.pop(obj=list[-1]):
@@ -5563,7 +5545,7 @@ Get certified in Python from the top Python Course in Singapore now!
 
 ----
 
-**How can you generate random numbers in Python?**
+## **How can you generate random numbers in Python?**
 
 This achieved with importing the random module, it is the module that is used to generate random numbers.
 
@@ -5574,7 +5556,7 @@ random.random # returns the  floating point random number between the range of [
 
 ----
 
-**How will you convert a string to all lowercase?**
+## **How will you convert a string to all lowercase?**
 
 lower() function is  used to convert a string to lowercase.
 
@@ -5594,7 +5576,7 @@ if __name__ == '__main__':
 
 ----
 
-**Why would you use NumPy arrays instead of lists in Python?**
+## **Why would you use NumPy arrays instead of lists in Python?**
 
 NumPy arrays provide users with three main advantages as shown below:
 - NumPy arrays consume a lot less memory, thereby making the code more efficient.
@@ -5603,14 +5585,14 @@ NumPy arrays provide users with three main advantages as shown below:
 
 ----
 
-**Define encapsulation in Python?**
+## **Define encapsulation in Python?**
 
 encapsulation in Python refers to the process of wrapping up the variables and different functions into a single entity or capsule.
 Python class is the best example of encapsulation in python.
 
 ----
 
-**What advantages do NumPy arrays offer over (nested) Python lists?**
+## **What advantages do NumPy arrays offer over (nested) Python lists?**
 
 __Nested Lists:__
 
@@ -5625,7 +5607,7 @@ Advanced Python Interview Questions for Experienced Professionals
 
 ----
 
-**What is the lambda function in Python?**
+## **What is the lambda function in Python?**
 
 A lambda function is an anonymous function (a function that does not have a name) in Python. To define anonymous functions, we use the ‘lambda’ keyword instead of the ‘def’ keyword, hence the name ‘lambda function’. Lambda functions can have any number of arguments but only one statement.
 
@@ -5634,12 +5616,11 @@ For example:
 ```python
 l = lambda x,y : x*y
 print(a(5, 6))
-# Output:30
 ```
 
 ----
 
-**What is self in Python?**
+## **What is self in Python?**
 
 Self is an object or an instance of a class. This is explicitly included as the first parameter in Python. On the other hand, in Java it is optional.
 It helps differentiate between the methods and attributes of a class with local variables.
@@ -5659,7 +5640,7 @@ Class A:
 
 ----
 
-**What is the difference between append() and extend() methods?**
+## **What is the difference between append() and extend() methods?**
 
 Both append() and extend() methods are methods used to add elements at the end of a list.
 
@@ -5669,7 +5650,7 @@ __extend(another-list):__ Adds the elements of another list at the end of the li
 
 ----
 
-**How does Python Flask handle database requests?**
+## **How does Python Flask handle database requests?**
 
 Flask supports a database-powered application (RDBS). Such a system requires creating a schema, which needs piping the schema.sql file
 into the sqlite3 command. Python developers need to install the sqlite3 command to create or initiate the database in Flask.
@@ -5685,7 +5666,7 @@ Sign up for the Full Stack Developer Course to begin your career journey today.
 
 ----
 
-**How is Multithreading achieved in Python?**
+## **How is Multithreading achieved in Python?**
 
 Python has a multi-threading package, but commonly not considered as good practice to use it as it will result in increased code
 execution time.
@@ -5698,7 +5679,7 @@ in reality they are executing one by one by just taking turns using the same CPU
 
 ----
 
-**What is slicing in Python?**
+## **What is slicing in Python?**
 
 Slicing is a process used to select a range of elements from sequence data type like list, string and tuple. Slicing is beneficial
 and easy to extract out the elements. It requires a : (colon) which separates the start index and end index of the field.
@@ -5714,7 +5695,7 @@ print(list_name[start:stop])
 
 ----
 
-**What is functional programming? Does Python follow a functional programming style? If yes, list a few methods to implement functionally oriented programming in Python?**
+## **What is functional programming? Does Python follow a functional programming style? If yes, list a few methods to implement functionally oriented programming in Python?**
 
 Functional programming is a coding style where the main source of logic in a program comes from functions.
 
@@ -5745,7 +5726,7 @@ from functools import reduce >>> reduce(lambda x,y:x-y,[1,2,3,4,5]) -13
 
 ----
 
-**Which one of the following is not the correct syntax for creating a set in Python?**
+## **Which one of the following is not the correct syntax for creating a set in Python?**
 
 ```python
 #!/usr/bin/python3
@@ -5766,7 +5747,7 @@ Explanation: The argument given for the set must be iterable.
 
 ----
 
-**What is _monkey patching_ in Python?**
+## **What is _monkey patching_ in Python?**
 
 Monkey patching is the term used to denote the modifications that are done to a class or a module during the runtime.
 This can only be done as Python supports changes in the behavior of the program while being executed.
@@ -5803,7 +5784,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is the difference between / and // operator in Python?**
+## **What is the difference between / and // operator in Python?**
 
 /: is a division operator and returns the Quotient value.
 
@@ -5818,11 +5799,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-"""
-Output:
-3.3333333333333335
-"""
 ```
 
 // : is known as floor division operator and used to return only the value of quotient before decimal
@@ -5837,22 +5813,17 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 3
 ```
 
 ----
 
-**What is pandas?**
+## **What is pandas?**
 
-Pandas is an open source python library which supports data structures for data based operations associated with data analyzing and data Manipulation.
-Pandas with its rich sets of features fits in every role of data operation,whether it be related to implementing different algorithms or for solving
-complex business problems. Pandas helps to deal with a number of files in performing certain operations on the data stored by files.
+Pandas is an open source python library which supports data structures for data based operations associated with data analyzing and data Manipulation. Pandas with its rich sets of features fits in every role of data operation,whether it be related to implementing different algorithms or for solving complex business problems. Pandas helps to deal with a number of files in performing certain operations on the data stored by files.
 
 ----
 
-**What are dataframes?**
+## **What are dataframes?**
 
 A dataframe refers to a two dimensional mutable data structure or data aligned in the tabular form with labeled axes(rows and column).
 
@@ -5866,7 +5837,7 @@ pandas.DataFrame( data, index, columns, dtype)
 
 ----
 
-**How to combine dataframes in pandas?**
+## **How to combine dataframes in pandas?**
 
 The different dataframes can be easily combined with the help of functions listed below:
 
@@ -5883,7 +5854,7 @@ data_frame1.join(data_frame2)
 
 ----
 
-**How do you identify missing values and deal with missing values in Dataframe?**
+## **How do you identify missing values and deal with missing values in Dataframe?**
 
 Identification:
 
@@ -5909,7 +5880,7 @@ df['col_name'] = df['col_name'].fillna((df['col_name'].mean()))
 
 ----
 
-**What is regression?**
+## **What is regression?**
 
 Regression is termed as supervised machine learning algorithm technique which is used to find the correlation between variables and
 help to predict the dependent variable(y) based upon the independent variable(x). It is mainly used for prediction, time series
@@ -5925,7 +5896,7 @@ Logistic Regression: Used when the variables are continuous and categorical in n
 
 ----
 
-**What is classification?**
+## **What is classification?**
 
 [Classification](https://www.geeksforgeeks.org/getting-started-with-classification/) refers to a predictive modeling process where a class label is predicted for a given example of input data. It
 helps categorize the provided input into a label that other observations with similar features have. For example, it can be
@@ -5942,7 +5913,7 @@ These are some of the classification algorithms used in Machine Learning:
 
 ----
 
-**How do you split the data in train and test dataset in python?**
+## **How do you split the data in train and test dataset in python?**
 
 This can be achieved by using the scikit machine learning library and importing train_test_split function in python as shown below:
 
@@ -5972,13 +5943,13 @@ if __name__ == '__main__':
 
 ----
 
-**What is SVM?**
+## **What is SVM?**
 
 _Support Vector Machine (SVM)_ is a supervised machine learning model that considers the classification algorithms for two-group classification problems. Support vector machine is a representation of the training data as points in space are separated into categories with the help of a clear gap that should be as wide as possible.
 
 ----
 
-**Write a code to get the indices of N maximum values from a NumPy array?**
+## **Write a code to get the indices of N maximum values from a NumPy array?**
 
 We can get the indices of N maximum values from a NumPy array using the below code:
 
@@ -5994,14 +5965,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# [5 4 3]
 ```
 
 ----
 
-**What is the easiest way to calculate percentiles when using Python?**
+## **What is the easiest way to calculate percentiles when using Python?**
 
 The easiest and the most efficient way you can calculate percentiles in Python is to make use of NumPy arrays and its functions.
 
@@ -6020,14 +5988,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 40
 ```
 
 ----
 
-**Write a Python program to check whether a given string is a palindrome or not, without using an iterative method?**
+## **Write a Python program to check whether a given string is a palindrome or not, without using an iterative method?**
 
 A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam, nurses run, etc.
 
@@ -6052,7 +6017,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Python program to calculate the sum of a list of numbers?**
+## **Write a Python program to calculate the sum of a list of numbers?**
 
 ```python
 #!/usr/bin/python3
@@ -6075,7 +6040,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to produce Star triangle?**
+## **Write a program in Python to produce Star triangle?**
 
 ```python
 #!/usr/bin/python3
@@ -6094,7 +6059,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to check if a number is prime?**
+## **Write a program in Python to check if a number is prime?**
 
 ```python
 #!/usr/bin/python3
@@ -6120,13 +6085,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output: 13 is a prime number
 ```
 
 ----
 
-**Write a sorting algorithm for a numerical dataset in Python?**
+## **Write a sorting algorithm for a numerical dataset in Python?**
 
 ```python
 #!/usr/bin/python3
@@ -6150,7 +6113,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a Program to print ASCII Value of a character in python?**
+## **Write a Program to print ASCII Value of a character in python?**
 
 ```python
 x = 'a'
@@ -6165,7 +6128,7 @@ print(" ASCII value of '" + x + "' is", ord(x))
 
 # https://www.fullstack.cafe/blog/advanced-python-interview-questions
 
-**What are virtualenvs?**
+## **What are virtualenvs?**
 
 A virtualenv is what Python developers call an isolated environment for development, running, debugging Python code.
 It is used to isolate a Python interpreter together with a set of libraries and settings.
@@ -6175,7 +6138,7 @@ the Python interpreter, and a separate set of libraries.
 
 ----
 
-**What are the Wheels and Eggs? What is the difference?**
+## **What are the Wheels and Eggs? What is the difference?**
 
 Wheel and Egg are both packaging formats that aim to support the use case of needing an install artifact that doesn’t
 require building or compilation, which can be costly in testing and production workflows.
@@ -6205,7 +6168,7 @@ Wheel is internally organized by sysconfig path type, therefore making it easier
 
 ----
 
-**What does an x = a or b assignment do in Python?**
+## **What does an x = a or b assignment do in Python?**
 
 ```python
 x = a or b
@@ -6214,7 +6177,7 @@ x = a or b
 
 ----
 
-**What does the Python nonlocal statement do (in Python 3.0 and later)?**
+## **What does the Python nonlocal statement do (in Python 3.0 and later)?**
 
 In short, it lets you assign values to a variable in an outer (but non-global) scope.
 The nonlocal statement causes the listed identifiers to refer to previously bound variables in the nearest enclosing scope
@@ -6243,7 +6206,7 @@ if __name__ == '__main__':
 
 ----
 
-**What is the function of self?**
+## **What is the function of self?**
 
 Self is a variable that represents the instance of the object to itself. In most object-oriented programming languages, this is
 passed to the methods as a hidden parameter that is defined by an object. But, in python, it is declared and passed explicitly.
@@ -6266,7 +6229,7 @@ The self variable refers to the object itself.
 
 ----
 
-**What is the python with statement designed for?**
+## **What is the python with statement designed for?**
 
 The with statement simplifies exception handling by encapsulating common preparation and cleanup tasks in so-called context managers.
 
@@ -6307,12 +6270,9 @@ with lock: # critical section of code
 
 ----
 
-**Can you explain Closures (as they relate to Python)?**
+## **Can you explain Closures (as they relate to Python)?**
 
-In Python, a closure is a function object that remembers values in the enclosing lexical scope even if they are not present in
-memory. It is a record that stores a function together with an environment: a mapping associating each free variable of the
-function (variables that are used locally, but defined in an enclosing scope) with the value or reference to which the name
-was bound when the closure was created. 
+In Python, a closure is a function object that remembers values in the enclosing lexical scope even if they are not present in memory. It is a record that stores a function together with an environment: a mapping associating each free variable of the function (variables that are used locally, but defined in an enclosing scope) with the value or reference to which the name was bound when the closure was created. 
 
 Closures are created when a function is defined inside another function and it uses variables from the outer function's
 scope. The inner function, which is the closure, remembers those variables even if the outer function has finished
@@ -6321,25 +6281,30 @@ executing.
 Here's an example of a closure in Python:
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def outer_func(x):
     def inner_func(y):
         return x + y
     return inner_func
 
-closure = outer_func(10)
-result = closure(5)
-print(result) # Output: 15
+def main():
+    """main program
+    """
+    closure = outer_func(10)
+    result = closure(5)
+    print(result)
+
+if __name__ == '__main__':
+    main()
 ```
 
-In this example, `outer_func` is a function that takes an argument `x` and returns another function `inner_func`.
-`inner_func` takes an argument `y` and returns the sum of `x` and `y`. 
+In this example, `outer_func` is a function that takes an argument `x` and returns another function `inner_func`. `inner_func` takes an argument `y` and returns the sum of `x` and `y`. 
 
-When `outer_func(10)` is called, it returns a closure `inner_func` that remembers the value of `x` as `10`. We
-assign this closure to the variable `closure`. Then, we call `closure(5)` which returns the sum of `10` and `5`
-which is `15`.
+When `outer_func(10)` is called, it returns a closure `inner_func` that remembers the value of `x` as `10`. We assign this closure to the variable `closure`. Then, we call `closure(5)` which returns the sum of `10` and `5` which is `15`.
 
-Closures are useful in many situations, such as when you want to create a function factory that generates functions
-with pre-defined behavior. They are also used extensively in functional programming paradigms.
+Closures are useful in many situations, such as when you want to create a function factory that generates functions with pre-defined behavior. They are also used extensively in functional programming paradigms.
 
 # https://www.fullstack.cafe/blog/advanced-python-interview-questions
 
@@ -6347,7 +6312,7 @@ with pre-defined behavior. They are also used extensively in functional programm
 
 ----
 
-**type == object?**
+## **type == object?**
 
 What is the result of the execution of the following code:
 
@@ -6356,7 +6321,6 @@ isinstance(type, object)
 isinstance(object, type)
 isinstance(object, object)
 isinstance(type, type)
-# Correct answer: True, True, True, True
 ```
 
 Everything is an object in Python, thus any instance check for an object will return True: isinstance(Anything, object) #=> True.
@@ -6376,7 +6340,7 @@ type is the only object in Python, that is an instance of itself.
 
 ----
 
-**Empty booleans?**
+## **Empty booleans?**
 
 What is the result of the execution of the following code:
 
@@ -6390,16 +6354,13 @@ From the definition of any built-in functions we know, that it will:
 
 Return True if any element of the iterable is true.
 
-Logical operators in Python are lazy, the algorithm is to look for a first occurrence of a true element and, if none were
-found, return False, Since the sequence is empty, there are no elements that can be true, therefore any([])returns False.
+Logical operators in Python are lazy, the algorithm is to look for a first occurrence of a true element and, if none were found, return False, Since the sequence is empty, there are no elements that can be true, therefore any([])returns False.
 
-All example is a little bit more complicated, since it represents the concept of vacuous truth. Like with chained lazy logical
-operators, the algorithm is to look for the first false element, and if none were found, return True. Since there are no false
-elements in an empty sequence, all([]) returns True.
+All example is a little bit more complicated, since it represents the concept of vacuous truth. Like with chained lazy logical operators, the algorithm is to look for the first false element, and if none were found, return True. Since there are no false elements in an empty sequence, all([]) returns True.
 
 ----
 
-**Roundabout?**
+## **Roundabout?**
 
 What is the result of the execution of the following code:
 
@@ -6407,7 +6368,6 @@ What is the result of the execution of the following code:
 round(7 / 2)
 round(3 / 2)
 round(5 / 2)
-# Answer: 4, 2, 2
 ```
 
 Why does round(5 / 2) return 2 instead of 3? The issue here is that Python’s round method implements
@@ -6415,7 +6375,7 @@ __banker’s rounding__, where all half values will be rounded to the closest ev
 
 ----
 
-**Instance first!?**
+## **Instance first!?**
 
 What this code will print into console?
 
@@ -6438,18 +6398,13 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 16 (21 - 5)
 ```
 
-In order to resolve an attribute name, Python will firstly search for it on an instance level, then on class level, then in parent classes.
-This hold true for everything but __dunder__ methodd. While searching for them, Python will skip an instance check and search directly in
-a class instead.
+In order to resolve an attribute name, Python will firstly search for it on an instance level, then on class level, then in parent classes. This hold true for everything but __dunder__ methodd. While searching for them, Python will skip an instance check and search directly in a class instead.
 
 ----
 
-**Add it all together?**
+## **Add it all together?**
 
 What is the result of the execution of the following code:
 
@@ -6457,7 +6412,6 @@ What is the result of the execution of the following code:
 sum("")
 sum("", [])
 sum("", {})
-# Answer: 0, [], {}
 ```
 
 In order to understand what is happening here we need to inspect the signature of the sum function:
@@ -6468,18 +6422,25 @@ sum(iterable, /, start=0)
 
 Sums start and the items of an iterable from left to right and returns the total. The iterable’s items are normally numbers, and the start value is not allowed to be a string.
 
-In all the cases above “” (empty string) is treated as an empty sequence, therefore sum will simply return the start argument as a total result.
-In the first case it defaults to zero, for the second and the third case it implies that empty list and dictionary are passed in as a start argument.
+In all the cases above “” (empty string) is treated as an empty sequence, therefore sum will simply return the start argument as a total result. In the first case it defaults to zero, for the second and the third case it implies that empty list and dictionary are passed in as a start argument.
 
 ----
 
-**Unexpected attribute?**
+## **Unexpected attribute?**
 
 What is the result of the execution of the following code:
 
 ```python
-sum([el.imag for el in [0, 5, 10e9, float('inf'), float('nan')]])
-# Answer: 0.0
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    print(sum([el.imag for el in [0, 5, 10e9, float('inf'), float('nan')]]))
+
+if __name__ == '__main__':
+    main()
 ```
 
 This snippet won’t cause AttributeError. All numerical types in Python (int, real, float) are inherited from a base object class. Despite this,
@@ -6487,7 +6448,7 @@ all of them support real and imag attributes, returning real and imaginary parts
 
 ----
 
-**Lazy Python?**
+## **Lazy Python?**
 
 What is the result of the execution of the following code:
 
@@ -6508,14 +6469,13 @@ if __name__ == '__main__':
     main()
 ```
 
-Code inside python functions will be executed only upon invocation, meaning that all NameErrors will be raised and variables will be bonded only
-when you actually call the method. In the example above, during method definition Python allows to reference the class that is not defined yet.
+Code inside python functions will be executed only upon invocation, meaning that all NameErrors will be raised and variables will be bonded only when you actually call the method. In the example above, during method definition Python allows to reference the class that is not defined yet.
 
 However, during the execution Python will bind the name A from the outer scope, which means that function method will return a newly created int instance.
 
 ----
 
-**I want -1 times more?**
+## **I want -1 times more?**
 
 What is the result of the execution of the following code:
 
@@ -6538,13 +6498,21 @@ This holds true for any sequence types.
 
 ----
 
-**Breaking the rules of math?**
+## **Breaking the rules of math?**
 
 What is the result of the execution of the following code:
 
 ```python
-max(-0.0, 0.0)
-# Answer: -0.0
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def main():
+    """main program
+    """
+    print(max(-0.0, 0.0))
+
+if __name__ == '__main__':
+    main()
 ```
 
 Why is that happens? This occurs because of the two reasons.
@@ -6557,7 +6525,7 @@ Therefore max function returns the first occurrence of zero, which just happens 
 
 ----
 
-**Breaking the rules of math (again)?**
+## **Breaking the rules of math (again)?**
 
 What is the result of the execution of the following code:
 
@@ -6587,24 +6555,17 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Output:
-# 42535295865117307932921825928971026433
 ```
 
-Is the smallest integer that cannot be fully represented as a Python float. Therefore, in order to perform x + 1.0 Python casts xto float,
-rounding it to 9007199254740992.0 which Python can represent, then adds 1.0 to it, but because of the same representation limits it sets it
-back to 9007199254740992.0.
+Is the smallest integer that cannot be fully represented as a Python float. Therefore, in order to perform x + 1.0 Python casts xto float, rounding it to 9007199254740992.0 which Python can represent, then adds 1.0 to it, but because of the same representation limits it sets it back to 9007199254740992.0.
 
-Another issue here is the comparison rules. Unlike other languages, Python and Ruby do not throw an error for float vs int comparison and neither
-they try to cast both operands to the same type. Instead they compare actual numerical values. And because 9007199254740992.0 is lover than
-9007199254740993 Python returns False.
+Another issue here is the comparison rules. Unlike other languages, Python and Ruby do not throw an error for float vs int comparison and neither they try to cast both operands to the same type. Instead they compare actual numerical values. And because 9007199254740992.0 is lover than 9007199254740993 Python returns False.
 
 # https://medium.com/@saint_sdmn/10-hardest-python-questions-98986c8cd309
 
 # https://www.stratascratch.com/blog/advanced-python-interview-questions/
 
-**Exploring the dataset?**
+## **Exploring the dataset?**
 
 According to the question, we are required to calculate the sales growth per territory for Q3 and Q4 of 2021. In order to calculate the same, we need two parameters:
 - Territories and their Q3 2021 sales total
@@ -6647,7 +6608,7 @@ Given how the fct_customer_sales table is structured, it will most likely be the
 
 ----
 
-**Writing out the approach?**
+## **Writing out the approach?**
 
 It’s time to lay out the approach you will be using to solve the problem.
 
@@ -6688,7 +6649,7 @@ Step 8: Show the territory and the sales growth ratio
 
 ----
 
-**Coding the solution?**
+## **Coding the solution?**
 
 Now, let’s begin coding the solution. Let’s follow our written approach.
 
@@ -6765,8 +6726,7 @@ sales['sales_growth'] = (sales['order_value_q4'] - sales['order_value_q3'])/sale
 
 Output 8 for advanced python interview question
 
-8
-9. . Show the territory and the sales growth ratio
+8. Show the territory and the sales growth ratio
 
 Finally, let us select only the columns that we require, viz., territory_id and sales_growth.
 
@@ -6829,21 +6789,21 @@ Let us assume that the refunds are logged in another table along with the corres
 
 # https://www.simplilearn.com/django-interview-questions-article
 
-**So what is Django?**
+## **So what is Django?**
 
 Django is an open-source web application framework written in Python. Developed in a fast-paced newsroom, Django enables the
 rapid development of easily maintainable and secure websites. It’s a favorite of newbies and advanced programmers alike.
 
 ----
 
-**Is Django named after that Quentin Tarantino movie?**
+## **Is Django named after that Quentin Tarantino movie?**
 
 No, Django is named after [Django Reinhardt](https://de.wikipedia.org/wiki/Django_Reinhardt), a jazz guitarist from the 1930s to the early 1950s who is considered one of the
 best guitarists of all time.
 
 ----
 
-**What are Django's most prominent features?**
+## **What are Django's most prominent features?**
 
 Programmers like Django mostly for its convenient features like:
 - Excellent documentation
@@ -6858,7 +6818,7 @@ Programmers like Django mostly for its convenient features like:
 
 ----
 
-**Can you name some companies that use Django?**
+## **Can you name some companies that use Django?**
 
 Some of the more well-known companies that use Django include:
 
@@ -6873,12 +6833,11 @@ Some of the more well-known companies that use Django include:
 9. Bitbucket - A web-based hosting service for Git repositories.
 10. YouTube - A video sharing platform.
 
-There are many more companies that use Django, but these are just a few examples of the wide range
-of industries and applications that use the framework.
+There are many more companies that use Django, but these are just a few examples of the wide range of industries and applications that use the framework.
 
 ----
 
-**Why do web developers prefer Django?**
+## **Why do web developers prefer Django?**
 
 Web developers use Django because it:
 
@@ -6892,14 +6851,14 @@ Gives you a system to define the HTML template for your web page, avoiding code 
 
 ----
 
-**What is CRUD?**
+## **What is CRUD?**
 
 It has nothing to do with dirt or grime. It’s a handy acronym for Create, Read, Update, and Delete. It’s a mnemonic framework used to remind developers
 on how to construct usable models when building application programming interfaces (APIs).
 
 ----
 
-**Does Django have any drawbacks?**
+## **Does Django have any drawbacks?**
 
 Django’s disadvantages include:
 - Its monolithic size makes it unsuitable for smaller projects.
@@ -6908,7 +6867,7 @@ Django’s disadvantages include:
 
 ----
 
-**What does Django architecture look like?**
+## **What does Django architecture look like?**
 
 Django architecture consists of:
 
@@ -6919,36 +6878,33 @@ __Controller:__ Made up of the Django framework and URL parsing.
 
 ----
 
-**Explain the Django project directory structure?**
+## **Explain the Django project directory structure?**
 
-Django organizes the various sections of the web application using a directory structure by generating a project and an app
-folder. Creating and arranging a proper project aids in keeping the project DRY (Don't Repeat Yourself) and clean. When you
-create a Django project, Django creates a root directory for the project using the project name you provide. It contains
-the files required to provide basic functionality to your web applications.
+Django organizes the various sections of the web application using a directory structure by generating a project and an app folder. Creating and arranging a proper project aids in keeping the project DRY (Don't Repeat Yourself) and clean. When you create a Django project, Django creates a root directory for the project using the project name you provide. It contains the files required to provide basic functionality to your web applications.
 
 ----
 
-**What are models in Django?**
+## **What are models in Django?**
 
 A Django model is a built-in feature of Django that allows you to construct tables, fields, and constraints. SQL (Structured Query Language) is 
 complicated language that includes many different queries for generating, removing, updating, and other database-related tasks. 
 
 ----
 
-**What are the views in Django?**
+## **What are the views in Django?**
 
 Django views are Python functions similar to HTML documents and accept HTTP requests and return HTTP responses.
 
 ----
 
-**What is Django ORM?**
+## **What is Django ORM?**
 
 Django ORM is a database abstraction API using which we can interact with its database models i.e., perform actions
 like add, delete, modify and query objects.
 
 ----
 
-**Define static files and explain their uses?**
+## **Define static files and explain their uses?**
 
 The word "static files" refers to files in a web app that do not change, such as CSS, JavaScript, or pictures.
 They remain still. Static files are served up by the local Django web server for local development, and minimal
@@ -6956,7 +6912,7 @@ configuration is required.
 
 ----
 
-**What are Django-admin and manage.py and explain their commands?**
+## **What are Django-admin and manage.py and explain their commands?**
 
 “Django-admin” is the command line utility of Django to perform administrative tasks. And manage.py is created automatically in every
 Django project. It performs the same functions as Django-admin, but it also modifies the DJANGO SETTINGS MODULE environment variable
@@ -6964,21 +6920,21 @@ to point to your project's settings.py file.
 
 ----
 
-**What is Jinja templating?**
+## **What is Jinja templating?**
 
 Jinja is a modern, designer-friendly Python templating language that was inspired by Django
 templates and is frequently used for execution.
 
 ----
 
-**What are Django URLs?**
+## **What are Django URLs?**
 
 In Django, URLs serve as the front door to your online application. In urls.py, you can configure how
 Django routing works.
 
 ----
 
-**What are the different model inheritance styles in Django?**
+## **What are the different model inheritance styles in Django?**
 
 In Django, there are three types of inheritance. 
 
@@ -6990,19 +6946,19 @@ _Proxy models_ - Use this when you want to change the parent class's behavior, f
 
 ----
 
-**In Django' context, what’s the difference between a project and an app?**
+## **In Django' context, what’s the difference between a project and an app?**
 
 The project covers the entire application, while an app is a module or application within the project that deals with one dedicated requirement. So, a project consists of several apps, while an app features in multiple projects.
 
 ----
 
-**What' a model in Django?**
+## **What' a model in Django?**
 
 A model consists of all the necessary fields and attributes of your stored data. They are a single, definitive source of information regarding your data.
 
 ----
 
-**What are Django' templates?**
+## **What are Django' templates?**
 
 Django templates render information in a designer-friendly format to present to the user. Using the Django Template Language
 (DTL), a user can generate HTML dynamically. Django templates consist of simple text files that can create any text-based
@@ -7010,7 +6966,7 @@ format such as XML, CSV, and HTML.
 
 ----
 
-**Discuss Django' Request/Response Cycle?**
+## **Discuss Django' Request/Response Cycle?**
 
 Starting the process off, the Django server receives a request. The server then looks for a matching URL in the URL patterns
 defined for the project. If the server can’t find a matching URL, it produces a 404-status code. If the URL matches, it
@@ -7018,7 +6974,7 @@ executes the corresponding code in the view file associated with the URL and sen
 
 ----
 
-**What is the Django Admin interface?**
+## **What is the Django Admin interface?**
 
 Django comes equipped with a fully customizable, built-in admin interface. This portal lets developers see and make changes to
 all the data residing in the database that contains registered apps and models. The model must be registered in the admin.py
@@ -7026,7 +6982,7 @@ file to use a database table with the admin interface.
 
 ----
 
-**How do you install Django?**
+## **How do you install Django?**
 
 Users download and install Python per the operating system used by the host machine.
 Then run the command:
@@ -7039,7 +6995,7 @@ on the terminal and wait for the installation to finish.
 
 ----
 
-**How do you check which version of Django that you have installed on your system?**
+## **How do you check which version of Django that you have installed on your system?**
 
 You can check the version by opening the command prompt and entering the command:
 
@@ -7051,19 +7007,19 @@ You can also visit the Django homepage https://www.djangoproject.com/ and look a
 
 ----
 
-**What are signals in Django?**
+## **What are signals in Django?**
 
 Signals are pieces of code containing information about what is currently going on. A dispatcher is used to both send and listen for signals.
 
 ----
 
-**Explain user authentication in Django?**
+## **Explain user authentication in Django?**
 
 Django includes a user authentication system that handles objects such as users, groups, user permissions, and some cookie-based user sessions.
 
 ----
 
-**What databases are supported by Django?**
+## **What databases are supported by Django?**
 
 The following databases are that Django formally supports:
 - PostgreSQL
@@ -7074,34 +7030,33 @@ The following databases are that Django formally supports:
 
 ----
 
-**What's the use of a session framework?**
+## **What's the use of a session framework?**
 
 The session structure enables per-site-visitor storage and retrieval of any type of data. It abstracts the sending
 and receiving of cookies and keeps data on the server side.
 
 ----
 
-**What is the context in Django?**
+## **What is the context in Django?**
 
 In Django, a context is a dictionary where the keys are the names of the variables and the values are the values of those
-variables. The template receives this dictionary (context), which it uses along with the variables to output the dynamic
-content.
+variables. The template receives this dictionary (context), which it uses along with the variables to output the dynamic content.
 
 ----
 
-**What are Django.shortcuts.render functions?**
+## **What are Django.shortcuts.render functions?**
 
 The render function is a shortcut function that allows the developer to quickly pass the data dictionary together with the template. The template is then combined with the data dictionary using the templating engine in this function. Finally, the render() function provides a HttpResponse containing the rendered text, which is the data returned by the models. As a result, Django render() saves the developer time and allows him to utilize multiple template engines. 
 
 ----
 
-**What's the significance of the settings.py file?**
+## **What's the significance of the settings.py file?**
 
 This file, as the name implies, stores our Django project's configurations or settings, such as database configuration, backend engines, middlewares, installed applications, main URL configurations, static file addresses, templating engines, security keys, allowed hosts etc.
 
 ----
 
-**How to view all items in the Model?**
+## **How to view all items in the Model?**
 
 The 'all()' function in your interactive shell can be used as follows to display every item in your database:
 
@@ -7118,7 +7073,7 @@ Automation Testing Masters ProgramEXPLORE PROGRAMUnleash a High-paying Automatio
 
 ----
 
-**How to filter items in the Model?**
+## **How to filter items in the Model?**
 
 Depending on the user's interests, it is a very normal need for the web application to display data on the web page. The application is made more user-friendly by its search feature. The filter() method of the Django framework can be used to filter data from database tables. A table may have numerous records, and depending on the specific criteria, it may be necessary to determine some specific data. By utilizing the filter() technique in numerous ways, this process gets simpler.  There are four types of filtering: Simple filtering, filter data with multiple fields, filter data with Q objects, and Filter data using filter chaining. 
 
@@ -7129,13 +7084,13 @@ We conclude with eight considerably tougher Django interview questions, designed
 
 ----
 
-**What is the Django Rest Framework?**
+## **What is the Django Rest Framework?**
 
 The Django Rest Framework (DRF) is a framework that helps you quickly create RESTful APIs. They are ideal for web applications due to low bandwidth utilization.
 
 ----
 
-**What do you use middleware for in Django?**
+## **What do you use middleware for in Django?**
 
 You use middleware for four different functions:
 
@@ -7146,58 +7101,57 @@ Use authentication
 
 ----
 
-**What does a URLs-config file contain?**
+## **What does a URLs-config file contain?**
 
 The URLs-config file in Django contains a list of URLs and mappings created to view those URLs' functions. The URLs can map to view functions, class-based views, and the URLs-config of other applications.
 
 ----
 
-**Does Django support multiple-column primary keys?**
+## **Does Django support multiple-column primary keys?**
 
 No, Django supports only single-column primary keys.
 
 ----
 
-**How can you see raw SQL queries running in Django?**
+## **How can you see raw SQL queries running in Django?**
 
 To begin, make sure that the DEBUG setting is set to True. If the setting is squared away, then type the following commands:
 
-1) from Django.db import connection
+1. from Django.db import connection
 
-2) connection.queries
+2. connection.queries
 
 ----
 
-**List several caching strategies supported by Django?**
+## **List several caching strategies supported by Django?**
 
 Django supports these caching strategies:
-
-Database caching
-In-memory caching
-File System Caching
-Memcached 
+- Database caching
+- In-memory caching
+- File System Caching
+- Memcached 
 
 ----
 
-**What is a QuerySet in the context of Django?**
+## **What is a QuerySet in the context of Django?**
 
 QuerySet is a collection of SQL queries. The command print(b.query) shows you the SQL query created from the Django filter call.
 
 ----
 
-**What do you use django.test.Client class for?**
+## **What do you use django.test.Client class for?**
 
 The Client class acts like a dummy web browser, enabling users to test views and interact with Django-powered applications programmatically. This is especially useful when performing integration testing.
 
 ----
 
-**How to use file-based sessions?**
+## **How to use file-based sessions?**
 
 To use a file-based session, you must set the SESSION_ENGINE settings to "Djangoo.contrib.sessions.backends.file".
 
 ----
 
-**What is mixin?**
+## **What is mixin?**
 
 In Django, a mixin is a Python class that is inherited by another class to carry out extra functions. Classes that can be reused and scaled are mixins.
 A unique form of multiple inheritances is a mixin. Mixins are typically employed in two contexts:
@@ -7207,7 +7161,7 @@ You wish to apply a specific feature to numerous classes.
 
 ----
 
-**What is Django Field Class?**
+## **What is Django Field Class?**
 
 In general, "Field" is an abstract class that represents a database table column. In turn, RegisterLookupMixin is a subclass of the Field class.
 These fields are utilized by Django's get prep value() and from db value() methods to construct database tables (db type()), which are then used
@@ -7215,23 +7169,19 @@ to transfer Python types to the database. As a result, fields are essential comp
 
 ----
 
-**Why is permanent redirection not a good option?**
+## **Why is permanent redirection not a good option?**
 
-Permanent redirection is only employed if it does not require visitors to be directed to the old URLs. The browser caches the response of
-permanent redirections, thus attempting to redirect to somewhere different will cause problems. Because this is a browser-side process, if
-your user navigates to a different page, it will load the same page.
+Permanent redirection is only employed if it does not require visitors to be directed to the old URLs. The browser caches the response of permanent redirections, thus attempting to redirect to somewhere different will cause problems. Because this is a browser-side process, if your user navigates to a different page, it will load the same page.
 
 ----
 
-**Difference between Django OneToOneField and ForeignKey Field?**
+## **Difference between Django OneToOneField and ForeignKey Field?**
 
-Both are among the most frequent sorts of fields in Django. The sole difference between these two is that the ForeignKey field includes an on_delete
-option in addition to a model's class because it is used for many-to-one relationships, whilst the OneToOneField only handles one-to-one relationships
-and requires only the model's class.
+Both are among the most frequent sorts of fields in Django. The sole difference between these two is that the ForeignKey field includes an on_delete option in addition to a model's class because it is used for many-to-one relationships, whilst the OneToOneField only handles one-to-one relationships and requires only the model's class.
 
 ----
 
-**How to combine multiple QuerySets in a View?**
+## **How to combine multiple QuerySets in a View?**
 
 QuerySets can be combined into another QuerySet, and they do not have to be from the same model.
 
@@ -7241,11 +7191,13 @@ The union operator can be used to combine two or more QuerySets with the followi
 
 model_combination = model_set1 | model_set2 | model_set3 
 
-Additionally, you can concatenate two or more QuerySets from other models by using the chain() method from the Itertools package. 
+Additionally, you can concatenate two or more QuerySets from other models by using the chain() method 
 
+```python
+from the Itertools package. 
 from itertools import chain
-
 model_combination = list(chain(model_set1, model_set2)) 
+```
 
 As an alternative, you can merge two or more QuerySets from other models using union(), passing all=TRUE to allow for duplication.
 
@@ -7253,7 +7205,7 @@ model_combination = model_set1.union(model_set2, all=TRUE)
 
 ----
 
-**Mention the ways used for the customization of the functionality of the Django admin interface?**
+## **Mention the ways used for the customization of the functionality of the Django admin interface?**
 
 Numerous customization options are available in the Django admin interface, and additional admin interfaces can even be created to enable user
 separation through permissions. The ModelAdmin class, which serves as a representation of a model in the administration interface, can be used
@@ -7261,7 +7213,7 @@ to perform the majority of adjustments.
 
 ----
 
-**Difference between select_related and prefetch_related?**
+## **Difference between select_related and prefetch_related?**
 
 Django's select-related and prefetch-related functions are intended to reduce the number of database queries that are generated when related objects are accessed. 
 
@@ -7273,13 +7225,13 @@ When picking a single object, such as an OneToOneField or a ForeignKey, users ut
 
 ----
 
-**Explain Q objects in Django ORM?**
+## **Explain Q objects in Django ORM?**
 
 When writing complex queries, Q objects are employed because filter() functions only allow you to 'AND' the conditions; whereas, Q objects allow you to 'OR' the conditions. 
 
 ----
 
-**What are Django exceptions?**
+## **What are Django exceptions?**
 
 An exception is an unusual event that causes a programme to fail. Django has its exception classes to cope with this circumstance, and it also supports all fundamental Python exceptions. The Django. core. exceptions module defines the Django core exceptions classes.
 
@@ -7287,7 +7239,7 @@ An exception is an unusual event that causes a programme to fail. Django has its
 
 # https://mindmajix.com/django-interview-questions
 
-**What is Django? And why is it used?**
+## **What is Django? And why is it used?**
 
 Django is a high-level Python web framework that enables the rapid development of secure and maintainable websites. It's free and open source. It takes care of much of the hassle of web development and allows you to focus on writing apps without any need to reinvent the wheel. 
 
@@ -7301,13 +7253,13 @@ Portable
 
 ----
 
-**2. Is Django backend or front end?**
+## **Is Django backend or front end?**
 
 Django is suitable for both the backend and frontend. It's a collection of Python libraries that allow you to develop useful web apps ideal for backend and frontend purposes.
 
 ----
 
-**3. What is the latest version of Django? And explain its features?**
+## **What is the latest version of Django? And explain its features?**
 
 The latest version of Django is Django 3.1. The new features of it are:
 
@@ -7323,7 +7275,7 @@ If you want to enrich your career and become a professional in Python Django, th
 
 ----
 
-**4. What is the difference between Python and Django?**
+## **What is the difference between Python and Django?**
 
 Both Python and Django are intertwined but not the same. Python is a programming language used for
 various application developments:machine learning, artificial intelligence, desktop apps, etc.
@@ -7334,7 +7286,7 @@ Using core Python, you can build an app from scratch or craft the app with Djang
 
 ----
 
-**What architecture does Django use?**
+## **What architecture does Django use?**
 
 Django follows a Model-View-Template (MVT) architecture. It contains three different parts:
 
@@ -7345,7 +7297,7 @@ Model template view
 
 ----
 
-**Explain Django Architecture?**
+## **Explain Django Architecture?**
 
 As discussed in the previous question, Django follows MVT architecture - Model, Template, View.
 
@@ -7373,7 +7325,7 @@ That's how the Django MVT architecture is working.
 
 ----
 
-**Explain Django's code reusability?**
+## **Explain Django's code reusability?**
 
 Compared to other frameworks, Django offers more code reusability. As Django is a combination of apps, copying those apps from one directory to another with some tweaks to the settings.py file won't need much time to write new applications from scratch.
 
@@ -7381,13 +7333,13 @@ That is why Django is the rapid development framework, and this kind of code reu
 
 ----
 
-**Is Django easy to learn?**
+## **Is Django easy to learn?**
 
 Yes, Django is an easy-to-learn framework compared to others. Having some knowledge of Python and web-working helps you to start developing with Django.
 
 ----
 
-**What are the unique features of Django that make it a better framework?**
+## **What are the unique features of Django that make it a better framework?**
 
 The best features of Django that make it better compared to others are:
 
@@ -7401,7 +7353,7 @@ Provides rapid development
 
 ----
 
-**What are the advantages of Django?**
+## **What are the advantages of Django?**
 
 Django has many advantages, but we'll look at major ones that differentiate it from other frameworks.
 
@@ -7414,7 +7366,7 @@ Compatible with major operating systems and databases
 
 ----
 
-**Describe the inheritance styles in Django?**
+## **Describe the inheritance styles in Django?**
 
 Django offers three inheritance styles:
 
@@ -7432,7 +7384,7 @@ You use this style to modify Python-level behaviour with the models without chan
 
 ----
 
-**What are Django Models?**
+## **What are Django Models?**
 
 A model is a definitive source of information about data, defined in the "app/models.py". 
 
@@ -7442,7 +7394,7 @@ database fields.
 
 ----
 
-**Give a brief about the settings.py file?**
+## **Give a brief about the settings.py file?**
 
 As the name implies, it's the main settings file of the Django file. Everything inside the Django project, like databases, middlewares,
 backend engines, templating engines, installed applications, static file addresses, main URL configurations, allowed hosts and servers,
@@ -7452,39 +7404,39 @@ So when Django files start, it first executes the settings.py file and then load
 
 ----
 
-**Is Django a CMS?**
+## **Is Django a CMS?**
 
 No, Django is not CMS (Content Management System). It's just a web framework and programming tool that allows you to build websites.
 
 ----
 
-**15. What are static files in Django? And how can you set them?**
+## **15. What are static files in Django? And how can you set them?**
 
 In Django, static files are the files that serve the purpose of additional purposes such as images, CSS, or JavaScript files. Static files managed by “django.contrib.staticfiles”. There are three main things to do to set up static files in Django:
 
-1) Set STATIC_ROOT in settings.py
+1. Set STATIC_ROOT in settings.py
 
-2) Run manage.py collect static
+2. Run manage.py collect static
 
-3) Set up a Static Files entry on the PythonAnywhere web tab
+3. Set up a Static Files entry on the PythonAnywhere web tab
 
 ----
 
-**What is the use of Middlewares in Django?**
+## **What is the use of Middlewares in Django?**
 
 Middlewares in Django is a lightweight plugin that processes during request and response execution. It performs functions like security,
 CSRF protection, session, authentication, etc. Django supports various built-in middlewares.
 
 ----
 
-**What is the difference between CharField and TextField in Django?**
+## **What is the difference between CharField and TextField in Django?**
 
 TextField is a large text field for large-sized text. In Django, TextField is used to store paragraphs and all other text data. The default form widget for this field is TextArea.
 CharField is a string field used for small- to large-sized strings. It is like a string field in C/C++. In Django, CharField is used to store small strings like first name, last name, etc.
 
 ----
 
-**Describe Django Field Class types?**
+## **Describe Django Field Class types?**
 
 Every field in a model is an instance of the appropriate field class. In Django, field class types determine:
 
@@ -7494,7 +7446,7 @@ Every field in a model is an instance of the appropriate field class. In Django,
 
 ----
 
-**What is the usage of "Django-admin.py" and "manage.py"?**
+## **What is the usage of "Django-admin.py" and "manage.py"?**
 
 Django-admin.py - It is a command-line utility for administrative tasks. 
 manage.py - It is automatically created in each Django project and controls the Django project on the server or even to begin one. It has the following usage:
@@ -7504,28 +7456,28 @@ Sets the DJANGO_SETTINGS_MODULE environment variable
 
 ----
 
-**What are signals in Django?**
+## **What are signals in Django?**
 
 Django includes a "signal dispatcher" to notify decoupled applications when some action takes place in the framework. In a nutshell, signals allow specific senders to inform a suite of receivers that some action has occurred. They are instrumental when we use more pieces of code in the same events.
 
 Django provides a set of built-in signals that enable users to get notified of specific actions.
 
-Signal	Description
-Django.db.models.signals.pre_save(or)django.db.models.signals.post_save	Sent before or after a model’s save() method calls.
-django.db.models.signals.pre_delete  (or)django.db.models.signals.post_delete	Sent before or after a model’s delete() method or query set’s delete() method calls.
-django.db.models.signals.m2m_changed	We use this signal when ManyToManyField on a model changes.
-Django.core.signals.request_started(or)django.core.signals.request_finished	We use this signal when Django starts or finishes an HTTP request.
-Django Interview Questions for Experienced 
+| Signal | Description |
+| ------- | ----------- |
+| Django.db.models.signals.pre_save(or)django.db.models.signals.post_save | Sent before or after a model’s save() method calls. |
+| django.db.models.signals.pre_delete  (or)django.db.models.signals.post_delete | Sent before or after a model’s delete() method or query set’s delete() method calls. |
+| django.db.models.signals.m2m_changed | We use this signal when ManyToManyField on a model changes. |
+Django.core.signals.request_started(or)django.core.signals.request_finished | We use this signal when Django starts or finishes an HTTP request. |
 
 ----
 
-**What’s the difference between a project and an app in Django?**
+## **What’s the difference between a project and an app in Django?**
 
 The app is a module that deals with the dedicated requirements in a project. On the other hand, the project covers an entire app. In Django terms, a project can contain different apps, while an app features in various projects.
 
 ----
 
-**Explain Django URL in brief?**
+## **Explain Django URL in brief?**
 
 Django allows you to design URL functions however you want. For this, you need to create a Python module informally called URLconf (URL configuration).
 
@@ -7535,7 +7487,7 @@ The length of this mapping can be as long or short as required and can also refe
 
 ----
 
-**What are Django Exceptions?**
+## **What are Django Exceptions?**
 
 An exception is an abnormal event that leads to program failure. Django uses its exception classes and python exceptions as well to deal with such situations.
 
@@ -7558,13 +7510,13 @@ We define Django core exceptions in "Django.core.exceptions". The following clas
 
 ----
 
-**Explain Django session**
+## **Explain Django session**
 
 Django uses the session to keep track of the state between the site and a particular browser. Django supports anonymous sessions. The session framework stores and retrieves data on a per-site-visitor basis. It stores the information on the server side and supports sending and receiving cookies. Cookies store the data of session ID but not the actual data itself.
 
 ----
 
-**What are Django cookies?**
+## **What are Django cookies?**
 
 A cookie is a piece of information stored in the client's browser. To set and fetch cookies, Django provides built-in methods.
 We use the set_cookie() method for setting a cookie and the get() method for getting the cookie.
@@ -7573,7 +7525,7 @@ You can also use the request.COOKIES['key'] array to get cookie values.
 
 ----
 
-**Flask vs. Django: What's the difference between Flask & Django?**
+## **Flask vs. Django: What's the difference between Flask & Django?**
 
 Flask and Django are the two most popular Python web frameworks. The following table lists some significant differences between Django and Flask
 
@@ -7593,7 +7545,7 @@ Flask and Django are the two most popular Python web frameworks. The following t
 
 ----
 
-**How to check the version of Django installed on your system?**
+## **How to check the version of Django installed on your system?**
 
 To check the version of Django installed on your system, open the command prompt and enter the following command:
 
@@ -7610,7 +7562,7 @@ print(django.get_version())
 
 ----
 
-**Give a brief about Django Admin?**
+## **Give a brief about Django Admin?**
 
 Django Admin is the command-line utility for administrative tasks. It's a preloaded interface to fulfill all web developer's needs and is imported from the "django.contrib packages". 
 
@@ -7633,7 +7585,7 @@ You can even perform the following tasks using Django admin as listed out in the
 
 ----
 
-**How do you create a Django project?**
+## **How do you create a Django project?**
 
 To create a Django project, navigate to the directory where you want to do a project and type the following command:
 
@@ -7654,13 +7606,13 @@ Note: Here, "ABC" is the name of the project. You can mention any name you want.
 
 ----
 
-**Name some companies using Django?**
+## **Name some companies using Django?**
 
 Various companies out there are using Django. Of them, major are Instagram, Pinterest, Udemy, Mozilla Firefox, Reddit, etc.
 
 ----
 
-**How do Django views work?**
+## **How do Django views work?**
 
 Django views are the critical component of the framework They serve the purpose of encapsulation. They encapsulate the logic
 liable to process a user's request and return a response to the user.
@@ -7678,7 +7630,7 @@ Explore Python Interview Questions that help you grab high-paying jobs.
 
 ----
 
-**Give a brief about Django Template?**
+## **Give a brief about Django Template?**
 
 Django Templates generate dynamic web pages. Using templates, you can show the static data and the data from various databases
 connected to the app through a context dictionary. You can create any number of templates based on project requirements. Even
@@ -7691,7 +7643,7 @@ Django ships built-in backends for its template system called the Django templat
 
 ----
 
-**Describe Django ORM?**
+## **Describe Django ORM?**
 
 In Django, the most notable feature is Object-Relational Mapper (ORM), which allows you to interact with app data
 from various relational databases such as SQLite, MySQL, and PostgreSQL. 
@@ -7703,7 +7655,7 @@ The main advantage of ORMs is rapid development. ORMs make projects more portabl
 
 ----
 
-**When to use iterators in Django ORM?**
+## **When to use iterators in Django ORM?**
 
 Iterators are containers in Python containing several elements. Every object in the iterator implements two methods
 that are __init__() and the __next__() methods.
@@ -7712,7 +7664,7 @@ In Django, the fair use of an iterator is when you process results that take up 
 
 ----
 
-**What is Django caching? And explain the strategies used to implement it?**
+## **What is Django caching? And explain the strategies used to implement it?**
 
 Caching is the process of saving expensive calculation output to avoid performing the same calculation again.
 
@@ -7729,7 +7681,7 @@ They are few strategies to implement caching in Django, and the following table 
 
 ----
 
-**How does Django process a request?**
+## **How does Django process a request?**
 
 Whenever the Django Server receives a request, the system follows an algorithm to determine which Python code needs execution. Here are the steps that sum up the algorithm:
 
@@ -7741,13 +7693,13 @@ Django sends an error-handling view if none of the URLs match the requested URL.
 
 ----
 
-**Which Python version should be used with Django?**
+## **Which Python version should be used with Django?**
 
 Python 3 is the most recommended version for Django. Because it's faster, has more features, and is better supported. 
 
 ----
 
-**Explain the file structure of a typical Django project?**
+## **Explain the file structure of a typical Django project?**
 
 A typical Django project consists of these four files:
 
@@ -7761,15 +7713,11 @@ wsgi.py
 
 The final four files are inside a directory, which is at the same level as manage.py.
 
-manage.py is the command-line utility of your Django project and controls the Django project on the server.
-settings.py file includes information on all the apps installed in the project.
-The urls.py file acts as a map for the whole web project. 
-The __init__.py file is an empty file that makes the python interpreter understand that the directory consisting of settings.py is a module/ package.
-The wsgi.py file is for the server format WSGI
+manage.py is the command-line utility of your Django project and controls the Django project on the server. settings.py file includes information on all the apps installed in the project. The urls.py file acts as a map for the whole web project. The __init__.py file is an empty file that makes the python interpreter understand that the directory consisting of settings.py is a module/ package. The wsgi.py file is for the server format WSGI
 
 ----
 
-**Why is Django called a loosely coupled framework?**
+## **Why is Django called a loosely coupled framework?**
 
 Django is known as a loosely coupled framework because of its MVT architecture.
 
@@ -7779,23 +7727,22 @@ All the architecture components are different from each other. Both frontend and
 
 ----
 
-**What is the Django REST framework (DRF)?**
+## **What is the Django REST framework (DRF)?**
 
 Django REST framework is a flexible and powerful toolkit for building Web APIs rapidly.
 
 The following are the significant reasons that are making REST framework perfect choice:
-
-Web browsable API 
-Authentication policies 
-Serialization
-Extensive documentation and excellent community support.
-Perfect for web apps since they have low bandwidth.
-Global companies like Red Hat, Mozilla, Heroku, Eventbrite, etc., trust this framework.
-Advanced Django Interview Questions
+- Web browsable API 
+- Authentication policies 
+- Serialization
+- Extensive documentation and excellent community support.
+- Perfect for web apps since they have low bandwidth.
+- Global companies like Red Hat, Mozilla, Heroku, Eventbrite, etc., trust this framework.
+- Advanced Django Interview Questions
 
 ----
 
-**Is Django too monolithic? Explain this statement?**
+## **Is Django too monolithic? Explain this statement?**
 
 The Django framework is monolithic, which is valid to some extent. As Django's architecture is MVT-based, it requires some rules that developers need to follow to execute the appropriate files at the right time.
 
@@ -7805,23 +7752,23 @@ Django's file structure is a logical workflow. Thus the monolithic behavior of D
 
 ----
 
-**Explain user authentication in Django?**
+## **Explain user authentication in Django?**
 
 Django comes with a built-in user authentication system to handle objects such as users, groups, permissions, etc. It not only performs authentication but authorization as well. 
 
 Following are the system objects:
+- users
+- Groups
+- Password Hashing System
+- Permissions
+- A pluggable backend system
+- Forms Validation
 
-users
-Groups
-Password Hashing System
-Permissions
-A pluggable backend system
-Forms Validation
 Apart from this, there are various third-party web apps that we can use instead of the default system to provide more user authentication with more features.
 
 ----
 
-**What is the "django.shortcuts.render" function?**
+## **What is the "django.shortcuts.render" function?**
 
 When a View function returns a web page as HttpResponse instead of a simple string, we use the render function.
 
@@ -7841,7 +7788,7 @@ For more control, specify the content type, the data status you passed, and the 
 
 ----
 
-**What is the use of forms in Django?**
+## **What is the use of forms in Django?**
 
 Forms serve the purpose of receiving user inputs and using that data for logical operations on databases. Django supports form class to create HTML forms. It defines a form and how it works and appears.
 
@@ -7853,7 +7800,7 @@ Processes submitted forms and data from the client.
 
 ----
 
-**Can you explain how to add View functions to the urls.py file?**
+## **Can you explain how to add View functions to the urls.py file?**
 
 There are two ways to add the view function to the main URLs config:
 
@@ -7867,14 +7814,17 @@ This one is a more class-based approach. For this, import the class from the vie
 
 Write the name of the function on the previous method as shown below:
 
+```python
 class_name.as_view()
+```
+
 This will pass your view class as a view function.
 
 Both function-based and class-based have their advantages and disadvantages. Depending on the situation, you can use them to get the right results.
 
 ----
 
-**Explain Django Security?**
+## **Explain Django Security?**
 
 Protecting user's data is an essential part of any website design. Django implements various sufficient protections against several common threats. The following are Django's security features:
 
@@ -7888,7 +7838,7 @@ Host header validation
 
 ----
 
-**What is Ajax in Django?**
+## **What is Ajax in Django?**
 
 AJAX (Asynchronous JavaScript And XML) allows web pages to update asynchronously to and from the server by exchanging data in Django. That means without reloading a complete webpage you can update parts of the web page.
 
@@ -7896,7 +7846,7 @@ It involves a combination of a browser built-in XMLHttpRequest object, HTML DOM,
 
 ----
 
-**How to handle Ajax requests in Django?**
+## **How to handle Ajax requests in Django?**
 
 To handle Ajax requests in the Django web framework, perform the following:
 - Initialize Project 
@@ -7908,7 +7858,7 @@ To handle Ajax requests in the Django web framework, perform the following:
 
 ----
 
-**What are Django generic views?**
+## **What are Django generic views?**
 
 Writing views is a heavy task. Django offers an easy way to set Views called Generic Views. They are classes but not functions and stored in "django.views.generic". 
 
@@ -7916,37 +7866,37 @@ Generic views act as a shortcut for common usage patterns. They take some common
 
 ----
 
-**What is the correct way to make a variable available to all your templates?**
+## **What is the correct way to make a variable available to all your templates?**
 
 In case all your templates need the same objects, use "RequestContext." This method takes HttpRequest as the first parameter and populates the context with a few variables simultaneously as per the engine's context_processors configuration option.
 
 ----
 
-**Tell me how to use a file-based session?**
+## **Tell me how to use a file-based session?**
 
 For this, we have to set the SESSION_ENGINE settings to “Django.contrib.sessions.backends.file.”
 
 ----
 
-**What command-line loads data in Django?**
+## **What command-line loads data in Django?**
 
 “Django-admin.py load data” loads data in Django. This command line performs data searching and loads the contents of the named fixtures into the database.
 
 ----
 
-**What is CRUD?**
+## **What is CRUD?**
 
 CRUS is an acronym for Create, Read, Update, and Delete. It’s a mnemonic framework used for constructing models when building application programming interfaces (APIs).
 
 ----
 
-**Explain Django’s Request/Response Cycle?**
+## **Explain Django’s Request/Response Cycle?**
 
 When a process starts, the Django server receives a request and checks for a matching URL in the project-defined URL patterns. If the URL matches, it executes the associated code in the view file with the URL and sends a response. If the server can’t find a matching URL, it invokes a 404-status code.
 
 ----
 
-**What do you use middleware for in Django?**
+## **What do you use middleware for in Django?**
 
 For the following functions, you can use Middleware in Django:
 - Cross-site request forgery protection
@@ -7956,19 +7906,19 @@ For the following functions, you can use Middleware in Django:
 
 ----
 
-**Does Django support multiple-column primary keys?**
+## **Does Django support multiple-column primary keys?**
 
 Django does not support multiple-column primary keys. It only supports single-column primary keys.
 
 ----
 
-**What is a QuerySet?**
+## **What is a QuerySet?**
 
 In the context of Django, QuerySet is a set of SQL queries. To see the SQL query from the Django filter call, type the command print(b.query).
 
 ----
 
-**How to check the raw SQL queries running in Django?**
+## **How to check the raw SQL queries running in Django?**
 
 Make sure that the DEBUG setting is set to True, and type the following commands:
 
@@ -7979,13 +7929,13 @@ connection.queries
 
 ----
 
-**Are Django signals asynchronous?**
+## **Are Django signals asynchronous?**
 
 No, Django signals are synchronous. There is no background thread or asynchronous jobs to execute them. When we use signals in applications, they allow you to maintain the code to understand application behavior and solve issues faster and better.
 
 ----
 
-**What are the Django disadvantages?**
+## **What are the Django disadvantages?**
 
 Not suitable for small projects due to its monolithic size
 
@@ -7997,13 +7947,13 @@ Django web framework has a steep learning curve.
 
 # https://www.interviewbit.com/django-interview-questions/
 
-**Explain Django Architecture?**
+## **Explain Django Architecture?**
 
 Django follows the MVT (Model View Template) pattern which is based on the Model View Controller architecture. It’s slightly different from the MVC pattern as it maintains its own conventions, so, the controller is handled by the framework itself. The template is a presentation layer. It is an HTML file mixed with Django Template Language (DTL). The developer provides the model, the view, and the template then maps it to a URL, and finally, Django serves it to the user.
 
 ----
 
-**Explain the django project directory structure?**
+## **Explain the django project directory structure?**
 
 *manage.py* - A command-line utility that allows you to interact with your Django project
 *__init__.py* - An empty file that tells Python that the current directory should be considered as a Python package
@@ -8013,7 +7963,8 @@ Django follows the MVT (Model View Template) pattern which is based on the Model
 
 ----
 
-**What are models in Django?**
+## **What are models in Django?**
+
 A model in Django refers to a class that maps to a database table or database collection. Each attribute of the Django model class represents a database field. They are defined in app/models.py
 
 Example: 
@@ -8034,7 +7985,7 @@ To get more information about models you can refer here: https://docs.djangoproj
 
 ----
 
-**What are templates in Django or Django template language?**
+## **What are templates in Django or Django template language?**
 
 Templates are an integral part of the Django MVT architecture. They generally comprise HTML, CSS, and js in which dynamic variables and information are embedded with the help of views. Some constructs are recognized and interpreted by the template engine. The main ones are variables and tags.
 
@@ -8048,7 +7999,9 @@ The syntax of the Django template language includes the following four construct
 
 To read more about templates you can refer to this: https://docs.djangoproject.com/en/3.1/topics/templates/
 
-**What are views in Django?**
+----
+
+## **What are views in Django?**
 
 A view function, or “view” for short, is simply a Python function that takes a web request and returns a web response. This response can be HTML contents of a web page, or a redirect, or a 404 error, or an XML document, or an image, etc. 
 
@@ -8077,25 +8030,25 @@ There are two types of views:
 
 ----
 
-**What is Django ORM?**
+## **What is Django ORM?**
 
 This ORM (an acronym for Object Relational Mapper) enables us to interact with databases in a more pythonic way like we can avoid writing raw queries, it is possible to retrieve, save, delete and perform other operations over the database without ever writing any SQL query. It works as an abstraction layer between the models and the database.
 
 ----
 
-**Define static files and explain their uses?**
+## **Define static files and explain their uses?**
 
 Websites generally need to serve additional files such as images. Javascript or CSS. In Django, these files are referred to as “static files”, Apart from that Django provides django.contrib.staticfiles to manage these static files.
 
 ----
 
-**What is Django Rest Framework(DRF)?**
+## **What is Django Rest Framework(DRF)?**
 
 Django Rest Framework is an open-source framework based upon Django which lets you create RESTful APIs rapidly.
 
 ----
 
-**What is django-admin and manage.py and explain its commands?**
+## **What is django-admin and manage.py and explain its commands?**
 
 django-admin is Django’s command-line utility for administrative tasks. In addition to this, a manage.py file is also automatically created in each Django project. Not only does it perform the same purpose as the django-admin but it also sets the DJANGO_SETTINGS_MODULE environment variable to point to the project's settings.py file.
 
@@ -8130,7 +8083,9 @@ django-admin createsuperuser - Creates a user account with all permissions(also 
 django-admin remove_stale_contenttypes - removes stale content types (from deleted models) in your database.
 django-admin clearsessions - Can be used to clean out expired sessions or as a cron job.
 
-**What is Jinja templating?**
+----
+
+## **What is Jinja templating?**
 
 Jinja Templating is a very popular templating engine for Python, the latest version is Jinja2. 
 
@@ -8144,7 +8099,7 @@ Template Inheritance
 
 ----
 
-**What are Django URLs?**
+## **What are Django URLs?**
 
 URLs are one of the most important parts of a web application and Django provides you with an elegant way to design your own custom URLs with help of its module known as URLconf (URL Configuration). The basic functionality of this python module is to 
 
@@ -8163,14 +8118,14 @@ urlpatterns = [
 
 ----
 
-**What is the difference between a project and an app in Django?**
+## **What is the difference between a project and an app in Django?**
 
 In simple words Project is the entire Django application and an app is a module inside the project that deals with one specific use case. 
 For eg, payment system(app) in the eCommerce app(Project).
 
 ----
 
-**What sorts of inheritance do exist**
+## **What sorts of inheritance do exist**
 
 Abstract Base Class Inheritance: Used when you only need the parent class to hold information that you don’t want to write for each child model.
 Multi-Table Model Inheritance:  Used when you are subclassing an existing model and need each model to have its own table in the database.
@@ -8179,7 +8134,7 @@ Intermediate Django Interview Questions
 
 ----
 
-**What are Django Signals?**
+## **What are Django Signals?**
 
 Whenever there is a modification in a model, we may need to trigger some actions. 
 Django provides an elegant way to handle these in the form of signals. The signals are the utilities that allow us to associate events with actions. We can implement these by developing a function that will run when a signal calls it.
@@ -8199,7 +8154,7 @@ List of built-in signals in the models:
 
 ----
 
-**Explain the caching strategies in the Django?**
+## **Explain the caching strategies in the Django?**
 
 Caching refers to the technique of storing the output results when they are processed initially so that next time when the same results are fetched again, instead of processing again those already stored results can be used, which leads to faster accessing as well us less resource utilization. Django provides us with a robust cache system that is able to store dynamic web pages so that these pages don’t need to be evaluated again for each request. 
 
@@ -8214,7 +8169,7 @@ Some of the caching strategies in Django are listed below:
 
 ----
 
-**Explain user authentication in Django?**
+## **Explain user authentication in Django?**
 
 Django comes with a built-in user authentication system, which handles objects like users, groups, user-permissions, and few cookie-based user sessions. Django User authentication not only authenticates the user but also authorizes him.
 
@@ -8228,7 +8183,7 @@ The system consists and operates on these objects:
 
 ----
 
-**How to configure static files?**
+## **How to configure static files?**
 
 Ensure that django.contrib.staticfiles is added to your INSTALLED_APPS
 
@@ -8246,7 +8201,7 @@ In your Django templates, use the static template tag to create the URL for the 
 
 ----
 
-**Explain Django Response lifecycle?**
+## **Explain Django Response lifecycle?**
 
 Whenever a request is made to a web page, Django creates an HttpRequest object that contains metadata about the request. After that Django loads the particular view, passing the HttpRequest as the first argument to the view function. Each view will be returning an HttpResponse object.
 On the big picture following steps occur when a request is received by Django:
@@ -8259,31 +8214,31 @@ The response also passes through the response middlewares and send back to the c
 
 ----
 
-**What databases are supported by Django?**
+## **What databases are supported by Django?**
 
 PostgreSQL and MySQL, SQLite and Oracle. Apart from these, Django also supports databases such as ODBC, Microsoft SQL Server, IBM DB2, SAP SQL Anywhere, and Firebird using third-party packages. Note: Officially Django doesn’t support any no-SQL databases.
 
 ----
 
-**What's the use of a session framework?**
+## **What's the use of a session framework?**
 
 Using the session framework, you can easily store and retrieve arbitrary data based on the pre-site-visitors. It stores data on the server-side and takes care of the process of sending and receiving cookies. These cookies just consist of a session ID, not the actual data itself unless you explicitly use a cookie-based backend.
 
 ----
 
-**What’s the use of Middleware in Django?**
+## **What’s the use of Middleware in Django?**
 
 Middleware is something that executes between the request and response. In simple words, you can say it acts as a bridge between the request and response. Similarly In Django when a request is made it moves through middlewares to views and data is passed through middleware as a response. 
 
 ----
 
-**What is context in the Django?**
+## **What is context in the Django?**
 
 Context is a dictionary mapping template variable name given to Python objects in Django. This is the general name, but you can give any other name of your choice if you want.
 
 ----
 
-**What is django.shortcuts.render function?**
+## **What is django.shortcuts.render function?**
 
 When a view function returns a webpage as HttpResponse instead of a simple string, we use render(). Render function is a shortcut function that lets the developer easily pass the data dictionary with the template. This function then combines the template with a data dictionary via templating engine. Finally, this render() returns as HttpResponse with the rendered text, which is the data returned by models. Thus, Django render() bypasses most of the developer’s work and lets him use different template engines.
 The basic syntax:
@@ -8292,56 +8247,56 @@ The request is the parameter that generates the response. The template name is t
 
 ----
 
-**What’s the significance of the settings.py file?**
+## **What’s the significance of the settings.py file?**
 
 As the name suggests this file stores the configurations or settings of our Django project, like database configuration, backend engines, middlewares, installed applications, main URL configurations, static file addresses, templating engines, main URL configurations, security keys, allowed hosts, and much more.
 
 ----
 
-**How to view all items in the Model?**
+## **How to view all items in the Model?**
 
 ModelName.objects.all()
 
 ----
 
-**How to filter items in the Model?**
+## **How to filter items in the Model?**
 
 ModelName.objects.filter(field_name=”term”)
 
 ----
 
-**How to use file-based sessions?**
+## **How to use file-based sessions?**
 
 To use the same, you need to set the SESSION_ENGINE settings to "django.contrib.sessions.backends.file"
 
 ----
 
-**What is mixin?**
+## **What is mixin?**
 
 Mixin is a type of multiple inheritances wherein you can combine behaviors and attributes of more than one parent class. It provides us with an excellent way to reuse code from multiple classes. One drawback of using these mixins is that it becomes difficult to analyze what a class is doing and which methods to override in case of its code being too scattered between multiple classes.
 
 ----
 
-**What is Django Field Class?**
+## **What is Django Field Class?**
 
 'Field' refers to an abstract class that represents a column in the database table. 
 The Field class is just a subclass of RegisterLookupMixin. In Django, these fields are used to create database tables (db_types()) which are used to map Python types to the database using get_prep_value() and the other way round using from_db_value() method. Therefore, fields are fundamental pieces in different Django APIs such as models and querysets.
 
 ----
 
-**Why is permanent redirection not a good option?**
+## **Why is permanent redirection not a good option?**
 
 Permanent redirection is used only when you don’t want to lead visitors to the old URLs. The response of the permanent redirections is cached by the browser so when you try to redirect to something else it will cause issues. Since this is a browser-side operation if your user wants to move to a new page it will load the same page.
 
 ----
 
-**Difference between Django OneToOneField and ForeignKey Field?**
+## **Difference between Django OneToOneField and ForeignKey Field?**
 
 Both of them are of the most common types of fields used in Django. The only difference between these two is that ForeignKey field consists of on_delete option along with a model’s class because it’s used for many-to-one relationships while on the other hand, the OneToOneField, only carries out a one-to-one relationship and requires only the model’s class.
 
 ----
 
-**How can you combine multiple QuerySets in a View?**
+## **How can you combine multiple QuerySets in a View?**
 
 Initially, Concatenating QuerySets into lists is believed to be the easiest approach. Here’s an example of how to do that:
 from itertools import chain
@@ -8349,14 +8304,14 @@ result_list = list(chain(model1_list, model2_list, model3_list))
 
 ----
 
-**How to get a particular item in the Model?**
+## **How to get a particular item in the Model?**
 
 ModelName.objects.get(id=”term”)
 Note: If there are no results that match the query, get() will raise a DoesNotExist exception. If more than one item matches the given get() query. In this case, it’ll raise MultipleObjectsReturned, which is also an attribute of the model class itself.
 
 ----
 
-**How to obtain the SQL query from the queryset?**
+## **How to obtain the SQL query from the queryset?**
 
 ```python
 print(queryset.query)
@@ -8364,13 +8319,13 @@ print(queryset.query)
 
 ----
 
-**What are the ways to customize the functionality of the Django admin interface?**
+## **What are the ways to customize the functionality of the Django admin interface?**
 
 There are multiple ways to customize the functionality of the Django admin interface. You can piggyback on top of an add/change form that’s automatically generated by Django, you can add JavaScript modules using the js parameter. This parameter is basically a list of URLs that point to the JavaScript modules that are to be included in your project within a script tag. You can also write views for the admin if you want.
 
 ----
 
-**Difference between select_related and prefetch_related?**
+## **Difference between select_related and prefetch_related?**
 
 Though both the functions are used to fetch the related fields on a model but their functioning is bit different from each other. In simple words, select_related uses a foreign key relationship, i.e. using join on the query itself while on the prefetch_related there is a separate lookup and the joining on the python side. Let’s try to illustrate this via an example:
 
@@ -8404,7 +8359,7 @@ SELECT state_id, state_name WHERE State WHERE country_id IN (1);
 
 ----
 
-**Explain Q objects in Django ORM?**
+## **Explain Q objects in Django ORM?**
 
 Q objects are used to write complex queries, as in filter() functions just `AND` the conditions while if you want to `OR` the conditions you can use Q objects. Let’s see an example:
 
@@ -8424,14 +8379,14 @@ SELECT * FROM Model WHERE tag LIKE ‘Human%’ AND (category=’Eyes’ OR cate
 
 ----
 
-**What are Django exceptions?**
+## **What are Django exceptions?**
 
 In addition to the standard Python exceptions, Django raises of its own exceptions.List of the exceptions
 by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Which of these exceptions are related to the MyModel.objects.get(id=’123’)?**
+## **Which of these exceptions are related to the MyModel.objects.get(id=’123’)?**
 
 - Http404
 - DatabaseError
@@ -8440,7 +8395,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Which of these databases are not by default supported by Django?**
+## **Which of these databases are not by default supported by Django?**
 
 - Postgres
 - Mysql
@@ -8449,7 +8404,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Which file is responsible for the configurations of the Django applications?**
+## **Which file is responsible for the configurations of the Django applications?**
 
 - settings.py (true)
 - manage.py
@@ -8458,7 +8413,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Django is based on which architecture?**
+## **Django is based on which architecture?**
 
 - MVT (true)
 - MVC
@@ -8467,7 +8422,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Which is the default port for the Django development server?**
+## **Which is the default port for the Django development server?**
 
 - 8080
 - 8081
@@ -8476,7 +8431,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**What is the use of the post_delete signal in Django?**
+## **What is the use of the post_delete signal in Django?**
 
 - Sent before a model’s save() method is called
 - Sent after a model’s save() method is called
@@ -8485,7 +8440,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 ----
 
-**Django is written in which programming language?**
+## **Django is written in which programming language?**
 
 - PHP
 - Python (true)
@@ -8496,7 +8451,7 @@ by Django (https://docs.djangoproject.com/en/3.1/ref/exceptions/)
 
 # https://quescol.com/interview-preparation/python-coding-question
 
-**Write a program to reverse an integer in Python?**
+## **Write a program to reverse an integer in Python?**
 
 ```python
 #!/usr/bin/python3
@@ -8531,7 +8486,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to check whether an integer is armstrong number or not?**
+## **Write a program in Python to check whether an integer is armstrong number or not?**
 
 ```python
 #!/usr/bin/python3
@@ -8563,7 +8518,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to print the Fibonacci series using iterative method?**
+## **Write a program in Python to print the Fibonacci series using iterative method?**
 
 ```python
 def fibonacci(n):
@@ -8580,7 +8535,7 @@ fibonacci(n_terms)
 
 ----
 
-**Write a program in Python to print the Fibonacci series using recursive method?**
+## **Write a program in Python to print the Fibonacci series using recursive method?**
 
 ```python
 def fibonacci(n):
@@ -8601,7 +8556,7 @@ else:
 
 ----
 
-**Write a program in Python to check whether a number is palindrome or not using iterative method?**
+## **Write a program in Python to check whether a number is palindrome or not using iterative method?**
 
 ```python
 def is_palindrome(num):
@@ -8619,15 +8574,18 @@ def is_palindrome(num):
         return False
 
 # example usage
-print(is_palindrome(12321))  # True
-print(is_palindrome(12345))  # False
+print(is_palindrome(12321)) # output: True
+print(is_palindrome(12345)) # output: False
 ```
 
 ----
 
-**Write a program in Python to check whether a number is palindrome or not using recursive method?**
+## **Write a program in Python to check whether a number is palindrome or not using recursive method?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def is_palindrome(num):
     if len(str(num)) <= 1:
         return True
@@ -8637,33 +8595,48 @@ def is_palindrome(num):
         else:
             return False
 
-num = int(input("Enter a number: "))
-if is_palindrome(num):
-    print(num, "is a palindrome number")
-else:
-    print(num, "is not a palindrome number")
+def main():
+    """main program
+    """
+    num = int(input("Enter a number: "))
+    if is_palindrome(num):
+        print(num, "is a palindrome number")
+    else:
+        print(num, "is not a palindrome number")
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Write a program in Python to find greatest among three integers?**
+## **Write a program in Python to find greatest among three integers?**
 
 ```python
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
-c = int(input("Enter the third number: "))
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-if a > b and a > c:
-    print("The greatest number is:", a)
-elif b > a and b > c:
-    print("The greatest number is:", b)
-else:
-    print("The greatest number is:", c)
+def main():
+    """main program
+    """
+    a = int(input("Enter the first number: "))
+    b = int(input("Enter the second number: "))
+    c = int(input("Enter the third number: "))
+
+    if a > b and a > c:
+        print("The greatest number is:", a)
+    elif b > a and b > c:
+        print("The greatest number is:", b)
+    else:
+        print("The greatest number is:", c)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Write a program in Python to check if a number is binary?**
+## **Write a program in Python to check if a number is binary?**
 
 ```python
 def is_binary(num):
@@ -8679,65 +8652,94 @@ print(is_binary(12345)) # False
 
 ----
 
-**Write a program in Python to find sum of digits of a number using recursion?**
+## **Write a program in Python to find sum of digits of a number using recursion?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def sum_of_digits(n):
     if n == 0:
         return 0
     else:
         return (n % 10) + sum_of_digits(n // 10)
 
-num = int(input("Enter a number: "))
-print("Sum of digits of", num, "is", sum_of_digits(num))
+def main():
+    """main program
+    """
+    num = int(input("Enter a number: "))
+    print("Sum of digits of", num, "is", sum_of_digits(num))
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Write a program in Python to swap two numbers without using third variable?**
+## **Write a program in Python to swap two numbers without using third variable?**
 
 ```python
-# program to swap two numbers without using third variable
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-a = 5
-b = 10
+def main():
+    """main program
+    """
+    # program to swap two numbers without using third variable
+    a = 5
+    b = 10
+    
+    print("Before swapping: a =", a, "b =", b)
 
-print("Before swapping: a =", a, "b =", b)
+    # swapping
+    a = a + b
+    b = a - b
+    a = a - b
 
-# swapping
-a = a + b
-b = a - b
-a = a - b
+    print("After swapping: a =", a, "b =", b)
 
-print("After swapping: a =", a, "b =", b)
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Write a program in Python to swap two numbers using third variable?**
+## **Write a program in Python to swap two numbers using third variable?**
 
 ```python
-# take input from the user
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-# print the values before swapping
-print("Before swapping - num1 =", num1, ", num2 =", num2)
+def main():
+    """main program
+    """
+    # take input from the user
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
 
-# swap the numbers using a third variable
-temp = num1
-num1 = num2
-num2 = temp
+    # print the values before swapping
+    print("Before swapping - num1 =", num1, ", num2 =", num2)
 
-# print the values after swapping
-print("After swapping - num1 =", num1, ", num2 =", num2)
+    # swap the numbers using a third variable
+    temp = num1
+    num1 = num2
+    num2 = temp
+
+    # print the values after swapping
+    print("After swapping - num1 =", num1, ", num2 =", num2)
+
+if __name__ == '__main__':
+    main()
 ```
 
 ----
 
-**Write a program in Python to find prime factors of a given integer?**
+## **Write a program in Python to find prime factors of a given integer?**
 
 ```python
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 def is_prime(num):
     """
     Function to check if a number is prime or not.
@@ -8766,33 +8768,38 @@ def prime_factors(num):
             i += 1
     return factors
 
-# Take input from the user
-num = int(input("Enter a number: "))
+def main():
+    """main program
+    """
+    # Take input from the user
+    num = int(input("Enter a number: "))
 
-# Find the prime factors of the number
-factors = prime_factors(num)
+    # Find the prime factors of the number
+    factors = prime_factors(num)
 
-# Print the prime factors
-if not factors:
-    print(f"{num} has no prime factors.")
-else:
-    print(f"The prime factors of {num} are:", end=" ")
-    for factor in factors:
-        print(factor, end=" ")
+    # Print the prime factors
+    if not factors:
+        print(f"{num} has no prime factors.")
+    else:
+        print(f"The prime factors of {num} are:", end=" ")
+        for factor in factors:
+            print(factor, end=" ")
 
+if __name__ == '__main__':
+    main()
 ```
 
-**Write a program in Python to add two integer without using arithmetic operator?**
+----
+
+## **Write a program in Python to add two integer without using arithmetic operator?**
 
 ```python
 def add_without_arithmetic(a, b):
     while b != 0:
         # carry contains common set bits of a and b
         carry = a & b
-
         # sum of bits of a and b where at least one of the bits is not set
         a = a ^ b
-
         # carry is shifted by one so that adding it to a gives the required sum
         b = carry << 1
 
@@ -8801,7 +8808,7 @@ def add_without_arithmetic(a, b):
 
 ----
 
-**Write a program in Python to find given number is perfect or not?**
+## **Write a program in Python to find given number is perfect or not?**
 
 ```python
 def is_perfect(num):
@@ -8820,7 +8827,7 @@ else:
 
 ----
 
-**Python Program to find the Average of numbers with explanations?**
+## **Python Program to find the Average of numbers with explanations?**
 
 ```python
 n = int(input("Enter the number of elements: "))
@@ -8842,7 +8849,7 @@ print("Average of numbers is: ", round(average, 2))
 
 ----
 
-**Python Program to calculate factorial using iterative method?**
+## **Python Program to calculate factorial using iterative method?**
 
 ```python
 def factorial(n):
@@ -8858,7 +8865,7 @@ print("Factorial of", n, "is", factorial(n))
 
 ----
 
-**Python Program to calculate factorial using recursion?**
+## **Python Program to calculate factorial using recursion?**
 
 ```python
 def factorial(n):
@@ -8876,7 +8883,7 @@ else:
 
 ----
 
-**Python Program to check a given number is even or odd?**
+## **Python Program to check a given number is even or odd?**
 
 ```python
 num = int(input("Enter a number: "))
@@ -8888,7 +8895,7 @@ else:
 
 ----
 
-**Python program to print first n Prime Number with explanation?**
+## **Python program to print first n Prime Number with explanation?**
 
 ```python
 n = int(input("Enter the value of n: "))
@@ -8909,7 +8916,7 @@ for i in range(2, n+1):
 
 ----
 
-**on Program to print Prime Number in a given range?**
+## **on Program to print Prime Number in a given range?**
 
 ```python
 lower = int(input("Enter lower range: "))
@@ -8929,7 +8936,7 @@ for num in range(lower, upper + 1):
 
 ----
 
-**Python Program to find Smallest number among three?**
+## **Python Program to find Smallest number among three?**
 
 ```python
 num1 = float(input("Enter first number: "))
@@ -8948,7 +8955,7 @@ print("The smallest number is:", smallest)
 
 ----
 
-**Python program to calculate the power using the POW method?**
+## **Python program to calculate the power using the POW method?**
 
 ```python
 base = 2
@@ -8959,7 +8966,7 @@ print("The result of {0} raised to the power of {1} is {2}".format(base, exponen
 
 ----
 
-**Python Program to calculate the power without using POW function.(using for loop)?**
+## **Python Program to calculate the power without using POW function.(using for loop)?**
 
 ```python
 def power(base, exponent):
@@ -8975,7 +8982,7 @@ print(power(5, 4)) # Output: 625
 
 ----
 
-**Python Program to calculate the power without using POW function.(using while loop)?**
+## **Python Program to calculate the power without using POW function.(using while loop)?**
 
 ```python
 def power(base, exponent):
@@ -8988,7 +8995,7 @@ def power(base, exponent):
 
 ----
 
-**Python Program to calculate the square of a given number?**
+## **Python Program to calculate the square of a given number?**
 
 ```python
 num = float(input("Enter a number: "))
@@ -8998,7 +9005,7 @@ print("The square of", num, "is", square)
 
 ----
 
-**Python Program to calculate the cube of a given number?**
+## **Python Program to calculate the cube of a given number?**
 
 ```python
 def cube(num):
@@ -9014,7 +9021,7 @@ print(cube(5))  # Output: 125
 
 ----
 
-**Python Program to calculate the square root of a given number?**
+## **Python Program to calculate the square root of a given number?**
 
 ```python
 import math
@@ -9030,7 +9037,7 @@ else:
 
 ----
 
-**Python program to calculate LCM of given two numbers?**
+## **Python program to calculate LCM of given two numbers?**
 
 ```python
 def lcm(a, b):
@@ -9054,7 +9061,7 @@ print(lcm(4, 6)) # Output: 12
 
 ----
 
-**Python Program to find GCD or HCF of two numbers?**
+## **Python Program to find GCD or HCF of two numbers?**
 
 ```python
 def gcd(a, b):
@@ -9069,7 +9076,7 @@ print(gcd(48, 18)) # Output: 6
 
 ----
 
-**Python Program to find GCD of two numbers using recursion?**
+## **Python Program to find GCD of two numbers using recursion?**
 
 ```python
 def gcd(a, b):
@@ -9092,7 +9099,7 @@ You can modify the values of num1 and num2 to find the GCD of different numbers.
 
 ----
 
-**Python Program to Convert Decimal Number into Binary?**
+## **Python Program to Convert Decimal Number into Binary?**
 
 ```python
 def decimal_to_binary(decimal):
@@ -9106,7 +9113,7 @@ def decimal_to_binary(decimal):
 
 ----
 
-**Python Program to convert Decimal number to Octal number?**
+## **Python Program to convert Decimal number to Octal number?**
 
 ```python
 def decimal_to_octal(decimal):
@@ -9120,7 +9127,7 @@ def decimal_to_octal(decimal):
 
 ----
 
-**Python Program to check the given year is a leap year or not?**
+## **Python Program to check the given year is a leap year or not?**
 
 ```python
 def is_leap_year(year):
@@ -9138,7 +9145,7 @@ def is_leap_year(year):
 
 ----
 
-**Python Program to convert Celsius to Fahrenheit?**
+## **Python Program to convert Celsius to Fahrenheit?**
 
 ```python
 def celsius_to_fahrenheit(celsius):
@@ -9149,7 +9156,7 @@ def celsius_to_fahrenheit(celsius):
 
 ----
 
-**Python Program to convert Fahrenheit to Celsius?**
+## **Python Program to convert Fahrenheit to Celsius?**
 
 ```python
 def fahrenheit_to_celsius(fahrenheit):
@@ -9160,7 +9167,7 @@ def fahrenheit_to_celsius(fahrenheit):
 
 ----
 
-**Python program to calculate Simple Interest with explanation?**
+## **Python program to calculate Simple Interest with explanation?**
 
 ```python
 def calculate_simple_interest(principal, rate, time):
@@ -9171,7 +9178,7 @@ def calculate_simple_interest(principal, rate, time):
 
 ----
 
-**Python program to remove given character from String?**
+## **Python program to remove given character from String?**
 
 ```python
 def remove_char(s, char):
@@ -9181,7 +9188,7 @@ def remove_char(s, char):
 
 ----
 
-**Program to count occurrence of a given characters in string?**
+## **Program to count occurrence of a given characters in string?**
 
 ```python
 def count_char(s, char):
@@ -9194,7 +9201,7 @@ def count_char(s, char):
 
 ----
 
-**Python Program to check if two Strings are Anagram?**
+## **Python Program to check if two Strings are Anagram?**
 
 ```python
 def are_anagrams(s1, s2):
@@ -9207,7 +9214,7 @@ def are_anagrams(s1, s2):
 
 ----
 
-**Python program to check a String is palindrome or not?**
+## **Python program to check a String is palindrome or not?**
 
 ```python
 def is_palindrome(s):
@@ -9217,7 +9224,7 @@ def is_palindrome(s):
     return s == s[::-1]
 ```
 
-**Python program to check given character is vowel or consonant?**
+## **Python program to check given character is vowel or consonant?**
 
 ```python
 def check_vowel(char):
@@ -9230,7 +9237,7 @@ def check_vowel(char):
 
 ----
 
-**Python program to check given character is digit or not?**
+## **Python program to check given character is digit or not?**
 
 ```python
 def check_digit(char):
@@ -9242,7 +9249,7 @@ def check_digit(char):
 
 ----
 
-**Python program to check given character is digit or not using isdigit() method?**
+## **Python program to check given character is digit or not using isdigit() method?**
 
 ```python
 def check_digit(char):
@@ -9254,7 +9261,7 @@ def check_digit(char):
 
 ----
 
-**Python program to replace the string space with a given character?**
+## **Python program to replace the string space with a given character?**
 
 ```python
 def replace_space(string, char):
@@ -9274,7 +9281,7 @@ def replace_space(string, char):
 
 ----
 
-**Python program to replace the string space with a given character using replace() method?**
+## **Python program to replace the string space with a given character using replace() method?**
 
 ```python
 def replace_space(string, char):
@@ -9286,7 +9293,7 @@ def replace_space(string, char):
 
 ----
 
-**Python program to convert lowercase char to uppercase of string?**
+## **Python program to convert lowercase char to uppercase of string?**
 
 ```python
 def convert_lowercase(string):
@@ -9306,7 +9313,7 @@ def convert_lowercase(string):
 
 ----
 
-**Python program to convert lowercase vowel to uppercase in string?**
+## **Python program to convert lowercase vowel to uppercase in string?**
 
 ```python
 def convert_vowels(string):
@@ -9329,7 +9336,7 @@ def convert_vowels(string):
 
 ----
 
-**Python program to delete vowels in a given string?**
+## **Python program to delete vowels in a given string?**
 
 ```python
 def delete_vowels(string):
@@ -9350,7 +9357,7 @@ def delete_vowels(string):
 
 ----
 
-**Python program to count Occurrence Of Vowels & Consonants in a String?**
+## **Python program to count Occurrence Of Vowels & Consonants in a String?**
 
 ```python
 def count_vowels_consonants(string):
@@ -9375,7 +9382,7 @@ def count_vowels_consonants(string):
 
 ----
 
-**Python program to print the highest frequency character in a String?**
+## **Python program to print the highest frequency character in a String?**
 
 ```python
 def highest_frequency_char(string):
@@ -9403,7 +9410,7 @@ def highest_frequency_char(string):
 
 ----
 
-**Python program to replace first occurrence of vowel With '-' in String?**
+## **Python program to replace first occurrence of vowel With '-' in String?**
 
 ```python
 def replace_first_vowel(string):
@@ -9423,7 +9430,7 @@ def replace_first_vowel(string):
 
 ----
 
-**Python program to count alphabets, digits and special characters?**
+## **Python program to count alphabets, digits and special characters?**
 
 ```python
 def remove_whitespace(input_string):
@@ -9439,7 +9446,7 @@ def remove_whitespace(input_string):
 
 ----
 
-**Python program to separate characters in a given string?**
+## **Python program to separate characters in a given string?**
 
 ```python
 def separate_string(input_string):
@@ -9452,7 +9459,7 @@ def separate_string(input_string):
 
 ----
 
-**Python program to remove blank space from string?**
+## **Python program to remove blank space from string?**
 
 ```python
 def rm_space(sample_str: str):
@@ -9461,7 +9468,7 @@ def rm_space(sample_str: str):
 
 ----
 
-**Python program to concatenate two strings using join() method?**
+## **Python program to concatenate two strings using join() method?**
 
 ```python
 def concat_strings(str1, str2):
@@ -9474,7 +9481,7 @@ def concat_strings(str1, str2):
 
 ----
 
-**Python program to concatenate two strings without using join() method?**
+## **Python program to concatenate two strings without using join() method?**
 
 ```python
 def concat_strings(str1, str2):
@@ -9495,7 +9502,7 @@ def concat_strings(str1, str2):
 
 ----
 
-**Python program to remove repeated character from string?**
+## **Python program to remove repeated character from string?**
 
 ```python
 def remove_repeated(string):
@@ -9518,7 +9525,7 @@ def remove_repeated(string):
 
 ----
 
-**Python program to calculate sum of integers in string?**
+## **Python program to calculate sum of integers in string?**
 
 ```python
 def sum_of_integers(string):
@@ -9537,7 +9544,7 @@ def sum_of_integers(string):
 
 ----
 
-**Python program to print all non repeating character in string?**
+## **Python program to print all non repeating character in string?**
 
 ```python
 def print_non_repeating(string):
@@ -9559,7 +9566,7 @@ def print_non_repeating(string):
 
 ----
 
-**Python program to copy one string to another string?**
+## **Python program to copy one string to another string?**
 
 ```python
 def copy_string(source, destination):
@@ -9571,7 +9578,7 @@ def copy_string(source, destination):
 
 ----
 
-**Python Program to sort characters of string in ascending order?**
+## **Python Program to sort characters of string in ascending order?**
 
 ```python
 def sort_string_asc(string):
@@ -9590,7 +9597,7 @@ def sort_string_asc(string):
 
 ----
 
-**Python Program to sort character of string in descending order?**
+## **Python Program to sort character of string in descending order?**
 
 ```python
 def sort_string_desc(string):
@@ -9609,7 +9616,7 @@ def sort_string_desc(string):
 
 ----
 
-**Write a program in Python for, In array 1-100 numbers are stored, one number is missing how do you find it?**
+## **Write a program in Python for, In array 1-100 numbers are stored, one number is missing how do you find it?**
 
 ```python
 def find_missing(arr):
@@ -9628,7 +9635,7 @@ def find_missing(arr):
 
 ----
 
-**Write a program in Python for, In a array 1-100 multiple numbers are duplicates, how do you find it?**
+## **Write a program in Python for, In a array 1-100 multiple numbers are duplicates, how do you find it?**
 
 ```python
 def find_duplicates(arr):
@@ -9650,7 +9657,7 @@ def find_duplicates(arr):
 
 ----
 
-**Write a program in Python for, How to find all pairs in array of integers whose sum is equal to given number?**
+## **Write a program in Python for, How to find all pairs in array of integers whose sum is equal to given number?**
 
 ```python
 def find_pairs(arr, target):
@@ -9676,7 +9683,7 @@ find_pairs(my_array, target_sum) #
 
 ----
 
-**Write a program in Python for, How to compare two array is equal in size or not?**
+## **Write a program in Python for, How to compare two array is equal in size or not?**
 
 ```python
 def compare_arrays(arr1, arr2):
@@ -9689,7 +9696,7 @@ def compare_arrays(arr1, arr2):
 
 ----
 
-**Write a program in Python to find largest and smallest number in array?**
+## **Write a program in Python to find largest and smallest number in array?**
 
 ```python
 def find_min_max(arr):
@@ -9709,7 +9716,7 @@ def find_min_max(arr):
 
 ----
 
-**Write a program in Python to find second highest number in an integer array?**
+## **Write a program in Python to find second highest number in an integer array?**
 
 ```python
 def second_highest(arr):
@@ -9731,7 +9738,7 @@ def second_highest(arr):
 
 ----
 
-**Write a program in Python to find top two maximum number in array?**
+## **Write a program in Python to find top two maximum number in array?**
 
 ```python
 def top_two_max_numbers(arr):
@@ -9753,7 +9760,7 @@ def top_two_max_numbers(arr):
 
 ----
 
-**Write a program in Python to remove duplicate elements form array?**
+## **Write a program in Python to remove duplicate elements form array?**
 
 ```python
 def remove_duplicates(arr):
@@ -9772,7 +9779,7 @@ def remove_duplicates(arr):
 
 ----
 
-**Python program to find top two maximum number in array?**
+## **Python program to find top two maximum number in array?**
 
 ```python
 #!/usr/bin/python3
@@ -9801,7 +9808,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to print array in reverse Order?**
+## **Python program to print array in reverse Order?**
 
 ```python
 #!/usr/bin/python3
@@ -9824,7 +9831,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to reverse an Array in two ways?**
+## **Python program to reverse an Array in two ways?**
 
 ```python
 #!/usr/bin/python3
@@ -9856,7 +9863,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to calculate length of an array?**
+## **Python Program to calculate length of an array?**
 
 ```python
 #!/usr/bin/python3
@@ -9876,7 +9883,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to insert an element at end of an Array?**
+## **Python program to insert an element at end of an Array?**
 
 ```python
 #!/usr/bin/python3
@@ -9899,7 +9906,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to insert element at a given location in Array?**
+## **Python program to insert element at a given location in Array?**
 
 ```python
 #!/usr/bin/python3
@@ -9922,7 +9929,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to delete element at end of Array?**
+## **Python Program to delete element at end of Array?**
 
 ```python
 #!/usr/bin/python3
@@ -9945,7 +9952,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to delete given element from Array?**
+## **Python Program to delete given element from Array?**
 
 ```python
 #!/usr/bin/python3
@@ -9968,7 +9975,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to delete element from array at given index?**
+## **Python Program to delete element from array at given index?**
 
 ```python
 #!/usr/bin/python3
@@ -9995,7 +10002,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to find sum of array elements?**
+## **Python Program to find sum of array elements?**
 
 ```python
 #!/usr/bin/python3
@@ -10021,7 +10028,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to print all even numbers in array?**
+## **Python Program to print all even numbers in array?**
 
 ```python
 #!/usr/bin/python3
@@ -10050,7 +10057,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to print all odd numbers in array?**
+## **Python Program to print all odd numbers in array?**
 
 ```python
 #!/usr/bin/python3
@@ -10080,7 +10087,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to perform left rotation of array elements by two positions?**
+## **Python program to perform left rotation of array elements by two positions?**
 
 ```python
 #!/usr/bin/python3
@@ -10108,7 +10115,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to perform right rotation in array by 2 positions?**
+## **Python program to perform right rotation in array by 2 positions?**
 
 ```python
 #!/usr/bin/python3
@@ -10136,7 +10143,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to merge two arrays?**
+## **Python Program to merge two arrays?**
 
 ```python
 #!/usr/bin/python3
@@ -10162,7 +10169,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to find highest frequency element in array?**
+## **Python Program to find highest frequency element in array?**
 
 ```python
 #!/usr/bin/python3
@@ -10189,7 +10196,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to find sum of digit of number using recursion?**
+## **Python Program to find sum of digit of number using recursion?**
 
 ```python
 #!/usr/bin/python3
@@ -10214,7 +10221,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to Create and Traverse Singly linked list?**
+## **Python Program to Create and Traverse Singly linked list?**
 
 ```python
 #!/usr/bin/python3
@@ -10268,7 +10275,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python program to insert a node in linked list?**
+## **Python program to insert a node in linked list?**
 
 ```python
 #!/usr/bin/python3
@@ -10312,7 +10319,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to reverse a singly linked list?**
+## **Write a program in Python to reverse a singly linked list?**
 
 ```python
 #!/usr/bin/python3
@@ -10379,7 +10386,7 @@ if __name__ == '__main__':
 
 ----
 
-**Python Program to search an element in singly linked list?**
+## **Python Program to search an element in singly linked list?**
 
 ```python
 #!/usr/bin/python3
@@ -10436,7 +10443,7 @@ if __name__ == '__main__':
 
 ----
 
-**Linked list Deletion in Python: At beginning, End, Given location?**
+## **Linked list Deletion in Python: At beginning, End, Given location?**
 
 In this program, we define a Node class that represents a single node in the linked list, and a LinkedList
 class that contains the methods for appending nodes, printing the list, and deleting nodes at the
@@ -10549,7 +10556,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to find 3rd element of Linked List from last in single pass?**
+## **Write a program in Python to find 3rd element of Linked List from last in single pass?**
 
 In this program, we define a Node class that represents a single node in the linked list, and a LinkedList class that contains
 the methods for appending nodes, printing the list, and finding the 3rd element from the last.
@@ -10631,7 +10638,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program to check if a number is a prime number?**
+## **Write a program to check if a number is a prime number?**
 
 ```python
 #!/usr/bin/python3
@@ -10664,7 +10671,7 @@ if __name__ == '__main__':
 
 ----
 
-**Write a program in Python to find middle element of a linked list in single pass?**
+## **Write a program in Python to find middle element of a linked list in single pass?**
 
 ```python
 #!/usr/bin/python3
@@ -10724,7 +10731,7 @@ if __name__ == '__main__':
 
 ----
 
-**Progam your own AI?**
+## **Progam your own AI?**
 
 Programming your own artificial intelligence (AI) involves developing algorithms and models that enable machines to exhibit intelligent behavior and perform tasks that typically require human intelligence. Here are some steps to get started:
 
@@ -10779,7 +10786,7 @@ Please note that this is a very basic and minimal AI implementation. Real-world 
 
 ----
 
-**AI Tensorflow example?**
+## **AI Tensorflow example?**
 
 Certainly! Here's an example of a minimal AI implemented using TensorFlow in Python. This example demonstrates a simple image classification task using a pre-trained convolutional neural network (CNN) model called MobileNet:
 
@@ -10815,7 +10822,7 @@ This is just a basic example to demonstrate how to use a pre-trained model for i
 
 ----
 
-**Integrate chatGPT in yo python program?**
+## **Integrate chatGPT in yo python program?**
 
 To integrate ChatGPT into your Python program, you can use the OpenAI API to interact with the model. Here's an example of how you can integrate ChatGPT into your Python program:
 
