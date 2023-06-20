@@ -46,6 +46,12 @@
   * [Predefined macros](https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros?view=msvc-170)
   * [Source code organization (C++ Templates)](https://learn.microsoft.com/en-us/cpp/cpp/source-code-organization-cpp-templates?view=msvc-170)
   * [Writing OS Independent Code in C/C++](https://www.geeksforgeeks.org/writing-os-independent-code-cc/)
+  * [Awesome CPP](https://github.com/fffaraz/awesome-cpp)
+
+* [CMake - Reference Documentation](https://cmake.org/documentation/)
+    * [CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/)
+    * [Mastering CMake](https://cmake.org/cmake/help/book/mastering-cmake/)
+    * [https://github.com/dev-cafe/cmake-cookbook](CMake Cookbook)
 
 ----
 
@@ -12465,5 +12471,31 @@ You can access the C++ standard documents from various sources, including:
 4. C++ Programming Books: Various C++ programming books cover exception handling extensively. These books often provide explanations, examples, and best practices related to exception handling. Some popular books on C++ programming that cover exception handling include ["The C++ Programming Language" by Bjarne Stroustrup](http://chenweixiang.github.io/docs/The_C++_Programming_Language_4th_Edition_Bjarne_Stroustrup.pdf) and ["Effective C++" by Scott Meyers](https://www.dsi.fceia.unr.edu.ar/downloads/informatica/info_II/c++/Effective%20C++%20+%20More%20Effective%20C++.pdf).
 
 When referring to the C++ standard or any documentation source, it's important to consider the version of the standard you are targeting, as the C++ language evolves over time. The most recent version of the C++ standard at the time of writing this response is C++17, with C++20 and C++23 being the upcoming versions.
+
+----
+
+## **Best practices for security programming in C++?**
+
+When it comes to security programming in C++, there are several best practices you should follow to enhance the security of your code. Here are some important considerations:
+
+1. Input validation: Always validate and sanitize input from external sources (e.g., user input, network input) to prevent potential vulnerabilities such as buffer overflows, format string attacks, or SQL injection. Use secure input handling functions and validate data against expected ranges and formats.
+
+2. Memory management: Properly manage memory to avoid vulnerabilities such as buffer overflows, use-after-free, or memory leaks. Use safe alternatives for memory manipulation functions (e.g., `strncpy_s`, `snprintf`) and follow best practices for dynamic memory allocation and deallocation (e.g., using smart pointers, RAII).
+
+3. Secure coding practices: Follow secure coding practices such as avoiding the use of deprecated or unsafe functions (e.g., `gets`, `strcpy`), using secure string handling functions (`strncat_s`, `memcpy_s`), and avoiding insecure coding patterns (e.g., using hardcoded passwords, insecure cryptographic algorithms).
+
+4. Input/output validation: Validate and sanitize data used for input/output operations (e.g., file I/O, network communication). Be cautious about the data read from files or received over the network to prevent attacks like directory traversal, file inclusion, or command injection.
+
+5. Encryption and hashing: Use secure cryptographic algorithms and libraries for sensitive data encryption and hashing. Avoid implementing custom cryptographic algorithms, as they are prone to vulnerabilities. Follow recommended practices for key management, random number generation, and secure storage of sensitive information.
+
+6. Error handling: Implement proper error handling and logging mechanisms to detect and respond to security-related issues. Avoid exposing detailed error messages or system information that could be exploited by attackers.
+
+7. Secure communication: When transmitting data over the network, use secure communication protocols (e.g., HTTPS, SSL/TLS) to protect sensitive information from interception or tampering.
+
+8. Secure coding reviews and testing: Conduct regular code reviews and security assessments to identify and fix vulnerabilities in your code. Perform thorough testing, including functional, integration, and security testing, to ensure the robustness and security of your software.
+
+9. Stay updated: Keep track of security advisories, vulnerability reports, and updates for the libraries and frameworks you use. Stay informed about new security threats and apply patches or updates promptly.
+
+Remember that security is a multi-layered approach, and no single practice can guarantee complete security. It's essential to adopt a proactive mindset, follow security best practices, and continuously enhance your knowledge about secure programming techniques and emerging threats.
 
 ----
